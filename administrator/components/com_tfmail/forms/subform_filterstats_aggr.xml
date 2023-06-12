@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field 
+        name="stat_type"
+        label="COM_TF_TYPE"
+        type="list">
+            <option value="">COM_TF_SELECT</option>
+            <option value="total_sent">Total Sent</option>
+            <option value="total_opens">Total Opens</option>
+            <option value="total_clicks">Total Clicks</option>
+            <option value="per_opens">Percentage Opens</option>
+    </field>
+        
+    <field 
+        name="where_operator"
+        label="COM_TF_FILTER_OPERATOR"
+        type="text" />
+            
+    <field 
+        name="where_value"
+        label="COM_TF_FILTER_VALUE"
+        type="text" />
+</form>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field
+        name="title"
+        type="text"
+        label="JGLOBAL_TITLE" />
+        
+    <field
+        name="description"
+        type="textarea"
+        label="JGLOBAL_DESCRIPTION" />
+        
+    <field
+        name="image"
+        type="media"
+        label="Image" />
+        
+    <field
+        name="url"
+        type="url"
+        label="Url" />
+</form>

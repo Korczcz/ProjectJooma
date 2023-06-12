@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_TFMAIL_SUBSCRIBE_VIEW_TITLE">
+        <message>COM_TFMAIL_SUBSCRIBE_VIEW_DESC</message>
+      	<help url="COM_TFMAIL_SUBSCRIBE_VIEW_HELP"/>
+    </layout>
+    
+    <fields name="params">
+        <fieldset name="basic" label="JOPTIONS">
+            
+            <field
+		        name="image"
+		        type="media"
+		        label="Image" />
+            
+            <field
+                name="description"
+                type="textarea"
+                label="JGLOBAL_DESCRIPTION" 
+                rows="3"
+			    cols="40"
+			    filter="safehtml" />
+		    
+		    <field
+			    name="user_groups"
+			    type="usergrouplist"
+			    label="COM_TFMAIL_USER_GROUPS"
+			    default="2"
+			    multiple="true"
+			    layout="joomla.form.field.list-fancy-select"
+			    checksuperusergroup="1" />
+		    
+		    <field 
+                name="custom_redirect"
+                type="url"
+                label="Custom Redirect" />
+                
+            <field
+		        name="custom_message"
+		        type="text"
+		        label="Custom Message" />
+		        
+		    <field
+		        name="enable_form"
+		        type="radio"
+		        label="Enable Form"
+		        layout="joomla.form.field.radio.switcher"
+		        default="1">
+		            <option value="0">JNO</option>
+		            <option value="1">JYES</option>
+		    </field>
+		    
+		    <field
+		        name="enable_google"
+		        type="radio"
+		        label="Enable Google"
+		        layout="joomla.form.field.radio.switcher"
+		        default="0">
+		            <option value="0">JNO</option>
+		            <option value="1">JYES</option>
+		    </field>
+		    
+		    <field
+		        name="enable_linkedin"
+		        type="radio"
+		        label="Enable Linkedin"
+		        layout="joomla.form.field.radio.switcher"
+		        default="0">
+		            <option value="0">JNO</option>
+		            <option value="1">JYES</option>
+		    </field>
+		    
+		    <field
+		        name="enable_facebook"
+		        type="radio"
+		        label="Enable Facebook"
+		        layout="joomla.form.field.radio.switcher"
+		        default="0">
+		            <option value="0">JNO</option>
+		            <option value="1">JYES</option>
+		    </field>
+		    
+		    <field
+		        name="enable_github"
+		        type="radio"
+		        label="Enable Github"
+		        layout="joomla.form.field.radio.switcher"
+		        default="0">
+		            <option value="0">JNO</option>
+		            <option value="1">JYES</option>
+		    </field>
+
+        </fieldset>
+        
+        <fieldset name="form" label="COM_TFMAIL_FIELDSET_FORM">
+            
+            <field
+                name="form_layout"
+                type="list"
+                label="Layout"
+                default="simple">
+                    <option value="simple">Simple</option>
+                    <option value="tabs">Tabs</option>
+                    <option value="accordion">Accordion</option>
+            </field>
+          
+          	<field
+		        name="show_heading"
+		        type="radio"
+		        label="Heading"
+		        layout="joomla.form.field.radio.switcher"
+                description="Show or hide fieldset labels."
+		        default="0"
+                showon="form_layout:simple">
+		            <option value="0">JHIDE</option>
+		            <option value="1">JSHOW</option>
+		    </field>
+          
+          	<field
+		        name="show_name_field"
+		        type="radio"
+		        label="Name Field"
+		        layout="joomla.form.field.radio.switcher"
+                description="If hidden, name will be generated from email address."
+		        default="1"
+		        filter="integer">
+			        <option value="0">JHIDE</option>
+			        <option value="1">JSHOW</option>
+	       	</field>
+          
+          	<field
+		        name="show_username_field"
+		        type="radio"
+		        label="Username Field"
+		        description="If hidden, username will be same as the email."
+		        layout="joomla.form.field.radio.switcher"
+		        default="0">
+		            <option value="0">JHIDE</option>
+		            <option value="1">JSHOW</option>
+		    </field>
+          
+          	<field
+		        name="show_group_field"
+		        type="radio"
+		        label="User Group Field"
+		        layout="joomla.form.field.radio.switcher"
+		        default="0">
+		            <option value="0">JHIDE</option>
+		            <option value="1">JSHOW</option>
+		    </field>
+          
+          	<field
+			    name="show_user_groups"
+			    type="usergrouplist"
+			    label="COM_TFMAIL_USER_GROUPS"
+			    multiple="true"
+			    layout="joomla.form.field.list-fancy-select"
+			    checksuperusergroup="1" 
+                showon="show_group_field:1" />
+          
+          	<field
+		        name="show_password_field"
+		        type="radio"
+		        label="Password Field"
+		        layout="joomla.form.field.radio.switcher"
+		        default="0">
+		            <option value="0">JHIDE</option>
+		            <option value="1">JSHOW</option>
+		    </field>
+            
+            <field
+			    name="display_fields"
+			    type="sql"
+			    label="COM_TFMAIL_DISPLAY_FIELDS"
+			    description="Select user custom fields to display"
+			    query="SELECT id, title FROM #__fields WHERE state=1 AND context='com_users.user'"
+			    key_field="id"
+			    value_field="title"
+			    multiple="true"
+			    layout="joomla.form.field.list-fancy-select" />
+	       
+	       <field
+		        name="show_captcha"
+		        type="radio"
+		        label="Captcha"
+		        layout="joomla.form.field.radio.switcher"
+		        default="0"
+		        filter="integer">
+	                <option value="0">JHIDE</option>
+			        <option value="1">JSHOW</option>
+	       </field>
+            
+            <field 
+                name="button"
+                type="subform"
+                formsource="libraries/techfry/forms/button.xml"
+                label="COM_TF_BUTTON"
+                hiddenLabel="true" />
+            
+        </fieldset>
+    </fields>
+</metadata>

@@ -1,0 +1,1 @@
+UPDATE `#__tfm_users` SET `stats` = NULL;

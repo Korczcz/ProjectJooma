@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="general">
+        
+        
+
+	</fieldset>
+		    
+    <fieldset name="options" label="JOPTIONS">
+    
+        <field 
+            name="order"
+            type="text"
+            label="COM_TF_ORDER" />
+        
+        <field 
+            name="limit"
+            type="number"
+            label="COM_TF_LIMIT"
+            min="0" />
+        
+        <field 
+            name="offset"
+            type="number"
+            default="0"
+            label="COM_TF_OFFSET"
+            min="0" />
+            
+        <field
+            name="note01"
+            type="note"
+            label="COM_TF_WHERE_CONDITIONS" />
+            
+        <field 
+		    name="filter"
+		    type="subform" 
+		    label="COM_TF_WHERE_CONDITIONS"
+		    formsource="libraries/techfry/forms/subform_where.xml"
+		    multiple="true" 
+		    layout="joomla.form.field.subform.repeatable"
+		    hiddenLabel="true"
+		    filter="raw" />
+		    
+	</fieldset>
+
+</form>

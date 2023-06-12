@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <field 
+        name="close"
+        label="Close"
+        type="radio"
+        default="false"
+        layout="joomla.form.field.radio.switcher">
+            <option value="false">JNO</option>
+            <option value="true">JYES</option>
+    </field>
+    
+    <field
+        name="class_value"
+        type="text"
+        label="Class" />
+    
+</form>

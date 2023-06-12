@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field
+	    name="text"
+	    type="text"
+	    label="Button Text"
+	    default="Submit" />
+			        
+    <field
+	    name="button_class"
+	    type="text"
+	    label="Button Class" />
+</form>

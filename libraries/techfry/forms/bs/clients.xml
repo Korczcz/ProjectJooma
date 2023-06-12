@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+        name="title_class"
+        type="text"
+        label="Title Class" />
+    
+    <field
+        name="image_class"
+        type="text"
+        label="Image Class" />
+        
+</form>

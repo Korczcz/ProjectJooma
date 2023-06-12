@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+    <field
+	    name="latitude"
+	    type="text"
+	    label="Latitude" />
+	    
+    <field
+	    name="longitude"
+	    type="text"
+	    label="Longitude" />
+	    
+    <field
+	    name="title"
+	    type="text"
+	    label="Marker Text" />
+
+</form>

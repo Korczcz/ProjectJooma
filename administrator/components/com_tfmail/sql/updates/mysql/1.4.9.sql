@@ -1,0 +1,1 @@
+ALTER TABLE `#__tfm_statistics` DROP COLUMN `track_code`;

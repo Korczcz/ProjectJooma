@@ -1,0 +1,73 @@
+.animate-none {animation: none;}
+
+.animate-spin {animation: spin 1s linear infinite;}
+@keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}}
+
+.animate-ping {animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;}
+@keyframes ping {75%, 100% {transform: scale(2); opacity: 0;}}
+
+.animate-pulse {animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;}
+@keyframes pulse {0%, 100% {opacity: 1;} 50% {opacity: .5;}}
+
+.animate-bounce	{animation: bounce 1s infinite;}
+@keyframes bounce {0%, 100% {transform: translateY(-25%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1);}
+    50% {transform: translateY(0); animation-timing-function: cubic-bezier(0, 0, 0.2, 1);}}
+
+.animate-zoom-in {animation: zoom-in 1s;}
+@keyframes zoom-in {0% {transform: scale(0.5);} 100% {transform: scale(1);}}
+
+.animate-opacity {animation: opac 1s}
+@keyframes opac {from {opacity:0} to {opacity:1}}
+
+.animate-top {animation: animatetop 1s}
+@keyframes animatetop {from {transform: translateY(-300px); opacity:0} to {transform: translateY(0); opacity:1}}
+
+.animate-bottom {animation: animatebottom 1s}
+@keyframes animatebottom {from {transform: translateY(300px); opacity:0} to {transform: translateY(0); opacity:1}}
+
+.animate-left {animation: animateleft 1s}
+@keyframes animateleft {from {transform: translateX(-300px); opacity:0} to {transform: translateX(0); opacity:1}}
+
+.animate-right {animation: animateright 1s}
+@keyframes animateright {from {transform: translateX(300px); opacity:0} to {transform: translateX(0); opacity:1}}
+
+.animate-zoom {animation: animatezoom 1.2s}
+@keyframes animatezoom {from {transform: scale(0)} to {transform: scale(1)}}
+
+/* Hover Effects */
+.hover-shrink {transition: 0.4s ease-in-out;}
+.hover-shrink:hover {transform: scale(0.8);}    
+    
+.hover-grow {transition: 0.4s ease-in-out;}
+.hover-grow:hover {transform: scale(1.1);}    
+
+.hover-underline {position: relative;}
+.hover-underline::after {content: ''; position: absolute; bottom: 0; left: 0; height: 2px; width: 100%; transform: scaleX(0); transition: 500ms ease-out;}
+.hover-underline:hover::after {transform: scaleX(1); transform-origin: bottom left;}
+
+.hover-grayscale:hover {filter: grayscale(100%);} .hover-grayscale-invert {filter: grayscale(100%);} .hover-grayscale-invert:hover {filter: grayscale(0);}
+.hover-sepia:hover {filter: sepia(100%);} .hover-sepia-invert {filter: sepia(100%);} .hover-sepia-invert:hover {filter: sepia(0);}
+.hover-brightness:hover {filter: brightness(1.15);} .hover-brightness-invert {filter: brightness(1.15);} .hover-brightness-invert:hover {filter: brightness(1);}
+.hover-dull:hover {filter: brightness(.5);}
+
+.hover-opacity:hover {opacity: 0.5}
+
+.hover-text-reset:hover {color: inherit;}
+.hover-bright {color:inherit; opacity: 0.85;} .hover-bright:hover {color:inherit; opacity: 1;}
+.hover-bg-primary:hover {background-color: var(--primary-color); color: #ffffff;}
+.hover-bg-secondary:hover {background-color: var(--secondary-color); color: #ffffff;}
+
+.hover-shadow:hover {box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);}
+.hover-border-primary:hover {border:1px solid var(--primary-color);}
+
+.translate-top:hover {transform: translateY(-10px);}
+.scale:hover {transform: scale(1.1);}
+
+/* Transition */
+.transition-1 {transition: 150ms;} .transition-2 {transition: 300ms;} .transition-3 {transition: 500ms;} .transition-4 {transition: 750ms;} .transition-5 {transition: 1000ms;}
+
+/* Filter Effects */
+.blur-sm {filter: blur(4px);} .blur, .blur-md {filter: blur(8px);} .blur-lg {filter: blur(12px);}
+.brightness-50 {filter: brightness(.5);} .brightness-75 {filter: brightness(.75);} .brightness-125 {filter: brightness(1.25);} .brightness-150 {filter: brightness(1.5);}
+.grayscale-100 {filter: grayscale(100%);} .grayscale-75 {filter: grayscale(75%);} .grayscale-50 {filter: grayscale(50%);}
+.sepia-100 .sepia-75 {filter: sepia(75%);} .sepia-50 {filter: sepia(50%);}

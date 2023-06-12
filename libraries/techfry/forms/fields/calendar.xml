@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field 
+        name="showtime"
+        label="Show Time"
+        type="radio"
+        default="false"
+        layout="joomla.form.field.radio.switcher">
+            <option value="false">JNO</option>
+            <option value="true">JYES</option>
+    </field>
+    
+    <field 
+        name="singleheader"
+        label="Single Header"
+        type="radio"
+        default="false"
+        layout="joomla.form.field.radio.switcher">
+            <option value="false">JNO</option>
+            <option value="true">JYES</option>
+    </field>
+    
+    <field 
+        name="todaybutton"
+        label="Today Button"
+        type="radio"
+        default="false"
+        layout="joomla.form.field.radio.switcher">
+            <option value="false">JNO</option>
+            <option value="true">JYES</option>
+    </field>
+    
+    <field 
+        name="weeknumbers"
+        label="Week Numbers"
+        type="radio"
+        default="false"
+        layout="joomla.form.field.radio.switcher">
+            <option value="false">JNO</option>
+            <option value="true">JYES</option>
+    </field>
+    
+    <field 
+        name="filltable"
+        label="Fill Table"
+        type="radio"
+        default="false"
+        layout="joomla.form.field.radio.switcher">
+            <option value="false">JNO</option>
+            <option value="true">JYES</option>
+    </field>
+    
+    <field 
+        name="translateformat"
+        label="Translate Format"
+        type="radio"
+        default="true"
+        layout="joomla.form.field.radio.switcher">
+            <option value="false">JNO</option>
+            <option value="true">JYES</option>
+    </field>
+    
+    <field 
+        name="format"
+        label="Format"
+        type="text"
+        default="%Y-%m-%d %H:%M:%S"
+        description="Refer: https://www.php.net/manual/en/datetime.format.php"
+        showon="translateformat:false" />
+    
+    <field
+        name="minyear"
+        type="number"
+        label="Minimum Year" />
+        
+    <field
+        name="maxyear"
+        type="number"
+        label="Maximum Year" />
+        
+</form>

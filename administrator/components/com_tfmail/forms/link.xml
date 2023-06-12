@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <config>
+		<inlinehelp button="show"/>
+	</config>
+	<fieldset name="general">
+			
+		<field
+			name="link_text"
+			type="text"
+			label="COM_TFMAIL_LINK_TEXT" />
+			
+		<field
+			name="link_url"
+			type="url"
+			label="COM_TFMAIL_LINK_URL" />
+			
+		<field
+            name="mail_id"
+            type="sql"
+            label="Trigger Email"
+            query="SELECT id, title FROM #__tfm_mail WHERE published=1"
+            key_field="id"
+            value_field="title"
+            layout="joomla.form.field.list-fancy-select">
+                <option value="0">JNONE</option>
+        </field>
+        
+        <field
+            name="email_delay"
+            type="number"
+            label="Delay (Days)"
+            min="0"
+            default="0"
+            showon="mail_id!:0" />
+			
+		<field
+			name="campaign_id"
+			type="sql"
+			label="Trigger Campaign"
+			query="SELECT id, title FROM #__tfm_campaign WHERE published=1"
+			key_field="id"
+            value_field="title"
+            layout="joomla.form.field.list-fancy-select">
+		        <option value="0">JNONE</option>
+		</field>
+		
+		<field
+			name="message"
+			type="textarea"
+			label="Message" />
+			
+	</fieldset>
+	
+	<fieldset name="options">
+			
+	</fieldset>
+	
+	<fieldset name="details" label="JDETAILS">
+			
+	</fieldset>
+	
+</form>

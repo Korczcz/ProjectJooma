@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<config>
+		<inlinehelp button="show"/>
+	</config>
+	<fieldset name="description">
+
+	    
+	</fieldset>
+	
+	<fieldset name="options">
+	    
+	    <field 
+	        name="mail_type" 
+            type="list" 
+            label="COM_TFMAIL_TYPE"
+            required="true">
+	            <option value="">JSELECT</option>
+                <option value="newsletter">COM_TFMAIL_NEWSLETTER</option>
+                <option value="campaign">COM_TFMAIL_CAMPAIGN</option>
+                <option value="automation">COM_TFMAIL_AUTOMATION</option>
+                <option value="other">COM_TFMAIL_OTHER</option>
+        </field>
+        
+        <field 
+            name="attach"
+            type="text"
+            default=""
+            label="Attachment" />
+            
+        <field
+		    name="text_body"
+		    type="textarea"
+		    rows="10"
+		    label="COM_TFMAIL_TEXT_MESSAGE" />
+	    
+    </fieldset>
+        
+    <fields name="filter">    
+	<fieldset name="filterusers" label="COM_TFMAIL_USERS">
+            
+        <field
+	        name="note01"
+	        type="note"
+	        label="1. User Fields"
+	        class="text-muted" />
+        
+        <field
+		    name="filter"
+		    type="subform" 
+		    label="COM_TF_WHERE_CONDITIONS"
+		    hiddenLabel="true"
+		    formsource="administrator/components/com_tfmail/forms/subform_where.xml"
+		    multiple="true" 
+		    layout="joomla.form.field.subform.repeatable-table" 
+		    filter="raw" />
+		    
+	    <field
+	        name="note02"
+	        type="note"
+	        label="2. Custom Fields"
+	        class="text-muted" />
+		    
+		<field
+		    name="filterusers"
+		    type="subform" 
+		    label="COM_TF_CUSTOM_FIELDS"
+		    hiddenLabel="true"
+		    formsource="administrator/components/com_tfmail/forms/subform_filterusers.xml"
+		    multiple="true" 
+		    layout="joomla.form.field.subform.repeatable-table" 
+		    filter="raw" />
+            
+    </fieldset>
+    </fields>
+    
+    <fieldset name="sending" label="COM_TFMAIL_SENDING_OPTIONS">
+            
+        <field
+		    name="send_date"
+            type="calendar" 
+            label="COM_TFMAIL_SEND_DATE" 
+            showtime="true"
+            translateformat="true"
+            todaybutton="true"
+            filter="none"
+            default="NOW" />
+        
+        <field name="schedule" 
+            type="radio" 
+            default="0"
+            label="COM_TFMAIL_SCHEDULE" 
+            layout="joomla.form.field.radio.switcher"
+            showon="mail_type:newsletter[OR]mail_type:other[OR]mail_type:automation">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+        </field>
+            
+        <field
+            name="priority"
+            type="number"
+            label="COM_TFMAIL_PRIORITY"
+            default="4"
+            min="0"
+            showon="mail_type:newsletter[OR]mail_type:other[OR]mail_type:automation" />
+        
+        <field
+			name="frequency"
+			type="number"
+			label="Frequency (Days)"
+			default="0"
+            min="0"
+			showon="mail_type:automation" />
+			
+		<field 
+		    name="check_for_new" 
+            type="radio" 
+            default="0"
+            label="Check for New Articles" 
+            layout="joomla.form.field.radio.switcher"
+            showon="mail_type:automation"
+            description="Send newsletter if only new articles are published">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+        </field>
+            
+    </fieldset>
+    
+    <fields name="params">
+        <fieldset name="params">
+          
+          	<field name="note03" type="note" label="When Email is Opened" />
+            
+            <field
+                name="trigger_email"
+                type="sql"
+                label="Trigger Email"
+                query="SELECT id, title FROM #__tfm_mail WHERE published=1"
+                key_field="id"
+                value_field="title"
+                layout="joomla.form.field.list-fancy-select">
+                    <option value="0">JNONE</option>
+            </field>
+            
+            <field
+                name="email_delay"
+                type="number"
+                label="Delay (Days)"
+                min="0"
+                default="0"
+                showon="trigger_email!:0" />
+                
+            <field
+    			name="trigger_campaign"
+    			type="sql"
+    			label="Trigger Campaign"
+    			query="SELECT id, title FROM #__tfm_campaign WHERE published=1"
+    			key_field="id"
+                value_field="title"
+                layout="joomla.form.field.list-fancy-select">
+    		        <option value="0">JNONE</option>
+    		</field>
+          
+          	<field name="note04" type="note" label="When Email is Added to Queue" />
+          
+          	<field
+		        name="save_user_cf"
+		        type="radio"
+		        label="Save User Custom Fields"
+		        layout="joomla.form.field.radio.switcher"
+		        default="0">
+		            <option value="0">JNO</option>
+		            <option value="1">JYES</option>
+	        </field>
+          
+          	<field 
+			    name="user_cfs"
+			    type="subform"
+			    label="Custom Fields"
+			    multiple="true"
+			    layout="joomla.form.field.subform.repeatable"
+			    formsource="libraries/techfry/forms/subforms/usercf.xml"
+			    showon="save_user_cf:1" />
+            
+        </fieldset>
+    </fields>
+    
+    <fieldset name="details" label="JDETAILS">
+
+        
+    </fieldset>
+
+</form>

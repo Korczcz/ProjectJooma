@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+        name="title_class"
+        type="text"
+        label="Title Class" />
+        
+    <field
+        name="desc_class"
+        type="text"
+        label="Description Class" />
+    
+    <field
+        name="button_text"
+        type="text"
+        label="Button Text" />
+        
+    <field
+        name="button_class"
+        type="text"
+        label="Button Class" />
+
+</form>

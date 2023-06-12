@@ -1,0 +1,1 @@
+ALTER TABLE `#__tfm_users` ADD `stats` MEDIUMTEXT AFTER `otpkey`;

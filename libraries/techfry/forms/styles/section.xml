@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+	    name="section_class"
+	    type="text"
+	    label="Section Class"
+	    showon="section_preset:" />
+	    
+    <field
+        name="section_padding"
+        type="list"
+        label="Section Padding">
+            <option value="">JNONE</option>
+            <option value="py-1">Vertical Small</option>
+            <option value="py-3">Vertical Medium</option>
+            <option value="py-5">Vertical Large</option>
+    </field>
+    
+    <field
+        name="section_margin"
+        type="list"
+        label="Section Margin">
+            <option value="">JNONE</option>
+            <option value="my-1">Vertical Small</option>
+            <option value="my-3">Vertical Medium</option>
+            <option value="my-5">Vertical Large</option>
+      		<option value="mt-3">Top Medium</option>
+      		<option value="mb-3">Bottom Medium</option>
+    </field>
+    
+    <field
+        name="align"
+        type="list"
+        label="Alignment">
+            <option value="">JNONE</option>
+            <option value="text-start">Start</option>
+            <option value="text-center">Center</option>
+            <option value="text-end">End</option>
+    </field>
+    
+    <field
+	    name="section_text"
+	    type="list"
+	    label="Text">
+            <option value="">JNONE</option>
+            <option value="text-primary">Primary</option>
+            <option value="text-secondary">Secondary</option>
+            <option value="text-success">Success</option>
+            <option value="text-danger">Danger</option>
+            <option value="text-warning">Warning</option>
+            <option value="text-info">Info</option>
+            <option value="text-light">Light</option>
+            <option value="text-dark">Dark</option>
+            <option value="text-muted">Muted</option>
+    </field>
+    
+    <field
+	    name="section_bg"
+	    type="list"
+	    label="Background">
+            <option value="">JNONE</option>
+            <option value="bg-primary">Primary</option>
+            <option value="bg-secondary">Secondary</option>
+            <option value="bg-success">Success</option>
+            <option value="bg-danger">Danger</option>
+            <option value="bg-warning">Warning</option>
+            <option value="bg-info">Info</option>
+            <option value="bg-light">Light</option>
+            <option value="bg-dark">Dark</option>
+            <option value="bg-transparent">Transparent</option>
+    </field>
+    
+    <field
+        name="bg_image"
+        type="media"
+        label="Background Image" />
+        
+    <field
+	    name="bg_attach"
+	    type="list"
+	    label="Attachment"
+	    showon="bg_image!:">
+	        <option value="">JNONE</option>
+	        <option value="bg-fixed">Fixed</option>
+	        <option value="bg-scroll">Scroll</option>
+	</field>
+	
+	<field
+	    name="bg_blend"
+	    type="list"
+	    label="Blend Mode"
+	    showon="bg_image!:">
+	        <option value="">JNONE</option>
+	        <option value="bg-blend-screen">Screen</option>
+	        <option value="bg-blend-multiply">Multiply</option>
+	        <option value="bg-blend-overlay">Overlay</option>
+	        <option value="bg-blend-darken">Darken</option>
+	        <option value="bg-blend-lighten">Lighten</option>
+	</field>
+</form>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+        name="layout"
+        type="list"
+        label="Layout"
+        default="1">
+            <option value="1">Layout 1</option>
+            <option value="2">Layout 2</option>
+    </field>
+    
+    <field
+        name="size"
+        type="list"
+        label="Icon Size">
+        <option value="">JDEFAULT</option>
+        <option value="fa-lg">lg</option>
+        <option value="fa-xl">xl</option>
+        <option value="fa-2xl">2xl</option>
+        <option value="fa-1x">1x</option>
+        <option value="fa-2x">2x</option>
+        <option value="fa-3x">3x</option>
+        <option value="fa-4x">4x</option>
+        <option value="fa-5x">5x</option>
+        <option value="fa-6x">6x</option>
+        <option value="fa-7x">7x</option>
+        <option value="fa-8x">8x</option>
+        <option value="fa-9x">9x</option>
+        <option value="fa-10x">10x</option>
+    </field>
+    
+    <field
+	    name="color"
+	    type="list"
+	    label="Color">
+            <option value="">JNONE</option>
+            <option value="text-primary">Primary</option>
+            <option value="text-secondary">Secondary</option>
+            <option value="text-success">Success</option>
+            <option value="text-danger">Danger</option>
+            <option value="text-warning">Warning</option>
+            <option value="text-info">Info</option>
+            <option value="text-light">Light</option>
+            <option value="text-dark">Dark</option>
+            <option value="text-white">White</option>
+            <option value="text-muted">Muted</option>
+    </field>
+        
+    <field
+        name="rotate"
+        type="list"
+        label="Rotate">
+        <option value="">JNONE</option>
+        <option value="fa-rotate-90">90 Degree</option>
+        <option value="fa-rotate-180">180 Degree</option>
+        <option value="fa-rotate-270">270 Degree</option>
+        <option value="fa-flip-horizontal">Flip Horizontal</option>
+        <option value="fa-flip-vertical">Flip Vertical</option>
+        <option value="fa-flip-both">Flip Both</option>
+    </field>
+    
+    <field
+        name="animate"
+        type="list"
+        label="Animate">
+        <option value="">JNONE</option>
+        <option value="fa-beat">Beat</option>
+        <option value="fa-fade">Fade</option>
+        <option value="fa-beat-fade">Beat Fade</option>
+        <option value="fa-bounce">Bounce</option>
+        <option value="fa-flip">Flip</option>
+        <option value="fa-shake">Shake</option>
+        <option value="fa-spin">Spin</option>
+    </field>
+    
+    <field
+        name="title_head"
+        type="list"
+        label="Title Head"
+        default="h3">
+            <option value="h1">h1</option>
+            <option value="h2">h2</option>
+            <option value="h3">h3</option>
+            <option value="h4">h4</option>
+            <option value="h5">h5</option>
+            <option value="h6">h6</option>
+    </field>
+    
+    <field
+        name="title_class"
+        type="text"
+        label="Title Class" />
+        
+    <field
+        name="desc_class"
+        type="text"
+        label="Description Class" />
+    
+    <field
+        name="button_text"
+        type="text"
+        label="Button Text" />
+        
+    <field
+        name="button_class"
+        type="text"
+        label="Button Class" />
+
+</form>

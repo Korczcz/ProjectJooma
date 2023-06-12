@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+            
+        <field 
+            name="mail_type" 
+            type="list" 
+            onchange="this.form.submit();" >
+                <option value="">- Select Type -</option>
+                <option value="newsletter">COM_TFMAIL_NEWSLETTER</option>
+                <option value="campaign">COM_TFMAIL_CAMPAIGN</option>
+                <option value="automation">COM_TFMAIL_AUTOMATION</option>
+                <option value="other">COM_TFMAIL_OTHER</option>
+        </field>
+        
+        <field
+            name="schedule"
+            type="list"
+            onchange="this.form.submit();" >
+                <option value="">- Schedule Status -</option>
+                <option value="1">Scheduled</option>
+                <option value="0">Unscheduled</option>
+        </field>
+            
+    </fields>
+    
+    <fields name="list">
+ 
+ 
+    </fields>
+</form>

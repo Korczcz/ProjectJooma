@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <field
+        name="note_a"
+        type="note"
+        description="Captcha field has no extra settings."
+        class="alert alert-warning" />
+  
+</form>

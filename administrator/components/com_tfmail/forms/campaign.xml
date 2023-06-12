@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <config>
+		<inlinehelp button="show"/>
+	</config>
+	<fieldset name="description">
+	
+	</fieldset>
+	
+	<fieldset name="options">
+        
+			
+	</fieldset>
+	
+	<fieldset name="mails" label="COM_TFMAIL_MAILS">
+        
+        <field 
+            name="mails"
+            type="subform"
+            formsource="administrator/components/com_tfmail/forms/subform_mails.xml"
+            label="COM_TFMAIL_MAILS"
+            hiddenLabel="true"
+            multiple="true"
+            layout="joomla.form.field.subform.repeatable"
+            filter="raw" />
+	    
+	</fieldset>
+	
+	<fields name="filter">    
+	<fieldset name="filterusers" label="COM_TFMAIL_USERS">
+            
+        <field
+	        name="note01"
+	        type="note"
+	        label="1. User Fields"
+	        class="text-muted" />
+        
+        <field
+		    name="filter"
+		    type="subform" 
+		    label="COM_TF_WHERE_CONDITIONS"
+		    hiddenLabel="true"
+		    formsource="administrator/components/com_tfmail/forms/subform_where.xml"
+		    multiple="true" 
+		    layout="joomla.form.field.subform.repeatable-table" 
+		    filter="raw" />
+		    
+	    <field
+	        name="note02"
+	        type="note"
+	        label="2. Custom Fields"
+	        class="text-muted" />
+		    
+		<field
+		    name="filterusers"
+		    type="subform" 
+		    label="COM_TF_CUSTOM_FIELDS"
+		    hiddenLabel="true"
+		    formsource="administrator/components/com_tfmail/forms/subform_filterusers.xml"
+		    multiple="true" 
+		    layout="joomla.form.field.subform.repeatable-table" 
+		    filter="raw" />
+            
+    </fieldset>
+    </fields>
+	
+	<fieldset name="sending" label="COM_TFMAIL_SENDING_OPTIONS">
+	    
+	    <field
+            name="priority"
+            type="number"
+            label="COM_TFMAIL_PRIORITY"
+            default="3" />
+            
+        <field
+            name="onregister"
+		    type="radio"
+		    label="On Registration"
+		    description="Trigger campain on user registration"
+		    default="1"
+		    layout="joomla.form.field.radio.switcher">
+                <option value="0">JNO</option>
+		        <option value="1">JYES</option>
+	    </field>
+	    
+	    <field
+            name="onmodify"
+		    type="radio"
+		    label="On Modification"
+		    description="Trigger campaign on user modification"
+		    default="0"
+		    layout="joomla.form.field.radio.switcher">
+	            <option value="0">JNO</option>
+		        <option value="1">JYES</option>
+	    </field>
+	    
+	</fieldset>
+	
+	<fieldset name="details" label="JDETAILS">
+	    
+	    
+	</fieldset>
+	
+</form>

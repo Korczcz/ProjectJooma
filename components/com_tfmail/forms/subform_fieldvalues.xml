@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field 
+        name="custom_field"
+        label="COM_TFMAIL_CUSTOM_FIELD"
+        type="sql" 
+        query="SELECT id, name FROM #__fields WHERE state=1 AND context='com_users.user'"
+        key_field="name"
+        value_field="name" >
+            <option value="">- Select custom field -</option>
+        </field>
+        
+        <field 
+            name="custom_value"
+            label="COM_TFMAIL_CUSTOM_VALUE"
+            type="text" />
+</form>

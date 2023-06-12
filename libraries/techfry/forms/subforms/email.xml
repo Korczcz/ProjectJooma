@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field 
+        name="from_email"
+        type="text"
+        label="From Email" />
+        
+    <field 
+        name="from_name"
+        type="text"
+        label="From Name" />
+  
+  	<field 
+        name="reply_to_email"
+        type="text"
+        label="Reply-To Email" />
+            
+    <field 
+        name="to_email"
+        type="text"
+        label="To Email" />
+   	
+  	<field 
+        name="subject"
+        type="text"
+        label="Subject" />
+  
+  	<field 
+        name="message"
+        type="textarea"
+        label="Message" />
+    
+</form>

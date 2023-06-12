@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+        name="title_head"
+        type="list"
+        label="Title Head"
+        default="h3">
+            <option value="h1">h1</option>
+            <option value="h2">h2</option>
+            <option value="h3">h3</option>
+            <option value="h4">h4</option>
+            <option value="h5">h5</option>
+            <option value="h6">h6</option>
+    </field>
+    
+    <field
+        name="title_class"
+        type="text"
+        label="Title Class" />
+        
+    <field
+        name="designation_class"
+        type="text"
+        label="Designation Class" />
+        
+    <field
+        name="desc_class"
+        type="text"
+        label="Description Class" />
+        
+    <field
+        name="image_class"
+        type="text"
+        label="Image Class" />
+    
+    <field
+        name="rated_icon_class"
+        type="text"
+        label="Rated Icon Class"
+        default="fa-solid fa-star text-success" />
+        
+    <field
+        name="unrated_icon_class"
+        type="text"
+        label="Unrated Icon Class"
+        default="fa-solid fa-star text-light" />
+
+</form>

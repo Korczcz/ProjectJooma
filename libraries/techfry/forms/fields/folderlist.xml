@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <field
+        name="directory"
+        type="text"
+        label="Directory" />
+        
+    <field
+        name="folderFilter"
+        type="text"
+        label="Folder Filter" />
+        
+    <field
+        name="exclude"
+        type="text"
+        label="Exclude" />
+    
+    <field 
+        name="recursive"
+        label="Recursive"
+        type="radio"
+        default="false"
+        layout="joomla.form.field.radio.switcher">
+            <option value="false">JNO</option>
+            <option value="true">JYES</option>
+    </field>
+  
+  	<field 
+        name="hide_none"
+        label="Hide None"
+        type="radio"
+        default="false"
+        layout="joomla.form.field.radio.switcher">
+            <option value="false">JNO</option>
+            <option value="true">JYES</option>
+    </field>
+  
+  	<field 
+        name="hide_default"
+        label="Hide Default"
+        type="radio"
+        default="false"
+        layout="joomla.form.field.radio.switcher">
+            <option value="false">JNO</option>
+            <option value="true">JYES</option>
+    </field>
+  
+  	<field 
+        name="multiple"
+        label="Multiple"
+        type="radio"
+        default="false"
+        layout="joomla.form.field.radio.switcher">
+            <option value="false">JNO</option>
+            <option value="true">JYES</option>
+    </field>
+    
+    <field
+		name="form_layout"
+		type="list"
+		label="Form Layout">
+			<option value="joomla.form.field.list">JDEFAULT</option>
+			<option value="joomla.form.field.list-fancy-select">Fancy Select</option>
+	</field>
+    
+</form>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" method="upgrade">
+    <name>Tech Fry Library</name>
+    <author>Tech Fry</author>
+    <creationDate>12 June 2023</creationDate>
+    <copyright>Tech Fry</copyright>
+    <license>https://www.gnu.org/licenses/gpl-3.0.en.html</license>
+    <authorEmail>mail@techfry.com</authorEmail>
+	<authorUrl>https://www.techfry.com</authorUrl>
+    <version>2.2.2</version>
+    <description>Tech Fry Library - used by Tech Fry extensions</description>
+    
+    <libraryname>techfry</libraryname>
+	<namespace path="src/">TechFry\Library</namespace>
+	
+	<media destination="techfry" folder="media">
+		<folder>css</folder>
+		<folder>js</folder>
+	</media>
+    
+    <files>
+        <folder>forms</folder>
+        <folder>src</folder>
+        <filename>techfry.xml</filename>
+    </files>
+    
+    <updateservers>
+        <server type="extension" name="Tech Fry Library">https://updates.techfry.com/libraries/techfry.xml</server>
+    </updateservers>
+</extension>

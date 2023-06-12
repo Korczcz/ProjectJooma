@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+            
+        <field
+            name="title"
+            type="sql"
+            query="SELECT DISTINCT a.mail_id, b.title FROM #__tfm_queue AS a LEFT JOIN #__tfm_mail AS b ON a.mail_id=b.id"
+            key_field="mail_id"
+            value_field="title"
+            header="- Select Title -"
+            layout="joomla.form.field.list-fancy-select"
+            onchange="this.form.submit();" >
+        </field>
+            
+        <field
+            name="mailid"
+            type="sql"
+            query="SELECT DISTINCT mail_id FROM #__tfm_queue"
+            key_field="mail_id"
+            value_field="mail_id"
+            header="- Select Mail ID -"
+            layout="joomla.form.field.list-fancy-select"
+            onchange="this.form.submit();" >
+        </field>
+            
+    </fields>
+    
+    <fields name="list">
+
+
+    </fields>
+</form>

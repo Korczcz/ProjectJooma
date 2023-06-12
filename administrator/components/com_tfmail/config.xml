@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <inlinehelp button="show"/>
+    
+    <fieldset name="general" label="COM_TF_GENERAL" description="COM_TF_CONFIG_GENERAL_DESC">
+	    
+        <field name="is_pro" type="note" label="JVERSION" description="Lite"/>
+      
+      	<field name="framework" type="list" default="bs" label="Framework">
+          	<option value="bs">Bootstrap</option>
+          	<option value="uk">UIkit</option>
+          	<option value="md">Material Design</option>
+          	<option value="fn">Foundation</option>
+      	</field>
+		
+		<field name="load_rs" type="list" label="Load Resources" multiple="true" layout="joomla.form.field.list-fancy-select">
+                <option value="bs_css">Bootstrap CSS</option>
+                <option value="bs_js">Bootstrap JS</option>
+          		<option value="uk_css">UIkit CSS</option>
+          		<option value="uk_js">UIkit JS</option>
+          		<option value="fn_css">Foundation CSS</option>
+          		<option value="fn_js">Foundation JS</option>
+          		<option value="md_css">Material Design CSS</option>
+          		<option value="md_js">Material Design JS</option>
+          		<option value="fa">Font Awesome</option>
+          		<option value="air_animation_css">Air Animation CSS</option>
+        </field>
+        
+        <field name="redirect_url" type="url" label="Redirect Url"/>
+      
+      	<field name="cron_token" type="password" label="Cron Token"/>
+	    
+	</fieldset>
+    
+    <fieldset name="mail" label="COM_TFMAIL_MAIL" description="COM_TFMAIL_CONFIG_MAIL_DESC">
+        
+	    <field name="mail_from_name" type="text" label="COM_TFMAIL_FROM_NAME"/>
+	    
+        <field name="mail_from_email" type="email" label="COM_TFMAIL_FROM_EMAIL"/>
+	    
+        <field name="mail_reply_to" type="email" label="COM_TFMAIL_REPLY_TO"/>
+	    
+	    <field name="mail_return_path" type="email" label="COM_TFMAIL_RETURN_PATH"/>
+	    
+        <field name="mail_test_id" type="user" label="Test Mail User"/>
+	        
+	    <field name="list_unsub" type="radio" label="Add List Unsubscribe Header" layout="joomla.form.field.radio.switcher" default="0" filter="integer">
+	            <option value="0">JNO</option>
+		        <option value="1">JYES</option>
+        </field>
+    
+        <field name="mail_attach_folder" type="text" label="Attachment Folder" description="Example: /home/demouser/public_html/attachments"/>
+      
+      	<field name="use_smtp" type="radio" layout="joomla.form.field.radio.switcher" label="Use SMTP" default="0">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+		</field>
+      
+      	<field name="smtphost" type="text" label="SMTP Host" default="localhost" showon="use_smtp:1"/>
+
+		<field name="smtpport" type="number" label="SMTP Port" showon="use_smtp:1" min="1" max="65535" default="25" hint="25"/>
+
+		<field name="smtpsecure" type="list" label="SMTP Security" default="none" showon="use_smtp:1">
+            	<option value="none">JNONE</option>
+              	<option value="ssl">SSL</option>
+              	<option value="tls">TLS</option>
+		</field>
+
+		<field name="smtpuser" type="text" label="SMTP Username" showon="use_smtp:1" autocomplete="off"/>
+
+		<field name="smtppass" type="password" label="SMTP Password" showon="use_smtp:1" filter="raw" autocomplete="off"/>
+      
+    </fieldset>
+	
+    <fieldset name="queue" label="COM_TFMAIL_QUEUE" description="COM_TFMAIL_CONFIG_QUEUE_DESC">
+	    <field name="queue_limit" type="number" label="Email Limit" min="1" default="5"/>
+    </fieldset>
+	
+    <fieldset name="auto" label="COM_TFMAIL_AUTOMATION" description="COM_TFMAIL_CONFIG_AUTOMATION_DESC">
+        
+        <field type="note" name="note01" label="Joomla Articles"/>
+
+        <field name="auto_item_title" type="radio" label="Article Title" layout="joomla.form.field.radio.switcher" default="0" filter="integer">
+                <option value="0">JHIDE</option>
+		        <option value="1">JSHOW</option>
+        </field>
+
+        <field name="auto_linked_title" type="radio" label="Link on Title" layout="joomla.form.field.radio.switcher" default="1" filter="integer" showon="auto_item_title:1">
+                <option value="0">JHIDE</option>
+		        <option value="1">JSHOW</option>
+        </field>
+
+        <field name="auto_item_heading" type="list" label="Tag for Title" default="h2" showon="auto_item_title:1">
+		        <option value="p">p</option>
+		        <option value="h1">JH1</option>
+		        <option value="h2">JH2</option>
+		        <option value="h3">JH3</option>
+		        <option value="h4">JH4</option>
+		        <option value="h5">JH5</option>
+        </field>
+
+        <field name="auto_readmore" type="radio" label="Read More Link" layout="joomla.form.field.radio.switcher" default="0">
+		        <option value="0">JHIDE</option>
+		        <option value="1">JSHOW</option>
+        </field>
+			
+        <field name="auto_readmore_label" type="text" label="Read More Label" default="Read More" showon="auto_readmore:1"/>
+	        
+	    <field type="note" name="note02" label="Joomla Categories and Tags"/>
+	    
+	    <field name="auto_show_introtext" type="radio" label="Intro Text" default="1" layout="joomla.form.field.radio.switcher">
+                <option value="0">JHIDE</option>
+		        <option value="1">JSHOW</option>
+        </field>
+			
+        <field name="auto_intro_limit" type="number" label="Text Limit" min="0" description="Number of characters or enter 0 to ignore" default="0" showon="auto_show_introtext:1"/>
+	
+        <field name="auto_ordering" type="list" label="Order Results" default="publish_up">
+		        <option value="title">Title</option>
+		        <option value="publish_up">Published Date</option>
+		        <option value="created">Created Date</option>
+		        <option value="modified">Modified Date</option>
+		        <option value="ordering">Ordering</option>
+		        <option value="hits">JGLOBAL_HITS</option>
+		        <option value="rand()">Random</option>
+        </field>
+
+        <field name="auto_direction" type="list" label="JGLOBAL_ORDER_DIRECTION_LABEL" description="JGLOBAL_ORDER_DIRECTION_DESC" default="DESC" showon="auto_ordering:title,publish_up,created,modified,ordering,hits">
+		        <option value="ASC">JGLOBAL_ORDER_ASCENDING</option>
+		        <option value="DESC">JGLOBAL_ORDER_DESCENDING</option>
+        </field>
+        
+        <field name="auto_latest_articles" type="number" label="Latest Articles (Days)" min="1" description="Number of days relative to today to include articles (publiched date)" default="365"/>
+        
+    </fieldset>
+	
+    <fieldset name="format" label="COM_TFMAIL_FORMAT" description="COM_TFMAIL_CONFIG_FORMAT_DESC">
+        
+	    <field name="modify" type="text" label="Modify Text" default="Edit Profile"/>
+	    
+        <field name="modify_url" type="url" label="Modify Link"/>
+	
+	    <field name="unsub" type="text" label="Unsubscribe Text" default="Unsubscribe"/>
+	    
+        <field name="unsub_url" type="url" label="Unsubscribe Link"/>
+        
+        <field name="reset" type="text" label="Reset Text" default="Create Password"/>
+	    
+        <field name="reset_url" type="url" label="Reset Link"/>
+	    
+	    <field name="date_format" type="text" label="Date Format" default="F Y"/>
+	    
+	    <field name="email_footer" type="textarea" label="Email Footer" rows="3" filter="raw"/>
+	    
+    </fieldset>
+	
+    <fieldset name="replace" label="COM_TFMAIL_REPLACE" description="COM_TFMAIL_CONFIG_REPLACE_DESC">
+	    <field name="replace" type="subform" formsource="administrator/components/com_tfmail/forms/subform_replace.xml" label="Replace Strings" hiddenLabel="true" multiple="true" layout="joomla.form.field.subform.repeatable-table" filter="raw"/>
+    </fieldset>
+	
+    <fieldset name="bounces" label="COM_TFMAIL_BOUNCES" description="COM_TFMAIL_CONFIG_BOUNCES_DESC">
+        
+        <field name="bounces_auto" type="radio" label="Automatic Handling" layout="joomla.form.field.radio.switcher" default="0">
+                <option value="0">JNO</option>
+			    <option value="1">JYES</option>
+		</field>
+	    
+	    <field name="bounces_server" type="text" label="Mail Server"/>
+	    
+        <field name="bounces_port" type="number" default="993" label="Port Number"/>
+	    
+	    <field name="bounces_username" type="text" label="Username"/>
+	    
+	    <field name="bounces_password" type="password" label="Password" autocomplete="off"/>
+	    
+        <field name="bounces_limit" type="number" label="Bounces Limit" min="1" default="5"/>
+    
+    </fieldset>
+
+    <fieldset name="styles" label="COM_TFMAIL_STYLES" description="COM_TFMAIL_CONFIG_STYLES_DESC">
+	    <field name="styles_unsub" type="text" label="Unsubscribe Link" description="Style for {UNSUB} Link"/>
+	    
+	    <field name="styles_modify" type="text" label="Modify Link" description="Style for {MODIFY} Link"/>
+	    
+	    <field name="styles_readmore" type="text" label="Readmore Link" description="Style for Read More Link"/>
+	        
+        <field name="styles_links" type="text" label="Other Links" description="Style for {LINK} Link"/>
+	    
+	    <field name="styles_heading" type="text" label="Heading" description="Style for Article Heading"/>
+	        
+	    <field name="styles_image" type="text" label="Images" description="Style for Article Images"/>
+
+    </fieldset>
+    
+    <fieldset name="statistics" label="COM_TFMAIL_STATISTICS" description="COM_TFMAIL_CONFIG_STATISTICS_DESC">
+        
+        <field name="mail_opens" type="radio" label="Track Email Opens" layout="joomla.form.field.radio.switcher" default="0" filter="integer">
+	            <option value="0">JNO</option>
+		        <option value="1">JYES</option>
+        </field>
+	    
+	    <field name="mail_clicks" type="radio" label="Track Link Clicks" layout="joomla.form.field.radio.switcher" default="0" filter="integer">
+	            <option value="0">JNO</option>
+		        <option value="1">JYES</option>
+        </field>
+        
+    </fieldset>
+  
+  	<fieldset name="cleanusers" label="COM_TFMAIL_CLEAN_USERS">
+      
+      	<field name="clean_users" type="number" label="Total Users" default="0" min="0"/>
+      
+      	<field name="clean_group" type="usergrouplist" label="User Group" default="0" checksuperusergroup="1" layout="joomla.form.field.list-fancy-select">
+          	<option value="0">JALL</option>
+      	</field>
+        
+        <field name="clean_register" type="number" label="Regsiter Date" default="0" min="0"/>
+      
+      	<field name="clean_lastvisit" type="number" label="Last Visit Date" default="0" min="0"/>
+      
+      	<field name="clean_senddate" type="number" label="Send Date" default="0" min="0"/>
+      
+      	<field name="clean_opendate" type="number" label="Open Date" default="0" min="0"/>
+      
+      	<field name="clean_send" type="number" label="Minimum Total Send" min="0"/>
+      
+      	<field name="clean_opens" type="number" label="Maximum Total Opens" min="0"/>
+      
+      	<field name="clean_clicks" type="number" label="Maximum Total Clicks" min="0"/>
+        
+    </fieldset>
+  
+  	<fieldset name="birthday" label="COM_TFMAIL_BIRTHDAY" description="COM_TFMAIL_CONFIG_BIRTHDAY_DESC">
+    
+      		<field name="enable_bday" type="radio" label="Enable Birthday" layout="joomla.form.field.radio.switcher" default="0">
+	            <option value="0">JNO</option>
+		        <option value="1">JYES</option>
+        	</field>
+      
+      		<field name="bday_field" type="sql" label="Birthday Field" query="SELECT id, title FROM #__fields WHERE state=1 AND context='com_users.user' AND type='calendar'" key_field="id" value_field="title" header="JSELECT" showon="enable_bday:1"/>
+			
+		    <field name="bday_mail" type="sql" label="Birthday Mail ID" query="SELECT id, title FROM #__tfm_mail WHERE published=1 AND mail_type='other'" key_field="id" value_field="title" header="JSELECT" showon="enable_bday:1"/>
+      
+      		<field name="bday_hour" type="number" label="Hour" min="0" max="23" showon="enable_bday:1"/>
+      
+      		<field name="bday_minute" type="number" label="Minute" min="0" max="59" showon="enable_bday:1"/>
+      
+  	</fieldset>  
+    
+    <fieldset name="social" label="COM_TFMAIL_SOCIAL" description="COM_TFMAIL_CONFIG_SOCIAL_DESC">
+        
+        <field name="enable_google" type="radio" label="Google" layout="joomla.form.field.radio.switcher" default="0" filter="integer">
+	            <option value="0">JNO</option>
+		        <option value="1">JYES</option>
+        </field>
+        
+        <field name="google_client_id" type="text" label="Client ID" showon="enable_google:1"/>
+        
+        <field name="google_client_secret" type="password" label="Client Secret" showon="enable_google:1"/>
+        
+        <field name="enable_linkedin" type="radio" label="Linkedin" layout="joomla.form.field.radio.switcher" default="0" filter="integer">
+	            <option value="0">JNO</option>
+		        <option value="1">JYES</option>
+        </field>
+        
+        <field name="linkedin_client_id" type="text" label="Client ID" showon="enable_linkedin:1"/>
+        
+        <field name="linkedin_client_secret" type="password" label="Client Secret" showon="enable_linkedin:1"/>
+        
+        <field name="enable_facebook" type="radio" label="Facebook" layout="joomla.form.field.radio.switcher" default="0" filter="integer">
+	            <option value="0">JNO</option>
+		        <option value="1">JYES</option>
+        </field>
+        
+        <field name="facebook_client_id" type="text" label="Client ID" showon="enable_facebook:1"/>
+        
+        <field name="facebook_client_secret" type="password" label="Client Secret" showon="enable_facebook:1"/>
+        
+        <field name="enable_github" type="radio" label="Github" layout="joomla.form.field.radio.switcher" default="0" filter="integer">
+	            <option value="0">JNO</option>
+		        <option value="1">JYES</option>
+        </field>
+        
+        <field name="github_client_id" type="text" label="Client ID" showon="enable_github:1"/>
+        
+        <field name="github_client_secret" type="password" label="Client Secret" showon="enable_github:1"/>
+        
+    </fieldset>
+	
+    <fieldset name="notify" label="COM_TF_NOTIFY" description="COM_TF_CONFIG_NOTIFY_DESC">
+	    
+	    <field name="notify_unsubscribe" type="radio" label="User Unsubscription" layout="joomla.form.field.radio.switcher" default="0" filter="integer">
+		        <option value="0">JNO</option>
+		        <option value="1">JYES</option>
+        </field>
+
+    </fieldset>
+    
+    <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+        
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" validate="rules" filter="rules" component="com_tfmail" section="component"/>
+			
+	</fieldset>
+	
+</config>

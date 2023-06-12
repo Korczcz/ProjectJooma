@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field
+	    name="container_class"
+	    type="text"
+	    label="Container Class" />
+	    
+	<field
+	    name="container_type"
+	    type="list"
+	    label="Container Type">
+	        <option value="">JNONE</option>
+	        <option value="container">Container</option>
+	        <option value="container-fluid">Container Fluid</option>
+	</field>
+	
+	<field
+        name="container_padding"
+        type="list"
+        label="Container Padding">
+            <option value="">JNONE</option>
+            <option value="py-1">Vertical Small</option>
+            <option value="py-3">Vertical Medium</option>
+            <option value="py-5">Vertical Large</option>
+    </field>
+</form>

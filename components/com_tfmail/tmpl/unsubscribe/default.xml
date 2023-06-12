@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_TFMAIL_UNSUBSCRIBE_VIEW_TITLE">
+        <message>COM_TFMAIL_UNSUBSCRIBE_VIEW_DESC</message>
+      	<help url="COM_TFMAIL_UNSUBSCRIBE_VIEW_HELP"/>
+    </layout>
+    
+    <fields name="params">
+        <fieldset name="basic" label="Options">
+
+            <field
+                name="description"
+                type="textarea"
+                label="JGLOBAL_DESCRIPTION"
+                rows="3"
+			    cols="40"
+			    filter="safehtml" />
+		    
+		    <field 
+                name="custom_redirect"
+                type="url"
+                label="Custom Redirect" />
+                
+            <field
+		        name="custom_message"
+		        type="text"
+		        label="Custom Message" />
+		        
+		    <field 
+		        name="survey" 
+                type="radio" 
+                default="0" 
+                label="Unsubscribe Survey"
+                layout="joomla.form.field.radio.switcher">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+            </field>
+            
+            <field 
+                name="survey_list"
+                type="subform"
+                formsource="components/com_tfmail/forms/subform_list.xml"
+                label="Survey Options"
+                hiddenLabel="true"
+                multiple="true"
+                layout="joomla.form.field.subform.repeatable-table"
+                showon="survey:1" />
+
+        </fieldset>
+        
+        <fieldset name="button" label="COM_TF_FIELDSET_BUTTON">
+            
+            <field 
+                name="button"
+                type="subform"
+                formsource="libraries/techfry/forms/button.xml"
+                label="COM_TF_BUTTON"
+                hiddenLabel="true" />
+            
+        </fieldset>
+        
+
+    </fields>
+</metadata>

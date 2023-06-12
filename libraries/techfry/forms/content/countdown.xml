@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form>
+    
+    <field
+	    name="countdown_date"
+	    type="calendar"
+	    label="Date" />
+    
+    <field
+	    name="finished_text"
+	    type="text"
+	    label="Finished Text" />
+	
+</form>

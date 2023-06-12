@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+    <field
+	    name="title"
+	    type="text"
+	    label="JGLOBAL_TITLE" />
+	    
+    <field
+	    name="progress"
+	    type="number"
+	    min="0"
+	    max="100"
+	    label="Progress" />
+
+</form>

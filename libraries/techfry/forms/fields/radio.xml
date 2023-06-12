@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <field
+		name="form_layout"
+		type="list"
+		label="Form Layout">
+		    <option value="joomla.form.field.radio.buttons">Buttons</option>
+		    <option value="joomla.form.field.radio.switcher">Switcher</option>
+	</field>
+  
+</form>

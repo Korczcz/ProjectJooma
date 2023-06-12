@@ -1,0 +1,1 @@
+ALTER TABLE `#__tfm_links` ADD COLUMN `campaign_id` INT(11) AFTER `link_url`;

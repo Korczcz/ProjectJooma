@@ -1,0 +1,1 @@
+ALTER TABLE `#__tfm_mail` ADD COLUMN `check_for_new` TINYINT(3) AFTER `frequency`;

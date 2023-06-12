@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <field name="options" type="subform" label="PLG_FIELDS_LIST_PARAMS_OPTIONS_LABEL" layout="joomla.form.field.subform.repeatable-table" multiple="true">
+		<form hidden="true" name="list_templates_modal" repeat="true">
+			<field	name="name"	type="text"	label="PLG_FIELDS_LIST_PARAMS_OPTIONS_NAME_LABEL" required="true" />
+			<field name="value" type="text" label="PLG_FIELDS_LIST_PARAMS_OPTIONS_VALUE_LABEL" />
+		</form>
+	</field>
+  
+  	<field 
+        name="multiple"
+        label="Multiple"
+        type="radio"
+        default="false"
+        layout="joomla.form.field.radio.switcher">
+            <option value="false">JNO</option>
+            <option value="true">JYES</option>
+    </field>
+    
+    <field
+		name="form_layout"
+		type="list"
+		label="Form Layout">
+			<option value="joomla.form.field.list">JDEFAULT</option>
+			<option value="joomla.form.field.list-fancy-select">Fancy Select</option>
+	</field>
+  
+</form>

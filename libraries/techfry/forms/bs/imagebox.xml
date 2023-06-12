@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+        name="title_head"
+        type="list"
+        label="Title Head"
+        default="h3">
+            <option value="h1">h1</option>
+            <option value="h2">h2</option>
+            <option value="h3">h3</option>
+            <option value="h4">h4</option>
+            <option value="h5">h5</option>
+            <option value="h6">h6</option>
+    </field>
+    
+    <field
+        name="title_class"
+        type="text"
+        label="Title Class" />
+        
+    <field
+        name="desc_class"
+        type="text"
+        label="Description Class" />
+        
+    <field
+        name="image_class"
+        type="text"
+        label="Image Class" />
+    
+    <field
+        name="button_text"
+        type="text"
+        label="Button Text" />
+        
+    <field
+        name="button_class"
+        type="text"
+        label="Button Class" />
+
+</form>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+	    name="location"
+	    type="list"
+	    label="Location"
+	    default="top-50 start-50">
+	        <option value="top-50 start-50">Center</option>
+	        <option value="top-0 start-0">Top Left</option>
+	        <option value="top-0 end-0">Top Right</option>
+	        <option value="bottom-0 start-0">Bottom Left</option>
+	        <option value="bottom-0 end-0">Top Right</option>
+	</field>
+    
+    <field
+	    name="image_class"
+	    type="text"
+	    label="Image Class"
+	    default="img-fluid" />
+	    
+    <field
+	    name="desc_class"
+	    type="text"
+	    label="Description Class" />
+
+</form>

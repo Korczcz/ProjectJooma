@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+	    name="button_class"
+	    type="text"
+	    label="Button Class"
+	    default="btn btn-primary" />
+	    
+    <field
+	    name="bg"
+	    type="list"
+	    label="Background"
+	    default="bg-white">
+            <option value="bg-primary">Primary</option>
+            <option value="bg-secondary">Secondary</option>
+            <option value="bg-success">Success</option>
+            <option value="bg-danger">Danger</option>
+            <option value="bg-warning">Warning</option>
+            <option value="bg-info">Info</option>
+            <option value="bg-light">Light</option>
+            <option value="bg-dark">Dark</option>
+            <option value="bg-white">White</option>
+            <option value="bg-transparent">Transparent</option>
+    </field>
+    
+    <field
+	    name="width"
+	    type="list"
+	    label="Width"
+	    default="w-75">
+            <option value="w-25">25%</option>
+            <option value="w-50">50%</option>
+            <option value="w-75">75%</option>
+            <option value="w-100">100%</option>
+    </field>
+    
+    <field
+	    name="modal_class"
+	    type="text"
+	    label="Modal Class"
+	    default="" />
+    
+    <field
+	    name="body_class"
+	    type="text"
+	    label="Body Class"
+	    default="p-3" />
+	
+	<field
+	    name="close_class"
+	    type="text"
+	    label="Close Class"
+	    default="btn btn-light rounded-0 text-dark float-end" />
+	    
+    <field
+	    name="animation"
+	    type="list"
+	    label="Animation"
+	    default="">
+            <option value="">JNONE</option>
+            <option value="animate-opacity">Fade</option>
+            <option value="animate-zoom">Zoom</option>
+            <option value="animate-zoom-in">Scale</option>
+            <option value="animate-top">Slide from Top</option>
+            <option value="animate-bottom">Slide from Bottom</option>
+            <option value="animate-left">Slide from Left</option>
+            <option value="animate-right">Slide from Right</option>
+    </field>
+    
+    <field
+	    name="on_load"
+	    type="radio"
+	    label="On Page Load"
+	    layout="joomla.form.field.radio.switcher"
+	    default="0">
+	        <option value="0">JNO</option>
+	        <option value="1">JYES</option>
+	</field>
+	
+	<field
+	    name="delay"
+	    type="number"
+	    min="1"
+	    max="20"
+	    default="5"
+	    label="Delay"
+	    showon="on_load:1" />
+	    
+</form>

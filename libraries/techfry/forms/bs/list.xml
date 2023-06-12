@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+        name="type"
+        type="list"
+        label="Type">
+            <option value="">JSELECT</option>
+            <option value="list">Unstyled</option>
+            <option value="inline">Inline</option>
+            <option value="listgroup">List Group</option>
+            <option value="nav">Nav</option>
+    </field>
+  
+  	<field 
+        name="list_class" 
+        type="text" 
+        label="List (ul) Class" />
+    
+    <field 
+        name="list_item_class" 
+        type="text" 
+        label="List Item (li) Class" />
+                
+    <field 
+        name="link_class" 
+        type="text" 
+        label="Link (a) Class" />
+        
+    <field 
+        name="icon_class" 
+        type="text" 
+        label="Icon Class" />
+        
+</form>

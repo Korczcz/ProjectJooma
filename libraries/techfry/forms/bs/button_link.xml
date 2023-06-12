@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field
+	    name="text"
+	    type="text"
+	    label="COM_TF_TEXT"
+	    default="Visit Link" />
+	    
+    <field
+	    name="target"
+	    type="list"
+	    label="Target Window"
+	    default="">
+            <option value="">Parent</option>
+            <option value="_blank">New Window</option>
+    </field>
+	
+</form>

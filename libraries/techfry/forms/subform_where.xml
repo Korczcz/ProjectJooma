@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field 
+        name="where_field"
+        label="Filter Field"
+        description="Name of column in database table"
+        type="text" />
+        
+    <field 
+        name="where_operator"
+        label="Filter Operator"
+        type="text" />
+            
+    <field 
+        name="where_value"
+        label="Filter Value"
+        type="text"
+        description="For date, enter days to subtract from the current date" />
+        
+    <field
+        name="isDate"
+        label="Date Field"
+        type="radio"
+        layout="joomla.form.field.radio.switcher"
+        description="Select Yes if Where Field is of Date type"
+        default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+    </field>
+</form>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="general" label="COM_TFMAIL_ACCOUNT">
+        
+        <field
+			name="name"
+			type="text"
+			hint="COM_TFMAIL_NAME_HINT"
+			label="COM_TFMAIL_NAME" />
+			
+		<field
+		    name="email"
+		    type="email"
+		    hint="COM_TFMAIL_EMAIL_HINT"
+		    label="JGLOBAL_EMAIL"
+		    required="true" />
+      
+      	<field
+			name="username"
+			type="text"
+			label="COM_TFMAIL_USERNAME"
+			hint="COM_TFMAIL_USERNAME_HINT"
+			required="true" />
+      
+      	<field
+         	name="groups"
+            type="list"
+            label="COM_TFMAIL_GROUP"
+            required="true">
+          		<option value="">JSELECT</option>
+      	</field>
+			
+		<field
+			name="password1"
+			type="password"
+			label="COM_TFMAIL_PASSWORD"
+			autocomplete="off"
+			filter="raw" />
+      
+      	<field
+			name="password2"
+			type="password"
+			label="COM_TFMAIL_CONFIRM_PASSWORD"
+			autocomplete="off"
+			filter="raw" />
+			
+    </fieldset>
+  
+  	<fieldset name="details">
+        
+        
+    </fieldset>
+
+</form>

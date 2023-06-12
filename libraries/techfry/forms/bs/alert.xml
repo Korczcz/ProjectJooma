@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+	    name="alert_class"
+	    type="text"
+	    label="Alert Class" />
+  
+  	<field
+	    name="type"
+	    type="list"
+	    label="Type"
+	    default="primary">
+	        <option value="primary">Primary</option>
+	        <option value="success">Success</option>
+      		<option value="warning">Warning</option>
+	        <option value="danger">Danger</option>
+	</field>
+    
+    <field
+	    name="dismiss"
+	    type="radio"
+	    label="Dismiss"
+	    layout="joomla.form.field.radio.switcher"
+	    default="0">
+	        <option value="0">JNO</option>
+	        <option value="1">JYES</option>
+	</field>
+
+</form>

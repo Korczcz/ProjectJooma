@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <field 
+        name="rows"
+        type="number"
+        label="Rows"
+        min="1"
+        default="4" />
+        
+    <field 
+        name="cols"
+        type="number"
+        label="Columns"
+        min="1" />
+  
+</form>

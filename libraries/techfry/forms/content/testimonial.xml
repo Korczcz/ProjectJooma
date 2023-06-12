@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+        name="title"
+        type="text"
+        label="JGLOBAL_TITLE" />
+        
+    <field
+        name="designation"
+        type="text"
+        label="Designation" />
+        
+    <field
+        name="rating"
+        type="number"
+        min="0"
+        max="5"
+        label="Rating" />
+        
+    <field
+        name="description"
+        type="textarea"
+        label="JGLOBAL_DESCRIPTION" />
+        
+    <field
+        name="image"
+        type="media"
+        label="Image" />
+        
+</form>

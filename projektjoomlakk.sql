@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 07 Cze 2023, 09:50
--- Wersja serwera: 10.4.22-MariaDB
--- Wersja PHP: 8.1.2
+-- Generation Time: Jun 12, 2023 at 10:28 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,28 +18,28 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `projektjoomlakk`
+-- Database: `projektjoomlakk`
 --
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_action_logs`
+-- Table structure for table `buf3w_action_logs`
 --
 
 CREATE TABLE `buf3w_action_logs` (
   `id` int(10) UNSIGNED NOT NULL,
-  `message_language_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `message` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `message_language_key` varchar(255) NOT NULL DEFAULT '',
+  `message` text NOT NULL,
   `log_date` datetime NOT NULL,
-  `extension` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `extension` varchar(50) NOT NULL DEFAULT '',
   `user_id` int(11) NOT NULL DEFAULT 0,
   `item_id` int(11) NOT NULL DEFAULT 0,
-  `ip_address` varchar(40) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0.0.0.0'
+  `ip_address` varchar(40) NOT NULL DEFAULT '0.0.0.0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_action_logs`
+-- Dumping data for table `buf3w_action_logs`
 --
 
 INSERT INTO `buf3w_action_logs` (`id`, `message_language_key`, `message`, `log_date`, `extension`, `user_id`, `item_id`, `ip_address`) VALUES
@@ -76,21 +76,131 @@ INSERT INTO `buf3w_action_logs` (`id`, `message_language_key`, `message`, `log_d
 (31, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ARTICLE\",\"id\":5,\"title\":\"TikTok\\u00a0szykuje zmiany\",\"itemlink\":\"index.php?option=com_content&task=article.edit&id=5\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-07 07:40:46', 'com_content.article', 588, 5, 'COM_ACTIONLOGS_DISABLED'),
 (32, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MEDIA\",\"id\":0,\"title\":\"408653.jpg\",\"itemlink\":\"index.php?option=com_media&path=local-images:\\/\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-07 07:48:43', 'com_media.file', 588, 0, 'COM_ACTIONLOGS_DISABLED'),
 (33, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MEDIA\",\"id\":0,\"title\":\"lbDk9kqTURBXy9jY2VkZWJmODVlMWJiZmYxNGI5Yzk4NDA0YzQxNGI3YS5qcGVnkpUDAMxszQwmzQbVkwXNBLDNAljeAAGhMAE.jpg\",\"itemlink\":\"index.php?option=com_media&path=local-images:\\/\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-07 07:48:50', 'com_media.file', 588, 0, 'COM_ACTIONLOGS_DISABLED'),
-(34, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ARTICLE\",\"id\":6,\"title\":\"Facebook na \\\"czarnej li\\u015bcie\\\"\",\"itemlink\":\"index.php?option=com_content&task=article.edit&id=6\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-07 07:49:03', 'com_content.article', 588, 6, 'COM_ACTIONLOGS_DISABLED');
+(34, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ARTICLE\",\"id\":6,\"title\":\"Facebook na \\\"czarnej li\\u015bcie\\\"\",\"itemlink\":\"index.php?option=com_content&task=article.edit&id=6\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-07 07:49:03', 'com_content.article', 588, 6, 'COM_ACTIONLOGS_DISABLED'),
+(35, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2023-06-12 15:33:52', 'com_users', 588, 0, 'COM_ACTIONLOGS_DISABLED'),
+(36, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-06-12 15:36:02', 'com_users', 588, 0, 'COM_ACTIONLOGS_DISABLED'),
+(37, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__content\"}', '2023-06-12 15:36:14', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(38, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-06-12 15:54:49', 'com_users', 588, 0, 'COM_ACTIONLOGS_DISABLED'),
+(39, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MEDIA\",\"id\":0,\"title\":\"user.png\",\"itemlink\":\"index.php?option=com_media&path=local-images:\\/\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:05:01', 'com_media.file', 588, 0, 'COM_ACTIONLOGS_DISABLED'),
+(40, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_CONTACT\",\"id\":1,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_contact&task=contact.edit&id=1\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:08:23', 'com_contact.contact', 588, 1, 'COM_ACTIONLOGS_DISABLED'),
+(41, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_CATEGORY\",\"id\":10,\"title\":\"Menu\",\"itemlink\":\"index.php?option=com_categories&task=category.edit&id=10\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:20:39', 'com_categories.category', 588, 10, 'COM_ACTIONLOGS_DISABLED'),
+(42, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ARTICLE\",\"id\":7,\"title\":\"O nas\",\"itemlink\":\"index.php?option=com_content&task=article.edit&id=7\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:20:39', 'com_content.article', 588, 7, 'COM_ACTIONLOGS_DISABLED'),
+(43, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__content\"}', '2023-06-12 16:20:43', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(44, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":102,\"title\":\"O nas\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=102\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:21:47', 'com_menus.item', 588, 102, 'COM_ACTIONLOGS_DISABLED'),
+(45, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2023-06-12 16:22:10', 'com_users', 588, 0, 'COM_ACTIONLOGS_DISABLED'),
+(46, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-06-12 16:38:00', 'com_users', 588, 0, 'COM_ACTIONLOGS_DISABLED'),
+(47, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ARTICLE\",\"id\":8,\"title\":\"Polityka prywatno\\u015bci\",\"itemlink\":\"index.php?option=com_content&task=article.edit&id=8\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:41:39', 'com_content.article', 588, 8, 'COM_ACTIONLOGS_DISABLED'),
+(48, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__content\"}', '2023-06-12 16:41:42', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(49, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":103,\"title\":\"Polityka prywatno\\u015bci\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=103\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:43:07', 'com_menus.item', 588, 103, 'COM_ACTIONLOGS_DISABLED'),
+(50, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":103,\"title\":\"Polityka prywatno\\u015bci\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=103\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:47:00', 'com_menus.item', 588, 103, 'COM_ACTIONLOGS_DISABLED'),
+(51, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__menu\"}', '2023-06-12 16:47:00', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(52, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ARTICLE\",\"id\":9,\"title\":\"Warunki korzystania\",\"itemlink\":\"index.php?option=com_content&task=article.edit&id=9\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:49:24', 'com_content.article', 588, 9, 'COM_ACTIONLOGS_DISABLED'),
+(53, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__content\"}', '2023-06-12 16:49:27', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(54, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":104,\"title\":\"Warunki korzystania\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=104\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:49:42', 'com_menus.item', 588, 104, 'COM_ACTIONLOGS_DISABLED'),
+(55, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":102,\"title\":\"O nas\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=102\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:49:49', 'com_menus.item', 588, 102, 'COM_ACTIONLOGS_DISABLED'),
+(56, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__menu\"}', '2023-06-12 16:49:49', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(57, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":103,\"title\":\"Polityka prywatno\\u015bci\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=103\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:49:54', 'com_menus.item', 588, 103, 'COM_ACTIONLOGS_DISABLED'),
+(58, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__menu\"}', '2023-06-12 16:49:54', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(59, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ARTICLE\",\"id\":10,\"title\":\"Cz\\u0119sto Zadawane Pytania\",\"itemlink\":\"index.php?option=com_content&task=article.edit&id=10\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:57:51', 'com_content.article', 588, 10, 'COM_ACTIONLOGS_DISABLED'),
+(60, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__content\"}', '2023-06-12 16:57:53', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(61, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":105,\"title\":\"Cz\\u0119sto zadawane pytania\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=105\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:57:55', 'com_menus.item', 588, 105, 'COM_ACTIONLOGS_DISABLED'),
+(62, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ARTICLE\",\"id\":\"9\",\"title\":\"Warunki korzystania\",\"itemlink\":\"index.php?option=com_content&task=article.edit&id=9\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:58:05', 'com_content.article', 588, 9, 'COM_ACTIONLOGS_DISABLED'),
+(63, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__content\"}', '2023-06-12 16:58:05', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(64, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__content\"}', '2023-06-12 16:58:08', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(65, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":104,\"title\":\"Warunki korzystania\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=104\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:58:28', 'com_menus.item', 588, 104, 'COM_ACTIONLOGS_DISABLED'),
+(66, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__menu\"}', '2023-06-12 16:58:28', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(67, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ARTICLE\",\"id\":\"8\",\"title\":\"Polityka prywatno\\u015bci\",\"itemlink\":\"index.php?option=com_content&task=article.edit&id=8\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:58:39', 'com_content.article', 588, 8, 'COM_ACTIONLOGS_DISABLED'),
+(68, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__content\"}', '2023-06-12 16:58:39', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(69, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__content\"}', '2023-06-12 16:58:43', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(70, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":103,\"title\":\"Polityka prywatno\\u015bci\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=103\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:58:50', 'com_menus.item', 588, 103, 'COM_ACTIONLOGS_DISABLED'),
+(71, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__menu\"}', '2023-06-12 16:58:50', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(72, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":105,\"title\":\"Cz\\u0119sto zadawane pytania\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=105\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 16:59:00', 'com_menus.item', 588, 105, 'COM_ACTIONLOGS_DISABLED'),
+(73, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__menu\"}', '2023-06-12 16:59:00', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(74, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_OUT', '{\"action\":\"logout\",\"id\":588,\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2023-06-12 17:02:52', 'com_users', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(75, 'PLG_ACTIONLOG_JOOMLA_COMPONENT_CONFIG_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT_CONFIG\",\"id\":22,\"title\":\"com_users\",\"extension_name\":\"com_users\",\"itemlink\":\"index.php?option=com_config&task=component.edit&extension_id=22\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 17:10:35', 'com_config.component', 588, 22, 'COM_ACTIONLOGS_DISABLED'),
+(76, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"95\",\"title\":\"plg_captcha_recaptcha\",\"extension_name\":\"plg_captcha_recaptcha\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=95\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 17:35:28', 'com_plugins.plugin', 588, 95, 'COM_ACTIONLOGS_DISABLED'),
+(77, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__extensions\"}', '2023-06-12 17:35:28', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(78, 'PLG_ACTIONLOG_JOOMLA_APPLICATION_CONFIG_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_APPLICATION_CONFIG\",\"extension_name\":\"com_config.application\",\"itemlink\":\"index.php?option=com_config\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 17:35:47', 'com_config.application', 588, 0, 'COM_ACTIONLOGS_DISABLED'),
+(79, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"95\",\"title\":\"plg_captcha_recaptcha\",\"extension_name\":\"plg_captcha_recaptcha\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=95\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 17:40:49', 'com_plugins.plugin', 588, 95, 'COM_ACTIONLOGS_DISABLED'),
+(80, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__extensions\"}', '2023-06-12 17:40:49', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(81, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"95\",\"title\":\"plg_captcha_recaptcha\",\"extension_name\":\"plg_captcha_recaptcha\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=95\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 17:41:28', 'com_plugins.plugin', 588, 95, 'COM_ACTIONLOGS_DISABLED'),
+(82, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__extensions\"}', '2023-06-12 17:41:28', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(83, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"95\",\"title\":\"plg_captcha_recaptcha\",\"extension_name\":\"plg_captcha_recaptcha\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=95\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 17:49:43', 'com_plugins.plugin', 588, 95, 'COM_ACTIONLOGS_DISABLED'),
+(84, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__extensions\"}', '2023-06-12 17:49:43', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(85, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"95\",\"title\":\"plg_captcha_recaptcha\",\"extension_name\":\"plg_captcha_recaptcha\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=95\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 17:53:08', 'com_plugins.plugin', 588, 95, 'COM_ACTIONLOGS_DISABLED'),
+(86, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__extensions\"}', '2023-06-12 17:53:08', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(87, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"95\",\"title\":\"plg_captcha_recaptcha\",\"extension_name\":\"plg_captcha_recaptcha\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=95\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 17:53:24', 'com_plugins.plugin', 588, 95, 'COM_ACTIONLOGS_DISABLED'),
+(88, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__extensions\"}', '2023-06-12 17:53:24', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(89, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"95\",\"title\":\"plg_captcha_recaptcha\",\"extension_name\":\"plg_captcha_recaptcha\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=95\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 17:57:34', 'com_plugins.plugin', 588, 95, 'COM_ACTIONLOGS_DISABLED'),
+(90, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__extensions\"}', '2023-06-12 17:57:34', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(91, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"95\",\"title\":\"plg_captcha_recaptcha\",\"extension_name\":\"plg_captcha_recaptcha\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=95\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:02:56', 'com_plugins.plugin', 588, 95, 'COM_ACTIONLOGS_DISABLED'),
+(92, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__extensions\"}', '2023-06-12 18:02:56', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(93, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"95\",\"title\":\"plg_captcha_recaptcha\",\"extension_name\":\"plg_captcha_recaptcha\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=95\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:09:42', 'com_plugins.plugin', 588, 95, 'COM_ACTIONLOGS_DISABLED'),
+(94, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__extensions\"}', '2023-06-12 18:09:42', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(95, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"95\",\"title\":\"plg_captcha_recaptcha\",\"extension_name\":\"plg_captcha_recaptcha\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=95\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:10:56', 'com_plugins.plugin', 588, 95, 'COM_ACTIONLOGS_DISABLED'),
+(96, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__extensions\"}', '2023-06-12 18:10:56', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(97, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"95\",\"title\":\"plg_captcha_recaptcha\",\"extension_name\":\"plg_captcha_recaptcha\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=95\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:14:53', 'com_plugins.plugin', 588, 95, 'COM_ACTIONLOGS_DISABLED'),
+(98, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__extensions\"}', '2023-06-12 18:14:53', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(99, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"95\",\"title\":\"plg_captcha_recaptcha\",\"extension_name\":\"plg_captcha_recaptcha\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=95\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:18:28', 'com_plugins.plugin', 588, 95, 'COM_ACTIONLOGS_DISABLED'),
+(100, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__extensions\"}', '2023-06-12 18:18:28', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(101, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:19:08', 'com_users', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(102, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":589,\"title\":\"Go\\u015b\\u0107\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=589\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:21:16', 'com_users', 588, 589, 'COM_ACTIONLOGS_DISABLED'),
+(103, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":590,\"title\":\"Autor\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=590\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:22:40', 'com_users', 588, 590, 'COM_ACTIONLOGS_DISABLED'),
+(104, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":591,\"title\":\"Edytor\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=591\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:26:06', 'com_users', 588, 591, 'COM_ACTIONLOGS_DISABLED'),
+(105, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":592,\"title\":\"Publicysta\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=592\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:28:07', 'com_users', 588, 592, 'COM_ACTIONLOGS_DISABLED'),
+(106, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ARTICLE\",\"id\":11,\"title\":\"Dla zalogowanych\",\"itemlink\":\"index.php?option=com_content&task=article.edit&id=11\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:29:47', 'com_content.article', 588, 11, 'COM_ACTIONLOGS_DISABLED'),
+(107, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__content\"}', '2023-06-12 18:29:51', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(108, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__content\"}', '2023-06-12 18:31:05', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(109, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":106,\"title\":\"Strona dost\\u0119pna tylko dla zalogowanych\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=106\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:31:20', 'com_menus.item', 588, 106, 'COM_ACTIONLOGS_DISABLED'),
+(110, 'PLG_ACTIONLOG_JOOMLA_USER_LOGIN_FAILED', '{\"action\":\"login\",\"id\":588,\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2023-06-12 18:31:32', 'com_users', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(111, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_SITE\"}', '2023-06-12 18:31:45', 'com_users', 588, 0, 'COM_ACTIONLOGS_DISABLED'),
+(112, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":110,\"title\":\"Wyszukiwarka\",\"extension_name\":\"Wyszukiwarka\",\"itemlink\":\"index.php?option=com_modules&task=module.edit&id=110\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:38:44', 'com_modules.module', 588, 110, 'COM_ACTIONLOGS_DISABLED'),
+(113, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":110,\"title\":\"Wyszukiwarka\",\"extension_name\":\"Wyszukiwarka\",\"itemlink\":\"index.php?option=com_modules&task=module.edit&id=110\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:39:19', 'com_modules.module', 588, 110, 'COM_ACTIONLOGS_DISABLED'),
+(114, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__modules\"}', '2023-06-12 18:39:19', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(115, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_ARTICLE\",\"id\":12,\"title\":\"Dane kontaktowe\",\"itemlink\":\"index.php?option=com_content&task=article.edit&id=12\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:46:19', 'com_content.article', 588, 12, 'COM_ACTIONLOGS_DISABLED'),
+(116, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__content\"}', '2023-06-12 18:46:21', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(117, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":107,\"title\":\"Dane kontaktowe\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=107\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:46:24', 'com_menus.item', 588, 107, 'COM_ACTIONLOGS_DISABLED'),
+(118, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":107,\"title\":\"Dane kontaktowe\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=107\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:46:28', 'com_menus.item', 588, 107, 'COM_ACTIONLOGS_DISABLED'),
+(119, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"106\",\"title\":\"plg_content_vote\",\"extension_name\":\"plg_content_vote\",\"itemlink\":\"index.php?option=com_plugins&task=plugin.edit&extension_id=106\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:50:41', 'com_plugins.plugin', 588, 106, 'COM_ACTIONLOGS_DISABLED'),
+(120, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__extensions\"}', '2023-06-12 18:50:41', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED'),
+(121, 'PLG_ACTIONLOG_JOOMLA_USER_CHECKIN', '{\"action\":\"checkin\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"table\":\"#__extensions\"}', '2023-06-12 18:50:43', 'com_checkin', 588, 588, 'COM_ACTIONLOGS_DISABLED');
+INSERT INTO `buf3w_action_logs` (`id`, `message_language_key`, `message`, `log_date`, `extension`, `user_id`, `item_id`, `ip_address`) VALUES
+(122, 'PLG_ACTIONLOG_JOOMLA_COMPONENT_CONFIG_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT_CONFIG\",\"id\":19,\"title\":\"com_content\",\"extension_name\":\"com_content\",\"itemlink\":\"index.php?option=com_config&task=component.edit&extension_id=19\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 18:51:12', 'com_config.component', 588, 19, 'COM_ACTIONLOGS_DISABLED'),
+(123, 'PLG_ACTIONLOG_JOOMLA_PLUGIN_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":233,\"name\":\"Content - CComment\",\"extension_name\":\"Content - CComment\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:00:08', 'com_installer', 588, 233, 'COM_ACTIONLOGS_DISABLED'),
+(124, 'PLG_ACTIONLOG_JOOMLA_PLUGIN_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":234,\"name\":\"K2 Plugin - CComment\",\"extension_name\":\"K2 Plugin - CComment\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:00:08', 'com_installer', 588, 234, 'COM_ACTIONLOGS_DISABLED'),
+(125, 'PLG_ACTIONLOG_JOOMLA_PLUGIN_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":235,\"name\":\"Search - CComment\",\"extension_name\":\"Search - CComment\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:00:08', 'com_installer', 588, 235, 'COM_ACTIONLOGS_DISABLED'),
+(126, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_LIBRARY\",\"id\":236,\"name\":\"Library - compojoom\",\"extension_name\":\"Library - compojoom\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:00:08', 'com_installer', 588, 236, 'COM_ACTIONLOGS_DISABLED'),
+(127, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT\",\"id\":232,\"name\":\"com_comment\",\"extension_name\":\"com_comment\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:00:08', 'com_installer', 588, 232, 'COM_ACTIONLOGS_DISABLED'),
+(128, 'PLG_ACTIONLOG_JOOMLA_USER_LOGGED_IN', '{\"action\":\"login\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"app\":\"PLG_ACTIONLOG_JOOMLA_APPLICATION_ADMINISTRATOR\"}', '2023-06-12 19:29:11', 'com_users', 588, 0, 'COM_ACTIONLOGS_DISABLED'),
+(129, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT\",\"id\":237,\"name\":\"com_phocadownload\",\"extension_name\":\"com_phocadownload\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:29:28', 'com_installer', 588, 237, 'COM_ACTIONLOGS_DISABLED'),
+(130, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_ADDED', '{\"action\":\"add\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MENU_ITEM\",\"id\":128,\"title\":\"Pobierz pliki\",\"itemlink\":\"index.php?option=com_menus&task=item.edit&id=128\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:37:45', 'com_menus.item', 588, 128, 'COM_ACTIONLOGS_DISABLED'),
+(131, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT\",\"id\":238,\"name\":\"Acym\",\"extension_name\":\"Acym\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:46:08', 'com_installer', 588, 238, 'COM_ACTIONLOGS_DISABLED'),
+(132, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_UNINSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT\",\"id\":\"238\",\"name\":\"Acym\",\"extension_name\":\"Acym\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:49:36', 'com_installer', 588, 238, 'COM_ACTIONLOGS_DISABLED'),
+(133, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_UNINSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"243\",\"name\":\"AcyMailing - JCE integration\",\"extension_name\":\"AcyMailing - JCE integration\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:49:49', 'com_installer', 588, 243, 'COM_ACTIONLOGS_DISABLED'),
+(134, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_UNINSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"242\",\"name\":\"AcyMailing - Joomla integration\",\"extension_name\":\"AcyMailing - Joomla integration\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:49:49', 'com_installer', 588, 242, 'COM_ACTIONLOGS_DISABLED'),
+(135, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_UNINSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"241\",\"name\":\"AcyMailing - Override Joomla emails\",\"extension_name\":\"AcyMailing - Override Joomla emails\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:49:49', 'com_installer', 588, 241, 'COM_ACTIONLOGS_DISABLED'),
+(136, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_UNINSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_PLUGIN\",\"id\":\"240\",\"name\":\"AcyMailing - Search emails in Joomla search bar\",\"extension_name\":\"AcyMailing - Search emails in Joomla search bar\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:49:49', 'com_installer', 588, 240, 'COM_ACTIONLOGS_DISABLED'),
+(137, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_UNINSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_MODULE\",\"id\":\"239\",\"name\":\"AcyMailing subscription form\",\"extension_name\":\"AcyMailing subscription form\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:49:49', 'com_installer', 588, 239, 'COM_ACTIONLOGS_DISABLED'),
+(138, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT\",\"id\":false,\"name\":\"jNews\",\"extension_name\":\"jNews\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:51:48', 'com_installer', 588, 0, 'COM_ACTIONLOGS_DISABLED'),
+(139, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT\",\"id\":false,\"name\":\"jNews\",\"extension_name\":\"jNews\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:52:01', 'com_installer', 588, 0, 'COM_ACTIONLOGS_DISABLED'),
+(140, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT\",\"id\":245,\"name\":\"COM_TFMAIL\",\"extension_name\":\"COM_TFMAIL\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:53:42', 'com_installer', 588, 245, 'COM_ACTIONLOGS_DISABLED'),
+(141, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_LIBRARY\",\"id\":246,\"name\":\"Tech Fry Library\",\"extension_name\":\"Tech Fry Library\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:53:52', 'com_installer', 588, 246, 'COM_ACTIONLOGS_DISABLED'),
+(142, 'PLG_ACTIONLOG_JOOMLA_EXTENSION_INSTALLED', '{\"action\":\"install\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_COMPONENT\",\"id\":245,\"name\":\"COM_TFMAIL\",\"extension_name\":\"COM_TFMAIL\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:53:59', 'com_installer', 588, 245, 'COM_ACTIONLOGS_DISABLED'),
+(143, 'PLG_SYSTEM_ACTIONLOGS_CONTENT_UPDATED', '{\"action\":\"update\",\"type\":\"PLG_ACTIONLOG_JOOMLA_TYPE_USER\",\"id\":588,\"title\":\"Admin\",\"itemlink\":\"index.php?option=com_users&task=user.edit&id=588\",\"userid\":588,\"username\":\"Admin\",\"accountlink\":\"index.php?option=com_users&task=user.edit&id=588\"}', '2023-06-12 19:58:43', 'com_users', 588, 588, 'COM_ACTIONLOGS_DISABLED');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_action_logs_extensions`
+-- Table structure for table `buf3w_action_logs_extensions`
 --
 
 CREATE TABLE `buf3w_action_logs_extensions` (
   `id` int(10) UNSIGNED NOT NULL,
-  `extension` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
+  `extension` varchar(255) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_action_logs_extensions`
+-- Dumping data for table `buf3w_action_logs_extensions`
 --
 
 INSERT INTO `buf3w_action_logs_extensions` (`id`, `extension`) VALUES
@@ -117,33 +227,40 @@ INSERT INTO `buf3w_action_logs_extensions` (`id`, `extension`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_action_logs_users`
+-- Table structure for table `buf3w_action_logs_users`
 --
 
 CREATE TABLE `buf3w_action_logs_users` (
   `user_id` int(10) UNSIGNED NOT NULL,
   `notify` tinyint(3) UNSIGNED NOT NULL,
-  `extensions` text COLLATE utf8mb4_unicode_ci NOT NULL
+  `extensions` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `buf3w_action_logs_users`
+--
+
+INSERT INTO `buf3w_action_logs_users` (`user_id`, `notify`, `extensions`) VALUES
+(588, 0, '[\"com_content\"]');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_action_log_config`
+-- Table structure for table `buf3w_action_log_config`
 --
 
 CREATE TABLE `buf3w_action_log_config` (
   `id` int(10) UNSIGNED NOT NULL,
-  `type_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `type_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `id_holder` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `title_holder` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `table_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `text_prefix` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `type_title` varchar(255) NOT NULL DEFAULT '',
+  `type_alias` varchar(255) NOT NULL DEFAULT '',
+  `id_holder` varchar(255) DEFAULT NULL,
+  `title_holder` varchar(255) DEFAULT NULL,
+  `table_name` varchar(255) DEFAULT NULL,
+  `text_prefix` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_action_log_config`
+-- Dumping data for table `buf3w_action_log_config`
 --
 
 INSERT INTO `buf3w_action_log_config` (`id`, `type_title`, `type_alias`, `id_holder`, `title_holder`, `table_name`, `text_prefix`) VALUES
@@ -171,7 +288,771 @@ INSERT INTO `buf3w_action_log_config` (`id`, `type_title`, `type_alias`, `id_hol
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_assets`
+-- Table structure for table `buf3w_acym_action`
+--
+
+CREATE TABLE `buf3w_acym_action` (
+  `id` int(11) NOT NULL,
+  `condition_id` int(11) NOT NULL,
+  `actions` longtext DEFAULT NULL,
+  `filters` longtext DEFAULT NULL,
+  `order` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_automation`
+--
+
+CREATE TABLE `buf3w_acym_automation` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` longtext DEFAULT NULL,
+  `active` tinyint(3) NOT NULL,
+  `report` text DEFAULT NULL,
+  `tree` longtext DEFAULT NULL,
+  `admin` tinyint(3) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_campaign`
+--
+
+CREATE TABLE `buf3w_acym_campaign` (
+  `id` int(11) NOT NULL,
+  `sending_date` datetime DEFAULT NULL,
+  `draft` tinyint(1) DEFAULT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT 1,
+  `mail_id` int(11) DEFAULT NULL,
+  `sent` tinyint(1) NOT NULL DEFAULT 0,
+  `sending_type` varchar(16) DEFAULT NULL,
+  `sending_params` text DEFAULT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  `last_generated` int(11) DEFAULT NULL,
+  `next_trigger` int(11) DEFAULT NULL,
+  `visible` tinyint(1) NOT NULL DEFAULT 1
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_condition`
+--
+
+CREATE TABLE `buf3w_acym_condition` (
+  `id` int(11) NOT NULL,
+  `step_id` int(11) NOT NULL,
+  `conditions` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_configuration`
+--
+
+CREATE TABLE `buf3w_acym_configuration` (
+  `name` varchar(255) NOT NULL,
+  `value` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `buf3w_acym_configuration`
+--
+
+INSERT INTO `buf3w_acym_configuration` (`name`, `value`) VALUES
+('active_cron', '0'),
+('add_names', '1'),
+('allowed_files', 'zip,doc,docx,pdf,xls,txt,gzip,rar,jpg,jpeg,gif,xlsx,pps,csv,bmp,ico,odg,odp,ods,odt,png,ppt,swf,xcf,mp3,wma'),
+('allow_modif', 'data'),
+('allow_visitor', '1'),
+('amazon_host', 'email-smtp.us-east-2.amazonaws.com'),
+('amazon_password', ''),
+('amazon_username', ''),
+('anonymizeold', '0'),
+('anonymous_tracking', '0'),
+('bounceVersion', '1'),
+('bounce_email', 'example@example.example'),
+('charset', 'UTF-8'),
+('confirmation_message', '1'),
+('confirm_redirect', ''),
+('cron_frequency', '900'),
+('cron_fromip', ''),
+('cron_fullreport', '1'),
+('cron_last', '0'),
+('cron_next', '1251990901'),
+('cron_report', ''),
+('cron_savepath', 'media/com_acym\\logs\\report{year}_{month}.log'),
+('cron_savereport', '2'),
+('cron_sendreport', '2'),
+('cron_sendto', 'example@example.example'),
+('css_backend', ''),
+('css_frontend', ''),
+('daily_hour', '12'),
+('daily_minute', '00'),
+('delete_stats', '31104000'),
+('delete_stats_enabled', '1'),
+('display_built_by', '1'),
+('editor', 'codemirror'),
+('elasticemail_password', ''),
+('elasticemail_port', 'rest'),
+('elasticemail_username', ''),
+('embed_files', '1'),
+('embed_images', '0'),
+('encoding_format', '8bit'),
+('Enterprise', '2'),
+('Essential', '1'),
+('expirationdate', '0'),
+('export_excelsecurity', '1'),
+('forward', '0'),
+('from_as_replyto', '1'),
+('from_email', 'example@example.example'),
+('from_name', 'test'),
+('gdpr_delete', '0'),
+('gdpr_export', '0'),
+('generate_name', '1'),
+('hostname', ''),
+('installcomplete', '1'),
+('install_date', '1686599163'),
+('language_field_id', '3'),
+('lastlicensecheck', '1686599200'),
+('last_import', ''),
+('last_news', 'PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiID8+Cjx4bWw+Cgk8bmV3cz4KCQk8bmFtZT5jaHJpc3RtYXNfMjAyMjwvbmFtZT4KCQk8cHVibGlzaGVkPjA8L3B1Ymxpc2hlZD4KCQk8bGFuZ3VhZ2U+ZGVmYXVsdDwvbGFuZ3VhZ2U+CgkJPGRhdGU+MjAyMi0wOS0xOTwvZGF0ZT4KCQk8ZXh0ZW5zaW9uPmFjeW1haWxpbmc8L2V4dGVuc2lvbj4KCQk8d2FpdD4wPC93YWl0PgoJCTx2ZXJzaW9uPjYuMS43Xz48L3ZlcnNpb24+CgkJPGNvbnRlbnQ+CgkJCTwhW0NEQVRBWwoJCQk8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoKCQkJCS5hY3l0ZXh0YmFubmVyewoJCQkJCWJhY2tncm91bmQtY29sb3I6ICMyMTk5ZTg7CgkJCQkJY29sb3I6IHdoaXRlICFpbXBvcnRhbnQ7CgkJCQkJdGV4dC1hbGlnbjogY2VudGVyOwoJCQkJCXBhZGRpbmc6IDEwcHggIWltcG9ydGFudDsKCQkJCQlmb250LXNpemU6IDE0cHg7CgkJCQl9CgoJCQkJLmFjeXRleHRiYW5uZXIgPiAqewoJCQkJCW1hcmdpbjogMCA1cHg7CgkJCQkJdmVydGljYWwtYWxpZ246IG1pZGRsZTsKCQkJCX0KCgkJCQkuYWN5dGV4dGJhbm5lciBhewoJCQkJCWNvbG9yOiB3aGl0ZTsKCQkJCQl0ZXh0LWRlY29yYXRpb246IG5vbmU7CgkJCQkJcG9zaXRpb246IHJlbGF0aXZlOwoJCQkJfQoKCQkJCS5hY3l0ZXh0YmFubmVyIGl7CgkJCQkJZm9udC1zaXplOiAxN3B4OwoJCQkJfQoKCQkJCS5hY3l0ZXh0YmFubmVyIGE6YWZ0ZXJ7CgkJCQkJY29udGVudDogJyc7CgkJCQkJd2lkdGg6IDEwMCU7CgkJCQkJcG9zaXRpb246IGFic29sdXRlOwoJCQkJCWxlZnQ6IDA7CgkJCQkJYm90dG9tOiAxcHg7CgkJCQkJYm9yZGVyLXdpZHRoOiAwIDAgMXB4OwoJCQkJCWJvcmRlci1zdHlsZTogc29saWQ7CgkJCQl9CgoJCQkJLmFjeXRleHRiYW5uZXIgLmFjeW5ld3sKCQkJCQliYWNrZ3JvdW5kLWNvbG9yOiAjZTMzNTM2OwoJCQkJCWRpc3BsYXk6IGlubGluZS1ibG9jazsKCQkJCQlmb250LXNpemU6IDEycHg7CgkJCQkJcGFkZGluZzogMnB4IDlweCAhaW1wb3J0YW50OwoJCQkJCWJvcmRlci1yYWRpdXM6IDEycHg7CgkJCQkJZm9udC13ZWlnaHQ6IDUwMDsKCQkJCX0KCgkJCQkuYWN5dGV4dGJhbm5lciAuYWN5dGV4dCwgLmFjeXRleHRiYW5uZXIgLmFjeW5ldywgLmFjeXRleHRiYW5uZXIgYSwgLmFjeXRleHRiYW5uZXIgLmFjeW1fX2RvX19ub3RfX3JlbWluZG1lewoJCQkJCWRpc3BsYXk6IGlubGluZS1ibG9jazsKCQkJCQljb2xvcjogd2hpdGUgIWltcG9ydGFudDsKCQkJCX0KCgkJCQkuYWN5dGV4dGJhbm5lciAuYWN5bV9fZG9fX25vdF9fcmVtaW5kbWUgewoJCQkJCWZvbnQtc2l6ZTogMTRweDsKCQkJCQl0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTsKCQkJCQltYXJnaW4tbGVmdDogNTBweDsKCQkJCQlkaXNwbGF5OiBpbmxpbmUtYmxvY2s7CgkJCQkJY3Vyc29yOiBwb2ludGVyOwoJCQkJCWZsb2F0OiByaWdodDsKCQkJCX0KCgoJCQk8L3N0eWxlPgoJCQk8ZGl2IGNsYXNzPSJhY3l0ZXh0YmFubmVyIj4KCQkJCTxkaXYgY2xhc3M9ImFjeW5ldyI+8J+OhCBDaHJpc3RtYXMgT2ZmZXIg8J+aqDwvZGl2PgoJCQkJPGRpdiBjbGFzcz0iYWN5dGV4dCI+MjAlIE9GRiBvbiB0aGUgc2hvcCAoZXhjZXB0IHBhY2tzIHdpdGggb3VyIHNlbmRpbmcgc2VydmljZSkuIENvdXBvbiBjb2RlOiBTQU5UQUNZIDwvZGl2PjxhIGhyZWY9Imh0dHBzOi8vd3d3LmFjeW1haWxpbmcuY29tL3ByaWNpbmc/dXRtX3NvdXJjZT1hY3ltYWlsaW5nX3BsdWdpbiZ1dG1fbWVkaXVtPXBsdWdpbl9iYW5uZXImdXRtX2NhbXBhaWduPWNvdXBvbl9jb2RlIiB0YXJnZXQ9Il9ibGFuayI+R28gZm9yIGl0ITwvYT4KCQkJCTxwIGNsYXNzPSJhY3ltX19kb19fbm90X19yZW1pbmRtZSIgdGl0bGU9ImNocmlzdG1hc18yMDIyIj5EbyBub3QgcmVtaW5kIG1lPC9hPgoJCQk8L2Rpdj4KCQldXT4KCQk8L2NvbnRlbnQ+Cgk8L25ld3M+CjwveG1sPgo='),
+('last_news_check', '1686599199'),
+('latestversion', '8.5.0'),
+('level', 'Starter'),
+('license_key', ''),
+('mailer_method', 'qmail'),
+('mailgun_api_domain', ''),
+('mailgun_api_key', ''),
+('mailgun_api_region', 'us'),
+('max_execution_time', '0'),
+('migration', '1'),
+('multilingual', '0'),
+('multiple_part', '1'),
+('notifications', '[{\"message\":\"Error sending message Email subject to kapiwlkp33@gmail.com \\r\\n\\n\\r\\n\\n Could not execute: \\/var\\/qmail\\/bin\\/qmail-inject \\r\\n\\n\\r\\n\\n \\r\\n\\r\\n\\nNotice:  fwrite(): Write of 31886 bytes failed with errno=32 Broken pipe in D:\\\\xampp\\\\htdocs\\\\joomla\\\\components\\\\com_acym\\\\libraries\\\\mailer\\\\mailer.php on line 1797\\r\\n\\r\\n\\n\",\"date\":1686599344,\"read\":false,\"level\":\"error\",\"id\":\"648776b07a855\"},{\"message\":\"Error sending message Email subject to kacper.korcz.tip19@zs1-swarzedz.pl \\r\\n\\n\\r\\n\\n Could not execute: \\/var\\/qmail\\/bin\\/qmail-inject \\r\\n\\n\\r\\n\\n \\r\\n\\r\\n\\nNotice:  fwrite(): Write of 31879 bytes failed with errno=32 Broken pipe in D:\\\\xampp\\\\htdocs\\\\joomla\\\\components\\\\com_acym\\\\libraries\\\\mailer\\\\mailer.php on line 1797\\r\\n\\r\\n\\n\",\"date\":1686599344,\"read\":false,\"level\":\"error\",\"id\":\"648776b066bdb\"},{\"message\":\"Error sending message Email subject to kapiwlkp33@gmail.com \\r\\n\\n\\r\\n\\n Your server failed to send the email.\",\"date\":1686599323,\"read\":false,\"level\":\"error\",\"id\":\"6487769b40f82\"},{\"message\":\"Error sending message Email subject to kacper.korcz.tip19@zs1-swarzedz.pl \\r\\n\\n\\r\\n\\n Your server failed to send the email.\",\"date\":1686599321,\"read\":false,\"level\":\"error\",\"id\":\"648776992b090\"},{\"message\":\"Error sending message Email subject to kacper.korcz.tip19@zs1-swarzedz.pl \\r\\n\\n\\r\\n\\n Your server failed to send the email.\",\"date\":1686599285,\"read\":false,\"level\":\"error\",\"id\":\"648776759afb2\"}]'),
+('notification_accept', ''),
+('notification_created', ''),
+('notification_refuse', ''),
+('notification_unsuball', ''),
+('numberThumbnail', '2'),
+('postmark_api_key', ''),
+('postmark_stream_id', ''),
+('priority_followup', '2'),
+('priority_newsletter', '3'),
+('queue_nbmail', '40'),
+('queue_nbmail_auto', '70'),
+('queue_pause', '120'),
+('queue_try', '3'),
+('queue_type', 'auto'),
+('regacy', '1'),
+('regacy_delete', '1'),
+('regacy_forceconf', '0'),
+('remindme', '[]'),
+('replyto_email', 'example@example.example'),
+('replyto_name', 'test'),
+('require_confirmation', '1'),
+('security_key', 'mQhT4VV4wrEGYS0ZplGhO1P2jRPzDT'),
+('sendgrid_api_key', ''),
+('sendinblue_api_key', ''),
+('sendinblue_clean_frequency', '604800'),
+('sendmail_path', '/usr/sbin/sendmail'),
+('smtp_auth', ''),
+('smtp_clientId', ''),
+('smtp_host', 'localhost'),
+('smtp_keepalive', ''),
+('smtp_password', ''),
+('smtp_port', '25'),
+('smtp_redirectUrl', 'http://127.0.0.1/joomla/administrator/'),
+('smtp_secret', ''),
+('smtp_secured', ''),
+('smtp_tenant', 'consumers'),
+('smtp_type', 'oauth'),
+('smtp_username', ''),
+('social_icons', '{\"facebook\": \"http://127.0.0.1/joomla/media/com_acym/images/logo/facebook.png\", \"twitter\": \"http://127.0.0.1/joomla/media/com_acym/images/logo/twitter.png\", \"instagram\": \"http://127.0.0.1/joomla/media/com_acym/images/logo/instagram.png\", \"linkedin\": \"http://127.0.0.1/joomla/media/com_acym/images/logo/linkedin.png\", \"pinterest\": \"http://127.0.0.1/joomla/media/com_acym/images/logo/pinterest.png\", \"vimeo\": \"http://127.0.0.1/joomla/media/com_acym/images/logo/vimeo.png\", \"wordpress\": \"http://127.0.0.1/joomla/media/com_acym/images/logo/wordpress.png\", \"youtube\": \"http://127.0.0.1/joomla/media/com_acym/images/logo/youtube.png\"}'),
+('Starter', '0'),
+('subscription_message', '1'),
+('templates_installed', '0'),
+('trackingsystem', 'acymailing'),
+('trackingsystemexternalwebsite', '1'),
+('unsubscribe_page', '1'),
+('unsub_message', '1'),
+('unsub_reasons', 'a:2:{i:0;s:21:\"UNSUB_SURVEY_FREQUENT\";i:1;s:21:\"UNSUB_SURVEY_RELEVANT\";}'),
+('unsub_redirect', ''),
+('uploadfolder', 'media/com_acym\\upload\\'),
+('use_sef', '0'),
+('version', '8.5.0'),
+('walkthrough_params', '{\"step\":\"stepPhpmail\",\"mail_id\":\"9\",\"list_id\":2}'),
+('walk_through', '1'),
+('website', 'http://127.0.0.1/joomla/'),
+('welcome_message', '1'),
+('word_wrapping', '150');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_custom_zone`
+--
+
+CREATE TABLE `buf3w_acym_custom_zone` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `image` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_field`
+--
+
+CREATE TABLE `buf3w_acym_field` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `value` longtext DEFAULT NULL,
+  `active` tinyint(3) NOT NULL,
+  `default_value` longtext DEFAULT NULL,
+  `required` tinyint(3) DEFAULT NULL,
+  `ordering` int(11) NOT NULL,
+  `option` longtext DEFAULT NULL,
+  `core` tinyint(3) DEFAULT NULL,
+  `backend_edition` tinyint(3) DEFAULT NULL,
+  `backend_listing` tinyint(3) DEFAULT NULL,
+  `frontend_edition` tinyint(3) DEFAULT NULL,
+  `frontend_listing` tinyint(3) DEFAULT NULL,
+  `access` varchar(255) DEFAULT NULL,
+  `namekey` varchar(255) NOT NULL,
+  `translation` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `buf3w_acym_field`
+--
+
+INSERT INTO `buf3w_acym_field` (`id`, `name`, `type`, `value`, `active`, `default_value`, `required`, `ordering`, `option`, `core`, `backend_edition`, `backend_listing`, `frontend_edition`, `frontend_listing`, `access`, `namekey`, `translation`) VALUES
+(1, 'ACYM_NAME', 'text', NULL, 1, NULL, 0, 1, '{\"error_message\":\"\",\"error_message_invalid\":\"\",\"size\":\"\",\"rows\":\"\",\"columns\":\"\",\"format\":\"\",\"custom_text\":\"\",\"css_class\":\"\",\"authorized_content\":{\"0\":\"all\",\"regex\":\"\"}}', 1, 1, 1, 1, 1, 'all', 'acym_name', NULL),
+(2, 'ACYM_EMAIL', 'text', NULL, 1, NULL, 1, 2, '{\"error_message\":\"\",\"error_message_invalid\":\"\",\"size\":\"\",\"rows\":\"\",\"columns\":\"\",\"format\":\"\",\"custom_text\":\"\",\"css_class\":\"\",\"authorized_content\":{\"0\":\"all\",\"regex\":\"\"}}', 1, 1, 1, 1, 1, 'all', 'acym_email', NULL),
+(3, 'ACYM_LANGUAGE', 'language', NULL, 1, NULL, 1, 3, NULL, 1, 1, 0, 1, 0, 'all', 'acym_language', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_followup`
+--
+
+CREATE TABLE `buf3w_acym_followup` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `display_name` varchar(255) NOT NULL,
+  `creation_date` datetime NOT NULL,
+  `trigger` varchar(50) DEFAULT NULL,
+  `condition` longtext DEFAULT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT 1,
+  `send_once` tinyint(1) NOT NULL DEFAULT 1,
+  `list_id` int(11) DEFAULT NULL,
+  `last_trigger` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_followup_has_mail`
+--
+
+CREATE TABLE `buf3w_acym_followup_has_mail` (
+  `mail_id` int(11) NOT NULL,
+  `followup_id` int(11) NOT NULL,
+  `delay` int(11) NOT NULL,
+  `delay_unit` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_form`
+--
+
+CREATE TABLE `buf3w_acym_form` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `creation_date` datetime NOT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT 1,
+  `type` varchar(20) NOT NULL,
+  `pages` text DEFAULT NULL,
+  `display_languages` varchar(255) DEFAULT NULL,
+  `settings` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_history`
+--
+
+CREATE TABLE `buf3w_acym_history` (
+  `user_id` int(11) NOT NULL,
+  `date` int(11) NOT NULL,
+  `ip` varchar(50) DEFAULT NULL,
+  `action` varchar(50) NOT NULL,
+  `data` text DEFAULT NULL,
+  `source` text DEFAULT NULL,
+  `mail_id` mediumint(9) DEFAULT NULL,
+  `unsubscribe_reason` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `buf3w_acym_history`
+--
+
+INSERT INTO `buf3w_acym_history` (`user_id`, `date`, `ip`, `action`, `data`, `source`, `mail_id`, `unsubscribe_reason`) VALUES
+(1, 1686599164, '127.0.0.1', 'created', 'EXECUTED_BY::588 ( Admin )', 'HTTP_REFERER::http://127.0.0.1/joomla/administrator/index.php?option=com_installer&view=install\nHTTP_USER_AGENT::Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 OPR/98.0.0.0\nHTTP_HOST::127.0.0.1\nSERVER_ADDR::127.0.0.1\nREMOTE_ADDR::127.0.0.1\nREQUEST_URI::/joomla/administrator/index.php?option=com_installer&view=install\nQUERY_STRING::option=com_installer&view=install', 0, NULL),
+(2, 1686599260, '127.0.0.1', 'created', 'EXECUTED_BY::588 ( Admin )', 'HTTP_REFERER::http://127.0.0.1/joomla/administrator/index.php?option=com_acym&ctrl=dashboard\nHTTP_USER_AGENT::Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 OPR/98.0.0.0\nHTTP_HOST::127.0.0.1\nSERVER_ADDR::127.0.0.1\nREMOTE_ADDR::127.0.0.1\nREQUEST_URI::/joomla/administrator/index.php?option=com_acym&ctrl=dashboard\nQUERY_STRING::option=com_acym&ctrl=dashboard', 0, NULL),
+(2, 1686599261, '127.0.0.1', 'subscribed', 'Lists n° 2\nEXECUTED_BY::588 ( Admin )', 'HTTP_REFERER::http://127.0.0.1/joomla/administrator/index.php?option=com_acym&ctrl=dashboard\nHTTP_USER_AGENT::Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 OPR/98.0.0.0\nHTTP_HOST::127.0.0.1\nSERVER_ADDR::127.0.0.1\nREMOTE_ADDR::127.0.0.1\nREQUEST_URI::/joomla/administrator/index.php?option=com_acym&ctrl=dashboard\nQUERY_STRING::option=com_acym&ctrl=dashboard', 0, NULL),
+(3, 1686599315, '127.0.0.1', 'created', 'EXECUTED_BY::588 ( Admin )', 'HTTP_REFERER::http://127.0.0.1/joomla/administrator/index.php?option=com_acym&ctrl=dashboard\nHTTP_USER_AGENT::Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 OPR/98.0.0.0\nHTTP_HOST::127.0.0.1\nSERVER_ADDR::127.0.0.1\nREMOTE_ADDR::127.0.0.1\nREQUEST_URI::/joomla/administrator/index.php?option=com_acym&ctrl=dashboard\nQUERY_STRING::option=com_acym&ctrl=dashboard', 0, NULL),
+(3, 1686599316, '127.0.0.1', 'subscribed', 'Lists n° 2\nEXECUTED_BY::588 ( Admin )', 'HTTP_REFERER::http://127.0.0.1/joomla/administrator/index.php?option=com_acym&ctrl=dashboard\nHTTP_USER_AGENT::Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 OPR/98.0.0.0\nHTTP_HOST::127.0.0.1\nSERVER_ADDR::127.0.0.1\nREMOTE_ADDR::127.0.0.1\nREQUEST_URI::/joomla/administrator/index.php?option=com_acym&ctrl=dashboard\nQUERY_STRING::option=com_acym&ctrl=dashboard', 0, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_list`
+--
+
+CREATE TABLE `buf3w_acym_list` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `display_name` varchar(255) DEFAULT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT 1,
+  `visible` tinyint(1) NOT NULL DEFAULT 1,
+  `clean` tinyint(1) DEFAULT NULL,
+  `color` varchar(30) DEFAULT NULL,
+  `creation_date` datetime DEFAULT NULL,
+  `welcome_id` int(11) DEFAULT NULL,
+  `unsubscribe_id` int(11) DEFAULT NULL,
+  `cms_user_id` int(11) NOT NULL,
+  `access` varchar(50) NOT NULL DEFAULT '',
+  `description` text NOT NULL,
+  `tracking` tinyint(1) NOT NULL DEFAULT 1,
+  `type` varchar(20) NOT NULL DEFAULT 'standard',
+  `translation` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `buf3w_acym_list`
+--
+
+INSERT INTO `buf3w_acym_list` (`id`, `name`, `display_name`, `active`, `visible`, `clean`, `color`, `creation_date`, `welcome_id`, `unsubscribe_id`, `cms_user_id`, `access`, `description`, `tracking`, `type`, `translation`) VALUES
+(1, 'Newsletters', NULL, 1, 1, NULL, '#3366ff', '2023-06-12 19:46:03', NULL, NULL, 588, '', '', 1, 'standard', ''),
+(2, 'Testing list', NULL, 1, 0, NULL, '#94d4a6', '2023-06-12 19:47:39', NULL, NULL, 588, '', '', 1, 'standard', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_mail`
+--
+
+CREATE TABLE `buf3w_acym_mail` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `creation_date` datetime NOT NULL,
+  `thumbnail` longtext DEFAULT NULL,
+  `drag_editor` tinyint(1) DEFAULT NULL,
+  `type` varchar(30) NOT NULL,
+  `body` longtext NOT NULL,
+  `subject` varchar(255) DEFAULT NULL,
+  `from_name` varchar(100) DEFAULT NULL,
+  `from_email` varchar(100) DEFAULT NULL,
+  `reply_to_name` varchar(100) DEFAULT NULL,
+  `reply_to_email` varchar(100) DEFAULT NULL,
+  `bcc` varchar(255) DEFAULT NULL,
+  `settings` text DEFAULT NULL,
+  `stylesheet` text DEFAULT NULL,
+  `attachments` text DEFAULT NULL,
+  `creator_id` int(11) NOT NULL,
+  `mail_settings` text DEFAULT NULL,
+  `headers` text DEFAULT NULL,
+  `autosave` longtext DEFAULT NULL,
+  `preheader` text DEFAULT NULL,
+  `links_language` varchar(20) NOT NULL DEFAULT '',
+  `access` varchar(50) NOT NULL DEFAULT '',
+  `tracking` tinyint(1) NOT NULL DEFAULT 1,
+  `language` varchar(20) NOT NULL DEFAULT '',
+  `parent_id` int(11) DEFAULT NULL,
+  `translation` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `buf3w_acym_mail`
+--
+
+INSERT INTO `buf3w_acym_mail` (`id`, `name`, `creation_date`, `thumbnail`, `drag_editor`, `type`, `body`, `subject`, `from_name`, `from_email`, `reply_to_name`, `reply_to_email`, `bcc`, `settings`, `stylesheet`, `attachments`, `creator_id`, `mail_settings`, `headers`, `autosave`, `preheader`, `links_language`, `access`, `tracking`, `language`, `parent_id`, `translation`) VALUES
+(1, 'acy_report', '2023-06-12 19:46:03', NULL, 1, 'notification', '<p>{report}</p><p>{detailreport}</p>', 'AcyMailing Cron Report {mainreport}', NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(2, 'acy_confirm', '2023-06-12 19:46:03', NULL, 1, 'notification', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\"><h1 style=\"font-size: 24px;\">{trans:ACYM_HELLO} <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{subscriber:name|ucfirst}\" data-mce-selected=\"1\">Marc<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span>,</h1>\r\n                    <p>{trans:ACYM_CONFIRM_MESSAGE}</p>\r\n                    <p>{trans:ACYM_CONFIRM_MESSAGE_ACTIVATE}</p>\r\n                    <p style=\"text-align: center;\"><strong>{confirm}{trans:ACYM_CONFIRM_SUBSCRIPTION}{/confirm}</strong></p></div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', '{subscriber:name|ucfirst}, {trans:ACYM_PLEASE_CONFIRM_SUBSCRIPTION}', NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(3, 'acy_notification_create', '2023-06-12 19:46:03', NULL, 1, 'notification', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\"><h1 style=\"font-size: 24px;\">Hello <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{subscriber:name|ucfirst}\" data-mce-selected=\"1\">Marc<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span>,</h1>\r\n                    <p>A new user has been created in AcyMailing:</p>\r\n                    <p>Name: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:name}\" data-mce-selected=\"1\">Julia<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p>\r\n                    <p>Email: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:email}\" data-mce-selected=\"1\">julia@example.com<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p>\r\n                    <p>Source: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:source}\" data-mce-selected=\"1\">registration_form<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p>\r\n                    <p>Subscription: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:subscription}\" data-mce-selected=\"1\">Newsletters - 2020-11-02 14:38:24<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p></div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', 'New subscriber on your website: {user:email}', NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(4, 'acy_notification_unsub', '2023-06-12 19:46:03', NULL, 1, 'notification', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\"><h1 style=\"font-size: 24px;\">Hello <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{subscriber:name|ucfirst}\" data-mce-selected=\"1\">Marc<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span>,</h1>\r\n                    <p>The following user unsubscribed from your list(s):</p>\r\n                    <p>Name: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:name}\" data-mce-selected=\"1\">Julia<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p>\r\n                    <p>Email: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:email}\" data-mce-selected=\"1\">julia@example.com<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p>\r\n                    <p>Lists: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{lists}\" data-mce-selected=\"1\">Newsletters, Tips<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p></div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', 'A user unsubscribed: {user:email}', NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(5, 'acy_notification_unsuball', '2023-06-12 19:46:03', NULL, 1, 'notification', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\"><h1 style=\"font-size: 24px;\">Hello <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{subscriber:name|ucfirst}\" data-mce-selected=\"1\">Marc<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span>,</h1>\r\n                    <p>The following user unsubscribed from all your lists:</p>\r\n                    <p>Name: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:name}\" data-mce-selected=\"1\">Julia<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p>\r\n                    <p>Email: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:email}\" data-mce-selected=\"1\">julia@example.com<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p></div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', 'A user unsubscribed from all your lists: {user:email}', NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(6, 'acy_notification_subform', '2023-06-12 19:46:04', NULL, 1, 'notification', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\"><h1 style=\"font-size: 24px;\">Hello <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{subscriber:name|ucfirst}\" data-mce-selected=\"1\">Marc<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span>,</h1>\r\n                    <p>A user submitted the subscription form:</p>\r\n                    <p>Name: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:name}\" data-mce-selected=\"1\">Julia<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p>\r\n                    <p>Email: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:email}\" data-mce-selected=\"1\">julia@example.com<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p>\r\n                    <p>Subscription: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:subscription}\" data-mce-selected=\"1\">Newsletters - 2020-11-02 14:38:24<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p></div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', 'New contact from your website: {user:email}', NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(7, 'acy_notification_profile', '2023-06-12 19:46:04', NULL, 1, 'notification', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\"><h1 style=\"font-size: 24px;\">Hello <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{subscriber:name|ucfirst}\" data-mce-selected=\"1\">Marc<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span>,</h1>\r\n                    <p>A user changed their profile:</p>\r\n                    <p>Name: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:name}\" data-mce-selected=\"1\">Julia<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p>\r\n                    <p>Email: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:email}\" data-mce-selected=\"1\">julia@example.com<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p>\r\n                    <p>Subscription: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:subscription}\" data-mce-selected=\"1\">Newsletters - 2020-11-02 14:38:24<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p></div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', 'A user subscribed or modified their subscription: {user:email}', NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(8, 'acy_notification_confirm', '2023-06-12 19:46:04', NULL, 1, 'notification', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\"><h1 style=\"font-size: 24px;\">Hello <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{subscriber:name|ucfirst}\" data-mce-selected=\"1\">Marc<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span>,</h1>\r\n                    <p>The following user confirmed their subscription:</p>\r\n                    <p>Name: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:name}\" data-mce-selected=\"1\">Julia<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p>\r\n                    <p>Email: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:email}\" data-mce-selected=\"1\">julia@example.com<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p>\r\n                    <p>IP: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:confirmation_ip}\" data-mce-selected=\"1\">127.0.0.1<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p>\r\n                    <p>Subscription: <span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{user:subscription}\" data-mce-selected=\"1\">Newsletters - 2020-11-02 14:38:24<em class=\"acym_remove_dynamic acymicon-close\">&zwj;</em></span></p></div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', 'A user confirmed their subscription: {user:email}', NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(9, 'AcyMailing first email', '2023-06-12 19:46:04', 'thumbnail_first_email.png', 1, 'standard', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(245, 245, 245); padding: 30px 0px 120px;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" bgcolor=\"#ffffff\" style=\"background-color: rgb(255, 255, 255); min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"z-index: 100; background-color: rgb(238, 238, 238);\" bgcolor=\"#eeeeee\"><tbody bgcolor=\"\" style=\"background-color: inherit;\"><tr><th class=\"small-12 medium-12 large-12 columns\" style=\"height: auto;\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table; height: auto;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group; height: auto;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline-width: 0px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\" id=\"mce_63\" contenteditable=\"false\"><p style=\"font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: rgb(165, 165, 165); word-break: break-word; text-align: center;\" data-mce-style=\"font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: #000000; word-break: break-word; text-align: center;\"><span style=\"font-size: 12px;\" data-mce-style=\"font-size: 12px;\">We need your feedback!</span></p><p style=\"font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: rgb(165, 165, 165); word-break: break-word; text-align: center;\" data-mce-style=\"font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: #000000; word-break: break-word; text-align: center;\"><span style=\"font-size: 12px;\" data-mce-style=\"font-size: 12px;\">Having trouble seeing this email?&nbsp;<span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{readonline}View it online{/readonline}\"><a style=\"text-decoration: none;\" href=\"http://127.0.0.1/joomla/index.php/component/acym/archive/9-your-first-email?userid=1-H8NZgmTTbpzbDw&amp;tmpl=component\" target=\"_blank\" rel=\"noopener\" data-mce-href=\"\" data-mce-style=\"text-decoration: none;\"><span class=\"acym_online\">View it online</span></a><em class=\"acym_remove_dynamic acymicon-close\">ââ</em></span>&nbsp;</span></p></div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" style=\"background-color: rgb(255, 255, 255); z-index: 100;\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody bgcolor=\"\" style=\"background-color: inherit;\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\" valign=\"top\"><table class=\"acym__wysid__column\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-height: 0px; display: table;\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline-width: 0px;\"><div class=\"acym__wysid__tinymce--image mce-content-body\" style=\"position: relative;\" spellcheck=\"false\" id=\"mce_67\" contenteditable=\"false\"><p style=\"font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: #a5a5a5; word-break: break-word;\" data-mce-style=\"font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: #a5a5a5; word-break: break-word;\"><img class=\"acym__wysid__media__inserted\" style=\"max-width: 100%; height: 85px; box-sizing: border-box; padding: 0px 5px; display: block; margin-left: auto; margin-right: auto; width: 306px;\" src=\"http://127.0.0.1/joomla/media/com_acym%5Cupload%5Clogo_acymailing_step_email.png\" alt=\"logo_acymailing_step_email.png\" height=\"85\" width=\"306\" data-mce-style=\"max-width: 100%; height: 85px; box-sizing: border-box; padding: 0px 5px; display: block; margin-left: auto; margin-right: auto;\"></p></div></td></tr><tr class=\"acym__wysid__column__element acym__wysid__column__element__separator cursor-pointer ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline-width: 0px;\"><hr style=\"border-bottom: 3px solid rgb(214, 214, 214); width: 24%; border-top: none; border-left: none; border-right: none;\" class=\"acym__wysid__row__separator\"></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" style=\"background-color: rgb(255, 255, 255); z-index: 100;\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody bgcolor=\"\" style=\"background-color: inherit;\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\" valign=\"top\"><table class=\"acym__wysid__column\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-height: 0px; display: table;\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline-width: 0px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\" id=\"mce_64\" contenteditable=\"false\"><h1 style=\"font-family: Helvetica; font-size: 34px; font-weight: normal; font-style: normal; color: rgb(0, 164, 255); text-align: center;\" data-mce-style=\"font-family: Helvetica; font-size: 34px; font-weight: normal; font-style: normal; color: #00a4ff; text-align: center;\">Dear&nbsp;<span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{subscriber:name|part:first|ucfirst}\">Admin<em class=\"acym_remove_dynamic acymicon-close\">ââ</em></span>&nbsp;</h1></div></td></tr><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline-width: 0px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\" id=\"mce_65\" contenteditable=\"false\"><p style=\"word-break: break-word; font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: rgb(165, 165, 165); text-align: center;\" data-mce-style=\"word-break: break-word; font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: #a5a5a5; text-align: center;\"><span data-mce-style=\"color: #a5a5a5; font-family: Helvetica;\" style=\"color: #a5a5a5; font-family: Helvetica;\">Amazing, you are going to send your first email!</span></p><p style=\"word-break: break-word; font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: rgb(165, 165, 165); text-align: center;\" data-mce-style=\"word-break: break-word; font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: #a5a5a5; text-align: center;\">&nbsp;<br></p><p style=\"word-break: break-word; font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: rgb(165, 165, 165); text-align: center;\" data-mce-style=\"word-break: break-word; font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: #a5a5a5; text-align: center;\"><span data-mce-style=\"color: #a5a5a5; font-family: Helvetica;\" style=\"color: #a5a5a5; font-family: Helvetica;\">Feel free to drag &amp; drop some content and&nbsp;</span><span data-mce-style=\"color: #a5a5a5; font-family: Helvetica;\" style=\"color: #a5a5a5; font-family: Helvetica;\">try the AcyMailing editor.</span></p><p style=\"word-break: break-word; font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: rgb(165, 165, 165); text-align: center;\" data-mce-style=\"word-break: break-word; font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: #a5a5a5; text-align: center;\"><span data-mce-style=\"color: #a5a5a5; font-family: Helvetica;\" style=\"color: #a5a5a5; font-family: Helvetica;\">Once it is done, click on the \"Apply\" button.</span></p></div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" style=\"background-color: rgb(255, 255, 255); z-index: 100; padding: 0px;\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody bgcolor=\"\" style=\"background-color: inherit;\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\" valign=\"top\"><table class=\"acym__wysid__column\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-height: 0px; display: table;\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline-width: 0px;\"><div class=\"acym__wysid__tinymce--image mce-content-body\" style=\"position: relative;\" spellcheck=\"false\" id=\"mce_68\" contenteditable=\"false\"><p style=\"font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: #a5a5a5; word-break: break-word;\" data-mce-style=\"font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: #a5a5a5; word-break: break-word;\"><img class=\"acym__wysid__media__inserted\" style=\"max-width: 100%; height: auto; box-sizing: border-box; padding: 0px 5px; display: block; margin-left: auto; margin-right: auto; width: 580px;\" src=\"http://127.0.0.1/joomla/media/com_acym%5Cupload%5Cimage_mailing_step_email.jpg\" alt=\"image_mailing_step_email.jpg\" data-mce-style=\"max-width: 100%; height: auto; box-sizing: border-box; padding: 0 5px; display: block; margin-left: auto; margin-right: auto;\" height=\"401\" width=\"580\"></p></div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#303e47\" style=\"background-color: rgb(48, 62, 71); z-index: 100;\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\"><tbody bgcolor=\"\" style=\"background-color: inherit;\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\" valign=\"top\"><table class=\"acym__wysid__column\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-height: 0px; display: table;\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline-width: 0px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\" id=\"mce_66\" contenteditable=\"false\"><p style=\"font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: rgb(165, 165, 165); text-align: center; word-break: break-word;\" data-mce-style=\"font-family: Helvetica; font-size: 16px; font-weight: normal; font-style: normal; color: #a5a5a5; text-align: center;\"><span class=\"acym_dynamic mceNonEditable\" contenteditable=\"false\" data-dynamic=\"{unsubscribe}Unsubscribe{/unsubscribe}\"><a style=\"text-decoration: none;\" href=\"http://127.0.0.1/joomla/index.php/component/acym/frontusers/unsubscribe?id=1&amp;key=H8NZgmTTbpzbDw&amp;tmpl=component\" target=\"_blank\" rel=\"noopener\" data-mce-href=\"\" data-mce-style=\"text-decoration: none;\"><span class=\"acym_unsubscribe\">Unsubscribe</span></a><em class=\"acym_remove_dynamic acymicon-close\">ââ</em></span></p></div></td></tr></tbody></table></th></tr></tbody></table><table id=\"acym__powered_by_acymailing\" class=\"row\" bgcolor=\"#ffffff\" style=\"background-color: transparent\" cellpadding=\"0\" cellspacing=\"0\" border=\"0\">\r\n    <tbody bgcolor=\"\" style=\"background-color: inherit;\">\r\n        <tr>\r\n            <th class=\"small-12 medium-12 large-12 columns\" valign=\"top\" style=\"height: auto;\">\r\n                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"min-height: 0px; display: table; height: auto;\">\r\n                    <tbody style=\"min-height: 0px; display: table-row-group;\">\r\n                        <tr style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\">\r\n                            <td class=\"large-12\">\r\n                                <div style=\"position: relative;\">\r\n                                    <p style=\"word-break: break-word; text-align: center;\">\r\n                                    <a href=\"https://www.acymailing.com/?utm_campaign=powered_by_v7&amp;utm_source=acymailing_plugin\" target=\"_blank\">\r\n                                        <img src=\"http://127.0.0.1/joomla/media/com_acym/images/poweredby_black.png\" title=\"poweredby\" alt=\"Email built with AcyMailing\" style=\"height: 40px; width:199px; max-width: 100%; height: auto; box-sizing: border-box; padding: 0px 5px; display: inline-block; margin-left: auto; margin-right: auto;\" height=\"40\" width=\"199\">\r\n                                    </a>\r\n                                    </p>\r\n                                </div>\r\n                            </td>\r\n                        </tr>\r\n                    </tbody>\r\n                </table>\r\n            </th>\r\n        </tr>\r\n    </tbody>\r\n</table></td></tr></tbody></table></center></td></tr></tbody></table></div>', 'Email subject', 'test', 'example@example.example', NULL, NULL, NULL, '{}', '', NULL, 588, '{\"mainColors\":\"\"}', '', NULL, NULL, '', '', 1, '', NULL, NULL);
+INSERT INTO `buf3w_acym_mail` (`id`, `name`, `creation_date`, `thumbnail`, `drag_editor`, `type`, `body`, `subject`, `from_name`, `from_email`, `reply_to_name`, `reply_to_email`, `bcc`, `settings`, `stylesheet`, `attachments`, `creator_id`, `mail_settings`, `headers`, `autosave`, `preheader`, `links_language`, `access`, `tracking`, `language`, `parent_id`, `translation`) VALUES
+(10, 'joomla-resetPwd', '2023-06-12 19:46:05', NULL, 1, 'override', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\">{trans:COM_USERS_EMAIL_PASSWORD_RESET_BODY|param2|param3|param4}</div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', '{trans:COM_USERS_EMAIL_PASSWORD_RESET_SUBJECT|param1}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(11, 'joomla-usernameReminder', '2023-06-12 19:46:05', NULL, 1, 'override', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\">{trans:COM_USERS_EMAIL_USERNAME_REMINDER_BODY|param2|param3|param4}</div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', '{trans:COM_USERS_EMAIL_USERNAME_REMINDER_SUBJECT|param1}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(12, 'joomla-directRegNoPwd', '2023-06-12 19:46:05', NULL, 1, 'override', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\">{trans:COM_USERS_EMAIL_REGISTERED_BODY_NOPW|param3|param4|param5}</div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', '{trans:COM_USERS_EMAIL_ACCOUNT_DETAILS|param1|param2}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(13, 'joomla-directReg', '2023-06-12 19:46:05', NULL, 1, 'override', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\">{trans:COM_USERS_EMAIL_REGISTERED_BODY|param3|param4|param5|param6|param7}</div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', '{trans:COM_USERS_EMAIL_ACCOUNT_DETAILS|param1|param2}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(14, 'joomla-ownActivReg', '2023-06-12 19:46:05', NULL, 1, 'override', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\">{trans:COM_USERS_EMAIL_REGISTERED_WITH_ACTIVATION_BODY|param3|param4|param5|param6|param7|param8}</div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', '{trans:COM_USERS_EMAIL_ACCOUNT_DETAILS|param1|param2}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(15, 'joomla-ownActivRegNoPwd', '2023-06-12 19:46:05', NULL, 1, 'override', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\">{trans:COM_USERS_EMAIL_REGISTERED_WITH_ACTIVATION_BODY_NOPW|param3|param4|param5|param6|param7}</div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', '{trans:COM_USERS_EMAIL_ACCOUNT_DETAILS|param1|param2}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(16, 'joomla-adminActivReg', '2023-06-12 19:46:05', NULL, 1, 'override', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\">{trans:COM_USERS_EMAIL_REGISTERED_WITH_ADMIN_ACTIVATION_BODY|param3|param4|param5|param6|param7|param8}</div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', '{trans:COM_USERS_EMAIL_ACCOUNT_DETAILS|param1|param2}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(17, 'joomla-adminActivRegNoPwd', '2023-06-12 19:46:06', NULL, 1, 'override', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\">{trans:COM_USERS_EMAIL_REGISTERED_WITH_ADMIN_ACTIVATION_BODY_NOPW|param3|param4|param5|param6|param7}</div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', '{trans:COM_USERS_EMAIL_ACCOUNT_DETAILS|param1|param2}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(18, 'joomla-confirmActiv', '2023-06-12 19:46:06', NULL, 1, 'override', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\">{trans:COM_USERS_EMAIL_ACTIVATED_BY_ADMIN_ACTIVATION_BODY|param3|param4|param5}</div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', '{trans:COM_USERS_EMAIL_ACTIVATED_BY_ADMIN_ACTIVATION_SUBJECT|param1|param2}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(19, 'joomla-regByAdmin', '2023-06-12 19:46:06', NULL, 1, 'override', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\">{trans:PLG_USER_JOOMLA_NEW_USER_EMAIL_BODY|param1|param2|param3|param4|param5}</div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', '{trans:PLG_USER_JOOMLA_NEW_USER_EMAIL_SUBJECT}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(20, 'joomla-regNotifAdmin', '2023-06-12 19:46:06', NULL, 1, 'override', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\">{trans:COM_USERS_EMAIL_REGISTERED_NOTIFICATION_TO_ADMIN_BODY|param3|param4|param5}</div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', '{trans:COM_USERS_EMAIL_ACCOUNT_DETAILS|param1|param2}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(21, 'joomla-regNotifAdminActiv', '2023-06-12 19:46:06', NULL, 1, 'override', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\">{trans:COM_USERS_EMAIL_ACTIVATE_WITH_ADMIN_ACTIVATION_BODY|param3|param4|param5|param6|param7}</div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', '{trans:COM_USERS_EMAIL_ACTIVATE_WITH_ADMIN_ACTIVATION_SUBJECT|param1|param2}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL),
+(22, 'joomla-frontsendarticle', '2023-06-12 19:46:06', NULL, 1, 'override', '<div id=\"acym__wysid__template\" class=\"cell\"><table class=\"body\"><tbody><tr><td align=\"center\" class=\"center acym__wysid__template__content\" valign=\"top\" style=\"background-color: rgb(239, 239, 239); padding: 40px 0 120px 0;\"><center><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody><tr><td class=\"acym__wysid__row ui-droppable ui-sortable\" style=\"min-height: 0px; display: table-cell;\"><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218,218,218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0,163,254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#ffffff\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: transparent;\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><div class=\"acym__wysid__tinymce--text mce-content-body\" style=\"position: relative;\" spellcheck=\"false\">{trans:COM_MAILTO_EMAIL_MSG|param1|param2|param3|param4}</div></td></tr></tbody></table></th></tr></tbody></table><table class=\"row acym__wysid__row__element\" bgcolor=\"#dadada\" style=\"position: relative; z-index: 100; top: 0; left: 0;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody style=\"background-color: rgb(218, 218, 218);\" bgcolor=\"#ffffff\"><tr><th class=\"small-12 medium-12 large-12 columns acym__wysid__row__element__th\"><table class=\"acym__wysid__column\" style=\"min-height: 0px; display: table;\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tbody class=\"ui-sortable\" style=\"min-height: 0px; display: table-row-group;\"><tr class=\"acym__wysid__column__element ui-draggable\" style=\"position: relative; top: inherit; left: inherit; right: inherit; bottom: inherit; height: auto;\"><td class=\"large-12 acym__wysid__column__element__td\" style=\"outline: rgb(0, 163, 254) dashed 0px; outline-offset: -1px;\"><span class=\"acy-editor__space acy-editor__space--focus\" style=\"display: block; padding: 0px; margin: 0px; height: 10px;\"></span></td></tr></tbody></table></th></tr></tbody></table></td></tr></tbody></table></center></td></tr></tbody></table></div>', '{senderSubject}', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 588, NULL, NULL, NULL, NULL, '', '', 1, '', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_mailbox_action`
+--
+
+CREATE TABLE `buf3w_acym_mailbox_action` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `frequency` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `nextdate` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `description` text DEFAULT NULL,
+  `server` varchar(255) DEFAULT NULL,
+  `port` varchar(50) DEFAULT NULL,
+  `connection_method` enum('imap','pop3','pear') DEFAULT NULL,
+  `secure_method` enum('ssl','tls') DEFAULT NULL,
+  `self_signed` tinyint(4) DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL,
+  `password` varchar(50) DEFAULT NULL,
+  `conditions` text DEFAULT NULL,
+  `actions` text DEFAULT NULL,
+  `report` text DEFAULT NULL,
+  `delete_wrong_emails` tinyint(4) NOT NULL DEFAULT 0,
+  `senderfrom` tinyint(4) NOT NULL DEFAULT 0,
+  `senderto` tinyint(4) NOT NULL DEFAULT 0,
+  `active` tinyint(4) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_mail_has_list`
+--
+
+CREATE TABLE `buf3w_acym_mail_has_list` (
+  `mail_id` int(11) NOT NULL,
+  `list_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_mail_override`
+--
+
+CREATE TABLE `buf3w_acym_mail_override` (
+  `id` int(11) NOT NULL,
+  `mail_id` int(11) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `source` varchar(20) NOT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT 1,
+  `base_subject` text NOT NULL,
+  `base_body` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `buf3w_acym_mail_override`
+--
+
+INSERT INTO `buf3w_acym_mail_override` (`id`, `mail_id`, `description`, `source`, `active`, `base_subject`, `base_body`) VALUES
+(1, 10, 'ACYM_OVERRIDE_DESC_RESET_PASSWORD', 'joomla', 0, '[\"COM_USERS_EMAIL_PASSWORD_RESET_SUBJECT\"]', '[\"COM_USERS_EMAIL_PASSWORD_RESET_BODY\"]'),
+(2, 11, 'ACYM_OVERRIDE_DESC_REMIND_USERNAME', 'joomla', 0, '[\"COM_USERS_EMAIL_USERNAME_REMINDER_SUBJECT\"]', '[\"COM_USERS_EMAIL_USERNAME_REMINDER_BODY\"]'),
+(3, 12, 'ACYM_OVERRIDE_DESC_DIRECT_REG_NO_PWD', 'joomla', 0, '[\"COM_USERS_EMAIL_ACCOUNT_DETAILS\"]', '[\"COM_USERS_EMAIL_REGISTERED_BODY_NOPW\"]'),
+(4, 13, 'ACYM_OVERRIDE_DESC_DIRECT_REG', 'joomla', 0, '[\"COM_USERS_EMAIL_ACCOUNT_DETAILS\"]', '[\"COM_USERS_EMAIL_REGISTERED_BODY\"]'),
+(5, 14, 'ACYM_OVERRIDE_DESC_REG_ACTIVATION', 'joomla', 0, '[\"COM_USERS_EMAIL_ACCOUNT_DETAILS\"]', '[\"COM_USERS_EMAIL_REGISTERED_WITH_ACTIVATION_BODY\"]'),
+(6, 15, 'ACYM_OVERRIDE_DESC_REG_ACTIVATION_NO_PWD', 'joomla', 0, '[\"COM_USERS_EMAIL_ACCOUNT_DETAILS\"]', '[\"COM_USERS_EMAIL_REGISTERED_WITH_ACTIVATION_BODY_NOPW\"]'),
+(7, 16, 'ACYM_OVERRIDE_DESC_REG_ADMIN_ACTIVATION', 'joomla', 0, '[\"COM_USERS_EMAIL_ACCOUNT_DETAILS\"]', '[\"COM_USERS_EMAIL_REGISTERED_WITH_ADMIN_ACTIVATION_BODY\"]'),
+(8, 17, 'ACYM_OVERRIDE_DESC_REG_ADMIN_ACTIVATION_NO_PWD', 'joomla', 0, '[\"COM_USERS_EMAIL_ACCOUNT_DETAILS\"]', '[\"COM_USERS_EMAIL_REGISTERED_WITH_ADMIN_ACTIVATION_BODY_NOPW\"]'),
+(9, 18, 'ACYM_OVERRIDE_DESC_REG_ADMIN_ACTIVATED', 'joomla', 0, '[\"COM_USERS_EMAIL_ACTIVATED_BY_ADMIN_ACTIVATION_SUBJECT\"]', '[\"COM_USERS_EMAIL_ACTIVATED_BY_ADMIN_ACTIVATION_BODY\"]'),
+(10, 19, 'ACYM_OVERRIDE_DESC_ADMIN_CREATED', 'joomla', 0, '[\"PLG_USER_JOOMLA_NEW_USER_EMAIL_SUBJECT\"]', '[\"PLG_USER_JOOMLA_NEW_USER_EMAIL_BODY\"]'),
+(11, 20, 'ACYM_OVERRIDE_DESC_REG_ADMIN_NOTIFICATION', 'joomla', 0, '[\"COM_USERS_EMAIL_ACCOUNT_DETAILS\"]', '[\"COM_USERS_EMAIL_REGISTERED_NOTIFICATION_TO_ADMIN_BODY\"]'),
+(12, 21, 'ACYM_OVERRIDE_DESC_ADMIN_ACTIVATION_NOTIFICATION', 'joomla', 0, '[\"COM_USERS_EMAIL_ACTIVATE_WITH_ADMIN_ACTIVATION_SUBJECT\"]', '[\"COM_USERS_EMAIL_ACTIVATE_WITH_ADMIN_ACTIVATION_BODY\"]'),
+(13, 22, 'ACYM_OVERRIDE_DESC_ARTICLE_SHARE', 'joomla', 0, '\"\"', '[\"COM_MAILTO_EMAIL_MSG\"]');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_mail_stat`
+--
+
+CREATE TABLE `buf3w_acym_mail_stat` (
+  `mail_id` int(11) NOT NULL,
+  `total_subscribers` int(11) NOT NULL DEFAULT 0,
+  `sent` int(11) DEFAULT 0,
+  `send_date` datetime DEFAULT NULL,
+  `fail` int(11) DEFAULT 0,
+  `open_unique` int(11) NOT NULL DEFAULT 0,
+  `open_total` int(11) NOT NULL DEFAULT 0,
+  `bounce_unique` mediumint(8) NOT NULL DEFAULT 0,
+  `bounce_details` longtext DEFAULT NULL,
+  `unsubscribe_total` int(11) NOT NULL DEFAULT 0,
+  `tracking_sale` float DEFAULT NULL,
+  `currency` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_plugin`
+--
+
+CREATE TABLE `buf3w_acym_plugin` (
+  `id` int(11) NOT NULL,
+  `title` varchar(100) NOT NULL,
+  `folder_name` varchar(100) NOT NULL,
+  `version` varchar(10) DEFAULT NULL,
+  `active` int(11) NOT NULL,
+  `category` varchar(100) NOT NULL,
+  `level` varchar(50) NOT NULL,
+  `uptodate` int(11) NOT NULL,
+  `features` varchar(255) NOT NULL,
+  `description` longtext NOT NULL,
+  `latest_version` varchar(10) NOT NULL,
+  `settings` longtext DEFAULT NULL,
+  `type` varchar(20) NOT NULL DEFAULT 'ADDON'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `buf3w_acym_plugin`
+--
+
+INSERT INTO `buf3w_acym_plugin` (`id`, `title`, `folder_name`, `version`, `active`, `category`, `level`, `uptodate`, `features`, `description`, `latest_version`, `settings`, `type`) VALUES
+(1, 'Article', 'article', '8.5.0', 1, 'Content management', 'starter', 1, '[\"content\"]', '- Insert Joomla articles in your emails<br/>- Insert the latest articles of a category in an automatic email', '8.5.0', NULL, 'CORE'),
+(2, 'Create user', 'createuser', '8.5.0', 1, 'User management', 'starter', 1, '[]', '- Automatically creates a site user when an AcyMailing subscriber is created', '8.5.0', NULL, 'CORE');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_queue`
+--
+
+CREATE TABLE `buf3w_acym_queue` (
+  `mail_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `sending_date` datetime NOT NULL,
+  `priority` int(11) NOT NULL DEFAULT 2,
+  `try` tinyint(4) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_rule`
+--
+
+CREATE TABLE `buf3w_acym_rule` (
+  `id` int(11) NOT NULL,
+  `name` varchar(250) NOT NULL,
+  `ordering` smallint(6) DEFAULT NULL,
+  `regex` text NOT NULL,
+  `executed_on` text NOT NULL,
+  `action_message` text NOT NULL,
+  `action_user` text NOT NULL,
+  `active` tinyint(3) NOT NULL,
+  `increment_stats` tinyint(3) NOT NULL,
+  `execute_action_after` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `buf3w_acym_rule`
+--
+
+INSERT INTO `buf3w_acym_rule` (`id`, `name`, `ordering`, `regex`, `executed_on`, `action_message`, `action_user`, `active`, `increment_stats`, `execute_action_after`) VALUES
+(1, 'ACYM_LIST_UNSUBSCRIBE_HANDLING', 1, 'Please unsubscribe user ID \\d+', '[\"body\"]', '[\"delete_message\"]', '[\"unsubscribe_user\"]', 1, 0, 0),
+(2, 'ACYM_ACTION_REQUIRED', 2, 'action *requ|verif', '[\"subject\"]', '{\"0\":\"delete_message\",\"1\":\"forward_message\",\"forward_to\":\"example@example.example\"}', '[]', 1, 0, 0),
+(3, 'ACYM_ACKNOWLEDGMENT_RECEIPT_SUBJECT', 3, '(out|away) *(of|from)|vacation|holiday|absen|congés|recept|acknowledg|thank you for', '[\"subject\"]', '[\"delete_message\"]', '[]', 1, 0, 0),
+(4, 'ACYM_FEEDBACK_LOOP', 4, 'feedback|staff@hotmail.com|complaints@.{0,15}email-abuse.amazonses.com|complaint about message', '[\"senderInfo\",\"subject\"]', '[\"save_message\",\"delete_message\"]', '[\"unsubscribe_user\"]', 1, 0, 0),
+(5, 'ACYM_FEEDBACK_LOOP_BODY', 5, 'Feedback-Type.{1,5}abuse', '[\"body\"]', '[\"save_message\",\"delete_message\"]', '[\"unsubscribe_user\"]', 1, 1, 0),
+(6, 'ACYM_MAILBOX_FULL', 6, '((mailbox|mailfolder|storage|quota|space|inbox) *(is)? *(over)? *(exceeded|size|storage|allocation|full|quota|maxi))|status(-code)? *(:|=)? *5.2.2|quota-issue|not *enough.{1,20}space|((over|exceeded|full|exhausted) *(allowed)? *(mail|storage|quota))', '[\"subject\",\"body\"]', '[\"save_message\",\"delete_message\"]', '[\"block_user\"]', 1, 1, 0),
+(7, 'ACYM_BLOCKED_GOOGLE_GROUPS', 7, 'message *rejected *by *Google *Groups', '[\"body\"]', '[\"delete_message\"]', '[]', 1, 1, 0),
+(8, 'ACYM_MAILBOX_DOESNT_EXIST_1', 8, '(Invalid|no such|unknown|bad|des?activated|inactive|unrouteable) *(mail|destination|recipient|user|address|person)|bad-mailbox|inactive-mailbox|not listed in.{1,20}directory|RecipNotFound|(user|mailbox|address|recipients?|host|account|domain) *(is|has been)? *(error|disabled|failed|unknown|unavailable|not *(found|available)|.{1,30}inactiv)|no *mailbox *here|user does.?n.t have.{0,30}account', '[\"subject\",\"body\"]', '[\"save_message\",\"delete_message\"]', '[\"block_user\"]', 1, 1, 0),
+(9, 'ACYM_MESSAGE_BLOCKED_RECIPIENTS', 9, 'blocked *by|block *list|look(ed)? *like *spam|spam-related|spam *detected| CXBL | CDRBL | IPBL | URLBL |(unacceptable|banned|offensive|filtered|blocked|unsolicited) *(content|message|e?-?mail)|service refused|(status(-code)?|554) *(:|=)? *5.7.1|administratively *denied|blacklisted *IP|policy *reasons|rejected.{1,10}spam|junkmail *rejected|throttling *constraints|exceeded.{1,10}max.{1,40}hour|comply with required standards|421 RP-00|550 SC-00|550 DY-00|550 OU-00', '[\"body\"]', '{\"0\":\"delete_message\",\"1\":\"forward_message\",\"forward_to\":\"example@example.example\"}', '[]', 1, 1, 0),
+(10, 'ACYM_MAILBOX_DOESNT_EXIST_2', 10, 'status(-? ?code)? *(:|=)? *(550)? *5.(1.[1-6]|0.0|4.[0123467])|recipient *address *rejected|does *not *like *recipient|recipient *unknown *to *address', '[\"subject\",\"body\"]', '[\"save_message\",\"delete_message\"]', '[\"block_user\"]', 1, 1, 0),
+(11, 'ACYM_DOMAIN_NOT_EXIST', 11, 'No.{1,10}MX *(record|host)|host *does *not *receive *any *mail|bad-domain|connection.{1,10}mail.{1,20}fail|domain.{1,10}not *exist|fail.{1,10}establish *connection', '[\"subject\",\"body\"]', '[\"save_message\",\"delete_message\"]', '[\"block_user\"]', 1, 1, 0),
+(12, 'ACYM_TEMPORARY_FAILURES', 12, 'has.*been.*delayed|delayed *mail|message *delayed|message-expired|temporar(il)?y *(failure|unavailable|disable|offline|unable)|deferred|delayed *([0-9]*) *(hour|minut)|possible *mail *loop|too *many *hops|delivery *time *expired|Action.php: *delayed|status(-code)? *(:|=)? *4.4.6|will continue to be attempted|unable to deliver in.*Status: 4.4.7', '[\"subject\",\"body\"]', '[\"save_message\",\"delete_message\"]', '[\"block_user\"]', 1, 1, 0),
+(13, 'ACYM_FAILED_PERM', 13, 'failed *permanently|permanent.{1,20}(failure|error)|not *accepting *(any)? *mail|does *not *exist|no *valid *route|delivery *failure', '[\"subject\",\"body\"]', '[\"save_message\",\"delete_message\"]', '[\"block_user\"]', 1, 1, 0),
+(14, 'ACYM_ACKNOWLEDGMENT_RECEIPT_BODY', 14, 'vacances|holiday|vacation|absen|urlaub', '[\"body\"]', '[\"delete_message\"]', '[]', 1, 0, 0),
+(15, 'ACYM_FINAL_RULE', 15, '.', '[\"senderInfo\",\"subject\"]', '{\"0\":\"delete_message\",\"1\":\"forward_message\",\"forward_to\":\"example@example.example\"}', '[]', 1, 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_segment`
+--
+
+CREATE TABLE `buf3w_acym_segment` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `creation_date` datetime NOT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT 1,
+  `filters` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_step`
+--
+
+CREATE TABLE `buf3w_acym_step` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `triggers` longtext DEFAULT NULL,
+  `automation_id` int(11) NOT NULL,
+  `last_execution` int(11) DEFAULT NULL,
+  `next_execution` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_tag`
+--
+
+CREATE TABLE `buf3w_acym_tag` (
+  `name` varchar(50) NOT NULL,
+  `type` varchar(20) NOT NULL,
+  `id_element` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_url`
+--
+
+CREATE TABLE `buf3w_acym_url` (
+  `id` int(11) NOT NULL,
+  `name` longtext DEFAULT NULL,
+  `url` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_url_click`
+--
+
+CREATE TABLE `buf3w_acym_url_click` (
+  `mail_id` int(11) NOT NULL,
+  `url_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `click` int(11) NOT NULL DEFAULT 0,
+  `date_click` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_user`
+--
+
+CREATE TABLE `buf3w_acym_user` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `creation_date` datetime NOT NULL,
+  `active` tinyint(1) NOT NULL DEFAULT 1,
+  `cms_id` int(11) NOT NULL DEFAULT 0,
+  `source` varchar(255) DEFAULT NULL,
+  `confirmed` tinyint(1) NOT NULL DEFAULT 0,
+  `key` varchar(40) DEFAULT NULL,
+  `automation` varchar(50) NOT NULL DEFAULT '',
+  `confirmation_date` datetime DEFAULT NULL,
+  `confirmation_ip` varchar(50) DEFAULT NULL,
+  `tracking` tinyint(1) NOT NULL DEFAULT 1,
+  `language` varchar(20) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `buf3w_acym_user`
+--
+
+INSERT INTO `buf3w_acym_user` (`id`, `name`, `email`, `creation_date`, `active`, `cms_id`, `source`, `confirmed`, `key`, `automation`, `confirmation_date`, `confirmation_ip`, `tracking`, `language`) VALUES
+(1, 'Example', 'example@example.example', '2023-06-12 19:46:03', 1, 588, NULL, 1, 'H8NZgmTTbpzbDw', '', NULL, NULL, 1, ''),
+(2, 'Kacper Korcz Tip', 'kacper.korcz.tip19@zs1-swarzedz.pl', '2023-06-12 19:47:39', 1, 0, 'walkthrough', 1, 'OcLwaupmUDDEXo', '', NULL, NULL, 1, ''),
+(3, 'Kapiwlkp', 'kapiwlkp33@gmail.com', '2023-06-12 19:48:34', 1, 0, 'walkthrough', 1, 'z3OFv2v4SCJzrs', '', NULL, NULL, 1, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_user_has_field`
+--
+
+CREATE TABLE `buf3w_acym_user_has_field` (
+  `user_id` int(11) NOT NULL,
+  `field_id` int(11) NOT NULL,
+  `value` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_user_has_list`
+--
+
+CREATE TABLE `buf3w_acym_user_has_list` (
+  `user_id` int(11) NOT NULL,
+  `list_id` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  `subscription_date` datetime NOT NULL,
+  `unsubscribe_date` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `buf3w_acym_user_has_list`
+--
+
+INSERT INTO `buf3w_acym_user_has_list` (`user_id`, `list_id`, `status`, `subscription_date`, `unsubscribe_date`) VALUES
+(2, 2, 1, '2023-06-12 19:47:39', NULL),
+(3, 2, 1, '2023-06-12 19:48:34', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_acym_user_stat`
+--
+
+CREATE TABLE `buf3w_acym_user_stat` (
+  `user_id` int(11) NOT NULL,
+  `mail_id` int(11) NOT NULL,
+  `send_date` datetime DEFAULT NULL,
+  `fail` int(11) NOT NULL DEFAULT 0,
+  `sent` int(11) NOT NULL DEFAULT 0,
+  `open` int(11) NOT NULL DEFAULT 0,
+  `open_date` datetime DEFAULT NULL,
+  `bounce` tinyint(4) NOT NULL DEFAULT 0,
+  `bounce_rule` varchar(255) DEFAULT NULL,
+  `tracking_sale` float DEFAULT NULL,
+  `currency` varchar(10) DEFAULT NULL,
+  `unsubscribe` int(11) NOT NULL DEFAULT 0,
+  `device` varchar(50) DEFAULT NULL,
+  `opened_with` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_assets`
 --
 
 CREATE TABLE `buf3w_assets` (
@@ -180,152 +1061,164 @@ CREATE TABLE `buf3w_assets` (
   `lft` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set lft.',
   `rgt` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set rgt.',
   `level` int(10) UNSIGNED NOT NULL COMMENT 'The cached level in the nested tree.',
-  `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The unique name for the asset.\n',
-  `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The descriptive title for the asset.',
-  `rules` varchar(5120) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'JSON encoded access control.'
+  `name` varchar(50) NOT NULL COMMENT 'The unique name for the asset.\n',
+  `title` varchar(100) NOT NULL COMMENT 'The descriptive title for the asset.',
+  `rules` varchar(5120) NOT NULL COMMENT 'JSON encoded access control.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_assets`
+-- Dumping data for table `buf3w_assets`
 --
 
 INSERT INTO `buf3w_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `title`, `rules`) VALUES
-(1, 0, 0, 193, 0, 'root.1', 'Root Asset', '{\"core.login.site\":{\"6\":1,\"2\":1},\"core.login.admin\":{\"6\":1},\"core.login.api\":{\"8\":1},\"core.login.offline\":{\"6\":1},\"core.admin\":{\"8\":1},\"core.manage\":{\"7\":1},\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"core.edit.own\":{\"6\":1,\"3\":1}}'),
+(1, 0, 0, 217, 0, 'root.1', 'Root Asset', '{\"core.login.site\":{\"6\":1,\"2\":1},\"core.login.admin\":{\"6\":1},\"core.login.api\":{\"8\":1},\"core.login.offline\":{\"6\":1},\"core.admin\":{\"8\":1},\"core.manage\":{\"7\":1},\"core.create\":{\"6\":1,\"3\":1},\"core.delete\":{\"6\":1},\"core.edit\":{\"6\":1,\"4\":1},\"core.edit.state\":{\"6\":1,\"5\":1},\"core.edit.own\":{\"6\":1,\"3\":1}}'),
 (2, 1, 1, 2, 1, 'com_admin', 'com_admin', '{}'),
 (3, 1, 3, 6, 1, 'com_banners', 'com_banners', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
 (4, 1, 7, 8, 1, 'com_cache', 'com_cache', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"7\":1}}'),
 (5, 1, 9, 10, 1, 'com_checkin', 'com_checkin', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"7\":1}}'),
 (6, 1, 11, 12, 1, 'com_config', 'com_config', '{}'),
 (7, 1, 13, 16, 1, 'com_contact', 'com_contact', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
-(8, 1, 17, 54, 1, 'com_content', 'com_content', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1},\"core.create\":{\"3\":1},\"core.edit\":{\"4\":1},\"core.edit.state\":{\"5\":1},\"core.execute.transition\":{\"6\":1,\"5\":1}}'),
-(9, 1, 55, 56, 1, 'com_cpanel', 'com_cpanel', '{}'),
-(10, 1, 57, 58, 1, 'com_installer', 'com_installer', '{\"core.manage\":{\"7\":0},\"core.delete\":{\"7\":0},\"core.edit.state\":{\"7\":0}}'),
-(11, 1, 59, 62, 1, 'com_languages', 'com_languages', '{\"core.admin\":{\"7\":1}}'),
-(12, 11, 60, 61, 2, 'com_languages.language.1', 'English (en-GB)', '{}'),
-(13, 1, 63, 64, 1, 'com_login', 'com_login', '{}'),
-(14, 1, 65, 66, 1, 'com_mails', 'com_mails', '{}'),
-(15, 1, 67, 68, 1, 'com_media', 'com_media', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1},\"core.create\":{\"3\":1},\"core.delete\":{\"5\":1}}'),
-(16, 1, 69, 72, 1, 'com_menus', 'com_menus', '{\"core.admin\":{\"7\":1}}'),
-(17, 1, 73, 74, 1, 'com_messages', 'com_messages', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"7\":1}}'),
-(18, 1, 75, 148, 1, 'com_modules', 'com_modules', '{\"core.admin\":{\"7\":1}}'),
-(19, 1, 149, 152, 1, 'com_newsfeeds', 'com_newsfeeds', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
-(20, 1, 153, 154, 1, 'com_plugins', 'com_plugins', '{\"core.admin\":{\"7\":1}}'),
-(21, 1, 155, 156, 1, 'com_redirect', 'com_redirect', '{\"core.admin\":{\"7\":1}}'),
-(23, 1, 157, 158, 1, 'com_templates', 'com_templates', '{\"core.admin\":{\"7\":1}}'),
-(24, 1, 163, 166, 1, 'com_users', 'com_users', '{\"core.admin\":{\"7\":1}}'),
-(26, 1, 167, 168, 1, 'com_wrapper', 'com_wrapper', '{}'),
-(27, 8, 18, 19, 2, 'com_content.category.2', 'Uncategorised', '{}'),
+(8, 1, 17, 68, 1, 'com_content', 'com_content', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1},\"core.create\":{\"3\":1},\"core.edit\":{\"4\":1},\"core.edit.state\":{\"5\":1},\"core.execute.transition\":{\"6\":1,\"5\":1}}'),
+(9, 1, 69, 70, 1, 'com_cpanel', 'com_cpanel', '{}'),
+(10, 1, 71, 72, 1, 'com_installer', 'com_installer', '{\"core.manage\":{\"7\":0},\"core.delete\":{\"7\":0},\"core.edit.state\":{\"7\":0}}'),
+(11, 1, 73, 76, 1, 'com_languages', 'com_languages', '{\"core.admin\":{\"7\":1}}'),
+(12, 11, 74, 75, 2, 'com_languages.language.1', 'English (en-GB)', '{}'),
+(13, 1, 77, 78, 1, 'com_login', 'com_login', '{}'),
+(14, 1, 79, 80, 1, 'com_mails', 'com_mails', '{}'),
+(15, 1, 81, 82, 1, 'com_media', 'com_media', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1},\"core.create\":{\"3\":1},\"core.delete\":{\"5\":1}}'),
+(16, 1, 83, 86, 1, 'com_menus', 'com_menus', '{\"core.admin\":{\"7\":1}}'),
+(17, 1, 87, 88, 1, 'com_messages', 'com_messages', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"7\":1}}'),
+(18, 1, 89, 164, 1, 'com_modules', 'com_modules', '{\"core.admin\":{\"7\":1}}'),
+(19, 1, 165, 168, 1, 'com_newsfeeds', 'com_newsfeeds', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
+(20, 1, 169, 170, 1, 'com_plugins', 'com_plugins', '{\"core.admin\":{\"7\":1}}'),
+(21, 1, 171, 172, 1, 'com_redirect', 'com_redirect', '{\"core.admin\":{\"7\":1}}'),
+(23, 1, 173, 174, 1, 'com_templates', 'com_templates', '{\"core.admin\":{\"7\":1}}'),
+(24, 1, 179, 182, 1, 'com_users', 'com_users', '{\"core.admin\":{\"7\":1}}'),
+(26, 1, 183, 184, 1, 'com_wrapper', 'com_wrapper', '{}'),
+(27, 8, 18, 23, 2, 'com_content.category.2', 'Uncategorised', '{}'),
 (28, 3, 4, 5, 2, 'com_banners.category.3', 'Uncategorised', '{}'),
 (29, 7, 14, 15, 2, 'com_contact.category.4', 'Uncategorised', '{}'),
-(30, 19, 150, 151, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{}'),
-(32, 24, 164, 165, 2, 'com_users.category.7', 'Uncategorised', '{}'),
-(33, 1, 169, 170, 1, 'com_finder', 'com_finder', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
-(34, 1, 171, 172, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{}'),
-(35, 1, 173, 174, 1, 'com_tags', 'com_tags', '{}'),
-(36, 1, 175, 176, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
-(37, 1, 177, 178, 1, 'com_ajax', 'com_ajax', '{}'),
-(38, 1, 179, 180, 1, 'com_postinstall', 'com_postinstall', '{}'),
-(39, 18, 76, 77, 2, 'com_modules.module.1', 'Main Menu', '{}'),
-(40, 18, 78, 79, 2, 'com_modules.module.2', 'Login', '{}'),
-(41, 18, 80, 81, 2, 'com_modules.module.3', 'Popular Articles', '{}'),
-(42, 18, 82, 83, 2, 'com_modules.module.4', 'Recently Added Articles', '{}'),
-(43, 18, 84, 85, 2, 'com_modules.module.8', 'Toolbar', '{}'),
-(44, 18, 86, 87, 2, 'com_modules.module.9', 'Notifications', '{}'),
-(45, 18, 88, 89, 2, 'com_modules.module.10', 'Logged-in Users', '{}'),
-(46, 18, 90, 91, 2, 'com_modules.module.12', 'Admin Menu', '{}'),
-(49, 18, 96, 97, 2, 'com_modules.module.15', 'Title', '{}'),
-(50, 18, 98, 99, 2, 'com_modules.module.16', 'Login Form', '{}'),
-(51, 18, 100, 101, 2, 'com_modules.module.17', 'Breadcrumbs', '{}'),
-(52, 18, 102, 103, 2, 'com_modules.module.79', 'Multilanguage status', '{}'),
-(53, 18, 106, 107, 2, 'com_modules.module.86', 'Joomla Version', '{}'),
-(54, 16, 70, 71, 2, 'com_menus.menu.1', 'Main Menu', '{}'),
-(55, 18, 110, 111, 2, 'com_modules.module.87', 'Sample Data', '{}'),
-(56, 8, 20, 37, 2, 'com_content.workflow.1', 'COM_WORKFLOW_BASIC_WORKFLOW', '{}'),
-(57, 56, 21, 22, 3, 'com_content.stage.1', 'COM_WORKFLOW_BASIC_STAGE', '{}'),
-(58, 56, 23, 24, 3, 'com_content.transition.1', 'Unpublish', '{}'),
-(59, 56, 25, 26, 3, 'com_content.transition.2', 'Publish', '{}'),
-(60, 56, 27, 28, 3, 'com_content.transition.3', 'Trash', '{}'),
-(61, 56, 29, 30, 3, 'com_content.transition.4', 'Archive', '{}'),
-(62, 56, 31, 32, 3, 'com_content.transition.5', 'Feature', '{}'),
-(63, 56, 33, 34, 3, 'com_content.transition.6', 'Unfeature', '{}'),
-(64, 56, 35, 36, 3, 'com_content.transition.7', 'Publish & Feature', '{}'),
-(65, 1, 159, 160, 1, 'com_privacy', 'com_privacy', '{}'),
-(66, 1, 161, 162, 1, 'com_actionlogs', 'com_actionlogs', '{}'),
-(67, 18, 92, 93, 2, 'com_modules.module.88', 'Latest Actions', '{}'),
-(68, 18, 94, 95, 2, 'com_modules.module.89', 'Privacy Dashboard', '{}'),
-(70, 18, 104, 105, 2, 'com_modules.module.103', 'Site', '{}'),
-(71, 18, 108, 109, 2, 'com_modules.module.104', 'System', '{}'),
-(72, 18, 112, 113, 2, 'com_modules.module.91', 'System Dashboard', '{}'),
-(73, 18, 114, 115, 2, 'com_modules.module.92', 'Content Dashboard', '{}'),
-(74, 18, 116, 117, 2, 'com_modules.module.93', 'Menus Dashboard', '{}'),
-(75, 18, 118, 119, 2, 'com_modules.module.94', 'Components Dashboard', '{}'),
-(76, 18, 120, 121, 2, 'com_modules.module.95', 'Users Dashboard', '{}'),
-(77, 18, 122, 123, 2, 'com_modules.module.99', 'Frontend Link', '{}'),
-(78, 18, 124, 125, 2, 'com_modules.module.100', 'Messages', '{}'),
-(79, 18, 126, 127, 2, 'com_modules.module.101', 'Post Install Messages', '{}'),
-(80, 18, 128, 129, 2, 'com_modules.module.102', 'User Status', '{}'),
-(82, 18, 130, 131, 2, 'com_modules.module.105', '3rd Party', '{}'),
-(83, 18, 132, 133, 2, 'com_modules.module.106', 'Help Dashboard', '{}'),
-(84, 18, 134, 135, 2, 'com_modules.module.107', 'Privacy Requests', '{}'),
-(85, 18, 136, 137, 2, 'com_modules.module.108', 'Privacy Status', '{}'),
-(86, 18, 138, 139, 2, 'com_modules.module.96', 'Popular Articles', '{}'),
-(87, 18, 140, 141, 2, 'com_modules.module.97', 'Recently Added Articles', '{}'),
-(88, 18, 142, 143, 2, 'com_modules.module.98', 'Logged-in Users', '{}'),
-(89, 18, 144, 145, 2, 'com_modules.module.90', 'Login Support', '{}'),
-(90, 1, 181, 182, 1, 'com_scheduler', 'com_scheduler', '{}'),
-(91, 1, 183, 184, 1, 'com_associations', 'com_associations', '{}'),
-(92, 1, 185, 186, 1, 'com_categories', 'com_categories', '{}'),
-(93, 1, 187, 188, 1, 'com_fields', 'com_fields', '{}'),
-(94, 1, 189, 190, 1, 'com_workflow', 'com_workflow', '{}'),
-(95, 1, 191, 192, 1, 'com_guidedtours', 'com_guidedtours', '{}'),
-(96, 18, 146, 147, 2, 'com_modules.module.109', 'Guided Tours', '{}'),
-(97, 98, 39, 40, 3, 'com_content.article.1', 'Rosjanie wysadzili zaporę', '{}'),
-(98, 8, 38, 45, 2, 'com_content.category.8', 'Wojna', '{}'),
-(99, 98, 41, 42, 3, 'com_content.article.2', 'Sprzeczne doniesienia o Polakach na froncie', '{}'),
-(100, 98, 43, 44, 3, 'com_content.article.3', 'Ostrze ukraińskiej włóczni', '{}'),
-(101, 102, 47, 48, 3, 'com_content.article.4', 'Siostry wielkiej wagi', '{}'),
-(102, 8, 46, 53, 2, 'com_content.category.9', 'Social Media', '{}'),
-(103, 102, 49, 50, 3, 'com_content.article.5', 'TikTok szykuje zmiany', '{}'),
-(104, 102, 51, 52, 3, 'com_content.article.6', 'Facebook na \"czarnej liście\"', '{}');
+(30, 19, 166, 167, 2, 'com_newsfeeds.category.5', 'Uncategorised', '{}'),
+(32, 24, 180, 181, 2, 'com_users.category.7', 'Uncategorised', '{}'),
+(33, 1, 185, 186, 1, 'com_finder', 'com_finder', '{\"core.admin\":{\"7\":1},\"core.manage\":{\"6\":1}}'),
+(34, 1, 187, 188, 1, 'com_joomlaupdate', 'com_joomlaupdate', '{}'),
+(35, 1, 189, 190, 1, 'com_tags', 'com_tags', '{}'),
+(36, 1, 191, 192, 1, 'com_contenthistory', 'com_contenthistory', '{}'),
+(37, 1, 193, 194, 1, 'com_ajax', 'com_ajax', '{}'),
+(38, 1, 195, 196, 1, 'com_postinstall', 'com_postinstall', '{}'),
+(39, 18, 90, 91, 2, 'com_modules.module.1', 'Main Menu', '{}'),
+(40, 18, 92, 93, 2, 'com_modules.module.2', 'Login', '{}'),
+(41, 18, 94, 95, 2, 'com_modules.module.3', 'Popular Articles', '{}'),
+(42, 18, 96, 97, 2, 'com_modules.module.4', 'Recently Added Articles', '{}'),
+(43, 18, 98, 99, 2, 'com_modules.module.8', 'Toolbar', '{}'),
+(44, 18, 100, 101, 2, 'com_modules.module.9', 'Notifications', '{}'),
+(45, 18, 102, 103, 2, 'com_modules.module.10', 'Logged-in Users', '{}'),
+(46, 18, 104, 105, 2, 'com_modules.module.12', 'Admin Menu', '{}'),
+(49, 18, 110, 111, 2, 'com_modules.module.15', 'Title', '{}'),
+(50, 18, 112, 113, 2, 'com_modules.module.16', 'Login Form', '{}'),
+(51, 18, 114, 115, 2, 'com_modules.module.17', 'Breadcrumbs', '{}'),
+(52, 18, 116, 117, 2, 'com_modules.module.79', 'Multilanguage status', '{}'),
+(53, 18, 120, 121, 2, 'com_modules.module.86', 'Joomla Version', '{}'),
+(54, 16, 84, 85, 2, 'com_menus.menu.1', 'Main Menu', '{}'),
+(55, 18, 124, 125, 2, 'com_modules.module.87', 'Sample Data', '{}'),
+(56, 8, 24, 41, 2, 'com_content.workflow.1', 'COM_WORKFLOW_BASIC_WORKFLOW', '{}'),
+(57, 56, 25, 26, 3, 'com_content.stage.1', 'COM_WORKFLOW_BASIC_STAGE', '{}'),
+(58, 56, 27, 28, 3, 'com_content.transition.1', 'Unpublish', '{}'),
+(59, 56, 29, 30, 3, 'com_content.transition.2', 'Publish', '{}'),
+(60, 56, 31, 32, 3, 'com_content.transition.3', 'Trash', '{}'),
+(61, 56, 33, 34, 3, 'com_content.transition.4', 'Archive', '{}'),
+(62, 56, 35, 36, 3, 'com_content.transition.5', 'Feature', '{}'),
+(63, 56, 37, 38, 3, 'com_content.transition.6', 'Unfeature', '{}'),
+(64, 56, 39, 40, 3, 'com_content.transition.7', 'Publish & Feature', '{}'),
+(65, 1, 175, 176, 1, 'com_privacy', 'com_privacy', '{}'),
+(66, 1, 177, 178, 1, 'com_actionlogs', 'com_actionlogs', '{}'),
+(67, 18, 106, 107, 2, 'com_modules.module.88', 'Latest Actions', '{}'),
+(68, 18, 108, 109, 2, 'com_modules.module.89', 'Privacy Dashboard', '{}'),
+(70, 18, 118, 119, 2, 'com_modules.module.103', 'Site', '{}'),
+(71, 18, 122, 123, 2, 'com_modules.module.104', 'System', '{}'),
+(72, 18, 126, 127, 2, 'com_modules.module.91', 'System Dashboard', '{}'),
+(73, 18, 128, 129, 2, 'com_modules.module.92', 'Content Dashboard', '{}'),
+(74, 18, 130, 131, 2, 'com_modules.module.93', 'Menus Dashboard', '{}'),
+(75, 18, 132, 133, 2, 'com_modules.module.94', 'Components Dashboard', '{}'),
+(76, 18, 134, 135, 2, 'com_modules.module.95', 'Users Dashboard', '{}'),
+(77, 18, 136, 137, 2, 'com_modules.module.99', 'Frontend Link', '{}'),
+(78, 18, 138, 139, 2, 'com_modules.module.100', 'Messages', '{}'),
+(79, 18, 140, 141, 2, 'com_modules.module.101', 'Post Install Messages', '{}'),
+(80, 18, 142, 143, 2, 'com_modules.module.102', 'User Status', '{}'),
+(82, 18, 144, 145, 2, 'com_modules.module.105', '3rd Party', '{}'),
+(83, 18, 146, 147, 2, 'com_modules.module.106', 'Help Dashboard', '{}'),
+(84, 18, 148, 149, 2, 'com_modules.module.107', 'Privacy Requests', '{}'),
+(85, 18, 150, 151, 2, 'com_modules.module.108', 'Privacy Status', '{}'),
+(86, 18, 152, 153, 2, 'com_modules.module.96', 'Popular Articles', '{}'),
+(87, 18, 154, 155, 2, 'com_modules.module.97', 'Recently Added Articles', '{}'),
+(88, 18, 156, 157, 2, 'com_modules.module.98', 'Logged-in Users', '{}'),
+(89, 18, 158, 159, 2, 'com_modules.module.90', 'Login Support', '{}'),
+(90, 1, 197, 198, 1, 'com_scheduler', 'com_scheduler', '{}'),
+(91, 1, 199, 200, 1, 'com_associations', 'com_associations', '{}'),
+(92, 1, 201, 202, 1, 'com_categories', 'com_categories', '{}'),
+(93, 1, 203, 204, 1, 'com_fields', 'com_fields', '{}'),
+(94, 1, 205, 206, 1, 'com_workflow', 'com_workflow', '{}'),
+(95, 1, 207, 208, 1, 'com_guidedtours', 'com_guidedtours', '{}'),
+(96, 18, 160, 161, 2, 'com_modules.module.109', 'Guided Tours', '{}'),
+(97, 98, 43, 44, 3, 'com_content.article.1', 'Rosjanie wysadzili zaporę', '{}'),
+(98, 8, 42, 49, 2, 'com_content.category.8', 'Wojna', '{}'),
+(99, 98, 45, 46, 3, 'com_content.article.2', 'Sprzeczne doniesienia o Polakach na froncie', '{}'),
+(100, 98, 47, 48, 3, 'com_content.article.3', 'Ostrze ukraińskiej włóczni', '{}'),
+(101, 102, 51, 52, 3, 'com_content.article.4', 'Siostry wielkiej wagi', '{}'),
+(102, 8, 50, 57, 2, 'com_content.category.9', 'Social Media', '{}'),
+(103, 102, 53, 54, 3, 'com_content.article.5', 'TikTok szykuje zmiany', '{}'),
+(104, 102, 55, 56, 3, 'com_content.article.6', 'Facebook na \"czarnej liście\"', '{}'),
+(105, 8, 58, 67, 2, 'com_content.category.10', 'Menu', '{}'),
+(106, 105, 59, 60, 3, 'com_content.article.7', 'O nas', '{}'),
+(107, 105, 65, 66, 3, 'com_content.article.8', 'Polityka prywatności', '{}'),
+(108, 105, 63, 64, 3, 'com_content.article.9', 'Warunki korzystania', '{}'),
+(109, 105, 61, 62, 3, 'com_content.article.10', 'Często Zadawane Pytania', '{}'),
+(110, 27, 19, 20, 3, 'com_content.article.11', 'Dla zalogowanych', '{}'),
+(111, 18, 162, 163, 2, 'com_modules.module.110', 'Wyszukiwarka', '{}'),
+(112, 27, 21, 22, 3, 'com_content.article.12', 'Dane kontaktowe', '{}'),
+(113, 1, 209, 210, 1, 'com_comment', 'com_comment', '{}'),
+(114, 1, 211, 212, 1, 'com_phocadownload', 'com_phocadownload', '{}'),
+(117, 1, 213, 214, 1, 'com_jnews', 'jNews', '{}'),
+(118, 1, 215, 216, 1, 'com_tfmail', 'COM_TFMAIL', '{}');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_associations`
+-- Table structure for table `buf3w_associations`
 --
 
 CREATE TABLE `buf3w_associations` (
   `id` int(11) NOT NULL COMMENT 'A reference to the associated item.',
-  `context` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The context of the associated item.',
-  `key` char(32) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The key for the association computed from an md5 on associated ids.'
+  `context` varchar(50) NOT NULL COMMENT 'The context of the associated item.',
+  `key` char(32) NOT NULL COMMENT 'The key for the association computed from an md5 on associated ids.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_banners`
+-- Table structure for table `buf3w_banners`
 --
 
 CREATE TABLE `buf3w_banners` (
   `id` int(11) NOT NULL,
   `cid` int(11) NOT NULL DEFAULT 0,
   `type` int(11) NOT NULL DEFAULT 0,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `name` varchar(255) NOT NULL DEFAULT '',
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
   `imptotal` int(11) NOT NULL DEFAULT 0,
   `impmade` int(11) NOT NULL DEFAULT 0,
   `clicks` int(11) NOT NULL DEFAULT 0,
-  `clickurl` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `clickurl` varchar(2048) NOT NULL DEFAULT '',
   `state` tinyint(4) NOT NULL DEFAULT 0,
   `catid` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `custombannercode` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text NOT NULL,
+  `custombannercode` varchar(2048) NOT NULL,
   `sticky` tinyint(3) UNSIGNED NOT NULL DEFAULT 0,
   `ordering` int(11) NOT NULL DEFAULT 0,
-  `metakey` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `metakey` text DEFAULT NULL,
+  `params` text NOT NULL,
   `own_prefix` tinyint(4) NOT NULL DEFAULT 0,
-  `metakey_prefix` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `metakey_prefix` varchar(400) NOT NULL DEFAULT '',
   `purchase_type` tinyint(4) NOT NULL DEFAULT -1,
   `track_clicks` tinyint(4) NOT NULL DEFAULT -1,
   `track_impressions` tinyint(4) NOT NULL DEFAULT -1,
@@ -335,9 +1228,9 @@ CREATE TABLE `buf3w_banners` (
   `publish_down` datetime DEFAULT NULL,
   `reset` datetime DEFAULT NULL,
   `created` datetime NOT NULL,
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `language` char(7) NOT NULL DEFAULT '',
   `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `created_by_alias` varchar(255) NOT NULL DEFAULT '',
   `modified` datetime NOT NULL,
   `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `version` int(10) UNSIGNED NOT NULL DEFAULT 1
@@ -346,21 +1239,21 @@ CREATE TABLE `buf3w_banners` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_banner_clients`
+-- Table structure for table `buf3w_banner_clients`
 --
 
 CREATE TABLE `buf3w_banner_clients` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `contact` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `extrainfo` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `contact` varchar(255) NOT NULL DEFAULT '',
+  `email` varchar(255) NOT NULL DEFAULT '',
+  `extrainfo` text NOT NULL,
   `state` tinyint(4) NOT NULL DEFAULT 0,
   `checked_out` int(10) UNSIGNED DEFAULT NULL,
   `checked_out_time` datetime DEFAULT NULL,
-  `metakey` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `metakey` text DEFAULT NULL,
   `own_prefix` tinyint(4) NOT NULL DEFAULT 0,
-  `metakey_prefix` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `metakey_prefix` varchar(400) NOT NULL DEFAULT '',
   `purchase_type` tinyint(4) NOT NULL DEFAULT -1,
   `track_clicks` tinyint(4) NOT NULL DEFAULT -1,
   `track_impressions` tinyint(4) NOT NULL DEFAULT -1
@@ -369,7 +1262,7 @@ CREATE TABLE `buf3w_banner_clients` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_banner_tracks`
+-- Table structure for table `buf3w_banner_tracks`
 --
 
 CREATE TABLE `buf3w_banner_tracks` (
@@ -382,7 +1275,7 @@ CREATE TABLE `buf3w_banner_tracks` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_categories`
+-- Table structure for table `buf3w_categories`
 --
 
 CREATE TABLE `buf3w_categories` (
@@ -392,87 +1285,245 @@ CREATE TABLE `buf3w_categories` (
   `lft` int(11) NOT NULL DEFAULT 0,
   `rgt` int(11) NOT NULL DEFAULT 0,
   `level` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `path` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `extension` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `path` varchar(400) NOT NULL DEFAULT '',
+  `extension` varchar(50) NOT NULL DEFAULT '',
+  `title` varchar(255) NOT NULL DEFAULT '',
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
-  `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `description` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `note` varchar(255) NOT NULL DEFAULT '',
+  `description` mediumtext DEFAULT NULL,
   `published` tinyint(4) NOT NULL DEFAULT 0,
   `checked_out` int(10) UNSIGNED DEFAULT NULL,
   `checked_out_time` datetime DEFAULT NULL,
   `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `params` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `metadesc` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'The meta description for the page.',
-  `metakey` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'The keywords for the page.',
-  `metadata` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'JSON encoded metadata properties.',
+  `params` text DEFAULT NULL,
+  `metadesc` varchar(1024) NOT NULL DEFAULT '' COMMENT 'The meta description for the page.',
+  `metakey` varchar(1024) NOT NULL DEFAULT '' COMMENT 'The keywords for the page.',
+  `metadata` varchar(2048) NOT NULL DEFAULT '' COMMENT 'JSON encoded metadata properties.',
   `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `created_time` datetime NOT NULL,
   `modified_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `modified_time` datetime NOT NULL,
   `hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `language` char(7) NOT NULL DEFAULT '',
   `version` int(10) UNSIGNED NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_categories`
+-- Dumping data for table `buf3w_categories`
 --
 
 INSERT INTO `buf3w_categories` (`id`, `asset_id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `extension`, `title`, `alias`, `note`, `description`, `published`, `checked_out`, `checked_out_time`, `access`, `params`, `metadesc`, `metakey`, `metadata`, `created_user_id`, `created_time`, `modified_user_id`, `modified_time`, `hits`, `language`, `version`) VALUES
-(1, 0, 0, 0, 15, 0, '', 'system', 'ROOT', 'root', '', '', 1, NULL, NULL, 1, '{}', '', '', '{}', 588, '2023-06-06 05:52:04', 588, '2023-06-06 05:52:04', 0, '*', 1),
+(1, 0, 0, 0, 17, 0, '', 'system', 'ROOT', 'root', '', '', 1, NULL, NULL, 1, '{}', '', '', '{}', 588, '2023-06-06 05:52:04', 588, '2023-06-06 05:52:04', 0, '*', 1),
 (2, 27, 1, 1, 2, 1, 'uncategorised', 'com_content', 'Uncategorised', 'uncategorised', '', '', 1, 588, '2023-06-07 07:32:43', 1, '{\"category_layout\":\"\",\"image\":\"\",\"workflow_id\":\"use_default\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 588, '2023-06-06 05:52:04', 588, '2023-06-06 05:52:04', 0, '*', 1),
 (3, 28, 1, 3, 4, 1, 'uncategorised', 'com_banners', 'Uncategorised', 'uncategorised', '', '', 1, NULL, NULL, 1, '{\"category_layout\":\"\",\"image\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 588, '2023-06-06 05:52:04', 588, '2023-06-06 05:52:04', 0, '*', 1),
 (4, 29, 1, 5, 6, 1, 'uncategorised', 'com_contact', 'Uncategorised', 'uncategorised', '', '', 1, NULL, NULL, 1, '{\"category_layout\":\"\",\"image\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 588, '2023-06-06 05:52:04', 588, '2023-06-06 05:52:04', 0, '*', 1),
 (5, 30, 1, 7, 8, 1, 'uncategorised', 'com_newsfeeds', 'Uncategorised', 'uncategorised', '', '', 1, NULL, NULL, 1, '{\"category_layout\":\"\",\"image\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 588, '2023-06-06 05:52:04', 588, '2023-06-06 05:52:04', 0, '*', 1),
 (7, 32, 1, 9, 10, 1, 'uncategorised', 'com_users', 'Uncategorised', 'uncategorised', '', '', 1, NULL, NULL, 1, '{\"category_layout\":\"\",\"image\":\"\"}', '', '', '{\"author\":\"\",\"robots\":\"\"}', 588, '2023-06-06 05:52:04', 588, '2023-06-06 05:52:04', 0, '*', 1),
 (8, 98, 1, 11, 12, 1, 'wojna', 'com_content', 'Wojna', 'wojna', '', NULL, 1, NULL, NULL, 1, NULL, '', '', '', 588, '2023-06-06 06:54:12', 588, '2023-06-06 06:54:12', 0, '*', 1),
-(9, 102, 1, 13, 14, 1, 'social-media', 'com_content', 'Social Media', 'social-media', '', NULL, 1, NULL, NULL, 1, NULL, '', '', '', 588, '2023-06-07 07:32:58', 588, '2023-06-07 07:32:58', 0, '*', 1);
+(9, 102, 1, 13, 14, 1, 'social-media', 'com_content', 'Social Media', 'social-media', '', NULL, 1, NULL, NULL, 1, NULL, '', '', '', 588, '2023-06-07 07:32:58', 588, '2023-06-07 07:32:58', 0, '*', 1),
+(10, 105, 1, 15, 16, 1, 'menu', 'com_content', 'Menu', 'menu', '', NULL, 1, NULL, NULL, 1, NULL, '', '', '', 588, '2023-06-12 16:20:39', 588, '2023-06-12 16:20:39', 0, '*', 1);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_contact_details`
+-- Table structure for table `buf3w_comment`
+--
+
+CREATE TABLE `buf3w_comment` (
+  `id` int(10) NOT NULL,
+  `contentid` int(10) NOT NULL DEFAULT 0,
+  `component` varchar(50) NOT NULL DEFAULT '',
+  `ip` varchar(45) NOT NULL DEFAULT '',
+  `userid` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `date` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL,
+  `name` varchar(30) NOT NULL DEFAULT '',
+  `email` varchar(50) NOT NULL DEFAULT '',
+  `website` varchar(100) NOT NULL DEFAULT '',
+  `notify` tinyint(1) NOT NULL DEFAULT 0,
+  `title` varchar(50) NOT NULL DEFAULT '',
+  `comment` text NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `deleted` tinyint(1) NOT NULL DEFAULT 0,
+  `spam` tinyint(1) NOT NULL DEFAULT 0,
+  `voting_yes` int(10) NOT NULL DEFAULT 0,
+  `voting_no` int(10) NOT NULL DEFAULT 0,
+  `parentid` int(10) NOT NULL DEFAULT -1,
+  `importtable` varchar(30) NOT NULL DEFAULT '',
+  `importid` bigint(10) NOT NULL DEFAULT 0,
+  `importparentid` bigint(10) NOT NULL DEFAULT -1,
+  `unsubscribe_hash` varchar(255) NOT NULL,
+  `moderate_hash` varchar(255) NOT NULL,
+  `customfields` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_comment_captcha`
+--
+
+CREATE TABLE `buf3w_comment_captcha` (
+  `ID` int(11) NOT NULL,
+  `insertdate` datetime DEFAULT NULL,
+  `referenceid` varchar(100) NOT NULL DEFAULT '',
+  `hiddentext` varchar(100) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_comment_queue`
+--
+
+CREATE TABLE `buf3w_comment_queue` (
+  `id` int(11) NOT NULL,
+  `mailfrom` varchar(255) DEFAULT NULL,
+  `fromname` varchar(255) DEFAULT NULL,
+  `recipient` varchar(255) NOT NULL,
+  `subject` text NOT NULL,
+  `body` text NOT NULL,
+  `created` datetime NOT NULL,
+  `type` varchar(10) NOT NULL DEFAULT 'html',
+  `status` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_comment_setting`
+--
+
+CREATE TABLE `buf3w_comment_setting` (
+  `id` int(11) NOT NULL,
+  `note` varchar(50) NOT NULL DEFAULT '',
+  `component` varchar(50) NOT NULL DEFAULT '',
+  `params` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `buf3w_comment_setting`
+--
+
+INSERT INTO `buf3w_comment_setting` (`id`, `note`, `component`, `params`) VALUES
+(1, 'The standard joomla article manager', 'com_content', '{\"basic\":{\"include_categories\":\"0\",\"categories\":\"\",\"exclude_content_items\":\"\",\"disable_additional_comments\":\"\"},\"security\":{\"authorised_users\":[1],\"auto_publish\":\"1\",\"auto_publish_usergroups\":[1],\"notify_moderators\":\"0\",\"moderators\":[8],\"content_creator\":\"0\",\"captcha\":\"0\",\"captcha_type\":\"default\",\"recaptcha_public_key\":\"\",\"recaptcha_private_key\":\"\",\"captcha_usertypes\":\"\",\"maxlength_text\":\"30000\"},\"layout\":{\"tree\":\"0\",\"tree_depth\":\"5\",\"sort\":\"0\",\"comments_per_page\":\"0\",\"support_ubb\":\"1\",\"support_pictures\":\"0\",\"pictures_maxwidth\":\"200\",\"voting_visible\":\"1\",\"use_name\":\"0\",\"date_format\":\"age\",\"show_copyright\":\"1\",\"show_readon\":\"1\",\"menu_readon\":\"0\",\"intro_only\":\"0\",\"support_emoticons\":\"1\",\"emoticon_pack\":\"default\"},\"template\":{\"template\":\"default\"},\"integrations\":{\"gravatar\":\"1\",\"akismet_use\":\"0\",\"akismet_key\":\"\",\"support_avatars\":\"0\",\"support_profiles\":\"\"},\"template_params\":{\"emulate_bootstrap\":\"1\",\"minify_scripts\":\"1\",\"notify_users\":\"1\",\"pagination_position\":\"0\",\"form_position\":\"0\",\"form_avatar\":\"1\",\"form_ubb\":\"1\",\"required_user\":\"0\",\"required_email\":\"0\",\"show_rss\":\"0\",\"show_search\":\"0\",\"preview_visible\":\"0\",\"preview_length\":\"80\",\"preview_lines\":\"5\"}}');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_comment_voting`
+--
+
+CREATE TABLE `buf3w_comment_voting` (
+  `id` int(10) NOT NULL DEFAULT 0,
+  `ip` varchar(15) NOT NULL DEFAULT '',
+  `time` int(11) NOT NULL DEFAULT 0,
+  `current_vote` int(2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_compojoom_customfields`
+--
+
+CREATE TABLE `buf3w_compojoom_customfields` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `slug` varchar(255) NOT NULL DEFAULT '',
+  `component` varchar(255) NOT NULL DEFAULT '',
+  `show` enum('all','category') NOT NULL DEFAULT 'all',
+  `type` varchar(100) NOT NULL DEFAULT 'text',
+  `options` mediumtext DEFAULT NULL,
+  `default` varchar(255) DEFAULT '',
+  `allow_empty` tinyint(3) NOT NULL DEFAULT 0,
+  `params` mediumtext DEFAULT NULL,
+  `enabled` tinyint(3) NOT NULL DEFAULT 1,
+  `filter` tinyint(3) NOT NULL DEFAULT 0,
+  `ordering` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
+  `created_by` bigint(20) NOT NULL DEFAULT 0,
+  `created_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `modified_by` bigint(20) NOT NULL DEFAULT 0,
+  `modified_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_compojoom_customfields_cats`
+--
+
+CREATE TABLE `buf3w_compojoom_customfields_cats` (
+  `compojoom_customfields_id` int(11) NOT NULL,
+  `catid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_compojoom_multimedia`
+--
+
+CREATE TABLE `buf3w_compojoom_multimedia` (
+  `compojoom_multimedia_id` int(11) NOT NULL,
+  `item_id` int(11) NOT NULL,
+  `type_alias` varchar(255) DEFAULT '',
+  `title` varchar(1024) NOT NULL,
+  `description` text NOT NULL,
+  `mangled_filename` varchar(1024) NOT NULL,
+  `mime_type` varchar(255) NOT NULL DEFAULT 'application/octet-stream',
+  `origin` varchar(40) DEFAULT 'web',
+  `created_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `created_by` bigint(20) NOT NULL DEFAULT 0,
+  `enabled` tinyint(4) NOT NULL DEFAULT 1,
+  `params` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_contact_details`
 --
 
 CREATE TABLE `buf3w_contact_details` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) NOT NULL,
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
-  `con_position` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `address` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `suburb` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `state` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `country` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `postcode` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `telephone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `fax` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `misc` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email_to` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `con_position` varchar(255) DEFAULT NULL,
+  `address` text DEFAULT NULL,
+  `suburb` varchar(100) DEFAULT NULL,
+  `state` varchar(100) DEFAULT NULL,
+  `country` varchar(100) DEFAULT NULL,
+  `postcode` varchar(100) DEFAULT NULL,
+  `telephone` varchar(255) DEFAULT NULL,
+  `fax` varchar(255) DEFAULT NULL,
+  `misc` mediumtext DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `email_to` varchar(255) DEFAULT NULL,
   `default_con` tinyint(3) UNSIGNED NOT NULL DEFAULT 0,
   `published` tinyint(4) NOT NULL DEFAULT 0,
   `checked_out` int(10) UNSIGNED DEFAULT NULL,
   `checked_out_time` datetime DEFAULT NULL,
   `ordering` int(11) NOT NULL DEFAULT 0,
-  `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `params` text NOT NULL,
   `user_id` int(11) NOT NULL DEFAULT 0,
   `catid` int(11) NOT NULL DEFAULT 0,
   `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `mobile` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `webpage` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `sortname1` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `sortname2` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `sortname3` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `language` varchar(7) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `mobile` varchar(255) NOT NULL DEFAULT '',
+  `webpage` varchar(255) NOT NULL DEFAULT '',
+  `sortname1` varchar(255) NOT NULL DEFAULT '',
+  `sortname2` varchar(255) NOT NULL DEFAULT '',
+  `sortname3` varchar(255) NOT NULL DEFAULT '',
+  `language` varchar(7) NOT NULL,
   `created` datetime NOT NULL,
   `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `created_by_alias` varchar(255) NOT NULL DEFAULT '',
   `modified` datetime NOT NULL,
   `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `metakey` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `metadesc` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `metadata` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `metakey` text DEFAULT NULL,
+  `metadesc` text NOT NULL,
+  `metadata` text NOT NULL,
   `featured` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Set if contact is featured.',
   `publish_up` datetime DEFAULT NULL,
   `publish_down` datetime DEFAULT NULL,
@@ -480,65 +1531,78 @@ CREATE TABLE `buf3w_contact_details` (
   `hits` int(10) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `buf3w_contact_details`
+--
+
+INSERT INTO `buf3w_contact_details` (`id`, `name`, `alias`, `con_position`, `address`, `suburb`, `state`, `country`, `postcode`, `telephone`, `fax`, `misc`, `image`, `email_to`, `default_con`, `published`, `checked_out`, `checked_out_time`, `ordering`, `params`, `user_id`, `catid`, `access`, `mobile`, `webpage`, `sortname1`, `sortname2`, `sortname3`, `language`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `metakey`, `metadesc`, `metadata`, `featured`, `publish_up`, `publish_down`, `version`, `hits`) VALUES
+(1, 'Admin', 'admin', '', 'test', 'testcity', 'testland', 'test', '123456', '123456789', '442012243456', '', 'images/user.png#joomlaImage://local-images/user.png?width=512&height=512', 'test@test.test', 0, 1, NULL, NULL, 1, '{\"show_contact_category\":\"\",\"show_contact_list\":\"\",\"show_tags\":\"\",\"show_info\":\"\",\"show_name\":\"\",\"show_position\":\"\",\"show_email\":\"\",\"add_mailto_link\":\"\",\"show_street_address\":\"\",\"show_suburb\":\"\",\"show_state\":\"\",\"show_postcode\":\"\",\"show_country\":\"\",\"show_telephone\":\"\",\"show_mobile\":\"\",\"show_fax\":\"\",\"show_webpage\":\"\",\"show_image\":\"\",\"show_misc\":\"\",\"allow_vcard\":\"\",\"show_articles\":\"\",\"articles_display_num\":\"\",\"show_profile\":\"\",\"contact_layout\":\"\",\"show_links\":\"\",\"linka_name\":\"\",\"linka\":\"\",\"linkb_name\":\"\",\"linkb\":\"\",\"linkc_name\":\"\",\"linkc\":\"\",\"linkd_name\":\"\",\"linkd\":\"\",\"linke_name\":\"\",\"linke\":\"\",\"show_email_form\":\"\",\"show_email_copy\":\"\",\"validate_session\":\"\",\"custom_reply\":\"\",\"redirect\":\"\"}', 588, 4, 1, '123456789', 'http://test.com', '', '', '', '*', '2023-06-12 16:08:23', 588, '', '2023-06-12 16:08:23', 588, '', '', '{\"robots\":\"\",\"rights\":\"\"}', 0, NULL, NULL, 1, 0);
+
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_content`
+-- Table structure for table `buf3w_content`
 --
 
 CREATE TABLE `buf3w_content` (
   `id` int(10) UNSIGNED NOT NULL,
   `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `title` varchar(255) NOT NULL DEFAULT '',
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
-  `introtext` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fulltext` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `introtext` mediumtext NOT NULL,
+  `fulltext` mediumtext NOT NULL,
   `state` tinyint(4) NOT NULL DEFAULT 0,
   `catid` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
   `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `created_by_alias` varchar(255) NOT NULL DEFAULT '',
   `modified` datetime NOT NULL,
   `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `checked_out` int(10) UNSIGNED DEFAULT NULL,
   `checked_out_time` datetime DEFAULT NULL,
   `publish_up` datetime DEFAULT NULL,
   `publish_down` datetime DEFAULT NULL,
-  `images` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `urls` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `attribs` varchar(5120) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `images` text NOT NULL,
+  `urls` text NOT NULL,
+  `attribs` varchar(5120) NOT NULL,
   `version` int(10) UNSIGNED NOT NULL DEFAULT 1,
   `ordering` int(11) NOT NULL DEFAULT 0,
-  `metakey` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `metadesc` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `metakey` text DEFAULT NULL,
+  `metadesc` text NOT NULL,
   `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `metadata` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `metadata` text NOT NULL,
   `featured` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Set if article is featured.',
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The language code for the article.',
-  `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
+  `language` char(7) NOT NULL COMMENT 'The language code for the article.',
+  `note` varchar(255) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_content`
+-- Dumping data for table `buf3w_content`
 --
 
 INSERT INTO `buf3w_content` (`id`, `asset_id`, `title`, `alias`, `introtext`, `fulltext`, `state`, `catid`, `created`, `created_by`, `created_by_alias`, `modified`, `modified_by`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `images`, `urls`, `attribs`, `version`, `ordering`, `metakey`, `metadesc`, `access`, `hits`, `metadata`, `featured`, `language`, `note`) VALUES
-(1, 97, 'Rosjanie wysadzili zaporę', 'rosjanie-wysadzili-zapore', '<h1 class=\"article--title i1xAmRvR\" style=\"text-align: center;\">Rosjanie wysadzili zaporę. \"Poziom krytyczny za 5 godzin\"</h1>\r\n<p>Niepokojące doniesienia z Ukrainy. Po wysadzeniu przez wojska rosyjskie zapory wodnej na Dnieprze w okupowanej Nowej Kachowce, władze obwodu chersońskiego ogłosiły ewakuację mieszkańców zagrożonych zalaniem terenów. Za pięć godzin woda ma osiągnąć poziom krytyczny.</p>\r\n', '\r\n<p style=\"text-align: left;\"><img src=\"images/tama2.jpeg#joomlaImage://local-images/tama2.jpeg?width=3745&amp;height=2497\" width=\"1263\" height=\"842\" /></p>\r\n<p style=\"text-align: left;\">\"Skala zniszczeń, prędkość i ilość wody oraz prawdopodobne obszary powodzi są ustalane\" – poinformowała ukraińska armia na Facebooku.</p>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<h2 style=\"text-align: center;\">Wysadzona zapora w Nowej Kachowce. Ewakuacja mieszkańców</h2>\r\n</div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<p>Po wysadzeniu<strong> zapory wodnej na Dnieprze</strong> w okupowanej Nowej Kachowce, władze obwodu chersońskiego ogłosiły ewakuację mieszkańców zagrożonych zalaniem terenów i ostrzegły, że za pięć godzin woda osiągnie poziom krytyczny.</p>\r\n</div>\r\n<p>\"Rosyjska armia dokonała kolejnego aktu terroru – wysadziła Kachowską Elektrownię Wodną. Za pięć godzin woda osiągnie poziom krytyczny\" - oświadczył szef Chersońskiej Wojskowej Administracji Obwodowej Ołeksandr Prokudin.</p>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<h2 style=\"text-align: center;\">Zapora w Nowej Kachowce wysadzona. Chersoń zagrożony</h2>\r\n</div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<p>Według MSW Ukrainy po wysadzeniu zapory elektrowni w Nowej Kachowce <strong>w strefie zagrożonej zalaniem</strong> znajduje się co najmniej 10 miejscowości na prawym, zachodnim brzegu Dniepru. Są to: Mykołajiwka, Olhiwka, Lowo, Tiahynka, Poniatiwka, Iwaniwka, Tokariwka, Prydniprowskie, Sadowe i częściowo miasto Chersoń.</p>\r\n</div>\r\n<div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<p>Nowa Kachowka położona jest w odległości około 70 km. od Chersonia.</p>\r\n</div>\r\n</div>\r\n<div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<p>Już w październiku ubiegłego roku prezydent Ukrainy Wołodymyr Zełenski ostrzegał, że jeśli siły rosyjskie przerwą zaporę w elektrowni wodnej w Nowej Kachowce, to w strefie zalania znajdzie się ponad 80 miejscowości, tym miasto Chersoń.</p>\r\n</div>\r\n</div>', 1, 8, '2023-06-06 06:37:25', 588, '', '2023-06-06 06:54:12', 588, 588, '2023-06-06 08:09:05', '2023-06-06 06:37:25', NULL, '{\"image_intro\":\"images\\/Tama.webp#joomlaImage:\\/\\/local-images\\/Tama.webp?width=800&height=490\",\"image_intro_alt\":\"tama\",\"float_intro\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/tama1.jpg#joomlaImage:\\/\\/local-images\\/tama1.jpg?width=1200&height=630\",\"image_fulltext_alt\":\"\",\"float_fulltext\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":\"\",\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":\"\",\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":\"\",\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 2, 2, '', '', 1, 1, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\"}', 0, '*', ''),
-(2, 99, 'Sprzeczne doniesienia o Polakach na froncie', 'sprzeczne-doniesienia-o-polakach-na-froncie', '<h1 class=\"article--title i1xAmRvR\" style=\"text-align: center;\" data-reactid=\"319\">Sprzeczne doniesienia o Polakach na froncie. \"Ukraina ma nóż na gardle\"</h1>\r\n<p>- Moskwa wykorzystała to do lobbowania przekazów o \"krwawych Polakach\", \"mordercach cywili\", którzy rzekomo odpowiadają za śmierć rosyjskiej ludności - mówi dr Michał Marek w rozmowie z WP, odnosząc się do doniesień o tym, że Polacy mieli być wśród walczących w obwodzie biełgorodzkim.</p>\r\n', '\r\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" title=\"Przeciwnicy Putina z Legionu Wolność Rosji\" src=\"images/123.webp#joomlaImage://local-images/123.webp?width=800&amp;height=533\" alt=\"wojsko\" width=\"800\" height=\"533\" /></p>\r\n<p>W niedzielę rano na telegramowym kanale Polskiego Korpusu Ochotniczego pojawił się wpis na temat akcji w obwodzie biełgorodzkim. \"Wszyscy zadają nam jedno pytanie, czy braliśmy udział w operacji na terenie obwodu biełgorodzkiego… <strong>Odpowiedź jest jednoznaczna: oczywiście, że tak!</strong>\" - można było przeczytać we wpisie.</p>\r\n<p>Przypomnijmy, że siły Rosyjskiego Ochotniczego Korpusu oraz Legionu \"Wolność Rosji\", walczące w wojnie po stronie Ukrainy, przed kilkoma dniami wkroczyły na teren obwodu biełgorodzkiego w Rosji. We wpisie Polskiego Korpusu Ochotniczego dodano, że mieli oni brać udział w <strong>wypełnieniu \"zadania bojowego\" wraz z Rosyjskim Korpusem Ochotniczym</strong>.</p>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"383\">\r\n<h2 style=\"text-align: center;\" data-reactid=\"384\">\"Dla naszego oddziału był to zaszczyt\"</h2>\r\n</div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"385\">\r\n<p>\"Łączą nas nie tylko więzy braterstwa broni, ale także osobiste przyjaźnie i koleżeństwo\" - zapewnili polscy ochotnicy. Dalej napisano: \"W akcji wzięła udział pierwsza grupa szturmowa Korpusu. <strong>Wszyscy wrócili z zadania cali i zdrowi</strong>. Wyznaczone zadanie wykonano pomyślnie. Możemy wskazać, że jako pierwsi, razem z jedną z grup bojowych RDK, dotarliśmy do miejsca przeznaczenia. Dla naszego oddziału był to zaszczyt uczestniczyć w tego typu operacji, choćby ze względu na historyczne znaczenie tego typu działań\".</p>\r\n<div data-reactid=\"392\">\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"393\">\r\n<p>Dlaczego takie informacje pojawiły się z opóźnieniem? Autorzy wpisu napisali, że zostały one <strong>celowo opublikowane teraz ze względów bezpieczeństwa</strong>.</p>\r\n</div>\r\n</div>\r\n<div data-reactid=\"394\">\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"395\">\r\n<p>Po pewnym czasie wpisy zniknęły z kanału na Telegramie. Pojawiło się natomiast <strong>oficjalne oświadczenie w tej sprawie Rosyjskiego Korpusu Ochotniczego</strong>. Napisano w nim: \"Nasi towarzysze broni z Polskiego Korpusu Ochotniczego rzeczywiście walczą ramię w ramię z nami o wolność i niepodległość Ukrainy od wielu miesięcy. Wspólnie przeprowadziliśmy już szereg operacji w rejonach <strong>orechowskim, zaporoskim i bachmuckim</strong>. Chłopcy spisali się znakomicie i wykazali się wysokim poziomem motywacji i wyszkolenia\".</p>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"406\">\r\n<h2 style=\"text-align: center;\" data-reactid=\"407\">Żaryn: brak powiązania z Siłami Zbrojnymi RP</h2>\r\n</div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"408\">\r\n<p>Bardzo szybko przyszło dementi ze stron polskich władz. \"Opisywany w mediach Polski Korpus Ochotniczy nie jest w żaden sposób powiązany z Siłami Zbrojnymi RP ani żadną instytucją RP. <strong>Działań polskich ochotników wspierających Ukrainę w walce z Rosją nie należy utożsamiać z władzami RP</strong>\" - napisał na Twitterze Stanisław Żaryn, sekretarz stanu w KPRM, zastępca ministra koordynatora służb specjalnych, pełnomocnik rządu ds. bezpieczeństwa przestrzeni informacyjnej Rzeczypospolitej Polskiej.</p>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"417\">\r\n<h2 style=\"text-align: center;\" data-reactid=\"418\">\"Każdy walczy o swoje\"</h2>\r\n</div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"419\">\r\n<p>- Podchodziłbym do tego z dużą rezerwą - mówi Maciej Matysiak, pułkownik rezerwy, ekspert fundacji Stratpoints, były zastępca szefa <a class=\"seolinker\" href=\"https://wiadomosci.wp.pl/skw-sluzba-kontrwywiadu-wojskowego-6172756444919937c\" rel=\"noopener noreferrer seolink\">Służby Kontrwywiadu Wojskowego</a>, w rozmowie z Wirtualną Polską.</p>\r\n<p>I zaznacza, że to wszystko ma na celu przeciąganie liny. - Nie wykluczam, że mogą być takie trendy po stronie ukraińskiej - inspirowane przez Rosjan, ale i sami Ukraińcy mogli o tym pomyśleć - by popychać trochę kraje NATO, by stały się częścią konfliktu. <strong>Ukraina ma, bezsprzecznie, nóż na gardle</strong> - dodaje.</p>\r\n<p>- <strong>Spowodowanie przez Ukrainę sytuacji, w której Sojusz wszedłby aktywnie w konflikt, wiele by im rozwiązało. </strong>Dla Rosjan niewykluczone, że ten scenariusz byłby bardzo korzystny, także propagandowo. Pytanie o to, co kto tak naprawdę rozgrywa - zaznacza rozmówca WP.</p>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"440\">\r\n<h2 style=\"text-align: center;\" data-reactid=\"441\">\"Lobbowanie przekazów o \'krwawych Polakach\'\"</h2>\r\n</div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"442\">\r\n<p>Dr Michał Marek, autor monografii \"Operacja Ukraina\" i ekspert w dziedzinie dezinformacji, w rozmowie z Wirtualną Polską podkreśla, że \"rosyjskie działanie dezinformacyjne, dotyczące obecności obywateli RP na terenie obwodu biełgorodzkiego, sprowadziły się do wzmacniania negatywnych odczuć Rosjan względem Polski i Polaków\".</p>\r\n<p>- Moskwa wykorzystała daną kwestię do lobbowania przekazów o \"krwawych Polakach\", \"mordercach cywili\", którzy<strong> rzekomo odpowiadają za śmierć rosyjskiej ludności </strong>- mówi. I dodaje, że doprowadziła także swoich obywateli \"do stanu, w którym są oni skłonni uwierzyć, iż Polacy zajmują się na froncie m.in. obcinaniem głów rosyjskim jeńcom\".</p>\r\n<div data-reactid=\"460\">\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"461\">\r\n<h2 style=\"text-align: center;\" data-reactid=\"462\">Rosjanie będą to wykorzystywać</h2>\r\n</div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"463\">\r\n<p>Dr Michał Marek podkreśla, że \"prorosyjscy propagandyści działający w polskiej infosferze rezonowali m.in. rosyjskie komentarze dotyczące możliwości przekroczenia granicy z Polską przez grupę czeczeńskich żołnierzy (podległych Siłom Zbrojnym Federacji Rosyjskiej)\".</p>\r\n</div>\r\n</div>\r\n<div data-reactid=\"464\">\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"465\">\r\n<p>- W danym kontekście warto podkreślić, iż Rosjanie będą wykorzystywać przyszłe podobne wydarzenia, <strong>aby przekonywać Polaków, iż wsparcie udzielane przez Warszawę Kijowowi sprowadza na Polaków widmo wojny </strong>- ostrzega ekspert.</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>', 1, 8, '2023-06-06 08:30:59', 588, '', '2023-06-06 08:30:59', 588, NULL, NULL, '2023-06-06 08:30:59', NULL, '{\"image_intro\":\"images\\/1234.webp#joomlaImage:\\/\\/local-images\\/1234.webp?width=1200&height=800\",\"image_intro_alt\":\"\",\"float_intro\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/546456.jpg#joomlaImage:\\/\\/local-images\\/546456.jpg?width=4300&height=2867\",\"image_fulltext_alt\":\"\",\"float_fulltext\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":\"\",\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":\"\",\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":\"\",\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 1, '', '', 1, 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\"}', 0, '*', ''),
+(1, 97, 'Rosjanie wysadzili zaporę', 'rosjanie-wysadzili-zapore', '<h1 class=\"article--title i1xAmRvR\" style=\"text-align: center;\">Rosjanie wysadzili zaporę. \"Poziom krytyczny za 5 godzin\"</h1>\r\n<p>Niepokojące doniesienia z Ukrainy. Po wysadzeniu przez wojska rosyjskie zapory wodnej na Dnieprze w okupowanej Nowej Kachowce, władze obwodu chersońskiego ogłosiły ewakuację mieszkańców zagrożonych zalaniem terenów. Za pięć godzin woda ma osiągnąć poziom krytyczny.</p>\r\n', '\r\n<p style=\"text-align: left;\"><img src=\"images/tama2.jpeg#joomlaImage://local-images/tama2.jpeg?width=3745&amp;height=2497\" width=\"1263\" height=\"842\" /></p>\r\n<p style=\"text-align: left;\">\"Skala zniszczeń, prędkość i ilość wody oraz prawdopodobne obszary powodzi są ustalane\" – poinformowała ukraińska armia na Facebooku.</p>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<h2 style=\"text-align: center;\">Wysadzona zapora w Nowej Kachowce. Ewakuacja mieszkańców</h2>\r\n</div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<p>Po wysadzeniu<strong> zapory wodnej na Dnieprze</strong> w okupowanej Nowej Kachowce, władze obwodu chersońskiego ogłosiły ewakuację mieszkańców zagrożonych zalaniem terenów i ostrzegły, że za pięć godzin woda osiągnie poziom krytyczny.</p>\r\n</div>\r\n<p>\"Rosyjska armia dokonała kolejnego aktu terroru – wysadziła Kachowską Elektrownię Wodną. Za pięć godzin woda osiągnie poziom krytyczny\" - oświadczył szef Chersońskiej Wojskowej Administracji Obwodowej Ołeksandr Prokudin.</p>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<h2 style=\"text-align: center;\">Zapora w Nowej Kachowce wysadzona. Chersoń zagrożony</h2>\r\n</div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<p>Według MSW Ukrainy po wysadzeniu zapory elektrowni w Nowej Kachowce <strong>w strefie zagrożonej zalaniem</strong> znajduje się co najmniej 10 miejscowości na prawym, zachodnim brzegu Dniepru. Są to: Mykołajiwka, Olhiwka, Lowo, Tiahynka, Poniatiwka, Iwaniwka, Tokariwka, Prydniprowskie, Sadowe i częściowo miasto Chersoń.</p>\r\n</div>\r\n<div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<p>Nowa Kachowka położona jest w odległości około 70 km. od Chersonia.</p>\r\n</div>\r\n</div>\r\n<div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<p>Już w październiku ubiegłego roku prezydent Ukrainy Wołodymyr Zełenski ostrzegał, że jeśli siły rosyjskie przerwą zaporę w elektrowni wodnej w Nowej Kachowce, to w strefie zalania znajdzie się ponad 80 miejscowości, tym miasto Chersoń.</p>\r\n</div>\r\n</div>', 1, 8, '2023-06-06 06:37:25', 588, '', '2023-06-06 06:54:12', 588, NULL, NULL, '2023-06-06 06:37:25', NULL, '{\"image_intro\":\"images\\/Tama.webp#joomlaImage:\\/\\/local-images\\/Tama.webp?width=800&height=490\",\"image_intro_alt\":\"tama\",\"float_intro\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/tama1.jpg#joomlaImage:\\/\\/local-images\\/tama1.jpg?width=1200&height=630\",\"image_fulltext_alt\":\"\",\"float_fulltext\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":\"\",\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":\"\",\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":\"\",\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 2, 2, '', '', 1, 1, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\"}', 0, '*', ''),
+(2, 99, 'Sprzeczne doniesienia o Polakach na froncie', 'sprzeczne-doniesienia-o-polakach-na-froncie', '<h1 class=\"article--title i1xAmRvR\" style=\"text-align: center;\" data-reactid=\"319\">Sprzeczne doniesienia o Polakach na froncie. \"Ukraina ma nóż na gardle\"</h1>\r\n<p>- Moskwa wykorzystała to do lobbowania przekazów o \"krwawych Polakach\", \"mordercach cywili\", którzy rzekomo odpowiadają za śmierć rosyjskiej ludności - mówi dr Michał Marek w rozmowie z WP, odnosząc się do doniesień o tym, że Polacy mieli być wśród walczących w obwodzie biełgorodzkim.</p>\r\n', '\r\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" title=\"Przeciwnicy Putina z Legionu Wolność Rosji\" src=\"images/123.webp#joomlaImage://local-images/123.webp?width=800&amp;height=533\" alt=\"wojsko\" width=\"800\" height=\"533\" /></p>\r\n<p>W niedzielę rano na telegramowym kanale Polskiego Korpusu Ochotniczego pojawił się wpis na temat akcji w obwodzie biełgorodzkim. \"Wszyscy zadają nam jedno pytanie, czy braliśmy udział w operacji na terenie obwodu biełgorodzkiego… <strong>Odpowiedź jest jednoznaczna: oczywiście, że tak!</strong>\" - można było przeczytać we wpisie.</p>\r\n<p>Przypomnijmy, że siły Rosyjskiego Ochotniczego Korpusu oraz Legionu \"Wolność Rosji\", walczące w wojnie po stronie Ukrainy, przed kilkoma dniami wkroczyły na teren obwodu biełgorodzkiego w Rosji. We wpisie Polskiego Korpusu Ochotniczego dodano, że mieli oni brać udział w <strong>wypełnieniu \"zadania bojowego\" wraz z Rosyjskim Korpusem Ochotniczym</strong>.</p>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"383\">\r\n<h2 style=\"text-align: center;\" data-reactid=\"384\">\"Dla naszego oddziału był to zaszczyt\"</h2>\r\n</div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"385\">\r\n<p>\"Łączą nas nie tylko więzy braterstwa broni, ale także osobiste przyjaźnie i koleżeństwo\" - zapewnili polscy ochotnicy. Dalej napisano: \"W akcji wzięła udział pierwsza grupa szturmowa Korpusu. <strong>Wszyscy wrócili z zadania cali i zdrowi</strong>. Wyznaczone zadanie wykonano pomyślnie. Możemy wskazać, że jako pierwsi, razem z jedną z grup bojowych RDK, dotarliśmy do miejsca przeznaczenia. Dla naszego oddziału był to zaszczyt uczestniczyć w tego typu operacji, choćby ze względu na historyczne znaczenie tego typu działań\".</p>\r\n<div data-reactid=\"392\">\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"393\">\r\n<p>Dlaczego takie informacje pojawiły się z opóźnieniem? Autorzy wpisu napisali, że zostały one <strong>celowo opublikowane teraz ze względów bezpieczeństwa</strong>.</p>\r\n</div>\r\n</div>\r\n<div data-reactid=\"394\">\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"395\">\r\n<p>Po pewnym czasie wpisy zniknęły z kanału na Telegramie. Pojawiło się natomiast <strong>oficjalne oświadczenie w tej sprawie Rosyjskiego Korpusu Ochotniczego</strong>. Napisano w nim: \"Nasi towarzysze broni z Polskiego Korpusu Ochotniczego rzeczywiście walczą ramię w ramię z nami o wolność i niepodległość Ukrainy od wielu miesięcy. Wspólnie przeprowadziliśmy już szereg operacji w rejonach <strong>orechowskim, zaporoskim i bachmuckim</strong>. Chłopcy spisali się znakomicie i wykazali się wysokim poziomem motywacji i wyszkolenia\".</p>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"406\">\r\n<h2 style=\"text-align: center;\" data-reactid=\"407\">Żaryn: brak powiązania z Siłami Zbrojnymi RP</h2>\r\n</div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"408\">\r\n<p>Bardzo szybko przyszło dementi ze stron polskich władz. \"Opisywany w mediach Polski Korpus Ochotniczy nie jest w żaden sposób powiązany z Siłami Zbrojnymi RP ani żadną instytucją RP. <strong>Działań polskich ochotników wspierających Ukrainę w walce z Rosją nie należy utożsamiać z władzami RP</strong>\" - napisał na Twitterze Stanisław Żaryn, sekretarz stanu w KPRM, zastępca ministra koordynatora służb specjalnych, pełnomocnik rządu ds. bezpieczeństwa przestrzeni informacyjnej Rzeczypospolitej Polskiej.</p>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"417\">\r\n<h2 style=\"text-align: center;\" data-reactid=\"418\">\"Każdy walczy o swoje\"</h2>\r\n</div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"419\">\r\n<p>- Podchodziłbym do tego z dużą rezerwą - mówi Maciej Matysiak, pułkownik rezerwy, ekspert fundacji Stratpoints, były zastępca szefa <a class=\"seolinker\" href=\"https://wiadomosci.wp.pl/skw-sluzba-kontrwywiadu-wojskowego-6172756444919937c\" rel=\"noopener noreferrer seolink\">Służby Kontrwywiadu Wojskowego</a>, w rozmowie z Wirtualną Polską.</p>\r\n<p>I zaznacza, że to wszystko ma na celu przeciąganie liny. - Nie wykluczam, że mogą być takie trendy po stronie ukraińskiej - inspirowane przez Rosjan, ale i sami Ukraińcy mogli o tym pomyśleć - by popychać trochę kraje NATO, by stały się częścią konfliktu. <strong>Ukraina ma, bezsprzecznie, nóż na gardle</strong> - dodaje.</p>\r\n<p>- <strong>Spowodowanie przez Ukrainę sytuacji, w której Sojusz wszedłby aktywnie w konflikt, wiele by im rozwiązało. </strong>Dla Rosjan niewykluczone, że ten scenariusz byłby bardzo korzystny, także propagandowo. Pytanie o to, co kto tak naprawdę rozgrywa - zaznacza rozmówca WP.</p>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"440\">\r\n<h2 style=\"text-align: center;\" data-reactid=\"441\">\"Lobbowanie przekazów o \'krwawych Polakach\'\"</h2>\r\n</div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"442\">\r\n<p>Dr Michał Marek, autor monografii \"Operacja Ukraina\" i ekspert w dziedzinie dezinformacji, w rozmowie z Wirtualną Polską podkreśla, że \"rosyjskie działanie dezinformacyjne, dotyczące obecności obywateli RP na terenie obwodu biełgorodzkiego, sprowadziły się do wzmacniania negatywnych odczuć Rosjan względem Polski i Polaków\".</p>\r\n<p>- Moskwa wykorzystała daną kwestię do lobbowania przekazów o \"krwawych Polakach\", \"mordercach cywili\", którzy<strong> rzekomo odpowiadają za śmierć rosyjskiej ludności </strong>- mówi. I dodaje, że doprowadziła także swoich obywateli \"do stanu, w którym są oni skłonni uwierzyć, iż Polacy zajmują się na froncie m.in. obcinaniem głów rosyjskim jeńcom\".</p>\r\n<div data-reactid=\"460\">\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"461\">\r\n<h2 style=\"text-align: center;\" data-reactid=\"462\">Rosjanie będą to wykorzystywać</h2>\r\n</div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"463\">\r\n<p>Dr Michał Marek podkreśla, że \"prorosyjscy propagandyści działający w polskiej infosferze rezonowali m.in. rosyjskie komentarze dotyczące możliwości przekroczenia granicy z Polską przez grupę czeczeńskich żołnierzy (podległych Siłom Zbrojnym Federacji Rosyjskiej)\".</p>\r\n</div>\r\n</div>\r\n<div data-reactid=\"464\">\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\" data-reactid=\"465\">\r\n<p>- W danym kontekście warto podkreślić, iż Rosjanie będą wykorzystywać przyszłe podobne wydarzenia, <strong>aby przekonywać Polaków, iż wsparcie udzielane przez Warszawę Kijowowi sprowadza na Polaków widmo wojny </strong>- ostrzega ekspert.</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>', 1, 8, '2023-06-06 08:30:59', 588, '', '2023-06-06 08:30:59', 588, 588, '2023-06-12 15:36:17', '2023-06-06 08:30:59', NULL, '{\"image_intro\":\"images\\/1234.webp#joomlaImage:\\/\\/local-images\\/1234.webp?width=1200&height=800\",\"image_intro_alt\":\"\",\"float_intro\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/546456.jpg#joomlaImage:\\/\\/local-images\\/546456.jpg?width=4300&height=2867\",\"image_fulltext_alt\":\"\",\"float_fulltext\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":\"\",\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":\"\",\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":\"\",\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 1, '', '', 1, 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\"}', 0, '*', ''),
 (3, 100, 'Ostrze ukraińskiej włóczni', 'ostrze-ukrainskiej-wloczni', '<h1 class=\"article--title i1xAmRvR\" style=\"text-align: center;\">\"Ostrze ukraińskiej włóczni\". Oni mają przełamać Rosjan</h1>\r\n<p>Wyszkolone przez NATO jednostki armii Ukrainy dysponują nie tylko wiedzą i praktycznymi umiejętnościami, ale również zachodnią technologią. To te elitarne szeregi będą stanowiły największy potencjał w kontrofensywie Ukrainy. Żołnierze i żołnierki 47 Oddzielnej Brygady Zmechanizowanej są gotowi na sygnał do działania.</p>\r\n', '\r\n<p><img src=\"images/546456.jpg#joomlaImage://local-images/546456.jpg?width=4300&amp;height=2867\" width=\"788\" height=\"525\" /><br /><br /><span style=\"font-size: 1rem;\">Walkę poprowadzą brygady uzbrojone nie tylko w zachodnią broń, ale także w zachodnie know-how, zebrane podczas miesięcy szkoleń mających na celu przekształcenie ukraińskiej armii w nowoczesną siłę, wyszkoloną w najbardziej zaawansowanych taktykach wojennych NATO .</span></p>\r\n<p><span style=\"font-size: 1rem;\">Jak opisuje \"The Washington Post\", podczas gdy regularna armia Ukrainy walczyła z okupantem na wielu frontach, 47. Oddzielna Brygada Zmechanizowana przygotowywała się do następnej fazy wojny w bazie NATO w Niemczech.<br /></span></p>\r\n<div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<p>Dowództwo brygady szkoliło się w pracowniach komputerowych, gdzie na ekranach można było analizować strategiczne posunięcia i rozważać decyzje, które przychodzi im także podejmować w realnym życiu na wojnie. Zastępca dowódcy major Iwan Szalamaha i inni wojskowi korzystali z programów, które przypominały gry wojenne.</p>\r\n<div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<p>Takie symulacje pomagają zobaczyć na chłodno ogólny obraz wojskowych operacji. - Rozumiesz, gdzie i jakie były twoje niedociągnięcia. Zwracasz uwagę na rzeczy, które mogą być przeoczone i przyczynić się do niepowodzenia - mówi Szalamaha.</p>\r\n</div>\r\n</div>\r\n<div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<p>Teraz gry wojenne się skończyły. Jednostka trafiła już do Ukrainy gdzie oczekuje na rozkazy.</p>\r\n</div>\r\n</div>\r\n<div>\r\n<div class=\"article--text iFQN8OU2 iYwaUr3X\">\r\n<p>Podobne szkolenia od zeszłego lata zapewniała obrońcom Ukrainy Wielka Brytania. Do Niemiec natomiast wysłano nie poszczególnych rekrutów, ale już sformowane jednostki ukraińskie, aby nauczyły się spójnego działanie wewnątrz grupy, ale także interoperacyjności między różnymi oddziałami.</p>\r\n<p>- Potrzebujemy kursów szkoleniowych na poziomie kompanii, plutonu, batalionu z technikami, z ich bojowymi wozami piechoty, z dowódcą, który zrozumie, jak kierować swoimi siłami, wspierać artylerię, wspierać operacje rozpoznawcze – mówi minister obrony Ukrainy Ołeksij Reznikow.</p>\r\n<p>Żołnierze 47. brygady przeszli też szkolenia techniczne w obsłudze broni lub pojazdów.</p>\r\n<p>32-letni szeregowiec powiedział \"The Washington Post\", że pozostaje w kontakcie z niektórymi amerykańskimi instruktorami, których spotkał podczas kursu. - W Niemczech naprawdę dali nam szansę poczuć, jak to będzie. Jako lider zespołu mogę dowodzić 5-7 osobami. Kidy masz do czynienia z liczniejszymi grupami, potrzebujesz więcej praktyki. A dowodzenie batalionem jest naprawdę trudne - powiedział żołnierz.</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>', 1, 8, '2023-06-06 09:19:59', 588, '', '2023-06-06 09:19:59', 588, NULL, NULL, '2023-06-06 09:19:59', NULL, '{\"image_intro\":\"images\\/gasdgdsgsgs.jpg#joomlaImage:\\/\\/local-images\\/gasdgdsgsgs.jpg?width=5334&height=3364\",\"image_intro_alt\":\"\",\"float_intro\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/Lithuanian_Stingers.jpg#joomlaImage:\\/\\/local-images\\/Lithuanian_Stingers.jpg?width=840&height=594\",\"image_fulltext_alt\":\"\",\"float_fulltext\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":\"\",\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":\"\",\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":\"\",\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 0, '', '', 1, 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\"}', 0, '*', ''),
 (4, 101, 'Siostry wielkiej wagi', 'siostry-wielkiej-wagi', '<h1 style=\"text-align: center;\">\"Siostry wielkiej wagi\" przeszły spektakularną metamorfozę. Zrzuciły już ćwierć tony</h1>\r\n<p>Amy i Tammy Slaton, siostry znane z programu \"Siostry wielkiej wagi\", zawalczyły o swoje zdrowie i sylwetki. Amerykanki, które zmagają się z otyłością, zrzuciły łącznie ponad 250 kilogramów.</p>\r\n<h2 id=\"siostry-walcza-z-otyloscia\">Siostry walczą z otyłością</h2>\r\n<p>Amy Slaton-Halterman i jej siostra Tammy Slaton z Dixon w USA są zdeterminowane, by wygrać z <a href=\"https://portal.abczdrowie.pl/otylosc\">otyłością</a> i już mają pierwsze sukcesy.Amerykanki znane z programu \"Siostry wielkiej wagi\" przeszły spektakularną metomorfozę. Od czasu, kiedy wyemitowano pierwszy odcinek (w 2020 roku), łącznie zrzuciły 250 kilogramów.</p>\r\n<p><strong>Przed tą niezwykłą przemianą Tammy ważyła 325 kilogramów, jej siostra Amy - 180 kilogramów</strong>.</p>\r\n<p>Ich walkę o zdrowie można śledzić w mediach społecznościowych, a program z udziałem sióstr stał się hitem.</p>\r\n<p>Nie obyło się jednak bez kryzysowych chwil. Pod koniec 2021 roku stan zdrowia Tammy był bardzo ciężki, a rodzina bała się, że kobieta nie zdoła z tego wyjść.</p>\r\n<p>Jak tłumaczyli lekarze, <strong>jej płuca zaczęły być niewydolne</strong>, co mogło skończyć się tragedią. Na szczęście kobietę udało się ją uratować.</p>\r\n<h2 id=\"wielka-metamorfoza\">Wielka metamorfoza</h2>\r\n<p>Otyłość jest uważana za pandemię XXI wieku, a chorych, którzy się z nią zmagają, gwałtownie przybywa. <strong>W Polsce nadwagę ma już 3 na 5 dorosłych, a co 4. jest otyły</strong>.</p>\r\n<p>Otyłość ma wpływ na funkcjonowanie całego organizmu i może przyczynić się do wielu chorób. Zwiększa ryzyko zapaleń stawów i kości, <a href=\"https://portal.abczdrowie.pl/choroby-ukladu-krazenia\">chorób sercowo-naczyniowych</a>, <a href=\"https://portal.abczdrowie.pl/nadcisnienie-tetnicze\">nadciśnienia tętniczego</a>, <a href=\"https://portal.abczdrowie.pl/cukrzyca-typu-2\">cukrzycy typu 2</a>, <a href=\"https://portal.abczdrowie.pl/bezdech-senny\">bezdechu sennego</a>.</p>\r\n<p>Poważnym problemem ludzi, którzy walczą z otyłością mogą być także <a href=\"https://portal.abczdrowie.pl/zylaki-konczyn-dolnych\">żylaki kończyn dolnych</a> oraz wzrost ryzyka <a href=\"https://portal.abczdrowie.pl/udar-mozgu\">udaru mózgu</a>, nowotworów czy <a href=\"https://portal.abczdrowie.pl/bezplodnosc\">bezpłodności</a>.</p>\r\n<p>Dlatego Amerykanki postanowiły walczyć o zdrowie. Do tej pory słynne siostry zrobiły ogromny postęp w swojej walce. <strong>Razem straciły ponad 250 kilogramów</strong>. Kobiety, które nie mogły się poruszać bez wózka i tlenu, mogą coraz łatwiej żyć.</p>\r\n<p>Amy spełnia się też w roli matki. Kobieta urodziła dwoje dzieci i chętnie dzieli się nowymi doświadczenami w mediach społecznościowych.</p>\r\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://v.wpimg.pl/eXkwLnBuSjkKFTpdbQ5HLElNbgcrV0l6HlV2TG06Sm5dTjRebQUKKh8WIEMjFwYiDwUjGSsQSy8bFCgAbAUJdwIaLQknNgQ7AxJjXHJHVndbQmNdc1oENRJaNkMmDww9CBwlCy8qXDwKEmJDOkUcaBMPfBc7RUsoBRBuEw\" alt=\"Amy urodziła niedawno drugie dziecko\" /></p>\r\n<p> </p>\r\n<p> </p>\r\n<div class=\"article__textbox wvdxqce t6etug9 bqzsno3 jmzr05p\">\r\n<div id=\"c64802fa70d5855\" class=\"wwz5k4i\"></div>\r\n</div>', '', 1, 9, '2023-06-07 07:32:36', 588, '', '2023-06-07 07:32:58', 588, NULL, NULL, '2023-06-07 07:32:36', NULL, '{\"image_intro\":\"images\\/250lb.webp#joomlaImage:\\/\\/local-images\\/250lb.webp?width=916&height=471\",\"image_intro_alt\":\"\",\"float_intro\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/1000-lb-Sisters-Tammy-Slaton-Amy-Slaton-5489-800x445.jpg#joomlaImage:\\/\\/local-images\\/1000-lb-Sisters-Tammy-Slaton-Amy-Slaton-5489-800x445.jpg?width=800&height=445\",\"image_fulltext_alt\":\"\",\"float_fulltext\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":\"\",\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":\"\",\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":\"\",\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 2, 2, '', '', 1, 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\"}', 0, '*', ''),
 (5, 103, 'TikTok szykuje zmiany', 'tiktok-szykuje-zmiany', '<h1 class=\"C3ct\" style=\"text-align: center;\">TikTok szykuje zmiany. Obejmą najmłodszych użytkowników</h1>\r\n<p>TikTok od dawna jest krytykowany za niedostateczną ochronę swoich najmłodszych użytkowników, dlatego teraz serwis wprowadzi nowe mechanizmy chroniące dzieci przed pedofilią w sieci. Firma ogłosiła w środę, że konta użytkowników poniżej 16 roku domyślnie będą miały najsilniejsze ustawienia prywatności.</p>\r\n', '\r\n<p><img style=\"display: block; margin-left: auto; margin-right: auto;\" src=\"https://v.wpimg.pl/YmMyOGYudgwsGzl0dg57GW9DbS4wV3VPOFt1ZXZEa1V9AWAuNBJ3CSIbPSIpBzYKPxgiPncFNUIEFC4gPAZ2IygOPGhoRWladEFgcz1Dal4vSylqbUNpWmBNLXE7WDtYL0tiJmlNaF8rTC0ka00_QycJKGUk\" alt=\"fot. Unsplash\" width=\"783\" height=\"522\" /></p>\r\n<div class=\"RDe3\">\r\n<p>Zmiany zostaną zastosowane automatycznie względem wszystkich kont utworzonych przez osoby poniżej 16 roku życia i oznaczają, że konta staną się prywatne. Co za tym idzie, wszystkie prośby o możliwość ich obserwowania będzie trzeba zatwierdzać samodzielnie.</p>\r\n</div>\r\n<div class=\"RDe3\">\r\n<p>Profile oznaczone jako prywatne nie mogą również być oznaczane w materiałach wideo nagrywanych w ramach funkcji \"Duet\", która często była wykorzystywana przez pedofilów do łączenia swoich ofiar z materiałami pornograficznymi.</p>\r\n<div class=\"RDe3\">\r\n<ul>\r\n<li>Prawo do prywatności i bezpieczeństwo naszej społeczności to najwyższy priorytet dla TikToka. Szczególny nacisk kładziemy na prywatność i bezpieczeństwo naszych młodszych użytkowników i dlatego dla nich wprowadzamy te znaczące zmiany - powiedziała cytowana przez serwis Busiess Insider dyrektor prywatności TikToka dla regionu Europy, Bliskiego Wschodu i Afryki Elaine Fox.</li>\r\n</ul>\r\n</div>\r\n<div class=\"RDe3\">\r\n<p>Zdaniem TikToka, ma to pomóc w eliminowaniu potencjalnych pedofilów, ponieważ ograniczy im możliwość obserwowania nieletnich oraz przesyłania im wiadomości prywatnych. Eksperci mają jednak co do tego wątpliwości. Cytowana również przez BI duńska ekspertka ds. bezpieczeństwa dzieci i młodzieży Eva Fog Noer powiedziała, że <em>zamiana działania głównych funkcji aplikacji i blokowanie możliwości korzystania z nich nie jest dobrym rozwiązaniem</em></p>\r\n</div>\r\n<div class=\"RDe3\">\r\n<p>Zdaniem ekspertki młodzież z łatwością ominie obostrzenia TikToka i będzie zakładać konta, podając fałszywą datę urodzenia. Nie wiadomo dokładnie, jakiej liczby kont będą dotyczyć zmiany zapowiedziane przez TikTok. Według szacunków \"New York Times\" w sierpniu 2020 TikTok miał ponad 49 mln użytkowników w USA, z czego ponad jedną trzecią stanowiły osoby poniżej 14 roku życia.</p>\r\n</div>\r\n</div>', 1, 9, '2023-06-07 07:40:46', 588, '', '2023-06-07 07:40:46', 588, NULL, NULL, '2023-06-07 07:40:46', NULL, '{\"image_intro\":\"images\\/z29498988AMPTikTok-zwalnia----Polski-dzial-badan-i-rozwoju-uci.jpg#joomlaImage:\\/\\/local-images\\/z29498988AMPTikTok-zwalnia----Polski-dzial-badan-i-rozwoju-uci.jpg?width=1200&height=800\",\"image_intro_alt\":\"\",\"float_intro\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/tiktok-1-mld-uzytkownikow.png#joomlaImage:\\/\\/local-images\\/tiktok-1-mld-uzytkownikow.png?width=1080&height=518\",\"image_fulltext_alt\":\"\",\"float_fulltext\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":\"\",\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":\"\",\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":\"\",\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 1, '', '', 1, 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\"}', 0, '*', ''),
-(6, 104, 'Facebook na \"czarnej liście\"', 'facebook-na-czarnej-liscie', '<h1 class=\"sc-1mskw74-0 sc-7eqdwf-0 iPHSOH\" style=\"text-align: center;\">Facebook na \"czarnej liście\". Duży bank nie będzie kupował akcji</h1>\r\n<p>Już trzeci dzień z rzędu w dół lecą notowania akcji Facebooka.</p>\r\n<p>Przez to wartość rynkowa firmy spadła o kilkadziesiąt miliardów dolarów. Do czasu wyjaśnienia afery z Cambridge Analytica, z inwestycji w akcje spółki Marka Zuckerberga rezygnują niektóre fundusze Nordea Banku.</p>\r\n', '\r\n<div class=\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\">\r\n<p><img src=\"https://v.wpimg.pl/QUJDREVGfjQrJiR2eTxzIWh-cCw_ZX13P2ZoZ3lwaWEyaz8qOCIoez00MSE4aSE5ZS19LXl1Y2VlKyA8MXRjY3JzZGs8NzZ3Nw\" alt=\"Wizerunek Facebooka mocno podupadł po wybuchu afery z Cambridge Analytica.\" /></p>\r\n<p>Największy bank w Skandynawii i jedna z największych grup finansowych w Europie zdecydowała o umieszczeniu akcji Facebooka na \"czarnej liście\". Władze Nordea Banku ogłosiły, że m.in. należące do niego fundusze inwestycyjne o zrównoważonym profilu ryzyka nie będą mogły aż do odwołania kupować udziałów w w Facebooku.</p>\r\n</div>\r\n<div class=\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\">\r\n<p>Jak donosi agencja Bloomberg, jest to rodzaj \"kwarantanny\", jaki bank nałożył na akcje. Potrwa ona do momentu, aż opadną emocje wśród inwestorów i popularny serwis społecznościowy wyjaśni wszystkie wątpliwości w związku z aferą odkrytą przez dziennikarzy śledczych \"New York Timesa\" oraz \"Observera\".</p>\r\n<p>Przypomnijmy, że dane blisko 50 mln użytkowników Facebooka miały zostać nielegalnie użyte przez firmę Cambridge Analytica w kampanii wyborczej w 2016 roku. Posłużyły do \"promowania\" Donalda Trumpa lub jak mówią niektórzy - do zmanipulowania wyborców. Firma miała za to zainkasować niemal 9 mln dolarów.</p>\r\n<p>Sprawa wyszła na jaw w weekend. Akcje Facebooka tylko w poniedziałek poleciały w dół aż o 7 proc. Tak panicznej reakcji inwestorów posiadających papiery firmy nie widzieliśmy od września 2012 roku. W jeden dzień wartość spółki zmalała aż o 40 mld dolarów.</p>\r\n<div class=\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\">\r\n<p>Sytuacja ciągle jest napięta. Również we wtorek notowania firmy były pod presją, tracąc ostatecznie 2,5 proc. Początek środowej sesji również przynosi delikatne spadki. Władze Nordei widząc to, stwierdziły, że bezpieczniej będzie wstrzymać się na razie z inwestycjami w akcje Facebooka.</p>\r\n</div>\r\n<div class=\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\">\r\n<p>Emocje starają się tonować przedstawiciele Facebooka, którzy odrzucają zarzuty o niedopełnienie obowiązków i luki w systemie ochrony danych użytkowników. Wkrótkim oświadczeniu wskazują, że zostali oszukani przez Cambridge Analytica. To jednak nie przekonuje inwestorów.</p>\r\n</div>\r\n</div>', 1, 9, '2023-06-07 07:49:03', 588, '', '2023-06-07 07:49:03', 588, NULL, NULL, '2023-06-07 07:49:03', NULL, '{\"image_intro\":\"images\\/408653.jpg#joomlaImage:\\/\\/local-images\\/408653.jpg?width=1600&height=1033\",\"image_intro_alt\":\"\",\"float_intro\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/lbDk9kqTURBXy9jY2VkZWJmODVlMWJiZmYxNGI5Yzk4NDA0YzQxNGI3YS5qcGVnkpUDAMxszQwmzQbVkwXNBLDNAljeAAGhMAE.jpg#joomlaImage:\\/\\/local-images\\/lbDk9kqTURBXy9jY2VkZWJmODVlMWJiZmYxNGI5Yzk4NDA0YzQxNGI3YS5qcGVnkpUDAMxszQwmzQbVkwXNBLDNAljeAAGhMAE.jpg?width=1200&height=600\",\"image_fulltext_alt\":\"\",\"float_fulltext\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":\"\",\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":\"\",\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":\"\",\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 0, '', '', 1, 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\"}', 0, '*', '');
+(6, 104, 'Facebook na \"czarnej liście\"', 'facebook-na-czarnej-liscie', '<h1 class=\"sc-1mskw74-0 sc-7eqdwf-0 iPHSOH\" style=\"text-align: center;\">Facebook na \"czarnej liście\". Duży bank nie będzie kupował akcji</h1>\r\n<p>Już trzeci dzień z rzędu w dół lecą notowania akcji Facebooka.</p>\r\n<p>Przez to wartość rynkowa firmy spadła o kilkadziesiąt miliardów dolarów. Do czasu wyjaśnienia afery z Cambridge Analytica, z inwestycji w akcje spółki Marka Zuckerberga rezygnują niektóre fundusze Nordea Banku.</p>\r\n', '\r\n<div class=\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\">\r\n<p><img src=\"https://v.wpimg.pl/QUJDREVGfjQrJiR2eTxzIWh-cCw_ZX13P2ZoZ3lwaWEyaz8qOCIoez00MSE4aSE5ZS19LXl1Y2VlKyA8MXRjY3JzZGs8NzZ3Nw\" alt=\"Wizerunek Facebooka mocno podupadł po wybuchu afery z Cambridge Analytica.\" /></p>\r\n<p>Największy bank w Skandynawii i jedna z największych grup finansowych w Europie zdecydowała o umieszczeniu akcji Facebooka na \"czarnej liście\". Władze Nordea Banku ogłosiły, że m.in. należące do niego fundusze inwestycyjne o zrównoważonym profilu ryzyka nie będą mogły aż do odwołania kupować udziałów w w Facebooku.</p>\r\n</div>\r\n<div class=\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\">\r\n<p>Jak donosi agencja Bloomberg, jest to rodzaj \"kwarantanny\", jaki bank nałożył na akcje. Potrwa ona do momentu, aż opadną emocje wśród inwestorów i popularny serwis społecznościowy wyjaśni wszystkie wątpliwości w związku z aferą odkrytą przez dziennikarzy śledczych \"New York Timesa\" oraz \"Observera\".</p>\r\n<p>Przypomnijmy, że dane blisko 50 mln użytkowników Facebooka miały zostać nielegalnie użyte przez firmę Cambridge Analytica w kampanii wyborczej w 2016 roku. Posłużyły do \"promowania\" Donalda Trumpa lub jak mówią niektórzy - do zmanipulowania wyborców. Firma miała za to zainkasować niemal 9 mln dolarów.</p>\r\n<p>Sprawa wyszła na jaw w weekend. Akcje Facebooka tylko w poniedziałek poleciały w dół aż o 7 proc. Tak panicznej reakcji inwestorów posiadających papiery firmy nie widzieliśmy od września 2012 roku. W jeden dzień wartość spółki zmalała aż o 40 mld dolarów.</p>\r\n<div class=\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\">\r\n<p>Sytuacja ciągle jest napięta. Również we wtorek notowania firmy były pod presją, tracąc ostatecznie 2,5 proc. Początek środowej sesji również przynosi delikatne spadki. Władze Nordei widząc to, stwierdziły, że bezpieczniej będzie wstrzymać się na razie z inwestycjami w akcje Facebooka.</p>\r\n</div>\r\n<div class=\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\">\r\n<p>Emocje starają się tonować przedstawiciele Facebooka, którzy odrzucają zarzuty o niedopełnienie obowiązków i luki w systemie ochrony danych użytkowników. Wkrótkim oświadczeniu wskazują, że zostali oszukani przez Cambridge Analytica. To jednak nie przekonuje inwestorów.</p>\r\n</div>\r\n</div>', 1, 9, '2023-06-07 07:49:03', 588, '', '2023-06-07 07:49:03', 588, NULL, NULL, '2023-06-07 07:49:03', NULL, '{\"image_intro\":\"images\\/408653.jpg#joomlaImage:\\/\\/local-images\\/408653.jpg?width=1600&height=1033\",\"image_intro_alt\":\"\",\"float_intro\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"images\\/lbDk9kqTURBXy9jY2VkZWJmODVlMWJiZmYxNGI5Yzk4NDA0YzQxNGI3YS5qcGVnkpUDAMxszQwmzQbVkwXNBLDNAljeAAGhMAE.jpg#joomlaImage:\\/\\/local-images\\/lbDk9kqTURBXy9jY2VkZWJmODVlMWJiZmYxNGI5Yzk4NDA0YzQxNGI3YS5qcGVnkpUDAMxszQwmzQbVkwXNBLDNAljeAAGhMAE.jpg?width=1200&height=600\",\"image_fulltext_alt\":\"\",\"float_fulltext\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":\"\",\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":\"\",\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":\"\",\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 0, '', '', 1, 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\"}', 0, '*', ''),
+(7, 106, 'O nas', 'o-nas', '<p>Witaj na naszym blogu z wiadomościami! Jesteśmy zespołem pasjonatów, którzy mają na celu dostarczenie Ci najświeższych informacji na temat najważniejszych wydarzeń i trendów z różnych dziedzin.</p>\r\n<p>Naszym celem jest zapewnienie Ci rzetelnych, zróżnicowanych i interesujących treści, które pozwolą Ci być na bieżąco z najnowszymi wydarzeniami na świecie. Niezależnie od tego, czy interesujesz się polityką, gospodarką, nauką, technologią, sportem czy rozrywką, nasz blog dostarczy Ci informacji na temat tych tematów i wielu innych.</p>\r\n<p>Nasz zespół składa się z doświadczonych redaktorów, którzy posiadają szeroką wiedzę i doświadczenie w dziedzinie dziennikarstwa. Pracujemy ciężko, aby dostarczać Ci wiadomości, które są rzetelne, zbadane i dobrze zredagowane. Stawiamy na jakość i dokładność informacji, ponieważ wiemy, jak ważne jest to dla naszych czytelników.</p>\r\n<p>Nie tylko dostarczamy informacje, ale także analizujemy wydarzenia i prezentujemy różne perspektywy. Staramy się ukazywać różnorodne opinie, abyś mógł samodzielnie zrozumieć różne punkty widzenia. Naszym celem jest tworzenie przestrzeni, w której czytelnicy mogą rozwijać swoją wiedzę i pogłębiać zrozumienie najważniejszych tematów dnia.</p>\r\n<p>Jesteśmy również otwarci na opinię i zaangażowanie naszych czytelników. Jeśli masz jakieś sugestie, pytania lub chciałbyś podzielić się swoją opinią na temat jakiegoś artykułu, zachęcamy do kontaktu z nami. Twoje uwagi są dla nas cenne, ponieważ pomagają nam stale doskonalić naszą pracę.</p>\r\n<p>Dziękujemy, że odwiedziłeś nasz blog z wiadomościami. Mamy nadzieję, że nasza strona dostarczy Ci ciekawych informacji i będzie inspiracją do dalszego poszerzania wiedzy. Zapraszamy do regularnego odwiedzania naszego bloga, aby być na bieżąco z najnowszymi wydarzeniami na świecie.</p>', '', 1, 10, '2023-06-12 16:20:39', 588, '', '2023-06-12 16:20:39', 588, NULL, NULL, '2023-06-12 16:20:39', NULL, '{\"image_intro\":\"\",\"image_intro_alt\":\"\",\"float_intro\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"float_fulltext\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":\"\",\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":\"\",\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":\"\",\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 1, '', '', 1, 2, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\"}', 0, '*', ''),
+(8, 107, 'Polityka prywatności', 'polityka-prywatnosci', '<p>Witamy na stronie Polityki Prywatności naszego blogu z wiadomościami. Zależy nam na ochronie Twojej prywatności i chcielibyśmy przedstawić Ci, w jaki sposób gromadzimy, używamy i chronimy informacje, które możemy otrzymać od Ciebie podczas odwiedzania naszej strony.</p>\r\n<p>Gromadzenie informacji Podczas odwiedzania naszego blogu, możemy gromadzić pewne informacje, takie jak adres IP, przeglądarka internetowa, typ urządzenia, język, strony, które odwiedzasz, oraz daty i godziny Twoich wizyt. Te informacje są gromadzone w celach statystycznych i analizy ruchu na stronie, abyśmy mogli lepiej zrozumieć preferencje naszych czytelników i dostosować treści do ich potrzeb.</p>\r\n<p>Używanie plików cookie Nasza strona może używać plików cookie - małych plików tekstowych umieszczanych na Twoim urządzeniu, które pomagają nam zapewnić Ci lepsze doświadczenie podczas korzystania z naszego blogu. Pliki cookie umożliwiają nam zapamiętywanie Twoich preferencji, personalizację treści oraz analizę sposobu, w jaki korzystasz z naszej strony. Możesz w każdej chwili skonfigurować ustawienia swojej przeglądarki, aby odrzucała pliki cookie lub informowała Cię o ich wysyłaniu. Jednakże, należy pamiętać, że niektóre funkcje naszego blogu mogą nie działać poprawnie bez plików cookie.</p>\r\n<p>Świadome ujawnianie informacji Jesteśmy świadomi znaczenia prywatności i dbamy o to, aby Twoje informacje osobiste nie były ujawniane nieuprawnionym osobom. Nie sprzedajemy, nie udostępniamy ani nie wymieniamy Twoich danych osobowych z żadnymi stronami trzecimi bez Twojej zgody, chyba że jest to wymagane przez prawo.</p>\r\n<p>Zewnętrzne łącza Na naszym blogu możemy zamieszczać łącza do innych stron internetowych lub artykułów, które uważamy za wartościowe dla naszych czytelników. Należy pamiętać, że nie ponosimy odpowiedzialności za treści lub praktyki prywatności tych stron. Zachęcamy do zapoznania się z polityką prywatności każdej z tych stron przed udostępnieniem jakichkolwiek informacji osobistych.</p>\r\n<p>Ochrona danych Dokładamy wszelkich starań, aby chronić Twoje informacje przed nieuprawnionym dostępem, utratą, wykorzystaniem lub zmianą. Stosujemy odpowiednie środki techniczne, fizyczne i organizacyjne, aby zapewnić bezpieczeństwo danych.</p>', '', 1, 10, '2023-06-12 16:41:39', 588, '', '2023-06-12 16:58:39', 588, NULL, NULL, '2023-06-12 16:41:39', NULL, '{\"image_intro\":\"\",\"image_intro_alt\":\"\",\"float_intro\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"float_fulltext\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":\"\",\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":\"\",\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":\"\",\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 2, 1, '', '', 1, 5, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\"}', 0, '*', ''),
+(9, 108, 'Warunki korzystania', 'warunki-korzystania', '<p>Witamy na stronie Warunków Korzystania ze strony naszego blogu z wiadomościami. Poniżej przedstawiamy zasady, których należy przestrzegać podczas korzystania z naszej strony. Poprzez dostęp i przeglądanie naszego blogu, wyrażasz zgodę na poniższe warunki. Jeśli nie zgadzasz się z którymkolwiek z poniższych warunków, prosimy o zaprzestanie korzystania z naszej strony.</p>\r\n<ol>\r\n<li>\r\n<p>Treści i prawa autorskie: Wszystkie treści zamieszczone na naszej stronie są chronione prawem autorskim. Nie wolno kopiować, reprodukować, publikować, transmitować ani modyfikować żadnej części treści bez naszej zgody. Treści mogą być wykorzystywane jedynie w celach osobistych i niekomercyjnych.</p>\r\n</li>\r\n<li>\r\n<p>Odpowiedzialność: Dokładamy wszelkich starań, aby zapewnić rzetelność, dokładność i aktualność informacji zamieszczonych na naszym blogu. Jednak nie ponosimy odpowiedzialności za ewentualne błędy, opóźnienia, niepełność lub szkody wynikające z korzystania z tych informacji. Korzystanie z treści na własne ryzyko.</p>\r\n</li>\r\n<li>\r\n<p>Zewnętrzne łącza: Na naszym blogu mogą być zamieszczone łącza do innych stron internetowych. Nie ponosimy odpowiedzialności za treści lub praktyki prywatności tych stron. Korzystanie z tych łączy jest dobrowolne i na własne ryzyko.</p>\r\n</li>\r\n<li>\r\n<p>Komunikacja: Zachęcamy do udzielania komentarzy i opinii na naszym blogu. Jednak wszelkie komentarze i treści przesłane przez użytkowników podlegają moderacji. Zastrzegamy sobie prawo do usunięcia, zmiany lub odrzucenia dowolnego komentarza bez podania przyczyny.</p>\r\n</li>\r\n<li>\r\n<p>Prywatność: Szanujemy Twoją prywatność. Informacje, które możemy gromadzić od Ciebie, są objęte naszą Polityką Prywatności. Prosimy o zapoznanie się z tą polityką, aby dowiedzieć się, w jaki sposób gromadzimy, używamy i chronimy Twoje dane osobowe.</p>\r\n</li>\r\n<li>\r\n<p>Zmiany w warunkach korzystania: Zastrzegamy sobie prawo do zmiany niniejszych Warunków Korzystania w dowolnym czasie. Zaktualizowane warunki będą publikowane na tej stronie i będą obowiązywać od momentu opublikowania. Zalecamy regularne sprawdzanie tej strony w celu zapoznania się z ewentualnymi zmianami.</p>\r\n</li>\r\n</ol>\r\n<p>Dziękujemy za przestrzeganie naszych Warunków Korzystania. Zapraszamy do dalszego korzystania z naszego blogu z wiadomościami i cieszenia się najnowszymi</p>', '', 1, 10, '2023-06-12 16:49:24', 588, '', '2023-06-12 16:58:05', 588, NULL, NULL, '2023-06-12 16:49:24', NULL, '{\"image_intro\":\"\",\"image_intro_alt\":\"\",\"float_intro\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"float_fulltext\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":\"\",\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":\"\",\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":\"\",\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 2, 0, '', '', 1, 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\"}', 0, '*', ''),
+(10, 109, 'Często Zadawane Pytania', 'czesto-zadawane-pytania', '<p>Witamy na stronie Często Zadawanych Pytań (FAQ) naszego blogu z wiadomościami. Przedstawiamy poniżej odpowiedzi na najczęściej zadawane pytania dotyczące naszej strony i jej działania. Jeśli masz jakiekolwiek pytania, które nie zostały tu uwzględnione, zachęcamy do kontaktu z nami.</p>\r\n<ol>\r\n<li>\r\n<p>Jak często aktualizujecie treści na swoim blogu? Staramy się regularnie aktualizować nasz blog, aby dostarczać Ci najnowsze wiadomości i informacje. Publikujemy nowe artykuły i treści w miarę jak ważne wydarzenia mają miejsce. Zachęcamy do regularnego odwiedzania naszego blogu, aby być na bieżąco z najświeższymi informacjami.</p>\r\n</li>\r\n<li>\r\n<p>Czy mogę podzielić się swoimi opiniami lub sugestiami na temat artykułów? Oczywiście! Cenimy sobie zaangażowanie naszych czytelników i chętnie przyjmujemy opinie, sugestie i komentarze dotyczące naszych artykułów. Możesz skorzystać z sekcji komentarzy, aby podzielić się swoimi myślami. Staramy się moderować komentarze i odpowiedzieć na jak najwięcej z nich.</p>\r\n</li>\r\n<li>\r\n<p>Czy mogę korzystać z treści zamieszczonych na Waszym blogu? Treści zamieszczone na naszym blogu są chronione prawem autorskim. W przypadku chęci skorzystania z treści w celach komercyjnych, należy skontaktować się z nami w celu uzyskania zgody. Jednakże, możesz korzystać z naszych treści w ramach użytku osobistego i niekomercyjnego.</p>\r\n</li>\r\n<li>\r\n<p>Czy publikujecie tylko wiadomości z konkretnych dziedzin? Staramy się pokrywać różnorodne tematy i dziedziny, aby zaspokoić różnorodne zainteresowania naszych czytelników. Nasze artykuły obejmują politykę, gospodarkę, naukę, technologię, sport, rozrywkę i wiele innych. Dążymy do dostarczenia informacji na tematy, które są ważne i interesujące dla naszych czytelników.</p>\r\n</li>\r\n<li>\r\n<p>Jak mogę skontaktować się z zespołem redakcyjnym? Jeśli masz jakiekolwiek pytania, uwagi lub chciałbyś skontaktować się z naszym zespołem redakcyjnym, możesz skorzystać z formularza kontaktowego dostępnego na naszej stronie. Postaramy się odpowiedzieć na Twoje pytania jak najszybciej.</p>\r\n</li>\r\n</ol>\r\n<p>Dziękujemy za odwiedzenie naszej strony Często Zadawanych Pytań. Mamy nadzieję, że odpowiedzi na powyższe pytania pomogły Ci lepiej zrozumieć nasz blog i jego funkcjonowanie. Jeśli masz jak</p>', '', 1, 10, '2023-06-12 16:57:51', 588, '', '2023-06-12 16:57:51', 588, NULL, NULL, '2023-06-12 16:57:51', NULL, '{\"image_intro\":\"\",\"image_intro_alt\":\"\",\"float_intro\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"float_fulltext\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":\"\",\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":\"\",\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":\"\",\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 0, '', '', 1, 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\"}', 0, '*', ''),
+(11, 110, 'Dla zalogowanych', 'dla-zalogowanych', '', '', 1, 2, '2023-06-12 18:29:47', 588, '', '2023-06-12 18:29:47', 588, NULL, NULL, '2023-06-12 18:29:47', NULL, '{\"image_intro\":\"\",\"image_intro_alt\":\"\",\"float_intro\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"float_fulltext\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":\"\",\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":\"\",\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":\"\",\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 1, '', '', 1, 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\"}', 0, '*', ''),
+(12, 112, 'Dane kontaktowe', 'dane-kontaktowe', '<p class=\"title\">Smartbees Sp. z o.o.</p>\r\n<p>ul. Kępska 2, 45-129 Opole<br /><a href=\"mailto:kontakt@smartbees.pl\">kontakt@smartbees.pl</a><br /><strong>Biuro</strong>: <a href=\"tel:+48 727 518 073\">+48 727 518 073</a><br /><strong>Sprzedaż</strong>: <a href=\"tel:+48 727 498 073\">+48 727 498 073</a></p>\r\n<p>KRS: 0000739101<br />NIP: 7543185898<br />REGON: 380709267</p>', '', 1, 2, '2023-06-12 18:46:19', 588, '', '2023-06-12 18:46:19', 588, NULL, NULL, '2023-06-12 18:46:19', NULL, '{\"image_intro\":\"\",\"image_intro_alt\":\"\",\"float_intro\":\"\",\"image_intro_caption\":\"\",\"image_fulltext\":\"\",\"image_fulltext_alt\":\"\",\"float_fulltext\":\"\",\"image_fulltext_caption\":\"\"}', '{\"urla\":\"\",\"urlatext\":\"\",\"targeta\":\"\",\"urlb\":\"\",\"urlbtext\":\"\",\"targetb\":\"\",\"urlc\":\"\",\"urlctext\":\"\",\"targetc\":\"\"}', '{\"article_layout\":\"\",\"show_title\":\"\",\"link_titles\":\"\",\"show_tags\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"alternative_readmore\":\"\",\"article_page_title\":\"\",\"show_publishing_options\":\"\",\"show_article_options\":\"\",\"show_urls_images_backend\":\"\",\"show_urls_images_frontend\":\"\"}', 1, 0, '', '', 1, 0, '{\"robots\":\"\",\"author\":\"\",\"rights\":\"\"}', 0, '*', '');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_contentitem_tag_map`
+-- Table structure for table `buf3w_contentitem_tag_map`
 --
 
 CREATE TABLE `buf3w_contentitem_tag_map` (
-  `type_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `type_alias` varchar(255) NOT NULL DEFAULT '',
   `core_content_id` int(10) UNSIGNED NOT NULL COMMENT 'PK from the core content table',
   `content_item_id` int(11) NOT NULL COMMENT 'PK from the content type table',
   `tag_id` int(10) UNSIGNED NOT NULL COMMENT 'PK from the tag table',
@@ -549,7 +1613,7 @@ CREATE TABLE `buf3w_contentitem_tag_map` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_content_frontpage`
+-- Table structure for table `buf3w_content_frontpage`
 --
 
 CREATE TABLE `buf3w_content_frontpage` (
@@ -562,35 +1626,35 @@ CREATE TABLE `buf3w_content_frontpage` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_content_rating`
+-- Table structure for table `buf3w_content_rating`
 --
 
 CREATE TABLE `buf3w_content_rating` (
   `content_id` int(11) NOT NULL DEFAULT 0,
   `rating_sum` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `rating_count` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `lastip` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
+  `lastip` varchar(50) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_content_types`
+-- Table structure for table `buf3w_content_types`
 --
 
 CREATE TABLE `buf3w_content_types` (
   `type_id` int(10) UNSIGNED NOT NULL,
-  `type_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `type_alias` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `table` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `rules` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `field_mappings` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `router` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `content_history_options` varchar(5120) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'JSON string for com_contenthistory options'
+  `type_title` varchar(255) NOT NULL DEFAULT '',
+  `type_alias` varchar(400) NOT NULL DEFAULT '',
+  `table` varchar(2048) NOT NULL DEFAULT '',
+  `rules` text NOT NULL,
+  `field_mappings` text NOT NULL,
+  `router` varchar(255) NOT NULL DEFAULT '',
+  `content_history_options` varchar(5120) DEFAULT NULL COMMENT 'JSON string for com_contenthistory options'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_content_types`
+-- Dumping data for table `buf3w_content_types`
 --
 
 INSERT INTO `buf3w_content_types` (`type_id`, `type_title`, `type_alias`, `table`, `rules`, `field_mappings`, `router`, `content_history_options`) VALUES
@@ -611,34 +1675,34 @@ INSERT INTO `buf3w_content_types` (`type_id`, `type_title`, `type_alias`, `table
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_extensions`
+-- Table structure for table `buf3w_extensions`
 --
 
 CREATE TABLE `buf3w_extensions` (
   `extension_id` int(11) NOT NULL,
   `package_id` int(11) NOT NULL DEFAULT 0 COMMENT 'Parent package ID for extensions installed as a package.',
-  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `type` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `element` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `changelogurl` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `folder` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `type` varchar(20) NOT NULL,
+  `element` varchar(100) NOT NULL,
+  `changelogurl` text DEFAULT NULL,
+  `folder` varchar(100) NOT NULL,
   `client_id` tinyint(4) NOT NULL,
   `enabled` tinyint(4) NOT NULL DEFAULT 0,
   `access` int(10) UNSIGNED NOT NULL DEFAULT 1,
   `protected` tinyint(4) NOT NULL DEFAULT 0 COMMENT 'Flag to indicate if the extension is protected. Protected extensions cannot be disabled.',
   `locked` tinyint(4) NOT NULL DEFAULT 0 COMMENT 'Flag to indicate if the extension is locked. Locked extensions cannot be uninstalled.',
-  `manifest_cache` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `custom_data` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `manifest_cache` text NOT NULL,
+  `params` text NOT NULL,
+  `custom_data` text NOT NULL,
   `checked_out` int(10) UNSIGNED DEFAULT NULL,
   `checked_out_time` datetime DEFAULT NULL,
   `ordering` int(11) DEFAULT 0,
   `state` int(11) DEFAULT 0,
-  `note` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `note` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_extensions`
+-- Dumping data for table `buf3w_extensions`
 --
 
 INSERT INTO `buf3w_extensions` (`extension_id`, `package_id`, `name`, `type`, `element`, `changelogurl`, `folder`, `client_id`, `enabled`, `access`, `protected`, `locked`, `manifest_cache`, `params`, `custom_data`, `checked_out`, `checked_out_time`, `ordering`, `state`, `note`) VALUES
@@ -660,10 +1724,10 @@ INSERT INTO `buf3w_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (16, 0, 'com_newsfeeds', 'component', 'com_newsfeeds', NULL, '', 1, 1, 1, 0, 1, '{\"name\":\"com_newsfeeds\",\"type\":\"component\",\"creationDate\":\"2006-04\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2006 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.0\",\"description\":\"COM_NEWSFEEDS_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Component\\\\Newsfeeds\",\"filename\":\"newsfeeds\"}', '{\"newsfeed_layout\":\"_:default\",\"save_history\":\"1\",\"history_limit\":5,\"show_feed_image\":\"1\",\"show_feed_description\":\"1\",\"show_item_description\":\"1\",\"feed_character_count\":\"0\",\"feed_display_order\":\"des\",\"float_first\":\"right\",\"float_second\":\"right\",\"show_tags\":\"1\",\"category_layout\":\"_:default\",\"show_category_title\":\"1\",\"show_description\":\"1\",\"show_description_image\":\"1\",\"maxLevel\":\"-1\",\"show_empty_categories\":\"0\",\"show_subcat_desc\":\"1\",\"show_cat_items\":\"1\",\"show_cat_tags\":\"1\",\"show_base_description\":\"1\",\"maxLevelcat\":\"-1\",\"show_empty_categories_cat\":\"0\",\"show_subcat_desc_cat\":\"1\",\"show_cat_items_cat\":\"1\",\"filter_field\":\"1\",\"show_pagination_limit\":\"1\",\"show_headings\":\"1\",\"show_articles\":\"0\",\"show_link\":\"1\",\"show_pagination\":\"1\",\"show_pagination_results\":\"1\",\"sef_ids\":1}', '', NULL, NULL, 0, 0, NULL),
 (17, 0, 'com_plugins', 'component', 'com_plugins', NULL, '', 1, 1, 1, 1, 1, '{\"name\":\"com_plugins\",\"type\":\"component\",\"creationDate\":\"2006-04\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2006 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.0\",\"description\":\"COM_PLUGINS_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Component\\\\Plugins\"}', '', '', NULL, NULL, 0, 0, NULL),
 (18, 0, 'com_templates', 'component', 'com_templates', NULL, '', 1, 1, 1, 1, 1, '{\"name\":\"com_templates\",\"type\":\"component\",\"creationDate\":\"2006-04\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2006 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.0\",\"description\":\"COM_TEMPLATES_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Component\\\\Templates\"}', '{\"template_positions_display\":\"0\",\"upload_limit\":\"10\",\"image_formats\":\"gif,bmp,jpg,jpeg,png,webp\",\"source_formats\":\"txt,less,ini,xml,js,php,css,scss,sass,json\",\"font_formats\":\"woff,woff2,ttf,otf\",\"compressed_formats\":\"zip\",\"difference\":\"SideBySide\"}', '', NULL, NULL, 0, 0, NULL),
-(19, 0, 'com_content', 'component', 'com_content', NULL, '', 1, 1, 0, 1, 1, '{\"name\":\"com_content\",\"type\":\"component\",\"creationDate\":\"2006-04\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2006 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.0\",\"description\":\"COM_CONTENT_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Component\\\\Content\",\"filename\":\"content\"}', '{\"article_layout\":\"_:default\",\"show_title\":\"1\",\"link_titles\":\"1\",\"show_intro\":\"1\",\"info_block_position\":\"0\",\"info_block_show_title\":\"1\",\"show_category\":\"1\",\"link_category\":\"1\",\"show_parent_category\":\"0\",\"link_parent_category\":\"0\",\"show_associations\":\"0\",\"flags\":\"1\",\"show_author\":\"1\",\"link_author\":\"0\",\"show_create_date\":\"0\",\"show_modify_date\":\"0\",\"show_publish_date\":\"1\",\"show_item_navigation\":\"1\",\"show_readmore\":\"1\",\"show_readmore_title\":\"1\",\"readmore_limit\":100,\"show_tags\":\"1\",\"record_hits\":\"1\",\"show_hits\":\"1\",\"show_noauth\":\"0\",\"urls_position\":0,\"captcha\":\"\",\"show_publishing_options\":\"1\",\"show_article_options\":\"1\",\"show_configure_edit_options\":\"1\",\"show_permissions\":\"1\",\"show_associations_edit\":\"1\",\"save_history\":\"1\",\"history_limit\":10,\"show_urls_images_frontend\":\"0\",\"show_urls_images_backend\":\"1\",\"targeta\":0,\"targetb\":0,\"targetc\":0,\"float_intro\":\"left\",\"float_fulltext\":\"left\",\"category_layout\":\"_:blog\",\"show_category_title\":\"0\",\"show_description\":\"0\",\"show_description_image\":\"0\",\"maxLevel\":\"1\",\"show_empty_categories\":\"0\",\"show_no_articles\":\"1\",\"show_category_heading_title_text\":\"1\",\"show_subcat_desc\":\"1\",\"show_cat_num_articles\":\"0\",\"show_cat_tags\":\"1\",\"show_base_description\":\"1\",\"maxLevelcat\":\"-1\",\"show_empty_categories_cat\":\"0\",\"show_subcat_desc_cat\":\"1\",\"show_cat_num_articles_cat\":\"1\",\"num_leading_articles\":1,\"blog_class_leading\":\"\",\"num_intro_articles\":4,\"blog_class\":\"\",\"num_columns\":1,\"multi_column_order\":\"0\",\"num_links\":4,\"show_subcategory_content\":\"0\",\"link_intro_image\":\"0\",\"show_pagination_limit\":\"1\",\"filter_field\":\"hide\",\"show_headings\":\"1\",\"list_show_date\":\"0\",\"date_format\":\"\",\"list_show_hits\":\"1\",\"list_show_author\":\"1\",\"display_num\":\"10\",\"orderby_pri\":\"order\",\"orderby_sec\":\"rdate\",\"order_date\":\"published\",\"show_pagination\":\"2\",\"show_pagination_results\":\"1\",\"show_featured\":\"show\",\"show_feed_link\":\"1\",\"feed_summary\":\"0\",\"feed_show_readmore\":\"0\",\"sef_ids\":1,\"custom_fields_enable\":\"1\",\"workflow_enabled\":\"0\"}', '', NULL, NULL, 0, 0, NULL),
+(19, 0, 'com_content', 'component', 'com_content', NULL, '', 1, 1, 0, 1, 1, '{\"name\":\"com_content\",\"type\":\"component\",\"creationDate\":\"2006-04\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2006 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.0\",\"description\":\"COM_CONTENT_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Component\\\\Content\",\"filename\":\"content\"}', '{\"article_layout\":\"_:default\",\"show_title\":\"1\",\"link_titles\":\"1\",\"show_intro\":\"1\",\"info_block_position\":\"0\",\"info_block_show_title\":\"1\",\"show_category\":\"1\",\"link_category\":\"1\",\"show_parent_category\":\"0\",\"link_parent_category\":\"0\",\"show_associations\":\"0\",\"flags\":\"1\",\"show_author\":\"1\",\"link_author\":\"0\",\"show_create_date\":\"0\",\"show_modify_date\":\"0\",\"show_publish_date\":\"1\",\"show_item_navigation\":\"1\",\"show_vote\":\"1\",\"show_readmore\":\"1\",\"show_readmore_title\":\"1\",\"readmore_limit\":100,\"show_tags\":\"1\",\"record_hits\":\"1\",\"show_hits\":\"1\",\"show_noauth\":\"0\",\"urls_position\":0,\"captcha\":\"\",\"show_publishing_options\":\"1\",\"show_article_options\":\"1\",\"show_configure_edit_options\":\"1\",\"show_permissions\":\"1\",\"show_associations_edit\":\"1\",\"save_history\":\"1\",\"history_limit\":10,\"show_urls_images_frontend\":\"0\",\"show_urls_images_backend\":\"1\",\"targeta\":0,\"targetb\":0,\"targetc\":0,\"float_intro\":\"left\",\"float_fulltext\":\"left\",\"category_layout\":\"_:blog\",\"show_category_title\":\"0\",\"show_description\":\"0\",\"show_description_image\":\"0\",\"maxLevel\":\"1\",\"show_empty_categories\":\"0\",\"show_no_articles\":\"1\",\"show_category_heading_title_text\":\"1\",\"show_subcat_desc\":\"1\",\"show_cat_num_articles\":\"0\",\"show_cat_tags\":\"1\",\"show_base_description\":\"1\",\"maxLevelcat\":\"-1\",\"show_empty_categories_cat\":\"0\",\"show_subcat_desc_cat\":\"1\",\"show_cat_num_articles_cat\":\"1\",\"num_leading_articles\":1,\"blog_class_leading\":\"\",\"num_intro_articles\":4,\"blog_class\":\"\",\"num_columns\":1,\"multi_column_order\":\"0\",\"num_links\":4,\"show_subcategory_content\":\"0\",\"link_intro_image\":\"0\",\"show_pagination_limit\":\"1\",\"filter_field\":\"hide\",\"show_headings\":\"1\",\"list_show_date\":\"0\",\"date_format\":\"\",\"list_show_hits\":\"1\",\"list_show_author\":\"1\",\"display_num\":\"10\",\"list_show_votes\":\"0\",\"list_show_ratings\":\"0\",\"orderby_pri\":\"order\",\"orderby_sec\":\"rdate\",\"order_date\":\"published\",\"show_pagination\":\"2\",\"show_pagination_results\":\"1\",\"show_featured\":\"show\",\"show_feed_link\":\"1\",\"feed_summary\":\"0\",\"feed_show_readmore\":\"0\",\"sef_ids\":1,\"custom_fields_enable\":\"1\",\"workflow_enabled\":\"0\"}', '', NULL, NULL, 0, 0, NULL),
 (20, 0, 'com_config', 'component', 'com_config', NULL, '', 1, 1, 0, 1, 1, '{\"name\":\"com_config\",\"type\":\"component\",\"creationDate\":\"2006-04\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2006 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.0\",\"description\":\"COM_CONFIG_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Component\\\\Config\",\"filename\":\"config\"}', '{\"filters\":{\"1\":{\"filter_type\":\"NH\",\"filter_tags\":\"\",\"filter_attributes\":\"\"},\"9\":{\"filter_type\":\"NH\",\"filter_tags\":\"\",\"filter_attributes\":\"\"},\"6\":{\"filter_type\":\"BL\",\"filter_tags\":\"\",\"filter_attributes\":\"\"},\"7\":{\"filter_type\":\"BL\",\"filter_tags\":\"\",\"filter_attributes\":\"\"},\"2\":{\"filter_type\":\"NH\",\"filter_tags\":\"\",\"filter_attributes\":\"\"},\"3\":{\"filter_type\":\"BL\",\"filter_tags\":\"\",\"filter_attributes\":\"\"},\"4\":{\"filter_type\":\"BL\",\"filter_tags\":\"\",\"filter_attributes\":\"\"},\"5\":{\"filter_type\":\"BL\",\"filter_tags\":\"\",\"filter_attributes\":\"\"},\"8\":{\"filter_type\":\"NONE\",\"filter_tags\":\"\",\"filter_attributes\":\"\"}}}', '', NULL, NULL, 0, 0, NULL),
 (21, 0, 'com_redirect', 'component', 'com_redirect', NULL, '', 1, 1, 0, 0, 1, '{\"name\":\"com_redirect\",\"type\":\"component\",\"creationDate\":\"2006-04\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2006 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.0\",\"description\":\"COM_REDIRECT_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Component\\\\Redirect\"}', '', '', NULL, NULL, 0, 0, NULL),
-(22, 0, 'com_users', 'component', 'com_users', NULL, '', 1, 1, 0, 1, 1, '{\"name\":\"com_users\",\"type\":\"component\",\"creationDate\":\"2006-04\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2006 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.0\",\"description\":\"COM_USERS_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Component\\\\Users\",\"filename\":\"users\"}', '{\"allowUserRegistration\":\"0\",\"new_usertype\":\"2\",\"guest_usergroup\":\"9\",\"sendpassword\":\"0\",\"useractivation\":\"2\",\"mail_to_admin\":\"1\",\"captcha\":\"\",\"frontend_userparams\":\"1\",\"site_language\":\"0\",\"change_login_name\":\"0\",\"reset_count\":\"10\",\"reset_time\":\"1\",\"minimum_length\":\"12\",\"minimum_integers\":\"0\",\"minimum_symbols\":\"0\",\"minimum_uppercase\":\"0\",\"save_history\":\"1\",\"history_limit\":5,\"mailSubjectPrefix\":\"\",\"mailBodySuffix\":\"\"}', '', NULL, NULL, 0, 0, NULL),
+(22, 0, 'com_users', 'component', 'com_users', NULL, '', 1, 1, 0, 1, 1, '{\"name\":\"com_users\",\"type\":\"component\",\"creationDate\":\"2006-04\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2006 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.0\",\"description\":\"COM_USERS_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Component\\\\Users\",\"filename\":\"users\"}', '{\"allowUserRegistration\":\"1\",\"new_usertype\":\"2\",\"guest_usergroup\":\"9\",\"sendpassword\":\"0\",\"useractivation\":\"2\",\"mail_to_admin\":\"1\",\"captcha\":\"\",\"frontend_userparams\":\"1\",\"site_language\":\"0\",\"change_login_name\":\"0\",\"domains\":[],\"reset_count\":10,\"reset_time\":1,\"minimum_length\":12,\"minimum_integers\":0,\"minimum_symbols\":0,\"minimum_uppercase\":0,\"minimum_lowercase\":0,\"frontend_show_title\":\"1\",\"captive_template\":\"\",\"mfaonsilent\":\"0\",\"silentresponses\":\"cookie, passwordless\",\"mfaredirectonlogin\":\"0\",\"mfaredirecturl\":\"\",\"mfatrycount\":10,\"mfatrytime\":1,\"save_history\":\"1\",\"history_limit\":5,\"mailSubjectPrefix\":\"\",\"mailBodySuffix\":\"\",\"custom_fields_enable\":\"1\"}', '', NULL, NULL, 0, 0, NULL),
 (23, 0, 'com_finder', 'component', 'com_finder', NULL, '', 1, 1, 0, 0, 1, '{\"name\":\"com_finder\",\"type\":\"component\",\"creationDate\":\"2011-08\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2011 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.0\",\"description\":\"COM_FINDER_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Component\\\\Finder\",\"filename\":\"finder\"}', '{\"enabled\":\"0\",\"show_description\":\"1\",\"description_length\":255,\"allow_empty_query\":\"0\",\"show_url\":\"1\",\"show_autosuggest\":\"1\",\"show_suggested_query\":\"1\",\"show_explained_query\":\"1\",\"show_advanced\":\"1\",\"show_advanced_tips\":\"1\",\"expand_advanced\":\"0\",\"show_date_filters\":\"0\",\"sort_order\":\"relevance\",\"sort_direction\":\"desc\",\"highlight_terms\":\"1\",\"opensearch_name\":\"\",\"opensearch_description\":\"\",\"batch_size\":\"50\",\"title_multiplier\":\"1.7\",\"text_multiplier\":\"0.7\",\"meta_multiplier\":\"1.2\",\"path_multiplier\":\"2.0\",\"misc_multiplier\":\"0.3\",\"stem\":\"1\",\"stemmer\":\"snowball\",\"enable_logging\":\"0\"}', '', NULL, NULL, 0, 0, NULL),
 (24, 0, 'com_joomlaupdate', 'component', 'com_joomlaupdate', NULL, '', 1, 1, 0, 1, 1, '{\"name\":\"com_joomlaupdate\",\"type\":\"component\",\"creationDate\":\"2021-08\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2012 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.3\",\"description\":\"COM_JOOMLAUPDATE_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Component\\\\Joomlaupdate\"}', '{\"updatesource\":\"default\",\"customurl\":\"\"}', '', NULL, NULL, 0, 0, NULL),
 (25, 0, 'com_tags', 'component', 'com_tags', NULL, '', 1, 1, 1, 0, 1, '{\"name\":\"com_tags\",\"type\":\"component\",\"creationDate\":\"2013-12\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2013 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.0\",\"description\":\"COM_TAGS_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Component\\\\Tags\",\"filename\":\"tags\"}', '{\"tag_layout\":\"_:default\",\"save_history\":\"1\",\"history_limit\":5,\"show_tag_title\":\"0\",\"tag_list_show_tag_image\":\"0\",\"tag_list_show_tag_description\":\"0\",\"tag_list_image\":\"\",\"tag_list_orderby\":\"title\",\"tag_list_orderby_direction\":\"ASC\",\"show_headings\":\"0\",\"tag_list_show_date\":\"0\",\"tag_list_show_item_image\":\"0\",\"tag_list_show_item_description\":\"0\",\"tag_list_item_maximum_characters\":0,\"return_any_or_all\":\"1\",\"include_children\":\"0\",\"maximum\":200,\"tag_list_language_filter\":\"all\",\"tags_layout\":\"_:default\",\"all_tags_orderby\":\"title\",\"all_tags_orderby_direction\":\"ASC\",\"all_tags_show_tag_image\":\"0\",\"all_tags_show_tag_description\":\"0\",\"all_tags_tag_maximum_characters\":20,\"all_tags_show_tag_hits\":\"0\",\"filter_field\":\"1\",\"show_pagination_limit\":\"1\",\"show_pagination\":\"2\",\"show_pagination_results\":\"1\",\"tag_field_ajax_mode\":\"1\",\"show_feed_link\":\"1\"}', '', NULL, NULL, 0, 0, NULL),
@@ -737,7 +1801,7 @@ INSERT INTO `buf3w_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (92, 0, 'plg_authentication_ldap', 'plugin', 'ldap', NULL, 'authentication', 0, 0, 1, 0, 1, '{\"name\":\"plg_authentication_ldap\",\"type\":\"plugin\",\"creationDate\":\"2005-11\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_LDAP_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Plugin\\\\Authentication\\\\Ldap\",\"filename\":\"ldap\"}', '{\"host\":\"\",\"port\":\"389\",\"use_ldapV3\":\"0\",\"negotiate_tls\":\"0\",\"no_referrals\":\"0\",\"auth_method\":\"bind\",\"base_dn\":\"\",\"search_string\":\"\",\"users_dn\":\"\",\"username\":\"admin\",\"password\":\"bobby7\",\"ldap_fullname\":\"fullName\",\"ldap_email\":\"mail\",\"ldap_uid\":\"uid\"}', '', NULL, NULL, 3, 0, NULL),
 (93, 0, 'plg_behaviour_taggable', 'plugin', 'taggable', NULL, 'behaviour', 0, 1, 1, 0, 1, '{\"name\":\"plg_behaviour_taggable\",\"type\":\"plugin\",\"creationDate\":\"2015-08\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2016 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.0\",\"description\":\"PLG_BEHAVIOUR_TAGGABLE_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Plugin\\\\Behaviour\\\\Taggable\",\"filename\":\"taggable\"}', '{}', '', NULL, NULL, 1, 0, NULL),
 (94, 0, 'plg_behaviour_versionable', 'plugin', 'versionable', NULL, 'behaviour', 0, 1, 1, 0, 1, '{\"name\":\"plg_behaviour_versionable\",\"type\":\"plugin\",\"creationDate\":\"2015-08\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2016 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.0\",\"description\":\"PLG_BEHAVIOUR_VERSIONABLE_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Plugin\\\\Behaviour\\\\Versionable\",\"filename\":\"versionable\"}', '{}', '', NULL, NULL, 2, 0, NULL),
-(95, 0, 'plg_captcha_recaptcha', 'plugin', 'recaptcha', NULL, 'captcha', 0, 0, 1, 0, 1, '{\"name\":\"plg_captcha_recaptcha\",\"type\":\"plugin\",\"creationDate\":\"2011-12\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2011 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.4.0\",\"description\":\"PLG_CAPTCHA_RECAPTCHA_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Plugin\\\\Captcha\\\\ReCaptcha\",\"filename\":\"recaptcha\"}', '{\"public_key\":\"\",\"private_key\":\"\",\"theme\":\"clean\"}', '', NULL, NULL, 1, 0, NULL),
+(95, 0, 'plg_captcha_recaptcha', 'plugin', 'recaptcha', NULL, 'captcha', 0, 1, 1, 0, 1, '{\"name\":\"plg_captcha_recaptcha\",\"type\":\"plugin\",\"creationDate\":\"2011-12\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2011 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.4.0\",\"description\":\"PLG_CAPTCHA_RECAPTCHA_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Plugin\\\\Captcha\\\\ReCaptcha\",\"filename\":\"recaptcha\"}', '{\"version\":\"2.0\",\"public_key\":\"6LcwG5AmAAAAAHKa5TEAH26wLEaZmfM50jEwRROY\",\"private_key\":\"6LcwG5AmAAAAAGa1slpdXohduA-Fr1bzWb9H8iyg\",\"theme2\":\"light\",\"size\":\"normal\",\"tabindex\":0,\"callback\":\"\",\"expired_callback\":\"\",\"error_callback\":\"\"}', '', NULL, NULL, 1, 0, ''),
 (96, 0, 'plg_captcha_recaptcha_invisible', 'plugin', 'recaptcha_invisible', NULL, 'captcha', 0, 0, 1, 0, 1, '{\"name\":\"plg_captcha_recaptcha_invisible\",\"type\":\"plugin\",\"creationDate\":\"2017-11\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2017 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.8\",\"description\":\"PLG_CAPTCHA_RECAPTCHA_INVISIBLE_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Plugin\\\\Captcha\\\\InvisibleReCaptcha\",\"filename\":\"recaptcha_invisible\"}', '{\"public_key\":\"\",\"private_key\":\"\",\"theme\":\"clean\"}', '', NULL, NULL, 2, 0, NULL),
 (97, 0, 'plg_content_confirmconsent', 'plugin', 'confirmconsent', NULL, 'content', 0, 0, 1, 0, 1, '{\"name\":\"plg_content_confirmconsent\",\"type\":\"plugin\",\"creationDate\":\"2018-05\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2018 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.9.0\",\"description\":\"PLG_CONTENT_CONFIRMCONSENT_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Plugin\\\\Content\\\\ConfirmConsent\",\"filename\":\"confirmconsent\"}', '{}', '', NULL, NULL, 1, 0, NULL),
 (98, 0, 'plg_content_contact', 'plugin', 'contact', NULL, 'content', 0, 1, 1, 0, 1, '{\"name\":\"plg_content_contact\",\"type\":\"plugin\",\"creationDate\":\"2014-01\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2014 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.2.2\",\"description\":\"PLG_CONTENT_CONTACT_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Plugin\\\\Content\\\\Contact\",\"filename\":\"contact\"}', '', '', NULL, NULL, 2, 0, NULL),
@@ -748,7 +1812,7 @@ INSERT INTO `buf3w_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (103, 0, 'plg_content_loadmodule', 'plugin', 'loadmodule', NULL, 'content', 0, 1, 1, 0, 1, '{\"name\":\"plg_content_loadmodule\",\"type\":\"plugin\",\"creationDate\":\"2005-11\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_LOADMODULE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"loadmodule\"}', '{\"style\":\"xhtml\"}', '', NULL, NULL, 7, 0, NULL),
 (104, 0, 'plg_content_pagebreak', 'plugin', 'pagebreak', NULL, 'content', 0, 1, 1, 0, 1, '{\"name\":\"plg_content_pagebreak\",\"type\":\"plugin\",\"creationDate\":\"2005-11\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_CONTENT_PAGEBREAK_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"pagebreak\"}', '{\"title\":\"1\",\"multipage_toc\":\"1\",\"showall\":\"1\"}', '', NULL, NULL, 8, 0, NULL),
 (105, 0, 'plg_content_pagenavigation', 'plugin', 'pagenavigation', NULL, 'content', 0, 1, 1, 0, 1, '{\"name\":\"plg_content_pagenavigation\",\"type\":\"plugin\",\"creationDate\":\"2006-01\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2006 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_PAGENAVIGATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"pagenavigation\"}', '{\"position\":\"1\"}', '', NULL, NULL, 9, 0, NULL),
-(106, 0, 'plg_content_vote', 'plugin', 'vote', NULL, 'content', 0, 0, 1, 0, 1, '{\"name\":\"plg_content_vote\",\"type\":\"plugin\",\"creationDate\":\"2005-11\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_VOTE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"vote\"}', '', '', NULL, NULL, 10, 0, NULL),
+(106, 0, 'plg_content_vote', 'plugin', 'vote', NULL, 'content', 0, 1, 1, 0, 1, '{\"name\":\"plg_content_vote\",\"type\":\"plugin\",\"creationDate\":\"2005-11\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_VOTE_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"vote\"}', '{\"position\":\"top\",\"show_total_votes\":0}', '', NULL, NULL, 10, 0, ''),
 (107, 0, 'plg_editors-xtd_article', 'plugin', 'article', NULL, 'editors-xtd', 0, 1, 1, 0, 1, '{\"name\":\"plg_editors-xtd_article\",\"type\":\"plugin\",\"creationDate\":\"2009-10\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2009 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.0.0\",\"description\":\"PLG_ARTICLE_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Plugin\\\\EditorsXtd\\\\Article\",\"filename\":\"article\"}', '', '', NULL, NULL, 1, 0, NULL),
 (108, 0, 'plg_editors-xtd_contact', 'plugin', 'contact', NULL, 'editors-xtd', 0, 1, 1, 0, 1, '{\"name\":\"plg_editors-xtd_contact\",\"type\":\"plugin\",\"creationDate\":\"2016-10\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2016 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.7.0\",\"description\":\"PLG_EDITORS-XTD_CONTACT_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Plugin\\\\EditorsXtd\\\\Contact\",\"filename\":\"contact\"}', '', '', NULL, NULL, 2, 0, NULL),
 (109, 0, 'plg_editors-xtd_fields', 'plugin', 'fields', NULL, 'editors-xtd', 0, 1, 1, 0, 1, '{\"name\":\"plg_editors-xtd_fields\",\"type\":\"plugin\",\"creationDate\":\"2017-02\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2017 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.7.0\",\"description\":\"PLG_EDITORS-XTD_FIELDS_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Plugin\\\\EditorsXtd\\\\Fields\",\"filename\":\"fields\"}', '', '', NULL, NULL, 3, 0, NULL),
@@ -831,7 +1895,7 @@ INSERT INTO `buf3w_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (185, 0, 'plg_system_skipto', 'plugin', 'skipto', NULL, 'system', 0, 1, 1, 0, 1, '{\"name\":\"plg_system_skipto\",\"type\":\"plugin\",\"creationDate\":\"2020-02\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2019 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.0\",\"description\":\"PLG_SYSTEM_SKIPTO_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"skipto\"}', '{}', '', NULL, NULL, 20, 0, NULL),
 (186, 0, 'plg_system_stats', 'plugin', 'stats', NULL, 'system', 0, 0, 1, 0, 1, '{\"name\":\"plg_system_stats\",\"type\":\"plugin\",\"creationDate\":\"2013-11\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2013 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_STATS_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Plugin\\\\System\\\\Stats\",\"filename\":\"stats\"}', '{\"mode\":3,\"lastrun\":1686031416,\"unique_id\":\"8b109850414717d34f68d294faeecf07e8a9c712\",\"interval\":12}', '', NULL, NULL, 21, 0, NULL),
 (187, 0, 'plg_system_task_notification', 'plugin', 'tasknotification', NULL, 'system', 0, 1, 1, 0, 1, '{\"name\":\"plg_system_task_notification\",\"type\":\"plugin\",\"creationDate\":\"2021-09\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2021 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.1\",\"description\":\"PLG_SYSTEM_TASK_NOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"tasknotification\"}', '', '', NULL, NULL, 22, 0, NULL),
-(188, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', NULL, 'system', 0, 1, 1, 0, 1, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"2015-05\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2015 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1686122112}', '', NULL, NULL, 23, 0, NULL),
+(188, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', NULL, 'system', 0, 1, 1, 0, 1, '{\"name\":\"plg_system_updatenotification\",\"type\":\"plugin\",\"creationDate\":\"2015-05\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2015 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"3.5.0\",\"description\":\"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"updatenotification\"}', '{\"lastrun\":1686584018}', '', NULL, NULL, 23, 0, NULL),
 (189, 0, 'plg_system_webauthn', 'plugin', 'webauthn', NULL, 'system', 0, 1, 1, 0, 1, '{\"name\":\"plg_system_webauthn\",\"type\":\"plugin\",\"creationDate\":\"2019-07-02\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2020 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.0.0\",\"description\":\"PLG_SYSTEM_WEBAUTHN_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Plugin\\\\System\\\\Webauthn\",\"filename\":\"webauthn\"}', '{}', '', NULL, NULL, 24, 0, NULL),
 (190, 0, 'plg_task_check_files', 'plugin', 'checkfiles', NULL, 'task', 0, 1, 1, 0, 1, '{\"name\":\"plg_task_check_files\",\"type\":\"plugin\",\"creationDate\":\"2021-08\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2021 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.1\",\"description\":\"PLG_TASK_CHECK_FILES_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Plugin\\\\Task\\\\Checkfiles\",\"filename\":\"checkfiles\"}', '{}', '', NULL, NULL, 1, 0, NULL),
 (191, 0, 'plg_task_demo_tasks', 'plugin', 'demotasks', NULL, 'task', 0, 1, 1, 0, 1, '{\"name\":\"plg_task_demo_tasks\",\"type\":\"plugin\",\"creationDate\":\"2021-07\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2021 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.1\",\"description\":\"PLG_TASK_DEMO_TASKS_XML_DESCRIPTION\",\"group\":\"\",\"namespace\":\"Joomla\\\\Plugin\\\\Task\\\\DemoTasks\",\"filename\":\"demotasks\"}', '{}', '', NULL, NULL, 2, 0, NULL),
@@ -874,35 +1938,44 @@ INSERT INTO `buf3w_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 (228, 0, 'English (en-GB) Language Pack', 'package', 'pkg_en-GB', NULL, '', 0, 1, 1, 1, 1, '{\"name\":\"English (en-GB) Language Pack\",\"type\":\"package\",\"creationDate\":\"2023-05\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2019 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.3.2.1\",\"description\":\"en-GB language pack\",\"group\":\"\",\"filename\":\"pkg_en-GB\"}', '', '', NULL, NULL, 0, 0, NULL),
 (229, 228, 'English (en-GB)', 'language', 'en-GB', NULL, '', 0, 1, 1, 1, 1, '{\"name\":\"English (en-GB)\",\"type\":\"language\",\"creationDate\":\"2023-05\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2006 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.3.2\",\"description\":\"en-GB site language\",\"group\":\"\"}', '', '', NULL, NULL, 0, 0, NULL),
 (230, 228, 'English (en-GB)', 'language', 'en-GB', NULL, '', 1, 1, 1, 1, 1, '{\"name\":\"English (en-GB)\",\"type\":\"language\",\"creationDate\":\"2023-05\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2005 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.3.2\",\"description\":\"en-GB administrator language\",\"group\":\"\"}', '', '', NULL, NULL, 0, 0, NULL),
-(231, 228, 'English (en-GB)', 'language', 'en-GB', NULL, '', 3, 1, 1, 1, 1, '{\"name\":\"English (en-GB)\",\"type\":\"language\",\"creationDate\":\"2023-05\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2020 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.3.2\",\"description\":\"en-GB api language\",\"group\":\"\"}', '', '', NULL, NULL, 0, 0, NULL);
+(231, 228, 'English (en-GB)', 'language', 'en-GB', NULL, '', 3, 1, 1, 1, 1, '{\"name\":\"English (en-GB)\",\"type\":\"language\",\"creationDate\":\"2023-05\",\"author\":\"Joomla! Project\",\"copyright\":\"(C) 2020 Open Source Matters, Inc.\",\"authorEmail\":\"admin@joomla.org\",\"authorUrl\":\"www.joomla.org\",\"version\":\"4.3.2\",\"description\":\"en-GB api language\",\"group\":\"\"}', '', '', NULL, NULL, 0, 0, NULL),
+(232, 0, 'com_comment', 'component', 'com_comment', '', '', 1, 1, 0, 0, 0, '{\"name\":\"com_comment\",\"type\":\"component\",\"creationDate\":\"2023-02-21\",\"author\":\"Compojoom.com\",\"copyright\":\"(C) 2010 Daniel Dimitrov\",\"authorEmail\":\"contact-us@compojoom.com\",\"authorUrl\":\"https:\\/\\/compojoom.com\",\"version\":\"6.1.10\",\"description\":\"\",\"group\":\"\",\"filename\":\"comment\"}', '{\n  \"global\": {\n    \"complete_uninstall\": \"0\",\n    \"comment_length_backend\": \"140\",\n    \"jed\": \"0\",\n    \"mailqueue_pageload\": \"1\",\n    \"censorship\": \"0\",\n    \"censorship_case_sensitive\": \"0\",\n    \"censorship_word_list\": \"nastybitch = nast***tch, motherfucker = moth****cker, fucking = fu**ing, twat, fisting, kokot = ko**t\",\n    \"censorship_usergroup\": [\n      \"th align=\'left\' bgcolor=\'#f57900\' colspan=\"\n    ],\n    \"ban_list\": \"\"\n  },\n  \"downloadid\": \"\",\n  \"update_stats\": \"1\",\n  \"upload_extensions\": \"gif,jpg,jpeg,png,GIF,JPG,JPEG,PNG\",\n  \"upload_maxsize\": \"10\",\n  \"max_number_of_files\": 3,\n  \"thumbs\": {\n    \"small\": \"50x50\",\n    \"medium\": \"640x480\",\n    \"large\": \"900x600\",\n    \"original\": \"2400x1800\"\n  },\n  \"tmp_file_path\": \"cache\\/com_comment.multimedia\",\n  \"image_path\": \"images\",\n  \"restrict_uploads\": \"0\",\n  \"check_mime\": \"0\",\n  \"image_extensions\": \"gif,jpg,png\",\n  \"ignore_extensions\": \"\",\n  \"upload_mime\": \"image\\/jpeg,image\\/gif,image\\/png\",\n  \"upload_mime_illegal\": \"text\\/html\"\n}\n', '', NULL, NULL, 0, 0, NULL),
+(233, 0, 'Content - CComment', 'plugin', 'joscomment', '', 'content', 0, 1, 1, 0, 0, '{\"name\":\"Content - CComment\",\"type\":\"plugin\",\"creationDate\":\"2023-02-21\",\"author\":\"Daniel Dimitrov \",\"copyright\":\"Copyright(C) Daniel Dimitrov All rights reserved!\",\"authorEmail\":\"services@compojoom.com\",\"authorUrl\":\"http:\\/\\/compojoom.com\",\"version\":\"6.1.10\",\"description\":\"You need to enable this plugin if you want to have comments in com_content or in virtuemart(com_virtuemart)\",\"group\":\"\",\"filename\":\"joscomment\"}', '{\"support_com_content\":\"1\",\"on_content_prepare\":\"0\",\"support_com_virtuemart\":\"0\",\"support_com_matukio\":\"0\",\"support_com_jdownloads\":\"0\",\"printView\":\"0\"}', '', NULL, NULL, 0, 0, NULL),
+(234, 0, 'K2 Plugin - CComment', 'plugin', 'ccomment', '', 'k2', 0, 0, 1, 0, 0, '{\"name\":\"K2 Plugin - CComment\",\"type\":\"plugin\",\"creationDate\":\"2023-02-21\",\"author\":\"Compojoom\",\"copyright\":\"Copyright (c) 2008 - 2010 Compojoom.com. All rights reserved.\",\"authorEmail\":\"services@compojoom.com\",\"authorUrl\":\"www.compojoom.com\",\"version\":\"6.1.10\",\"description\":\"A K2 plugin to allow comments with compojoomcomment\",\"group\":\"\",\"filename\":\"ccomment\"}', '{}', '', NULL, NULL, 0, 0, NULL),
+(235, 0, 'Search - CComment', 'plugin', 'ccomment', '', 'search', 0, 0, 1, 0, 0, '{\"name\":\"Search - CComment\",\"type\":\"plugin\",\"creationDate\":\"2023-02-21\",\"author\":\"Daniel Dimitrov\",\"copyright\":\"Copyright (C) 2008 - 2013 compojoom.com. All rights reserved.\",\"authorEmail\":\"daniel@compojoom.com\",\"authorUrl\":\"https:\\/\\/compojoom.com\",\"version\":\"6.1.10\",\"description\":\"This plugin enables you to search comments through joomla\'s search\",\"group\":\"\",\"filename\":\"ccomment\"}', '{\"search_limit\":\"50\"}', '', NULL, NULL, 0, 0, NULL),
+(236, 0, 'Library - compojoom', 'library', 'compojoom', '', '', 0, 1, 1, 0, 0, '{\"name\":\"Library - compojoom\",\"type\":\"library\",\"creationDate\":\"2017-09-27\",\"author\":\"compojoom.com\",\"copyright\":\"(C) 2008 - 2017 Daniel Dimitrov and Yves Hoppe\",\"authorEmail\":\"contact-us@compojoom.com\",\"authorUrl\":\"https:\\/\\/compojoom.com\",\"version\":\"5.3.5\",\"description\":\"LIB_COMPOJOOM_DESC\",\"group\":\"\",\"filename\":\"compojoom\"}', '{}', '', NULL, NULL, 0, 0, NULL),
+(237, 0, 'com_phocadownload', 'component', 'com_phocadownload', '', '', 1, 1, 0, 0, 0, '{\"name\":\"com_phocadownload\",\"type\":\"component\",\"creationDate\":\"17\\/03\\/2023\",\"author\":\"Jan Pavelka (www.phoca.cz)\",\"copyright\":\"Jan Pavelka\",\"authorEmail\":\"\",\"authorUrl\":\"https:\\/\\/www.phoca.cz\",\"version\":\"4.0.6\",\"description\":\"COM_PHOCADOWNLOAD_XML_DESCRIPTION\",\"group\":\"\",\"filename\":\"phocadownload\"}', '{}', '', NULL, NULL, 0, 0, NULL),
+(244, 0, 'jNews', 'component', 'com_jnews', '', '', 1, 1, 0, 0, 0, '{\"name\":\"jNews\",\"type\":\"component\",\"creationDate\":\"September 2022\",\"author\":\"Joobi\",\"copyright\":\"Copyright \\u00a9 2006-2022 Joobi All rights reserved\",\"authorEmail\":\"support@joobi.org\",\"authorUrl\":\"https:\\/\\/joobi.org\",\"version\":\"10.4.1\",\"description\":\"jNews the ultimate mailing system for Joomla CMS.\",\"group\":\"\",\"filename\":\"jnews\"}', '{}', '', NULL, NULL, 0, 0, NULL),
+(245, 0, 'COM_TFMAIL', 'component', 'com_tfmail', '', '', 1, 1, 0, 0, 0, '{\"name\":\"COM_TFMAIL\",\"type\":\"component\",\"creationDate\":\"May 2023\",\"author\":\"Tech Fry\",\"copyright\":\"Tech Fry\",\"authorEmail\":\"mail@techfry.com\",\"authorUrl\":\"https:\\/\\/www.techfry.com\",\"version\":\"3.0.8\",\"description\":\"COM_TFMAIL_DESC\",\"group\":\"\",\"namespace\":\"TechFry\\\\Component\\\\TfMail\",\"filename\":\"tfmail\"}', '{}', '', NULL, NULL, 0, 0, NULL),
+(246, 0, 'Tech Fry Library', 'library', 'techfry', '', '', 0, 1, 1, 0, 0, '{\"name\":\"Tech Fry Library\",\"type\":\"library\",\"creationDate\":\"12 June 2023\",\"author\":\"Tech Fry\",\"copyright\":\"Tech Fry\",\"authorEmail\":\"mail@techfry.com\",\"authorUrl\":\"https:\\/\\/www.techfry.com\",\"version\":\"2.2.2\",\"description\":\"Tech Fry Library - used by Tech Fry extensions\",\"group\":\"\",\"namespace\":\"TechFry\\\\Library\",\"filename\":\"techfry\"}', '{}', '', NULL, NULL, 0, 0, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_fields`
+-- Table structure for table `buf3w_fields`
 --
 
 CREATE TABLE `buf3w_fields` (
   `id` int(10) UNSIGNED NOT NULL,
   `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `context` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `context` varchar(255) NOT NULL DEFAULT '',
   `group_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `label` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `default_value` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'text',
-  `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `label` varchar(255) NOT NULL DEFAULT '',
+  `default_value` text DEFAULT NULL,
+  `type` varchar(255) NOT NULL DEFAULT 'text',
+  `note` varchar(255) NOT NULL DEFAULT '',
+  `description` text NOT NULL,
   `state` tinyint(4) NOT NULL DEFAULT 0,
   `required` tinyint(4) NOT NULL DEFAULT 0,
   `only_use_in_subform` tinyint(4) NOT NULL DEFAULT 0,
   `checked_out` int(10) UNSIGNED DEFAULT NULL,
   `checked_out_time` datetime DEFAULT NULL,
   `ordering` int(11) NOT NULL DEFAULT 0,
-  `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `fieldparams` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `params` text NOT NULL,
+  `fieldparams` text NOT NULL,
+  `language` char(7) NOT NULL DEFAULT '',
   `created_time` datetime NOT NULL,
   `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `modified_time` datetime NOT NULL,
@@ -913,7 +1986,7 @@ CREATE TABLE `buf3w_fields` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_fields_categories`
+-- Table structure for table `buf3w_fields_categories`
 --
 
 CREATE TABLE `buf3w_fields_categories` (
@@ -924,22 +1997,22 @@ CREATE TABLE `buf3w_fields_categories` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_fields_groups`
+-- Table structure for table `buf3w_fields_groups`
 --
 
 CREATE TABLE `buf3w_fields_groups` (
   `id` int(10) UNSIGNED NOT NULL,
   `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `context` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `context` varchar(255) NOT NULL DEFAULT '',
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `note` varchar(255) NOT NULL DEFAULT '',
+  `description` text NOT NULL,
   `state` tinyint(4) NOT NULL DEFAULT 0,
   `checked_out` int(10) UNSIGNED DEFAULT NULL,
   `checked_out_time` datetime DEFAULT NULL,
   `ordering` int(11) NOT NULL DEFAULT 0,
-  `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `params` text NOT NULL,
+  `language` char(7) NOT NULL DEFAULT '',
   `created` datetime NOT NULL,
   `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `modified` datetime NOT NULL,
@@ -950,56 +2023,56 @@ CREATE TABLE `buf3w_fields_groups` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_fields_values`
+-- Table structure for table `buf3w_fields_values`
 --
 
 CREATE TABLE `buf3w_fields_values` (
   `field_id` int(10) UNSIGNED NOT NULL,
-  `item_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Allow references to items which have strings as ids, eg. none db systems.',
-  `value` text COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `item_id` varchar(255) NOT NULL COMMENT 'Allow references to items which have strings as ids, eg. none db systems.',
+  `value` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_finder_filters`
+-- Table structure for table `buf3w_finder_filters`
 --
 
 CREATE TABLE `buf3w_finder_filters` (
   `filter_id` int(10) UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `alias` varchar(255) NOT NULL,
   `state` tinyint(4) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL,
   `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `created_by_alias` varchar(255) NOT NULL DEFAULT '',
   `modified` datetime NOT NULL,
   `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `checked_out` int(10) UNSIGNED DEFAULT NULL,
   `checked_out_time` datetime DEFAULT NULL,
   `map_count` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `data` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `params` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `data` text DEFAULT NULL,
+  `params` mediumtext DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_finder_links`
+-- Table structure for table `buf3w_finder_links`
 --
 
 CREATE TABLE `buf3w_finder_links` (
   `link_id` int(10) UNSIGNED NOT NULL,
-  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `route` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` varchar(400) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `url` varchar(255) NOT NULL,
+  `route` varchar(400) NOT NULL,
+  `title` varchar(400) DEFAULT NULL,
+  `description` text DEFAULT NULL,
   `indexdate` datetime NOT NULL,
-  `md5sum` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `md5sum` varchar(32) DEFAULT NULL,
   `published` tinyint(4) NOT NULL DEFAULT 1,
   `state` int(11) NOT NULL DEFAULT 1,
   `access` int(11) NOT NULL DEFAULT 0,
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `language` char(7) NOT NULL DEFAULT '',
   `publish_start_date` datetime DEFAULT NULL,
   `publish_end_date` datetime DEFAULT NULL,
   `start_date` datetime DEFAULT NULL,
@@ -1011,7 +2084,7 @@ CREATE TABLE `buf3w_finder_links` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_finder_links`
+-- Dumping data for table `buf3w_finder_links`
 --
 
 INSERT INTO `buf3w_finder_links` (`link_id`, `url`, `route`, `title`, `description`, `indexdate`, `md5sum`, `published`, `state`, `access`, `language`, `publish_start_date`, `publish_end_date`, `start_date`, `end_date`, `list_price`, `sale_price`, `type_id`, `object`) VALUES
@@ -1024,12 +2097,23 @@ INSERT INTO `buf3w_finder_links` (`link_id`, `url`, `route`, `title`, `descripti
 (6, 'index.php?option=com_content&view=category&id=9', 'index.php?option=com_content&view=category&id=9', 'Social Media', '', '2023-06-07 07:32:58', 'd1731d369c5fa55063582774c09b409d', 1, 1, 1, '*', NULL, NULL, '2023-06-07 07:32:58', NULL, 0, 0, 1, 0x4f3a35323a224a6f6f6d6c615c436f6d706f6e656e745c46696e6465725c41646d696e6973747261746f725c496e64657865725c526573756c74223a31393a7b693a303b693a313b693a313b733a353a22656e2d4742223b693a323b733a303a22223b693a333b613a31373a7b733a323a226964223b693a393b733a353a22616c696173223b733a31323a22736f6369616c206d65646961223b733a393a22657874656e73696f6e223b733a31313a22636f6d5f636f6e74656e74223b733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a303b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a333a226c6674223b693a31333b733a393a22706172656e745f6964223b693a313b733a353a226c6576656c223b693a313b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a303b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a2273756d6d617279223b4e3b733a31303a22637265617465645f6279223b693a3538383b733a383a226d6f646966696564223b733a31393a22323032332d30362d30372030373a33323a3538223b733a31313a226d6f6469666965645f6279223b693a3538383b733a343a22736c7567223b733a31343a22393a736f6369616c2d6d65646961223b733a363a226c61796f7574223b733a383a2263617465676f7279223b733a31303a226d657461617574686f72223b4e3b7d693a343b4e3b693a353b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a343a226c696e6b223b693a343b733a373a226d6574616b6579223b693a353b733a383a226d65746164657363223b693a363b733a31303a226d657461617574686f72223b693a373b733a363a22617574686f72223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d693a363b733a313a222a223b693a373b4e3b693a383b4e3b693a393b4e3b693a31303b4e3b693a31313b733a34373a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d63617465676f72792669643d39223b693a31323b4e3b693a31333b733a31393a22323032332d30362d30372030373a33323a3538223b693a31343b693a313b693a31353b613a323a7b733a343a2254797065223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a383a2243617465676f7279223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a31303b7d7d733a383a224c616e6775616765223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a393b7d7d7d693a31363b733a31323a22536f6369616c204d65646961223b693a31373b693a313b693a31383b733a34373a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d63617465676f72792669643d39223b7d);
 INSERT INTO `buf3w_finder_links` (`link_id`, `url`, `route`, `title`, `description`, `indexdate`, `md5sum`, `published`, `state`, `access`, `language`, `publish_start_date`, `publish_end_date`, `start_date`, `end_date`, `list_price`, `sale_price`, `type_id`, `object`) VALUES
 (7, 'index.php?option=com_content&view=article&id=5', 'index.php?option=com_content&view=article&id=5:tiktok-szykuje-zmiany&catid=9', 'TikTok szykuje zmiany', ' TikTok szykuje zmiany. Obejmą najmłodszych użytkowników TikTok od dawna jest krytykowany za niedostateczną ochronę swoich najmłodszych użytkowników, dlatego teraz serwis wprowadzi nowe mechanizmy chroniące dzieci przed pedofilią w sieci. Firma ogłosiła w środę, że konta użytkowników poniżej 16 roku domyślnie będą miały najsilniejsze ustawienia prywatności. ', '2023-06-07 07:40:46', 'bea5181ad3cce5aec4e284249e94f8be', 1, 1, 1, '*', '2023-06-07 07:40:46', NULL, '2023-06-07 07:40:46', NULL, 0, 0, 3, 0x4f3a35323a224a6f6f6d6c615c436f6d706f6e656e745c46696e6465725c41646d696e6973747261746f725c496e64657865725c526573756c74223a31393a7b693a303b693a313b693a313b733a353a22656e2d4742223b693a323b733a3338343a222054696b546f6b20737a796b756a65207a6d69616e792e204f62656a6dc485206e616a6dc5826f64737a7963682075c5bc79746b6f776e696bc3b3772054696b546f6b206f64206461776e61206a657374206b727974796b6f77616e79207a61206e6965646f7374617465637a6ec485206f6368726f6ec4992073776f696368206e616a6dc5826f64737a7963682075c5bc79746b6f776e696bc3b3772c20646c617465676f20746572617a20736572776973207770726f7761647a69206e6f7765206d656368616e697a6d79206368726f6e69c485636520647a696563692070727a6564207065646f66696c69c48520772073696563692e204669726d61206f67c5826f7369c58261207720c59b726f64c4992c20c5bc65206b6f6e74612075c5bc79746b6f776e696bc3b37720706f6e69c5bc656a20313620726f6b7520646f6d79c59b6c6e69652062c49964c485206d6961c58279206e616a73696c6e69656a737a6520757374617769656e6961207072797761746e6fc59b63692e20223b693a333b613a32373a7b733a323a226964223b693a353b733a353a22616c696173223b733a32313a2274696b746f6b20737a796b756a65207a6d69616e79223b733a373a2273756d6d617279223b733a3434353a223c683120636c6173733d224333637422207374796c653d22746578742d616c69676e3a2063656e7465723b223e54696b546f6bc2a0737a796b756a65207a6d69616e792e204f62656a6dc485206e616a6dc5826f64737a796368c2a075c5bc79746b6f776e696bc3b3773c2f68313e0d0a3c703e54696b546f6bc2a06f64206461776e61206a657374206b727974796b6f77616e79207a61206e6965646f7374617465637a6ec485206f6368726f6ec4992073776f696368206e616a6dc5826f64737a7963682075c5bc79746b6f776e696bc3b3772c20646c617465676f20746572617a20736572776973207770726f7761647a69206e6f7765206d656368616e697a6d79206368726f6e69c485636520647a696563692070727a6564207065646f66696c69c48520772073696563692e204669726d61206f67c5826f7369c58261207720c59b726f64c4992c20c5bc65206b6f6e74612075c5bc79746b6f776e696bc3b37720706f6e69c5bc656a20313620726f6b7520646f6d79c59b6c6e69652062c49964c485206d6961c58279206e616a73696c6e69656a737a6520757374617769656e6961207072797761746e6fc59b63692e3c2f703e0d0a223b733a343a22626f6479223b733a323237383a220d0a3c703e3c696d67207374796c653d22646973706c61793a20626c6f636b3b206d617267696e2d6c6566743a206175746f3b206d617267696e2d72696768743a206175746f3b22207372633d2268747470733a2f2f762e7770696d672e706c2f596d4d794f47597564677773477a6c30646735374757394462533477563356504f4674315a585a4561315639415741754e424a334353496250534970427a594b50786769506e63464e5549454643346750415a324979674f5047686f52576c6164454667637a3144616c347653796c7162554e70576d424e4c584537574474594c3074694a6d6c4e614638725443306b6130305f5179634a4b47556b2220616c743d22666f742e20556e73706c617368222077696474683d2237383322206865696768743d2235323222202f3e3c2f703e0d0a3c64697620636c6173733d2252446533223e0d0a3c703e5a6d69616e79207a6f7374616ec485207a6173746f736f77616e65206175746f6d617479637a6e696520777a676cc49964656d2077737a7973746b696368206b6f6e74207574776f727a6f6e7963682070727a657a206f736f627920706f6e69c5bc656a20313620726f6b7520c5bc796369612069206f7a6e61637a616ac4852c20c5bc65206b6f6e7461207374616ec485207369c499207072797761746e652e20436f207a612074796d2069647a69652c2077737a7973746b69652070726fc59b6279206f206d6fc5bc6c69776fc59bc48720696368206f62736572776f77616e69612062c499647a69652074727a656261207a617477696572647a61c4872073616d6f647a69656c6e69652e3c2f703e0d0a3c2f6469763e0d0a3c64697620636c6173733d2252446533223e0d0a3c703e50726f66696c65206f7a6e61637a6f6e65206a616b6f207072797761746e65206e6965206d6f67c4852072c3b3776e6965c5bc206279c487206f7a6e61637a616e652077206d617465726961c58261636820776964656f206e6167727977616e79636820772072616d6163682066756e6b636a69202244756574222c206b74c3b3726120637ac49973746f206279c582612077796b6f727a7973747977616e612070727a657a207065646f66696cc3b37720646f20c582c485637a656e69612073776f696368206f66696172207a206d617465726961c582616d6920706f726e6f6772616669637a6e796d692e3c2f703e0d0a3c64697620636c6173733d2252446533223e0d0a3c756c3e0d0a3c6c693e507261776f20646f207072797761746e6fc59b636920692062657a706965637a65c5847374776f206e61737a656a2073706fc58265637a6e6fc59b636920746f206e616a7779c5bc737a79207072696f727974657420646c612054696b546f6b612e20537a637a6567c3b36c6e79206e616369736b206bc58261647a69656d79206e61207072797761746e6fc59bc48720692062657a706965637a65c5847374776f206e61737a796368206dc5826f64737a7963682075c5bc79746b6f776e696bc3b377206920646c617465676f20646c61206e696368207770726f7761647a616d79207465207a6e61637ac4856365207a6d69616e79202d20706f776965647a6961c58261206379746f77616e612070727a657a20736572776973204275736965737320496e736964657220647972656b746f72207072797761746e6fc59b63692054696b546f6b6120646c6120726567696f6e75204575726f70792c20426c69736b6965676f20577363686f6475206920416672796b6920456c61696e6520466f782e3c2f6c693e0d0a3c2f756c3e0d0a3c2f6469763e0d0a3c64697620636c6173733d2252446533223e0d0a3c703e5a64616e69656d2054696b546f6b612c206d6120746f20706f6dc3b363207720656c696d696e6f77616e697520706f74656e636a616c6e796368207065646f66696cc3b3772c20706f6e69657761c5bc206f6772616e69637a7920696d206d6fc5bc6c69776fc59bc487206f62736572776f77616e6961206e69656c65746e696368206f72617a2070727a657379c582616e696120696d20776961646f6d6fc59b6369207072797761746e7963682e20456b737065726369206d616ac485206a65646e616b20636f20646f207465676f2077c48574706c69776fc59b63692e204379746f77616e612072c3b3776e6965c5bc2070727a657a204249206475c584736b6120656b73706572746b612064732e2062657a706965637a65c5847374776120647a696563692069206dc5826f647a6965c5bc792045766120466f67204e6f657220706f776965647a6961c582612c20c5bc65c2a03c656d3e7a616d69616e6120647a6961c582616e69612067c582c3b3776e7963682066756e6b636a692061706c696b61636a69206920626c6f6b6f77616e6965206d6fc5bc6c69776fc59b6369206b6f727a797374616e6961207a206e696368206e6965206a65737420646f6272796d20726f7a7769c4857a616e69656d3c2f656d3e3c2f703e0d0a3c2f6469763e0d0a3c64697620636c6173733d2252446533223e0d0a3c703e5a64616e69656d20656b73706572746b69206dc5826f647a6965c5bc207a20c5826174776fc59b6369c485206f6d696e6965206f626f7374727a656e69612054696b546f6b6120692062c499647a6965207a616bc582616461c487206b6f6e74612c20706f64616ac48563206661c582737a7977c48520646174c4992075726f647a656e69612e204e696520776961646f6d6f20646f6bc58261646e69652c206a616b69656a206c69637a6279206b6f6e742062c49964c48520646f7479637a79c487207a6d69616e79207a61706f776965647a69616e652070727a657a2054696b546f6b2e20576564c582756720737a6163756e6bc3b37720224e657720596f726b2054696d65732220772073696572706e697520323032302054696b546f6b206d6961c58220706f6e6164203439206d6c6e2075c5bc79746b6f776e696bc3b3772077205553412c207a20637a65676f20706f6e6164206a65646ec4852074727a656369c485207374616e6f7769c58279206f736f627920706f6e69c5bc656a20313420726f6b7520c5bc796369612e3c2f703e0d0a3c2f6469763e0d0a3c2f6469763e223b733a363a22696d61676573223b733a3438353a227b22696d6167655f696e74726f223a22696d616765735c2f7a3239343938393838414d5054696b546f6b2d7a77616c6e69612d2d2d2d506f6c736b692d647a69616c2d626164616e2d692d726f7a776f6a752d7563692e6a7067236a6f6f6d6c61496d6167653a5c2f5c2f6c6f63616c2d696d616765735c2f7a3239343938393838414d5054696b546f6b2d7a77616c6e69612d2d2d2d506f6c736b692d647a69616c2d626164616e2d692d726f7a776f6a752d7563692e6a70673f77696474683d31323030266865696768743d383030222c22696d6167655f696e74726f5f616c74223a22222c22666c6f61745f696e74726f223a22222c22696d6167655f696e74726f5f63617074696f6e223a22222c22696d6167655f66756c6c74657874223a22696d616765735c2f74696b746f6b2d312d6d6c642d757a79746b6f776e696b6f772e706e67236a6f6f6d6c61496d6167653a5c2f5c2f6c6f63616c2d696d616765735c2f74696b746f6b2d312d6d6c642d757a79746b6f776e696b6f772e706e673f77696474683d31303830266865696768743d353138222c22696d6167655f66756c6c746578745f616c74223a22222c22666c6f61745f66756c6c74657874223a22222c22696d6167655f66756c6c746578745f63617074696f6e223a22227d223b733a353a226361746964223b693a393b733a31303a22637265617465645f6279223b693a3538383b733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31393a22323032332d30362d30372030373a34303a3436223b733a31313a226d6f6469666965645f6279223b693a3538383b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a38363a7b733a31343a2261727469636c655f6c61796f7574223b733a393a225f3a64656661756c74223b733a31303a2273686f775f7469746c65223b733a313a2231223b733a31313a226c696e6b5f7469746c6573223b733a313a2231223b733a31303a2273686f775f696e74726f223b733a313a2231223b733a31393a22696e666f5f626c6f636b5f706f736974696f6e223b733a313a2230223b733a32313a22696e666f5f626c6f636b5f73686f775f7469746c65223b733a313a2231223b733a31333a2273686f775f63617465676f7279223b733a313a2231223b733a31333a226c696e6b5f63617465676f7279223b733a313a2231223b733a32303a2273686f775f706172656e745f63617465676f7279223b733a313a2230223b733a32303a226c696e6b5f706172656e745f63617465676f7279223b733a313a2230223b733a31373a2273686f775f6173736f63696174696f6e73223b733a313a2230223b733a353a22666c616773223b733a313a2231223b733a31313a2273686f775f617574686f72223b733a313a2231223b733a31313a226c696e6b5f617574686f72223b733a313a2230223b733a31363a2273686f775f6372656174655f64617465223b733a313a2230223b733a31363a2273686f775f6d6f646966795f64617465223b733a313a2230223b733a31373a2273686f775f7075626c6973685f64617465223b733a313a2231223b733a32303a2273686f775f6974656d5f6e617669676174696f6e223b733a313a2231223b733a31333a2273686f775f726561646d6f7265223b733a313a2231223b733a31393a2273686f775f726561646d6f72655f7469746c65223b733a313a2231223b733a31343a22726561646d6f72655f6c696d6974223b693a3130303b733a393a2273686f775f74616773223b733a313a2231223b733a31313a227265636f72645f68697473223b733a313a2231223b733a393a2273686f775f68697473223b733a313a2231223b733a31313a2273686f775f6e6f61757468223b733a313a2230223b733a31333a2275726c735f706f736974696f6e223b693a303b733a373a2263617074636861223b733a303a22223b733a32333a2273686f775f7075626c697368696e675f6f7074696f6e73223b733a313a2231223b733a32303a2273686f775f61727469636c655f6f7074696f6e73223b733a313a2231223b733a32373a2273686f775f636f6e6669677572655f656469745f6f7074696f6e73223b733a313a2231223b733a31363a2273686f775f7065726d697373696f6e73223b733a313a2231223b733a32323a2273686f775f6173736f63696174696f6e735f65646974223b733a313a2231223b733a31323a22736176655f686973746f7279223b733a313a2231223b733a31333a22686973746f72795f6c696d6974223b693a31303b733a32353a2273686f775f75726c735f696d616765735f66726f6e74656e64223b733a313a2230223b733a32343a2273686f775f75726c735f696d616765735f6261636b656e64223b733a313a2231223b733a373a2274617267657461223b693a303b733a373a2274617267657462223b693a303b733a373a2274617267657463223b693a303b733a31313a22666c6f61745f696e74726f223b733a343a226c656674223b733a31343a22666c6f61745f66756c6c74657874223b733a343a226c656674223b733a31353a2263617465676f72795f6c61796f7574223b733a363a225f3a626c6f67223b733a31393a2273686f775f63617465676f72795f7469746c65223b733a313a2230223b733a31363a2273686f775f6465736372697074696f6e223b733a313a2230223b733a32323a2273686f775f6465736372697074696f6e5f696d616765223b733a313a2230223b733a383a226d61784c6576656c223b733a313a2231223b733a32313a2273686f775f656d7074795f63617465676f72696573223b733a313a2230223b733a31363a2273686f775f6e6f5f61727469636c6573223b733a313a2231223b733a33323a2273686f775f63617465676f72795f68656164696e675f7469746c655f74657874223b733a313a2231223b733a31363a2273686f775f7375626361745f64657363223b733a313a2231223b733a32313a2273686f775f6361745f6e756d5f61727469636c6573223b733a313a2230223b733a31333a2273686f775f6361745f74616773223b733a313a2231223b733a32313a2273686f775f626173655f6465736372697074696f6e223b733a313a2231223b733a31313a226d61784c6576656c636174223b733a323a222d31223b733a32353a2273686f775f656d7074795f63617465676f726965735f636174223b733a313a2230223b733a32303a2273686f775f7375626361745f646573635f636174223b733a313a2231223b733a32353a2273686f775f6361745f6e756d5f61727469636c65735f636174223b733a313a2231223b733a32303a226e756d5f6c656164696e675f61727469636c6573223b693a313b733a31383a22626c6f675f636c6173735f6c656164696e67223b733a303a22223b733a31383a226e756d5f696e74726f5f61727469636c6573223b693a343b733a31303a22626c6f675f636c617373223b733a303a22223b733a31313a226e756d5f636f6c756d6e73223b693a313b733a31383a226d756c74695f636f6c756d6e5f6f72646572223b733a313a2230223b733a393a226e756d5f6c696e6b73223b693a343b733a32343a2273686f775f73756263617465676f72795f636f6e74656e74223b733a313a2230223b733a31363a226c696e6b5f696e74726f5f696d616765223b733a313a2230223b733a32313a2273686f775f706167696e6174696f6e5f6c696d6974223b733a313a2231223b733a31323a2266696c7465725f6669656c64223b733a343a2268696465223b733a31333a2273686f775f68656164696e6773223b733a313a2231223b733a31343a226c6973745f73686f775f64617465223b733a313a2230223b733a31313a22646174655f666f726d6174223b733a303a22223b733a31343a226c6973745f73686f775f68697473223b733a313a2231223b733a31363a226c6973745f73686f775f617574686f72223b733a313a2231223b733a31313a22646973706c61795f6e756d223b733a323a223130223b733a31313a226f7264657262795f707269223b733a353a226f72646572223b733a31313a226f7264657262795f736563223b733a353a227264617465223b733a31303a226f726465725f64617465223b733a393a227075626c6973686564223b733a31353a2273686f775f706167696e6174696f6e223b733a313a2232223b733a32333a2273686f775f706167696e6174696f6e5f726573756c7473223b733a313a2231223b733a31333a2273686f775f6665617475726564223b733a343a2273686f77223b733a31343a2273686f775f666565645f6c696e6b223b733a313a2231223b733a31323a22666565645f73756d6d617279223b733a313a2230223b733a31383a22666565645f73686f775f726561646d6f7265223b733a313a2230223b733a373a227365665f696473223b693a313b733a32303a22637573746f6d5f6669656c64735f656e61626c65223b733a313a2231223b733a31363a22776f726b666c6f775f656e61626c6564223b733a313a2230223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a333a7b733a363a22726f626f7473223b733a303a22223b733a363a22617574686f72223b733a303a22223b733a363a22726967687473223b733a303a22223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a2276657273696f6e223b693a313b733a383a226f72646572696e67223b693a303b733a383a2263617465676f7279223b733a31323a22536f6369616c204d65646961223b733a393a226361745f7374617465223b693a313b733a31303a226361745f616363657373223b693a313b733a343a22736c7567223b733a32333a22353a74696b746f6b2d737a796b756a652d7a6d69616e79223b733a373a22636174736c7567223b733a31343a22393a736f6369616c2d6d65646961223b733a363a22617574686f72223b733a363a224b6163706572223b733a363a226c61796f7574223b733a373a2261727469636c65223b733a373a22636f6e74657874223b733a31393a22636f6d5f636f6e74656e742e61727469636c65223b733a383a22696d61676555726c223b733a3138393a22696d616765732f7a3239343938393838414d5054696b546f6b2d7a77616c6e69612d2d2d2d506f6c736b692d647a69616c2d626164616e2d692d726f7a776f6a752d7563692e6a7067236a6f6f6d6c61496d6167653a2f2f6c6f63616c2d696d616765732f7a3239343938393838414d5054696b546f6b2d7a77616c6e69612d2d2d2d506f6c736b692d647a69616c2d626164616e2d692d726f7a776f6a752d7563692e6a70673f77696474683d31323030266865696768743d383030223b733a383a22696d616765416c74223b733a303a22223b733a31303a226d657461617574686f72223b4e3b7d693a343b4e3b693a353b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d693a363b733a313a222a223b693a373b4e3b693a383b4e3b693a393b733a31393a22323032332d30362d30372030373a34303a3436223b693a31303b4e3b693a31313b733a37363a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d353a74696b746f6b2d737a796b756a652d7a6d69616e792663617469643d39223b693a31323b4e3b693a31333b733a31393a22323032332d30362d30372030373a34303a3436223b693a31343b693a313b693a31353b613a343a7b733a343a2254797065223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a373a2241727469636c65223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a333b7d7d733a363a22417574686f72223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a363a224b6163706572223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a353b7d7d733a383a2243617465676f7279223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a31323a22536f6369616c204d65646961223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a313a222a223b733a363a226e6573746564223b623a313b733a323a226964223b693a31333b7d7d733a383a224c616e6775616765223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a393b7d7d7d693a31363b733a32323a2254696b546f6bc2a0737a796b756a65207a6d69616e79223b693a31373b693a333b693a31383b733a34363a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d35223b7d),
-(8, 'index.php?option=com_content&view=article&id=6', 'index.php?option=com_content&view=article&id=6:facebook-na-czarnej-liscie&catid=9', 'Facebook na \"czarnej liście\"', ' Facebook na \"czarnej liście\". Duży bank nie będzie kupował akcji Już trzeci dzień z rzędu w dół lecą notowania akcji Facebooka. Przez to wartość rynkowa firmy spadła o kilkadziesiąt miliardów dolarów. Do czasu wyjaśnienia afery z Cambridge Analytica, z inwestycji w akcje spółki Marka Zuckerberga rezygnują niektóre fundusze Nordea Banku. ', '2023-06-07 07:49:03', 'ef3eb0e13bf309baf1c6708e5bd4c1b9', 1, 1, 1, '*', '2023-06-07 07:49:03', NULL, '2023-06-07 07:49:03', NULL, 0, 0, 3, 0x4f3a35323a224a6f6f6d6c615c436f6d706f6e656e745c46696e6465725c41646d696e6973747261746f725c496e64657865725c526573756c74223a31393a7b693a303b693a313b693a313b733a353a22656e2d4742223b693a323b733a3336313a222046616365626f6f6b206e612022637a61726e656a206c69c59b636965222e204475c5bc792062616e6b206e69652062c499647a6965206b75706f7761c58220616b636a69204a75c5bc2074727a65636920647a6965c584207a20727ac499647520772064c3b3c582206c6563c485206e6f746f77616e696120616b636a692046616365626f6f6b612e2050727a657a20746f20776172746fc59bc4872072796e6b6f7761206669726d792073706164c58261206f206b696c6b61647a69657369c48574206d696c69617264c3b37720646f6c6172c3b3772e20446f20637a6173752077796a61c59b6e69656e6961206166657279207a2043616d62726964676520416e616c79746963612c207a20696e7765737479636a69207720616b636a65207370c3b3c5826b69204d61726b61205a75636b657262657267612072657a79676e756ac485206e69656b74c3b372652066756e6475737a65204e6f726465612042616e6b752e20223b693a333b613a32373a7b733a323a226964223b693a363b733a353a22616c696173223b733a32363a2266616365626f6f6b206e6120637a61726e656a206c6973636965223b733a373a2273756d6d617279223b733a3435343a223c683120636c6173733d2273632d316d736b7737342d302073632d3765716477662d3020695048534f4822207374796c653d22746578742d616c69676e3a2063656e7465723b223e46616365626f6f6b206e612022637a61726e656a206c69c59b636965222e204475c5bc792062616e6b206e69652062c499647a6965206b75706f7761c58220616b636a693c2f68313e0d0a3c703e4a75c5bc2074727a65636920647a6965c584207a20727ac499647520772064c3b3c582206c6563c485206e6f746f77616e696120616b636a692046616365626f6f6b612e3c2f703e0d0a3c703e50727a657a20746f20776172746fc59bc4872072796e6b6f7761206669726d792073706164c58261206f206b696c6b61647a69657369c48574206d696c69617264c3b37720646f6c6172c3b3772e20446f20637a6173752077796a61c59b6e69656e6961206166657279207a2043616d62726964676520416e616c79746963612c207a20696e7765737479636a69207720616b636a65207370c3b3c5826b69204d61726b61205a75636b657262657267612072657a79676e756ac485206e69656b74c3b372652066756e6475737a65204e6f726465612042616e6b752e3c2f703e0d0a223b733a343a22626f6479223b733a323436333a220d0a3c64697620636c6173733d2273632d316d736b7737342d302073632d3765716477662d302073632d3166616e6173642d30206262496a46472073632d316b777a7163792d3020636b4c617554223e0d0a3c703e3c696d67207372633d2268747470733a2f2f762e7770696d672e706c2f51554a4452455647666a51724a6952326554787a4957682d6343775f5a58313350325a6f5a336c7761574579617a38714f43496f657a30304d534534615345355a5331394c586c315932566c4b7941384d58526a59334a7a5a4773384e7a5a334e772220616c743d2257697a6572756e656b2046616365626f6f6b61206d6f636e6f20706f6475706164c58220706f2077796275636875206166657279207a2043616d62726964676520416e616c79746963612e22202f3e3c2f703e0d0a3c703e4e616a7769c4996b737a792062616e6b207720536b616e64796e617769692069206a65646e61207a206e616a7769c4996b737a79636820677275702066696e616e736f777963682077204575726f706965207a64656379646f7761c58261206f20756d6965737a637a656e697520616b636a692046616365626f6f6b61206e612022637a61726e656a206c69c59b636965222e2057c58261647a65204e6f726465612042616e6b75206f67c5826f7369c582792c20c5bc65206d2e696e2e206e616c65c5bcc485636520646f206e6965676f2066756e6475737a6520696e776573747963796a6e65206f207a72c3b3776e6f7761c5bc6f6e796d2070726f66696c752072797a796b61206e69652062c49964c485206d6f67c582792061c5bc20646f206f64776fc582616e6961206b75706f7761c4872075647a6961c582c3b377207720772046616365626f6f6b752e3c2f703e0d0a3c2f6469763e0d0a3c64697620636c6173733d2273632d316d736b7737342d302073632d3765716477662d302073632d3166616e6173642d30206262496a46472073632d316b777a7163792d3020636b4c617554223e0d0a3c703e4a616b20646f6e6f7369206167656e636a6120426c6f6f6d626572672c206a65737420746f20726f647a616a20226b776172616e74616e6e79222c206a616b692062616e6b206e61c5826fc5bc79c582206e6120616b636a652e20506f74727761206f6e6120646f206d6f6d656e74752c2061c5bc206f7061646ec48520656d6f636a652077c59b72c3b36420696e776573746f72c3b377206920706f70756c61726e79207365727769732073706fc58265637a6e6fc59b63696f77792077796a61c59b6e692077737a7973746b69652077c48574706c69776fc59b63692077207a7769c4857a6b75207a2061666572c485206f646b727974c4852070727a657a20647a69656e6e696b61727a7920c59b6c6564637a79636820224e657720596f726b2054696d65736122206f72617a20224f6273657276657261222e3c2f703e0d0a3c703e50727a79706f6d6e696a6d792c20c5bc652064616e6520626c69736b6f203530206d6c6e2075c5bc79746b6f776e696bc3b3772046616365626f6f6b61206d6961c58279207a6f737461c487206e69656c6567616c6e69652075c5bc7974652070727a657a206669726dc4992043616d62726964676520416e616c79746963612077206b616d70616e6969207779626f72637a656a2077203230313620726f6b752e20506f73c58275c5bc79c5827920646f202270726f6d6f77616e69612220446f6e616c6461205472756d7061206c7562206a616b206dc3b37769c485206e69656b74c3b3727a79202d20646f207a6d616e6970756c6f77616e6961207779626f7263c3b3772e204669726d61206d6961c58261207a6120746f207a61696e6b61736f7761c487206e69656d616c2039206d6c6e20646f6c6172c3b3772e3c2f703e0d0a3c703e537072617761207779737ac58261206e61206a61772077207765656b656e642e20416b636a652046616365626f6f6b612074796c6b6f207720706f6e6965647a6961c582656b20706f6c65636961c5827920772064c3b3c5822061c5bc206f20372070726f632ec2a054616b2070616e69637a6e656a207265616b636a6920696e776573746f72c3b37720706f73696164616ac485637963682070617069657279206669726d79206e6965207769647a69656c69c59b6d79206f642077727a65c59b6e6961203230313220726f6b752e2057206a6564656e20647a6965c58420776172746fc59bc487207370c3b3c5826b69207a6d616c61c582612061c5bc206f203430206d6c6420646f6c6172c3b3772e3c2f703e0d0a3c64697620636c6173733d2273632d316d736b7737342d302073632d3765716477662d302073632d3166616e6173642d30206262496a46472073632d316b777a7163792d3020636b4c617554223e0d0a3c703e5379747561636a61206369c485676c65206a657374206e617069c49974612e2052c3b3776e6965c5bc2077652077746f72656b206e6f746f77616e6961206669726d79206279c5827920706f6420707265736ac4852c2074726163c48563206f7374617465637a6e696520322c352070726f632e20506f637ac48574656b20c59b726f646f77656a207365736a692072c3b3776e6965c5bc2070727a796e6f73692064656c696b61746e6520737061646b692e2057c58261647a65204e6f72646569207769647ac4856320746f2c20737477696572647a69c582792c20c5bc652062657a706965637a6e69656a2062c499647a696520777374727a796d61c487207369c499206e612072617a6965207a20696e7765737479636a616d69207720616b636a652046616365626f6f6b612e3c2f703e0d0a3c2f6469763e0d0a3c64697620636c6173733d2273632d316d736b7737342d302073632d3765716477662d302073632d3166616e6173642d30206262496a46472073632d316b777a7163792d3020636b4c617554223e0d0a3c703e456d6f636a652073746172616ac485207369c49920746f6e6f7761c4872070727a656473746177696369656c652046616365626f6f6b612c206b74c3b3727a79206f64727a7563616ac485207a61727a757479206f206e6965646f7065c5826e69656e6965206f626f7769c4857a6bc3b3772069206c756b6920772073797374656d6965206f6368726f6e792064616e7963682075c5bc79746b6f776e696bc3b3772e20576b72c3b3746b696d206fc59b77696164637a656e69752077736b617a756ac4852c20c5bc65207a6f7374616c69206f737a756b616e69c2a070727a657a2043616d62726964676520416e616c79746963612e20546f206a65646e616b206e69652070727a656b6f6e756a6520696e776573746f72c3b3772e3c2f703e0d0a3c2f6469763e0d0a3c2f6469763e223b733a363a22696d61676573223b733a3532303a227b22696d6167655f696e74726f223a22696d616765735c2f3430383635332e6a7067236a6f6f6d6c61496d6167653a5c2f5c2f6c6f63616c2d696d616765735c2f3430383635332e6a70673f77696474683d31363030266865696768743d31303333222c22696d6167655f696e74726f5f616c74223a22222c22666c6f61745f696e74726f223a22222c22696d6167655f696e74726f5f63617074696f6e223a22222c22696d6167655f66756c6c74657874223a22696d616765735c2f6c62446b396b71545552425879396a5932566b5a574a6d4f44566c4d574a695a6d59784e474935597a6b344e444130597a51784e474933595335716347566e6b705544414d78737a51776d7a5162566b77584e424c444e416c6a65414147684d41452e6a7067236a6f6f6d6c61496d6167653a5c2f5c2f6c6f63616c2d696d616765735c2f6c62446b396b71545552425879396a5932566b5a574a6d4f44566c4d574a695a6d59784e474935597a6b344e444130597a51784e474933595335716347566e6b705544414d78737a51776d7a5162566b77584e424c444e416c6a65414147684d41452e6a70673f77696474683d31323030266865696768743d363030222c22696d6167655f66756c6c746578745f616c74223a22222c22666c6f61745f66756c6c74657874223a22222c22696d6167655f66756c6c746578745f63617074696f6e223a22227d223b733a353a226361746964223b693a393b733a31303a22637265617465645f6279223b693a3538383b733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31393a22323032332d30362d30372030373a34393a3033223b733a31313a226d6f6469666965645f6279223b693a3538383b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a38363a7b733a31343a2261727469636c655f6c61796f7574223b733a393a225f3a64656661756c74223b733a31303a2273686f775f7469746c65223b733a313a2231223b733a31313a226c696e6b5f7469746c6573223b733a313a2231223b733a31303a2273686f775f696e74726f223b733a313a2231223b733a31393a22696e666f5f626c6f636b5f706f736974696f6e223b733a313a2230223b733a32313a22696e666f5f626c6f636b5f73686f775f7469746c65223b733a313a2231223b733a31333a2273686f775f63617465676f7279223b733a313a2231223b733a31333a226c696e6b5f63617465676f7279223b733a313a2231223b733a32303a2273686f775f706172656e745f63617465676f7279223b733a313a2230223b733a32303a226c696e6b5f706172656e745f63617465676f7279223b733a313a2230223b733a31373a2273686f775f6173736f63696174696f6e73223b733a313a2230223b733a353a22666c616773223b733a313a2231223b733a31313a2273686f775f617574686f72223b733a313a2231223b733a31313a226c696e6b5f617574686f72223b733a313a2230223b733a31363a2273686f775f6372656174655f64617465223b733a313a2230223b733a31363a2273686f775f6d6f646966795f64617465223b733a313a2230223b733a31373a2273686f775f7075626c6973685f64617465223b733a313a2231223b733a32303a2273686f775f6974656d5f6e617669676174696f6e223b733a313a2231223b733a31333a2273686f775f726561646d6f7265223b733a313a2231223b733a31393a2273686f775f726561646d6f72655f7469746c65223b733a313a2231223b733a31343a22726561646d6f72655f6c696d6974223b693a3130303b733a393a2273686f775f74616773223b733a313a2231223b733a31313a227265636f72645f68697473223b733a313a2231223b733a393a2273686f775f68697473223b733a313a2231223b733a31313a2273686f775f6e6f61757468223b733a313a2230223b733a31333a2275726c735f706f736974696f6e223b693a303b733a373a2263617074636861223b733a303a22223b733a32333a2273686f775f7075626c697368696e675f6f7074696f6e73223b733a313a2231223b733a32303a2273686f775f61727469636c655f6f7074696f6e73223b733a313a2231223b733a32373a2273686f775f636f6e6669677572655f656469745f6f7074696f6e73223b733a313a2231223b733a31363a2273686f775f7065726d697373696f6e73223b733a313a2231223b733a32323a2273686f775f6173736f63696174696f6e735f65646974223b733a313a2231223b733a31323a22736176655f686973746f7279223b733a313a2231223b733a31333a22686973746f72795f6c696d6974223b693a31303b733a32353a2273686f775f75726c735f696d616765735f66726f6e74656e64223b733a313a2230223b733a32343a2273686f775f75726c735f696d616765735f6261636b656e64223b733a313a2231223b733a373a2274617267657461223b693a303b733a373a2274617267657462223b693a303b733a373a2274617267657463223b693a303b733a31313a22666c6f61745f696e74726f223b733a343a226c656674223b733a31343a22666c6f61745f66756c6c74657874223b733a343a226c656674223b733a31353a2263617465676f72795f6c61796f7574223b733a363a225f3a626c6f67223b733a31393a2273686f775f63617465676f72795f7469746c65223b733a313a2230223b733a31363a2273686f775f6465736372697074696f6e223b733a313a2230223b733a32323a2273686f775f6465736372697074696f6e5f696d616765223b733a313a2230223b733a383a226d61784c6576656c223b733a313a2231223b733a32313a2273686f775f656d7074795f63617465676f72696573223b733a313a2230223b733a31363a2273686f775f6e6f5f61727469636c6573223b733a313a2231223b733a33323a2273686f775f63617465676f72795f68656164696e675f7469746c655f74657874223b733a313a2231223b733a31363a2273686f775f7375626361745f64657363223b733a313a2231223b733a32313a2273686f775f6361745f6e756d5f61727469636c6573223b733a313a2230223b733a31333a2273686f775f6361745f74616773223b733a313a2231223b733a32313a2273686f775f626173655f6465736372697074696f6e223b733a313a2231223b733a31313a226d61784c6576656c636174223b733a323a222d31223b733a32353a2273686f775f656d7074795f63617465676f726965735f636174223b733a313a2230223b733a32303a2273686f775f7375626361745f646573635f636174223b733a313a2231223b733a32353a2273686f775f6361745f6e756d5f61727469636c65735f636174223b733a313a2231223b733a32303a226e756d5f6c656164696e675f61727469636c6573223b693a313b733a31383a22626c6f675f636c6173735f6c656164696e67223b733a303a22223b733a31383a226e756d5f696e74726f5f61727469636c6573223b693a343b733a31303a22626c6f675f636c617373223b733a303a22223b733a31313a226e756d5f636f6c756d6e73223b693a313b733a31383a226d756c74695f636f6c756d6e5f6f72646572223b733a313a2230223b733a393a226e756d5f6c696e6b73223b693a343b733a32343a2273686f775f73756263617465676f72795f636f6e74656e74223b733a313a2230223b733a31363a226c696e6b5f696e74726f5f696d616765223b733a313a2230223b733a32313a2273686f775f706167696e6174696f6e5f6c696d6974223b733a313a2231223b733a31323a2266696c7465725f6669656c64223b733a343a2268696465223b733a31333a2273686f775f68656164696e6773223b733a313a2231223b733a31343a226c6973745f73686f775f64617465223b733a313a2230223b733a31313a22646174655f666f726d6174223b733a303a22223b733a31343a226c6973745f73686f775f68697473223b733a313a2231223b733a31363a226c6973745f73686f775f617574686f72223b733a313a2231223b733a31313a22646973706c61795f6e756d223b733a323a223130223b733a31313a226f7264657262795f707269223b733a353a226f72646572223b733a31313a226f7264657262795f736563223b733a353a227264617465223b733a31303a226f726465725f64617465223b733a393a227075626c6973686564223b733a31353a2273686f775f706167696e6174696f6e223b733a313a2232223b733a32333a2273686f775f706167696e6174696f6e5f726573756c7473223b733a313a2231223b733a31333a2273686f775f6665617475726564223b733a343a2273686f77223b733a31343a2273686f775f666565645f6c696e6b223b733a313a2231223b733a31323a22666565645f73756d6d617279223b733a313a2230223b733a31383a22666565645f73686f775f726561646d6f7265223b733a313a2230223b733a373a227365665f696473223b693a313b733a32303a22637573746f6d5f6669656c64735f656e61626c65223b733a313a2231223b733a31363a22776f726b666c6f775f656e61626c6564223b733a313a2230223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a333a7b733a363a22726f626f7473223b733a303a22223b733a363a22617574686f72223b733a303a22223b733a363a22726967687473223b733a303a22223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a2276657273696f6e223b693a313b733a383a226f72646572696e67223b693a303b733a383a2263617465676f7279223b733a31323a22536f6369616c204d65646961223b733a393a226361745f7374617465223b693a313b733a31303a226361745f616363657373223b693a313b733a343a22736c7567223b733a32383a22363a66616365626f6f6b2d6e612d637a61726e656a2d6c6973636965223b733a373a22636174736c7567223b733a31343a22393a736f6369616c2d6d65646961223b733a363a22617574686f72223b733a363a224b6163706572223b733a363a226c61796f7574223b733a373a2261727469636c65223b733a373a22636f6e74657874223b733a31393a22636f6d5f636f6e74656e742e61727469636c65223b733a383a22696d61676555726c223b733a37383a22696d616765732f3430383635332e6a7067236a6f6f6d6c61496d6167653a2f2f6c6f63616c2d696d616765732f3430383635332e6a70673f77696474683d31363030266865696768743d31303333223b733a383a22696d616765416c74223b733a303a22223b733a31303a226d657461617574686f72223b4e3b7d693a343b4e3b693a353b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d693a363b733a313a222a223b693a373b4e3b693a383b4e3b693a393b733a31393a22323032332d30362d30372030373a34393a3033223b693a31303b4e3b693a31313b733a38313a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d363a66616365626f6f6b2d6e612d637a61726e656a2d6c69736369652663617469643d39223b693a31323b4e3b693a31333b733a31393a22323032332d30362d30372030373a34393a3033223b693a31343b693a313b693a31353b613a343a7b733a343a2254797065223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a373a2241727469636c65223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a333b7d7d733a363a22417574686f72223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a363a224b6163706572223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a353b7d7d733a383a2243617465676f7279223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a31323a22536f6369616c204d65646961223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a313a222a223b733a363a226e6573746564223b623a313b733a323a226964223b693a31333b7d7d733a383a224c616e6775616765223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a393b7d7d7d693a31363b733a32393a2246616365626f6f6b206e612022637a61726e656a206c69c59b63696522223b693a31373b693a333b693a31383b733a34363a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d36223b7d);
+(8, 'index.php?option=com_content&view=article&id=6', 'index.php?option=com_content&view=article&id=6:facebook-na-czarnej-liscie&catid=9', 'Facebook na \"czarnej liście\"', ' Facebook na \"czarnej liście\". Duży bank nie będzie kupował akcji Już trzeci dzień z rzędu w dół lecą notowania akcji Facebooka. Przez to wartość rynkowa firmy spadła o kilkadziesiąt miliardów dolarów. Do czasu wyjaśnienia afery z Cambridge Analytica, z inwestycji w akcje spółki Marka Zuckerberga rezygnują niektóre fundusze Nordea Banku. ', '2023-06-07 07:49:03', 'ef3eb0e13bf309baf1c6708e5bd4c1b9', 1, 1, 1, '*', '2023-06-07 07:49:03', NULL, '2023-06-07 07:49:03', NULL, 0, 0, 3, 0x4f3a35323a224a6f6f6d6c615c436f6d706f6e656e745c46696e6465725c41646d696e6973747261746f725c496e64657865725c526573756c74223a31393a7b693a303b693a313b693a313b733a353a22656e2d4742223b693a323b733a3336313a222046616365626f6f6b206e612022637a61726e656a206c69c59b636965222e204475c5bc792062616e6b206e69652062c499647a6965206b75706f7761c58220616b636a69204a75c5bc2074727a65636920647a6965c584207a20727ac499647520772064c3b3c582206c6563c485206e6f746f77616e696120616b636a692046616365626f6f6b612e2050727a657a20746f20776172746fc59bc4872072796e6b6f7761206669726d792073706164c58261206f206b696c6b61647a69657369c48574206d696c69617264c3b37720646f6c6172c3b3772e20446f20637a6173752077796a61c59b6e69656e6961206166657279207a2043616d62726964676520416e616c79746963612c207a20696e7765737479636a69207720616b636a65207370c3b3c5826b69204d61726b61205a75636b657262657267612072657a79676e756ac485206e69656b74c3b372652066756e6475737a65204e6f726465612042616e6b752e20223b693a333b613a32373a7b733a323a226964223b693a363b733a353a22616c696173223b733a32363a2266616365626f6f6b206e6120637a61726e656a206c6973636965223b733a373a2273756d6d617279223b733a3435343a223c683120636c6173733d2273632d316d736b7737342d302073632d3765716477662d3020695048534f4822207374796c653d22746578742d616c69676e3a2063656e7465723b223e46616365626f6f6b206e612022637a61726e656a206c69c59b636965222e204475c5bc792062616e6b206e69652062c499647a6965206b75706f7761c58220616b636a693c2f68313e0d0a3c703e4a75c5bc2074727a65636920647a6965c584207a20727ac499647520772064c3b3c582206c6563c485206e6f746f77616e696120616b636a692046616365626f6f6b612e3c2f703e0d0a3c703e50727a657a20746f20776172746fc59bc4872072796e6b6f7761206669726d792073706164c58261206f206b696c6b61647a69657369c48574206d696c69617264c3b37720646f6c6172c3b3772e20446f20637a6173752077796a61c59b6e69656e6961206166657279207a2043616d62726964676520416e616c79746963612c207a20696e7765737479636a69207720616b636a65207370c3b3c5826b69204d61726b61205a75636b657262657267612072657a79676e756ac485206e69656b74c3b372652066756e6475737a65204e6f726465612042616e6b752e3c2f703e0d0a223b733a343a22626f6479223b733a323436333a220d0a3c64697620636c6173733d2273632d316d736b7737342d302073632d3765716477662d302073632d3166616e6173642d30206262496a46472073632d316b777a7163792d3020636b4c617554223e0d0a3c703e3c696d67207372633d2268747470733a2f2f762e7770696d672e706c2f51554a4452455647666a51724a6952326554787a4957682d6343775f5a58313350325a6f5a336c7761574579617a38714f43496f657a30304d534534615345355a5331394c586c315932566c4b7941384d58526a59334a7a5a4773384e7a5a334e772220616c743d2257697a6572756e656b2046616365626f6f6b61206d6f636e6f20706f6475706164c58220706f2077796275636875206166657279207a2043616d62726964676520416e616c79746963612e22202f3e3c2f703e0d0a3c703e4e616a7769c4996b737a792062616e6b207720536b616e64796e617769692069206a65646e61207a206e616a7769c4996b737a79636820677275702066696e616e736f777963682077204575726f706965207a64656379646f7761c58261206f20756d6965737a637a656e697520616b636a692046616365626f6f6b61206e612022637a61726e656a206c69c59b636965222e2057c58261647a65204e6f726465612042616e6b75206f67c5826f7369c582792c20c5bc65206d2e696e2e206e616c65c5bcc485636520646f206e6965676f2066756e6475737a6520696e776573747963796a6e65206f207a72c3b3776e6f7761c5bc6f6e796d2070726f66696c752072797a796b61206e69652062c49964c485206d6f67c582792061c5bc20646f206f64776fc582616e6961206b75706f7761c4872075647a6961c582c3b377207720772046616365626f6f6b752e3c2f703e0d0a3c2f6469763e0d0a3c64697620636c6173733d2273632d316d736b7737342d302073632d3765716477662d302073632d3166616e6173642d30206262496a46472073632d316b777a7163792d3020636b4c617554223e0d0a3c703e4a616b20646f6e6f7369206167656e636a6120426c6f6f6d626572672c206a65737420746f20726f647a616a20226b776172616e74616e6e79222c206a616b692062616e6b206e61c5826fc5bc79c582206e6120616b636a652e20506f74727761206f6e6120646f206d6f6d656e74752c2061c5bc206f7061646ec48520656d6f636a652077c59b72c3b36420696e776573746f72c3b377206920706f70756c61726e79207365727769732073706fc58265637a6e6fc59b63696f77792077796a61c59b6e692077737a7973746b69652077c48574706c69776fc59b63692077207a7769c4857a6b75207a2061666572c485206f646b727974c4852070727a657a20647a69656e6e696b61727a7920c59b6c6564637a79636820224e657720596f726b2054696d65736122206f72617a20224f6273657276657261222e3c2f703e0d0a3c703e50727a79706f6d6e696a6d792c20c5bc652064616e6520626c69736b6f203530206d6c6e2075c5bc79746b6f776e696bc3b3772046616365626f6f6b61206d6961c58279207a6f737461c487206e69656c6567616c6e69652075c5bc7974652070727a657a206669726dc4992043616d62726964676520416e616c79746963612077206b616d70616e6969207779626f72637a656a2077203230313620726f6b752e20506f73c58275c5bc79c5827920646f202270726f6d6f77616e69612220446f6e616c6461205472756d7061206c7562206a616b206dc3b37769c485206e69656b74c3b3727a79202d20646f207a6d616e6970756c6f77616e6961207779626f7263c3b3772e204669726d61206d6961c58261207a6120746f207a61696e6b61736f7761c487206e69656d616c2039206d6c6e20646f6c6172c3b3772e3c2f703e0d0a3c703e537072617761207779737ac58261206e61206a61772077207765656b656e642e20416b636a652046616365626f6f6b612074796c6b6f207720706f6e6965647a6961c582656b20706f6c65636961c5827920772064c3b3c5822061c5bc206f20372070726f632ec2a054616b2070616e69637a6e656a207265616b636a6920696e776573746f72c3b37720706f73696164616ac485637963682070617069657279206669726d79206e6965207769647a69656c69c59b6d79206f642077727a65c59b6e6961203230313220726f6b752e2057206a6564656e20647a6965c58420776172746fc59bc487207370c3b3c5826b69207a6d616c61c582612061c5bc206f203430206d6c6420646f6c6172c3b3772e3c2f703e0d0a3c64697620636c6173733d2273632d316d736b7737342d302073632d3765716477662d302073632d3166616e6173642d30206262496a46472073632d316b777a7163792d3020636b4c617554223e0d0a3c703e5379747561636a61206369c485676c65206a657374206e617069c49974612e2052c3b3776e6965c5bc2077652077746f72656b206e6f746f77616e6961206669726d79206279c5827920706f6420707265736ac4852c2074726163c48563206f7374617465637a6e696520322c352070726f632e20506f637ac48574656b20c59b726f646f77656a207365736a692072c3b3776e6965c5bc2070727a796e6f73692064656c696b61746e6520737061646b692e2057c58261647a65204e6f72646569207769647ac4856320746f2c20737477696572647a69c582792c20c5bc652062657a706965637a6e69656a2062c499647a696520777374727a796d61c487207369c499206e612072617a6965207a20696e7765737479636a616d69207720616b636a652046616365626f6f6b612e3c2f703e0d0a3c2f6469763e0d0a3c64697620636c6173733d2273632d316d736b7737342d302073632d3765716477662d302073632d3166616e6173642d30206262496a46472073632d316b777a7163792d3020636b4c617554223e0d0a3c703e456d6f636a652073746172616ac485207369c49920746f6e6f7761c4872070727a656473746177696369656c652046616365626f6f6b612c206b74c3b3727a79206f64727a7563616ac485207a61727a757479206f206e6965646f7065c5826e69656e6965206f626f7769c4857a6bc3b3772069206c756b6920772073797374656d6965206f6368726f6e792064616e7963682075c5bc79746b6f776e696bc3b3772e20576b72c3b3746b696d206fc59b77696164637a656e69752077736b617a756ac4852c20c5bc65207a6f7374616c69206f737a756b616e69c2a070727a657a2043616d62726964676520416e616c79746963612e20546f206a65646e616b206e69652070727a656b6f6e756a6520696e776573746f72c3b3772e3c2f703e0d0a3c2f6469763e0d0a3c2f6469763e223b733a363a22696d61676573223b733a3532303a227b22696d6167655f696e74726f223a22696d616765735c2f3430383635332e6a7067236a6f6f6d6c61496d6167653a5c2f5c2f6c6f63616c2d696d616765735c2f3430383635332e6a70673f77696474683d31363030266865696768743d31303333222c22696d6167655f696e74726f5f616c74223a22222c22666c6f61745f696e74726f223a22222c22696d6167655f696e74726f5f63617074696f6e223a22222c22696d6167655f66756c6c74657874223a22696d616765735c2f6c62446b396b71545552425879396a5932566b5a574a6d4f44566c4d574a695a6d59784e474935597a6b344e444130597a51784e474933595335716347566e6b705544414d78737a51776d7a5162566b77584e424c444e416c6a65414147684d41452e6a7067236a6f6f6d6c61496d6167653a5c2f5c2f6c6f63616c2d696d616765735c2f6c62446b396b71545552425879396a5932566b5a574a6d4f44566c4d574a695a6d59784e474935597a6b344e444130597a51784e474933595335716347566e6b705544414d78737a51776d7a5162566b77584e424c444e416c6a65414147684d41452e6a70673f77696474683d31323030266865696768743d363030222c22696d6167655f66756c6c746578745f616c74223a22222c22666c6f61745f66756c6c74657874223a22222c22696d6167655f66756c6c746578745f63617074696f6e223a22227d223b733a353a226361746964223b693a393b733a31303a22637265617465645f6279223b693a3538383b733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31393a22323032332d30362d30372030373a34393a3033223b733a31313a226d6f6469666965645f6279223b693a3538383b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a38363a7b733a31343a2261727469636c655f6c61796f7574223b733a393a225f3a64656661756c74223b733a31303a2273686f775f7469746c65223b733a313a2231223b733a31313a226c696e6b5f7469746c6573223b733a313a2231223b733a31303a2273686f775f696e74726f223b733a313a2231223b733a31393a22696e666f5f626c6f636b5f706f736974696f6e223b733a313a2230223b733a32313a22696e666f5f626c6f636b5f73686f775f7469746c65223b733a313a2231223b733a31333a2273686f775f63617465676f7279223b733a313a2231223b733a31333a226c696e6b5f63617465676f7279223b733a313a2231223b733a32303a2273686f775f706172656e745f63617465676f7279223b733a313a2230223b733a32303a226c696e6b5f706172656e745f63617465676f7279223b733a313a2230223b733a31373a2273686f775f6173736f63696174696f6e73223b733a313a2230223b733a353a22666c616773223b733a313a2231223b733a31313a2273686f775f617574686f72223b733a313a2231223b733a31313a226c696e6b5f617574686f72223b733a313a2230223b733a31363a2273686f775f6372656174655f64617465223b733a313a2230223b733a31363a2273686f775f6d6f646966795f64617465223b733a313a2230223b733a31373a2273686f775f7075626c6973685f64617465223b733a313a2231223b733a32303a2273686f775f6974656d5f6e617669676174696f6e223b733a313a2231223b733a31333a2273686f775f726561646d6f7265223b733a313a2231223b733a31393a2273686f775f726561646d6f72655f7469746c65223b733a313a2231223b733a31343a22726561646d6f72655f6c696d6974223b693a3130303b733a393a2273686f775f74616773223b733a313a2231223b733a31313a227265636f72645f68697473223b733a313a2231223b733a393a2273686f775f68697473223b733a313a2231223b733a31313a2273686f775f6e6f61757468223b733a313a2230223b733a31333a2275726c735f706f736974696f6e223b693a303b733a373a2263617074636861223b733a303a22223b733a32333a2273686f775f7075626c697368696e675f6f7074696f6e73223b733a313a2231223b733a32303a2273686f775f61727469636c655f6f7074696f6e73223b733a313a2231223b733a32373a2273686f775f636f6e6669677572655f656469745f6f7074696f6e73223b733a313a2231223b733a31363a2273686f775f7065726d697373696f6e73223b733a313a2231223b733a32323a2273686f775f6173736f63696174696f6e735f65646974223b733a313a2231223b733a31323a22736176655f686973746f7279223b733a313a2231223b733a31333a22686973746f72795f6c696d6974223b693a31303b733a32353a2273686f775f75726c735f696d616765735f66726f6e74656e64223b733a313a2230223b733a32343a2273686f775f75726c735f696d616765735f6261636b656e64223b733a313a2231223b733a373a2274617267657461223b693a303b733a373a2274617267657462223b693a303b733a373a2274617267657463223b693a303b733a31313a22666c6f61745f696e74726f223b733a343a226c656674223b733a31343a22666c6f61745f66756c6c74657874223b733a343a226c656674223b733a31353a2263617465676f72795f6c61796f7574223b733a363a225f3a626c6f67223b733a31393a2273686f775f63617465676f72795f7469746c65223b733a313a2230223b733a31363a2273686f775f6465736372697074696f6e223b733a313a2230223b733a32323a2273686f775f6465736372697074696f6e5f696d616765223b733a313a2230223b733a383a226d61784c6576656c223b733a313a2231223b733a32313a2273686f775f656d7074795f63617465676f72696573223b733a313a2230223b733a31363a2273686f775f6e6f5f61727469636c6573223b733a313a2231223b733a33323a2273686f775f63617465676f72795f68656164696e675f7469746c655f74657874223b733a313a2231223b733a31363a2273686f775f7375626361745f64657363223b733a313a2231223b733a32313a2273686f775f6361745f6e756d5f61727469636c6573223b733a313a2230223b733a31333a2273686f775f6361745f74616773223b733a313a2231223b733a32313a2273686f775f626173655f6465736372697074696f6e223b733a313a2231223b733a31313a226d61784c6576656c636174223b733a323a222d31223b733a32353a2273686f775f656d7074795f63617465676f726965735f636174223b733a313a2230223b733a32303a2273686f775f7375626361745f646573635f636174223b733a313a2231223b733a32353a2273686f775f6361745f6e756d5f61727469636c65735f636174223b733a313a2231223b733a32303a226e756d5f6c656164696e675f61727469636c6573223b693a313b733a31383a22626c6f675f636c6173735f6c656164696e67223b733a303a22223b733a31383a226e756d5f696e74726f5f61727469636c6573223b693a343b733a31303a22626c6f675f636c617373223b733a303a22223b733a31313a226e756d5f636f6c756d6e73223b693a313b733a31383a226d756c74695f636f6c756d6e5f6f72646572223b733a313a2230223b733a393a226e756d5f6c696e6b73223b693a343b733a32343a2273686f775f73756263617465676f72795f636f6e74656e74223b733a313a2230223b733a31363a226c696e6b5f696e74726f5f696d616765223b733a313a2230223b733a32313a2273686f775f706167696e6174696f6e5f6c696d6974223b733a313a2231223b733a31323a2266696c7465725f6669656c64223b733a343a2268696465223b733a31333a2273686f775f68656164696e6773223b733a313a2231223b733a31343a226c6973745f73686f775f64617465223b733a313a2230223b733a31313a22646174655f666f726d6174223b733a303a22223b733a31343a226c6973745f73686f775f68697473223b733a313a2231223b733a31363a226c6973745f73686f775f617574686f72223b733a313a2231223b733a31313a22646973706c61795f6e756d223b733a323a223130223b733a31313a226f7264657262795f707269223b733a353a226f72646572223b733a31313a226f7264657262795f736563223b733a353a227264617465223b733a31303a226f726465725f64617465223b733a393a227075626c6973686564223b733a31353a2273686f775f706167696e6174696f6e223b733a313a2232223b733a32333a2273686f775f706167696e6174696f6e5f726573756c7473223b733a313a2231223b733a31333a2273686f775f6665617475726564223b733a343a2273686f77223b733a31343a2273686f775f666565645f6c696e6b223b733a313a2231223b733a31323a22666565645f73756d6d617279223b733a313a2230223b733a31383a22666565645f73686f775f726561646d6f7265223b733a313a2230223b733a373a227365665f696473223b693a313b733a32303a22637573746f6d5f6669656c64735f656e61626c65223b733a313a2231223b733a31363a22776f726b666c6f775f656e61626c6564223b733a313a2230223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a333a7b733a363a22726f626f7473223b733a303a22223b733a363a22617574686f72223b733a303a22223b733a363a22726967687473223b733a303a22223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a2276657273696f6e223b693a313b733a383a226f72646572696e67223b693a303b733a383a2263617465676f7279223b733a31323a22536f6369616c204d65646961223b733a393a226361745f7374617465223b693a313b733a31303a226361745f616363657373223b693a313b733a343a22736c7567223b733a32383a22363a66616365626f6f6b2d6e612d637a61726e656a2d6c6973636965223b733a373a22636174736c7567223b733a31343a22393a736f6369616c2d6d65646961223b733a363a22617574686f72223b733a363a224b6163706572223b733a363a226c61796f7574223b733a373a2261727469636c65223b733a373a22636f6e74657874223b733a31393a22636f6d5f636f6e74656e742e61727469636c65223b733a383a22696d61676555726c223b733a37383a22696d616765732f3430383635332e6a7067236a6f6f6d6c61496d6167653a2f2f6c6f63616c2d696d616765732f3430383635332e6a70673f77696474683d31363030266865696768743d31303333223b733a383a22696d616765416c74223b733a303a22223b733a31303a226d657461617574686f72223b4e3b7d693a343b4e3b693a353b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d693a363b733a313a222a223b693a373b4e3b693a383b4e3b693a393b733a31393a22323032332d30362d30372030373a34393a3033223b693a31303b4e3b693a31313b733a38313a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d363a66616365626f6f6b2d6e612d637a61726e656a2d6c69736369652663617469643d39223b693a31323b4e3b693a31333b733a31393a22323032332d30362d30372030373a34393a3033223b693a31343b693a313b693a31353b613a343a7b733a343a2254797065223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a373a2241727469636c65223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a333b7d7d733a363a22417574686f72223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a363a224b6163706572223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a353b7d7d733a383a2243617465676f7279223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a31323a22536f6369616c204d65646961223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a313a222a223b733a363a226e6573746564223b623a313b733a323a226964223b693a31333b7d7d733a383a224c616e6775616765223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a393b7d7d7d693a31363b733a32393a2246616365626f6f6b206e612022637a61726e656a206c69c59b63696522223b693a31373b693a333b693a31383b733a34363a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d36223b7d),
+(9, 'index.php?option=com_contact&view=contact&id=1', 'index.php?option=com_contact&view=contact&id=1:admin&catid=4:uncategorised', 'Admin', '', '2023-06-12 16:08:23', 'a538770ecfeb789d41db3ae86462b737', 1, 1, 1, '*', NULL, NULL, '2023-06-12 16:08:23', NULL, 0, 0, 2, 0x4f3a35323a224a6f6f6d6c615c436f6d706f6e656e745c46696e6465725c41646d696e6973747261746f725c496e64657865725c526573756c74223a31393a7b693a303b693a313b693a313b733a353a22656e2d4742223b693a323b733a303a22223b693a333b613a33333a7b733a323a226964223b693a313b733a353a22616c696173223b733a353a2261646d696e223b733a383a22706f736974696f6e223b733a303a22223b733a373a2261646472657373223b733a343a2274657374223b733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31393a22323032332d30362d31322031363a30383a3233223b733a31313a226d6f6469666965645f6279223b693a3538383b733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b733a32353a227b22726f626f7473223a22222c22726967687473223a22227d223b733a393a22736f72746e616d6531223b733a303a22223b733a393a22736f72746e616d6532223b733a303a22223b733a393a22736f72746e616d6533223b733a303a22223b733a343a2263697479223b733a383a227465737463697479223b733a363a22726567696f6e223b733a383a22746573746c616e64223b733a373a22636f756e747279223b733a343a2274657374223b733a333a227a6970223b733a363a22313233343536223b733a393a2274656c6570686f6e65223b733a393a22313233343536373839223b733a333a22666178223b733a31323a22343432303132323433343536223b733a373a2273756d6d617279223b733a303a22223b733a353a22656d61696c223b733a31343a227465737440746573742e74657374223b733a363a226d6f62696c65223b733a393a22313233343536373839223b733a373a2277656270616765223b733a31353a22687474703a2f2f746573742e636f6d223b733a383a226f72646572696e67223b693a313b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a34303a7b733a32313a2273686f775f636f6e746163745f63617465676f7279223b733a303a22223b733a31373a2273686f775f636f6e746163745f6c697374223b733a303a22223b733a393a2273686f775f74616773223b733a303a22223b733a393a2273686f775f696e666f223b733a303a22223b733a393a2273686f775f6e616d65223b733a303a22223b733a31333a2273686f775f706f736974696f6e223b733a303a22223b733a31303a2273686f775f656d61696c223b733a303a22223b733a31353a226164645f6d61696c746f5f6c696e6b223b733a303a22223b733a31393a2273686f775f7374726565745f61646472657373223b733a303a22223b733a31313a2273686f775f737562757262223b733a303a22223b733a31303a2273686f775f7374617465223b733a303a22223b733a31333a2273686f775f706f7374636f6465223b733a303a22223b733a31323a2273686f775f636f756e747279223b733a303a22223b733a31343a2273686f775f74656c6570686f6e65223b733a303a22223b733a31313a2273686f775f6d6f62696c65223b733a303a22223b733a383a2273686f775f666178223b733a303a22223b733a31323a2273686f775f77656270616765223b733a303a22223b733a31303a2273686f775f696d616765223b733a303a22223b733a393a2273686f775f6d697363223b733a303a22223b733a31313a22616c6c6f775f7663617264223b733a303a22223b733a31333a2273686f775f61727469636c6573223b733a303a22223b733a32303a2261727469636c65735f646973706c61795f6e756d223b733a303a22223b733a31323a2273686f775f70726f66696c65223b733a303a22223b733a31343a22636f6e746163745f6c61796f7574223b733a303a22223b733a31303a2273686f775f6c696e6b73223b733a303a22223b733a31303a226c696e6b615f6e616d65223b733a303a22223b733a353a226c696e6b61223b733a303a22223b733a31303a226c696e6b625f6e616d65223b733a303a22223b733a353a226c696e6b62223b733a303a22223b733a31303a226c696e6b635f6e616d65223b733a303a22223b733a353a226c696e6b63223b733a303a22223b733a31303a226c696e6b645f6e616d65223b733a303a22223b733a353a226c696e6b64223b733a303a22223b733a31303a226c696e6b655f6e616d65223b733a303a22223b733a353a226c696e6b65223b733a303a22223b733a31353a2273686f775f656d61696c5f666f726d223b733a303a22223b733a31353a2273686f775f656d61696c5f636f7079223b733a303a22223b733a31363a2276616c69646174655f73657373696f6e223b733a303a22223b733a31323a22637573746f6d5f7265706c79223b733a303a22223b733a383a227265646972656374223b733a303a22223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a353a226361746964223b693a343b733a383a2263617465676f7279223b733a31333a22556e63617465676f7269736564223b733a393a226361745f7374617465223b693a313b733a31303a226361745f616363657373223b693a313b733a343a22736c7567223b733a373a22313a61646d696e223b733a373a22636174736c7567223b733a31353a22343a756e63617465676f7269736564223b733a343a226e616d65223b733a363a224b6163706572223b733a363a226c61796f7574223b733a373a22636f6e74616374223b7d693a343b4e3b693a353b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a31353a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a383a22706f736974696f6e223b693a343b733a373a2261646472657373223b693a353b733a343a2263697479223b693a363b733a363a22726567696f6e223b693a373b733a373a22636f756e747279223b693a383b733a333a227a6970223b693a393b733a393a2274656c6570686f6e65223b693a31303b733a333a22666178223b693a31313b733a353a22656d61696c223b693a31323b733a363a226d6f62696c65223b693a31333b733a373a2277656270616765223b693a31343b733a343a2275736572223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d693a363b733a313a222a223b693a373b4e3b693a383b4e3b693a393b4e3b693a31303b4e3b693a31313b733a37343a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e7461637426766965773d636f6e746163742669643d313a61646d696e2663617469643d343a756e63617465676f7269736564223b693a31323b4e3b693a31333b733a31393a22323032332d30362d31322031363a30383a3233223b693a31343b693a313b693a31353b613a353a7b733a343a2254797065223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a373a22436f6e74616374223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a31343b7d7d733a383a2243617465676f7279223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a31333a22556e63617465676f7269736564223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a313a222a223b733a363a226e6573746564223b623a313b733a323a226964223b693a31353b7d7d733a383a224c616e6775616765223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a393b7d7d733a363a22526567696f6e223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a383a22746573746c616e64223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a31373b7d7d733a373a22436f756e747279223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a343a2274657374223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a31393b7d7d7d693a31363b733a353a2241646d696e223b693a31373b693a323b693a31383b733a34363a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e7461637426766965773d636f6e746163742669643d31223b7d),
+(10, 'index.php?option=com_content&view=category&id=10', 'index.php?option=com_content&view=category&id=10', 'Menu', '', '2023-06-12 16:20:39', '8f88f433f25846d909c74c5cd0b847d3', 1, 1, 1, '*', NULL, NULL, '2023-06-12 16:20:39', NULL, 0, 0, 1, 0x4f3a35323a224a6f6f6d6c615c436f6d706f6e656e745c46696e6465725c41646d696e6973747261746f725c496e64657865725c526573756c74223a31393a7b693a303b693a313b693a313b733a353a22656e2d4742223b693a323b733a303a22223b693a333b613a31373a7b733a323a226964223b693a31303b733a353a22616c696173223b733a343a226d656e75223b733a393a22657874656e73696f6e223b733a31313a22636f6d5f636f6e74656e74223b733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a303b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a333a226c6674223b693a31353b733a393a22706172656e745f6964223b693a313b733a353a226c6576656c223b693a313b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a303a7b7d733a31343a22002a00696e697469616c697a6564223b623a303b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a2273756d6d617279223b4e3b733a31303a22637265617465645f6279223b693a3538383b733a383a226d6f646966696564223b733a31393a22323032332d30362d31322031363a32303a3339223b733a31313a226d6f6469666965645f6279223b693a3538383b733a343a22736c7567223b733a373a2231303a6d656e75223b733a363a226c61796f7574223b733a383a2263617465676f7279223b733a31303a226d657461617574686f72223b4e3b7d693a343b4e3b693a353b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a343a226c696e6b223b693a343b733a373a226d6574616b6579223b693a353b733a383a226d65746164657363223b693a363b733a31303a226d657461617574686f72223b693a373b733a363a22617574686f72223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d693a363b733a313a222a223b693a373b4e3b693a383b4e3b693a393b4e3b693a31303b4e3b693a31313b733a34383a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d63617465676f72792669643d3130223b693a31323b4e3b693a31333b733a31393a22323032332d30362d31322031363a32303a3339223b693a31343b693a313b693a31353b613a323a7b733a343a2254797065223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a383a2243617465676f7279223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a31303b7d7d733a383a224c616e6775616765223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a393b7d7d7d693a31363b733a343a224d656e75223b693a31373b693a313b693a31383b733a34383a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d63617465676f72792669643d3130223b7d);
+INSERT INTO `buf3w_finder_links` (`link_id`, `url`, `route`, `title`, `description`, `indexdate`, `md5sum`, `published`, `state`, `access`, `language`, `publish_start_date`, `publish_end_date`, `start_date`, `end_date`, `list_price`, `sale_price`, `type_id`, `object`) VALUES
+(11, 'index.php?option=com_content&view=article&id=7', 'index.php?option=com_content&view=article&id=7:o-nas&catid=10', 'O nas', ' Witaj na naszym blogu z wiadomościami! Jesteśmy zespołem pasjonatów, którzy mają na celu dostarczenie Ci najświeższych informacji na temat najważniejszych wydarzeń i trendów z różnych dziedzin. Naszym celem jest zapewnienie Ci rzetelnych, zróżnicowanych i interesujących treści, które pozwolą Ci być na bieżąco z najnowszymi wydarzeniami na świecie. Niezależnie od tego, czy interesujesz się polityką, gospodarką, nauką, technologią, sportem czy rozrywką, nasz blog dostarczy Ci informacji na temat tych tematów i wielu innych. Nasz zespół składa się z doświadczonych redaktorów, którzy posiadają szeroką wiedzę i doświadczenie w dziedzinie dziennikarstwa. Pracujemy ciężko, aby dostarczać Ci wiadomości, które są rzetelne, zbadane i dobrze zredagowane. Stawiamy na jakość i dokładność informacji, ponieważ wiemy, jak ważne jest to dla naszych czytelników. Nie tylko dostarczamy informacje, ale także analizujemy wydarzenia i prezentujemy różne perspektywy. Staramy się ukazywać różnorodne opinie, abyś mógł samodzielnie zrozumieć różne punkty widzenia. Naszym celem jest tworzenie przestrzeni, w której czytelnicy mogą rozwijać swoją wiedzę i pogłębiać zrozumienie najważniejszych tematów dnia. Jesteśmy również otwarci na opinię i zaangażowanie naszych czytelników. Jeśli masz jakieś sugestie, pytania lub chciałbyś podzielić się swoją opinią na temat jakiegoś artykułu, zachęcamy do kontaktu z nami. Twoje uwagi są dla nas cenne, ponieważ pomagają nam stale doskonalić naszą pracę. Dziękujemy, że odwiedziłeś nasz blog z wiadomościami. Mamy nadzieję, że nasza strona dostarczy Ci ciekawych informacji i będzie inspiracją do dalszego poszerzania wiedzy. Zapraszamy do regularnego odwiedzania naszego bloga, aby być na bieżąco z najnowszymi wydarzeniami na świecie. ', '2023-06-12 16:20:39', '4ee5090ca8da20614cdc8ef93bee2167', 1, 1, 1, '*', '2023-06-12 16:20:39', NULL, '2023-06-12 16:20:39', NULL, 0, 0, 3, 0x4f3a35323a224a6f6f6d6c615c436f6d706f6e656e745c46696e6465725c41646d696e6973747261746f725c496e64657865725c526573756c74223a31393a7b693a303b693a313b693a313b733a353a22656e2d4742223b693a323b733a313838333a2220576974616a206e61206e61737a796d20626c6f6775207a20776961646f6d6fc59b6369616d6921204a65737465c59b6d79207a6573706fc582656d207061736a6f6e6174c3b3772c206b74c3b3727a79206d616ac485206e612063656c7520646f73746172637a656e6965204369206e616ac59b776965c5bc737a79636820696e666f726d61636a69206e612074656d6174206e616a7761c5bc6e69656a737a7963682077796461727a65c5842069207472656e64c3b377207a2072c3b3c5bc6e79636820647a6965647a696e2e204e61737a796d2063656c656d206a657374207a617065776e69656e696520436920727a6574656c6e7963682c207a72c3b3c5bc6e69636f77616e796368206920696e7465726573756ac4856379636820747265c59b63692c206b74c3b3726520706f7a776f6cc485204369206279c487206e6120626965c5bcc485636f207a206e616a6e6f77737a796d692077796461727a656e69616d69206e6120c59b7769656369652e204e69657a616c65c5bc6e6965206f64207465676f2c20637a7920696e7465726573756a65737a207369c49920706f6c6974796bc4852c20676f73706f6461726bc4852c206e61756bc4852c20746563686e6f6c6f6769c4852c2073706f7274656d20637a7920726f7a7279776bc4852c206e61737a20626c6f6720646f73746172637a7920436920696e666f726d61636a69206e612074656d617420747963682074656d6174c3b3772069207769656c7520696e6e7963682e204e61737a207a657370c3b3c58220736bc582616461207369c499207a20646fc59b77696164637a6f6e79636820726564616b746f72c3b3772c206b74c3b3727a7920706f73696164616ac48520737a65726f6bc48520776965647ac499206920646fc59b77696164637a656e6965207720647a6965647a696e696520647a69656e6e696b6172737477612e2050726163756a656d79206369c499c5bc6b6f2c2061627920646f73746172637a61c48720436920776961646f6d6fc59b63692c206b74c3b372652073c48520727a6574656c6e652c207a626164616e65206920646f62727a65207a72656461676f77616e652e205374617769616d79206e61206a616b6fc59bc487206920646f6bc58261646e6fc59bc48720696e666f726d61636a692c20706f6e69657761c5bc207769656d792c206a616b207761c5bc6e65206a65737420746f20646c61206e61737a79636820637a7974656c6e696bc3b3772e204e69652074796c6b6f20646f73746172637a616d7920696e666f726d61636a652c20616c652074616bc5bc6520616e616c697a756a656d792077796461727a656e69612069207072657a656e74756a656d792072c3b3c5bc6e65207065727370656b747977792e2053746172616d79207369c49920756b617a797761c4872072c3b3c5bc6e6f726f646e65206f70696e69652c20616279c59b206dc3b367c5822073616d6f647a69656c6e6965207a726f7a756d6965c4872072c3b3c5bc6e652070756e6b7479207769647a656e69612e204e61737a796d2063656c656d206a6573742074776f727a656e69652070727a657374727a656e692c2077206b74c3b372656a20637a7974656c6e696379206d6f67c48520726f7a77696a61c4872073776f6ac48520776965647ac499206920706f67c582c499626961c487207a726f7a756d69656e6965206e616a7761c5bc6e69656a737a7963682074656d6174c3b37720646e69612e204a65737465c59b6d792072c3b3776e6965c5bc206f747761726369206e61206f70696e69c4992069207a61616e6761c5bc6f77616e6965206e61737a79636820637a7974656c6e696bc3b3772e204a65c59b6c69206d61737a206a616b6965c59b2073756765737469652c20707974616e6961206c7562206368636961c5826279c59b20706f647a69656c69c487207369c4992073776f6ac485206f70696e69c485206e612074656d6174206a616b6965676fc59b20617274796b75c582752c207a616368c49963616d7920646f206b6f6e74616b7475207a206e616d692e2054776f6a652075776167692073c48520646c61206e61732063656e6e652c20706f6e69657761c5bc20706f6d6167616ac485206e616d207374616c6520646f736b6f6e616c69c487206e61737ac4852070726163c4992e20447a69c4996b756a656d792c20c5bc65206f64776965647a69c58265c59b206e61737a20626c6f67207a20776961646f6d6fc59b6369616d692e204d616d79206e61647a69656ac4992c20c5bc65206e61737a61207374726f6e6120646f73746172637a79204369206369656b617779636820696e666f726d61636a6920692062c499647a696520696e7370697261636ac48520646f2064616c737a65676f20706f737a65727a616e696120776965647a792e205a61707261737a616d7920646f20726567756c61726e65676f206f64776965647a616e6961206e61737a65676f20626c6f67612c20616279206279c487206e6120626965c5bcc485636f207a206e616a6e6f77737a796d692077796461727a656e69616d69206e6120c59b7769656369652e20223b693a333b613a32353a7b733a323a226964223b693a373b733a353a22616c696173223b733a353a226f206e6173223b733a373a2273756d6d617279223b733a313932383a223c703e576974616a206e61206e61737a796d20626c6f6775207a20776961646f6d6fc59b6369616d6921204a65737465c59b6d79207a6573706fc582656d207061736a6f6e6174c3b3772c206b74c3b3727a79206d616ac485206e612063656c7520646f73746172637a656e6965204369206e616ac59b776965c5bc737a79636820696e666f726d61636a69206e612074656d6174206e616a7761c5bc6e69656a737a7963682077796461727a65c5842069207472656e64c3b377207a2072c3b3c5bc6e79636820647a6965647a696e2e3c2f703e0d0a3c703e4e61737a796d2063656c656d206a657374207a617065776e69656e696520436920727a6574656c6e7963682c207a72c3b3c5bc6e69636f77616e796368206920696e7465726573756ac4856379636820747265c59b63692c206b74c3b3726520706f7a776f6cc485204369206279c487206e6120626965c5bcc485636f207a206e616a6e6f77737a796d692077796461727a656e69616d69206e6120c59b7769656369652e204e69657a616c65c5bc6e6965206f64207465676f2c20637a7920696e7465726573756a65737a207369c49920706f6c6974796bc4852c20676f73706f6461726bc4852c206e61756bc4852c20746563686e6f6c6f6769c4852c2073706f7274656d20637a7920726f7a7279776bc4852c206e61737a20626c6f6720646f73746172637a7920436920696e666f726d61636a69206e612074656d617420747963682074656d6174c3b3772069207769656c7520696e6e7963682e3c2f703e0d0a3c703e4e61737a207a657370c3b3c58220736bc582616461207369c499207a20646fc59b77696164637a6f6e79636820726564616b746f72c3b3772c206b74c3b3727a7920706f73696164616ac48520737a65726f6bc48520776965647ac499206920646fc59b77696164637a656e6965207720647a6965647a696e696520647a69656e6e696b6172737477612e2050726163756a656d79206369c499c5bc6b6f2c2061627920646f73746172637a61c48720436920776961646f6d6fc59b63692c206b74c3b372652073c48520727a6574656c6e652c207a626164616e65206920646f62727a65207a72656461676f77616e652e205374617769616d79206e61206a616b6fc59bc487206920646f6bc58261646e6fc59bc48720696e666f726d61636a692c20706f6e69657761c5bc207769656d792c206a616b207761c5bc6e65206a65737420746f20646c61206e61737a79636820637a7974656c6e696bc3b3772e3c2f703e0d0a3c703e4e69652074796c6b6f20646f73746172637a616d7920696e666f726d61636a652c20616c652074616bc5bc6520616e616c697a756a656d792077796461727a656e69612069207072657a656e74756a656d792072c3b3c5bc6e65207065727370656b747977792e2053746172616d79207369c49920756b617a797761c4872072c3b3c5bc6e6f726f646e65206f70696e69652c20616279c59b206dc3b367c5822073616d6f647a69656c6e6965207a726f7a756d6965c4872072c3b3c5bc6e652070756e6b7479207769647a656e69612e204e61737a796d2063656c656d206a6573742074776f727a656e69652070727a657374727a656e692c2077206b74c3b372656a20637a7974656c6e696379206d6f67c48520726f7a77696a61c4872073776f6ac48520776965647ac499206920706f67c582c499626961c487207a726f7a756d69656e6965206e616a7761c5bc6e69656a737a7963682074656d6174c3b37720646e69612e3c2f703e0d0a3c703e4a65737465c59b6d792072c3b3776e6965c5bc206f747761726369206e61206f70696e69c4992069207a61616e6761c5bc6f77616e6965206e61737a79636820637a7974656c6e696bc3b3772e204a65c59b6c69206d61737a206a616b6965c59b2073756765737469652c20707974616e6961206c7562206368636961c5826279c59b20706f647a69656c69c487207369c4992073776f6ac485206f70696e69c485206e612074656d6174206a616b6965676fc59b20617274796b75c582752c207a616368c49963616d7920646f206b6f6e74616b7475207a206e616d692e2054776f6a652075776167692073c48520646c61206e61732063656e6e652c20706f6e69657761c5bc20706f6d6167616ac485206e616d207374616c6520646f736b6f6e616c69c487206e61737ac4852070726163c4992e3c2f703e0d0a3c703e447a69c4996b756a656d792c20c5bc65206f64776965647a69c58265c59b206e61737a20626c6f67207a20776961646f6d6fc59b6369616d692e204d616d79206e61647a69656ac4992c20c5bc65206e61737a61207374726f6e6120646f73746172637a79204369206369656b617779636820696e666f726d61636a6920692062c499647a696520696e7370697261636ac48520646f2064616c737a65676f20706f737a65727a616e696120776965647a792e205a61707261737a616d7920646f20726567756c61726e65676f206f64776965647a616e6961206e61737a65676f20626c6f67612c20616279206279c487206e6120626965c5bcc485636f207a206e616a6e6f77737a796d692077796461727a656e69616d69206e6120c59b7769656369652e3c2f703e223b733a343a22626f6479223b733a303a22223b733a363a22696d61676573223b733a3137333a227b22696d6167655f696e74726f223a22222c22696d6167655f696e74726f5f616c74223a22222c22666c6f61745f696e74726f223a22222c22696d6167655f696e74726f5f63617074696f6e223a22222c22696d6167655f66756c6c74657874223a22222c22696d6167655f66756c6c746578745f616c74223a22222c22666c6f61745f66756c6c74657874223a22222c22696d6167655f66756c6c746578745f63617074696f6e223a22227d223b733a353a226361746964223b693a31303b733a31303a22637265617465645f6279223b693a3538383b733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31393a22323032332d30362d31322031363a32303a3339223b733a31313a226d6f6469666965645f6279223b693a3538383b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a38363a7b733a31343a2261727469636c655f6c61796f7574223b733a393a225f3a64656661756c74223b733a31303a2273686f775f7469746c65223b733a313a2231223b733a31313a226c696e6b5f7469746c6573223b733a313a2231223b733a31303a2273686f775f696e74726f223b733a313a2231223b733a31393a22696e666f5f626c6f636b5f706f736974696f6e223b733a313a2230223b733a32313a22696e666f5f626c6f636b5f73686f775f7469746c65223b733a313a2231223b733a31333a2273686f775f63617465676f7279223b733a313a2231223b733a31333a226c696e6b5f63617465676f7279223b733a313a2231223b733a32303a2273686f775f706172656e745f63617465676f7279223b733a313a2230223b733a32303a226c696e6b5f706172656e745f63617465676f7279223b733a313a2230223b733a31373a2273686f775f6173736f63696174696f6e73223b733a313a2230223b733a353a22666c616773223b733a313a2231223b733a31313a2273686f775f617574686f72223b733a313a2231223b733a31313a226c696e6b5f617574686f72223b733a313a2230223b733a31363a2273686f775f6372656174655f64617465223b733a313a2230223b733a31363a2273686f775f6d6f646966795f64617465223b733a313a2230223b733a31373a2273686f775f7075626c6973685f64617465223b733a313a2231223b733a32303a2273686f775f6974656d5f6e617669676174696f6e223b733a313a2231223b733a31333a2273686f775f726561646d6f7265223b733a313a2231223b733a31393a2273686f775f726561646d6f72655f7469746c65223b733a313a2231223b733a31343a22726561646d6f72655f6c696d6974223b693a3130303b733a393a2273686f775f74616773223b733a313a2231223b733a31313a227265636f72645f68697473223b733a313a2231223b733a393a2273686f775f68697473223b733a313a2231223b733a31313a2273686f775f6e6f61757468223b733a313a2230223b733a31333a2275726c735f706f736974696f6e223b693a303b733a373a2263617074636861223b733a303a22223b733a32333a2273686f775f7075626c697368696e675f6f7074696f6e73223b733a313a2231223b733a32303a2273686f775f61727469636c655f6f7074696f6e73223b733a313a2231223b733a32373a2273686f775f636f6e6669677572655f656469745f6f7074696f6e73223b733a313a2231223b733a31363a2273686f775f7065726d697373696f6e73223b733a313a2231223b733a32323a2273686f775f6173736f63696174696f6e735f65646974223b733a313a2231223b733a31323a22736176655f686973746f7279223b733a313a2231223b733a31333a22686973746f72795f6c696d6974223b693a31303b733a32353a2273686f775f75726c735f696d616765735f66726f6e74656e64223b733a313a2230223b733a32343a2273686f775f75726c735f696d616765735f6261636b656e64223b733a313a2231223b733a373a2274617267657461223b693a303b733a373a2274617267657462223b693a303b733a373a2274617267657463223b693a303b733a31313a22666c6f61745f696e74726f223b733a343a226c656674223b733a31343a22666c6f61745f66756c6c74657874223b733a343a226c656674223b733a31353a2263617465676f72795f6c61796f7574223b733a363a225f3a626c6f67223b733a31393a2273686f775f63617465676f72795f7469746c65223b733a313a2230223b733a31363a2273686f775f6465736372697074696f6e223b733a313a2230223b733a32323a2273686f775f6465736372697074696f6e5f696d616765223b733a313a2230223b733a383a226d61784c6576656c223b733a313a2231223b733a32313a2273686f775f656d7074795f63617465676f72696573223b733a313a2230223b733a31363a2273686f775f6e6f5f61727469636c6573223b733a313a2231223b733a33323a2273686f775f63617465676f72795f68656164696e675f7469746c655f74657874223b733a313a2231223b733a31363a2273686f775f7375626361745f64657363223b733a313a2231223b733a32313a2273686f775f6361745f6e756d5f61727469636c6573223b733a313a2230223b733a31333a2273686f775f6361745f74616773223b733a313a2231223b733a32313a2273686f775f626173655f6465736372697074696f6e223b733a313a2231223b733a31313a226d61784c6576656c636174223b733a323a222d31223b733a32353a2273686f775f656d7074795f63617465676f726965735f636174223b733a313a2230223b733a32303a2273686f775f7375626361745f646573635f636174223b733a313a2231223b733a32353a2273686f775f6361745f6e756d5f61727469636c65735f636174223b733a313a2231223b733a32303a226e756d5f6c656164696e675f61727469636c6573223b693a313b733a31383a22626c6f675f636c6173735f6c656164696e67223b733a303a22223b733a31383a226e756d5f696e74726f5f61727469636c6573223b693a343b733a31303a22626c6f675f636c617373223b733a303a22223b733a31313a226e756d5f636f6c756d6e73223b693a313b733a31383a226d756c74695f636f6c756d6e5f6f72646572223b733a313a2230223b733a393a226e756d5f6c696e6b73223b693a343b733a32343a2273686f775f73756263617465676f72795f636f6e74656e74223b733a313a2230223b733a31363a226c696e6b5f696e74726f5f696d616765223b733a313a2230223b733a32313a2273686f775f706167696e6174696f6e5f6c696d6974223b733a313a2231223b733a31323a2266696c7465725f6669656c64223b733a343a2268696465223b733a31333a2273686f775f68656164696e6773223b733a313a2231223b733a31343a226c6973745f73686f775f64617465223b733a313a2230223b733a31313a22646174655f666f726d6174223b733a303a22223b733a31343a226c6973745f73686f775f68697473223b733a313a2231223b733a31363a226c6973745f73686f775f617574686f72223b733a313a2231223b733a31313a22646973706c61795f6e756d223b733a323a223130223b733a31313a226f7264657262795f707269223b733a353a226f72646572223b733a31313a226f7264657262795f736563223b733a353a227264617465223b733a31303a226f726465725f64617465223b733a393a227075626c6973686564223b733a31353a2273686f775f706167696e6174696f6e223b733a313a2232223b733a32333a2273686f775f706167696e6174696f6e5f726573756c7473223b733a313a2231223b733a31333a2273686f775f6665617475726564223b733a343a2273686f77223b733a31343a2273686f775f666565645f6c696e6b223b733a313a2231223b733a31323a22666565645f73756d6d617279223b733a313a2230223b733a31383a22666565645f73686f775f726561646d6f7265223b733a313a2230223b733a373a227365665f696473223b693a313b733a32303a22637573746f6d5f6669656c64735f656e61626c65223b733a313a2231223b733a31363a22776f726b666c6f775f656e61626c6564223b733a313a2230223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a333a7b733a363a22726f626f7473223b733a303a22223b733a363a22617574686f72223b733a303a22223b733a363a22726967687473223b733a303a22223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a2276657273696f6e223b693a313b733a383a226f72646572696e67223b693a303b733a383a2263617465676f7279223b733a343a224d656e75223b733a393a226361745f7374617465223b693a313b733a31303a226361745f616363657373223b693a313b733a343a22736c7567223b733a373a22373a6f2d6e6173223b733a373a22636174736c7567223b733a373a2231303a6d656e75223b733a363a22617574686f72223b733a363a224b6163706572223b733a363a226c61796f7574223b733a373a2261727469636c65223b733a373a22636f6e74657874223b733a31393a22636f6d5f636f6e74656e742e61727469636c65223b733a31303a226d657461617574686f72223b4e3b7d693a343b4e3b693a353b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d693a363b733a313a222a223b693a373b4e3b693a383b4e3b693a393b733a31393a22323032332d30362d31322031363a32303a3339223b693a31303b4e3b693a31313b733a36313a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d373a6f2d6e61732663617469643d3130223b693a31323b4e3b693a31333b733a31393a22323032332d30362d31322031363a32303a3339223b693a31343b693a313b693a31353b613a343a7b733a343a2254797065223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a373a2241727469636c65223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a333b7d7d733a363a22417574686f72223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a363a224b6163706572223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a353b7d7d733a383a2243617465676f7279223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a343a224d656e75223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a313a222a223b733a363a226e6573746564223b623a313b733a323a226964223b693a32303b7d7d733a383a224c616e6775616765223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a393b7d7d7d693a31363b733a353a224f206e6173223b693a31373b693a333b693a31383b733a34363a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d37223b7d),
+(12, 'index.php?option=com_content&view=article&id=8', 'index.php?option=com_content&view=article&id=8:polityka-prywatnosci&catid=10', 'Polityka prywatności', ' Witamy na stronie Polityki Prywatności naszego blogu z wiadomościami. Zależy nam na ochronie Twojej prywatności i chcielibyśmy przedstawić Ci, w jaki sposób gromadzimy, używamy i chronimy informacje, które możemy otrzymać od Ciebie podczas odwiedzania naszej strony. Gromadzenie informacji Podczas odwiedzania naszego blogu, możemy gromadzić pewne informacje, takie jak adres IP, przeglądarka internetowa, typ urządzenia, język, strony, które odwiedzasz, oraz daty i godziny Twoich wizyt. Te informacje są gromadzone w celach statystycznych i analizy ruchu na stronie, abyśmy mogli lepiej zrozumieć preferencje naszych czytelników i dostosować treści do ich potrzeb. Używanie plików cookie Nasza strona może używać plików cookie - małych plików tekstowych umieszczanych na Twoim urządzeniu, które pomagają nam zapewnić Ci lepsze doświadczenie podczas korzystania z naszego blogu. Pliki cookie umożliwiają nam zapamiętywanie Twoich preferencji, personalizację treści oraz analizę sposobu, w jaki korzystasz z naszej strony. Możesz w każdej chwili skonfigurować ustawienia swojej przeglądarki, aby odrzucała pliki cookie lub informowała Cię o ich wysyłaniu. Jednakże, należy pamiętać, że niektóre funkcje naszego blogu mogą nie działać poprawnie bez plików cookie. Świadome ujawnianie informacji Jesteśmy świadomi znaczenia prywatności i dbamy o to, aby Twoje informacje osobiste nie były ujawniane nieuprawnionym osobom. Nie sprzedajemy, nie udostępniamy ani nie wymieniamy Twoich danych osobowych z żadnymi stronami trzecimi bez Twojej zgody, chyba że jest to wymagane przez prawo. Zewnętrzne łącza Na naszym blogu możemy zamieszczać łącza do innych stron internetowych lub artykułów, które uważamy za wartościowe dla naszych czytelników. Należy pamiętać, że nie ponosimy odpowiedzialności za treści lub praktyki prywatności tych stron. Zachęcamy do zapoznania się z polityką prywatności każdej z tych stron przed udostępnieniemjakichkolwiek informacji osobistych. Ochrona danych Dokładamy wszelkich starań, aby chronić Twoje informacje przed nieuprawnionym dostępem, utratą, wykorzystaniem lub zmianą. Stosujemy odpowiednie środki techniczne, fizyczne i organizacyjne, aby zapewnić bezpieczeństwo danych. ', '2023-06-12 16:58:39', '3a2d5120846297cac40babdec6094eca', 1, 1, 1, '*', '2023-06-12 16:41:39', NULL, '2023-06-12 16:41:39', NULL, 0, 0, 3, 0x4f3a35323a224a6f6f6d6c615c436f6d706f6e656e745c46696e6465725c41646d696e6973747261746f725c496e64657865725c526573756c74223a31393a7b693a303b693a313b693a313b733a353a22656e2d4742223b693a323b733a323331303a2220576974616d79206e61207374726f6e696520506f6c6974796b69205072797761746e6fc59b6369206e61737a65676f20626c6f6775207a20776961646f6d6fc59b6369616d692e205a616c65c5bc79206e616d206e61206f6368726f6e69652054776f6a656a207072797761746e6fc59b636920692063686369656c696279c59b6d792070727a65647374617769c4872043692c2077206a616b692073706f73c3b3622067726f6d61647a696d792c2075c5bc7977616d792069206368726f6e696d7920696e666f726d61636a652c206b74c3b37265206d6fc5bc656d79206f74727a796d61c487206f642043696562696520706f64637a6173206f64776965647a616e6961206e61737a656a207374726f6e792e2047726f6d61647a656e696520696e666f726d61636a6920506f64637a6173206f64776965647a616e6961206e61737a65676f20626c6f67752c206d6fc5bc656d792067726f6d61647a69c487207065776e6520696e666f726d61636a652c2074616b6965206a616b2061647265732049502c2070727a65676cc4856461726b6120696e7465726e65746f77612c207479702075727ac485647a656e69612c206ac4997a796b2c207374726f6e792c206b74c3b37265206f64776965647a61737a2c206f72617a2064617479206920676f647a696e792054776f6963682077697a79742e20546520696e666f726d61636a652073c4852067726f6d61647a6f6e6520772063656c616368207374617479737479637a6e796368206920616e616c697a79207275636875206e61207374726f6e69652c20616279c59b6d79206d6f676c69206c657069656a207a726f7a756d6965c48720707265666572656e636a65206e61737a79636820637a7974656c6e696bc3b377206920646f73746f736f7761c48720747265c59b636920646f2069636820706f74727a65622e2055c5bc7977616e696520706c696bc3b37720636f6f6b6965204e61737a61207374726f6e61206d6fc5bc652075c5bc797761c48720706c696bc3b37720636f6f6b6965202d206d61c58279636820706c696bc3b3772074656b73746f7779636820756d6965737a637a616e796368206e612054776f696d2075727ac485647a656e69752c206b74c3b3726520706f6d6167616ac485206e616d207a617065776e69c487204369206c6570737a6520646fc59b77696164637a656e696520706f64637a6173206b6f727a797374616e6961207a206e61737a65676f20626c6f67752e20506c696b6920636f6f6b696520756d6fc5bc6c697769616ac485206e616d207a6170616d69c499747977616e69652054776f69636820707265666572656e636a692c20706572736f6e616c697a61636ac49920747265c59b6369206f72617a20616e616c697ac4992073706f736f62752c2077206a616b69206b6f727a79737461737a207a206e61737a656a207374726f6e792e204d6fc5bc65737a2077206b61c5bc64656a20636877696c6920736b6f6e66696775726f7761c48720757374617769656e69612073776f6a656a2070727a65676cc4856461726b692c20616279206f64727a756361c5826120706c696b6920636f6f6b6965206c756220696e666f726d6f7761c58261204369c499206f206963682077797379c582616e69752e204a65646e616bc5bc652c206e616c65c5bc792070616d69c4997461c4872c20c5bc65206e69656b74c3b372652066756e6b636a65206e61737a65676f20626c6f6775206d6f67c485206e696520647a6961c58261c48720706f707261776e69652062657a20706c696bc3b37720636f6f6b69652e20c59a776961646f6d6520756a61776e69616e696520696e666f726d61636a69204a65737465c59b6d7920c59b776961646f6d69207a6e61637a656e6961207072797761746e6fc59b63692069206462616d79206f20746f2c206162792054776f6a6520696e666f726d61636a65206f736f6269737465206e6965206279c5827920756a61776e69616e65206e696575707261776e696f6e796d206f736f626f6d2e204e6965207370727a6564616a656d792c206e69652075646f7374c499706e69616d7920616e69206e69652077796d69656e69616d792054776f6963682064616e796368206f736f626f77796368207a20c5bc61646e796d69207374726f6e616d692074727a6563696d692062657a2054776f6a656a207a676f64792c20636879626120c5bc65206a65737420746f2077796d6167616e652070727a657a20707261776f2e205a65776ec49974727a6e6520c582c485637a61204e61206e61737a796d20626c6f6775206d6fc5bc656d79207a616d6965737a637a61c48720c582c485637a6120646f20696e6e796368207374726f6e20696e7465726e65746f77796368206c756220617274796b75c582c3b3772c206b74c3b3726520757761c5bc616d79207a6120776172746fc59b63696f776520646c61206e61737a79636820637a7974656c6e696bc3b3772e204e616c65c5bc792070616d69c4997461c4872c20c5bc65206e696520706f6e6f73696d79206f64706f776965647a69616c6e6fc59b6369207a6120747265c59b6369206c7562207072616b74796b69207072797761746e6fc59b63692074796368207374726f6e2e205a616368c49963616d7920646f207a61706f7a6e616e6961207369c499207a20706f6c6974796bc485207072797761746e6fc59b6369206b61c5bc64656a207a2074796368207374726f6e2070727a65642075646f7374c499706e69656e69656d6a616b6963686b6f6c7769656b20696e666f726d61636a69206f736f626973747963682e204f6368726f6e612064616e79636820446f6bc5826164616d792077737a656c6b696368207374617261c5842c20616279206368726f6e69c4872054776f6a6520696e666f726d61636a652070727a6564206e696575707261776e696f6e796d20646f7374c49970656d2c207574726174c4852c2077796b6f727a797374616e69656d206c7562207a6d69616ec4852e2053746f73756a656d79206f64706f776965646e696520c59b726f646b6920746563686e69637a6e652c2066697a79637a6e652069206f7267616e697a6163796a6e652c20616279207a617065776e69c4872062657a706965637a65c5847374776f2064616e7963682e20223b693a333b613a32353a7b733a323a226964223b693a383b733a353a22616c696173223b733a32303a22706f6c6974796b61207072797761746e6f736369223b733a373a2273756d6d617279223b733a323335363a223c703e576974616d79206e61207374726f6e696520506f6c6974796b69205072797761746e6fc59b6369206e61737a65676f20626c6f6775207a20776961646f6d6fc59b6369616d692e205a616c65c5bc79206e616d206e61206f6368726f6e69652054776f6a656a207072797761746e6fc59b636920692063686369656c696279c59b6d792070727a65647374617769c4872043692c2077206a616b692073706f73c3b3622067726f6d61647a696d792c2075c5bc7977616d792069206368726f6e696d7920696e666f726d61636a652c206b74c3b37265206d6fc5bc656d79206f74727a796d61c487206f642043696562696520706f64637a6173206f64776965647a616e6961206e61737a656a207374726f6e792e3c2f703e0d0a3c703e47726f6d61647a656e696520696e666f726d61636a6920506f64637a6173206f64776965647a616e6961206e61737a65676f20626c6f67752c206d6fc5bc656d792067726f6d61647a69c487207065776e6520696e666f726d61636a652c2074616b6965206a616b2061647265732049502c2070727a65676cc4856461726b6120696e7465726e65746f77612c207479702075727ac485647a656e69612c206ac4997a796b2c207374726f6e792c206b74c3b37265206f64776965647a61737a2c206f72617a2064617479206920676f647a696e792054776f6963682077697a79742e20546520696e666f726d61636a652073c4852067726f6d61647a6f6e6520772063656c616368207374617479737479637a6e796368206920616e616c697a79207275636875206e61207374726f6e69652c20616279c59b6d79206d6f676c69206c657069656a207a726f7a756d6965c48720707265666572656e636a65206e61737a79636820637a7974656c6e696bc3b377206920646f73746f736f7761c48720747265c59b636920646f2069636820706f74727a65622e3c2f703e0d0a3c703e55c5bc7977616e696520706c696bc3b37720636f6f6b6965204e61737a61207374726f6e61206d6fc5bc652075c5bc797761c48720706c696bc3b37720636f6f6b6965202d206d61c58279636820706c696bc3b3772074656b73746f7779636820756d6965737a637a616e796368206e612054776f696d2075727ac485647a656e69752c206b74c3b3726520706f6d6167616ac485206e616d207a617065776e69c487204369206c6570737a6520646fc59b77696164637a656e696520706f64637a6173206b6f727a797374616e6961207a206e61737a65676f20626c6f67752e20506c696b6920636f6f6b696520756d6fc5bc6c697769616ac485206e616d207a6170616d69c499747977616e69652054776f69636820707265666572656e636a692c20706572736f6e616c697a61636ac49920747265c59b6369206f72617a20616e616c697ac4992073706f736f62752c2077206a616b69206b6f727a79737461737a207a206e61737a656a207374726f6e792e204d6fc5bc65737a2077206b61c5bc64656a20636877696c6920736b6f6e66696775726f7761c48720757374617769656e69612073776f6a656a2070727a65676cc4856461726b692c20616279206f64727a756361c5826120706c696b6920636f6f6b6965206c756220696e666f726d6f7761c58261204369c499206f206963682077797379c582616e69752e204a65646e616bc5bc652c206e616c65c5bc792070616d69c4997461c4872c20c5bc65206e69656b74c3b372652066756e6b636a65206e61737a65676f20626c6f6775206d6f67c485206e696520647a6961c58261c48720706f707261776e69652062657a20706c696bc3b37720636f6f6b69652e3c2f703e0d0a3c703ec59a776961646f6d6520756a61776e69616e696520696e666f726d61636a69204a65737465c59b6d7920c59b776961646f6d69207a6e61637a656e6961207072797761746e6fc59b63692069206462616d79206f20746f2c206162792054776f6a6520696e666f726d61636a65206f736f6269737465206e6965206279c5827920756a61776e69616e65206e696575707261776e696f6e796d206f736f626f6d2e204e6965207370727a6564616a656d792c206e69652075646f7374c499706e69616d7920616e69206e69652077796d69656e69616d792054776f6963682064616e796368206f736f626f77796368207a20c5bc61646e796d69207374726f6e616d692074727a6563696d692062657a2054776f6a656a207a676f64792c20636879626120c5bc65206a65737420746f2077796d6167616e652070727a657a20707261776f2e3c2f703e0d0a3c703e5a65776ec49974727a6e6520c582c485637a61204e61206e61737a796d20626c6f6775206d6fc5bc656d79207a616d6965737a637a61c48720c582c485637a6120646f20696e6e796368207374726f6e20696e7465726e65746f77796368206c756220617274796b75c582c3b3772c206b74c3b3726520757761c5bc616d79207a6120776172746fc59b63696f776520646c61206e61737a79636820637a7974656c6e696bc3b3772e204e616c65c5bc792070616d69c4997461c4872c20c5bc65206e696520706f6e6f73696d79206f64706f776965647a69616c6e6fc59b6369207a6120747265c59b6369206c7562207072616b74796b69207072797761746e6fc59b63692074796368207374726f6e2e205a616368c49963616d7920646f207a61706f7a6e616e6961207369c499207a20706f6c6974796bc485207072797761746e6fc59b6369206b61c5bc64656a207a2074796368207374726f6e2070727a65642075646f7374c499706e69656e69656d206a616b6963686b6f6c7769656b20696e666f726d61636a69206f736f626973747963682e3c2f703e0d0a3c703e4f6368726f6e612064616e79636820446f6bc5826164616d792077737a656c6b696368207374617261c5842c20616279206368726f6e69c4872054776f6a6520696e666f726d61636a652070727a6564206e696575707261776e696f6e796d20646f7374c49970656d2c207574726174c4852c2077796b6f727a797374616e69656d206c7562207a6d69616ec4852e2053746f73756a656d79206f64706f776965646e696520c59b726f646b6920746563686e69637a6e652c2066697a79637a6e652069206f7267616e697a6163796a6e652c20616279207a617065776e69c4872062657a706965637a65c5847374776f2064616e7963682e3c2f703e223b733a343a22626f6479223b733a303a22223b733a363a22696d61676573223b733a3137333a227b22696d6167655f696e74726f223a22222c22696d6167655f696e74726f5f616c74223a22222c22666c6f61745f696e74726f223a22222c22696d6167655f696e74726f5f63617074696f6e223a22222c22696d6167655f66756c6c74657874223a22222c22696d6167655f66756c6c746578745f616c74223a22222c22666c6f61745f66756c6c74657874223a22222c22696d6167655f66756c6c746578745f63617074696f6e223a22227d223b733a353a226361746964223b693a31303b733a31303a22637265617465645f6279223b693a3538383b733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31393a22323032332d30362d31322031363a35383a3339223b733a31313a226d6f6469666965645f6279223b693a3538383b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a38363a7b733a31343a2261727469636c655f6c61796f7574223b733a393a225f3a64656661756c74223b733a31303a2273686f775f7469746c65223b733a313a2231223b733a31313a226c696e6b5f7469746c6573223b733a313a2231223b733a31303a2273686f775f696e74726f223b733a313a2231223b733a31393a22696e666f5f626c6f636b5f706f736974696f6e223b733a313a2230223b733a32313a22696e666f5f626c6f636b5f73686f775f7469746c65223b733a313a2231223b733a31333a2273686f775f63617465676f7279223b733a313a2231223b733a31333a226c696e6b5f63617465676f7279223b733a313a2231223b733a32303a2273686f775f706172656e745f63617465676f7279223b733a313a2230223b733a32303a226c696e6b5f706172656e745f63617465676f7279223b733a313a2230223b733a31373a2273686f775f6173736f63696174696f6e73223b733a313a2230223b733a353a22666c616773223b733a313a2231223b733a31313a2273686f775f617574686f72223b733a313a2231223b733a31313a226c696e6b5f617574686f72223b733a313a2230223b733a31363a2273686f775f6372656174655f64617465223b733a313a2230223b733a31363a2273686f775f6d6f646966795f64617465223b733a313a2230223b733a31373a2273686f775f7075626c6973685f64617465223b733a313a2231223b733a32303a2273686f775f6974656d5f6e617669676174696f6e223b733a313a2231223b733a31333a2273686f775f726561646d6f7265223b733a313a2231223b733a31393a2273686f775f726561646d6f72655f7469746c65223b733a313a2231223b733a31343a22726561646d6f72655f6c696d6974223b693a3130303b733a393a2273686f775f74616773223b733a313a2231223b733a31313a227265636f72645f68697473223b733a313a2231223b733a393a2273686f775f68697473223b733a313a2231223b733a31313a2273686f775f6e6f61757468223b733a313a2230223b733a31333a2275726c735f706f736974696f6e223b693a303b733a373a2263617074636861223b733a303a22223b733a32333a2273686f775f7075626c697368696e675f6f7074696f6e73223b733a313a2231223b733a32303a2273686f775f61727469636c655f6f7074696f6e73223b733a313a2231223b733a32373a2273686f775f636f6e6669677572655f656469745f6f7074696f6e73223b733a313a2231223b733a31363a2273686f775f7065726d697373696f6e73223b733a313a2231223b733a32323a2273686f775f6173736f63696174696f6e735f65646974223b733a313a2231223b733a31323a22736176655f686973746f7279223b733a313a2231223b733a31333a22686973746f72795f6c696d6974223b693a31303b733a32353a2273686f775f75726c735f696d616765735f66726f6e74656e64223b733a313a2230223b733a32343a2273686f775f75726c735f696d616765735f6261636b656e64223b733a313a2231223b733a373a2274617267657461223b693a303b733a373a2274617267657462223b693a303b733a373a2274617267657463223b693a303b733a31313a22666c6f61745f696e74726f223b733a343a226c656674223b733a31343a22666c6f61745f66756c6c74657874223b733a343a226c656674223b733a31353a2263617465676f72795f6c61796f7574223b733a363a225f3a626c6f67223b733a31393a2273686f775f63617465676f72795f7469746c65223b733a313a2230223b733a31363a2273686f775f6465736372697074696f6e223b733a313a2230223b733a32323a2273686f775f6465736372697074696f6e5f696d616765223b733a313a2230223b733a383a226d61784c6576656c223b733a313a2231223b733a32313a2273686f775f656d7074795f63617465676f72696573223b733a313a2230223b733a31363a2273686f775f6e6f5f61727469636c6573223b733a313a2231223b733a33323a2273686f775f63617465676f72795f68656164696e675f7469746c655f74657874223b733a313a2231223b733a31363a2273686f775f7375626361745f64657363223b733a313a2231223b733a32313a2273686f775f6361745f6e756d5f61727469636c6573223b733a313a2230223b733a31333a2273686f775f6361745f74616773223b733a313a2231223b733a32313a2273686f775f626173655f6465736372697074696f6e223b733a313a2231223b733a31313a226d61784c6576656c636174223b733a323a222d31223b733a32353a2273686f775f656d7074795f63617465676f726965735f636174223b733a313a2230223b733a32303a2273686f775f7375626361745f646573635f636174223b733a313a2231223b733a32353a2273686f775f6361745f6e756d5f61727469636c65735f636174223b733a313a2231223b733a32303a226e756d5f6c656164696e675f61727469636c6573223b693a313b733a31383a22626c6f675f636c6173735f6c656164696e67223b733a303a22223b733a31383a226e756d5f696e74726f5f61727469636c6573223b693a343b733a31303a22626c6f675f636c617373223b733a303a22223b733a31313a226e756d5f636f6c756d6e73223b693a313b733a31383a226d756c74695f636f6c756d6e5f6f72646572223b733a313a2230223b733a393a226e756d5f6c696e6b73223b693a343b733a32343a2273686f775f73756263617465676f72795f636f6e74656e74223b733a313a2230223b733a31363a226c696e6b5f696e74726f5f696d616765223b733a313a2230223b733a32313a2273686f775f706167696e6174696f6e5f6c696d6974223b733a313a2231223b733a31323a2266696c7465725f6669656c64223b733a343a2268696465223b733a31333a2273686f775f68656164696e6773223b733a313a2231223b733a31343a226c6973745f73686f775f64617465223b733a313a2230223b733a31313a22646174655f666f726d6174223b733a303a22223b733a31343a226c6973745f73686f775f68697473223b733a313a2231223b733a31363a226c6973745f73686f775f617574686f72223b733a313a2231223b733a31313a22646973706c61795f6e756d223b733a323a223130223b733a31313a226f7264657262795f707269223b733a353a226f72646572223b733a31313a226f7264657262795f736563223b733a353a227264617465223b733a31303a226f726465725f64617465223b733a393a227075626c6973686564223b733a31353a2273686f775f706167696e6174696f6e223b733a313a2232223b733a32333a2273686f775f706167696e6174696f6e5f726573756c7473223b733a313a2231223b733a31333a2273686f775f6665617475726564223b733a343a2273686f77223b733a31343a2273686f775f666565645f6c696e6b223b733a313a2231223b733a31323a22666565645f73756d6d617279223b733a313a2230223b733a31383a22666565645f73686f775f726561646d6f7265223b733a313a2230223b733a373a227365665f696473223b693a313b733a32303a22637573746f6d5f6669656c64735f656e61626c65223b733a313a2231223b733a31363a22776f726b666c6f775f656e61626c6564223b733a313a2230223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a333a7b733a363a22726f626f7473223b733a303a22223b733a363a22617574686f72223b733a303a22223b733a363a22726967687473223b733a303a22223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a2276657273696f6e223b693a323b733a383a226f72646572696e67223b693a313b733a383a2263617465676f7279223b733a343a224d656e75223b733a393a226361745f7374617465223b693a313b733a31303a226361745f616363657373223b693a313b733a343a22736c7567223b733a32323a22383a706f6c6974796b612d7072797761746e6f736369223b733a373a22636174736c7567223b733a373a2231303a6d656e75223b733a363a22617574686f72223b733a363a224b6163706572223b733a363a226c61796f7574223b733a373a2261727469636c65223b733a373a22636f6e74657874223b733a31393a22636f6d5f636f6e74656e742e61727469636c65223b733a31303a226d657461617574686f72223b4e3b7d693a343b4e3b693a353b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d693a363b733a313a222a223b693a373b4e3b693a383b4e3b693a393b733a31393a22323032332d30362d31322031363a34313a3339223b693a31303b4e3b693a31313b733a37363a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d383a706f6c6974796b612d7072797761746e6f7363692663617469643d3130223b693a31323b4e3b693a31333b733a31393a22323032332d30362d31322031363a34313a3339223b693a31343b693a313b693a31353b613a343a7b733a343a2254797065223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a373a2241727469636c65223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a333b7d7d733a363a22417574686f72223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a363a224b6163706572223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a353b7d7d733a383a2243617465676f7279223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a343a224d656e75223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a313a222a223b733a363a226e6573746564223b623a313b733a323a226964223b693a32303b7d7d733a383a224c616e6775616765223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a393b7d7d7d693a31363b733a32313a22506f6c6974796b61207072797761746e6fc59b6369223b693a31373b693a333b693a31383b733a34363a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d38223b7d);
+INSERT INTO `buf3w_finder_links` (`link_id`, `url`, `route`, `title`, `description`, `indexdate`, `md5sum`, `published`, `state`, `access`, `language`, `publish_start_date`, `publish_end_date`, `start_date`, `end_date`, `list_price`, `sale_price`, `type_id`, `object`) VALUES
+(13, 'index.php?option=com_content&view=article&id=9', 'index.php?option=com_content&view=article&id=9:warunki-korzystania&catid=10', 'Warunki korzystania', ' Witamy na stronie Warunków Korzystania ze strony naszego blogu z wiadomościami. Poniżej przedstawiamy zasady, których należy przestrzegać podczas korzystania z naszej strony. Poprzez dostęp i przeglądanie naszego blogu, wyrażasz zgodę na poniższe warunki. Jeśli nie zgadzasz się z którymkolwiek z poniższych warunków, prosimy o zaprzestanie korzystania z naszej strony. Treści i prawa autorskie: Wszystkie treści zamieszczone na naszej stronie są chronione prawem autorskim. Nie wolno kopiować, reprodukować, publikować, transmitować ani modyfikować żadnej części treści bez naszej zgody. Treści mogą być wykorzystywane jedynie w celach osobistych i niekomercyjnych. Odpowiedzialność: Dokładamy wszelkich starań, aby zapewnić rzetelność, dokładność i aktualność informacji zamieszczonych na naszym blogu. Jednak nie ponosimy odpowiedzialności za ewentualne błędy, opóźnienia, niepełność lub szkody wynikające z korzystania z tych informacji. Korzystanie z treści na własne ryzyko. Zewnętrzne łącza: Na naszym blogu mogą być zamieszczone łącza do innych stron internetowych. Nie ponosimy odpowiedzialności za treści lub praktyki prywatności tych stron. Korzystanie z tych łączy jest dobrowolne i na własne ryzyko. Komunikacja: Zachęcamy do udzielania komentarzy i opinii na naszym blogu. Jednak wszelkie komentarze i treści przesłane przez użytkowników podlegają moderacji. Zastrzegamy sobie prawo do usunięcia, zmiany lub odrzucenia dowolnego komentarza bez podania przyczyny. Prywatność: Szanujemy Twoją prywatność. Informacje, które możemy gromadzić od Ciebie, są objęte naszą Polityką Prywatności. Prosimy o zapoznanie się z tą polityką, aby dowiedzieć się, w jaki sposób gromadzimy, używamy i chronimy Twoje dane osobowe. Zmiany w warunkach korzystania: Zastrzegamy sobie prawo do zmiany niniejszych Warunków Korzystania w dowolnym czasie. Zaktualizowane warunki będą publikowane na tejstronie i będą obowiązywać od momentu opublikowania. Zalecamy regularne sprawdzanie tej strony w celu zapoznania się z ewentualnymi zmianami. Dziękujemy za przestrzeganie naszych Warunków Korzystania. Zapraszamy do dalszego korzystania z naszego blogu z wiadomościami i cieszenia się najnowszymi ', '2023-06-12 16:58:05', '64e2a0b38f8188258fe50f458553fb07', 1, 1, 1, '*', '2023-06-12 16:49:24', NULL, '2023-06-12 16:49:24', NULL, 0, 0, 3, 0x4f3a35323a224a6f6f6d6c615c436f6d706f6e656e745c46696e6465725c41646d696e6973747261746f725c496e64657865725c526573756c74223a31393a7b693a303b693a313b693a313b733a353a22656e2d4742223b693a323b733a323239333a2220576974616d79206e61207374726f6e696520576172756e6bc3b377204b6f727a797374616e6961207a65207374726f6e79206e61737a65676f20626c6f6775207a20776961646f6d6fc59b6369616d692e20506f6e69c5bc656a2070727a65647374617769616d79207a61736164792c206b74c3b372796368206e616c65c5bc792070727a657374727a656761c48720706f64637a6173206b6f727a797374616e6961207a206e61737a656a207374726f6e792e20506f70727a657a20646f7374c4997020692070727a65676cc48564616e6965206e61737a65676f20626c6f67752c2077797261c5bc61737a207a676f64c499206e6120706f6e69c5bc737a6520776172756e6b692e204a65c59b6c69206e6965207a6761647a61737a207369c499207a206b74c3b372796d6b6f6c7769656b207a20706f6e69c5bc737a79636820776172756e6bc3b3772c2070726f73696d79206f207a6170727a657374616e6965206b6f727a797374616e6961207a206e61737a656a207374726f6e792e20547265c59b63692069207072617761206175746f72736b69653a2057737a7973746b696520747265c59b6369207a616d6965737a637a6f6e65206e61206e61737a656a207374726f6e69652073c485206368726f6e696f6e652070726177656d206175746f72736b696d2e204e696520776f6c6e6f206b6f70696f7761c4872c20726570726f64756b6f7761c4872c207075626c696b6f7761c4872c207472616e736d69746f7761c48720616e69206d6f647966696b6f7761c48720c5bc61646e656a20637ac499c59b636920747265c59b63692062657a206e61737a656a207a676f64792e20547265c59b6369206d6f67c485206279c4872077796b6f727a7973747977616e65206a6564796e696520772063656c616368206f736f626973747963682069206e69656b6f6d657263796a6e7963682e204f64706f776965647a69616c6e6fc59bc4873a20446f6bc5826164616d792077737a656c6b696368207374617261c5842c20616279207a617065776e69c48720727a6574656c6e6fc59bc4872c20646f6bc58261646e6fc59bc487206920616b7475616c6e6fc59bc48720696e666f726d61636a69207a616d6965737a637a6f6e796368206e61206e61737a796d20626c6f67752e204a65646e616b206e696520706f6e6f73696d79206f64706f776965647a69616c6e6fc59b6369207a61206577656e7475616c6e652062c582c49964792c206f70c3b3c5ba6e69656e69612c206e69657065c5826e6fc59bc487206c756220737a6b6f64792077796e696b616ac4856365207a206b6f727a797374616e6961207a207479636820696e666f726d61636a692e204b6f727a797374616e6965207a20747265c59b6369206e612077c58261736e652072797a796b6f2e205a65776ec49974727a6e6520c582c485637a613a204e61206e61737a796d20626c6f6775206d6f67c485206279c487207a616d6965737a637a6f6e6520c582c485637a6120646f20696e6e796368207374726f6e20696e7465726e65746f777963682e204e696520706f6e6f73696d79206f64706f776965647a69616c6e6fc59b6369207a6120747265c59b6369206c7562207072616b74796b69207072797761746e6fc59b63692074796368207374726f6e2e204b6f727a797374616e6965207a207479636820c582c485637a79206a65737420646f62726f776f6c6e652069206e612077c58261736e652072797a796b6f2e204b6f6d756e696b61636a613a205a616368c49963616d7920646f2075647a69656c616e6961206b6f6d656e7461727a792069206f70696e6969206e61206e61737a796d20626c6f67752e204a65646e616b2077737a656c6b6965206b6f6d656e7461727a65206920747265c59b63692070727a6573c582616e652070727a657a2075c5bc79746b6f776e696bc3b37720706f646c6567616ac485206d6f64657261636a692e205a617374727a6567616d7920736f62696520707261776f20646f207573756e69c4996369612c207a6d69616e79206c7562206f64727a7563656e696120646f776f6c6e65676f206b6f6d656e7461727a612062657a20706f64616e69612070727a79637a796e792e205072797761746e6fc59bc4873a20537a616e756a656d792054776f6ac485207072797761746e6fc59bc4872e20496e666f726d61636a652c206b74c3b37265206d6fc5bc656d792067726f6d61647a69c487206f64204369656269652c2073c485206f626ac4997465206e61737ac48520506f6c6974796bc485205072797761746e6fc59b63692e2050726f73696d79206f207a61706f7a6e616e6965207369c499207a2074c48520706f6c6974796bc4852c2061627920646f776965647a6965c487207369c4992c2077206a616b692073706f73c3b3622067726f6d61647a696d792c2075c5bc7977616d792069206368726f6e696d792054776f6a652064616e65206f736f626f77652e205a6d69616e79207720776172756e6b616368206b6f727a797374616e69613a205a617374727a6567616d7920736f62696520707261776f20646f207a6d69616e79206e696e69656a737a79636820576172756e6bc3b377204b6f727a797374616e6961207720646f776f6c6e796d20637a617369652e205a616b7475616c697a6f77616e6520776172756e6b692062c49964c485207075626c696b6f77616e65206e612074656a7374726f6e696520692062c49964c485206f626f7769c4857a797761c487206f64206d6f6d656e7475206f7075626c696b6f77616e69612e205a616c6563616d7920726567756c61726e65207370726177647a616e69652074656a207374726f6e7920772063656c75207a61706f7a6e616e6961207369c499207a206577656e7475616c6e796d69207a6d69616e616d692e20447a69c4996b756a656d79207a612070727a657374727a6567616e6965206e61737a79636820576172756e6bc3b377204b6f727a797374616e69612e205a61707261737a616d7920646f2064616c737a65676f206b6f727a797374616e6961207a206e61737a65676f20626c6f6775207a20776961646f6d6fc59b6369616d69206920636965737a656e6961207369c499206e616a6e6f77737a796d6920223b693a333b613a32353a7b733a323a226964223b693a393b733a353a22616c696173223b733a31393a22776172756e6b69206b6f727a797374616e6961223b733a373a2273756d6d617279223b733a323434363a223c703e576974616d79206e61207374726f6e696520576172756e6bc3b377204b6f727a797374616e6961207a65207374726f6e79206e61737a65676f20626c6f6775207a20776961646f6d6fc59b6369616d692e20506f6e69c5bc656a2070727a65647374617769616d79207a61736164792c206b74c3b372796368206e616c65c5bc792070727a657374727a656761c48720706f64637a6173206b6f727a797374616e6961207a206e61737a656a207374726f6e792e20506f70727a657a20646f7374c4997020692070727a65676cc48564616e6965206e61737a65676f20626c6f67752c2077797261c5bc61737a207a676f64c499206e6120706f6e69c5bc737a6520776172756e6b692e204a65c59b6c69206e6965207a6761647a61737a207369c499207a206b74c3b372796d6b6f6c7769656b207a20706f6e69c5bc737a79636820776172756e6bc3b3772c2070726f73696d79206f207a6170727a657374616e6965206b6f727a797374616e6961207a206e61737a656a207374726f6e792e3c2f703e0d0a3c6f6c3e0d0a3c6c693e0d0a3c703e547265c59b63692069207072617761206175746f72736b69653a2057737a7973746b696520747265c59b6369207a616d6965737a637a6f6e65206e61206e61737a656a207374726f6e69652073c485206368726f6e696f6e652070726177656d206175746f72736b696d2e204e696520776f6c6e6f206b6f70696f7761c4872c20726570726f64756b6f7761c4872c207075626c696b6f7761c4872c207472616e736d69746f7761c48720616e69206d6f647966696b6f7761c48720c5bc61646e656a20637ac499c59b636920747265c59b63692062657a206e61737a656a207a676f64792e20547265c59b6369206d6f67c485206279c4872077796b6f727a7973747977616e65206a6564796e696520772063656c616368206f736f626973747963682069206e69656b6f6d657263796a6e7963682e3c2f703e0d0a3c2f6c693e0d0a3c6c693e0d0a3c703e4f64706f776965647a69616c6e6fc59bc4873a20446f6bc5826164616d792077737a656c6b696368207374617261c5842c20616279207a617065776e69c48720727a6574656c6e6fc59bc4872c20646f6bc58261646e6fc59bc487206920616b7475616c6e6fc59bc48720696e666f726d61636a69207a616d6965737a637a6f6e796368206e61206e61737a796d20626c6f67752e204a65646e616b206e696520706f6e6f73696d79206f64706f776965647a69616c6e6fc59b6369207a61206577656e7475616c6e652062c582c49964792c206f70c3b3c5ba6e69656e69612c206e69657065c5826e6fc59bc487206c756220737a6b6f64792077796e696b616ac4856365207a206b6f727a797374616e6961207a207479636820696e666f726d61636a692e204b6f727a797374616e6965207a20747265c59b6369206e612077c58261736e652072797a796b6f2e3c2f703e0d0a3c2f6c693e0d0a3c6c693e0d0a3c703e5a65776ec49974727a6e6520c582c485637a613a204e61206e61737a796d20626c6f6775206d6f67c485206279c487207a616d6965737a637a6f6e6520c582c485637a6120646f20696e6e796368207374726f6e20696e7465726e65746f777963682e204e696520706f6e6f73696d79206f64706f776965647a69616c6e6fc59b6369207a6120747265c59b6369206c7562207072616b74796b69207072797761746e6fc59b63692074796368207374726f6e2e204b6f727a797374616e6965207a207479636820c582c485637a79206a65737420646f62726f776f6c6e652069206e612077c58261736e652072797a796b6f2e3c2f703e0d0a3c2f6c693e0d0a3c6c693e0d0a3c703e4b6f6d756e696b61636a613a205a616368c49963616d7920646f2075647a69656c616e6961206b6f6d656e7461727a792069206f70696e6969206e61206e61737a796d20626c6f67752e204a65646e616b2077737a656c6b6965206b6f6d656e7461727a65206920747265c59b63692070727a6573c582616e652070727a657a2075c5bc79746b6f776e696bc3b37720706f646c6567616ac485206d6f64657261636a692e205a617374727a6567616d7920736f62696520707261776f20646f207573756e69c4996369612c207a6d69616e79206c7562206f64727a7563656e696120646f776f6c6e65676f206b6f6d656e7461727a612062657a20706f64616e69612070727a79637a796e792e3c2f703e0d0a3c2f6c693e0d0a3c6c693e0d0a3c703e5072797761746e6fc59bc4873a20537a616e756a656d792054776f6ac485207072797761746e6fc59bc4872e20496e666f726d61636a652c206b74c3b37265206d6fc5bc656d792067726f6d61647a69c487206f64204369656269652c2073c485206f626ac4997465206e61737ac48520506f6c6974796bc485205072797761746e6fc59b63692e2050726f73696d79206f207a61706f7a6e616e6965207369c499207a2074c48520706f6c6974796bc4852c2061627920646f776965647a6965c487207369c4992c2077206a616b692073706f73c3b3622067726f6d61647a696d792c2075c5bc7977616d792069206368726f6e696d792054776f6a652064616e65206f736f626f77652e3c2f703e0d0a3c2f6c693e0d0a3c6c693e0d0a3c703e5a6d69616e79207720776172756e6b616368206b6f727a797374616e69613a205a617374727a6567616d7920736f62696520707261776f20646f207a6d69616e79206e696e69656a737a79636820576172756e6bc3b377204b6f727a797374616e6961207720646f776f6c6e796d20637a617369652e205a616b7475616c697a6f77616e6520776172756e6b692062c49964c485207075626c696b6f77616e65206e612074656a207374726f6e696520692062c49964c485206f626f7769c4857a797761c487206f64206d6f6d656e7475206f7075626c696b6f77616e69612e205a616c6563616d7920726567756c61726e65207370726177647a616e69652074656a207374726f6e7920772063656c75207a61706f7a6e616e6961207369c499207a206577656e7475616c6e796d69207a6d69616e616d692e3c2f703e0d0a3c2f6c693e0d0a3c2f6f6c3e0d0a3c703e447a69c4996b756a656d79207a612070727a657374727a6567616e6965206e61737a79636820576172756e6bc3b377204b6f727a797374616e69612e205a61707261737a616d7920646f2064616c737a65676f206b6f727a797374616e6961207a206e61737a65676f20626c6f6775207a20776961646f6d6fc59b6369616d69206920636965737a656e6961207369c499206e616a6e6f77737a796d693c2f703e223b733a343a22626f6479223b733a303a22223b733a363a22696d61676573223b733a3137333a227b22696d6167655f696e74726f223a22222c22696d6167655f696e74726f5f616c74223a22222c22666c6f61745f696e74726f223a22222c22696d6167655f696e74726f5f63617074696f6e223a22222c22696d6167655f66756c6c74657874223a22222c22696d6167655f66756c6c746578745f616c74223a22222c22666c6f61745f66756c6c74657874223a22222c22696d6167655f66756c6c746578745f63617074696f6e223a22227d223b733a353a226361746964223b693a31303b733a31303a22637265617465645f6279223b693a3538383b733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31393a22323032332d30362d31322031363a35383a3035223b733a31313a226d6f6469666965645f6279223b693a3538383b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a38363a7b733a31343a2261727469636c655f6c61796f7574223b733a393a225f3a64656661756c74223b733a31303a2273686f775f7469746c65223b733a313a2231223b733a31313a226c696e6b5f7469746c6573223b733a313a2231223b733a31303a2273686f775f696e74726f223b733a313a2231223b733a31393a22696e666f5f626c6f636b5f706f736974696f6e223b733a313a2230223b733a32313a22696e666f5f626c6f636b5f73686f775f7469746c65223b733a313a2231223b733a31333a2273686f775f63617465676f7279223b733a313a2231223b733a31333a226c696e6b5f63617465676f7279223b733a313a2231223b733a32303a2273686f775f706172656e745f63617465676f7279223b733a313a2230223b733a32303a226c696e6b5f706172656e745f63617465676f7279223b733a313a2230223b733a31373a2273686f775f6173736f63696174696f6e73223b733a313a2230223b733a353a22666c616773223b733a313a2231223b733a31313a2273686f775f617574686f72223b733a313a2231223b733a31313a226c696e6b5f617574686f72223b733a313a2230223b733a31363a2273686f775f6372656174655f64617465223b733a313a2230223b733a31363a2273686f775f6d6f646966795f64617465223b733a313a2230223b733a31373a2273686f775f7075626c6973685f64617465223b733a313a2231223b733a32303a2273686f775f6974656d5f6e617669676174696f6e223b733a313a2231223b733a31333a2273686f775f726561646d6f7265223b733a313a2231223b733a31393a2273686f775f726561646d6f72655f7469746c65223b733a313a2231223b733a31343a22726561646d6f72655f6c696d6974223b693a3130303b733a393a2273686f775f74616773223b733a313a2231223b733a31313a227265636f72645f68697473223b733a313a2231223b733a393a2273686f775f68697473223b733a313a2231223b733a31313a2273686f775f6e6f61757468223b733a313a2230223b733a31333a2275726c735f706f736974696f6e223b693a303b733a373a2263617074636861223b733a303a22223b733a32333a2273686f775f7075626c697368696e675f6f7074696f6e73223b733a313a2231223b733a32303a2273686f775f61727469636c655f6f7074696f6e73223b733a313a2231223b733a32373a2273686f775f636f6e6669677572655f656469745f6f7074696f6e73223b733a313a2231223b733a31363a2273686f775f7065726d697373696f6e73223b733a313a2231223b733a32323a2273686f775f6173736f63696174696f6e735f65646974223b733a313a2231223b733a31323a22736176655f686973746f7279223b733a313a2231223b733a31333a22686973746f72795f6c696d6974223b693a31303b733a32353a2273686f775f75726c735f696d616765735f66726f6e74656e64223b733a313a2230223b733a32343a2273686f775f75726c735f696d616765735f6261636b656e64223b733a313a2231223b733a373a2274617267657461223b693a303b733a373a2274617267657462223b693a303b733a373a2274617267657463223b693a303b733a31313a22666c6f61745f696e74726f223b733a343a226c656674223b733a31343a22666c6f61745f66756c6c74657874223b733a343a226c656674223b733a31353a2263617465676f72795f6c61796f7574223b733a363a225f3a626c6f67223b733a31393a2273686f775f63617465676f72795f7469746c65223b733a313a2230223b733a31363a2273686f775f6465736372697074696f6e223b733a313a2230223b733a32323a2273686f775f6465736372697074696f6e5f696d616765223b733a313a2230223b733a383a226d61784c6576656c223b733a313a2231223b733a32313a2273686f775f656d7074795f63617465676f72696573223b733a313a2230223b733a31363a2273686f775f6e6f5f61727469636c6573223b733a313a2231223b733a33323a2273686f775f63617465676f72795f68656164696e675f7469746c655f74657874223b733a313a2231223b733a31363a2273686f775f7375626361745f64657363223b733a313a2231223b733a32313a2273686f775f6361745f6e756d5f61727469636c6573223b733a313a2230223b733a31333a2273686f775f6361745f74616773223b733a313a2231223b733a32313a2273686f775f626173655f6465736372697074696f6e223b733a313a2231223b733a31313a226d61784c6576656c636174223b733a323a222d31223b733a32353a2273686f775f656d7074795f63617465676f726965735f636174223b733a313a2230223b733a32303a2273686f775f7375626361745f646573635f636174223b733a313a2231223b733a32353a2273686f775f6361745f6e756d5f61727469636c65735f636174223b733a313a2231223b733a32303a226e756d5f6c656164696e675f61727469636c6573223b693a313b733a31383a22626c6f675f636c6173735f6c656164696e67223b733a303a22223b733a31383a226e756d5f696e74726f5f61727469636c6573223b693a343b733a31303a22626c6f675f636c617373223b733a303a22223b733a31313a226e756d5f636f6c756d6e73223b693a313b733a31383a226d756c74695f636f6c756d6e5f6f72646572223b733a313a2230223b733a393a226e756d5f6c696e6b73223b693a343b733a32343a2273686f775f73756263617465676f72795f636f6e74656e74223b733a313a2230223b733a31363a226c696e6b5f696e74726f5f696d616765223b733a313a2230223b733a32313a2273686f775f706167696e6174696f6e5f6c696d6974223b733a313a2231223b733a31323a2266696c7465725f6669656c64223b733a343a2268696465223b733a31333a2273686f775f68656164696e6773223b733a313a2231223b733a31343a226c6973745f73686f775f64617465223b733a313a2230223b733a31313a22646174655f666f726d6174223b733a303a22223b733a31343a226c6973745f73686f775f68697473223b733a313a2231223b733a31363a226c6973745f73686f775f617574686f72223b733a313a2231223b733a31313a22646973706c61795f6e756d223b733a323a223130223b733a31313a226f7264657262795f707269223b733a353a226f72646572223b733a31313a226f7264657262795f736563223b733a353a227264617465223b733a31303a226f726465725f64617465223b733a393a227075626c6973686564223b733a31353a2273686f775f706167696e6174696f6e223b733a313a2232223b733a32333a2273686f775f706167696e6174696f6e5f726573756c7473223b733a313a2231223b733a31333a2273686f775f6665617475726564223b733a343a2273686f77223b733a31343a2273686f775f666565645f6c696e6b223b733a313a2231223b733a31323a22666565645f73756d6d617279223b733a313a2230223b733a31383a22666565645f73686f775f726561646d6f7265223b733a313a2230223b733a373a227365665f696473223b693a313b733a32303a22637573746f6d5f6669656c64735f656e61626c65223b733a313a2231223b733a31363a22776f726b666c6f775f656e61626c6564223b733a313a2230223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a333a7b733a363a22726f626f7473223b733a303a22223b733a363a22617574686f72223b733a303a22223b733a363a22726967687473223b733a303a22223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a2276657273696f6e223b693a323b733a383a226f72646572696e67223b693a303b733a383a2263617465676f7279223b733a343a224d656e75223b733a393a226361745f7374617465223b693a313b733a31303a226361745f616363657373223b693a313b733a343a22736c7567223b733a32313a22393a776172756e6b692d6b6f727a797374616e6961223b733a373a22636174736c7567223b733a373a2231303a6d656e75223b733a363a22617574686f72223b733a363a224b6163706572223b733a363a226c61796f7574223b733a373a2261727469636c65223b733a373a22636f6e74657874223b733a31393a22636f6d5f636f6e74656e742e61727469636c65223b733a31303a226d657461617574686f72223b4e3b7d693a343b4e3b693a353b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d693a363b733a313a222a223b693a373b4e3b693a383b4e3b693a393b733a31393a22323032332d30362d31322031363a34393a3234223b693a31303b4e3b693a31313b733a37353a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d393a776172756e6b692d6b6f727a797374616e69612663617469643d3130223b693a31323b4e3b693a31333b733a31393a22323032332d30362d31322031363a34393a3234223b693a31343b693a313b693a31353b613a343a7b733a343a2254797065223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a373a2241727469636c65223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a333b7d7d733a363a22417574686f72223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a363a224b6163706572223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a353b7d7d733a383a2243617465676f7279223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a343a224d656e75223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a313a222a223b733a363a226e6573746564223b623a313b733a323a226964223b693a32303b7d7d733a383a224c616e6775616765223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a393b7d7d7d693a31363b733a31393a22576172756e6b69206b6f727a797374616e6961223b693a31373b693a333b693a31383b733a34363a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d39223b7d),
+(14, 'index.php?option=com_content&view=article&id=10', 'index.php?option=com_content&view=article&id=10:czesto-zadawane-pytania&catid=10', 'Często Zadawane Pytania', ' Witamy na stronie Często Zadawanych Pytań (FAQ) naszego blogu z wiadomościami. Przedstawiamy poniżej odpowiedzi na najczęściej zadawane pytania dotyczące naszej strony i jej działania. Jeśli masz jakiekolwiek pytania, które nie zostały tu uwzględnione, zachęcamy do kontaktu z nami. Jak często aktualizujecie treści na swoim blogu? Staramy się regularnie aktualizować nasz blog, aby dostarczać Ci najnowsze wiadomości i informacje. Publikujemy nowe artykuły i treści w miarę jak ważne wydarzenia mają miejsce. Zachęcamy do regularnego odwiedzania naszego blogu, aby być na bieżąco z najświeższymi informacjami. Czy mogę podzielić się swoimi opiniami lub sugestiami na temat artykułów? Oczywiście! Cenimy sobie zaangażowanie naszych czytelników i chętnie przyjmujemy opinie, sugestie i komentarze dotyczące naszych artykułów. Możesz skorzystać z sekcji komentarzy, aby podzielić się swoimi myślami. Staramy się moderować komentarze i odpowiedzieć na jak najwięcej z nich. Czy mogę korzystać z treści zamieszczonych na Waszym blogu? Treści zamieszczone na naszym blogu są chronione prawem autorskim. W przypadku chęci skorzystania z treści w celach komercyjnych, należy skontaktować się z nami w celu uzyskania zgody. Jednakże, możesz korzystać z naszych treści w ramach użytku osobistego i niekomercyjnego. Czy publikujecie tylko wiadomości z konkretnych dziedzin? Staramy się pokrywać różnorodne tematy i dziedziny, aby zaspokoić różnorodne zainteresowania naszych czytelników. Nasze artykuły obejmują politykę, gospodarkę, naukę, technologię, sport, rozrywkę i wiele innych. Dążymy do dostarczenia informacji na tematy, które są ważne i interesujące dla naszych czytelników. Jak mogę skontaktować się z zespołem redakcyjnym? Jeśli masz jakiekolwiek pytania, uwagi lub chciałbyś skontaktować się z naszym zespołem redakcyjnym, możesz skorzystać z formularza kontaktowego dostępnego na naszejstronie. Postaramy się odpowiedzieć na Twoje pytania jak najszybciej. Dziękujemy za odwiedzenie naszej strony Często Zadawanych Pytań. Mamy nadzieję, że odpowiedzi na powyższe pytania pomogły Ci lepiej zrozumieć nasz blog i jego funkcjonowanie. Jeśli masz jak ', '2023-06-12 16:57:51', 'dbb51f79d23f6637e3a5dd975158eacd', 1, 1, 1, '*', '2023-06-12 16:57:51', NULL, '2023-06-12 16:57:51', NULL, 0, 0, 3, 0x4f3a35323a224a6f6f6d6c615c436f6d706f6e656e745c46696e6465725c41646d696e6973747261746f725c496e64657865725c526573756c74223a31393a7b693a303b693a313b693a313b733a353a22656e2d4742223b693a323b733a323236353a2220576974616d79206e61207374726f6e696520437ac49973746f205a61646177616e7963682050797461c584202846415129206e61737a65676f20626c6f6775207a20776961646f6d6fc59b6369616d692e2050727a65647374617769616d7920706f6e69c5bc656a206f64706f776965647a69206e61206e616a637ac499c59b6369656a207a61646177616e6520707974616e696120646f7479637ac4856365206e61737a656a207374726f6e792069206a656a20647a6961c582616e69612e204a65c59b6c69206d61737a206a616b69656b6f6c7769656b20707974616e69612c206b74c3b37265206e6965207a6f737461c582792074752075777a676cc499646e696f6e652c207a616368c49963616d7920646f206b6f6e74616b7475207a206e616d692e204a616b20637ac49973746f20616b7475616c697a756a6563696520747265c59b6369206e612073776f696d20626c6f67753f2053746172616d79207369c49920726567756c61726e696520616b7475616c697a6f7761c487206e61737a20626c6f672c2061627920646f73746172637a61c487204369206e616a6e6f77737a6520776961646f6d6fc59b6369206920696e666f726d61636a652e205075626c696b756a656d79206e6f776520617274796b75c58279206920747265c59b63692077206d696172c499206a616b207761c5bc6e652077796461727a656e6961206d616ac485206d69656a7363652e205a616368c49963616d7920646f20726567756c61726e65676f206f64776965647a616e6961206e61737a65676f20626c6f67752c20616279206279c487206e6120626965c5bcc485636f207a206e616ac59b776965c5bc737a796d6920696e666f726d61636a616d692e20437a79206d6f67c49920706f647a69656c69c487207369c4992073776f696d69206f70696e69616d69206c75622073756765737469616d69206e612074656d617420617274796b75c582c3b3773f204f637a797769c59b636965212043656e696d7920736f626965207a61616e6761c5bc6f77616e6965206e61737a79636820637a7974656c6e696bc3b3772069206368c499746e69652070727a796a6d756a656d79206f70696e69652c2073756765737469652069206b6f6d656e7461727a6520646f7479637ac4856365206e61737a79636820617274796b75c582c3b3772e204d6fc5bc65737a20736b6f727a79737461c487207a2073656b636a69206b6f6d656e7461727a792c2061627920706f647a69656c69c487207369c4992073776f696d69206d79c59b6c616d692e2053746172616d79207369c499206d6f6465726f7761c487206b6f6d656e7461727a652069206f64706f776965647a6965c487206e61206a616b206e616a7769c49963656a207a206e6963682e20437a79206d6f67c499206b6f727a79737461c487207a20747265c59b6369207a616d6965737a637a6f6e796368206e61205761737a796d20626c6f67753f20547265c59b6369207a616d6965737a637a6f6e65206e61206e61737a796d20626c6f67752073c485206368726f6e696f6e652070726177656d206175746f72736b696d2e20572070727a797061646b75206368c499636920736b6f727a797374616e6961207a20747265c59b636920772063656c616368206b6f6d657263796a6e7963682c206e616c65c5bc7920736b6f6e74616b746f7761c487207369c499207a206e616d6920772063656c7520757a79736b616e6961207a676f64792e204a65646e616bc5bc652c206d6fc5bc65737a206b6f727a79737461c487207a206e61737a79636820747265c59b636920772072616d6163682075c5bc79746b75206f736f6269737465676f2069206e69656b6f6d657263796a6e65676f2e20437a79207075626c696b756a656369652074796c6b6f20776961646f6d6fc59b6369207a206b6f6e6b7265746e79636820647a6965647a696e3f2053746172616d79207369c49920706f6b72797761c4872072c3b3c5bc6e6f726f646e652074656d617479206920647a6965647a696e792c20616279207a6173706f6b6f69c4872072c3b3c5bc6e6f726f646e65207a61696e74657265736f77616e6961206e61737a79636820637a7974656c6e696bc3b3772e204e61737a6520617274796b75c58279206f62656a6d756ac48520706f6c6974796bc4992c20676f73706f6461726bc4992c206e61756bc4992c20746563686e6f6c6f6769c4992c2073706f72742c20726f7a7279776bc4992069207769656c6520696e6e7963682e2044c485c5bc796d7920646f20646f73746172637a656e696120696e666f726d61636a69206e612074656d6174792c206b74c3b372652073c485207761c5bc6e65206920696e7465726573756ac485636520646c61206e61737a79636820637a7974656c6e696bc3b3772e204a616b206d6f67c49920736b6f6e74616b746f7761c487207369c499207a207a6573706fc582656d20726564616b63796a6e796d3f204a65c59b6c69206d61737a206a616b69656b6f6c7769656b20707974616e69612c207577616769206c7562206368636961c5826279c59b20736b6f6e74616b746f7761c487207369c499207a206e61737a796d207a6573706fc582656d20726564616b63796a6e796d2c206d6fc5bc65737a20736b6f727a79737461c487207a20666f726d756c61727a61206b6f6e74616b746f7765676f20646f7374c499706e65676f206e61206e61737a656a7374726f6e69652e20506f73746172616d79207369c499206f64706f776965647a6965c487206e612054776f6a6520707974616e6961206a616b206e616a737a79626369656a2e20447a69c4996b756a656d79207a61206f64776965647a656e6965206e61737a656a207374726f6e7920437ac49973746f205a61646177616e7963682050797461c5842e204d616d79206e61647a69656ac4992c20c5bc65206f64706f776965647a69206e6120706f7779c5bc737a6520707974616e696120706f6d6f67c58279204369206c657069656a207a726f7a756d6965c487206e61737a20626c6f672069206a65676f2066756e6b636a6f6e6f77616e69652e204a65c59b6c69206d61737a206a616b20223b693a333b613a32353a7b733a323a226964223b693a31303b733a353a22616c696173223b733a32333a22637a6573746f207a61646177616e6520707974616e6961223b733a373a2273756d6d617279223b733a323339373a223c703e576974616d79206e61207374726f6e696520437ac49973746f205a61646177616e7963682050797461c584202846415129206e61737a65676f20626c6f6775207a20776961646f6d6fc59b6369616d692e2050727a65647374617769616d7920706f6e69c5bc656a206f64706f776965647a69206e61206e616a637ac499c59b6369656a207a61646177616e6520707974616e696120646f7479637ac4856365206e61737a656a207374726f6e792069206a656a20647a6961c582616e69612e204a65c59b6c69206d61737a206a616b69656b6f6c7769656b20707974616e69612c206b74c3b37265206e6965207a6f737461c582792074752075777a676cc499646e696f6e652c207a616368c49963616d7920646f206b6f6e74616b7475207a206e616d692e3c2f703e0d0a3c6f6c3e0d0a3c6c693e0d0a3c703e4a616b20637ac49973746f20616b7475616c697a756a6563696520747265c59b6369206e612073776f696d20626c6f67753f2053746172616d79207369c49920726567756c61726e696520616b7475616c697a6f7761c487206e61737a20626c6f672c2061627920646f73746172637a61c487204369206e616a6e6f77737a6520776961646f6d6fc59b6369206920696e666f726d61636a652e205075626c696b756a656d79206e6f776520617274796b75c58279206920747265c59b63692077206d696172c499206a616b207761c5bc6e652077796461727a656e6961206d616ac485206d69656a7363652e205a616368c49963616d7920646f20726567756c61726e65676f206f64776965647a616e6961206e61737a65676f20626c6f67752c20616279206279c487206e6120626965c5bcc485636f207a206e616ac59b776965c5bc737a796d6920696e666f726d61636a616d692e3c2f703e0d0a3c2f6c693e0d0a3c6c693e0d0a3c703e437a79206d6f67c49920706f647a69656c69c487207369c4992073776f696d69206f70696e69616d69206c75622073756765737469616d69206e612074656d617420617274796b75c582c3b3773f204f637a797769c59b636965212043656e696d7920736f626965207a61616e6761c5bc6f77616e6965206e61737a79636820637a7974656c6e696bc3b3772069206368c499746e69652070727a796a6d756a656d79206f70696e69652c2073756765737469652069206b6f6d656e7461727a6520646f7479637ac4856365206e61737a79636820617274796b75c582c3b3772e204d6fc5bc65737a20736b6f727a79737461c487207a2073656b636a69206b6f6d656e7461727a792c2061627920706f647a69656c69c487207369c4992073776f696d69206d79c59b6c616d692e2053746172616d79207369c499206d6f6465726f7761c487206b6f6d656e7461727a652069206f64706f776965647a6965c487206e61206a616b206e616a7769c49963656a207a206e6963682e3c2f703e0d0a3c2f6c693e0d0a3c6c693e0d0a3c703e437a79206d6f67c499206b6f727a79737461c487207a20747265c59b6369207a616d6965737a637a6f6e796368206e61205761737a796d20626c6f67753f20547265c59b6369207a616d6965737a637a6f6e65206e61206e61737a796d20626c6f67752073c485206368726f6e696f6e652070726177656d206175746f72736b696d2e20572070727a797061646b75206368c499636920736b6f727a797374616e6961207a20747265c59b636920772063656c616368206b6f6d657263796a6e7963682c206e616c65c5bc7920736b6f6e74616b746f7761c487207369c499207a206e616d6920772063656c7520757a79736b616e6961207a676f64792e204a65646e616bc5bc652c206d6fc5bc65737a206b6f727a79737461c487207a206e61737a79636820747265c59b636920772072616d6163682075c5bc79746b75206f736f6269737465676f2069206e69656b6f6d657263796a6e65676f2e3c2f703e0d0a3c2f6c693e0d0a3c6c693e0d0a3c703e437a79207075626c696b756a656369652074796c6b6f20776961646f6d6fc59b6369207a206b6f6e6b7265746e79636820647a6965647a696e3f2053746172616d79207369c49920706f6b72797761c4872072c3b3c5bc6e6f726f646e652074656d617479206920647a6965647a696e792c20616279207a6173706f6b6f69c4872072c3b3c5bc6e6f726f646e65207a61696e74657265736f77616e6961206e61737a79636820637a7974656c6e696bc3b3772e204e61737a6520617274796b75c58279206f62656a6d756ac48520706f6c6974796bc4992c20676f73706f6461726bc4992c206e61756bc4992c20746563686e6f6c6f6769c4992c2073706f72742c20726f7a7279776bc4992069207769656c6520696e6e7963682e2044c485c5bc796d7920646f20646f73746172637a656e696120696e666f726d61636a69206e612074656d6174792c206b74c3b372652073c485207761c5bc6e65206920696e7465726573756ac485636520646c61206e61737a79636820637a7974656c6e696bc3b3772e3c2f703e0d0a3c2f6c693e0d0a3c6c693e0d0a3c703e4a616b206d6f67c49920736b6f6e74616b746f7761c487207369c499207a207a6573706fc582656d20726564616b63796a6e796d3f204a65c59b6c69206d61737a206a616b69656b6f6c7769656b20707974616e69612c207577616769206c7562206368636961c5826279c59b20736b6f6e74616b746f7761c487207369c499207a206e61737a796d207a6573706fc582656d20726564616b63796a6e796d2c206d6fc5bc65737a20736b6f727a79737461c487207a20666f726d756c61727a61206b6f6e74616b746f7765676f20646f7374c499706e65676f206e61206e61737a656a207374726f6e69652e20506f73746172616d79207369c499206f64706f776965647a6965c487206e612054776f6a6520707974616e6961206a616b206e616a737a79626369656a2e3c2f703e0d0a3c2f6c693e0d0a3c2f6f6c3e0d0a3c703e447a69c4996b756a656d79207a61206f64776965647a656e6965206e61737a656a207374726f6e7920437ac49973746f205a61646177616e7963682050797461c5842e204d616d79206e61647a69656ac4992c20c5bc65206f64706f776965647a69206e6120706f7779c5bc737a6520707974616e696120706f6d6f67c58279204369206c657069656a207a726f7a756d6965c487206e61737a20626c6f672069206a65676f2066756e6b636a6f6e6f77616e69652e204a65c59b6c69206d61737a206a616b3c2f703e223b733a343a22626f6479223b733a303a22223b733a363a22696d61676573223b733a3137333a227b22696d6167655f696e74726f223a22222c22696d6167655f696e74726f5f616c74223a22222c22666c6f61745f696e74726f223a22222c22696d6167655f696e74726f5f63617074696f6e223a22222c22696d6167655f66756c6c74657874223a22222c22696d6167655f66756c6c746578745f616c74223a22222c22666c6f61745f66756c6c74657874223a22222c22696d6167655f66756c6c746578745f63617074696f6e223a22227d223b733a353a226361746964223b693a31303b733a31303a22637265617465645f6279223b693a3538383b733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31393a22323032332d30362d31322031363a35373a3531223b733a31313a226d6f6469666965645f6279223b693a3538383b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a38363a7b733a31343a2261727469636c655f6c61796f7574223b733a393a225f3a64656661756c74223b733a31303a2273686f775f7469746c65223b733a313a2231223b733a31313a226c696e6b5f7469746c6573223b733a313a2231223b733a31303a2273686f775f696e74726f223b733a313a2231223b733a31393a22696e666f5f626c6f636b5f706f736974696f6e223b733a313a2230223b733a32313a22696e666f5f626c6f636b5f73686f775f7469746c65223b733a313a2231223b733a31333a2273686f775f63617465676f7279223b733a313a2231223b733a31333a226c696e6b5f63617465676f7279223b733a313a2231223b733a32303a2273686f775f706172656e745f63617465676f7279223b733a313a2230223b733a32303a226c696e6b5f706172656e745f63617465676f7279223b733a313a2230223b733a31373a2273686f775f6173736f63696174696f6e73223b733a313a2230223b733a353a22666c616773223b733a313a2231223b733a31313a2273686f775f617574686f72223b733a313a2231223b733a31313a226c696e6b5f617574686f72223b733a313a2230223b733a31363a2273686f775f6372656174655f64617465223b733a313a2230223b733a31363a2273686f775f6d6f646966795f64617465223b733a313a2230223b733a31373a2273686f775f7075626c6973685f64617465223b733a313a2231223b733a32303a2273686f775f6974656d5f6e617669676174696f6e223b733a313a2231223b733a31333a2273686f775f726561646d6f7265223b733a313a2231223b733a31393a2273686f775f726561646d6f72655f7469746c65223b733a313a2231223b733a31343a22726561646d6f72655f6c696d6974223b693a3130303b733a393a2273686f775f74616773223b733a313a2231223b733a31313a227265636f72645f68697473223b733a313a2231223b733a393a2273686f775f68697473223b733a313a2231223b733a31313a2273686f775f6e6f61757468223b733a313a2230223b733a31333a2275726c735f706f736974696f6e223b693a303b733a373a2263617074636861223b733a303a22223b733a32333a2273686f775f7075626c697368696e675f6f7074696f6e73223b733a313a2231223b733a32303a2273686f775f61727469636c655f6f7074696f6e73223b733a313a2231223b733a32373a2273686f775f636f6e6669677572655f656469745f6f7074696f6e73223b733a313a2231223b733a31363a2273686f775f7065726d697373696f6e73223b733a313a2231223b733a32323a2273686f775f6173736f63696174696f6e735f65646974223b733a313a2231223b733a31323a22736176655f686973746f7279223b733a313a2231223b733a31333a22686973746f72795f6c696d6974223b693a31303b733a32353a2273686f775f75726c735f696d616765735f66726f6e74656e64223b733a313a2230223b733a32343a2273686f775f75726c735f696d616765735f6261636b656e64223b733a313a2231223b733a373a2274617267657461223b693a303b733a373a2274617267657462223b693a303b733a373a2274617267657463223b693a303b733a31313a22666c6f61745f696e74726f223b733a343a226c656674223b733a31343a22666c6f61745f66756c6c74657874223b733a343a226c656674223b733a31353a2263617465676f72795f6c61796f7574223b733a363a225f3a626c6f67223b733a31393a2273686f775f63617465676f72795f7469746c65223b733a313a2230223b733a31363a2273686f775f6465736372697074696f6e223b733a313a2230223b733a32323a2273686f775f6465736372697074696f6e5f696d616765223b733a313a2230223b733a383a226d61784c6576656c223b733a313a2231223b733a32313a2273686f775f656d7074795f63617465676f72696573223b733a313a2230223b733a31363a2273686f775f6e6f5f61727469636c6573223b733a313a2231223b733a33323a2273686f775f63617465676f72795f68656164696e675f7469746c655f74657874223b733a313a2231223b733a31363a2273686f775f7375626361745f64657363223b733a313a2231223b733a32313a2273686f775f6361745f6e756d5f61727469636c6573223b733a313a2230223b733a31333a2273686f775f6361745f74616773223b733a313a2231223b733a32313a2273686f775f626173655f6465736372697074696f6e223b733a313a2231223b733a31313a226d61784c6576656c636174223b733a323a222d31223b733a32353a2273686f775f656d7074795f63617465676f726965735f636174223b733a313a2230223b733a32303a2273686f775f7375626361745f646573635f636174223b733a313a2231223b733a32353a2273686f775f6361745f6e756d5f61727469636c65735f636174223b733a313a2231223b733a32303a226e756d5f6c656164696e675f61727469636c6573223b693a313b733a31383a22626c6f675f636c6173735f6c656164696e67223b733a303a22223b733a31383a226e756d5f696e74726f5f61727469636c6573223b693a343b733a31303a22626c6f675f636c617373223b733a303a22223b733a31313a226e756d5f636f6c756d6e73223b693a313b733a31383a226d756c74695f636f6c756d6e5f6f72646572223b733a313a2230223b733a393a226e756d5f6c696e6b73223b693a343b733a32343a2273686f775f73756263617465676f72795f636f6e74656e74223b733a313a2230223b733a31363a226c696e6b5f696e74726f5f696d616765223b733a313a2230223b733a32313a2273686f775f706167696e6174696f6e5f6c696d6974223b733a313a2231223b733a31323a2266696c7465725f6669656c64223b733a343a2268696465223b733a31333a2273686f775f68656164696e6773223b733a313a2231223b733a31343a226c6973745f73686f775f64617465223b733a313a2230223b733a31313a22646174655f666f726d6174223b733a303a22223b733a31343a226c6973745f73686f775f68697473223b733a313a2231223b733a31363a226c6973745f73686f775f617574686f72223b733a313a2231223b733a31313a22646973706c61795f6e756d223b733a323a223130223b733a31313a226f7264657262795f707269223b733a353a226f72646572223b733a31313a226f7264657262795f736563223b733a353a227264617465223b733a31303a226f726465725f64617465223b733a393a227075626c6973686564223b733a31353a2273686f775f706167696e6174696f6e223b733a313a2232223b733a32333a2273686f775f706167696e6174696f6e5f726573756c7473223b733a313a2231223b733a31333a2273686f775f6665617475726564223b733a343a2273686f77223b733a31343a2273686f775f666565645f6c696e6b223b733a313a2231223b733a31323a22666565645f73756d6d617279223b733a313a2230223b733a31383a22666565645f73686f775f726561646d6f7265223b733a313a2230223b733a373a227365665f696473223b693a313b733a32303a22637573746f6d5f6669656c64735f656e61626c65223b733a313a2231223b733a31363a22776f726b666c6f775f656e61626c6564223b733a313a2230223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a333a7b733a363a22726f626f7473223b733a303a22223b733a363a22617574686f72223b733a303a22223b733a363a22726967687473223b733a303a22223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a2276657273696f6e223b693a313b733a383a226f72646572696e67223b693a303b733a383a2263617465676f7279223b733a343a224d656e75223b733a393a226361745f7374617465223b693a313b733a31303a226361745f616363657373223b693a313b733a343a22736c7567223b733a32363a2231303a637a6573746f2d7a61646177616e652d707974616e6961223b733a373a22636174736c7567223b733a373a2231303a6d656e75223b733a363a22617574686f72223b733a363a224b6163706572223b733a363a226c61796f7574223b733a373a2261727469636c65223b733a373a22636f6e74657874223b733a31393a22636f6d5f636f6e74656e742e61727469636c65223b733a31303a226d657461617574686f72223b4e3b7d693a343b4e3b693a353b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d693a363b733a313a222a223b693a373b4e3b693a383b4e3b693a393b733a31393a22323032332d30362d31322031363a35373a3531223b693a31303b4e3b693a31313b733a38303a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d31303a637a6573746f2d7a61646177616e652d707974616e69612663617469643d3130223b693a31323b4e3b693a31333b733a31393a22323032332d30362d31322031363a35373a3531223b693a31343b693a313b693a31353b613a343a7b733a343a2254797065223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a373a2241727469636c65223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a333b7d7d733a363a22417574686f72223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a363a224b6163706572223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a353b7d7d733a383a2243617465676f7279223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a343a224d656e75223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a313a222a223b733a363a226e6573746564223b623a313b733a323a226964223b693a32303b7d7d733a383a224c616e6775616765223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a393b7d7d7d693a31363b733a32343a22437ac49973746f205a61646177616e6520507974616e6961223b693a31373b693a333b693a31383b733a34373a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d3130223b7d);
+INSERT INTO `buf3w_finder_links` (`link_id`, `url`, `route`, `title`, `description`, `indexdate`, `md5sum`, `published`, `state`, `access`, `language`, `publish_start_date`, `publish_end_date`, `start_date`, `end_date`, `list_price`, `sale_price`, `type_id`, `object`) VALUES
+(15, 'index.php?option=com_content&view=article&id=11', 'index.php?option=com_content&view=article&id=11:dla-zalogowanych&catid=2', 'Dla zalogowanych', '', '2023-06-12 18:29:47', '7c2246272dbf503b8c9982aa909b5cbf', 1, 1, 1, '*', '2023-06-12 18:29:47', NULL, '2023-06-12 18:29:47', NULL, 0, 0, 3, 0x4f3a35323a224a6f6f6d6c615c436f6d706f6e656e745c46696e6465725c41646d696e6973747261746f725c496e64657865725c526573756c74223a31393a7b693a303b693a313b693a313b733a353a22656e2d4742223b693a323b733a303a22223b693a333b613a32353a7b733a323a226964223b693a31313b733a353a22616c696173223b733a31363a22646c61207a616c6f676f77616e796368223b733a373a2273756d6d617279223b733a303a22223b733a343a22626f6479223b733a303a22223b733a363a22696d61676573223b733a3137333a227b22696d6167655f696e74726f223a22222c22696d6167655f696e74726f5f616c74223a22222c22666c6f61745f696e74726f223a22222c22696d6167655f696e74726f5f63617074696f6e223a22222c22696d6167655f66756c6c74657874223a22222c22696d6167655f66756c6c746578745f616c74223a22222c22666c6f61745f66756c6c74657874223a22222c22696d6167655f66756c6c746578745f63617074696f6e223a22227d223b733a353a226361746964223b693a323b733a31303a22637265617465645f6279223b693a3538383b733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31393a22323032332d30362d31322031383a32393a3437223b733a31313a226d6f6469666965645f6279223b693a3538383b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a38363a7b733a31343a2261727469636c655f6c61796f7574223b733a393a225f3a64656661756c74223b733a31303a2273686f775f7469746c65223b733a313a2231223b733a31313a226c696e6b5f7469746c6573223b733a313a2231223b733a31303a2273686f775f696e74726f223b733a313a2231223b733a31393a22696e666f5f626c6f636b5f706f736974696f6e223b733a313a2230223b733a32313a22696e666f5f626c6f636b5f73686f775f7469746c65223b733a313a2231223b733a31333a2273686f775f63617465676f7279223b733a313a2231223b733a31333a226c696e6b5f63617465676f7279223b733a313a2231223b733a32303a2273686f775f706172656e745f63617465676f7279223b733a313a2230223b733a32303a226c696e6b5f706172656e745f63617465676f7279223b733a313a2230223b733a31373a2273686f775f6173736f63696174696f6e73223b733a313a2230223b733a353a22666c616773223b733a313a2231223b733a31313a2273686f775f617574686f72223b733a313a2231223b733a31313a226c696e6b5f617574686f72223b733a313a2230223b733a31363a2273686f775f6372656174655f64617465223b733a313a2230223b733a31363a2273686f775f6d6f646966795f64617465223b733a313a2230223b733a31373a2273686f775f7075626c6973685f64617465223b733a313a2231223b733a32303a2273686f775f6974656d5f6e617669676174696f6e223b733a313a2231223b733a31333a2273686f775f726561646d6f7265223b733a313a2231223b733a31393a2273686f775f726561646d6f72655f7469746c65223b733a313a2231223b733a31343a22726561646d6f72655f6c696d6974223b693a3130303b733a393a2273686f775f74616773223b733a313a2231223b733a31313a227265636f72645f68697473223b733a313a2231223b733a393a2273686f775f68697473223b733a313a2231223b733a31313a2273686f775f6e6f61757468223b733a313a2230223b733a31333a2275726c735f706f736974696f6e223b693a303b733a373a2263617074636861223b733a303a22223b733a32333a2273686f775f7075626c697368696e675f6f7074696f6e73223b733a313a2231223b733a32303a2273686f775f61727469636c655f6f7074696f6e73223b733a313a2231223b733a32373a2273686f775f636f6e6669677572655f656469745f6f7074696f6e73223b733a313a2231223b733a31363a2273686f775f7065726d697373696f6e73223b733a313a2231223b733a32323a2273686f775f6173736f63696174696f6e735f65646974223b733a313a2231223b733a31323a22736176655f686973746f7279223b733a313a2231223b733a31333a22686973746f72795f6c696d6974223b693a31303b733a32353a2273686f775f75726c735f696d616765735f66726f6e74656e64223b733a313a2230223b733a32343a2273686f775f75726c735f696d616765735f6261636b656e64223b733a313a2231223b733a373a2274617267657461223b693a303b733a373a2274617267657462223b693a303b733a373a2274617267657463223b693a303b733a31313a22666c6f61745f696e74726f223b733a343a226c656674223b733a31343a22666c6f61745f66756c6c74657874223b733a343a226c656674223b733a31353a2263617465676f72795f6c61796f7574223b733a363a225f3a626c6f67223b733a31393a2273686f775f63617465676f72795f7469746c65223b733a313a2230223b733a31363a2273686f775f6465736372697074696f6e223b733a313a2230223b733a32323a2273686f775f6465736372697074696f6e5f696d616765223b733a313a2230223b733a383a226d61784c6576656c223b733a313a2231223b733a32313a2273686f775f656d7074795f63617465676f72696573223b733a313a2230223b733a31363a2273686f775f6e6f5f61727469636c6573223b733a313a2231223b733a33323a2273686f775f63617465676f72795f68656164696e675f7469746c655f74657874223b733a313a2231223b733a31363a2273686f775f7375626361745f64657363223b733a313a2231223b733a32313a2273686f775f6361745f6e756d5f61727469636c6573223b733a313a2230223b733a31333a2273686f775f6361745f74616773223b733a313a2231223b733a32313a2273686f775f626173655f6465736372697074696f6e223b733a313a2231223b733a31313a226d61784c6576656c636174223b733a323a222d31223b733a32353a2273686f775f656d7074795f63617465676f726965735f636174223b733a313a2230223b733a32303a2273686f775f7375626361745f646573635f636174223b733a313a2231223b733a32353a2273686f775f6361745f6e756d5f61727469636c65735f636174223b733a313a2231223b733a32303a226e756d5f6c656164696e675f61727469636c6573223b693a313b733a31383a22626c6f675f636c6173735f6c656164696e67223b733a303a22223b733a31383a226e756d5f696e74726f5f61727469636c6573223b693a343b733a31303a22626c6f675f636c617373223b733a303a22223b733a31313a226e756d5f636f6c756d6e73223b693a313b733a31383a226d756c74695f636f6c756d6e5f6f72646572223b733a313a2230223b733a393a226e756d5f6c696e6b73223b693a343b733a32343a2273686f775f73756263617465676f72795f636f6e74656e74223b733a313a2230223b733a31363a226c696e6b5f696e74726f5f696d616765223b733a313a2230223b733a32313a2273686f775f706167696e6174696f6e5f6c696d6974223b733a313a2231223b733a31323a2266696c7465725f6669656c64223b733a343a2268696465223b733a31333a2273686f775f68656164696e6773223b733a313a2231223b733a31343a226c6973745f73686f775f64617465223b733a313a2230223b733a31313a22646174655f666f726d6174223b733a303a22223b733a31343a226c6973745f73686f775f68697473223b733a313a2231223b733a31363a226c6973745f73686f775f617574686f72223b733a313a2231223b733a31313a22646973706c61795f6e756d223b733a323a223130223b733a31313a226f7264657262795f707269223b733a353a226f72646572223b733a31313a226f7264657262795f736563223b733a353a227264617465223b733a31303a226f726465725f64617465223b733a393a227075626c6973686564223b733a31353a2273686f775f706167696e6174696f6e223b733a313a2232223b733a32333a2273686f775f706167696e6174696f6e5f726573756c7473223b733a313a2231223b733a31333a2273686f775f6665617475726564223b733a343a2273686f77223b733a31343a2273686f775f666565645f6c696e6b223b733a313a2231223b733a31323a22666565645f73756d6d617279223b733a313a2230223b733a31383a22666565645f73686f775f726561646d6f7265223b733a313a2230223b733a373a227365665f696473223b693a313b733a32303a22637573746f6d5f6669656c64735f656e61626c65223b733a313a2231223b733a31363a22776f726b666c6f775f656e61626c6564223b733a313a2230223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a333a7b733a363a22726f626f7473223b733a303a22223b733a363a22617574686f72223b733a303a22223b733a363a22726967687473223b733a303a22223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a2276657273696f6e223b693a313b733a383a226f72646572696e67223b693a303b733a383a2263617465676f7279223b733a31333a22556e63617465676f7269736564223b733a393a226361745f7374617465223b693a313b733a31303a226361745f616363657373223b693a313b733a343a22736c7567223b733a31393a2231313a646c612d7a616c6f676f77616e796368223b733a373a22636174736c7567223b733a31353a22323a756e63617465676f7269736564223b733a363a22617574686f72223b733a353a2241646d696e223b733a363a226c61796f7574223b733a373a2261727469636c65223b733a373a22636f6e74657874223b733a31393a22636f6d5f636f6e74656e742e61727469636c65223b733a31303a226d657461617574686f72223b4e3b7d693a343b4e3b693a353b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d693a363b733a313a222a223b693a373b4e3b693a383b4e3b693a393b733a31393a22323032332d30362d31322031383a32393a3437223b693a31303b4e3b693a31313b733a37323a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d31313a646c612d7a616c6f676f77616e7963682663617469643d32223b693a31323b4e3b693a31333b733a31393a22323032332d30362d31322031383a32393a3437223b693a31343b693a313b693a31353b613a343a7b733a343a2254797065223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a373a2241727469636c65223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a333b7d7d733a363a22417574686f72223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a353a2241646d696e223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a32313b7d7d733a383a2243617465676f7279223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a31333a22556e63617465676f7269736564223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a313a222a223b733a363a226e6573746564223b623a313b733a323a226964223b693a31353b7d7d733a383a224c616e6775616765223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a393b7d7d7d693a31363b733a31363a22446c61207a616c6f676f77616e796368223b693a31373b693a333b693a31383b733a34373a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d3131223b7d),
+(16, 'index.php?option=com_content&view=article&id=12', 'index.php?option=com_content&view=article&id=12:dane-kontaktowe&catid=2', 'Dane kontaktowe', ' Smartbees Sp. z o.o. ul. Kępska 2, 45-129 Opole kontakt@smartbees.pl Biuro: +48 727 518 073 Sprzedaż: +48 727 498 073 KRS: 0000739101 NIP: 7543185898 REGON: 380709267 ', '2023-06-12 18:46:19', '37a75fceecee70afa240ff2ca3c1f274', 1, 1, 1, '*', '2023-06-12 18:46:19', NULL, '2023-06-12 18:46:19', NULL, 0, 0, 3, 0x4f3a35323a224a6f6f6d6c615c436f6d706f6e656e745c46696e6465725c41646d696e6973747261746f725c496e64657865725c526573756c74223a31393a7b693a303b693a313b693a313b733a353a22656e2d4742223b693a323b733a3137303a2220536d617274626565732053702e207a206f2e6f2e20756c2e204bc49970736b6120322c2034352d313239204f706f6c65206b6f6e74616b7440736d617274626565732e706c20426975726f3a202b3438203732372035313820303733205370727a656461c5bc3a202b3438203732372034393820303733204b52533a2030303030373339313031204e49503a2037353433313835383938205245474f4e3a2033383037303932363720223b693a333b613a32353a7b733a323a226964223b693a31323b733a353a22616c696173223b733a31353a2264616e65206b6f6e74616b746f7765223b733a373a2273756d6d617279223b733a3337363a223c7020636c6173733d227469746c65223e536d617274626565732053702e207a206f2e6f2e3c2f703e0d0a3c703e756c2e204bc49970736b6120322c2034352d313239204f706f6c653c6272202f3e3c6120687265663d226d61696c746f3a6b6f6e74616b7440736d617274626565732e706c223e6b6f6e74616b7440736d617274626565732e706c3c2f613e3c6272202f3e3c7374726f6e673e426975726f3c2f7374726f6e673e3ac2a03c6120687265663d2274656c3a2b3438203732372035313820303733223e2b34382037323720353138203037333c2f613e3c6272202f3e3c7374726f6e673e5370727a656461c5bc3c2f7374726f6e673e3ac2a03c6120687265663d2274656c3a2b3438203732372034393820303733223e2b34382037323720343938203037333c2f613e3c2f703e0d0a3c703e4b52533a20303030303733393130313c6272202f3e4e49503a20373534333138353839383c6272202f3e5245474f4e3a203338303730393236373c2f703e223b733a343a22626f6479223b733a303a22223b733a363a22696d61676573223b733a3137333a227b22696d6167655f696e74726f223a22222c22696d6167655f696e74726f5f616c74223a22222c22666c6f61745f696e74726f223a22222c22696d6167655f696e74726f5f63617074696f6e223a22222c22696d6167655f66756c6c74657874223a22222c22696d6167655f66756c6c746578745f616c74223a22222c22666c6f61745f66756c6c74657874223a22222c22696d6167655f66756c6c746578745f63617074696f6e223a22227d223b733a353a226361746964223b693a323b733a31303a22637265617465645f6279223b693a3538383b733a31363a22637265617465645f62795f616c696173223b733a303a22223b733a383a226d6f646966696564223b733a31393a22323032332d30362d31322031383a34363a3139223b733a31313a226d6f6469666965645f6279223b693a3538383b733a363a22706172616d73223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a38363a7b733a31343a2261727469636c655f6c61796f7574223b733a393a225f3a64656661756c74223b733a31303a2273686f775f7469746c65223b733a313a2231223b733a31313a226c696e6b5f7469746c6573223b733a313a2231223b733a31303a2273686f775f696e74726f223b733a313a2231223b733a31393a22696e666f5f626c6f636b5f706f736974696f6e223b733a313a2230223b733a32313a22696e666f5f626c6f636b5f73686f775f7469746c65223b733a313a2231223b733a31333a2273686f775f63617465676f7279223b733a313a2231223b733a31333a226c696e6b5f63617465676f7279223b733a313a2231223b733a32303a2273686f775f706172656e745f63617465676f7279223b733a313a2230223b733a32303a226c696e6b5f706172656e745f63617465676f7279223b733a313a2230223b733a31373a2273686f775f6173736f63696174696f6e73223b733a313a2230223b733a353a22666c616773223b733a313a2231223b733a31313a2273686f775f617574686f72223b733a313a2231223b733a31313a226c696e6b5f617574686f72223b733a313a2230223b733a31363a2273686f775f6372656174655f64617465223b733a313a2230223b733a31363a2273686f775f6d6f646966795f64617465223b733a313a2230223b733a31373a2273686f775f7075626c6973685f64617465223b733a313a2231223b733a32303a2273686f775f6974656d5f6e617669676174696f6e223b733a313a2231223b733a31333a2273686f775f726561646d6f7265223b733a313a2231223b733a31393a2273686f775f726561646d6f72655f7469746c65223b733a313a2231223b733a31343a22726561646d6f72655f6c696d6974223b693a3130303b733a393a2273686f775f74616773223b733a313a2231223b733a31313a227265636f72645f68697473223b733a313a2231223b733a393a2273686f775f68697473223b733a313a2231223b733a31313a2273686f775f6e6f61757468223b733a313a2230223b733a31333a2275726c735f706f736974696f6e223b693a303b733a373a2263617074636861223b733a303a22223b733a32333a2273686f775f7075626c697368696e675f6f7074696f6e73223b733a313a2231223b733a32303a2273686f775f61727469636c655f6f7074696f6e73223b733a313a2231223b733a32373a2273686f775f636f6e6669677572655f656469745f6f7074696f6e73223b733a313a2231223b733a31363a2273686f775f7065726d697373696f6e73223b733a313a2231223b733a32323a2273686f775f6173736f63696174696f6e735f65646974223b733a313a2231223b733a31323a22736176655f686973746f7279223b733a313a2231223b733a31333a22686973746f72795f6c696d6974223b693a31303b733a32353a2273686f775f75726c735f696d616765735f66726f6e74656e64223b733a313a2230223b733a32343a2273686f775f75726c735f696d616765735f6261636b656e64223b733a313a2231223b733a373a2274617267657461223b693a303b733a373a2274617267657462223b693a303b733a373a2274617267657463223b693a303b733a31313a22666c6f61745f696e74726f223b733a343a226c656674223b733a31343a22666c6f61745f66756c6c74657874223b733a343a226c656674223b733a31353a2263617465676f72795f6c61796f7574223b733a363a225f3a626c6f67223b733a31393a2273686f775f63617465676f72795f7469746c65223b733a313a2230223b733a31363a2273686f775f6465736372697074696f6e223b733a313a2230223b733a32323a2273686f775f6465736372697074696f6e5f696d616765223b733a313a2230223b733a383a226d61784c6576656c223b733a313a2231223b733a32313a2273686f775f656d7074795f63617465676f72696573223b733a313a2230223b733a31363a2273686f775f6e6f5f61727469636c6573223b733a313a2231223b733a33323a2273686f775f63617465676f72795f68656164696e675f7469746c655f74657874223b733a313a2231223b733a31363a2273686f775f7375626361745f64657363223b733a313a2231223b733a32313a2273686f775f6361745f6e756d5f61727469636c6573223b733a313a2230223b733a31333a2273686f775f6361745f74616773223b733a313a2231223b733a32313a2273686f775f626173655f6465736372697074696f6e223b733a313a2231223b733a31313a226d61784c6576656c636174223b733a323a222d31223b733a32353a2273686f775f656d7074795f63617465676f726965735f636174223b733a313a2230223b733a32303a2273686f775f7375626361745f646573635f636174223b733a313a2231223b733a32353a2273686f775f6361745f6e756d5f61727469636c65735f636174223b733a313a2231223b733a32303a226e756d5f6c656164696e675f61727469636c6573223b693a313b733a31383a22626c6f675f636c6173735f6c656164696e67223b733a303a22223b733a31383a226e756d5f696e74726f5f61727469636c6573223b693a343b733a31303a22626c6f675f636c617373223b733a303a22223b733a31313a226e756d5f636f6c756d6e73223b693a313b733a31383a226d756c74695f636f6c756d6e5f6f72646572223b733a313a2230223b733a393a226e756d5f6c696e6b73223b693a343b733a32343a2273686f775f73756263617465676f72795f636f6e74656e74223b733a313a2230223b733a31363a226c696e6b5f696e74726f5f696d616765223b733a313a2230223b733a32313a2273686f775f706167696e6174696f6e5f6c696d6974223b733a313a2231223b733a31323a2266696c7465725f6669656c64223b733a343a2268696465223b733a31333a2273686f775f68656164696e6773223b733a313a2231223b733a31343a226c6973745f73686f775f64617465223b733a313a2230223b733a31313a22646174655f666f726d6174223b733a303a22223b733a31343a226c6973745f73686f775f68697473223b733a313a2231223b733a31363a226c6973745f73686f775f617574686f72223b733a313a2231223b733a31313a22646973706c61795f6e756d223b733a323a223130223b733a31313a226f7264657262795f707269223b733a353a226f72646572223b733a31313a226f7264657262795f736563223b733a353a227264617465223b733a31303a226f726465725f64617465223b733a393a227075626c6973686564223b733a31353a2273686f775f706167696e6174696f6e223b733a313a2232223b733a32333a2273686f775f706167696e6174696f6e5f726573756c7473223b733a313a2231223b733a31333a2273686f775f6665617475726564223b733a343a2273686f77223b733a31343a2273686f775f666565645f6c696e6b223b733a313a2231223b733a31323a22666565645f73756d6d617279223b733a313a2230223b733a31383a22666565645f73686f775f726561646d6f7265223b733a313a2230223b733a373a227365665f696473223b693a313b733a32303a22637573746f6d5f6669656c64735f656e61626c65223b733a313a2231223b733a31363a22776f726b666c6f775f656e61626c6564223b733a313a2230223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a226d6574616b6579223b733a303a22223b733a383a226d65746164657363223b733a303a22223b733a383a226d65746164617461223b4f3a32343a224a6f6f6d6c615c52656769737472795c5265676973747279223a333a7b733a373a22002a0064617461223b4f3a383a22737464436c617373223a333a7b733a363a22726f626f7473223b733a303a22223b733a363a22617574686f72223b733a303a22223b733a363a22726967687473223b733a303a22223b7d733a31343a22002a00696e697469616c697a6564223b623a313b733a31323a22002a00736570617261746f72223b733a313a222e223b7d733a373a2276657273696f6e223b693a313b733a383a226f72646572696e67223b693a303b733a383a2263617465676f7279223b733a31333a22556e63617465676f7269736564223b733a393a226361745f7374617465223b693a313b733a31303a226361745f616363657373223b693a313b733a343a22736c7567223b733a31383a2231323a64616e652d6b6f6e74616b746f7765223b733a373a22636174736c7567223b733a31353a22323a756e63617465676f7269736564223b733a363a22617574686f72223b733a353a2241646d696e223b733a363a226c61796f7574223b733a373a2261727469636c65223b733a373a22636f6e74657874223b733a31393a22636f6d5f636f6e74656e742e61727469636c65223b733a31303a226d657461617574686f72223b4e3b7d693a343b4e3b693a353b613a353a7b693a313b613a333a7b693a303b733a353a227469746c65223b693a313b733a383a227375627469746c65223b693a323b733a323a226964223b7d693a323b613a323a7b693a303b733a373a2273756d6d617279223b693a313b733a343a22626f6479223b7d693a333b613a383a7b693a303b733a343a226d657461223b693a313b733a31303a226c6973745f7072696365223b693a323b733a31303a2273616c655f7072696365223b693a333b733a373a226d6574616b6579223b693a343b733a383a226d65746164657363223b693a353b733a31303a226d657461617574686f72223b693a363b733a363a22617574686f72223b693a373b733a31363a22637265617465645f62795f616c696173223b7d693a343b613a323a7b693a303b733a343a2270617468223b693a313b733a353a22616c696173223b7d693a353b613a313a7b693a303b733a383a22636f6d6d656e7473223b7d7d693a363b733a313a222a223b693a373b4e3b693a383b4e3b693a393b733a31393a22323032332d30362d31322031383a34363a3139223b693a31303b4e3b693a31313b733a37313a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d31323a64616e652d6b6f6e74616b746f77652663617469643d32223b693a31323b4e3b693a31333b733a31393a22323032332d30362d31322031383a34363a3139223b693a31343b693a313b693a31353b613a343a7b733a343a2254797065223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a373a2241727469636c65223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a333b7d7d733a363a22417574686f72223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a353a2241646d696e223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a32313b7d7d733a383a2243617465676f7279223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a31333a22556e63617465676f7269736564223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a313a222a223b733a363a226e6573746564223b623a313b733a323a226964223b693a31353b7d7d733a383a224c616e6775616765223b613a313a7b693a303b4f3a383a22737464436c617373223a363a7b733a353a227469746c65223b733a313a222a223b733a353a227374617465223b693a313b733a363a22616363657373223b693a313b733a383a226c616e6775616765223b733a303a22223b733a363a226e6573746564223b623a303b733a323a226964223b693a393b7d7d7d693a31363b733a31353a2244616e65206b6f6e74616b746f7765223b693a31373b693a333b693a31383b733a34373a22696e6465782e7068703f6f7074696f6e3d636f6d5f636f6e74656e7426766965773d61727469636c652669643d3132223b7d);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_finder_links_terms`
+-- Table structure for table `buf3w_finder_links_terms`
 --
 
 CREATE TABLE `buf3w_finder_links_terms` (
@@ -1039,12 +2123,15 @@ CREATE TABLE `buf3w_finder_links_terms` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_finder_links_terms`
+-- Dumping data for table `buf3w_finder_links_terms`
 --
 
 INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (1, 1, 0.17),
+(9, 1, 0.17),
 (1, 2, 0.14),
+(10, 2, 0.34),
+(14, 2, 0.34),
 (1, 3, 0.07),
 (5, 3, 0.07),
 (7, 3, 0.17),
@@ -1079,18 +2166,28 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (1, 26, 0.14007),
 (8, 26, 0.14007),
 (4, 26, 0.28014),
+(12, 26, 0.32683),
 (5, 26, 0.37352),
 (7, 26, 0.37352),
+(11, 26, 0.4669),
+(13, 26, 0.4669),
 (3, 26, 0.51359),
+(14, 26, 0.51359),
 (1, 27, 0.23331),
 (1, 28, 0.37331),
 (1, 29, 0.18669),
 (4, 29, 0.18669),
+(12, 29, 0.18669),
+(13, 29, 0.18669),
 (3, 29, 0.37338),
 (5, 29, 0.37338),
 (7, 29, 0.37338),
 (8, 29, 0.37338),
+(11, 29, 0.56007),
 (1, 30, 0.23331),
+(11, 30, 0.23331),
+(13, 30, 0.23331),
+(14, 30, 0.69993),
 (1, 31, 0.14),
 (3, 31, 0.14),
 (8, 31, 0.14),
@@ -1105,6 +2202,10 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (5, 35, 0.48),
 (7, 35, 0.48),
 (8, 35, 0.48),
+(11, 35, 0.48),
+(12, 35, 0.48),
+(13, 35, 0.48),
+(14, 35, 0.48),
 (1, 36, 0.09331),
 (1, 37, 0.42),
 (1, 38, 1.68),
@@ -1121,8 +2222,12 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (7, 46, 0.09331),
 (5, 46, 0.27993),
 (1, 46, 0.37324),
+(12, 46, 0.46655),
 (4, 46, 0.83979),
+(13, 46, 0.83979),
 (8, 46, 0.95976),
+(11, 46, 1.02641),
+(14, 46, 1.11972),
 (3, 46, 1.79955),
 (1, 47, 0.37331),
 (1, 48, 0.51331),
@@ -1138,6 +2243,9 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (5, 54, 0.09331),
 (7, 54, 0.09331),
 (8, 54, 0.09331),
+(11, 54, 0.09331),
+(12, 54, 0.09331),
+(13, 54, 0.18662),
 (1, 55, 0.46669),
 (8, 56, 0.37331),
 (1, 56, 0.74662),
@@ -1149,6 +2257,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (5, 60, 0.18669),
 (7, 60, 0.18669),
 (8, 60, 0.18669),
+(12, 60, 0.37338),
 (1, 61, 0.74662),
 (1, 62, 0.37331),
 (1, 63, 0.42),
@@ -1175,6 +2284,8 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (1, 81, 0.32669),
 (1, 82, 0.23331),
 (4, 82, 0.23331),
+(12, 82, 0.23331),
+(13, 82, 0.23331),
 (3, 82, 0.93324),
 (8, 82, 0.93324),
 (7, 82, 1.16655),
@@ -1190,10 +2301,14 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 87, 0.84),
 (1, 88, 0.28),
 (7, 89, 0.14),
+(12, 89, 0.14),
 (1, 89, 0.28),
 (8, 89, 0.28),
+(11, 89, 0.56),
 (4, 89, 0.7),
+(13, 89, 0.7),
 (3, 89, 1.26),
+(14, 89, 1.26),
 (5, 89, 1.54),
 (1, 90, 0.18669),
 (3, 90, 0.18669),
@@ -1203,13 +2318,19 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 94, 0.09331),
 (4, 94, 0.09331),
 (5, 94, 0.09331),
+(12, 94, 0.09331),
 (1, 94, 0.18662),
+(11, 94, 0.18662),
+(13, 94, 0.18662),
+(14, 94, 0.18662),
 (1, 95, 0.65338),
 (1, 96, 0.32669),
 (1, 97, 0.37331),
+(11, 98, 0.09331),
 (1, 98, 0.18662),
 (4, 98, 0.18662),
 (7, 98, 0.18662),
+(12, 98, 0.18662),
 (8, 98, 0.46655),
 (3, 98, 0.55986),
 (1, 99, 0.42),
@@ -1222,6 +2343,10 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (4, 102, 1.96014),
 (1, 103, 0.42),
 (1, 104, 0.37331),
+(11, 105, 0.09338),
+(12, 105, 0.18676),
+(13, 105, 0.23345),
+(14, 105, 0.23345),
 (5, 105, 0.32683),
 (7, 105, 0.32683),
 (1, 105, 0.51359),
@@ -1244,15 +2369,23 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (1, 118, 0.56),
 (8, 118, 0.56),
 (1, 119, 0.04669),
+(16, 119, 0.04669),
 (7, 119, 0.18676),
+(12, 119, 0.28014),
 (4, 119, 0.28014),
 (8, 119, 0.28014),
+(11, 119, 0.32683),
 (5, 119, 0.4669),
+(13, 119, 0.60697),
+(14, 119, 0.60697),
 (3, 119, 0.79373),
 (5, 120, 0.09331),
 (8, 120, 0.09331),
+(14, 120, 0.09331),
 (3, 120, 0.18662),
 (7, 120, 0.18662),
+(12, 120, 0.18662),
+(13, 120, 0.27993),
 (1, 120, 0.37324),
 (1, 121, 0.42),
 (1, 122, 0.46669),
@@ -1270,24 +2403,36 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (1, 134, 0.42),
 (4, 135, 0.09331),
 (5, 135, 0.09331),
+(14, 135, 0.09331),
 (1, 135, 0.18662),
+(11, 135, 0.18662),
 (7, 135, 0.27993),
+(12, 135, 0.27993),
 (8, 135, 0.37324),
 (3, 135, 1.02641),
 (2, 256, 0.17),
+(12, 256, 0.17),
 (2, 257, 1.23321),
 (3, 258, 0.42),
 (3, 259, 0.14),
 (5, 260, 0.07),
+(16, 260, 0.07),
 (3, 260, 0.17),
 (3, 261, 0.14),
 (4, 261, 0.14),
+(11, 261, 0.28),
+(13, 261, 0.28),
+(12, 261, 0.56),
+(14, 261, 0.56),
 (3, 262, 0.46662),
 (8, 262, 0.69993),
 (3, 263, 0.37331),
+(11, 264, 0.14),
 (3, 264, 0.28),
 (4, 264, 0.56),
 (3, 265, 0.14),
+(12, 265, 0.14),
+(13, 265, 0.14),
 (3, 266, 0.23331),
 (3, 267, 0.32669),
 (3, 268, 0.46669),
@@ -1310,8 +2455,11 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 281, 0.27993),
 (4, 282, 0.14),
 (7, 282, 0.14),
+(14, 282, 0.14),
 (3, 282, 0.28),
 (5, 282, 0.28),
+(11, 282, 0.28),
+(13, 282, 0.28),
 (5, 283, 0.14),
 (3, 283, 0.28),
 (3, 284, 0.23331),
@@ -1320,21 +2468,29 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 286, 0.18669),
 (4, 286, 0.18669),
 (8, 286, 0.18669),
+(12, 286, 0.18669),
 (4, 287, 0.18669),
 (8, 287, 0.18669),
 (3, 287, 0.37338),
 (7, 287, 0.37338),
+(13, 287, 0.37338),
 (3, 288, 0.18669),
 (3, 289, 0.28),
 (3, 290, 0.18669),
 (4, 290, 0.18669),
+(11, 290, 0.18669),
+(13, 290, 0.18669),
+(14, 290, 0.18669),
 (3, 291, 0.28),
 (3, 292, 0.32669),
 (3, 293, 0.56),
 (3, 294, 0.28),
+(13, 294, 0.28),
 (3, 295, 0.56),
 (3, 296, 0.14),
 (5, 296, 0.14),
+(11, 296, 0.28),
+(14, 296, 0.42),
 (3, 297, 0.32669),
 (3, 298, 0.23331),
 (3, 299, 0.23331),
@@ -1342,12 +2498,20 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 301, 0.32669),
 (3, 302, 0.60669),
 (3, 303, 0.7),
+(12, 304, 0.14),
+(14, 304, 0.14),
+(11, 304, 0.28),
 (3, 304, 0.42),
 (7, 304, 0.42),
+(15, 304, 0.74),
 (3, 305, 0.37331),
 (3, 306, 0.28),
 (5, 307, 0.18662),
 (7, 307, 0.27993),
+(11, 307, 0.27993),
+(12, 307, 0.27993),
+(14, 307, 0.27993),
+(13, 307, 0.46655),
 (4, 307, 0.55986),
 (8, 307, 0.55986),
 (3, 307, 0.65317),
@@ -1356,6 +2520,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 310, 0.42),
 (3, 311, 0.46669),
 (3, 312, 0.84),
+(14, 312, 0.84),
 (3, 313, 0.27993),
 (3, 314, 0.09331),
 (7, 314, 0.09331),
@@ -1365,6 +2530,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (4, 317, 0.42),
 (3, 318, 0.65338),
 (3, 319, 0.46669),
+(11, 319, 0.46669),
 (3, 320, 0.98007),
 (3, 321, 0.42),
 (3, 322, 2.38017),
@@ -1383,6 +2549,10 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (8, 332, 0.09331),
 (3, 332, 0.18662),
 (3, 333, 0.46669),
+(11, 333, 0.46669),
+(13, 333, 0.46669),
+(14, 333, 0.46669),
+(12, 333, 2.33345),
 (3, 334, 0.60669),
 (3, 335, 0.46669),
 (3, 336, 0.51331),
@@ -1403,6 +2573,8 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 348, 0.32669),
 (3, 349, 0.51331),
 (3, 350, 0.46669),
+(13, 350, 0.46669),
+(14, 350, 0.93338),
 (3, 351, 0.37331),
 (3, 352, 0.42),
 (3, 353, 0.46669),
@@ -1417,10 +2589,12 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 362, 0.74662),
 (3, 363, 0.14),
 (3, 364, 0.28),
+(11, 364, 0.28),
 (3, 365, 0.28),
 (8, 366, 0.28),
 (3, 366, 0.56),
 (5, 366, 0.56),
+(11, 366, 0.56),
 (3, 367, 0.32669),
 (3, 368, 0.32669),
 (3, 369, 0.18669),
@@ -1441,15 +2615,21 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (4, 381, 0.37331),
 (3, 382, 0.37331),
 (3, 383, 0.23331),
+(12, 383, 0.23331),
 (3, 384, 0.18669),
 (4, 384, 0.18669),
 (7, 384, 0.18669),
+(11, 384, 0.18669),
+(12, 384, 0.18669),
 (5, 384, 0.37338),
+(13, 384, 0.37338),
 (3, 385, 0.46669),
 (3, 386, 0.93338),
 (3, 387, 0.56),
 (3, 388, 0.42),
 (3, 389, 0.28),
+(13, 389, 0.28),
+(12, 389, 0.84),
 (3, 390, 0.46669),
 (7, 390, 0.46669),
 (3, 391, 0.23331),
@@ -1458,34 +2638,54 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (4, 392, 0.37338),
 (3, 392, 0.56007),
 (3, 393, 0.28),
+(13, 393, 0.28),
+(14, 393, 0.28),
+(12, 393, 0.56),
 (3, 394, 0.14),
 (4, 394, 0.14),
+(11, 394, 0.14),
+(12, 394, 0.42),
 (3, 395, 0.18669),
+(11, 395, 0.18669),
+(14, 395, 0.37338),
 (3, 396, 0.37331),
 (3, 397, 0.74662),
 (3, 398, 0.32669),
 (3, 399, 0.37331),
 (4, 399, 0.74662),
 (3, 400, 0.14),
+(11, 400, 0.88),
 (3, 401, 0.18669),
+(11, 402, 0.32669),
 (3, 402, 0.65338),
+(14, 402, 0.65338),
+(13, 402, 0.98007),
+(12, 402, 1.30676),
 (3, 403, 0.18669),
 (4, 403, 0.56007),
 (3, 404, 0.42),
 (4, 404, 0.42),
 (3, 405, 0.51331),
+(11, 406, 0.14),
+(14, 406, 0.14),
 (4, 406, 0.42),
 (5, 406, 0.42),
 (7, 406, 0.42),
 (3, 406, 0.56),
 (8, 406, 0.56),
+(13, 406, 0.56),
+(12, 406, 0.84),
 (3, 407, 0.42),
 (3, 408, 0.60669),
 (3, 409, 0.60669),
 (3, 410, 0.14),
 (3, 411, 0.28),
 (7, 412, 0.04669),
+(12, 412, 0.09338),
+(13, 412, 0.09338),
+(16, 412, 0.09338),
 (5, 412, 0.14007),
+(11, 412, 0.24679),
 (8, 412, 0.28014),
 (3, 412, 0.667),
 (3, 413, 0.46669),
@@ -1498,6 +2698,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 420, 0.51331),
 (3, 421, 0.46669),
 (3, 422, 0.46669),
+(14, 422, 0.46669),
 (3, 423, 0.28),
 (3, 424, 0.74662),
 (3, 425, 0.37331),
@@ -1515,6 +2716,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 435, 0.51331),
 (3, 436, 0.51331),
 (3, 437, 0.37331),
+(12, 437, 0.37331),
 (3, 438, 0.37331),
 (3, 439, 0.56),
 (3, 440, 0.28),
@@ -1553,10 +2755,12 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 472, 0.23331),
 (5, 472, 0.23331),
 (7, 472, 0.23331),
+(12, 472, 0.46662),
 (3, 473, 1.26),
 (3, 474, 0.51331),
 (3, 475, 0.60669),
 (3, 476, 0.7),
+(11, 477, 0.51331),
 (3, 477, 0.51331),
 (3, 478, 0.60669),
 (3, 479, 0.46669),
@@ -1602,6 +2806,8 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 515, 0.51331),
 (3, 516, 0.32669),
 (3, 517, 0.28),
+(12, 517, 0.28),
+(13, 517, 0.28),
 (3, 518, 0.56),
 (3, 519, 0.32669),
 (3, 520, 0.42),
@@ -1612,7 +2818,12 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 525, 0.23331),
 (3, 526, 0.51331),
 (3, 527, 0.23331),
+(13, 527, 0.46662),
+(12, 527, 0.69993),
+(14, 528, 0.32669),
 (3, 528, 0.65338),
+(12, 528, 0.65338),
+(13, 528, 0.65338),
 (3, 529, 0.28),
 (7, 529, 0.56),
 (3, 530, 0.23331),
@@ -1627,18 +2838,24 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (8, 538, 0.14),
 (3, 538, 0.28),
 (4, 539, 0.23331),
+(12, 539, 0.23331),
 (3, 539, 0.46662),
 (5, 540, 0.23331),
+(11, 540, 0.23331),
 (3, 540, 0.69993),
 (4, 540, 0.69993),
 (5, 541, 0.18669),
 (7, 541, 0.18669),
+(11, 541, 0.18669),
 (3, 541, 0.56007),
 (3, 542, 0.14),
 (5, 542, 0.14),
+(13, 542, 0.14),
 (3, 543, 0.46669),
 (3, 544, 0.56),
 (3, 545, 0.23331),
+(14, 545, 0.23331),
+(11, 545, 0.69993),
 (3, 546, 0.14),
 (3, 547, 0.23331),
 (4, 547, 0.23331),
@@ -1651,6 +2868,8 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 553, 0.42),
 (3, 554, 0.23331),
 (8, 554, 0.23331),
+(11, 554, 0.23331),
+(14, 554, 0.23331),
 (4, 554, 0.46662),
 (5, 555, 0.18669),
 (3, 555, 0.37338),
@@ -1677,9 +2896,11 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 572, 0.18662),
 (3, 573, 0.23331),
 (3, 574, 0.23331),
+(14, 574, 0.23331),
 (3, 575, 0.23331),
 (4, 575, 0.23331),
 (5, 575, 0.23331),
+(11, 575, 0.23331),
 (3, 576, 0.84),
 (3, 577, 0.23331),
 (3, 578, 0.42),
@@ -1704,6 +2925,8 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 595, 0.65338),
 (3, 596, 0.37331),
 (3, 597, 0.46669),
+(11, 597, 0.46669),
+(14, 597, 0.46669),
 (3, 598, 0.37331),
 (3, 599, 0.42),
 (3, 600, 0.37331),
@@ -1736,11 +2959,13 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (3, 624, 0.37331),
 (3, 625, 0.84),
 (3, 626, 0.28),
+(13, 627, 0.09331),
 (3, 627, 0.27993),
 (3, 628, 0.42),
 (3, 629, 0.46669),
 (3, 630, 0.37331),
 (3, 631, 0.32669),
+(14, 631, 0.32669),
 (3, 632, 0.23331),
 (3, 633, 0.56),
 (3, 634, 0.23331),
@@ -1768,6 +2993,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (4, 784, 1.30676),
 (4, 785, 0.37331),
 (4, 786, 0.28),
+(11, 786, 0.28),
 (7, 786, 0.56),
 (8, 786, 0.56),
 (4, 787, 0.32669),
@@ -1782,6 +3008,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (4, 796, 0.42),
 (4, 797, 0.42),
 (7, 797, 0.42),
+(14, 797, 0.42),
 (4, 798, 0.37331),
 (4, 799, 0.37331),
 (4, 800, 0.18669),
@@ -1795,13 +3022,17 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (4, 808, 0.14),
 (5, 808, 0.14),
 (7, 808, 0.14),
+(12, 808, 0.28),
 (4, 809, 0.18669),
 (4, 810, 0.60669),
 (4, 811, 0.7),
 (4, 812, 0.18669),
 (5, 813, 0.14),
+(11, 813, 0.14),
+(12, 813, 0.14),
 (8, 813, 0.28),
 (4, 813, 0.42),
+(14, 813, 0.84),
 (4, 814, 0.23331),
 (4, 815, 0.42),
 (4, 816, 0.84),
@@ -1813,10 +3044,15 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (4, 822, 0.42),
 (4, 823, 0.65331),
 (4, 824, 0.46669),
+(13, 825, 0.23331),
 (5, 825, 0.46662),
+(11, 825, 0.46662),
+(14, 825, 0.46662),
 (4, 825, 0.69993),
+(12, 825, 0.93324),
 (4, 826, 0.23331),
 (4, 827, 0.32669),
+(13, 827, 0.32669),
 (4, 828, 0.23331),
 (4, 829, 0.28),
 (4, 830, 0.18669),
@@ -1824,15 +3060,24 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (4, 832, 0.23331),
 (4, 833, 0.14),
 (8, 833, 0.14),
+(11, 833, 0.14),
+(14, 833, 0.28),
+(13, 833, 0.42),
+(12, 833, 0.56),
 (4, 834, 0.23331),
 (4, 835, 0.18669),
 (5, 835, 0.18669),
 (7, 835, 0.18669),
+(11, 835, 0.18669),
+(14, 835, 0.18669),
 (4, 836, 0.37331),
 (4, 837, 0.18669),
+(11, 837, 0.18669),
+(14, 837, 0.56007),
 (4, 838, 0.37331),
 (4, 839, 0.28),
 (4, 840, 0.18669),
+(14, 840, 0.56007),
 (4, 841, 0.51331),
 (4, 842, 0.46669),
 (8, 842, 0.46669),
@@ -1861,10 +3106,14 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (4, 865, 0.37331),
 (4, 866, 0.32669),
 (4, 867, 0.28),
+(13, 868, 0.32669),
 (4, 868, 0.98007),
+(12, 868, 0.98007),
 (4, 869, 0.46669),
 (4, 870, 0.37331),
 (4, 871, 0.37331),
+(11, 871, 0.37331),
+(12, 871, 0.37331),
 (4, 872, 0.46669),
 (4, 873, 0.37338),
 (4, 874, 0.46669),
@@ -1878,6 +3127,8 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (4, 882, 0.51331),
 (4, 883, 0.56),
 (4, 884, 0.37331),
+(12, 884, 0.37331),
+(13, 884, 0.37331),
 (4, 885, 0.42),
 (4, 886, 0.7),
 (4, 887, 0.46669),
@@ -1898,6 +3149,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (4, 901, 0.37331),
 (4, 902, 0.28),
 (4, 903, 0.32669),
+(11, 903, 0.32669),
 (7, 903, 0.65338),
 (8, 903, 0.65338),
 (4, 904, 0.32669),
@@ -1910,6 +3162,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (7, 910, 0.42),
 (4, 911, 0.56),
 (4, 912, 0.28),
+(14, 912, 0.56),
 (4, 913, 0.28),
 (4, 914, 0.42),
 (4, 915, 0.84),
@@ -1923,8 +3176,11 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (4, 923, 0.42),
 (4, 924, 0.09331),
 (7, 924, 0.09331),
+(12, 924, 0.09331),
 (4, 925, 0.46669),
+(12, 925, 0.46669),
 (4, 926, 0.46669),
+(11, 927, 0.51331),
 (4, 927, 0.51331),
 (4, 928, 0.14),
 (5, 928, 0.14),
@@ -1932,6 +3188,10 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (4, 930, 0.32669),
 (4, 931, 0.28),
 (4, 932, 0.23331),
+(11, 932, 0.23331),
+(13, 932, 0.23331),
+(14, 932, 0.23331),
+(12, 932, 0.46662),
 (4, 933, 1.4666),
 (4, 934, 0.46669),
 (4, 935, 0.7),
@@ -1985,6 +3245,8 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (5, 980, 0.56),
 (5, 981, 0.18669),
 (5, 982, 0.14),
+(12, 982, 0.28),
+(13, 982, 0.28),
 (5, 983, 0.37331),
 (5, 984, 0.56),
 (5, 985, 0.37331),
@@ -1993,6 +3255,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (5, 988, 0.56),
 (5, 989, 0.23331),
 (5, 990, 0.32669),
+(14, 990, 0.32669),
 (5, 991, 0.28),
 (5, 992, 0.23331),
 (5, 993, 0.37331),
@@ -2009,11 +3272,14 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (7, 1001, 0.56),
 (5, 1002, 0.28),
 (5, 1003, 0.65331),
+(14, 1003, 0.65331),
 (5, 1004, 0.46669),
 (5, 1005, 0.23331),
 (5, 1006, 0.28),
 (7, 1006, 0.28),
 (8, 1006, 0.28),
+(13, 1006, 0.56),
+(14, 1007, 0.14),
 (5, 1007, 0.42),
 (5, 1008, 0.09331),
 (5, 1009, 0.23331),
@@ -2035,6 +3301,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (5, 1025, 0.23331),
 (8, 1025, 0.23331),
 (5, 1026, 0.18669),
+(12, 1026, 0.18669),
 (5, 1027, 0.23331),
 (5, 1028, 0.56),
 (5, 1029, 0.32669),
@@ -2073,6 +3340,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (5, 1061, 0.28),
 (8, 1061, 0.28),
 (5, 1062, 0.28),
+(13, 1062, 0.56),
 (5, 1063, 0.32669),
 (5, 1064, 0.7),
 (5, 1065, 0.65338),
@@ -2090,6 +3358,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (5, 1077, 0.37331),
 (5, 1078, 0.32669),
 (5, 1079, 0.28),
+(12, 1079, 0.28),
 (5, 1080, 0.37331),
 (5, 1081, 0.42),
 (5, 1082, 0.28),
@@ -2098,6 +3367,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (5, 1085, 0.18669),
 (5, 1086, 0.37331),
 (5, 1087, 0.09331),
+(13, 1087, 0.09331),
 (5, 1088, 0.46669),
 (5, 1089, 0.46669),
 (5, 1090, 0.23331),
@@ -2139,6 +3409,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (5, 1125, 0.14),
 (8, 1228, 0.07),
 (6, 1228, 0.17),
+(13, 1228, 0.17),
 (6, 1229, 1.23321),
 (6, 1230, 1.48),
 (7, 1231, 0.14),
@@ -2147,6 +3418,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (7, 1234, 0.28),
 (7, 1235, 0.42),
 (7, 1236, 0.60669),
+(12, 1237, 0.65331),
 (7, 1237, 1.30662),
 (7, 1238, 0.09331),
 (7, 1239, 0.42),
@@ -2157,6 +3429,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (7, 1244, 0.74662),
 (7, 1245, 0.23331),
 (7, 1246, 0.28),
+(14, 1246, 1.52),
 (7, 1247, 0.18669),
 (7, 1248, 0.23331),
 (7, 1249, 0.28),
@@ -2185,7 +3458,9 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (7, 1271, 0.28),
 (7, 1272, 0.37338),
 (7, 1273, 0.69993),
+(12, 1274, 0.51331),
 (7, 1274, 0.51331),
+(13, 1274, 6.81969),
 (7, 1275, 0.51331),
 (7, 1276, 0.23331),
 (7, 1277, 0.42),
@@ -2208,14 +3483,23 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (7, 1292, 0.60669),
 (7, 1293, 0.42),
 (7, 1294, 0.28),
+(12, 1294, 0.56),
+(14, 1294, 0.56),
+(13, 1294, 1.12),
 (7, 1295, 0.32669),
+(13, 1295, 0.32669),
+(11, 1295, 0.65338),
+(12, 1295, 0.65338),
+(14, 1295, 1.63345),
 (7, 1296, 0.14),
 (8, 1296, 0.14),
+(14, 1297, 0.18669),
 (7, 1297, 0.37338),
 (7, 1298, 0.65331),
 (7, 1299, 0.46669),
 (7, 1300, 0.18669),
 (7, 1301, 0.18669),
+(14, 1301, 0.18669),
 (7, 1302, 0.28),
 (7, 1303, 0.51331),
 (7, 1304, 1.12),
@@ -2233,23 +3517,33 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (7, 1316, 0.32669),
 (7, 1317, 0.23331),
 (7, 1318, 0.37331),
+(11, 1318, 0.74662),
+(13, 1319, 0.32669),
+(14, 1319, 0.32669),
 (7, 1319, 0.98007),
 (7, 1320, 0.7),
 (7, 1321, 0.60669),
 (7, 1322, 1.02662),
 (7, 1323, 0.23331),
+(12, 1323, 0.23331),
+(13, 1323, 0.46662),
 (7, 1324, 0.42),
 (7, 1325, 0.32669),
 (7, 1326, 0.28),
 (7, 1327, 0.74662),
+(13, 1328, 1.02662),
 (7, 1328, 1.53993),
+(12, 1328, 3.81316),
 (7, 1329, 0.46669),
+(13, 1329, 0.93338),
 (7, 1330, 0.46669),
 (7, 1331, 0.51331),
 (7, 1332, 0.28),
+(14, 1332, 0.28),
 (7, 1333, 0.32669),
 (7, 1334, 0.56),
 (7, 1335, 0.56),
+(11, 1335, 0.56),
 (8, 1336, 0.28),
 (7, 1336, 0.56),
 (7, 1337, 0.23331),
@@ -2266,11 +3560,15 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (7, 1348, 0.32669),
 (7, 1349, 0.42),
 (7, 1350, 0.46669),
+(12, 1350, 0.46669),
 (7, 1351, 0.51331),
+(13, 1352, 0.56),
 (8, 1352, 1.12),
 (7, 1352, 2.8),
 (7, 1353, 0.32669),
 (7, 1354, 0.46669),
+(11, 1354, 0.46669),
+(14, 1354, 0.93338),
 (7, 1355, 0.23331),
 (7, 1356, 0.51331),
 (7, 1357, 0.42),
@@ -2278,6 +3576,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (7, 1359, 0.46669),
 (7, 1360, 0.42),
 (8, 1360, 0.42),
+(13, 1360, 0.42),
 (7, 1361, 0.65331),
 (7, 1362, 0.51331),
 (8, 1362, 0.51331),
@@ -2289,6 +3588,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (7, 1367, 0.51331),
 (7, 1368, 0.51331),
 (7, 1369, 0.65338),
+(13, 1370, 0.84),
 (7, 1370, 2.6),
 (7, 1371, 0.37331),
 (7, 1372, 0.32669),
@@ -2303,6 +3603,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (8, 1490, 0.14),
 (8, 1491, 0.17),
 (8, 1492, 0.07),
+(11, 1492, 0.17),
 (8, 1493, 0.23331),
 (8, 1494, 0.23331),
 (8, 1495, 0.32669),
@@ -2318,7 +3619,10 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (8, 1505, 0.28),
 (8, 1506, 2.38017),
 (8, 1507, 0.18669),
+(13, 1507, 0.18669),
+(16, 1507, 0.98679),
 (8, 1508, 0.28),
+(12, 1508, 0.84),
 (8, 1509, 0.42),
 (8, 1510, 0.98007),
 (8, 1511, 0.32669),
@@ -2340,6 +3644,8 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (8, 1527, 0.46669),
 (8, 1528, 0.56),
 (8, 1529, 0.18669),
+(13, 1529, 0.18669),
+(12, 1529, 0.37338),
 (8, 1530, 0.14),
 (8, 1531, 0.23331),
 (8, 1532, 0.23331),
@@ -2357,6 +3663,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (8, 1544, 0.42),
 (8, 1545, 0.14),
 (8, 1546, 0.32669),
+(13, 1546, 0.32669),
 (8, 1547, 0.23331),
 (8, 1548, 0.56),
 (8, 1549, 0.37331),
@@ -2365,6 +3672,7 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (8, 1552, 0.65331),
 (8, 1553, 0.23331),
 (8, 1554, 0.37331),
+(12, 1554, 0.37331),
 (8, 1555, 0.42),
 (8, 1556, 0.51331),
 (8, 1557, 0.28),
@@ -2448,17 +3756,543 @@ INSERT INTO `buf3w_finder_links_terms` (`link_id`, `term_id`, `weight`) VALUES
 (8, 1635, 0.51331),
 (8, 1636, 0.32669),
 (8, 1637, 0.42),
-(8, 1638, 0.37331);
+(8, 1638, 0.37331),
+(9, 1741, 0.72),
+(9, 1742, 2.16),
+(9, 1743, 1.44),
+(15, 1744, 0.39996),
+(16, 1744, 0.39996),
+(9, 1744, 1.23321),
+(9, 1745, 0.24),
+(9, 1746, 0.32004),
+(9, 1747, 1.92024),
+(9, 1748, 0.63996),
+(9, 1749, 0.63996),
+(10, 1756, 0.98679),
+(11, 1757, 0.18669),
+(11, 1758, 0.51331),
+(11, 1759, 0.37331),
+(14, 1760, 0.32669),
+(11, 1760, 0.65338),
+(11, 1761, 0.37338),
+(14, 1761, 0.37338),
+(11, 1762, 0.23331),
+(11, 1763, 0.23331),
+(12, 1763, 1.16655),
+(14, 1763, 1.16655),
+(13, 1763, 1.39986),
+(11, 1764, 0.46662),
+(11, 1765, 0.23331),
+(11, 1766, 0.42),
+(14, 1766, 0.42),
+(12, 1767, 0.18662),
+(14, 1767, 0.18662),
+(11, 1767, 0.55986),
+(11, 1768, 0.42),
+(11, 1769, 0.28),
+(11, 1770, 0.46669),
+(11, 1771, 1.02662),
+(12, 1771, 1.02662),
+(14, 1771, 1.53993),
+(11, 1772, 0.37331),
+(13, 1772, 0.37331),
+(11, 1773, 0.18669),
+(11, 1774, 0.28),
+(11, 1775, 0.46669),
+(13, 1775, 0.46669),
+(11, 1776, 0.46669),
+(11, 1777, 0.51331),
+(11, 1778, 0.46669),
+(14, 1778, 0.46669),
+(11, 1779, 0.56),
+(11, 1780, 0.84),
+(11, 1781, 0.60669),
+(12, 1781, 0.60669),
+(11, 1782, 0.65331),
+(11, 1783, 0.37331),
+(14, 1783, 0.37331),
+(11, 1784, 0.65331),
+(11, 1785, 0.46669),
+(13, 1785, 0.46669),
+(14, 1785, 0.46669),
+(11, 1786, 0.46669),
+(14, 1787, 0.46669),
+(13, 1787, 0.93338),
+(12, 1787, 1.40007),
+(11, 1787, 1.86676),
+(11, 1788, 0.28),
+(12, 1788, 0.28),
+(13, 1788, 0.28),
+(14, 1788, 0.28),
+(11, 1789, 0.46669),
+(11, 1790, 0.56),
+(11, 1791, 0.65331),
+(11, 1792, 0.37331),
+(11, 1793, 0.28),
+(11, 1794, 0.28),
+(12, 1795, 0.37331),
+(11, 1795, 0.74662),
+(11, 1796, 0.37331),
+(14, 1796, 0.37331),
+(11, 1797, 0.18669),
+(14, 1797, 0.18669),
+(11, 1798, 0.18669),
+(11, 1799, 0.37331),
+(14, 1799, 0.37331),
+(13, 1800, 0.51331),
+(11, 1800, 1.02662),
+(11, 1801, 1.4),
+(11, 1802, 0.60669),
+(14, 1803, 0.37338),
+(11, 1803, 0.56007),
+(11, 1804, 0.23331),
+(12, 1804, 0.23331),
+(12, 1805, 0.28),
+(14, 1805, 0.56),
+(11, 1805, 0.84),
+(13, 1805, 0.84),
+(11, 1806, 0.23331),
+(13, 1806, 0.23331),
+(11, 1807, 0.23331),
+(11, 1808, 0.51331),
+(11, 1809, 0.51331),
+(14, 1809, 0.51331),
+(12, 1809, 1.02662),
+(11, 1810, 0.51331),
+(11, 1811, 0.28),
+(14, 1811, 0.28),
+(11, 1812, 0.28),
+(11, 1813, 0.28),
+(11, 1814, 0.32669),
+(11, 1815, 0.46669),
+(11, 1816, 0.51331),
+(11, 1817, 0.42),
+(14, 1817, 0.84),
+(11, 1818, 0.42),
+(11, 1819, 0.37331),
+(12, 1819, 0.37331),
+(13, 1819, 0.74662),
+(11, 1820, 0.42),
+(11, 1821, 0.51331),
+(11, 1822, 0.32669),
+(11, 1823, 0.42),
+(11, 1824, 0.23331),
+(11, 1825, 0.56),
+(11, 1826, 0.28),
+(11, 1827, 0.32669),
+(14, 1827, 3.36024),
+(11, 1828, 0.46669),
+(11, 1829, 0.51331),
+(14, 1829, 0.51331),
+(11, 1830, 0.37331),
+(11, 1831, 0.37331),
+(11, 1832, 0.37331),
+(11, 1833, 0.46669),
+(11, 1834, 0.46662),
+(11, 1835, 0.46669),
+(14, 1835, 0.93338),
+(11, 1836, 0.32669),
+(11, 1837, 0.28),
+(11, 1838, 0.32669),
+(11, 1839, 0.23331),
+(11, 1840, 0.32669),
+(14, 1840, 0.98007),
+(11, 1841, 0.37331),
+(11, 1842, 0.28),
+(12, 1842, 0.28),
+(11, 1843, 0.37331),
+(14, 1843, 0.37331),
+(11, 1844, 0.46662),
+(11, 1845, 0.32669),
+(11, 1846, 0.65338),
+(11, 1847, 0.32669),
+(11, 1848, 0.28),
+(12, 1848, 0.84),
+(14, 1848, 1.68),
+(13, 1848, 1.96),
+(11, 1849, 0.42),
+(11, 1850, 0.18669),
+(12, 1850, 0.37338),
+(13, 1850, 0.56007),
+(11, 1851, 0.37331),
+(11, 1852, 0.23331),
+(14, 1852, 0.23331),
+(11, 1853, 0.23331),
+(14, 1853, 0.46662),
+(12, 1854, 0.60669),
+(14, 1854, 0.60669),
+(11, 1854, 1.21338),
+(13, 1854, 1.21338),
+(11, 1855, 0.37331),
+(11, 1856, 0.28),
+(11, 1857, 0.56),
+(11, 1858, 0.23331),
+(11, 1859, 0.23331),
+(11, 1860, 1.12),
+(11, 1861, 0.37331),
+(11, 1862, 0.60669),
+(14, 1862, 0.60669),
+(11, 1863, 0.42),
+(12, 1863, 0.42),
+(13, 1863, 0.42),
+(14, 1863, 0.84),
+(11, 1864, 0.51331),
+(11, 1865, 0.46669),
+(13, 1865, 0.46669),
+(11, 1866, 0.32669),
+(11, 1867, 0.37331),
+(14, 1867, 0.74662),
+(11, 1868, 0.28),
+(11, 1869, 0.51331),
+(11, 1870, 0.51331),
+(11, 1871, 0.42),
+(12, 1871, 0.42),
+(14, 1871, 0.42),
+(11, 1872, 0.65331),
+(11, 1873, 0.65338),
+(12, 1884, 0.28),
+(12, 1885, 0.23331),
+(12, 1886, 0.32669),
+(12, 1887, 0.32669),
+(12, 1888, 0.42),
+(14, 1888, 0.84),
+(12, 1889, 0.28),
+(13, 1889, 0.28),
+(14, 1889, 0.28),
+(12, 1890, 0.56),
+(12, 1891, 0.37331),
+(13, 1891, 0.37331),
+(12, 1892, 0.32669),
+(12, 1893, 0.28),
+(12, 1894, 0.23331),
+(12, 1895, 0.28),
+(13, 1895, 0.28),
+(12, 1896, 0.14),
+(12, 1897, 1.4),
+(12, 1898, 0.18669),
+(12, 1899, 0.23331),
+(12, 1900, 0.42),
+(13, 1900, 0.42),
+(12, 1901, 0.46669),
+(12, 1902, 0.37331),
+(12, 1903, 0.32669),
+(12, 1904, 0.37331),
+(12, 1905, 0.32669),
+(12, 1906, 0.32669),
+(12, 1907, 0.51331),
+(12, 1908, 0.46669),
+(13, 1908, 0.46669),
+(12, 1909, 0.42),
+(13, 1909, 0.42),
+(12, 1910, 0.46669),
+(12, 1911, 0.51331),
+(12, 1912, 0.51331),
+(12, 1913, 0.60669),
+(13, 1913, 0.60669),
+(12, 1914, 0.09331),
+(12, 1915, 0.37331),
+(14, 1915, 0.37331),
+(12, 1916, 0.23331),
+(12, 1917, 0.56),
+(12, 1918, 0.46669),
+(12, 1919, 0.28),
+(14, 1919, 0.28),
+(12, 1920, 0.28),
+(12, 1921, 0.28),
+(12, 1922, 0.28),
+(14, 1922, 0.84),
+(12, 1923, 1.30662),
+(12, 1924, 0.32669),
+(12, 1925, 0.37331),
+(12, 1926, 0.51331),
+(12, 1927, 0.7),
+(13, 1927, 1.4),
+(12, 1928, 0.42),
+(12, 1929, 0.46669),
+(12, 1930, 0.60669),
+(12, 1931, 0.46669),
+(13, 1931, 0.46669),
+(12, 1932, 0.28),
+(12, 1933, 0.42),
+(12, 1934, 0.37331),
+(12, 1935, 0.74662),
+(12, 1936, 0.65331),
+(12, 1937, 0.23331),
+(12, 1938, 0.46662),
+(12, 1939, 1.12),
+(12, 1940, 1.97321),
+(12, 1941, 0.37331),
+(12, 1942, 0.37331),
+(13, 1942, 0.74662),
+(12, 1943, 0.42),
+(12, 1944, 0.32669),
+(12, 1945, 0.51331),
+(12, 1946, 0.51331),
+(12, 1947, 1.4666),
+(12, 1948, 0.51331),
+(12, 1949, 0.56),
+(12, 1950, 0.56),
+(12, 1951, 0.23331),
+(12, 1952, 0.60669),
+(12, 1953, 0.32669),
+(12, 1954, 0.51331),
+(12, 1955, 0.28),
+(13, 1955, 0.28),
+(12, 1956, 0.65331),
+(12, 1957, 0.42),
+(12, 1958, 0.37331),
+(14, 1959, 0.56),
+(12, 1959, 0.84),
+(13, 1959, 1.12),
+(12, 1960, 0.46669),
+(12, 1961, 0.37331),
+(12, 1962, 0.84),
+(12, 1963, 0.23331),
+(12, 1964, 0.56),
+(12, 1965, 0.14),
+(12, 1966, 0.56),
+(12, 1967, 0.7),
+(12, 1968, 0.42),
+(12, 1969, 0.46669),
+(12, 1970, 0.60669),
+(12, 1971, 0.51331),
+(12, 1972, 0.46669),
+(12, 1973, 0.46669),
+(12, 1974, 0.28),
+(12, 1975, 0.32669),
+(12, 1976, 0.32669),
+(13, 1976, 0.32669),
+(12, 1977, 0.37331),
+(12, 1978, 0.28),
+(12, 1979, 0.51331),
+(12, 1980, 0.28),
+(13, 1980, 0.28),
+(14, 1980, 0.28),
+(12, 1981, 0.23331),
+(12, 1982, 0.42),
+(13, 1982, 0.42),
+(12, 1983, 0.65331),
+(12, 1984, 0.37331),
+(12, 1985, 0.46669),
+(12, 1986, 0.42),
+(12, 1987, 0.28),
+(12, 1988, 0.51331),
+(12, 1989, 0.65331),
+(13, 1990, 0.37331),
+(12, 1990, 0.74662),
+(12, 1991, 0.46669),
+(13, 1991, 0.46669),
+(12, 1992, 0.46669),
+(13, 1992, 0.46669),
+(12, 1993, 0.23331),
+(13, 1993, 0.23331),
+(14, 1993, 0.23331),
+(12, 1994, 0.28),
+(12, 1995, 0.42),
+(12, 1996, 0.46662),
+(13, 1996, 0.46662),
+(12, 1997, 0.28),
+(12, 1998, 0.37331),
+(12, 1999, 0.37331),
+(12, 2000, 0.32669),
+(13, 2011, 0.46669),
+(13, 2012, 0.42),
+(13, 2013, 0.42),
+(14, 2013, 0.42),
+(13, 2014, 0.23331),
+(13, 2015, 0.42),
+(14, 2015, 0.42),
+(13, 2016, 0.42),
+(13, 2017, 0.28),
+(13, 2018, 0.46669),
+(13, 2019, 0.28),
+(13, 2020, 0.46669),
+(13, 2021, 0.42),
+(13, 2022, 0.37331),
+(13, 2023, 0.46669),
+(13, 2024, 0.56),
+(13, 2025, 0.32669),
+(13, 2026, 0.46669),
+(13, 2027, 0.46669),
+(14, 2027, 0.46669),
+(13, 2028, 0.51331),
+(13, 2029, 0.37331),
+(13, 2030, 1.02662),
+(13, 2031, 0.60669),
+(13, 2032, 0.42),
+(13, 2033, 0.51331),
+(13, 2034, 0.7),
+(13, 2035, 0.46669),
+(13, 2036, 0.51331),
+(13, 2037, 0.28),
+(13, 2038, 0.51331),
+(13, 2039, 0.7),
+(13, 2040, 0.46669),
+(13, 2041, 0.28),
+(13, 2042, 0.60669),
+(13, 2043, 0.46669),
+(13, 2044, 0.32669),
+(13, 2045, 0.32669),
+(13, 2046, 0.42),
+(13, 2047, 0.37331),
+(13, 2048, 0.46669),
+(13, 2049, 0.32669),
+(13, 2050, 0.23331),
+(13, 2051, 0.28),
+(14, 2051, 0.28),
+(13, 2052, 0.65338),
+(13, 2053, 0.60669),
+(14, 2053, 0.60669),
+(13, 2054, 0.56),
+(13, 2055, 0.65331),
+(13, 2056, 0.56),
+(13, 2057, 0.42),
+(13, 2058, 0.42),
+(13, 2059, 0.51331),
+(13, 2060, 0.46669),
+(13, 2061, 0.42),
+(13, 2062, 0.56),
+(13, 2063, 0.46669),
+(14, 2064, 0.23331),
+(13, 2064, 0.46662),
+(13, 2065, 0.51331),
+(13, 2066, 0.42),
+(13, 2067, 0.28),
+(13, 2068, 0.46669),
+(13, 2069, 0.56),
+(13, 2070, 0.23331),
+(13, 2071, 0.46669),
+(13, 2072, 0.42),
+(13, 2073, 0.42),
+(13, 2074, 2.38017),
+(13, 2075, 1.49324),
+(13, 2076, 0.23331),
+(13, 2077, 0.37331),
+(13, 2078, 0.65331),
+(13, 2079, 0.46669),
+(13, 2080, 0.37331),
+(13, 2081, 0.56),
+(13, 2082, 0.65331),
+(13, 2083, 0.37331),
+(14, 2084, 0.56),
+(13, 2084, 1.12),
+(13, 2085, 0.65331),
+(14, 2085, 0.65331),
+(13, 2086, 0.46669),
+(13, 2087, 0.56),
+(13, 2088, 0.28),
+(13, 2089, 1.02662),
+(13, 2090, 0.37331),
+(13, 2091, 0.23331),
+(13, 2092, 0.37331),
+(13, 2093, 0.23331),
+(13, 2094, 0.28),
+(14, 2138, 0.56),
+(14, 2139, 0.65331),
+(14, 2140, 0.74662),
+(14, 2141, 0.28),
+(14, 2142, 0.23331),
+(14, 2143, 0.8),
+(14, 2144, 0.56),
+(14, 2145, 0.46669),
+(14, 2146, 0.42),
+(14, 2147, 0.28),
+(14, 2148, 0.14),
+(14, 2149, 0.46669),
+(14, 2150, 0.46669),
+(14, 2151, 0.56),
+(14, 2152, 0.56),
+(14, 2153, 1.12),
+(14, 2154, 0.18669),
+(14, 2155, 0.56),
+(14, 2156, 0.51331),
+(14, 2157, 0.56),
+(14, 2158, 0.84),
+(14, 2159, 0.23331),
+(14, 2160, 0.32669),
+(14, 2161, 0.42),
+(14, 2162, 0.32669),
+(14, 2163, 0.51331),
+(14, 2164, 0.42),
+(14, 2165, 0.51331),
+(14, 2166, 0.42),
+(14, 2167, 0.60669),
+(14, 2168, 0.23331),
+(14, 2169, 0.60669),
+(14, 2170, 0.23331),
+(14, 2171, 0.7),
+(14, 2172, 0.37331),
+(14, 2173, 0.93338),
+(14, 2174, 1.12),
+(14, 2175, 0.51331),
+(14, 2176, 0.37331),
+(14, 2177, 0.46669),
+(14, 2178, 0.37331),
+(14, 2179, 0.37331),
+(14, 2180, 0.32669),
+(14, 2181, 0.42),
+(14, 2182, 0.37331),
+(14, 2183, 0.51331),
+(14, 2184, 0.42),
+(14, 2185, 0.56),
+(14, 2186, 0.51331),
+(14, 2187, 0.46662),
+(14, 2188, 1.02662),
+(14, 2189, 0.46669),
+(14, 2190, 0.37331),
+(14, 2191, 0.28),
+(14, 2192, 1.68),
+(14, 2193, 0.56),
+(14, 2194, 0.93338),
+(14, 2195, 0.23331),
+(14, 2196, 0.46669),
+(14, 2197, 0.23331),
+(14, 2198, 0.51331),
+(14, 2199, 0.56),
+(14, 2200, 0.09331),
+(14, 2201, 0.56),
+(14, 2202, 0.42),
+(14, 2203, 0.28),
+(14, 2204, 0.28),
+(14, 2205, 2.34652),
+(14, 2206, 0.93338),
+(14, 2207, 0.7),
+(14, 2208, 0.42),
+(15, 2265, 0.34),
+(15, 2266, 2.96),
+(16, 2268, 0.42),
+(16, 2269, 0.7),
+(16, 2270, 0.42),
+(16, 2271, 0.34),
+(16, 2272, 0.63),
+(16, 2273, 0.42),
+(16, 2274, 0.21),
+(16, 2275, 0.21),
+(16, 2276, 0.42),
+(16, 2277, 0.7),
+(16, 2278, 0.23331),
+(16, 2279, 0.32669),
+(16, 2280, 2.46679),
+(16, 2281, 0.14),
+(16, 2282, 0.28),
+(16, 2283, 0.14),
+(16, 2284, 0.23331),
+(16, 2285, 0.09331),
+(16, 2286, 0.23331),
+(16, 2287, 0.84),
+(16, 2288, 0.09331),
+(16, 2289, 0.37331),
+(16, 2290, 0.09331);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_finder_logging`
+-- Table structure for table `buf3w_finder_logging`
 --
 
 CREATE TABLE `buf3w_finder_logging` (
-  `searchterm` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `md5sum` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `searchterm` varchar(255) NOT NULL DEFAULT '',
+  `md5sum` varchar(32) NOT NULL DEFAULT '',
   `query` blob NOT NULL,
   `hits` int(11) NOT NULL DEFAULT 1,
   `results` int(11) NOT NULL DEFAULT 0
@@ -2467,7 +4301,7 @@ CREATE TABLE `buf3w_finder_logging` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_finder_taxonomy`
+-- Table structure for table `buf3w_finder_taxonomy`
 --
 
 CREATE TABLE `buf3w_finder_taxonomy` (
@@ -2476,35 +4310,43 @@ CREATE TABLE `buf3w_finder_taxonomy` (
   `lft` int(11) NOT NULL DEFAULT 0,
   `rgt` int(11) NOT NULL DEFAULT 0,
   `level` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `path` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `alias` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `path` varchar(400) NOT NULL DEFAULT '',
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `alias` varchar(400) NOT NULL DEFAULT '',
   `state` tinyint(3) UNSIGNED NOT NULL DEFAULT 1,
   `access` tinyint(3) UNSIGNED NOT NULL DEFAULT 1,
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
+  `language` char(7) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_finder_taxonomy`
+-- Dumping data for table `buf3w_finder_taxonomy`
 --
 
 INSERT INTO `buf3w_finder_taxonomy` (`id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `title`, `alias`, `state`, `access`, `language`) VALUES
-(1, 0, 0, 21, 0, '', 'ROOT', 'root', 1, 1, '*'),
-(2, 1, 1, 6, 1, 'type', 'Type', 'type', 1, 1, ''),
+(1, 0, 0, 37, 0, '', 'ROOT', 'root', 1, 1, '*'),
+(2, 1, 1, 8, 1, 'type', 'Type', 'type', 1, 1, ''),
 (3, 2, 2, 3, 2, 'type/article', 'Article', 'article', 1, 1, ''),
-(4, 1, 7, 10, 1, 'author', 'Author', 'author', 1, 1, ''),
-(5, 4, 8, 9, 2, 'author/kacper', 'Kacper', 'kacper', 1, 1, ''),
-(6, 1, 11, 16, 1, 'category', 'Category', 'category', 1, 1, ''),
-(8, 1, 17, 20, 1, 'language', 'Language', 'language', 1, 1, ''),
-(9, 8, 18, 19, 2, 'language/faef360113599eb6a0282d981cc199d8', '*', 'faef360113599eb6a0282d981cc199d8', 1, 1, ''),
+(4, 1, 9, 14, 1, 'author', 'Author', 'author', 1, 1, ''),
+(5, 4, 10, 11, 2, 'author/kacper', 'Kacper', 'kacper', 1, 1, ''),
+(6, 1, 15, 24, 1, 'category', 'Category', 'category', 1, 1, ''),
+(8, 1, 25, 28, 1, 'language', 'Language', 'language', 1, 1, ''),
+(9, 8, 26, 27, 2, 'language/faef360113599eb6a0282d981cc199d8', '*', 'faef360113599eb6a0282d981cc199d8', 1, 1, ''),
 (10, 2, 4, 5, 2, 'type/category', 'Category', 'category', 1, 1, ''),
-(11, 6, 12, 13, 2, 'category/wojna', 'Wojna', 'wojna', 1, 1, '*'),
-(13, 6, 14, 15, 2, 'category/social-media', 'Social Media', 'social-media', 1, 1, '*');
+(11, 6, 16, 17, 2, 'category/wojna', 'Wojna', 'wojna', 1, 1, '*'),
+(13, 6, 18, 19, 2, 'category/social-media', 'Social Media', 'social-media', 1, 1, '*'),
+(14, 2, 6, 7, 2, 'type/contact', 'Contact', 'contact', 1, 1, ''),
+(15, 6, 20, 21, 2, 'category/uncategorised', 'Uncategorised', 'uncategorised', 1, 1, '*'),
+(16, 1, 29, 32, 1, 'region', 'Region', 'region', 1, 1, ''),
+(17, 16, 30, 31, 2, 'region/testland', 'testland', 'testland', 1, 1, ''),
+(18, 1, 33, 36, 1, 'country', 'Country', 'country', 1, 1, ''),
+(19, 18, 34, 35, 2, 'country/test', 'test', 'test', 1, 1, ''),
+(20, 6, 22, 23, 2, 'category/menu', 'Menu', 'menu', 1, 1, '*'),
+(21, 4, 12, 13, 2, 'author/admin', 'Admin', 'admin', 1, 1, '');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_finder_taxonomy_map`
+-- Table structure for table `buf3w_finder_taxonomy_map`
 --
 
 CREATE TABLE `buf3w_finder_taxonomy_map` (
@@ -2513,7 +4355,7 @@ CREATE TABLE `buf3w_finder_taxonomy_map` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_finder_taxonomy_map`
+-- Dumping data for table `buf3w_finder_taxonomy_map`
 --
 
 INSERT INTO `buf3w_finder_taxonomy_map` (`link_id`, `node_id`) VALUES
@@ -2544,12 +4386,43 @@ INSERT INTO `buf3w_finder_taxonomy_map` (`link_id`, `node_id`) VALUES
 (8, 3),
 (8, 5),
 (8, 9),
-(8, 13);
+(8, 13),
+(9, 9),
+(9, 14),
+(9, 15),
+(9, 17),
+(9, 19),
+(10, 9),
+(10, 10),
+(11, 3),
+(11, 5),
+(11, 9),
+(11, 20),
+(12, 3),
+(12, 5),
+(12, 9),
+(12, 20),
+(13, 3),
+(13, 5),
+(13, 9),
+(13, 20),
+(14, 3),
+(14, 5),
+(14, 9),
+(14, 20),
+(15, 3),
+(15, 9),
+(15, 15),
+(15, 21),
+(16, 3),
+(16, 9),
+(16, 15),
+(16, 21);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_finder_terms`
+-- Table structure for table `buf3w_finder_terms`
 --
 
 CREATE TABLE `buf3w_finder_terms` (
@@ -2561,16 +4434,16 @@ CREATE TABLE `buf3w_finder_terms` (
   `weight` float UNSIGNED NOT NULL DEFAULT 0,
   `soundex` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
   `links` int(11) NOT NULL DEFAULT 0,
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
+  `language` char(7) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_finder_terms`
+-- Dumping data for table `buf3w_finder_terms`
 --
 
 INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`, `weight`, `soundex`, `links`, `language`) VALUES
-(1, '1', '1', 0, 0, 0.1, '', 2, '*'),
-(2, '10', '10', 0, 0, 0.2, '', 2, '*'),
+(1, '1', '1', 0, 0, 0.1, '', 3, '*'),
+(2, '10', '10', 0, 0, 0.2, '', 4, '*'),
 (3, '5', '5', 0, 0, 0.1, '', 5, '*'),
 (4, '70', '70', 0, 0, 0.2, '', 2, '*'),
 (5, '80', '80', 0, 0, 0.2, '', 2, '*'),
@@ -2594,16 +4467,16 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (23, 'ewakuację', 'ewakuację', 0, 0, 0.6, 'E200', 2, '*'),
 (24, 'facebooku', 'facebooku', 0, 0, 0.6, 'F212', 3, '*'),
 (25, 'godzin', 'godzin', 0, 0, 0.4, 'G325', 2, '*'),
-(26, 'i', 'i', 0, 0, 0.0667, 'I000', 8, '*'),
+(26, 'i', 'i', 0, 0, 0.0667, 'I000', 14, '*'),
 (27, 'ilość', 'ilość', 0, 0, 0.3333, 'I400', 2, '*'),
 (28, 'iwaniwka', 'iwaniwka', 0, 0, 0.5333, 'I520', 2, '*'),
-(29, 'jest', 'jest', 0, 0, 0.2667, 'J300', 8, '*'),
-(30, 'jeśli', 'jeśli', 0, 0, 0.3333, 'J400', 2, '*'),
+(29, 'jest', 'jest', 0, 0, 0.2667, 'J300', 13, '*'),
+(30, 'jeśli', 'jeśli', 0, 0, 0.3333, 'J400', 6, '*'),
 (31, 'już', 'już', 0, 0, 0.2, 'J000', 7, '*'),
 (32, 'kachowce', 'kachowce', 0, 0, 0.5333, 'K000', 2, '*'),
 (33, 'kachowka', 'kachowka', 0, 0, 0.5333, 'K000', 2, '*'),
 (34, 'kachowską', 'kachowską', 0, 0, 0.6, 'K000', 2, '*'),
-(35, 'kacper', 'kacper', 0, 0, 0.4, 'K160', 8, '*'),
+(35, 'kacper', 'kacper', 0, 0, 0.4, 'K160', 14, '*'),
 (36, 'km', 'km', 0, 0, 0.1333, 'K500', 2, '*'),
 (37, 'kolejnego', 'kolejnego', 0, 0, 0.6, 'K4252', 2, '*'),
 (38, 'krytyczny', 'krytyczny', 0, 0, 0.6, 'K6325', 2, '*'),
@@ -2614,7 +4487,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (43, 'mieszkańców', 'mieszkańców', 0, 0, 0.7333, 'M200', 2, '*'),
 (44, 'msw', 'msw', 0, 0, 0.2, 'M200', 2, '*'),
 (45, 'mykołajiwka', 'mykołajiwka', 0, 0, 0.7333, 'M200', 2, '*'),
-(46, 'na', 'na', 0, 0, 0.1333, 'N000', 8, '*'),
+(46, 'na', 'na', 0, 0, 0.1333, 'N000', 14, '*'),
 (47, 'najmniej', 'najmniej', 0, 0, 0.5333, 'N252', 2, '*'),
 (48, 'niepokojące', 'niepokojące', 0, 0, 0.7333, 'N120', 2, '*'),
 (49, 'nowa', 'nowa', 0, 0, 0.2667, 'N000', 2, '*'),
@@ -2622,13 +4495,13 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (51, 'obszary', 'obszary', 0, 0, 0.4667, 'O126', 2, '*'),
 (52, 'obwodowej', 'obwodowej', 0, 0, 0.6, 'O132', 2, '*'),
 (53, 'obwodu', 'obwodu', 0, 0, 0.4, 'O130', 3, '*'),
-(54, 'od', 'od', 0, 0, 0.1333, 'O300', 8, '*'),
+(54, 'od', 'od', 0, 0, 0.1333, 'O300', 13, '*'),
 (55, 'odległości', 'odległości', 0, 0, 0.6667, 'O342', 2, '*'),
 (56, 'ogłosiły', 'ogłosiły', 0, 0, 0.5333, 'O200', 3, '*'),
 (57, 'około', 'około', 0, 0, 0.3333, 'O200', 2, '*'),
 (58, 'okupowanej', 'okupowanej', 0, 0, 0.6667, 'O2152', 2, '*'),
 (59, 'olhiwka', 'olhiwka', 0, 0, 0.4667, 'O420', 2, '*'),
-(60, 'oraz', 'oraz', 0, 0, 0.2667, 'O620', 7, '*'),
+(60, 'oraz', 'oraz', 0, 0, 0.2667, 'O620', 9, '*'),
 (61, 'osiągnie', 'osiągnie', 0, 0, 0.5333, 'O250', 2, '*'),
 (62, 'osiągnąć', 'osiągnąć', 0, 0, 0.5333, 'O250', 2, '*'),
 (63, 'ostrzegał', 'ostrzegał', 0, 0, 0.6, 'O2362', 2, '*'),
@@ -2650,30 +4523,30 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (79, 'prokudin', 'prokudin', 0, 0, 0.5333, 'P6235', 2, '*'),
 (80, 'prydniprowskie', 'prydniprowskie', 0, 0, 0.9333, 'P635162', 2, '*'),
 (81, 'przerwą', 'przerwą', 0, 0, 0.4667, 'P626', 2, '*'),
-(82, 'przez', 'przez', 0, 0, 0.3333, 'P620', 6, '*'),
+(82, 'przez', 'przez', 0, 0, 0.3333, 'P620', 10, '*'),
 (83, 'prędkość', 'prędkość', 0, 0, 0.5333, 'P632', 2, '*'),
 (84, 'roku', 'roku', 0, 0, 0.2667, 'R200', 6, '*'),
 (85, 'rosjanie', 'rosjanie', 0, 0, 0.5333, 'R250', 3, '*'),
 (86, 'rosyjska', 'rosyjska', 0, 0, 0.5333, 'R200', 2, '*'),
 (87, 'rosyjskie', 'rosyjskie', 0, 0, 0.6, 'R200', 3, '*'),
 (88, 'sadowe', 'sadowe', 0, 0, 0.4, 'S300', 2, '*'),
-(89, 'się', 'się', 0, 0, 0.2, 'S000', 8, '*'),
+(89, 'się', 'się', 0, 0, 0.2, 'S000', 14, '*'),
 (90, 'siły', 'siły', 0, 0, 0.2667, 'S000', 3, '*'),
 (91, 'skala', 'skala', 0, 0, 0.3333, 'S400', 2, '*'),
 (92, 'strefie', 'strefie', 0, 0, 0.4667, 'S361', 2, '*'),
 (93, 'szef', 'szef', 0, 0, 0.2667, 'S100', 2, '*'),
-(94, 'są', 'są', 0, 0, 0.1333, 'S000', 6, '*'),
+(94, 'są', 'są', 0, 0, 0.1333, 'S000', 12, '*'),
 (95, 'terenów', 'terenów', 0, 0, 0.4667, 'T650', 2, '*'),
 (96, 'terroru', 'terroru', 0, 0, 0.4667, 'T600', 2, '*'),
 (97, 'tiahynka', 'tiahynka', 0, 0, 0.5333, 'T520', 2, '*'),
-(98, 'to', 'to', 0, 0, 0.1333, 'T000', 6, '*'),
+(98, 'to', 'to', 0, 0, 0.1333, 'T000', 9, '*'),
 (99, 'tokariwka', 'tokariwka', 0, 0, 0.6, 'T262', 2, '*'),
 (100, 'tym', 'tym', 0, 0, 0.2, 'T500', 4, '*'),
 (101, 'ubiegłego', 'ubiegłego', 0, 0, 0.6, 'U120', 2, '*'),
 (102, 'ukrainy', 'ukrainy', 0, 0, 0.4667, 'U265', 4, '*'),
 (103, 'ukraińska', 'ukraińska', 0, 0, 0.6, 'U262', 2, '*'),
 (104, 'ustalane', 'ustalane', 0, 0, 0.5333, 'U2345', 2, '*'),
-(105, 'w', 'w', 0, 0, 0.0667, 'W000', 8, '*'),
+(105, 'w', 'w', 0, 0, 0.0667, 'W000', 14, '*'),
 (106, 'według', 'według', 0, 0, 0.4, 'W320', 3, '*'),
 (107, 'woda', 'woda', 0, 0, 0.2667, 'W300', 2, '*'),
 (108, 'wodnej', 'wodnej', 0, 0, 0.4, 'W352', 2, '*'),
@@ -2687,8 +4560,8 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (116, 'wysadziła', 'wysadziła', 0, 0, 0.6, 'W232', 2, '*'),
 (117, 'wysadzona', 'wysadzona', 0, 0, 0.6, 'W2325', 2, '*'),
 (118, 'władze', 'władze', 0, 0, 0.4, 'W320', 3, '*'),
-(119, 'z', 'z', 0, 0, 0.0667, 'Z000', 8, '*'),
-(120, 'za', 'za', 0, 0, 0.1333, 'Z000', 7, '*'),
+(119, 'z', 'z', 0, 0, 0.0667, 'Z000', 15, '*'),
+(120, 'za', 'za', 0, 0, 0.1333, 'Z000', 12, '*'),
 (121, 'zachodnim', 'zachodnim', 0, 0, 0.6, 'Z350', 2, '*'),
 (122, 'zagrożonej', 'zagrożonej', 0, 0, 0.6667, 'Z652', 2, '*'),
 (123, 'zagrożony', 'zagrożony', 0, 0, 0.6, 'Z650', 2, '*'),
@@ -2703,17 +4576,17 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (132, 'znajduje', 'znajduje', 0, 0, 0.5333, 'Z5232', 2, '*'),
 (133, 'znajdzie', 'znajdzie', 0, 0, 0.5333, 'Z5232', 2, '*'),
 (134, 'zniszczeń', 'zniszczeń', 0, 0, 0.6, 'Z520', 2, '*'),
-(135, 'że', 'że', 0, 0, 0.1333, 'ż000', 8, '*'),
-(256, '8', '8', 0, 0, 0.1, '', 1, '*'),
+(135, 'że', 'że', 0, 0, 0.1333, 'ż000', 12, '*'),
+(256, '8', '8', 0, 0, 0.1, '', 3, '*'),
 (257, 'wojna', 'wojna', 0, 0, 0.3333, 'W250', 1, '*'),
 (258, '\'krwawych', '\'krwawych', 0, 0, 0.6, 'K620', 1, '*'),
 (259, '-', '-', 0, 0, 0.1, '', 1, '*'),
-(260, '2', '2', 0, 0, 0.1, '', 3, '*'),
-(261, 'aby', 'aby', 0, 0, 0.2, 'A100', 2, '*'),
+(260, '2', '2', 0, 0, 0.1, '', 4, '*'),
+(261, 'aby', 'aby', 0, 0, 0.2, 'A100', 8, '*'),
 (262, 'akcji', 'akcji', 0, 0, 0.3333, 'A200', 2, '*'),
 (263, 'aktywnie', 'aktywnie', 0, 0, 0.5333, 'A235', 1, '*'),
-(264, 'ale', 'ale', 0, 0, 0.2, 'A400', 2, '*'),
-(265, 'ani', 'ani', 0, 0, 0.2, 'A500', 1, '*'),
+(264, 'ale', 'ale', 0, 0, 0.2, 'A400', 3, '*'),
+(265, 'ani', 'ani', 0, 0, 0.2, 'A500', 5, '*'),
 (266, 'autor', 'autor', 0, 0, 0.3333, 'A360', 1, '*'),
 (267, 'autorzy', 'autorzy', 0, 0, 0.4667, 'A362', 1, '*'),
 (268, 'bachmuckim', 'bachmuckim', 0, 0, 0.6667, 'B2525', 1, '*'),
@@ -2730,21 +4603,21 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (279, 'brać', 'brać', 0, 0, 0.2667, 'B600', 1, '*'),
 (280, 'broni', 'broni', 0, 0, 0.3333, 'B650', 2, '*'),
 (281, 'by', 'by', 0, 0, 0.1333, 'B000', 3, '*'),
-(282, 'być', 'być', 0, 0, 0.2, 'B000', 5, '*'),
+(282, 'być', 'być', 0, 0, 0.2, 'B000', 9, '*'),
 (283, 'był', 'był', 0, 0, 0.2, 'B000', 3, '*'),
 (284, 'byłby', 'byłby', 0, 0, 0.3333, 'B000', 1, '*'),
 (285, 'było', 'było', 0, 0, 0.2667, 'B000', 2, '*'),
-(286, 'były', 'były', 0, 0, 0.2667, 'B000', 3, '*'),
-(287, 'będą', 'będą', 0, 0, 0.2667, 'B300', 4, '*'),
+(286, 'były', 'były', 0, 0, 0.2667, 'B000', 5, '*'),
+(287, 'będą', 'będą', 0, 0, 0.2667, 'B300', 6, '*'),
 (288, 'cali', 'cali', 0, 0, 0.2667, 'C400', 1, '*'),
 (289, 'celowo', 'celowo', 0, 0, 0.4, 'C400', 1, '*'),
-(290, 'celu', 'celu', 0, 0, 0.2667, 'C400', 2, '*'),
+(290, 'celu', 'celu', 0, 0, 0.2667, 'C400', 6, '*'),
 (291, 'choćby', 'choćby', 0, 0, 0.4, 'C100', 1, '*'),
 (292, 'chłopcy', 'chłopcy', 0, 0, 0.4667, 'C120', 1, '*'),
 (293, 'cywili', 'cywili', 0, 0, 0.4, 'C400', 1, '*'),
-(294, 'czasie', 'czasie', 0, 0, 0.4, 'C000', 1, '*'),
+(294, 'czasie', 'czasie', 0, 0, 0.4, 'C000', 3, '*'),
 (295, 'czeczeńskich', 'czeczeńskich', 0, 0, 0.8, 'C000', 1, '*'),
-(296, 'czy', 'czy', 0, 0, 0.2, 'C000', 3, '*'),
+(296, 'czy', 'czy', 0, 0, 0.2, 'C000', 5, '*'),
 (297, 'częścią', 'częścią', 0, 0, 0.4667, 'C000', 1, '*'),
 (298, 'dalej', 'dalej', 0, 0, 0.3333, 'D420', 1, '*'),
 (299, 'danym', 'danym', 0, 0, 0.3333, 'D500', 1, '*'),
@@ -2752,22 +4625,22 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (301, 'dementi', 'dementi', 0, 0, 0.4667, 'D530', 1, '*'),
 (302, 'dezinformacji', 'dezinformacji', 0, 0, 0.8667, 'D251652', 1, '*'),
 (303, 'dezinformacyjne', 'dezinformacyjne', 0, 0, 1, 'D2516525', 1, '*'),
-(304, 'dla', 'dla', 0, 0, 0.2, 'D400', 2, '*'),
+(304, 'dla', 'dla', 0, 0, 0.2, 'D400', 7, '*'),
 (305, 'dlaczego', 'dlaczego', 0, 0, 0.5333, 'D420', 1, '*'),
 (306, 'dniami', 'dniami', 0, 0, 0.4, 'D500', 1, '*'),
-(307, 'do', 'do', 0, 0, 0.1333, 'D000', 6, '*'),
+(307, 'do', 'do', 0, 0, 0.1333, 'D000', 12, '*'),
 (308, 'dodaje', 'dodaje', 0, 0, 0.4, 'D200', 1, '*'),
 (309, 'dodano', 'dodano', 0, 0, 0.4, 'D500', 1, '*'),
 (310, 'doniesień', 'doniesień', 0, 0, 0.6, 'D520', 1, '*'),
 (311, 'dotarliśmy', 'dotarliśmy', 0, 0, 0.6667, 'D645', 1, '*'),
-(312, 'dotyczące', 'dotyczące', 0, 0, 0.6, 'D200', 1, '*'),
+(312, 'dotyczące', 'dotyczące', 0, 0, 0.6, 'D200', 2, '*'),
 (313, 'dr', 'dr', 0, 0, 0.1333, 'D600', 1, '*'),
 (314, 'ds', 'ds', 0, 0, 0.1333, 'D200', 2, '*'),
 (315, 'dużą', 'dużą', 0, 0, 0.2667, 'D000', 1, '*'),
 (316, 'działający', 'działający', 0, 0, 0.6667, 'D200', 1, '*'),
 (317, 'działanie', 'działanie', 0, 0, 0.6, 'D250', 2, '*'),
 (318, 'działań', 'działań', 0, 0, 0.4667, 'D200', 1, '*'),
-(319, 'dziedzinie', 'dziedzinie', 0, 0, 0.6667, 'D2325', 1, '*'),
+(319, 'dziedzinie', 'dziedzinie', 0, 0, 0.6667, 'D2325', 2, '*'),
 (320, 'ekspert', 'ekspert', 0, 0, 0.4667, 'E2163', 1, '*'),
 (321, 'federacji', 'federacji', 0, 0, 0.6, 'F362', 1, '*'),
 (322, 'froncie', 'froncie', 0, 0, 0.4667, 'F652', 1, '*'),
@@ -2781,7 +4654,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (330, 'historyczne', 'historyczne', 0, 0, 0.7333, 'H23625', 1, '*'),
 (331, 'im', 'im', 0, 0, 0.1333, 'I500', 3, '*'),
 (332, 'in', 'in', 0, 0, 0.1333, 'I500', 2, '*'),
-(333, 'informacje', 'informacje', 0, 0, 0.6667, 'I51652', 1, '*'),
+(333, 'informacje', 'informacje', 0, 0, 0.6667, 'I51652', 7, '*'),
 (334, 'informacyjnej', 'informacyjnej', 0, 0, 0.8667, 'I5165252', 1, '*'),
 (335, 'infosferze', 'infosferze', 0, 0, 0.6667, 'I512162', 1, '*'),
 (336, 'inspirowane', 'inspirowane', 0, 0, 0.7333, 'I52165', 1, '*'),
@@ -2798,7 +4671,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (347, 'kijowowi', 'kijowowi', 0, 0, 0.5333, 'K000', 1, '*'),
 (348, 'kilkoma', 'kilkoma', 0, 0, 0.4667, 'K425', 1, '*'),
 (349, 'koleżeństwo', 'koleżeństwo', 0, 0, 0.7333, 'K423', 1, '*'),
-(350, 'komentarze', 'komentarze', 0, 0, 0.6667, 'K5362', 1, '*'),
+(350, 'komentarze', 'komentarze', 0, 0, 0.6667, 'K5362', 4, '*'),
 (351, 'konflikt', 'konflikt', 0, 0, 0.5333, 'K51423', 1, '*'),
 (352, 'konfliktu', 'konfliktu', 0, 0, 0.6, 'K51423', 1, '*'),
 (353, 'kontekście', 'kontekście', 0, 0, 0.6667, 'K532', 1, '*'),
@@ -2812,9 +4685,9 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (361, 'kraje', 'kraje', 0, 0, 0.3333, 'K620', 1, '*'),
 (362, 'krwawych', 'krwawych', 0, 0, 0.5333, 'K620', 1, '*'),
 (363, 'kto', 'kto', 0, 0, 0.2, 'K300', 1, '*'),
-(364, 'której', 'której', 0, 0, 0.4, 'K362', 1, '*'),
+(364, 'której', 'której', 0, 0, 0.4, 'K362', 2, '*'),
 (365, 'którym', 'którym', 0, 0, 0.4, 'K365', 1, '*'),
-(366, 'którzy', 'którzy', 0, 0, 0.4, 'K362', 4, '*'),
+(366, 'którzy', 'którzy', 0, 0, 0.4, 'K362', 5, '*'),
 (367, 'kwestię', 'kwestię', 0, 0, 0.4667, 'K300', 1, '*'),
 (368, 'legionu', 'legionu', 0, 0, 0.4667, 'L250', 1, '*'),
 (369, 'liny', 'liny', 0, 0, 0.2667, 'L500', 1, '*'),
@@ -2831,36 +4704,36 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (380, 'mieli', 'mieli', 0, 0, 0.3333, 'M400', 1, '*'),
 (381, 'miesięcy', 'miesięcy', 0, 0, 0.5333, 'M200', 2, '*'),
 (382, 'ministra', 'ministra', 0, 0, 0.5333, 'M236', 1, '*'),
-(383, 'mogli', 'mogli', 0, 0, 0.3333, 'M240', 1, '*'),
-(384, 'mogą', 'mogą', 0, 0, 0.2667, 'M200', 5, '*'),
+(383, 'mogli', 'mogli', 0, 0, 0.3333, 'M240', 3, '*'),
+(384, 'mogą', 'mogą', 0, 0, 0.2667, 'M200', 10, '*'),
 (385, 'monografii', 'monografii', 0, 0, 0.6667, 'M261', 1, '*'),
 (386, 'mordercach', 'mordercach', 0, 0, 0.6667, 'M6362', 1, '*'),
 (387, 'moskwa', 'moskwa', 0, 0, 0.4, 'M200', 1, '*'),
 (388, 'motywacji', 'motywacji', 0, 0, 0.6, 'M320', 1, '*'),
-(389, 'możemy', 'możemy', 0, 0, 0.4, 'M000', 1, '*'),
+(389, 'możemy', 'możemy', 0, 0, 0.4, 'M000', 5, '*'),
 (390, 'możliwości', 'możliwości', 0, 0, 0.6667, 'M420', 2, '*'),
 (391, 'można', 'można', 0, 0, 0.3333, 'M000', 4, '*'),
 (392, 'mówi', 'mówi', 0, 0, 0.2667, 'M000', 2, '*'),
-(393, 'należy', 'należy', 0, 0, 0.4, 'N400', 1, '*'),
-(394, 'nam', 'nam', 0, 0, 0.2, 'N000', 2, '*'),
-(395, 'nami', 'nami', 0, 0, 0.2667, 'N000', 1, '*'),
+(393, 'należy', 'należy', 0, 0, 0.4, 'N400', 6, '*'),
+(394, 'nam', 'nam', 0, 0, 0.2, 'N000', 5, '*'),
+(395, 'nami', 'nami', 0, 0, 0.2667, 'N000', 3, '*'),
 (396, 'napisali', 'napisali', 0, 0, 0.5333, 'N124', 1, '*'),
 (397, 'napisano', 'napisano', 0, 0, 0.5333, 'N125', 1, '*'),
 (398, 'napisał', 'napisał', 0, 0, 0.4667, 'N120', 1, '*'),
 (399, 'naprawdę', 'naprawdę', 0, 0, 0.5333, 'N163', 2, '*'),
-(400, 'nas', 'nas', 0, 0, 0.2, 'N200', 1, '*'),
+(400, 'nas', 'nas', 0, 0, 0.2, 'N200', 2, '*'),
 (401, 'nasi', 'nasi', 0, 0, 0.2667, 'N200', 1, '*'),
-(402, 'naszego', 'naszego', 0, 0, 0.4667, 'N200', 1, '*'),
+(402, 'naszego', 'naszego', 0, 0, 0.4667, 'N200', 7, '*'),
 (403, 'nato', 'nato', 0, 0, 0.2667, 'N300', 2, '*'),
 (404, 'natomiast', 'natomiast', 0, 0, 0.6, 'N3523', 2, '*'),
 (405, 'negatywnych', 'negatywnych', 0, 0, 0.7333, 'N2352', 1, '*'),
-(406, 'nie', 'nie', 0, 0, 0.2, 'N000', 6, '*'),
+(406, 'nie', 'nie', 0, 0, 0.2, 'N000', 12, '*'),
 (407, 'niedzielę', 'niedzielę', 0, 0, 0.6, 'N324', 1, '*'),
 (408, 'niepodległość', 'niepodległość', 0, 0, 0.8667, 'N1342', 1, '*'),
 (409, 'niewykluczone', 'niewykluczone', 0, 0, 0.8667, 'N2425', 1, '*'),
 (410, 'nim', 'nim', 0, 0, 0.2, 'N000', 1, '*'),
 (411, 'nóż', 'nóż', 0, 0, 0.2, 'N000', 1, '*'),
-(412, 'o', 'o', 0, 0, 0.0667, 'O000', 5, '*'),
+(412, 'o', 'o', 0, 0, 0.0667, 'O000', 11, '*'),
 (413, 'obcinaniem', 'obcinaniem', 0, 0, 0.6667, 'O125', 1, '*'),
 (414, 'obecności', 'obecności', 0, 0, 0.6, 'O1252', 1, '*'),
 (415, 'obwodzie', 'obwodzie', 0, 0, 0.5333, 'O132', 1, '*'),
@@ -2870,7 +4743,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (419, 'ochotniczy', 'ochotniczy', 0, 0, 0.6667, 'O2352', 1, '*'),
 (420, 'ochotniczym', 'ochotniczym', 0, 0, 0.7333, 'O23525', 1, '*'),
 (421, 'ochotników', 'ochotników', 0, 0, 0.6667, 'O2352', 1, '*'),
-(422, 'oczywiście', 'oczywiście', 0, 0, 0.6667, 'O200', 1, '*'),
+(422, 'oczywiście', 'oczywiście', 0, 0, 0.6667, 'O200', 2, '*'),
 (423, 'odczuć', 'odczuć', 0, 0, 0.4, 'O320', 1, '*'),
 (424, 'oddziału', 'oddziału', 0, 0, 0.5333, 'O320', 1, '*'),
 (425, 'odnosząc', 'odnosząc', 0, 0, 0.5333, 'O352', 1, '*'),
@@ -2885,7 +4758,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (434, 'opublikowane', 'opublikowane', 0, 0, 0.8, 'O1425', 1, '*'),
 (435, 'opóźnieniem', 'opóźnieniem', 0, 0, 0.7333, 'O150', 1, '*'),
 (436, 'orechowskim', 'orechowskim', 0, 0, 0.7333, 'O625', 1, '*'),
-(437, 'osobiste', 'osobiste', 0, 0, 0.5333, 'O2123', 1, '*'),
+(437, 'osobiste', 'osobiste', 0, 0, 0.5333, 'O2123', 3, '*'),
 (438, 'ostrzega', 'ostrzega', 0, 0, 0.5333, 'O2362', 1, '*'),
 (439, 'oświadczenie', 'oświadczenie', 0, 0, 0.8, 'O325', 1, '*'),
 (440, 'pewnym', 'pewnym', 0, 0, 0.4, 'P500', 1, '*'),
@@ -2920,12 +4793,12 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (469, 'prorosyjscy', 'prorosyjscy', 0, 0, 0.7333, 'P620', 1, '*'),
 (470, 'przeciąganie', 'przeciąganie', 0, 0, 0.8, 'P625', 1, '*'),
 (471, 'przeczytać', 'przeczytać', 0, 0, 0.6667, 'P623', 1, '*'),
-(472, 'przed', 'przed', 0, 0, 0.3333, 'P623', 4, '*'),
+(472, 'przed', 'przed', 0, 0, 0.3333, 'P623', 6, '*'),
 (473, 'przekazów', 'przekazów', 0, 0, 0.6, 'P620', 1, '*'),
 (474, 'przekonywać', 'przekonywać', 0, 0, 0.7333, 'P625', 1, '*'),
 (475, 'przekroczenia', 'przekroczenia', 0, 0, 0.8667, 'P62625', 1, '*'),
 (476, 'przeprowadziliśmy', 'przeprowadziliśmy', 0, 0, 1, 'P62163245', 1, '*'),
-(477, 'przestrzeni', 'przestrzeni', 0, 0, 0.7333, 'P623625', 1, '*'),
+(477, 'przestrzeni', 'przestrzeni', 0, 0, 0.7333, 'P623625', 2, '*'),
 (478, 'przeznaczenia', 'przeznaczenia', 0, 0, 0.8667, 'P62525', 1, '*'),
 (479, 'przyjaźnie', 'przyjaźnie', 0, 0, 0.6667, 'P625', 1, '*'),
 (480, 'przypomnijmy', 'przypomnijmy', 0, 0, 0.8, 'P621525', 2, '*'),
@@ -2965,7 +4838,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (514, 'sojusz', 'sojusz', 0, 0, 0.4, 'S000', 1, '*'),
 (515, 'specjalnych', 'specjalnych', 0, 0, 0.7333, 'S12452', 1, '*'),
 (516, 'spisali', 'spisali', 0, 0, 0.4667, 'S124', 1, '*'),
-(517, 'sposób', 'sposób', 0, 0, 0.4, 'S121', 1, '*'),
+(517, 'sposób', 'sposób', 0, 0, 0.4, 'S121', 5, '*'),
 (518, 'spowodowanie', 'spowodowanie', 0, 0, 0.8, 'S135', 1, '*'),
 (519, 'sprawie', 'sprawie', 0, 0, 0.4667, 'S160', 1, '*'),
 (520, 'sprowadza', 'sprowadza', 0, 0, 0.6, 'S1632', 1, '*'),
@@ -2975,8 +4848,8 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (524, 'stanu', 'stanu', 0, 0, 0.3333, 'S350', 1, '*'),
 (525, 'stały', 'stały', 0, 0, 0.3333, 'S300', 1, '*'),
 (526, 'stratpoints', 'stratpoints', 0, 0, 0.7333, 'S3631532', 1, '*'),
-(527, 'stron', 'stron', 0, 0, 0.3333, 'S365', 1, '*'),
-(528, 'stronie', 'stronie', 0, 0, 0.4667, 'S365', 1, '*'),
+(527, 'stron', 'stron', 0, 0, 0.3333, 'S365', 5, '*'),
+(528, 'stronie', 'stronie', 0, 0, 0.4667, 'S365', 6, '*'),
 (529, 'swoich', 'swoich', 0, 0, 0.4, 'S000', 2, '*'),
 (530, 'swoje', 'swoje', 0, 0, 0.3333, 'S000', 3, '*'),
 (531, 'sytuacji', 'sytuacji', 0, 0, 0.5333, 'S320', 1, '*'),
@@ -2987,13 +4860,13 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (536, 'służb', 'służb', 0, 0, 0.3333, 'S100', 1, '*'),
 (537, 'służby', 'służby', 0, 0, 0.4, 'S100', 1, '*'),
 (538, 'tak', 'tak', 0, 0, 0.2, 'T200', 2, '*'),
-(539, 'takie', 'takie', 0, 0, 0.3333, 'T200', 2, '*'),
-(540, 'także', 'także', 0, 0, 0.3333, 'T200', 4, '*'),
-(541, 'tego', 'tego', 0, 0, 0.2667, 'T200', 4, '*'),
-(542, 'tej', 'tej', 0, 0, 0.2, 'T200', 3, '*'),
+(539, 'takie', 'takie', 0, 0, 0.3333, 'T200', 4, '*'),
+(540, 'także', 'także', 0, 0, 0.3333, 'T200', 5, '*'),
+(541, 'tego', 'tego', 0, 0, 0.2667, 'T200', 5, '*'),
+(542, 'tej', 'tej', 0, 0, 0.2, 'T200', 5, '*'),
 (543, 'telegramie', 'telegramie', 0, 0, 0.6667, 'T4265', 1, '*'),
 (544, 'telegramowym', 'telegramowym', 0, 0, 0.8, 'T4265', 1, '*'),
-(545, 'temat', 'temat', 0, 0, 0.3333, 'T530', 1, '*'),
+(545, 'temat', 'temat', 0, 0, 0.3333, 'T530', 3, '*'),
 (546, 'ten', 'ten', 0, 0, 0.2, 'T500', 1, '*'),
 (547, 'teraz', 'teraz', 0, 0, 0.3333, 'T620', 3, '*'),
 (548, 'teren', 'teren', 0, 0, 0.3333, 'T650', 1, '*'),
@@ -3002,7 +4875,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (551, 'trendy', 'trendy', 0, 0, 0.4, 'T653', 1, '*'),
 (552, 'trochę', 'trochę', 0, 0, 0.4, 'T620', 1, '*'),
 (553, 'twitterze', 'twitterze', 0, 0, 0.6, 'T620', 1, '*'),
-(554, 'tylko', 'tylko', 0, 0, 0.3333, 'T420', 3, '*'),
+(554, 'tylko', 'tylko', 0, 0, 0.3333, 'T420', 5, '*'),
 (555, 'typu', 'typu', 0, 0, 0.2667, 'T100', 3, '*'),
 (556, 'uczestniczyć', 'uczestniczyć', 0, 0, 0.8, 'U2352', 1, '*'),
 (557, 'udział', 'udział', 0, 0, 0.4, 'U320', 1, '*'),
@@ -3022,8 +4895,8 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (571, 'warto', 'warto', 0, 0, 0.3333, 'W630', 1, '*'),
 (572, 'we', 'we', 0, 0, 0.1333, 'W000', 2, '*'),
 (573, 'widmo', 'widmo', 0, 0, 0.3333, 'W350', 1, '*'),
-(574, 'wiele', 'wiele', 0, 0, 0.3333, 'W400', 1, '*'),
-(575, 'wielu', 'wielu', 0, 0, 0.3333, 'W400', 4, '*'),
+(574, 'wiele', 'wiele', 0, 0, 0.3333, 'W400', 2, '*'),
+(575, 'wielu', 'wielu', 0, 0, 0.3333, 'W400', 5, '*'),
 (576, 'wirtualną', 'wirtualną', 0, 0, 0.6, 'W6345', 1, '*'),
 (577, 'więzy', 'więzy', 0, 0, 0.3333, 'W200', 1, '*'),
 (578, 'wkroczyły', 'wkroczyły', 0, 0, 0.6, 'W262', 1, '*'),
@@ -3045,7 +4918,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (594, 'wszedłby', 'wszedłby', 0, 0, 0.5333, 'W231', 1, '*'),
 (595, 'wszyscy', 'wszyscy', 0, 0, 0.4667, 'W200', 1, '*'),
 (596, 'wszystko', 'wszystko', 0, 0, 0.5333, 'W232', 1, '*'),
-(597, 'wydarzenia', 'wydarzenia', 0, 0, 0.6667, 'W3625', 1, '*'),
+(597, 'wydarzenia', 'wydarzenia', 0, 0, 0.6667, 'W3625', 3, '*'),
 (598, 'wykazali', 'wykazali', 0, 0, 0.5333, 'W240', 1, '*'),
 (599, 'wykluczam', 'wykluczam', 0, 0, 0.6, 'W2425', 1, '*'),
 (600, 'wykonano', 'wykonano', 0, 0, 0.5333, 'W250', 1, '*'),
@@ -3075,11 +4948,11 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (624, 'zbrojnym', 'zbrojnym', 0, 0, 0.5333, 'Z1625', 1, '*'),
 (625, 'zbrojnymi', 'zbrojnymi', 0, 0, 0.6, 'Z1625', 1, '*'),
 (626, 'zdrowi', 'zdrowi', 0, 0, 0.4, 'Z360', 1, '*'),
-(627, 'ze', 'ze', 0, 0, 0.1333, 'Z000', 1, '*'),
+(627, 'ze', 'ze', 0, 0, 0.1333, 'Z000', 3, '*'),
 (628, 'znaczenie', 'znaczenie', 0, 0, 0.6, 'Z525', 1, '*'),
 (629, 'znakomicie', 'znakomicie', 0, 0, 0.6667, 'Z5252', 1, '*'),
 (630, 'zniknęły', 'zniknęły', 0, 0, 0.5333, 'Z525', 1, '*'),
-(631, 'zostały', 'zostały', 0, 0, 0.4667, 'Z300', 1, '*'),
+(631, 'zostały', 'zostały', 0, 0, 0.4667, 'Z300', 2, '*'),
 (632, 'łączą', 'łączą', 0, 0, 0.3333, 'ł200', 1, '*'),
 (633, 'śmierć', 'śmierć', 0, 0, 0.4, 'ś560', 1, '*'),
 (634, 'żaden', 'żaden', 0, 0, 0.3333, 'ż350', 1, '*'),
@@ -3104,7 +4977,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (783, 'brygada', 'brygada', 0, 0, 0.4667, 'B623', 1, '*'),
 (784, 'brygady', 'brygady', 0, 0, 0.4667, 'B623', 1, '*'),
 (785, 'brytania', 'brytania', 0, 0, 0.5333, 'B635', 1, '*'),
-(786, 'będzie', 'będzie', 0, 0, 0.4, 'B320', 3, '*'),
+(786, 'będzie', 'będzie', 0, 0, 0.4, 'B320', 4, '*'),
 (787, 'chłodno', 'chłodno', 0, 0, 0.4667, 'C350', 1, '*'),
 (788, 'czynienia', 'czynienia', 0, 0, 0.6, 'C500', 1, '*'),
 (789, 'dali', 'dali', 0, 0, 0.2667, 'D400', 1, '*'),
@@ -3115,7 +4988,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (794, 'dowódcą', 'dowódcą', 0, 0, 0.4667, 'D200', 1, '*'),
 (795, 'dowództwo', 'dowództwo', 0, 0, 0.6, 'D230', 1, '*'),
 (796, 'dysponują', 'dysponują', 0, 0, 0.6, 'D2152', 1, '*'),
-(797, 'działania', 'działania', 0, 0, 0.6, 'D250', 2, '*'),
+(797, 'działania', 'działania', 0, 0, 0.6, 'D250', 3, '*'),
 (798, 'ekranach', 'ekranach', 0, 0, 0.5333, 'E2652', 1, '*'),
 (799, 'elitarne', 'elitarne', 0, 0, 0.5333, 'E4365', 1, '*'),
 (800, 'fazy', 'fazy', 0, 0, 0.2667, 'F200', 1, '*'),
@@ -3126,12 +4999,12 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (805, 'grupami', 'grupami', 0, 0, 0.4667, 'G615', 1, '*'),
 (806, 'grupy', 'grupy', 0, 0, 0.3333, 'G610', 1, '*'),
 (807, 'gry', 'gry', 0, 0, 0.2, 'G600', 1, '*'),
-(808, 'ich', 'ich', 0, 0, 0.2, 'I200', 4, '*'),
+(808, 'ich', 'ich', 0, 0, 0.2, 'I200', 6, '*'),
 (809, 'inni', 'inni', 0, 0, 0.2667, 'I500', 1, '*'),
 (810, 'instruktorami', 'instruktorami', 0, 0, 0.8667, 'I52362365', 1, '*'),
 (811, 'interoperacyjności', 'interoperacyjności', 0, 0, 1, 'I53616252', 1, '*'),
 (812, 'iwan', 'iwan', 0, 0, 0.2667, 'I500', 1, '*'),
-(813, 'jak', 'jak', 0, 0, 0.2, 'J000', 4, '*'),
+(813, 'jak', 'jak', 0, 0, 0.2, 'J000', 8, '*'),
 (814, 'jakie', 'jakie', 0, 0, 0.3333, 'J000', 1, '*'),
 (815, 'jednostka', 'jednostka', 0, 0, 0.6, 'J35232', 1, '*'),
 (816, 'jednostki', 'jednostki', 0, 0, 0.6, 'J35232', 1, '*'),
@@ -3143,22 +5016,22 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (822, 'kontakcie', 'kontakcie', 0, 0, 0.6, 'K532', 1, '*'),
 (823, 'kontrofensywie', 'kontrofensywie', 0, 0, 0.9333, 'K536152', 1, '*'),
 (824, 'korzystali', 'korzystali', 0, 0, 0.6667, 'K6234', 1, '*'),
-(825, 'które', 'które', 0, 0, 0.3333, 'K360', 3, '*'),
+(825, 'które', 'które', 0, 0, 0.3333, 'K360', 9, '*'),
 (826, 'który', 'który', 0, 0, 0.3333, 'K360', 1, '*'),
-(827, 'których', 'których', 0, 0, 0.4667, 'K362', 1, '*'),
+(827, 'których', 'których', 0, 0, 0.4667, 'K362', 3, '*'),
 (828, 'kursu', 'kursu', 0, 0, 0.3333, 'K620', 1, '*'),
 (829, 'kursów', 'kursów', 0, 0, 0.4, 'K620', 1, '*'),
 (830, 'lata', 'lata', 0, 0, 0.2667, 'L300', 1, '*'),
 (831, 'liczniejszymi', 'liczniejszymi', 0, 0, 0.8667, 'L2525', 1, '*'),
 (832, 'lider', 'lider', 0, 0, 0.3333, 'L360', 1, '*'),
-(833, 'lub', 'lub', 0, 0, 0.2, 'L100', 2, '*'),
+(833, 'lub', 'lub', 0, 0, 0.2, 'L100', 8, '*'),
 (834, 'major', 'major', 0, 0, 0.3333, 'M260', 1, '*'),
-(835, 'mają', 'mają', 0, 0, 0.2667, 'M200', 4, '*'),
+(835, 'mają', 'mają', 0, 0, 0.2667, 'M200', 6, '*'),
 (836, 'mających', 'mających', 0, 0, 0.5333, 'M200', 1, '*'),
-(837, 'masz', 'masz', 0, 0, 0.2667, 'M200', 1, '*'),
+(837, 'masz', 'masz', 0, 0, 0.2667, 'M200', 3, '*'),
 (838, 'minister', 'minister', 0, 0, 0.5333, 'M236', 1, '*'),
 (839, 'między', 'między', 0, 0, 0.4, 'M320', 1, '*'),
-(840, 'mogę', 'mogę', 0, 0, 0.2667, 'M200', 1, '*'),
+(840, 'mogę', 'mogę', 0, 0, 0.2667, 'M200', 2, '*'),
 (841, 'najbardziej', 'najbardziej', 0, 0, 0.7333, 'N21632', 1, '*'),
 (842, 'największy', 'największy', 0, 0, 0.6667, 'N200', 2, '*'),
 (843, 'następnej', 'następnej', 0, 0, 0.6, 'N23152', 1, '*'),
@@ -3186,10 +5059,10 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (865, 'piechoty', 'piechoty', 0, 0, 0.5333, 'P230', 1, '*'),
 (866, 'plutonu', 'plutonu', 0, 0, 0.4667, 'P435', 1, '*'),
 (867, 'poczuć', 'poczuć', 0, 0, 0.4, 'P200', 1, '*'),
-(868, 'podczas', 'podczas', 0, 0, 0.4667, 'P320', 1, '*'),
+(868, 'podczas', 'podczas', 0, 0, 0.4667, 'P320', 5, '*'),
 (869, 'podejmować', 'podejmować', 0, 0, 0.6667, 'P325', 1, '*'),
 (870, 'pojazdów', 'pojazdów', 0, 0, 0.5333, 'P230', 1, '*'),
-(871, 'pomagają', 'pomagają', 0, 0, 0.5333, 'P520', 1, '*'),
+(871, 'pomagają', 'pomagają', 0, 0, 0.5333, 'P520', 4, '*'),
 (872, 'poprowadzą', 'poprowadzą', 0, 0, 0.6667, 'P632', 1, '*'),
 (873, 'post', 'post', 0, 0, 0.2667, 'P230', 1, '*'),
 (874, 'posunięcia', 'posunięcia', 0, 0, 0.6667, 'P252', 1, '*'),
@@ -3202,7 +5075,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (881, 'pozostaje', 'pozostaje', 0, 0, 0.6, 'P232', 1, '*'),
 (882, 'pracowniach', 'pracowniach', 0, 0, 0.7333, 'P6252', 1, '*'),
 (883, 'praktycznymi', 'praktycznymi', 0, 0, 0.8, 'P62325', 1, '*'),
-(884, 'praktyki', 'praktyki', 0, 0, 0.5333, 'P6232', 1, '*'),
+(884, 'praktyki', 'praktyki', 0, 0, 0.5333, 'P6232', 5, '*'),
 (885, 'programów', 'programów', 0, 0, 0.6, 'P6265', 1, '*'),
 (886, 'przekształcenie', 'przekształcenie', 0, 0, 1, 'P62325', 1, '*'),
 (887, 'przeoczone', 'przeoczone', 0, 0, 0.6667, 'P625', 1, '*'),
@@ -3221,7 +5094,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (900, 'rozumiesz', 'rozumiesz', 0, 0, 0.6, 'R252', 1, '*'),
 (901, 'rozważać', 'rozważać', 0, 0, 0.5333, 'R200', 1, '*'),
 (902, 'rzeczy', 'rzeczy', 0, 0, 0.4, 'R200', 1, '*'),
-(903, 'również', 'również', 0, 0, 0.4667, 'R500', 3, '*'),
+(903, 'również', 'również', 0, 0, 0.4667, 'R500', 4, '*'),
 (904, 'różnymi', 'różnymi', 0, 0, 0.4667, 'R500', 1, '*'),
 (905, 'sformowane', 'sformowane', 0, 0, 0.6667, 'S165', 1, '*'),
 (906, 'siłę', 'siłę', 0, 0, 0.2667, 'S000', 1, '*'),
@@ -3230,7 +5103,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (909, 'spójnego', 'spójnego', 0, 0, 0.5333, 'S1252', 1, '*'),
 (910, 'stanowiły', 'stanowiły', 0, 0, 0.6, 'S350', 2, '*'),
 (911, 'strategiczne', 'strategiczne', 0, 0, 0.8, 'S36325', 1, '*'),
-(912, 'swoimi', 'swoimi', 0, 0, 0.4, 'S500', 1, '*'),
+(912, 'swoimi', 'swoimi', 0, 0, 0.4, 'S500', 2, '*'),
 (913, 'sygnał', 'sygnał', 0, 0, 0.4, 'S500', 1, '*'),
 (914, 'symulacje', 'symulacje', 0, 0, 0.6, 'S542', 1, '*'),
 (915, 'szalamaha', 'szalamaha', 0, 0, 0.6, 'S450', 1, '*'),
@@ -3242,15 +5115,15 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (921, 'szkoleń', 'szkoleń', 0, 0, 0.4667, 'S400', 1, '*'),
 (922, 'szkoliło', 'szkoliło', 0, 0, 0.5333, 'S400', 1, '*'),
 (923, 'taktykach', 'taktykach', 0, 0, 0.6, 'T232', 1, '*'),
-(924, 'te', 'te', 0, 0, 0.1333, 'T000', 2, '*'),
-(925, 'techniczne', 'techniczne', 0, 0, 0.6667, 'T2525', 1, '*'),
+(924, 'te', 'te', 0, 0, 0.1333, 'T000', 4, '*'),
+(925, 'techniczne', 'techniczne', 0, 0, 0.6667, 'T2525', 3, '*'),
 (926, 'technikami', 'technikami', 0, 0, 0.6667, 'T2525', 1, '*'),
-(927, 'technologią', 'technologią', 0, 0, 0.7333, 'T2542', 1, '*'),
+(927, 'technologią', 'technologią', 0, 0, 0.7333, 'T2542', 2, '*'),
 (928, 'też', 'też', 0, 0, 0.2, 'T000', 3, '*'),
 (929, 'the', 'the', 0, 0, 0.2, 'T000', 1, '*'),
 (930, 'trafiła', 'trafiła', 0, 0, 0.4667, 'T610', 1, '*'),
 (931, 'trudne', 'trudne', 0, 0, 0.4, 'T635', 1, '*'),
-(932, 'twoje', 'twoje', 0, 0, 0.3333, 'T200', 1, '*'),
+(932, 'twoje', 'twoje', 0, 0, 0.3333, 'T200', 7, '*'),
 (933, 'ukrainskiej', 'ukrainskiej', 0, 0, 0.7333, 'U2652', 1, '*'),
 (934, 'ukraińskie', 'ukraińskie', 0, 0, 0.6667, 'U262', 1, '*'),
 (935, 'umiejętnościami', 'umiejętnościami', 0, 0, 1, 'U523525', 1, '*'),
@@ -3300,7 +5173,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (979, 'amerykanki', 'amerykanki', 0, 0, 0.6667, 'A56252', 2, '*'),
 (980, 'amy', 'amy', 0, 0, 0.2, 'A500', 2, '*'),
 (981, 'bała', 'bała', 0, 0, 0.2667, 'B000', 2, '*'),
-(982, 'bez', 'bez', 0, 0, 0.2, 'B200', 2, '*'),
+(982, 'bez', 'bez', 0, 0, 0.2, 'B200', 6, '*'),
 (983, 'bezdechu', 'bezdechu', 0, 0, 0.5333, 'B232', 2, '*'),
 (984, 'bezpłodności', 'bezpłodności', 0, 0, 0.8, 'B21352', 2, '*'),
 (985, 'bezwózka', 'bezwózka', 0, 0, 0.5333, 'B200', 2, '*'),
@@ -3308,7 +5181,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (987, 'chorych', 'chorych', 0, 0, 0.4667, 'C620', 2, '*'),
 (988, 'chorób', 'chorób', 0, 0, 0.4, 'C610', 2, '*'),
 (989, 'chwil', 'chwil', 0, 0, 0.3333, 'C400', 2, '*'),
-(990, 'chętnie', 'chętnie', 0, 0, 0.4667, 'C350', 2, '*'),
+(990, 'chętnie', 'chętnie', 0, 0, 0.4667, 'C350', 3, '*'),
 (991, 'ciężki', 'ciężki', 0, 0, 0.4, 'C000', 2, '*'),
 (992, 'coraz', 'coraz', 0, 0, 0.3333, 'C620', 2, '*'),
 (993, 'cukrzycy', 'cukrzycy', 0, 0, 0.5333, 'C620', 2, '*'),
@@ -3321,11 +5194,11 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1000, 'dwoje', 'dwoje', 0, 0, 0.3333, 'D200', 2, '*'),
 (1001, 'dzieci', 'dzieci', 0, 0, 0.4, 'D200', 3, '*'),
 (1002, 'dzieli', 'dzieli', 0, 0, 0.4, 'D240', 2, '*'),
-(1003, 'funkcjonowanie', 'funkcjonowanie', 0, 0, 0.9333, 'F525', 2, '*'),
+(1003, 'funkcjonowanie', 'funkcjonowanie', 0, 0, 0.9333, 'F525', 3, '*'),
 (1004, 'gwałtownie', 'gwałtownie', 0, 0, 0.6667, 'G350', 2, '*'),
 (1005, 'hitem', 'hitem', 0, 0, 0.3333, 'H350', 2, '*'),
-(1006, 'jednak', 'jednak', 0, 0, 0.4, 'J352', 4, '*'),
-(1007, 'jej', 'jej', 0, 0, 0.2, 'J000', 2, '*'),
+(1006, 'jednak', 'jednak', 0, 0, 0.4, 'J352', 6, '*'),
+(1007, 'jej', 'jej', 0, 0, 0.2, 'J000', 3, '*'),
 (1008, 'ją', 'ją', 0, 0, 0.1333, 'J000', 2, '*'),
 (1009, 'kiedy', 'kiedy', 0, 0, 0.3333, 'K300', 2, '*'),
 (1010, 'kilogramów', 'kilogramów', 0, 0, 0.6667, 'K4265', 2, '*'),
@@ -3344,7 +5217,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1023, 'metomorfozę', 'metomorfozę', 0, 0, 0.7333, 'M35612', 2, '*'),
 (1024, 'mogło', 'mogło', 0, 0, 0.3333, 'M200', 2, '*'),
 (1025, 'mogły', 'mogły', 0, 0, 0.3333, 'M200', 3, '*'),
-(1026, 'może', 'może', 0, 0, 0.2667, 'M000', 2, '*'),
+(1026, 'może', 'może', 0, 0, 0.2667, 'M000', 4, '*'),
 (1027, 'mózgu', 'mózgu', 0, 0, 0.3333, 'M200', 2, '*'),
 (1028, 'nadciśnienia', 'nadciśnienia', 0, 0, 0.8, 'N325', 2, '*'),
 (1029, 'nadwagę', 'nadwagę', 0, 0, 0.4667, 'N320', 2, '*'),
@@ -3380,7 +5253,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1059, 'rodzina', 'rodzina', 0, 0, 0.4667, 'R325', 2, '*'),
 (1060, 'roli', 'roli', 0, 0, 0.2667, 'R400', 2, '*'),
 (1061, 'ryzyka', 'ryzyka', 0, 0, 0.4, 'R200', 3, '*'),
-(1062, 'ryzyko', 'ryzyko', 0, 0, 0.4, 'R200', 2, '*'),
+(1062, 'ryzyko', 'ryzyko', 0, 0, 0.4, 'R200', 4, '*'),
 (1063, 'sennego', 'sennego', 0, 0, 0.4667, 'S520', 2, '*'),
 (1064, 'sercowo-naczyniowych', 'sercowo-naczyniowych', 0, 0, 1, 'S625252', 2, '*'),
 (1065, 'siostra', 'siostra', 0, 0, 0.4667, 'S360', 2, '*'),
@@ -3397,7 +5270,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1076, 'stał', 'stał', 0, 0, 0.2667, 'S300', 2, '*'),
 (1077, 'straciły', 'straciły', 0, 0, 0.5333, 'S362', 2, '*'),
 (1078, 'sukcesy', 'sukcesy', 0, 0, 0.4667, 'S000', 2, '*'),
-(1079, 'swojej', 'swojej', 0, 0, 0.4, 'S000', 2, '*'),
+(1079, 'swojej', 'swojej', 0, 0, 0.4, 'S000', 4, '*'),
 (1080, 'sylwetki', 'sylwetki', 0, 0, 0.5333, 'S432', 2, '*'),
 (1081, 'szczęście', 'szczęście', 0, 0, 0.6, 'S000', 2, '*'),
 (1082, 'słynne', 'słynne', 0, 0, 0.4, 'S500', 2, '*'),
@@ -3405,7 +5278,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1084, 'tlenu', 'tlenu', 0, 0, 0.3333, 'T450', 2, '*'),
 (1085, 'tony', 'tony', 0, 0, 0.2667, 'T500', 2, '*'),
 (1086, 'tragedią', 'tragedią', 0, 0, 0.5333, 'T623', 2, '*'),
-(1087, 'tą', 'tą', 0, 0, 0.1333, 'T000', 2, '*'),
+(1087, 'tą', 'tą', 0, 0, 0.1333, 'T000', 4, '*'),
 (1088, 'tętniczego', 'tętniczego', 0, 0, 0.6667, 'T520', 2, '*'),
 (1089, 'tłumaczyli', 'tłumaczyli', 0, 0, 0.6667, 'T524', 2, '*'),
 (1090, 'udaru', 'udaru', 0, 0, 0.3333, 'U360', 2, '*'),
@@ -3443,9 +5316,9 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1122, 'łącznie', 'łącznie', 0, 0, 0.4667, 'ł250', 2, '*'),
 (1123, 'śledzić', 'śledzić', 0, 0, 0.4667, 'ś432', 2, '*'),
 (1124, 'żylaki', 'żylaki', 0, 0, 0.4, 'ż420', 2, '*'),
-(1125, 'żyć', 'żyć', 0, 0, 0.2, 'ż000', 2, '*'),
-(1228, '9', '9', 0, 0, 0.1, '', 2, '*');
+(1125, 'żyć', 'żyć', 0, 0, 0.2, 'ż000', 2, '*');
 INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`, `weight`, `soundex`, `links`, `language`) VALUES
+(1228, '9', '9', 0, 0, 0.1, '', 4, '*'),
 (1229, 'media', 'media', 0, 0, 0.3333, 'M300', 1, '*'),
 (1230, 'social', 'social', 0, 0, 0.4, 'S400', 1, '*'),
 (1231, '14', '14', 0, 0, 0.2, '', 1, '*'),
@@ -3454,7 +5327,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1234, 'afryki', 'afryki', 0, 0, 0.4, 'A162', 1, '*'),
 (1235, 'aplikacji', 'aplikacji', 0, 0, 0.6, 'A142', 1, '*'),
 (1236, 'automatycznie', 'automatycznie', 0, 0, 0.8667, 'A35325', 1, '*'),
-(1237, 'bezpieczeństwo', 'bezpieczeństwo', 0, 0, 0.9333, 'B2123', 1, '*'),
+(1237, 'bezpieczeństwo', 'bezpieczeństwo', 0, 0, 0.9333, 'B2123', 3, '*'),
 (1238, 'bi', 'bi', 0, 0, 0.1333, 'B000', 1, '*'),
 (1239, 'bliskiego', 'bliskiego', 0, 0, 0.6, 'B420', 1, '*'),
 (1240, 'blokowanie', 'blokowanie', 0, 0, 0.6667, 'B425', 1, '*'),
@@ -3463,7 +5336,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1243, 'chroniące', 'chroniące', 0, 0, 0.6, 'C652', 1, '*'),
 (1244, 'cytowana', 'cytowana', 0, 0, 0.5333, 'C350', 1, '*'),
 (1245, 'czego', 'czego', 0, 0, 0.3333, 'C000', 1, '*'),
-(1246, 'często', 'często', 0, 0, 0.4, 'C300', 1, '*'),
+(1246, 'często', 'często', 0, 0, 0.4, 'C300', 2, '*'),
 (1247, 'datę', 'datę', 0, 0, 0.2667, 'D000', 1, '*'),
 (1248, 'dawna', 'dawna', 0, 0, 0.3333, 'D500', 1, '*'),
 (1249, 'dobrym', 'dobrym', 0, 0, 0.4, 'D165', 1, '*'),
@@ -3491,7 +5364,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1271, 'jakiej', 'jakiej', 0, 0, 0.4, 'J000', 1, '*'),
 (1272, 'kont', 'kont', 0, 0, 0.2667, 'K530', 1, '*'),
 (1273, 'konta', 'konta', 0, 0, 0.3333, 'K530', 1, '*'),
-(1274, 'korzystania', 'korzystania', 0, 0, 0.7333, 'K6235', 1, '*'),
+(1274, 'korzystania', 'korzystania', 0, 0, 0.7333, 'K6235', 5, '*'),
 (1275, 'krytykowany', 'krytykowany', 0, 0, 0.7333, 'K6325', 1, '*'),
 (1276, 'która', 'która', 0, 0, 0.3333, 'K360', 1, '*'),
 (1277, 'kładziemy', 'kładziemy', 0, 0, 0.6, 'K325', 1, '*'),
@@ -3511,14 +5384,14 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1291, 'najmłodszych', 'najmłodszych', 0, 0, 0.8, 'N2532', 1, '*'),
 (1292, 'najsilniejsze', 'najsilniejsze', 0, 0, 0.8667, 'N2452', 1, '*'),
 (1293, 'najwyższy', 'najwyższy', 0, 0, 0.6, 'N200', 1, '*'),
-(1294, 'naszej', 'naszej', 0, 0, 0.4, 'N200', 1, '*'),
-(1295, 'naszych', 'naszych', 0, 0, 0.4667, 'N200', 1, '*'),
+(1294, 'naszej', 'naszej', 0, 0, 0.4, 'N200', 6, '*'),
+(1295, 'naszych', 'naszych', 0, 0, 0.4667, 'N200', 7, '*'),
 (1296, 'new', 'new', 0, 0, 0.2, 'N000', 2, '*'),
-(1297, 'nich', 'nich', 0, 0, 0.2667, 'N200', 1, '*'),
+(1297, 'nich', 'nich', 0, 0, 0.2667, 'N200', 2, '*'),
 (1298, 'niedostateczną', 'niedostateczną', 0, 0, 0.9333, 'N32325', 1, '*'),
 (1299, 'nieletnich', 'nieletnich', 0, 0, 0.6667, 'N4352', 1, '*'),
 (1300, 'noer', 'noer', 0, 0, 0.2667, 'N600', 1, '*'),
-(1301, 'nowe', 'nowe', 0, 0, 0.2667, 'N000', 1, '*'),
+(1301, 'nowe', 'nowe', 0, 0, 0.2667, 'N000', 2, '*'),
 (1302, 'obejmą', 'obejmą', 0, 0, 0.4, 'O125', 1, '*'),
 (1303, 'obostrzenia', 'obostrzenia', 0, 0, 0.7333, 'O123625', 1, '*'),
 (1304, 'obserwowania', 'obserwowania', 0, 0, 0.8, 'O1265', 1, '*'),
@@ -3535,24 +5408,24 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1315, 'pedofilów', 'pedofilów', 0, 0, 0.6, 'P314', 1, '*'),
 (1316, 'podając', 'podając', 0, 0, 0.4667, 'P320', 1, '*'),
 (1317, 'pomóc', 'pomóc', 0, 0, 0.3333, 'P520', 1, '*'),
-(1318, 'ponieważ', 'ponieważ', 0, 0, 0.5333, 'P500', 1, '*'),
-(1319, 'poniżej', 'poniżej', 0, 0, 0.4667, 'P520', 1, '*'),
+(1318, 'ponieważ', 'ponieważ', 0, 0, 0.5333, 'P500', 2, '*'),
+(1319, 'poniżej', 'poniżej', 0, 0, 0.4667, 'P520', 4, '*'),
 (1320, 'pornograficznymi', 'pornograficznymi', 0, 0, 1, 'P6526125', 1, '*'),
 (1321, 'potencjalnych', 'potencjalnych', 0, 0, 0.8667, 'P352452', 1, '*'),
 (1322, 'powiedziała', 'powiedziała', 0, 0, 0.7333, 'P320', 1, '*'),
-(1323, 'prawo', 'prawo', 0, 0, 0.3333, 'P600', 1, '*'),
+(1323, 'prawo', 'prawo', 0, 0, 0.3333, 'P600', 5, '*'),
 (1324, 'priorytet', 'priorytet', 0, 0, 0.6, 'P630', 1, '*'),
 (1325, 'profile', 'profile', 0, 0, 0.4667, 'P614', 1, '*'),
 (1326, 'prośby', 'prośby', 0, 0, 0.4, 'P610', 1, '*'),
 (1327, 'prywatne', 'prywatne', 0, 0, 0.5333, 'P635', 1, '*'),
-(1328, 'prywatności', 'prywatności', 0, 0, 0.7333, 'P6352', 1, '*'),
-(1329, 'prywatność', 'prywatność', 0, 0, 0.6667, 'P635', 1, '*'),
+(1328, 'prywatności', 'prywatności', 0, 0, 0.7333, 'P6352', 5, '*'),
+(1329, 'prywatność', 'prywatność', 0, 0, 0.6667, 'P635', 3, '*'),
 (1330, 'prywatnych', 'prywatnych', 0, 0, 0.6667, 'P6352', 1, '*'),
 (1331, 'przesyłania', 'przesyłania', 0, 0, 0.7333, 'P625', 1, '*'),
-(1332, 'ramach', 'ramach', 0, 0, 0.4, 'R520', 1, '*'),
+(1332, 'ramach', 'ramach', 0, 0, 0.4, 'R520', 2, '*'),
 (1333, 'regionu', 'regionu', 0, 0, 0.4667, 'R250', 1, '*'),
 (1334, 'rozwiązaniem', 'rozwiązaniem', 0, 0, 0.8, 'R250', 1, '*'),
-(1335, 'samodzielnie', 'samodzielnie', 0, 0, 0.8, 'S53245', 1, '*'),
+(1335, 'samodzielnie', 'samodzielnie', 0, 0, 0.8, 'S53245', 2, '*'),
 (1336, 'serwis', 'serwis', 0, 0, 0.4, 'S620', 2, '*'),
 (1337, 'sieci', 'sieci', 0, 0, 0.3333, 'S000', 1, '*'),
 (1338, 'sierpniu', 'sierpniu', 0, 0, 0.5333, 'S615', 1, '*'),
@@ -3567,17 +5440,17 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1347, 'trzeba', 'trzeba', 0, 0, 0.4, 'T621', 1, '*'),
 (1348, 'trzecią', 'trzecią', 0, 0, 0.4667, 'T620', 1, '*'),
 (1349, 'urodzenia', 'urodzenia', 0, 0, 0.6, 'U6325', 1, '*'),
-(1350, 'ustawienia', 'ustawienia', 0, 0, 0.6667, 'U235', 1, '*'),
+(1350, 'ustawienia', 'ustawienia', 0, 0, 0.6667, 'U235', 3, '*'),
 (1351, 'utworzonych', 'utworzonych', 0, 0, 0.7333, 'U36252', 1, '*'),
-(1352, 'użytkowników', 'użytkowników', 0, 0, 0.8, 'U3252', 2, '*'),
+(1352, 'użytkowników', 'użytkowników', 0, 0, 0.8, 'U3252', 4, '*'),
 (1353, 'wiadomo', 'wiadomo', 0, 0, 0.4667, 'W350', 1, '*'),
-(1354, 'wiadomości', 'wiadomości', 0, 0, 0.6667, 'W352', 1, '*'),
+(1354, 'wiadomości', 'wiadomości', 0, 0, 0.6667, 'W352', 3, '*'),
 (1355, 'wideo', 'wideo', 0, 0, 0.3333, 'W300', 1, '*'),
 (1356, 'wprowadzamy', 'wprowadzamy', 0, 0, 0.7333, 'W16325', 1, '*'),
 (1357, 'wprowadzi', 'wprowadzi', 0, 0, 0.6, 'W1632', 1, '*'),
 (1358, 'wschodu', 'wschodu', 0, 0, 0.4667, 'W230', 1, '*'),
 (1359, 'wszystkich', 'wszystkich', 0, 0, 0.6667, 'W232', 1, '*'),
-(1360, 'wszystkie', 'wszystkie', 0, 0, 0.6, 'W232', 2, '*'),
+(1360, 'wszystkie', 'wszystkie', 0, 0, 0.6, 'W232', 4, '*'),
 (1361, 'wykorzystywana', 'wykorzystywana', 0, 0, 0.9333, 'W26235', 1, '*'),
 (1362, 'wątpliwości', 'wątpliwości', 0, 0, 0.7333, 'W3142', 2, '*'),
 (1363, 'york', 'york', 0, 0, 0.2667, 'Y620', 2, '*'),
@@ -3587,7 +5460,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1367, 'zastosowane', 'zastosowane', 0, 0, 0.7333, 'Z325', 1, '*'),
 (1368, 'zatwierdzać', 'zatwierdzać', 0, 0, 0.7333, 'Z3632', 1, '*'),
 (1369, 'zdaniem', 'zdaniem', 0, 0, 0.4667, 'Z350', 1, '*'),
-(1370, 'zmiany', 'zmiany', 0, 0, 0.4, 'Z500', 1, '*'),
+(1370, 'zmiany', 'zmiany', 0, 0, 0.4, 'Z500', 3, '*'),
 (1371, 'znaczące', 'znaczące', 0, 0, 0.5333, 'Z520', 1, '*'),
 (1372, 'zostaną', 'zostaną', 0, 0, 0.4667, 'Z350', 1, '*'),
 (1373, 'łatwością', 'łatwością', 0, 0, 0.6, 'ł320', 1, '*'),
@@ -3600,7 +5473,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1489, '40', '40', 0, 0, 0.2, '', 1, '*'),
 (1490, '50', '50', 0, 0, 0.2, '', 1, '*'),
 (1491, '6', '6', 0, 0, 0.1, '', 1, '*'),
-(1492, '7', '7', 0, 0, 0.1, '', 1, '*'),
+(1492, '7', '7', 0, 0, 0.1, '', 2, '*'),
 (1493, 'afery', 'afery', 0, 0, 0.3333, 'A160', 1, '*'),
 (1494, 'aferą', 'aferą', 0, 0, 0.3333, 'A160', 1, '*'),
 (1495, 'agencja', 'agencja', 0, 0, 0.4667, 'A252', 1, '*'),
@@ -3615,8 +5488,8 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1504, 'cambridge', 'cambridge', 0, 0, 0.6, 'C51632', 1, '*'),
 (1505, 'ciągle', 'ciągle', 0, 0, 0.4, 'C400', 1, '*'),
 (1506, 'czarnej', 'czarnej', 0, 0, 0.4667, 'C652', 1, '*'),
-(1507, 'dane', 'dane', 0, 0, 0.2667, 'D500', 1, '*'),
-(1508, 'danych', 'danych', 0, 0, 0.4, 'D520', 1, '*'),
+(1507, 'dane', 'dane', 0, 0, 0.2667, 'D500', 4, '*'),
+(1508, 'danych', 'danych', 0, 0, 0.4, 'D520', 3, '*'),
 (1509, 'delikatne', 'delikatne', 0, 0, 0.6, 'D4235', 1, '*'),
 (1510, 'dolarów', 'dolarów', 0, 0, 0.4667, 'D460', 1, '*'),
 (1511, 'donalda', 'donalda', 0, 0, 0.4667, 'D543', 1, '*'),
@@ -3637,7 +5510,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1526, 'inwestycjami', 'inwestycjami', 0, 0, 0.8, 'I52325', 1, '*'),
 (1527, 'inwestycji', 'inwestycji', 0, 0, 0.6667, 'I5232', 1, '*'),
 (1528, 'inwestycyjne', 'inwestycyjne', 0, 0, 0.8, 'I52325', 1, '*'),
-(1529, 'jaki', 'jaki', 0, 0, 0.2667, 'J000', 1, '*'),
+(1529, 'jaki', 'jaki', 0, 0, 0.2667, 'J000', 5, '*'),
 (1530, 'jaw', 'jaw', 0, 0, 0.2, 'J000', 1, '*'),
 (1531, 'jeden', 'jeden', 0, 0, 0.3333, 'J350', 1, '*'),
 (1532, 'jedna', 'jedna', 0, 0, 0.3333, 'J350', 1, '*'),
@@ -3654,7 +5527,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1543, 'miała', 'miała', 0, 0, 0.3333, 'M000', 1, '*'),
 (1544, 'miliardów', 'miliardów', 0, 0, 0.6, 'M463', 1, '*'),
 (1545, 'mld', 'mld', 0, 0, 0.2, 'M430', 1, '*'),
-(1546, 'momentu', 'momentu', 0, 0, 0.4667, 'M300', 1, '*'),
+(1546, 'momentu', 'momentu', 0, 0, 0.4667, 'M300', 3, '*'),
 (1547, 'mówią', 'mówią', 0, 0, 0.3333, 'M000', 1, '*'),
 (1548, 'największych', 'największych', 0, 0, 0.8, 'N200', 1, '*'),
 (1549, 'należące', 'należące', 0, 0, 0.5333, 'N420', 1, '*'),
@@ -3662,7 +5535,7 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1551, 'nałożył', 'nałożył', 0, 0, 0.4667, 'N000', 1, '*'),
 (1552, 'niedopełnienie', 'niedopełnienie', 0, 0, 0.9333, 'N315', 1, '*'),
 (1553, 'niego', 'niego', 0, 0, 0.3333, 'N200', 1, '*'),
-(1554, 'niektóre', 'niektóre', 0, 0, 0.5333, 'N236', 1, '*'),
+(1554, 'niektóre', 'niektóre', 0, 0, 0.5333, 'N236', 3, '*'),
 (1555, 'niektórzy', 'niektórzy', 0, 0, 0.6, 'N2362', 1, '*'),
 (1556, 'nielegalnie', 'nielegalnie', 0, 0, 0.7333, 'N4245', 1, '*'),
 (1557, 'niemal', 'niemal', 0, 0, 0.4, 'N400', 1, '*'),
@@ -3746,22 +5619,446 @@ INSERT INTO `buf3w_finder_terms` (`term_id`, `term`, `stem`, `common`, `phrase`,
 (1635, 'zuckerberga', 'zuckerberga', 0, 0, 0.7333, 'Z6162', 1, '*'),
 (1636, 'związku', 'związku', 0, 0, 0.4667, 'Z000', 1, '*'),
 (1637, 'śledczych', 'śledczych', 0, 0, 0.6, 'ś432', 1, '*'),
-(1638, 'środowej', 'środowej', 0, 0, 0.5333, 'ś632', 1, '*');
+(1638, 'środowej', 'środowej', 0, 0, 0.5333, 'ś632', 1, '*'),
+(1741, '123456', '123456', 0, 0, 0.6, '', 1, '*'),
+(1742, '123456789', '123456789', 0, 0, 0.9, '', 1, '*'),
+(1743, '442012243456', '442012243456', 0, 0, 1.2, '', 1, '*'),
+(1744, 'admin', 'admin', 0, 0, 0.3333, 'A350', 3, '*'),
+(1745, 'com', 'com', 0, 0, 0.2, 'C500', 1, '*'),
+(1746, 'http', 'http', 0, 0, 0.2667, 'H310', 1, '*'),
+(1747, 'test', 'test', 0, 0, 0.2667, 'T230', 1, '*'),
+(1748, 'testcity', 'testcity', 0, 0, 0.5333, 'T2323', 1, '*'),
+(1749, 'testland', 'testland', 0, 0, 0.5333, 'T23453', 1, '*'),
+(1756, 'menu', 'menu', 0, 0, 0.2667, 'M000', 1, '*'),
+(1757, 'abyś', 'abyś', 0, 0, 0.2667, 'A100', 1, '*'),
+(1758, 'analizujemy', 'analizujemy', 0, 0, 0.7333, 'A5425', 1, '*'),
+(1759, 'artykułu', 'artykułu', 0, 0, 0.5333, 'A632', 1, '*'),
+(1760, 'bieżąco', 'bieżąco', 0, 0, 0.4667, 'B200', 2, '*'),
+(1761, 'blog', 'blog', 0, 0, 0.2667, 'B420', 2, '*'),
+(1762, 'bloga', 'bloga', 0, 0, 0.3333, 'B420', 1, '*'),
+(1763, 'blogu', 'blogu', 0, 0, 0.3333, 'B420', 6, '*'),
+(1764, 'celem', 'celem', 0, 0, 0.3333, 'C450', 1, '*'),
+(1765, 'cenne', 'cenne', 0, 0, 0.3333, 'C500', 1, '*'),
+(1766, 'chciałbyś', 'chciałbyś', 0, 0, 0.6, 'C100', 2, '*'),
+(1767, 'ci', 'ci', 0, 0, 0.1333, 'C000', 4, '*'),
+(1768, 'ciekawych', 'ciekawych', 0, 0, 0.6, 'C000', 1, '*'),
+(1769, 'ciężko', 'ciężko', 0, 0, 0.4, 'C000', 1, '*'),
+(1770, 'czytelnicy', 'czytelnicy', 0, 0, 0.6667, 'C3452', 1, '*'),
+(1771, 'czytelników', 'czytelników', 0, 0, 0.7333, 'C3452', 4, '*'),
+(1772, 'dalszego', 'dalszego', 0, 0, 0.5333, 'D420', 3, '*'),
+(1773, 'dnia', 'dnia', 0, 0, 0.2667, 'D500', 1, '*'),
+(1774, 'dobrze', 'dobrze', 0, 0, 0.4, 'D162', 1, '*'),
+(1775, 'dokładność', 'dokładność', 0, 0, 0.6667, 'D235', 3, '*'),
+(1776, 'doskonalić', 'doskonalić', 0, 0, 0.6667, 'D254', 1, '*'),
+(1777, 'dostarczamy', 'dostarczamy', 0, 0, 0.7333, 'D23625', 1, '*'),
+(1778, 'dostarczać', 'dostarczać', 0, 0, 0.6667, 'D2362', 2, '*'),
+(1779, 'dostarczenie', 'dostarczenie', 0, 0, 0.8, 'D23625', 1, '*'),
+(1780, 'dostarczy', 'dostarczy', 0, 0, 0.6, 'D2362', 1, '*'),
+(1781, 'doświadczenie', 'doświadczenie', 0, 0, 0.8667, 'D250', 3, '*'),
+(1782, 'doświadczonych', 'doświadczonych', 0, 0, 0.9333, 'D252', 1, '*'),
+(1783, 'dziedzin', 'dziedzin', 0, 0, 0.5333, 'D2325', 2, '*'),
+(1784, 'dziennikarstwa', 'dziennikarstwa', 0, 0, 0.9333, 'D252623', 1, '*'),
+(1785, 'dziękujemy', 'dziękujemy', 0, 0, 0.6667, 'D250', 4, '*'),
+(1786, 'gospodarką', 'gospodarką', 0, 0, 0.6667, 'G1362', 1, '*'),
+(1787, 'informacji', 'informacji', 0, 0, 0.6667, 'I51652', 6, '*'),
+(1788, 'innych', 'innych', 0, 0, 0.4, 'I520', 6, '*'),
+(1789, 'inspiracją', 'inspiracją', 0, 0, 0.6667, 'I52162', 1, '*'),
+(1790, 'interesujesz', 'interesujesz', 0, 0, 0.8, 'I5362', 1, '*'),
+(1791, 'interesujących', 'interesujących', 0, 0, 0.9333, 'I5362', 1, '*'),
+(1792, 'jakiegoś', 'jakiegoś', 0, 0, 0.5333, 'J000', 1, '*'),
+(1793, 'jakieś', 'jakieś', 0, 0, 0.4, 'J000', 1, '*'),
+(1794, 'jakość', 'jakość', 0, 0, 0.4, 'J000', 1, '*'),
+(1795, 'jesteśmy', 'jesteśmy', 0, 0, 0.5333, 'J350', 3, '*'),
+(1796, 'kontaktu', 'kontaktu', 0, 0, 0.5333, 'K5323', 2, '*'),
+(1797, 'mamy', 'mamy', 0, 0, 0.2667, 'M000', 2, '*'),
+(1798, 'mógł', 'mógł', 0, 0, 0.2667, 'M200', 1, '*'),
+(1799, 'nadzieję', 'nadzieję', 0, 0, 0.5333, 'N320', 2, '*'),
+(1800, 'najnowszymi', 'najnowszymi', 0, 0, 0.7333, 'N2525', 3, '*'),
+(1801, 'najważniejszych', 'najważniejszych', 0, 0, 1, 'N252', 1, '*'),
+(1802, 'najświeższych', 'najświeższych', 0, 0, 0.8667, 'N200', 1, '*'),
+(1803, 'nasz', 'nasz', 0, 0, 0.2667, 'N200', 2, '*'),
+(1804, 'nasza', 'nasza', 0, 0, 0.3333, 'N200', 3, '*'),
+(1805, 'naszym', 'naszym', 0, 0, 0.4, 'N250', 6, '*'),
+(1806, 'naszą', 'naszą', 0, 0, 0.3333, 'N200', 3, '*'),
+(1807, 'nauką', 'nauką', 0, 0, 0.3333, 'N200', 1, '*'),
+(1808, 'niezależnie', 'niezależnie', 0, 0, 0.7333, 'N245', 1, '*'),
+(1809, 'odwiedzania', 'odwiedzania', 0, 0, 0.7333, 'O325', 4, '*'),
+(1810, 'odwiedziłeś', 'odwiedziłeś', 0, 0, 0.7333, 'O320', 1, '*'),
+(1811, 'opinie', 'opinie', 0, 0, 0.4, 'O150', 2, '*'),
+(1812, 'opinią', 'opinią', 0, 0, 0.4, 'O150', 1, '*'),
+(1813, 'opinię', 'opinię', 0, 0, 0.4, 'O150', 1, '*'),
+(1814, 'otwarci', 'otwarci', 0, 0, 0.4667, 'O362', 1, '*'),
+(1815, 'pasjonatów', 'pasjonatów', 0, 0, 0.6667, 'P253', 1, '*'),
+(1816, 'perspektywy', 'perspektywy', 0, 0, 0.7333, 'P62123', 1, '*'),
+(1817, 'podzielić', 'podzielić', 0, 0, 0.6, 'P324', 2, '*'),
+(1818, 'pogłębiać', 'pogłębiać', 0, 0, 0.6, 'P210', 1, '*'),
+(1819, 'polityką', 'polityką', 0, 0, 0.5333, 'P432', 5, '*'),
+(1820, 'posiadają', 'posiadają', 0, 0, 0.6, 'P232', 1, '*'),
+(1821, 'poszerzania', 'poszerzania', 0, 0, 0.7333, 'P2625', 1, '*'),
+(1822, 'pozwolą', 'pozwolą', 0, 0, 0.4667, 'P240', 1, '*'),
+(1823, 'pracujemy', 'pracujemy', 0, 0, 0.6, 'P625', 1, '*'),
+(1824, 'pracę', 'pracę', 0, 0, 0.3333, 'P620', 1, '*'),
+(1825, 'prezentujemy', 'prezentujemy', 0, 0, 0.8, 'P625325', 1, '*'),
+(1826, 'punkty', 'punkty', 0, 0, 0.4, 'P523', 1, '*'),
+(1827, 'pytania', 'pytania', 0, 0, 0.4667, 'P350', 2, '*'),
+(1828, 'redaktorów', 'redaktorów', 0, 0, 0.6667, 'R3236', 1, '*'),
+(1829, 'regularnego', 'regularnego', 0, 0, 0.7333, 'R24652', 2, '*'),
+(1830, 'rozrywką', 'rozrywką', 0, 0, 0.5333, 'R262', 1, '*'),
+(1831, 'rozwijać', 'rozwijać', 0, 0, 0.5333, 'R200', 1, '*'),
+(1832, 'rzetelne', 'rzetelne', 0, 0, 0.5333, 'R2345', 1, '*'),
+(1833, 'rzetelnych', 'rzetelnych', 0, 0, 0.6667, 'R23452', 1, '*'),
+(1834, 'różne', 'różne', 0, 0, 0.3333, 'R500', 1, '*'),
+(1835, 'różnorodne', 'różnorodne', 0, 0, 0.6667, 'R5635', 2, '*'),
+(1836, 'różnych', 'różnych', 0, 0, 0.4667, 'R520', 1, '*'),
+(1837, 'składa', 'składa', 0, 0, 0.4, 'S300', 1, '*'),
+(1838, 'sportem', 'sportem', 0, 0, 0.4667, 'S1635', 1, '*'),
+(1839, 'stale', 'stale', 0, 0, 0.3333, 'S340', 1, '*'),
+(1840, 'staramy', 'staramy', 0, 0, 0.4667, 'S365', 2, '*'),
+(1841, 'stawiamy', 'stawiamy', 0, 0, 0.5333, 'S350', 1, '*'),
+(1842, 'strona', 'strona', 0, 0, 0.4, 'S365', 3, '*'),
+(1843, 'sugestie', 'sugestie', 0, 0, 0.5333, 'S300', 2, '*'),
+(1844, 'swoją', 'swoją', 0, 0, 0.3333, 'S000', 1, '*'),
+(1845, 'szeroką', 'szeroką', 0, 0, 0.4667, 'S620', 1, '*'),
+(1846, 'tematów', 'tematów', 0, 0, 0.4667, 'T530', 1, '*'),
+(1847, 'trendów', 'trendów', 0, 0, 0.4667, 'T653', 1, '*'),
+(1848, 'treści', 'treści', 0, 0, 0.4, 'T620', 6, '*'),
+(1849, 'tworzenie', 'tworzenie', 0, 0, 0.6, 'T625', 1, '*'),
+(1850, 'tych', 'tych', 0, 0, 0.2667, 'T200', 5, '*'),
+(1851, 'ukazywać', 'ukazywać', 0, 0, 0.5333, 'U200', 1, '*'),
+(1852, 'uwagi', 'uwagi', 0, 0, 0.3333, 'U200', 2, '*'),
+(1853, 'ważne', 'ważne', 0, 0, 0.3333, 'W500', 2, '*'),
+(1854, 'wiadomościami', 'wiadomościami', 0, 0, 0.8667, 'W3525', 6, '*'),
+(1855, 'widzenia', 'widzenia', 0, 0, 0.5333, 'W325', 1, '*'),
+(1856, 'wiedzy', 'wiedzy', 0, 0, 0.4, 'W320', 1, '*'),
+(1857, 'wiedzę', 'wiedzę', 0, 0, 0.4, 'W320', 1, '*'),
+(1858, 'wiemy', 'wiemy', 0, 0, 0.3333, 'W500', 1, '*'),
+(1859, 'witaj', 'witaj', 0, 0, 0.3333, 'W320', 1, '*'),
+(1860, 'wydarzeniami', 'wydarzeniami', 0, 0, 0.8, 'W3625', 1, '*'),
+(1861, 'wydarzeń', 'wydarzeń', 0, 0, 0.5333, 'W362', 1, '*'),
+(1862, 'zaangażowanie', 'zaangażowanie', 0, 0, 0.8667, 'Z525', 2, '*'),
+(1863, 'zachęcamy', 'zachęcamy', 0, 0, 0.6, 'Z500', 6, '*'),
+(1864, 'zapewnienie', 'zapewnienie', 0, 0, 0.7333, 'Z150', 1, '*'),
+(1865, 'zapraszamy', 'zapraszamy', 0, 0, 0.6667, 'Z1625', 3, '*'),
+(1866, 'zbadane', 'zbadane', 0, 0, 0.4667, 'Z135', 1, '*'),
+(1867, 'zespołem', 'zespołem', 0, 0, 0.5333, 'Z150', 2, '*'),
+(1868, 'zespół', 'zespół', 0, 0, 0.4, 'Z100', 1, '*'),
+(1869, 'zredagowane', 'zredagowane', 0, 0, 0.7333, 'Z6325', 1, '*'),
+(1870, 'zrozumienie', 'zrozumienie', 0, 0, 0.7333, 'Z625', 1, '*'),
+(1871, 'zrozumieć', 'zrozumieć', 0, 0, 0.6, 'Z625', 4, '*'),
+(1872, 'zróżnicowanych', 'zróżnicowanych', 0, 0, 0.9333, 'Z65252', 1, '*'),
+(1873, 'świecie', 'świecie', 0, 0, 0.4667, 'ś200', 1, '*'),
+(1884, 'abyśmy', 'abyśmy', 0, 0, 0.4, 'A150', 2, '*'),
+(1885, 'adres', 'adres', 0, 0, 0.3333, 'A362', 2, '*'),
+(1886, 'analizy', 'analizy', 0, 0, 0.4667, 'A542', 2, '*'),
+(1887, 'analizę', 'analizę', 0, 0, 0.4667, 'A542', 2, '*'),
+(1888, 'artykułów', 'artykułów', 0, 0, 0.6, 'A632', 3, '*'),
+(1889, 'celach', 'celach', 0, 0, 0.4, 'C420', 5, '*'),
+(1890, 'chcielibyśmy', 'chcielibyśmy', 0, 0, 0.8, 'C415', 2, '*'),
+(1891, 'chronimy', 'chronimy', 0, 0, 0.5333, 'C650', 4, '*'),
+(1892, 'chronić', 'chronić', 0, 0, 0.4667, 'C650', 2, '*'),
+(1893, 'chwili', 'chwili', 0, 0, 0.4, 'C400', 2, '*'),
+(1894, 'chyba', 'chyba', 0, 0, 0.3333, 'C100', 2, '*'),
+(1895, 'ciebie', 'ciebie', 0, 0, 0.4, 'C100', 4, '*'),
+(1896, 'cię', 'cię', 0, 0, 0.2, 'C000', 2, '*'),
+(1897, 'cookie', 'cookie', 0, 0, 0.4, 'C000', 2, '*'),
+(1898, 'daty', 'daty', 0, 0, 0.2667, 'D000', 2, '*'),
+(1899, 'dbamy', 'dbamy', 0, 0, 0.3333, 'D150', 2, '*'),
+(1900, 'dokładamy', 'dokładamy', 0, 0, 0.6, 'D235', 4, '*'),
+(1901, 'dostosować', 'dostosować', 0, 0, 0.6667, 'D232', 2, '*'),
+(1902, 'dostępem', 'dostępem', 0, 0, 0.5333, 'D2315', 2, '*'),
+(1903, 'działać', 'działać', 0, 0, 0.4667, 'D200', 2, '*'),
+(1904, 'fizyczne', 'fizyczne', 0, 0, 0.5333, 'F250', 2, '*'),
+(1905, 'funkcje', 'funkcje', 0, 0, 0.4667, 'F520', 2, '*'),
+(1906, 'godziny', 'godziny', 0, 0, 0.4667, 'G325', 2, '*'),
+(1907, 'gromadzenie', 'gromadzenie', 0, 0, 0.7333, 'G65325', 2, '*'),
+(1908, 'gromadzimy', 'gromadzimy', 0, 0, 0.6667, 'G65325', 4, '*'),
+(1909, 'gromadzić', 'gromadzić', 0, 0, 0.6, 'G6532', 4, '*'),
+(1910, 'gromadzone', 'gromadzone', 0, 0, 0.6667, 'G65325', 2, '*'),
+(1911, 'informowała', 'informowała', 0, 0, 0.7333, 'I5165', 2, '*'),
+(1912, 'internetowa', 'internetowa', 0, 0, 0.7333, 'I53653', 2, '*'),
+(1913, 'internetowych', 'internetowych', 0, 0, 0.8667, 'I536532', 4, '*'),
+(1914, 'ip', 'ip', 0, 0, 0.1333, 'I100', 2, '*'),
+(1915, 'jednakże', 'jednakże', 0, 0, 0.5333, 'J352', 3, '*'),
+(1916, 'język', 'język', 0, 0, 0.3333, 'J000', 2, '*'),
+(1917, 'każdej', 'każdej', 0, 0, 0.4, 'K320', 2, '*'),
+(1918, 'korzystasz', 'korzystasz', 0, 0, 0.6667, 'K6232', 2, '*'),
+(1919, 'lepiej', 'lepiej', 0, 0, 0.4, 'L120', 3, '*'),
+(1920, 'lepsze', 'lepsze', 0, 0, 0.4, 'L120', 2, '*'),
+(1921, 'małych', 'małych', 0, 0, 0.4, 'M200', 2, '*'),
+(1922, 'możesz', 'możesz', 0, 0, 0.4, 'M200', 3, '*'),
+(1923, 'nieuprawnionym', 'nieuprawnionym', 0, 0, 0.9333, 'N165', 2, '*'),
+(1924, 'ochrona', 'ochrona', 0, 0, 0.4667, 'O265', 2, '*'),
+(1925, 'ochronie', 'ochronie', 0, 0, 0.5333, 'O265', 2, '*'),
+(1926, 'odpowiednie', 'odpowiednie', 0, 0, 0.7333, 'O3135', 2, '*'),
+(1927, 'odpowiedzialności', 'odpowiedzialności', 0, 0, 1, 'O3132452', 4, '*'),
+(1928, 'odrzucała', 'odrzucała', 0, 0, 0.6, 'O362', 2, '*'),
+(1929, 'odwiedzasz', 'odwiedzasz', 0, 0, 0.6667, 'O320', 2, '*'),
+(1930, 'organizacyjne', 'organizacyjne', 0, 0, 0.8667, 'O62525', 2, '*'),
+(1931, 'osobistych', 'osobistych', 0, 0, 0.6667, 'O21232', 4, '*'),
+(1932, 'osobom', 'osobom', 0, 0, 0.4, 'O215', 2, '*'),
+(1933, 'osobowych', 'osobowych', 0, 0, 0.6, 'O212', 2, '*'),
+(1934, 'otrzymać', 'otrzymać', 0, 0, 0.5333, 'O3625', 2, '*'),
+(1935, 'pamiętać', 'pamiętać', 0, 0, 0.5333, 'P530', 2, '*'),
+(1936, 'personalizację', 'personalizację', 0, 0, 0.9333, 'P62542', 2, '*'),
+(1937, 'pewne', 'pewne', 0, 0, 0.3333, 'P500', 2, '*'),
+(1938, 'pliki', 'pliki', 0, 0, 0.3333, 'P420', 2, '*'),
+(1939, 'plików', 'plików', 0, 0, 0.4, 'P420', 2, '*'),
+(1940, 'polityka', 'polityka', 0, 0, 0.5333, 'P432', 2, '*'),
+(1941, 'polityki', 'polityki', 0, 0, 0.5333, 'P432', 2, '*'),
+(1942, 'ponosimy', 'ponosimy', 0, 0, 0.5333, 'P525', 4, '*'),
+(1943, 'poprawnie', 'poprawnie', 0, 0, 0.6, 'P650', 2, '*'),
+(1944, 'potrzeb', 'potrzeb', 0, 0, 0.4667, 'P3621', 2, '*'),
+(1945, 'preferencje', 'preferencje', 0, 0, 0.7333, 'P61652', 2, '*'),
+(1946, 'preferencji', 'preferencji', 0, 0, 0.7333, 'P61652', 2, '*'),
+(1947, 'prywatnosci', 'prywatnosci', 0, 0, 0.7333, 'P6352', 2, '*'),
+(1948, 'przedstawić', 'przedstawić', 0, 0, 0.7333, 'P62323', 2, '*'),
+(1949, 'przeglądarka', 'przeglądarka', 0, 0, 0.8, 'P624362', 2, '*'),
+(1950, 'przeglądarki', 'przeglądarki', 0, 0, 0.8, 'P624362', 2, '*'),
+(1951, 'ruchu', 'ruchu', 0, 0, 0.3333, 'R200', 2, '*'),
+(1952, 'skonfigurować', 'skonfigurować', 0, 0, 0.8667, 'S5126', 2, '*'),
+(1953, 'sposobu', 'sposobu', 0, 0, 0.4667, 'S121', 2, '*'),
+(1954, 'sprzedajemy', 'sprzedajemy', 0, 0, 0.7333, 'S162325', 2, '*'),
+(1955, 'starań', 'starań', 0, 0, 0.4, 'S360', 4, '*'),
+(1956, 'statystycznych', 'statystycznych', 0, 0, 0.9333, 'S323252', 2, '*'),
+(1957, 'stosujemy', 'stosujemy', 0, 0, 0.6, 'S325', 2, '*'),
+(1958, 'stronami', 'stronami', 0, 0, 0.5333, 'S365', 2, '*'),
+(1959, 'strony', 'strony', 0, 0, 0.4, 'S365', 5, '*'),
+(1960, 'tekstowych', 'tekstowych', 0, 0, 0.6667, 'T232', 2, '*'),
+(1961, 'trzecimi', 'trzecimi', 0, 0, 0.5333, 'T625', 2, '*'),
+(1962, 'twoich', 'twoich', 0, 0, 0.4, 'T200', 2, '*'),
+(1963, 'twoim', 'twoim', 0, 0, 0.3333, 'T500', 2, '*'),
+(1964, 'twojej', 'twojej', 0, 0, 0.4, 'T200', 2, '*'),
+(1965, 'typ', 'typ', 0, 0, 0.2, 'T100', 2, '*'),
+(1966, 'udostępniamy', 'udostępniamy', 0, 0, 0.8, 'U32315', 2, '*'),
+(1967, 'udostępnieniemjakichkolwiek', 'udostępnieniemjakichkolwiek', 0, 0, 1, 'U32315242', 2, '*'),
+(1968, 'ujawniane', 'ujawniane', 0, 0, 0.6, 'U250', 2, '*'),
+(1969, 'ujawnianie', 'ujawnianie', 0, 0, 0.6667, 'U250', 2, '*'),
+(1970, 'umieszczanych', 'umieszczanych', 0, 0, 0.8667, 'U5252', 2, '*'),
+(1971, 'umożliwiają', 'umożliwiają', 0, 0, 0.7333, 'U542', 2, '*'),
+(1972, 'urządzenia', 'urządzenia', 0, 0, 0.6667, 'U62325', 2, '*'),
+(1973, 'urządzeniu', 'urządzeniu', 0, 0, 0.6667, 'U62325', 2, '*'),
+(1974, 'utratą', 'utratą', 0, 0, 0.4, 'U363', 2, '*'),
+(1975, 'uważamy', 'uważamy', 0, 0, 0.4667, 'U500', 2, '*'),
+(1976, 'używamy', 'używamy', 0, 0, 0.4667, 'U500', 4, '*'),
+(1977, 'używanie', 'używanie', 0, 0, 0.5333, 'U500', 2, '*'),
+(1978, 'używać', 'używać', 0, 0, 0.4, 'U000', 2, '*'),
+(1979, 'wartościowe', 'wartościowe', 0, 0, 0.7333, 'W632', 2, '*'),
+(1980, 'witamy', 'witamy', 0, 0, 0.4, 'W350', 5, '*'),
+(1981, 'wizyt', 'wizyt', 0, 0, 0.3333, 'W230', 2, '*'),
+(1982, 'wszelkich', 'wszelkich', 0, 0, 0.6, 'W242', 4, '*'),
+(1983, 'wykorzystaniem', 'wykorzystaniem', 0, 0, 0.9333, 'W26235', 2, '*'),
+(1984, 'wymagane', 'wymagane', 0, 0, 0.5333, 'W525', 2, '*'),
+(1985, 'wymieniamy', 'wymieniamy', 0, 0, 0.6667, 'W500', 2, '*'),
+(1986, 'wysyłaniu', 'wysyłaniu', 0, 0, 0.6, 'W250', 2, '*'),
+(1987, 'zależy', 'zależy', 0, 0, 0.4, 'Z400', 2, '*'),
+(1988, 'zamieszczać', 'zamieszczać', 0, 0, 0.7333, 'Z520', 2, '*'),
+(1989, 'zapamiętywanie', 'zapamiętywanie', 0, 0, 0.9333, 'Z1535', 2, '*'),
+(1990, 'zapewnić', 'zapewnić', 0, 0, 0.5333, 'Z150', 4, '*'),
+(1991, 'zapoznania', 'zapoznania', 0, 0, 0.6667, 'Z125', 4, '*'),
+(1992, 'zewnętrzne', 'zewnętrzne', 0, 0, 0.6667, 'Z53625', 4, '*'),
+(1993, 'zgody', 'zgody', 0, 0, 0.3333, 'Z300', 5, '*'),
+(1994, 'zmianą', 'zmianą', 0, 0, 0.4, 'Z500', 2, '*'),
+(1995, 'znaczenia', 'znaczenia', 0, 0, 0.6, 'Z525', 2, '*'),
+(1996, 'łącza', 'łącza', 0, 0, 0.3333, 'ł200', 4, '*'),
+(1997, 'środki', 'środki', 0, 0, 0.4, 'ś632', 2, '*'),
+(1998, 'świadome', 'świadome', 0, 0, 0.5333, 'ś350', 2, '*'),
+(1999, 'świadomi', 'świadomi', 0, 0, 0.5333, 'ś350', 2, '*'),
+(2000, 'żadnymi', 'żadnymi', 0, 0, 0.4667, 'ż350', 2, '*'),
+(2011, 'aktualność', 'aktualność', 0, 0, 0.6667, 'A2345', 2, '*'),
+(2012, 'autorskie', 'autorskie', 0, 0, 0.6, 'A362', 2, '*'),
+(2013, 'autorskim', 'autorskim', 0, 0, 0.6, 'A3625', 3, '*'),
+(2014, 'błędy', 'błędy', 0, 0, 0.3333, 'B300', 2, '*'),
+(2015, 'chronione', 'chronione', 0, 0, 0.6, 'C650', 3, '*'),
+(2016, 'cieszenia', 'cieszenia', 0, 0, 0.6, 'C500', 2, '*'),
+(2017, 'części', 'części', 0, 0, 0.4, 'C000', 2, '*'),
+(2018, 'dobrowolne', 'dobrowolne', 0, 0, 0.6667, 'D1645', 2, '*'),
+(2019, 'dostęp', 'dostęp', 0, 0, 0.4, 'D231', 2, '*'),
+(2020, 'dowiedzieć', 'dowiedzieć', 0, 0, 0.6667, 'D200', 2, '*'),
+(2021, 'dowolnego', 'dowolnego', 0, 0, 0.6, 'D452', 2, '*'),
+(2022, 'dowolnym', 'dowolnym', 0, 0, 0.5333, 'D450', 2, '*'),
+(2023, 'ewentualne', 'ewentualne', 0, 0, 0.6667, 'E5345', 2, '*'),
+(2024, 'ewentualnymi', 'ewentualnymi', 0, 0, 0.8, 'E5345', 2, '*'),
+(2025, 'jedynie', 'jedynie', 0, 0, 0.4667, 'J350', 2, '*'),
+(2026, 'komentarza', 'komentarza', 0, 0, 0.6667, 'K5362', 2, '*'),
+(2027, 'komentarzy', 'komentarzy', 0, 0, 0.6667, 'K5362', 3, '*'),
+(2028, 'komunikacja', 'komunikacja', 0, 0, 0.7333, 'K520', 2, '*'),
+(2029, 'kopiować', 'kopiować', 0, 0, 0.5333, 'K100', 2, '*'),
+(2030, 'korzystanie', 'korzystanie', 0, 0, 0.7333, 'K6235', 2, '*'),
+(2031, 'którymkolwiek', 'którymkolwiek', 0, 0, 0.8667, 'K365242', 2, '*'),
+(2032, 'moderacji', 'moderacji', 0, 0, 0.6, 'M362', 2, '*'),
+(2033, 'modyfikować', 'modyfikować', 0, 0, 0.7333, 'M312', 2, '*'),
+(2034, 'niekomercyjnych', 'niekomercyjnych', 0, 0, 1, 'N256252', 2, '*'),
+(2035, 'niepełność', 'niepełność', 0, 0, 0.6667, 'N150', 2, '*'),
+(2036, 'niniejszych', 'niniejszych', 0, 0, 0.7333, 'N200', 2, '*'),
+(2037, 'objęte', 'objęte', 0, 0, 0.4, 'O123', 2, '*'),
+(2038, 'obowiązywać', 'obowiązywać', 0, 0, 0.7333, 'O120', 2, '*'),
+(2039, 'odpowiedzialność', 'odpowiedzialność', 0, 0, 1, 'O313245', 2, '*'),
+(2040, 'odrzucenia', 'odrzucenia', 0, 0, 0.6667, 'O3625', 2, '*'),
+(2041, 'opinii', 'opinii', 0, 0, 0.4, 'O150', 2, '*'),
+(2042, 'opublikowania', 'opublikowania', 0, 0, 0.8667, 'O1425', 2, '*'),
+(2043, 'opóźnienia', 'opóźnienia', 0, 0, 0.6667, 'O150', 2, '*'),
+(2044, 'osobowe', 'osobowe', 0, 0, 0.4667, 'O210', 2, '*'),
+(2045, 'podania', 'podania', 0, 0, 0.4667, 'P350', 2, '*'),
+(2046, 'podlegają', 'podlegają', 0, 0, 0.6, 'P342', 2, '*'),
+(2047, 'poniższe', 'poniższe', 0, 0, 0.5333, 'P520', 2, '*'),
+(2048, 'poniższych', 'poniższych', 0, 0, 0.6667, 'P520', 2, '*'),
+(2049, 'poprzez', 'poprzez', 0, 0, 0.4667, 'P620', 2, '*'),
+(2050, 'prawa', 'prawa', 0, 0, 0.3333, 'P600', 2, '*'),
+(2051, 'prawem', 'prawem', 0, 0, 0.4, 'P650', 3, '*'),
+(2052, 'prosimy', 'prosimy', 0, 0, 0.4667, 'P625', 2, '*'),
+(2053, 'przedstawiamy', 'przedstawiamy', 0, 0, 0.8667, 'P623235', 3, '*'),
+(2054, 'przeglądanie', 'przeglądanie', 0, 0, 0.8, 'P62435', 2, '*'),
+(2055, 'przestrzeganie', 'przestrzeganie', 0, 0, 0.9333, 'P623625', 2, '*'),
+(2056, 'przestrzegać', 'przestrzegać', 0, 0, 0.8, 'P62362', 2, '*'),
+(2057, 'przesłane', 'przesłane', 0, 0, 0.6, 'P625', 2, '*'),
+(2058, 'przyczyny', 'przyczyny', 0, 0, 0.6, 'P625', 2, '*'),
+(2059, 'publikowane', 'publikowane', 0, 0, 0.7333, 'P425', 2, '*'),
+(2060, 'publikować', 'publikować', 0, 0, 0.6667, 'P420', 2, '*'),
+(2061, 'regularne', 'regularne', 0, 0, 0.6, 'R2465', 2, '*'),
+(2062, 'reprodukować', 'reprodukować', 0, 0, 0.8, 'R1632', 2, '*'),
+(2063, 'rzetelność', 'rzetelność', 0, 0, 0.6667, 'R2345', 2, '*'),
+(2064, 'sobie', 'sobie', 0, 0, 0.3333, 'S100', 3, '*'),
+(2065, 'sprawdzanie', 'sprawdzanie', 0, 0, 0.7333, 'S16325', 2, '*'),
+(2066, 'szanujemy', 'szanujemy', 0, 0, 0.6, 'S525', 2, '*'),
+(2067, 'szkody', 'szkody', 0, 0, 0.4, 'S300', 2, '*'),
+(2068, 'tejstronie', 'tejstronie', 0, 0, 0.6667, 'T2365', 2, '*'),
+(2069, 'transmitować', 'transmitować', 0, 0, 0.8, 'T65253', 2, '*'),
+(2070, 'twoją', 'twoją', 0, 0, 0.3333, 'T200', 2, '*'),
+(2071, 'udzielania', 'udzielania', 0, 0, 0.6667, 'U3245', 2, '*'),
+(2072, 'usunięcia', 'usunięcia', 0, 0, 0.6, 'U252', 2, '*'),
+(2073, 'warunkach', 'warunkach', 0, 0, 0.6, 'W652', 2, '*'),
+(2074, 'warunki', 'warunki', 0, 0, 0.4667, 'W652', 2, '*'),
+(2075, 'warunków', 'warunków', 0, 0, 0.5333, 'W652', 2, '*'),
+(2076, 'wolno', 'wolno', 0, 0, 0.3333, 'W450', 2, '*'),
+(2077, 'wszelkie', 'wszelkie', 0, 0, 0.5333, 'W242', 2, '*'),
+(2078, 'wykorzystywane', 'wykorzystywane', 0, 0, 0.9333, 'W26235', 2, '*'),
+(2079, 'wynikające', 'wynikające', 0, 0, 0.6667, 'W520', 2, '*'),
+(2080, 'wyrażasz', 'wyrażasz', 0, 0, 0.5333, 'W620', 2, '*'),
+(2081, 'własne', 'własne', 0, 0, 0.4, 'W250', 2, '*'),
+(2082, 'zaktualizowane', 'zaktualizowane', 0, 0, 0.9333, 'Z3425', 2, '*'),
+(2083, 'zalecamy', 'zalecamy', 0, 0, 0.5333, 'Z425', 2, '*'),
+(2084, 'zamieszczone', 'zamieszczone', 0, 0, 0.8, 'Z525', 3, '*'),
+(2085, 'zamieszczonych', 'zamieszczonych', 0, 0, 0.9333, 'Z5252', 3, '*'),
+(2086, 'zapoznanie', 'zapoznanie', 0, 0, 0.6667, 'Z125', 2, '*'),
+(2087, 'zaprzestanie', 'zaprzestanie', 0, 0, 0.8, 'Z16235', 2, '*'),
+(2088, 'zasady', 'zasady', 0, 0, 0.4, 'Z300', 2, '*'),
+(2089, 'zastrzegamy', 'zastrzegamy', 0, 0, 0.7333, 'Z3625', 2, '*'),
+(2090, 'zgadzasz', 'zgadzasz', 0, 0, 0.5333, 'Z320', 2, '*'),
+(2091, 'zgodę', 'zgodę', 0, 0, 0.3333, 'Z300', 2, '*'),
+(2092, 'zmianami', 'zmianami', 0, 0, 0.5333, 'Z500', 2, '*'),
+(2093, 'łączy', 'łączy', 0, 0, 0.3333, 'ł200', 2, '*'),
+(2094, 'żadnej', 'żadnej', 0, 0, 0.4, 'ż352', 2, '*'),
+(2138, 'aktualizować', 'aktualizować', 0, 0, 0.8, 'A2342', 1, '*'),
+(2139, 'aktualizujecie', 'aktualizujecie', 0, 0, 0.9333, 'A2342', 1, '*'),
+(2140, 'artykuły', 'artykuły', 0, 0, 0.5333, 'A632', 1, '*'),
+(2141, 'cenimy', 'cenimy', 0, 0, 0.4, 'C500', 1, '*'),
+(2142, 'chęci', 'chęci', 0, 0, 0.3333, 'C000', 1, '*'),
+(2143, 'czesto', 'czesto', 0, 0, 0.4, 'C300', 1, '*'),
+(2144, 'dostarczenia', 'dostarczenia', 0, 0, 0.8, 'D23625', 1, '*'),
+(2145, 'dostępnego', 'dostępnego', 0, 0, 0.6667, 'D23152', 1, '*'),
+(2146, 'dziedziny', 'dziedziny', 0, 0, 0.6, 'D2325', 1, '*'),
+(2147, 'dążymy', 'dążymy', 0, 0, 0.4, 'D500', 1, '*'),
+(2148, 'faq', 'faq', 0, 0, 0.2, 'F200', 1, '*'),
+(2149, 'formularza', 'formularza', 0, 0, 0.6667, 'F65462', 1, '*'),
+(2150, 'gospodarkę', 'gospodarkę', 0, 0, 0.6667, 'G1362', 1, '*'),
+(2151, 'informacjami', 'informacjami', 0, 0, 0.8, 'I516525', 1, '*'),
+(2152, 'interesujące', 'interesujące', 0, 0, 0.8, 'I5362', 1, '*'),
+(2153, 'jakiekolwiek', 'jakiekolwiek', 0, 0, 0.8, 'J420', 1, '*'),
+(2154, 'jego', 'jego', 0, 0, 0.2667, 'J000', 1, '*'),
+(2155, 'komercyjnych', 'komercyjnych', 0, 0, 0.8, 'K56252', 1, '*'),
+(2156, 'konkretnych', 'konkretnych', 0, 0, 0.7333, 'K526352', 1, '*'),
+(2157, 'kontaktowego', 'kontaktowego', 0, 0, 0.8, 'K53232', 1, '*'),
+(2158, 'korzystać', 'korzystać', 0, 0, 0.6, 'K623', 1, '*'),
+(2159, 'miarę', 'miarę', 0, 0, 0.3333, 'M600', 1, '*'),
+(2160, 'miejsce', 'miejsce', 0, 0, 0.4667, 'M200', 1, '*'),
+(2161, 'moderować', 'moderować', 0, 0, 0.6, 'M360', 1, '*'),
+(2162, 'myślami', 'myślami', 0, 0, 0.4667, 'M450', 1, '*'),
+(2163, 'najczęściej', 'najczęściej', 0, 0, 0.7333, 'N200', 1, '*'),
+(2164, 'najnowsze', 'najnowsze', 0, 0, 0.6, 'N252', 1, '*'),
+(2165, 'najszybciej', 'najszybciej', 0, 0, 0.7333, 'N212', 1, '*'),
+(2166, 'najwięcej', 'najwięcej', 0, 0, 0.6, 'N200', 1, '*'),
+(2167, 'najświeższymi', 'najświeższymi', 0, 0, 0.8667, 'N250', 1, '*'),
+(2168, 'nasze', 'nasze', 0, 0, 0.3333, 'N200', 1, '*'),
+(2169, 'naszejstronie', 'naszejstronie', 0, 0, 0.8667, 'N2365', 1, '*'),
+(2170, 'naukę', 'naukę', 0, 0, 0.3333, 'N200', 1, '*'),
+(2171, 'niekomercyjnego', 'niekomercyjnego', 0, 0, 1, 'N256252', 1, '*'),
+(2172, 'obejmują', 'obejmują', 0, 0, 0.5333, 'O1252', 1, '*'),
+(2173, 'odpowiedzi', 'odpowiedzi', 0, 0, 0.6667, 'O3132', 1, '*'),
+(2174, 'odpowiedzieć', 'odpowiedzieć', 0, 0, 0.8, 'O3132', 1, '*'),
+(2175, 'odwiedzenie', 'odwiedzenie', 0, 0, 0.7333, 'O325', 1, '*'),
+(2176, 'opiniami', 'opiniami', 0, 0, 0.5333, 'O150', 1, '*'),
+(2177, 'osobistego', 'osobistego', 0, 0, 0.6667, 'O21232', 1, '*'),
+(2178, 'pokrywać', 'pokrywać', 0, 0, 0.5333, 'P260', 1, '*'),
+(2179, 'politykę', 'politykę', 0, 0, 0.5333, 'P432', 1, '*'),
+(2180, 'pomogły', 'pomogły', 0, 0, 0.4667, 'P520', 1, '*'),
+(2181, 'postaramy', 'postaramy', 0, 0, 0.6, 'P2365', 1, '*'),
+(2182, 'powyższe', 'powyższe', 0, 0, 0.5333, 'P200', 1, '*'),
+(2183, 'przyjmujemy', 'przyjmujemy', 0, 0, 0.7333, 'P62525', 1, '*'),
+(2184, 'przypadku', 'przypadku', 0, 0, 0.6, 'P62132', 1, '*'),
+(2185, 'publikujecie', 'publikujecie', 0, 0, 0.8, 'P420', 1, '*'),
+(2186, 'publikujemy', 'publikujemy', 0, 0, 0.7333, 'P425', 1, '*'),
+(2187, 'pytań', 'pytań', 0, 0, 0.3333, 'P300', 1, '*'),
+(2188, 'redakcyjnym', 'redakcyjnym', 0, 0, 0.7333, 'R325', 1, '*'),
+(2189, 'regularnie', 'regularnie', 0, 0, 0.6667, 'R2465', 1, '*'),
+(2190, 'rozrywkę', 'rozrywkę', 0, 0, 0.5333, 'R262', 1, '*'),
+(2191, 'sekcji', 'sekcji', 0, 0, 0.4, 'S000', 1, '*'),
+(2192, 'skontaktować', 'skontaktować', 0, 0, 0.8, 'S5323', 1, '*'),
+(2193, 'skorzystania', 'skorzystania', 0, 0, 0.8, 'S6235', 1, '*'),
+(2194, 'skorzystać', 'skorzystać', 0, 0, 0.6667, 'S623', 1, '*'),
+(2195, 'sport', 'sport', 0, 0, 0.3333, 'S163', 1, '*'),
+(2196, 'sugestiami', 'sugestiami', 0, 0, 0.6667, 'S350', 1, '*'),
+(2197, 'swoim', 'swoim', 0, 0, 0.3333, 'S500', 1, '*'),
+(2198, 'technologię', 'technologię', 0, 0, 0.7333, 'T2542', 1, '*'),
+(2199, 'tematy', 'tematy', 0, 0, 0.4, 'T530', 1, '*'),
+(2200, 'tu', 'tu', 0, 0, 0.1333, 'T000', 1, '*'),
+(2201, 'uwzględnione', 'uwzględnione', 0, 0, 0.8, 'U2435', 1, '*'),
+(2202, 'uzyskania', 'uzyskania', 0, 0, 0.6, 'U250', 1, '*'),
+(2203, 'użytku', 'użytku', 0, 0, 0.4, 'U320', 1, '*'),
+(2204, 'waszym', 'waszym', 0, 0, 0.4, 'W250', 1, '*'),
+(2205, 'zadawane', 'zadawane', 0, 0, 0.5333, 'Z350', 1, '*'),
+(2206, 'zadawanych', 'zadawanych', 0, 0, 0.6667, 'Z352', 1, '*'),
+(2207, 'zainteresowania', 'zainteresowania', 0, 0, 1, 'Z53625', 1, '*'),
+(2208, 'zaspokoić', 'zaspokoić', 0, 0, 0.6, 'Z120', 1, '*'),
+(2265, '11', '11', 0, 0, 0.2, '', 1, '*'),
+(2266, 'zalogowanych', 'zalogowanych', 0, 0, 0.8, 'Z4252', 1, '*'),
+(2268, '+48', '+48', 0, 0, 0.3, '', 1, '*'),
+(2269, '0000739101', '0000739101', 0, 0, 1, '', 1, '*'),
+(2270, '073', '073', 0, 0, 0.3, '', 1, '*'),
+(2271, '12', '12', 0, 0, 0.2, '', 1, '*'),
+(2272, '380709267', '380709267', 0, 0, 0.9, '', 1, '*'),
+(2273, '45-129', '45-129', 0, 0, 0.6, '', 1, '*'),
+(2274, '498', '498', 0, 0, 0.3, '', 1, '*'),
+(2275, '518', '518', 0, 0, 0.3, '', 1, '*'),
+(2276, '727', '727', 0, 0, 0.3, '', 1, '*'),
+(2277, '7543185898', '7543185898', 0, 0, 1, '', 1, '*'),
+(2278, 'biuro', 'biuro', 0, 0, 0.3333, 'B600', 1, '*'),
+(2279, 'kontakt', 'kontakt', 0, 0, 0.4667, 'K5323', 1, '*'),
+(2280, 'kontaktowe', 'kontaktowe', 0, 0, 0.6667, 'K5323', 1, '*'),
+(2281, 'krs', 'krs', 0, 0, 0.2, 'K620', 1, '*'),
+(2282, 'kępska', 'kępska', 0, 0, 0.4, 'K120', 1, '*'),
+(2283, 'nip', 'nip', 0, 0, 0.2, 'N100', 1, '*'),
+(2284, 'opole', 'opole', 0, 0, 0.3333, 'O140', 1, '*'),
+(2285, 'pl', 'pl', 0, 0, 0.1333, 'P400', 1, '*'),
+(2286, 'regon', 'regon', 0, 0, 0.3333, 'R250', 1, '*'),
+(2287, 'smartbees', 'smartbees', 0, 0, 0.6, 'S56312', 1, '*'),
+(2288, 'sp', 'sp', 0, 0, 0.1333, 'S100', 1, '*'),
+(2289, 'sprzedaż', 'sprzedaż', 0, 0, 0.5333, 'S1623', 1, '*'),
+(2290, 'ul', 'ul', 0, 0, 0.1333, 'U400', 1, '*');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_finder_terms_common`
+-- Table structure for table `buf3w_finder_terms_common`
 --
 
 CREATE TABLE `buf3w_finder_terms_common` (
   `term` varchar(75) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `language` char(7) NOT NULL DEFAULT '',
   `custom` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_finder_terms_common`
+-- Dumping data for table `buf3w_finder_terms_common`
 --
 
 INSERT INTO `buf3w_finder_terms_common` (`term`, `language`, `custom`) VALUES
@@ -3943,7 +6240,7 @@ INSERT INTO `buf3w_finder_terms_common` (`term`, `language`, `custom`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_finder_tokens`
+-- Table structure for table `buf3w_finder_tokens`
 --
 
 CREATE TABLE `buf3w_finder_tokens` (
@@ -3953,13 +6250,13 @@ CREATE TABLE `buf3w_finder_tokens` (
   `phrase` tinyint(3) UNSIGNED NOT NULL DEFAULT 0,
   `weight` float UNSIGNED NOT NULL DEFAULT 1,
   `context` tinyint(3) UNSIGNED NOT NULL DEFAULT 2,
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
+  `language` char(7) NOT NULL DEFAULT ''
 ) ENGINE=MEMORY DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_finder_tokens_aggregate`
+-- Table structure for table `buf3w_finder_tokens_aggregate`
 --
 
 CREATE TABLE `buf3w_finder_tokens_aggregate` (
@@ -3972,23 +6269,23 @@ CREATE TABLE `buf3w_finder_tokens_aggregate` (
   `context` tinyint(3) UNSIGNED NOT NULL DEFAULT 2,
   `context_weight` float UNSIGNED NOT NULL DEFAULT 0,
   `total_weight` float UNSIGNED NOT NULL DEFAULT 0,
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
+  `language` char(7) NOT NULL DEFAULT ''
 ) ENGINE=MEMORY DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_finder_types`
+-- Table structure for table `buf3w_finder_types`
 --
 
 CREATE TABLE `buf3w_finder_types` (
   `id` int(10) UNSIGNED NOT NULL,
-  `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `mime` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
+  `title` varchar(100) NOT NULL,
+  `mime` varchar(100) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_finder_types`
+-- Dumping data for table `buf3w_finder_types`
 --
 
 INSERT INTO `buf3w_finder_types` (`id`, `title`, `mime`) VALUES
@@ -4001,16 +6298,16 @@ INSERT INTO `buf3w_finder_types` (`id`, `title`, `mime`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_guidedtours`
+-- Table structure for table `buf3w_guidedtours`
 --
 
 CREATE TABLE `buf3w_guidedtours` (
   `id` int(11) NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `description` text NOT NULL,
   `ordering` int(11) NOT NULL DEFAULT 0,
-  `extensions` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `extensions` text NOT NULL,
+  `url` varchar(255) NOT NULL,
   `created` datetime NOT NULL,
   `created_by` int(11) NOT NULL DEFAULT 0,
   `modified` datetime NOT NULL,
@@ -4018,13 +6315,13 @@ CREATE TABLE `buf3w_guidedtours` (
   `checked_out_time` datetime DEFAULT NULL,
   `checked_out` int(10) UNSIGNED DEFAULT NULL,
   `published` tinyint(4) NOT NULL DEFAULT 0,
-  `language` varchar(7) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `language` varchar(7) NOT NULL,
+  `note` varchar(255) NOT NULL DEFAULT '',
   `access` int(10) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_guidedtours`
+-- Dumping data for table `buf3w_guidedtours`
 --
 
 INSERT INTO `buf3w_guidedtours` (`id`, `title`, `description`, `ordering`, `extensions`, `url`, `created`, `created_by`, `modified`, `modified_by`, `checked_out_time`, `checked_out`, `published`, `language`, `note`, `access`) VALUES
@@ -4043,33 +6340,33 @@ INSERT INTO `buf3w_guidedtours` (`id`, `title`, `description`, `ordering`, `exte
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_guidedtour_steps`
+-- Table structure for table `buf3w_guidedtour_steps`
 --
 
 CREATE TABLE `buf3w_guidedtour_steps` (
   `id` int(11) NOT NULL,
   `tour_id` int(11) NOT NULL DEFAULT 0,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) NOT NULL,
   `published` tinyint(4) NOT NULL DEFAULT 0,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text NOT NULL,
   `ordering` int(11) NOT NULL DEFAULT 0,
-  `position` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `target` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `position` varchar(255) NOT NULL,
+  `target` varchar(255) NOT NULL,
   `type` int(11) NOT NULL,
   `interactive_type` int(11) NOT NULL DEFAULT 1,
-  `url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `url` varchar(255) NOT NULL,
   `created` datetime NOT NULL,
   `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `modified` datetime NOT NULL,
   `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `checked_out_time` datetime DEFAULT NULL,
   `checked_out` int(10) UNSIGNED DEFAULT NULL,
-  `language` varchar(7) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
+  `language` varchar(7) NOT NULL,
+  `note` varchar(255) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_guidedtour_steps`
+-- Dumping data for table `buf3w_guidedtour_steps`
 --
 
 INSERT INTO `buf3w_guidedtour_steps` (`id`, `tour_id`, `title`, `published`, `description`, `ordering`, `position`, `target`, `type`, `interactive_type`, `url`, `created`, `created_by`, `modified`, `modified_by`, `checked_out_time`, `checked_out`, `language`, `note`) VALUES
@@ -4188,23 +6485,23 @@ INSERT INTO `buf3w_guidedtour_steps` (`id`, `tour_id`, `title`, `published`, `de
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_history`
+-- Table structure for table `buf3w_history`
 --
 
 CREATE TABLE `buf3w_history` (
   `version_id` int(10) UNSIGNED NOT NULL,
-  `item_id` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `version_note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'Optional version name',
+  `item_id` varchar(50) NOT NULL,
+  `version_note` varchar(255) NOT NULL DEFAULT '' COMMENT 'Optional version name',
   `save_date` datetime NOT NULL,
   `editor_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `character_count` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Number of characters in this version.',
-  `sha1_hash` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'SHA1 hash of the version_data column.',
-  `version_data` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'json-encoded string of version data',
+  `sha1_hash` varchar(50) NOT NULL DEFAULT '' COMMENT 'SHA1 hash of the version_data column.',
+  `version_data` mediumtext NOT NULL COMMENT 'json-encoded string of version data',
   `keep_forever` tinyint(4) NOT NULL DEFAULT 0 COMMENT '0=auto delete; 1=keep'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_history`
+-- Dumping data for table `buf3w_history`
 --
 
 INSERT INTO `buf3w_history` (`version_id`, `item_id`, `version_note`, `save_date`, `editor_user_id`, `character_count`, `sha1_hash`, `version_data`, `keep_forever`) VALUES
@@ -4218,33 +6515,463 @@ INSERT INTO `buf3w_history` (`version_id`, `item_id`, `version_note`, `save_date
 (8, 'com_content.article.4', '', '2023-06-07 07:32:58', 588, 6084, 'c15b393a5a21e00a53a68dcc5a85fe42e223c796', '{\"id\":\"4\",\"asset_id\":101,\"title\":\"Siostry wielkiej wagi\",\"alias\":\"siostry-wielkiej-wagi\",\"introtext\":\"<h1 style=\\\"text-align: center;\\\">\\\"Siostry wielkiej wagi\\\" przesz\\u0142y spektakularn\\u0105 metamorfoz\\u0119. Zrzuci\\u0142y ju\\u017c \\u0107wier\\u0107 tony<\\/h1>\\r\\n<p>Amy i Tammy Slaton, siostry znane z programu \\\"Siostry wielkiej wagi\\\", zawalczy\\u0142y o swoje zdrowie i sylwetki. Amerykanki, kt\\u00f3re zmagaj\\u0105 si\\u0119 z oty\\u0142o\\u015bci\\u0105, zrzuci\\u0142y \\u0142\\u0105cznie ponad 250 kilogram\\u00f3w.<\\/p>\\r\\n<h2 id=\\\"siostry-walcza-z-otyloscia\\\">Siostry walcz\\u0105 z oty\\u0142o\\u015bci\\u0105<\\/h2>\\r\\n<p>Amy Slaton-Halterman i jej siostra Tammy Slaton z Dixon w USA s\\u0105 zdeterminowane, by wygra\\u0107 z\\u00a0<a href=\\\"https:\\/\\/portal.abczdrowie.pl\\/otylosc\\\">oty\\u0142o\\u015bci\\u0105<\\/a> i ju\\u017c maj\\u0105 pierwsze sukcesy.Amerykanki znane z programu \\\"Siostry wielkiej wagi\\\" przesz\\u0142y spektakularn\\u0105 metomorfoz\\u0119. Od czasu, kiedy wyemitowano pierwszy odcinek (w 2020 roku), \\u0142\\u0105cznie zrzuci\\u0142y 250 kilogram\\u00f3w.<\\/p>\\r\\n<p><strong>Przed t\\u0105 niezwyk\\u0142\\u0105 przemian\\u0105 Tammy wa\\u017cy\\u0142a 325 kilogram\\u00f3w, jej siostra Amy - 180 kilogram\\u00f3w<\\/strong>.<\\/p>\\r\\n<p>Ich walk\\u0119 o zdrowie mo\\u017cna \\u015bledzi\\u0107 w mediach spo\\u0142eczno\\u015bciowych, a program z udzia\\u0142em si\\u00f3str sta\\u0142 si\\u0119 hitem.<\\/p>\\r\\n<p>Nie oby\\u0142o si\\u0119 jednak bez kryzysowych chwil. Pod koniec 2021 roku stan zdrowia Tammy by\\u0142 bardzo ci\\u0119\\u017cki, a rodzina ba\\u0142a si\\u0119, \\u017ce kobieta nie zdo\\u0142a z tego wyj\\u015b\\u0107.<\\/p>\\r\\n<p>Jak t\\u0142umaczyli lekarze,\\u00a0<strong>jej p\\u0142uca zacz\\u0119\\u0142y by\\u0107 niewydolne<\\/strong>, co mog\\u0142o sko\\u0144czy\\u0107 si\\u0119 tragedi\\u0105. Na szcz\\u0119\\u015bcie kobiet\\u0119 uda\\u0142o si\\u0119 j\\u0105 uratowa\\u0107.<\\/p>\\r\\n<h2 id=\\\"wielka-metamorfoza\\\">Wielka metamorfoza<\\/h2>\\r\\n<p>Oty\\u0142o\\u015b\\u0107 jest uwa\\u017cana za pandemi\\u0119 XXI wieku, a chorych, kt\\u00f3rzy si\\u0119 z ni\\u0105 zmagaj\\u0105, gwa\\u0142townie przybywa.\\u00a0<strong>W Polsce nadwag\\u0119 ma ju\\u017c 3 na 5 doros\\u0142ych, a co 4. jest oty\\u0142y<\\/strong>.<\\/p>\\r\\n<p>Oty\\u0142o\\u015b\\u0107 ma wp\\u0142yw na funkcjonowanie ca\\u0142ego organizmu i mo\\u017ce przyczyni\\u0107 si\\u0119 do wielu chor\\u00f3b. Zwi\\u0119ksza ryzyko zapale\\u0144 staw\\u00f3w i ko\\u015bci,\\u00a0<a href=\\\"https:\\/\\/portal.abczdrowie.pl\\/choroby-ukladu-krazenia\\\">chor\\u00f3b sercowo-naczyniowych<\\/a>,\\u00a0<a href=\\\"https:\\/\\/portal.abczdrowie.pl\\/nadcisnienie-tetnicze\\\">nadci\\u015bnienia t\\u0119tniczego<\\/a>,\\u00a0<a href=\\\"https:\\/\\/portal.abczdrowie.pl\\/cukrzyca-typu-2\\\">cukrzycy typu 2<\\/a>,\\u00a0<a href=\\\"https:\\/\\/portal.abczdrowie.pl\\/bezdech-senny\\\">bezdechu sennego<\\/a>.<\\/p>\\r\\n<p>Powa\\u017cnym problemem ludzi, kt\\u00f3rzy walcz\\u0105 z oty\\u0142o\\u015bci\\u0105 mog\\u0105 by\\u0107 tak\\u017ce\\u00a0<a href=\\\"https:\\/\\/portal.abczdrowie.pl\\/zylaki-konczyn-dolnych\\\">\\u017cylaki ko\\u0144czyn dolnych<\\/a>\\u00a0oraz wzrost ryzyka\\u00a0<a href=\\\"https:\\/\\/portal.abczdrowie.pl\\/udar-mozgu\\\">udaru m\\u00f3zgu<\\/a>, nowotwor\\u00f3w czy\\u00a0<a href=\\\"https:\\/\\/portal.abczdrowie.pl\\/bezplodnosc\\\">bezp\\u0142odno\\u015bci<\\/a>.<\\/p>\\r\\n<p>Dlatego Amerykanki postanowi\\u0142y walczy\\u0107 o zdrowie. Do tej pory s\\u0142ynne siostry zrobi\\u0142y ogromny post\\u0119p w swojej walce.\\u00a0<strong>Razem straci\\u0142y ponad 250 kilogram\\u00f3w<\\/strong>. Kobiety, kt\\u00f3re nie mog\\u0142y si\\u0119 porusza\\u0107 bez w\\u00f3zka i tlenu, mog\\u0105 coraz \\u0142atwiej \\u017cy\\u0107.<\\/p>\\r\\n<p>Amy spe\\u0142nia si\\u0119 te\\u017c w roli matki. Kobieta urodzi\\u0142a dwoje dzieci i ch\\u0119tnie dzieli si\\u0119 nowymi do\\u015bwiadczenami w mediach spo\\u0142eczno\\u015bciowych.<\\/p>\\r\\n<p><img style=\\\"display: block; margin-left: auto; margin-right: auto;\\\" src=\\\"https:\\/\\/v.wpimg.pl\\/eXkwLnBuSjkKFTpdbQ5HLElNbgcrV0l6HlV2TG06Sm5dTjRebQUKKh8WIEMjFwYiDwUjGSsQSy8bFCgAbAUJdwIaLQknNgQ7AxJjXHJHVndbQmNdc1oENRJaNkMmDww9CBwlCy8qXDwKEmJDOkUcaBMPfBc7RUsoBRBuEw\\\" alt=\\\"Amy urodzi\\u0142a niedawno drugie dziecko\\\" \\/><\\/p>\\r\\n<p>\\u00a0<\\/p>\\r\\n<p>\\u00a0<\\/p>\\r\\n<div class=\\\"article__textbox wvdxqce t6etug9 bqzsno3 jmzr05p\\\">\\r\\n<div id=\\\"c64802fa70d5855\\\" class=\\\"wwz5k4i\\\"><\\/div>\\r\\n<\\/div>\",\"fulltext\":\"\",\"state\":\"1\",\"catid\":9,\"created\":\"2023-06-07 07:32:36\",\"created_by\":\"588\",\"created_by_alias\":\"\",\"modified\":\"2023-06-07 07:32:58\",\"modified_by\":588,\"checked_out\":588,\"checked_out_time\":\"2023-06-07 07:32:46\",\"publish_up\":\"2023-06-07 07:32:36\",\"publish_down\":null,\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/250lb.webp#joomlaImage:\\\\\\/\\\\\\/local-images\\\\\\/250lb.webp?width=916&height=471\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"images\\\\\\/1000-lb-Sisters-Tammy-Slaton-Amy-Slaton-5489-800x445.jpg#joomlaImage:\\\\\\/\\\\\\/local-images\\\\\\/1000-lb-Sisters-Tammy-Slaton-Amy-Slaton-5489-800x445.jpg?width=800&height=445\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":\\\"\\\",\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":\\\"\\\",\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":\\\"\\\",\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":2,\"ordering\":0,\"metakey\":\"\",\"metadesc\":\"\",\"access\":1,\"hits\":0,\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"note\":\"\"}', 0);
 INSERT INTO `buf3w_history` (`version_id`, `item_id`, `version_note`, `save_date`, `editor_user_id`, `character_count`, `sha1_hash`, `version_data`, `keep_forever`) VALUES
 (9, 'com_content.article.5', '', '2023-06-07 07:40:46', 588, 5228, '77e12b5dea6a6464110d210f3936f4c1c1295653', '{\"id\":5,\"asset_id\":103,\"title\":\"TikTok\\u00a0szykuje zmiany\",\"alias\":\"tiktok-szykuje-zmiany\",\"introtext\":\"<h1 class=\\\"C3ct\\\" style=\\\"text-align: center;\\\">TikTok\\u00a0szykuje zmiany. Obejm\\u0105 najm\\u0142odszych\\u00a0u\\u017cytkownik\\u00f3w<\\/h1>\\r\\n<p>TikTok\\u00a0od dawna jest krytykowany za niedostateczn\\u0105 ochron\\u0119 swoich najm\\u0142odszych u\\u017cytkownik\\u00f3w, dlatego teraz serwis wprowadzi nowe mechanizmy chroni\\u0105ce dzieci przed pedofili\\u0105 w sieci. Firma og\\u0142osi\\u0142a w \\u015brod\\u0119, \\u017ce konta u\\u017cytkownik\\u00f3w poni\\u017cej 16 roku domy\\u015blnie b\\u0119d\\u0105 mia\\u0142y najsilniejsze ustawienia prywatno\\u015bci.<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<p><img style=\\\"display: block; margin-left: auto; margin-right: auto;\\\" src=\\\"https:\\/\\/v.wpimg.pl\\/YmMyOGYudgwsGzl0dg57GW9DbS4wV3VPOFt1ZXZEa1V9AWAuNBJ3CSIbPSIpBzYKPxgiPncFNUIEFC4gPAZ2IygOPGhoRWladEFgcz1Dal4vSylqbUNpWmBNLXE7WDtYL0tiJmlNaF8rTC0ka00_QycJKGUk\\\" alt=\\\"fot. Unsplash\\\" width=\\\"783\\\" height=\\\"522\\\" \\/><\\/p>\\r\\n<div class=\\\"RDe3\\\">\\r\\n<p>Zmiany zostan\\u0105 zastosowane automatycznie wzgl\\u0119dem wszystkich kont utworzonych przez osoby poni\\u017cej 16 roku \\u017cycia i oznaczaj\\u0105, \\u017ce konta stan\\u0105 si\\u0119 prywatne. Co za tym idzie, wszystkie pro\\u015bby o mo\\u017cliwo\\u015b\\u0107 ich obserwowania b\\u0119dzie trzeba zatwierdza\\u0107 samodzielnie.<\\/p>\\r\\n<\\/div>\\r\\n<div class=\\\"RDe3\\\">\\r\\n<p>Profile oznaczone jako prywatne nie mog\\u0105 r\\u00f3wnie\\u017c by\\u0107 oznaczane w materia\\u0142ach wideo nagrywanych w ramach funkcji \\\"Duet\\\", kt\\u00f3ra cz\\u0119sto by\\u0142a wykorzystywana przez pedofil\\u00f3w do \\u0142\\u0105czenia swoich ofiar z materia\\u0142ami pornograficznymi.<\\/p>\\r\\n<div class=\\\"RDe3\\\">\\r\\n<ul>\\r\\n<li>Prawo do prywatno\\u015bci i bezpiecze\\u0144stwo naszej spo\\u0142eczno\\u015bci to najwy\\u017cszy priorytet dla TikToka. Szczeg\\u00f3lny nacisk k\\u0142adziemy na prywatno\\u015b\\u0107 i bezpiecze\\u0144stwo naszych m\\u0142odszych u\\u017cytkownik\\u00f3w i dlatego dla nich wprowadzamy te znacz\\u0105ce zmiany - powiedzia\\u0142a cytowana przez serwis Busiess Insider dyrektor prywatno\\u015bci TikToka dla regionu Europy, Bliskiego Wschodu i Afryki Elaine Fox.<\\/li>\\r\\n<\\/ul>\\r\\n<\\/div>\\r\\n<div class=\\\"RDe3\\\">\\r\\n<p>Zdaniem TikToka, ma to pom\\u00f3c w eliminowaniu potencjalnych pedofil\\u00f3w, poniewa\\u017c ograniczy im mo\\u017cliwo\\u015b\\u0107 obserwowania nieletnich oraz przesy\\u0142ania im wiadomo\\u015bci prywatnych. Eksperci maj\\u0105 jednak co do tego w\\u0105tpliwo\\u015bci. Cytowana r\\u00f3wnie\\u017c przez BI du\\u0144ska ekspertka ds. bezpiecze\\u0144stwa dzieci i m\\u0142odzie\\u017cy Eva Fog Noer powiedzia\\u0142a, \\u017ce\\u00a0<em>zamiana dzia\\u0142ania g\\u0142\\u00f3wnych funkcji aplikacji i blokowanie mo\\u017cliwo\\u015bci korzystania z nich nie jest dobrym rozwi\\u0105zaniem<\\/em><\\/p>\\r\\n<\\/div>\\r\\n<div class=\\\"RDe3\\\">\\r\\n<p>Zdaniem ekspertki m\\u0142odzie\\u017c z \\u0142atwo\\u015bci\\u0105 ominie obostrzenia TikToka i b\\u0119dzie zak\\u0142ada\\u0107 konta, podaj\\u0105c fa\\u0142szyw\\u0105 dat\\u0119 urodzenia. Nie wiadomo dok\\u0142adnie, jakiej liczby kont b\\u0119d\\u0105 dotyczy\\u0107 zmiany zapowiedziane przez TikTok. Wed\\u0142ug szacunk\\u00f3w \\\"New York Times\\\" w sierpniu 2020 TikTok mia\\u0142 ponad 49 mln u\\u017cytkownik\\u00f3w w USA, z czego ponad jedn\\u0105 trzeci\\u0105 stanowi\\u0142y osoby poni\\u017cej 14 roku \\u017cycia.<\\/p>\\r\\n<\\/div>\\r\\n<\\/div>\",\"state\":\"1\",\"catid\":9,\"created\":\"2023-06-07 07:40:46\",\"created_by\":588,\"created_by_alias\":\"\",\"modified\":\"2023-06-07 07:40:46\",\"modified_by\":588,\"checked_out\":null,\"checked_out_time\":null,\"publish_up\":\"2023-06-07 07:40:46\",\"publish_down\":null,\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/z29498988AMPTikTok-zwalnia----Polski-dzial-badan-i-rozwoju-uci.jpg#joomlaImage:\\\\\\/\\\\\\/local-images\\\\\\/z29498988AMPTikTok-zwalnia----Polski-dzial-badan-i-rozwoju-uci.jpg?width=1200&height=800\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"images\\\\\\/tiktok-1-mld-uzytkownikow.png#joomlaImage:\\\\\\/\\\\\\/local-images\\\\\\/tiktok-1-mld-uzytkownikow.png?width=1080&height=518\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":\\\"\\\",\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":\\\"\\\",\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":\\\"\\\",\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":\"1\",\"ordering\":null,\"metakey\":\"\",\"metadesc\":\"\",\"access\":1,\"hits\":0,\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"note\":\"\"}', 0),
-(10, 'com_content.article.6', '', '2023-06-07 07:49:03', 588, 5498, '911735517db59803ce7b50df4e0ba0a6e9d490a2', '{\"id\":6,\"asset_id\":104,\"title\":\"Facebook na \\\"czarnej li\\u015bcie\\\"\",\"alias\":\"facebook-na-czarnej-liscie\",\"introtext\":\"<h1 class=\\\"sc-1mskw74-0 sc-7eqdwf-0 iPHSOH\\\" style=\\\"text-align: center;\\\">Facebook na \\\"czarnej li\\u015bcie\\\". Du\\u017cy bank nie b\\u0119dzie kupowa\\u0142 akcji<\\/h1>\\r\\n<p>Ju\\u017c trzeci dzie\\u0144 z rz\\u0119du w d\\u00f3\\u0142 lec\\u0105 notowania akcji Facebooka.<\\/p>\\r\\n<p>Przez to warto\\u015b\\u0107 rynkowa firmy spad\\u0142a o kilkadziesi\\u0105t miliard\\u00f3w dolar\\u00f3w. Do czasu wyja\\u015bnienia afery z Cambridge Analytica, z inwestycji w akcje sp\\u00f3\\u0142ki Marka Zuckerberga rezygnuj\\u0105 niekt\\u00f3re fundusze Nordea Banku.<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<div class=\\\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\\\">\\r\\n<p><img src=\\\"https:\\/\\/v.wpimg.pl\\/QUJDREVGfjQrJiR2eTxzIWh-cCw_ZX13P2ZoZ3lwaWEyaz8qOCIoez00MSE4aSE5ZS19LXl1Y2VlKyA8MXRjY3JzZGs8NzZ3Nw\\\" alt=\\\"Wizerunek Facebooka mocno podupad\\u0142 po wybuchu afery z Cambridge Analytica.\\\" \\/><\\/p>\\r\\n<p>Najwi\\u0119kszy bank w Skandynawii i jedna z najwi\\u0119kszych grup finansowych w Europie zdecydowa\\u0142a o umieszczeniu akcji Facebooka na \\\"czarnej li\\u015bcie\\\". W\\u0142adze Nordea Banku og\\u0142osi\\u0142y, \\u017ce m.in. nale\\u017c\\u0105ce do niego fundusze inwestycyjne o zr\\u00f3wnowa\\u017conym profilu ryzyka nie b\\u0119d\\u0105 mog\\u0142y a\\u017c do odwo\\u0142ania kupowa\\u0107 udzia\\u0142\\u00f3w w w Facebooku.<\\/p>\\r\\n<\\/div>\\r\\n<div class=\\\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\\\">\\r\\n<p>Jak donosi agencja Bloomberg, jest to rodzaj \\\"kwarantanny\\\", jaki bank na\\u0142o\\u017cy\\u0142 na akcje. Potrwa ona do momentu, a\\u017c opadn\\u0105 emocje w\\u015br\\u00f3d inwestor\\u00f3w i popularny serwis spo\\u0142eczno\\u015bciowy wyja\\u015bni wszystkie w\\u0105tpliwo\\u015bci w zwi\\u0105zku z afer\\u0105 odkryt\\u0105 przez dziennikarzy \\u015bledczych \\\"New York Timesa\\\" oraz \\\"Observera\\\".<\\/p>\\r\\n<p>Przypomnijmy, \\u017ce dane blisko 50 mln u\\u017cytkownik\\u00f3w Facebooka mia\\u0142y zosta\\u0107 nielegalnie u\\u017cyte przez firm\\u0119 Cambridge Analytica w kampanii wyborczej w 2016 roku. Pos\\u0142u\\u017cy\\u0142y do \\\"promowania\\\" Donalda Trumpa lub jak m\\u00f3wi\\u0105 niekt\\u00f3rzy - do zmanipulowania wyborc\\u00f3w. Firma mia\\u0142a za to zainkasowa\\u0107 niemal 9 mln dolar\\u00f3w.<\\/p>\\r\\n<p>Sprawa wysz\\u0142a na jaw w weekend. Akcje Facebooka tylko w poniedzia\\u0142ek polecia\\u0142y w d\\u00f3\\u0142 a\\u017c o 7 proc.\\u00a0Tak panicznej reakcji inwestor\\u00f3w posiadaj\\u0105cych papiery firmy nie widzieli\\u015bmy od wrze\\u015bnia 2012 roku. W jeden dzie\\u0144 warto\\u015b\\u0107 sp\\u00f3\\u0142ki zmala\\u0142a a\\u017c o 40 mld dolar\\u00f3w.<\\/p>\\r\\n<div class=\\\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\\\">\\r\\n<p>Sytuacja ci\\u0105gle jest napi\\u0119ta. R\\u00f3wnie\\u017c we wtorek notowania firmy by\\u0142y pod presj\\u0105, trac\\u0105c ostatecznie 2,5 proc. Pocz\\u0105tek \\u015brodowej sesji r\\u00f3wnie\\u017c przynosi delikatne spadki. W\\u0142adze Nordei widz\\u0105c to, stwierdzi\\u0142y, \\u017ce bezpieczniej b\\u0119dzie wstrzyma\\u0107 si\\u0119 na razie z inwestycjami w akcje Facebooka.<\\/p>\\r\\n<\\/div>\\r\\n<div class=\\\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\\\">\\r\\n<p>Emocje staraj\\u0105 si\\u0119 tonowa\\u0107 przedstawiciele Facebooka, kt\\u00f3rzy odrzucaj\\u0105 zarzuty o niedope\\u0142nienie obowi\\u0105zk\\u00f3w i luki w systemie ochrony danych u\\u017cytkownik\\u00f3w. Wkr\\u00f3tkim o\\u015bwiadczeniu wskazuj\\u0105, \\u017ce zostali oszukani\\u00a0przez Cambridge Analytica. To jednak nie przekonuje inwestor\\u00f3w.<\\/p>\\r\\n<\\/div>\\r\\n<\\/div>\",\"state\":\"1\",\"catid\":9,\"created\":\"2023-06-07 07:49:03\",\"created_by\":588,\"created_by_alias\":\"\",\"modified\":\"2023-06-07 07:49:03\",\"modified_by\":588,\"checked_out\":null,\"checked_out_time\":null,\"publish_up\":\"2023-06-07 07:49:03\",\"publish_down\":null,\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/408653.jpg#joomlaImage:\\\\\\/\\\\\\/local-images\\\\\\/408653.jpg?width=1600&height=1033\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"images\\\\\\/lbDk9kqTURBXy9jY2VkZWJmODVlMWJiZmYxNGI5Yzk4NDA0YzQxNGI3YS5qcGVnkpUDAMxszQwmzQbVkwXNBLDNAljeAAGhMAE.jpg#joomlaImage:\\\\\\/\\\\\\/local-images\\\\\\/lbDk9kqTURBXy9jY2VkZWJmODVlMWJiZmYxNGI5Yzk4NDA0YzQxNGI3YS5qcGVnkpUDAMxszQwmzQbVkwXNBLDNAljeAAGhMAE.jpg?width=1200&height=600\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":\\\"\\\",\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":\\\"\\\",\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":\\\"\\\",\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":\"1\",\"ordering\":null,\"metakey\":\"\",\"metadesc\":\"\",\"access\":1,\"hits\":0,\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"note\":\"\"}', 0);
+(10, 'com_content.article.6', '', '2023-06-07 07:49:03', 588, 5498, '911735517db59803ce7b50df4e0ba0a6e9d490a2', '{\"id\":6,\"asset_id\":104,\"title\":\"Facebook na \\\"czarnej li\\u015bcie\\\"\",\"alias\":\"facebook-na-czarnej-liscie\",\"introtext\":\"<h1 class=\\\"sc-1mskw74-0 sc-7eqdwf-0 iPHSOH\\\" style=\\\"text-align: center;\\\">Facebook na \\\"czarnej li\\u015bcie\\\". Du\\u017cy bank nie b\\u0119dzie kupowa\\u0142 akcji<\\/h1>\\r\\n<p>Ju\\u017c trzeci dzie\\u0144 z rz\\u0119du w d\\u00f3\\u0142 lec\\u0105 notowania akcji Facebooka.<\\/p>\\r\\n<p>Przez to warto\\u015b\\u0107 rynkowa firmy spad\\u0142a o kilkadziesi\\u0105t miliard\\u00f3w dolar\\u00f3w. Do czasu wyja\\u015bnienia afery z Cambridge Analytica, z inwestycji w akcje sp\\u00f3\\u0142ki Marka Zuckerberga rezygnuj\\u0105 niekt\\u00f3re fundusze Nordea Banku.<\\/p>\\r\\n\",\"fulltext\":\"\\r\\n<div class=\\\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\\\">\\r\\n<p><img src=\\\"https:\\/\\/v.wpimg.pl\\/QUJDREVGfjQrJiR2eTxzIWh-cCw_ZX13P2ZoZ3lwaWEyaz8qOCIoez00MSE4aSE5ZS19LXl1Y2VlKyA8MXRjY3JzZGs8NzZ3Nw\\\" alt=\\\"Wizerunek Facebooka mocno podupad\\u0142 po wybuchu afery z Cambridge Analytica.\\\" \\/><\\/p>\\r\\n<p>Najwi\\u0119kszy bank w Skandynawii i jedna z najwi\\u0119kszych grup finansowych w Europie zdecydowa\\u0142a o umieszczeniu akcji Facebooka na \\\"czarnej li\\u015bcie\\\". W\\u0142adze Nordea Banku og\\u0142osi\\u0142y, \\u017ce m.in. nale\\u017c\\u0105ce do niego fundusze inwestycyjne o zr\\u00f3wnowa\\u017conym profilu ryzyka nie b\\u0119d\\u0105 mog\\u0142y a\\u017c do odwo\\u0142ania kupowa\\u0107 udzia\\u0142\\u00f3w w w Facebooku.<\\/p>\\r\\n<\\/div>\\r\\n<div class=\\\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\\\">\\r\\n<p>Jak donosi agencja Bloomberg, jest to rodzaj \\\"kwarantanny\\\", jaki bank na\\u0142o\\u017cy\\u0142 na akcje. Potrwa ona do momentu, a\\u017c opadn\\u0105 emocje w\\u015br\\u00f3d inwestor\\u00f3w i popularny serwis spo\\u0142eczno\\u015bciowy wyja\\u015bni wszystkie w\\u0105tpliwo\\u015bci w zwi\\u0105zku z afer\\u0105 odkryt\\u0105 przez dziennikarzy \\u015bledczych \\\"New York Timesa\\\" oraz \\\"Observera\\\".<\\/p>\\r\\n<p>Przypomnijmy, \\u017ce dane blisko 50 mln u\\u017cytkownik\\u00f3w Facebooka mia\\u0142y zosta\\u0107 nielegalnie u\\u017cyte przez firm\\u0119 Cambridge Analytica w kampanii wyborczej w 2016 roku. Pos\\u0142u\\u017cy\\u0142y do \\\"promowania\\\" Donalda Trumpa lub jak m\\u00f3wi\\u0105 niekt\\u00f3rzy - do zmanipulowania wyborc\\u00f3w. Firma mia\\u0142a za to zainkasowa\\u0107 niemal 9 mln dolar\\u00f3w.<\\/p>\\r\\n<p>Sprawa wysz\\u0142a na jaw w weekend. Akcje Facebooka tylko w poniedzia\\u0142ek polecia\\u0142y w d\\u00f3\\u0142 a\\u017c o 7 proc.\\u00a0Tak panicznej reakcji inwestor\\u00f3w posiadaj\\u0105cych papiery firmy nie widzieli\\u015bmy od wrze\\u015bnia 2012 roku. W jeden dzie\\u0144 warto\\u015b\\u0107 sp\\u00f3\\u0142ki zmala\\u0142a a\\u017c o 40 mld dolar\\u00f3w.<\\/p>\\r\\n<div class=\\\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\\\">\\r\\n<p>Sytuacja ci\\u0105gle jest napi\\u0119ta. R\\u00f3wnie\\u017c we wtorek notowania firmy by\\u0142y pod presj\\u0105, trac\\u0105c ostatecznie 2,5 proc. Pocz\\u0105tek \\u015brodowej sesji r\\u00f3wnie\\u017c przynosi delikatne spadki. W\\u0142adze Nordei widz\\u0105c to, stwierdzi\\u0142y, \\u017ce bezpieczniej b\\u0119dzie wstrzyma\\u0107 si\\u0119 na razie z inwestycjami w akcje Facebooka.<\\/p>\\r\\n<\\/div>\\r\\n<div class=\\\"sc-1mskw74-0 sc-7eqdwf-0 sc-1fanasd-0 bbIjFG sc-1kwzqcy-0 ckLauT\\\">\\r\\n<p>Emocje staraj\\u0105 si\\u0119 tonowa\\u0107 przedstawiciele Facebooka, kt\\u00f3rzy odrzucaj\\u0105 zarzuty o niedope\\u0142nienie obowi\\u0105zk\\u00f3w i luki w systemie ochrony danych u\\u017cytkownik\\u00f3w. Wkr\\u00f3tkim o\\u015bwiadczeniu wskazuj\\u0105, \\u017ce zostali oszukani\\u00a0przez Cambridge Analytica. To jednak nie przekonuje inwestor\\u00f3w.<\\/p>\\r\\n<\\/div>\\r\\n<\\/div>\",\"state\":\"1\",\"catid\":9,\"created\":\"2023-06-07 07:49:03\",\"created_by\":588,\"created_by_alias\":\"\",\"modified\":\"2023-06-07 07:49:03\",\"modified_by\":588,\"checked_out\":null,\"checked_out_time\":null,\"publish_up\":\"2023-06-07 07:49:03\",\"publish_down\":null,\"images\":\"{\\\"image_intro\\\":\\\"images\\\\\\/408653.jpg#joomlaImage:\\\\\\/\\\\\\/local-images\\\\\\/408653.jpg?width=1600&height=1033\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"images\\\\\\/lbDk9kqTURBXy9jY2VkZWJmODVlMWJiZmYxNGI5Yzk4NDA0YzQxNGI3YS5qcGVnkpUDAMxszQwmzQbVkwXNBLDNAljeAAGhMAE.jpg#joomlaImage:\\\\\\/\\\\\\/local-images\\\\\\/lbDk9kqTURBXy9jY2VkZWJmODVlMWJiZmYxNGI5Yzk4NDA0YzQxNGI3YS5qcGVnkpUDAMxszQwmzQbVkwXNBLDNAljeAAGhMAE.jpg?width=1200&height=600\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":\\\"\\\",\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":\\\"\\\",\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":\\\"\\\",\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":\"1\",\"ordering\":null,\"metakey\":\"\",\"metadesc\":\"\",\"access\":1,\"hits\":0,\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"note\":\"\"}', 0),
+(11, 'com_contact.contact.1', '', '2023-06-12 16:08:23', 588, 1694, '52e0d3af221fcd3b70fa9c669252bf990531b8b2', '{\"id\":1,\"name\":\"Admin\",\"alias\":\"admin\",\"con_position\":\"\",\"address\":\"test\",\"suburb\":\"testcity\",\"state\":\"testland\",\"country\":\"test\",\"postcode\":\"123456\",\"telephone\":\"123456789\",\"fax\":\"442012243456\",\"misc\":\"\",\"image\":\"images\\/user.png#joomlaImage:\\/\\/local-images\\/user.png?width=512&height=512\",\"email_to\":\"test@test.test\",\"default_con\":0,\"published\":\"1\",\"checked_out\":null,\"checked_out_time\":null,\"ordering\":1,\"params\":\"{\\\"show_contact_category\\\":\\\"\\\",\\\"show_contact_list\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_info\\\":\\\"\\\",\\\"show_name\\\":\\\"\\\",\\\"show_position\\\":\\\"\\\",\\\"show_email\\\":\\\"\\\",\\\"add_mailto_link\\\":\\\"\\\",\\\"show_street_address\\\":\\\"\\\",\\\"show_suburb\\\":\\\"\\\",\\\"show_state\\\":\\\"\\\",\\\"show_postcode\\\":\\\"\\\",\\\"show_country\\\":\\\"\\\",\\\"show_telephone\\\":\\\"\\\",\\\"show_mobile\\\":\\\"\\\",\\\"show_fax\\\":\\\"\\\",\\\"show_webpage\\\":\\\"\\\",\\\"show_image\\\":\\\"\\\",\\\"show_misc\\\":\\\"\\\",\\\"allow_vcard\\\":\\\"\\\",\\\"show_articles\\\":\\\"\\\",\\\"articles_display_num\\\":\\\"\\\",\\\"show_profile\\\":\\\"\\\",\\\"contact_layout\\\":\\\"\\\",\\\"show_links\\\":\\\"\\\",\\\"linka_name\\\":\\\"\\\",\\\"linka\\\":\\\"\\\",\\\"linkb_name\\\":\\\"\\\",\\\"linkb\\\":\\\"\\\",\\\"linkc_name\\\":\\\"\\\",\\\"linkc\\\":\\\"\\\",\\\"linkd_name\\\":\\\"\\\",\\\"linkd\\\":\\\"\\\",\\\"linke_name\\\":\\\"\\\",\\\"linke\\\":\\\"\\\",\\\"show_email_form\\\":\\\"\\\",\\\"show_email_copy\\\":\\\"\\\",\\\"validate_session\\\":\\\"\\\",\\\"custom_reply\\\":\\\"\\\",\\\"redirect\\\":\\\"\\\"}\",\"user_id\":\"588\",\"catid\":4,\"access\":1,\"mobile\":\"123456789\",\"webpage\":\"http:\\/\\/test.com\",\"sortname1\":\"\",\"sortname2\":\"\",\"sortname3\":\"\",\"language\":\"*\",\"created\":\"2023-06-12 16:08:23\",\"created_by\":588,\"created_by_alias\":\"\",\"modified\":\"2023-06-12 16:08:23\",\"modified_by\":588,\"metakey\":\"\",\"metadesc\":\"\",\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"rights\\\":\\\"\\\"}\",\"featured\":\"0\",\"publish_up\":null,\"publish_down\":null,\"version\":\"1\",\"hits\":0}', 0),
+(12, 'com_content.category.10', '', '2023-06-12 16:20:39', 588, 456, '17215259fa5df7a6b5709c890a357eefc6112e41', '{\"id\":10,\"asset_id\":105,\"parent_id\":1,\"lft\":15,\"rgt\":16,\"level\":1,\"path\":null,\"extension\":\"com_content\",\"title\":\"Menu\",\"alias\":\"menu\",\"note\":null,\"description\":null,\"published\":1,\"checked_out\":null,\"checked_out_time\":null,\"access\":1,\"params\":null,\"metadesc\":null,\"metakey\":null,\"metadata\":null,\"created_user_id\":588,\"created_time\":\"2023-06-12 16:20:39\",\"modified_user_id\":588,\"modified_time\":\"2023-06-12 16:20:39\",\"hits\":null,\"language\":\"*\",\"version\":null}', 0),
+(13, 'com_content.article.7', '', '2023-06-12 16:20:39', 588, 3974, 'd3e967d038f500d2f8c5c4b67c7fb6fce966f434', '{\"id\":7,\"asset_id\":106,\"title\":\"O nas\",\"alias\":\"o-nas\",\"introtext\":\"<p>Witaj na naszym blogu z wiadomo\\u015bciami! Jeste\\u015bmy zespo\\u0142em pasjonat\\u00f3w, kt\\u00f3rzy maj\\u0105 na celu dostarczenie Ci naj\\u015bwie\\u017cszych informacji na temat najwa\\u017cniejszych wydarze\\u0144 i trend\\u00f3w z r\\u00f3\\u017cnych dziedzin.<\\/p>\\r\\n<p>Naszym celem jest zapewnienie Ci rzetelnych, zr\\u00f3\\u017cnicowanych i interesuj\\u0105cych tre\\u015bci, kt\\u00f3re pozwol\\u0105 Ci by\\u0107 na bie\\u017c\\u0105co z najnowszymi wydarzeniami na \\u015bwiecie. Niezale\\u017cnie od tego, czy interesujesz si\\u0119 polityk\\u0105, gospodark\\u0105, nauk\\u0105, technologi\\u0105, sportem czy rozrywk\\u0105, nasz blog dostarczy Ci informacji na temat tych temat\\u00f3w i wielu innych.<\\/p>\\r\\n<p>Nasz zesp\\u00f3\\u0142 sk\\u0142ada si\\u0119 z do\\u015bwiadczonych redaktor\\u00f3w, kt\\u00f3rzy posiadaj\\u0105 szerok\\u0105 wiedz\\u0119 i do\\u015bwiadczenie w dziedzinie dziennikarstwa. Pracujemy ci\\u0119\\u017cko, aby dostarcza\\u0107 Ci wiadomo\\u015bci, kt\\u00f3re s\\u0105 rzetelne, zbadane i dobrze zredagowane. Stawiamy na jako\\u015b\\u0107 i dok\\u0142adno\\u015b\\u0107 informacji, poniewa\\u017c wiemy, jak wa\\u017cne jest to dla naszych czytelnik\\u00f3w.<\\/p>\\r\\n<p>Nie tylko dostarczamy informacje, ale tak\\u017ce analizujemy wydarzenia i prezentujemy r\\u00f3\\u017cne perspektywy. Staramy si\\u0119 ukazywa\\u0107 r\\u00f3\\u017cnorodne opinie, aby\\u015b m\\u00f3g\\u0142 samodzielnie zrozumie\\u0107 r\\u00f3\\u017cne punkty widzenia. Naszym celem jest tworzenie przestrzeni, w kt\\u00f3rej czytelnicy mog\\u0105 rozwija\\u0107 swoj\\u0105 wiedz\\u0119 i pog\\u0142\\u0119bia\\u0107 zrozumienie najwa\\u017cniejszych temat\\u00f3w dnia.<\\/p>\\r\\n<p>Jeste\\u015bmy r\\u00f3wnie\\u017c otwarci na opini\\u0119 i zaanga\\u017cowanie naszych czytelnik\\u00f3w. Je\\u015bli masz jakie\\u015b sugestie, pytania lub chcia\\u0142by\\u015b podzieli\\u0107 si\\u0119 swoj\\u0105 opini\\u0105 na temat jakiego\\u015b artyku\\u0142u, zach\\u0119camy do kontaktu z nami. Twoje uwagi s\\u0105 dla nas cenne, poniewa\\u017c pomagaj\\u0105 nam stale doskonali\\u0107 nasz\\u0105 prac\\u0119.<\\/p>\\r\\n<p>Dzi\\u0119kujemy, \\u017ce odwiedzi\\u0142e\\u015b nasz blog z wiadomo\\u015bciami. Mamy nadziej\\u0119, \\u017ce nasza strona dostarczy Ci ciekawych informacji i b\\u0119dzie inspiracj\\u0105 do dalszego poszerzania wiedzy. Zapraszamy do regularnego odwiedzania naszego bloga, aby by\\u0107 na bie\\u017c\\u0105co z najnowszymi wydarzeniami na \\u015bwiecie.<\\/p>\",\"fulltext\":\"\",\"state\":\"1\",\"catid\":10,\"created\":\"2023-06-12 16:20:39\",\"created_by\":588,\"created_by_alias\":\"\",\"modified\":\"2023-06-12 16:20:39\",\"modified_by\":588,\"checked_out\":null,\"checked_out_time\":null,\"publish_up\":\"2023-06-12 16:20:39\",\"publish_down\":null,\"images\":\"{\\\"image_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":\\\"\\\",\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":\\\"\\\",\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":\\\"\\\",\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":\"1\",\"ordering\":null,\"metakey\":\"\",\"metadesc\":\"\",\"access\":1,\"hits\":0,\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"note\":\"\"}', 0),
+(14, 'com_content.article.8', '', '2023-06-12 16:41:39', 588, 4388, '5ad6f72b7ce7b3082e74136092d3a0beba802a63', '{\"id\":8,\"asset_id\":107,\"title\":\"Polityka prywatno\\u015bci\",\"alias\":\"polityka-prywatnosci\",\"introtext\":\"<p>Witamy na stronie Polityki Prywatno\\u015bci naszego blogu z wiadomo\\u015bciami. Zale\\u017cy nam na ochronie Twojej prywatno\\u015bci i chcieliby\\u015bmy przedstawi\\u0107 Ci, w jaki spos\\u00f3b gromadzimy, u\\u017cywamy i chronimy informacje, kt\\u00f3re mo\\u017cemy otrzyma\\u0107 od Ciebie podczas odwiedzania naszej strony.<\\/p>\\r\\n<p>Gromadzenie informacji Podczas odwiedzania naszego blogu, mo\\u017cemy gromadzi\\u0107 pewne informacje, takie jak adres IP, przegl\\u0105darka internetowa, typ urz\\u0105dzenia, j\\u0119zyk, strony, kt\\u00f3re odwiedzasz, oraz daty i godziny Twoich wizyt. Te informacje s\\u0105 gromadzone w celach statystycznych i analizy ruchu na stronie, aby\\u015bmy mogli lepiej zrozumie\\u0107 preferencje naszych czytelnik\\u00f3w i dostosowa\\u0107 tre\\u015bci do ich potrzeb.<\\/p>\\r\\n<p>U\\u017cywanie plik\\u00f3w cookie Nasza strona mo\\u017ce u\\u017cywa\\u0107 plik\\u00f3w cookie - ma\\u0142ych plik\\u00f3w tekstowych umieszczanych na Twoim urz\\u0105dzeniu, kt\\u00f3re pomagaj\\u0105 nam zapewni\\u0107 Ci lepsze do\\u015bwiadczenie podczas korzystania z naszego blogu. Pliki cookie umo\\u017cliwiaj\\u0105 nam zapami\\u0119tywanie Twoich preferencji, personalizacj\\u0119 tre\\u015bci oraz analiz\\u0119 sposobu, w jaki korzystasz z naszej strony. Mo\\u017cesz w ka\\u017cdej chwili skonfigurowa\\u0107 ustawienia swojej przegl\\u0105darki, aby odrzuca\\u0142a pliki cookie lub informowa\\u0142a Ci\\u0119 o ich wysy\\u0142aniu. Jednak\\u017ce, nale\\u017cy pami\\u0119ta\\u0107, \\u017ce niekt\\u00f3re funkcje naszego blogu mog\\u0105 nie dzia\\u0142a\\u0107 poprawnie bez plik\\u00f3w cookie.<\\/p>\\r\\n<p>\\u015awiadome ujawnianie informacji Jeste\\u015bmy \\u015bwiadomi znaczenia prywatno\\u015bci i dbamy o to, aby Twoje informacje osobiste nie by\\u0142y ujawniane nieuprawnionym osobom. Nie sprzedajemy, nie udost\\u0119pniamy ani nie wymieniamy Twoich danych osobowych z \\u017cadnymi stronami trzecimi bez Twojej zgody, chyba \\u017ce jest to wymagane przez prawo.<\\/p>\\r\\n<p>Zewn\\u0119trzne \\u0142\\u0105cza Na naszym blogu mo\\u017cemy zamieszcza\\u0107 \\u0142\\u0105cza do innych stron internetowych lub artyku\\u0142\\u00f3w, kt\\u00f3re uwa\\u017camy za warto\\u015bciowe dla naszych czytelnik\\u00f3w. Nale\\u017cy pami\\u0119ta\\u0107, \\u017ce nie ponosimy odpowiedzialno\\u015bci za tre\\u015bci lub praktyki prywatno\\u015bci tych stron. Zach\\u0119camy do zapoznania si\\u0119 z polityk\\u0105 prywatno\\u015bci ka\\u017cdej z tych stron przed udost\\u0119pnieniem jakichkolwiek informacji osobistych.<\\/p>\\r\\n<p>Ochrona danych Dok\\u0142adamy wszelkich stara\\u0144, aby chroni\\u0107 Twoje informacje przed nieuprawnionym dost\\u0119pem, utrat\\u0105, wykorzystaniem lub zmian\\u0105. Stosujemy odpowiednie \\u015brodki techniczne, fizyczne i organizacyjne, aby zapewni\\u0107 bezpiecze\\u0144stwo danych.<\\/p>\",\"fulltext\":\"\",\"state\":\"1\",\"catid\":2,\"created\":\"2023-06-12 16:41:39\",\"created_by\":588,\"created_by_alias\":\"\",\"modified\":\"2023-06-12 16:41:39\",\"modified_by\":588,\"checked_out\":null,\"checked_out_time\":null,\"publish_up\":\"2023-06-12 16:41:39\",\"publish_down\":null,\"images\":\"{\\\"image_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":\\\"\\\",\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":\\\"\\\",\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":\\\"\\\",\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":\"1\",\"ordering\":null,\"metakey\":\"\",\"metadesc\":\"\",\"access\":1,\"hits\":0,\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"note\":\"\"}', 0),
+(15, 'com_content.article.9', '', '2023-06-12 16:49:24', 588, 4524, '8778f4f8ceb03542b79f41a0090f702058fc4cef', '{\"id\":9,\"asset_id\":108,\"title\":\"Warunki korzystania\",\"alias\":\"warunki-korzystania\",\"introtext\":\"<p>Witamy na stronie Warunk\\u00f3w Korzystania ze strony naszego blogu z wiadomo\\u015bciami. Poni\\u017cej przedstawiamy zasady, kt\\u00f3rych nale\\u017cy przestrzega\\u0107 podczas korzystania z naszej strony. Poprzez dost\\u0119p i przegl\\u0105danie naszego blogu, wyra\\u017casz zgod\\u0119 na poni\\u017csze warunki. Je\\u015bli nie zgadzasz si\\u0119 z kt\\u00f3rymkolwiek z poni\\u017cszych warunk\\u00f3w, prosimy o zaprzestanie korzystania z naszej strony.<\\/p>\\r\\n<ol>\\r\\n<li>\\r\\n<p>Tre\\u015bci i prawa autorskie: Wszystkie tre\\u015bci zamieszczone na naszej stronie s\\u0105 chronione prawem autorskim. Nie wolno kopiowa\\u0107, reprodukowa\\u0107, publikowa\\u0107, transmitowa\\u0107 ani modyfikowa\\u0107 \\u017cadnej cz\\u0119\\u015bci tre\\u015bci bez naszej zgody. Tre\\u015bci mog\\u0105 by\\u0107 wykorzystywane jedynie w celach osobistych i niekomercyjnych.<\\/p>\\r\\n<\\/li>\\r\\n<li>\\r\\n<p>Odpowiedzialno\\u015b\\u0107: Dok\\u0142adamy wszelkich stara\\u0144, aby zapewni\\u0107 rzetelno\\u015b\\u0107, dok\\u0142adno\\u015b\\u0107 i aktualno\\u015b\\u0107 informacji zamieszczonych na naszym blogu. Jednak nie ponosimy odpowiedzialno\\u015bci za ewentualne b\\u0142\\u0119dy, op\\u00f3\\u017anienia, niepe\\u0142no\\u015b\\u0107 lub szkody wynikaj\\u0105ce z korzystania z tych informacji. Korzystanie z tre\\u015bci na w\\u0142asne ryzyko.<\\/p>\\r\\n<\\/li>\\r\\n<li>\\r\\n<p>Zewn\\u0119trzne \\u0142\\u0105cza: Na naszym blogu mog\\u0105 by\\u0107 zamieszczone \\u0142\\u0105cza do innych stron internetowych. Nie ponosimy odpowiedzialno\\u015bci za tre\\u015bci lub praktyki prywatno\\u015bci tych stron. Korzystanie z tych \\u0142\\u0105czy jest dobrowolne i na w\\u0142asne ryzyko.<\\/p>\\r\\n<\\/li>\\r\\n<li>\\r\\n<p>Komunikacja: Zach\\u0119camy do udzielania komentarzy i opinii na naszym blogu. Jednak wszelkie komentarze i tre\\u015bci przes\\u0142ane przez u\\u017cytkownik\\u00f3w podlegaj\\u0105 moderacji. Zastrzegamy sobie prawo do usuni\\u0119cia, zmiany lub odrzucenia dowolnego komentarza bez podania przyczyny.<\\/p>\\r\\n<\\/li>\\r\\n<li>\\r\\n<p>Prywatno\\u015b\\u0107: Szanujemy Twoj\\u0105 prywatno\\u015b\\u0107. Informacje, kt\\u00f3re mo\\u017cemy gromadzi\\u0107 od Ciebie, s\\u0105 obj\\u0119te nasz\\u0105 Polityk\\u0105 Prywatno\\u015bci. Prosimy o zapoznanie si\\u0119 z t\\u0105 polityk\\u0105, aby dowiedzie\\u0107 si\\u0119, w jaki spos\\u00f3b gromadzimy, u\\u017cywamy i chronimy Twoje dane osobowe.<\\/p>\\r\\n<\\/li>\\r\\n<li>\\r\\n<p>Zmiany w warunkach korzystania: Zastrzegamy sobie prawo do zmiany niniejszych Warunk\\u00f3w Korzystania w dowolnym czasie. Zaktualizowane warunki b\\u0119d\\u0105 publikowane na tej stronie i b\\u0119d\\u0105 obowi\\u0105zywa\\u0107 od momentu opublikowania. Zalecamy regularne sprawdzanie tej strony w celu zapoznania si\\u0119 z ewentualnymi zmianami.<\\/p>\\r\\n<\\/li>\\r\\n<\\/ol>\\r\\n<p>Dzi\\u0119kujemy za przestrzeganie naszych Warunk\\u00f3w Korzystania. Zapraszamy do dalszego korzystania z naszego blogu z wiadomo\\u015bciami i cieszenia si\\u0119 najnowszymi<\\/p>\",\"fulltext\":\"\",\"state\":\"1\",\"catid\":2,\"created\":\"2023-06-12 16:49:24\",\"created_by\":588,\"created_by_alias\":\"\",\"modified\":\"2023-06-12 16:49:24\",\"modified_by\":588,\"checked_out\":null,\"checked_out_time\":null,\"publish_up\":\"2023-06-12 16:49:24\",\"publish_down\":null,\"images\":\"{\\\"image_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":\\\"\\\",\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":\\\"\\\",\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":\\\"\\\",\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":\"1\",\"ordering\":null,\"metakey\":\"\",\"metadesc\":\"\",\"access\":1,\"hits\":0,\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"note\":\"\"}', 0),
+(16, 'com_content.article.10', '', '2023-06-12 16:57:51', 588, 4510, '3366d2697f6e71230c01809ba20cdb29e99b78bf', '{\"id\":10,\"asset_id\":109,\"title\":\"Cz\\u0119sto Zadawane Pytania\",\"alias\":\"czesto-zadawane-pytania\",\"introtext\":\"<p>Witamy na stronie Cz\\u0119sto Zadawanych Pyta\\u0144 (FAQ) naszego blogu z wiadomo\\u015bciami. Przedstawiamy poni\\u017cej odpowiedzi na najcz\\u0119\\u015bciej zadawane pytania dotycz\\u0105ce naszej strony i jej dzia\\u0142ania. Je\\u015bli masz jakiekolwiek pytania, kt\\u00f3re nie zosta\\u0142y tu uwzgl\\u0119dnione, zach\\u0119camy do kontaktu z nami.<\\/p>\\r\\n<ol>\\r\\n<li>\\r\\n<p>Jak cz\\u0119sto aktualizujecie tre\\u015bci na swoim blogu? Staramy si\\u0119 regularnie aktualizowa\\u0107 nasz blog, aby dostarcza\\u0107 Ci najnowsze wiadomo\\u015bci i informacje. Publikujemy nowe artyku\\u0142y i tre\\u015bci w miar\\u0119 jak wa\\u017cne wydarzenia maj\\u0105 miejsce. Zach\\u0119camy do regularnego odwiedzania naszego blogu, aby by\\u0107 na bie\\u017c\\u0105co z naj\\u015bwie\\u017cszymi informacjami.<\\/p>\\r\\n<\\/li>\\r\\n<li>\\r\\n<p>Czy mog\\u0119 podzieli\\u0107 si\\u0119 swoimi opiniami lub sugestiami na temat artyku\\u0142\\u00f3w? Oczywi\\u015bcie! Cenimy sobie zaanga\\u017cowanie naszych czytelnik\\u00f3w i ch\\u0119tnie przyjmujemy opinie, sugestie i komentarze dotycz\\u0105ce naszych artyku\\u0142\\u00f3w. Mo\\u017cesz skorzysta\\u0107 z sekcji komentarzy, aby podzieli\\u0107 si\\u0119 swoimi my\\u015blami. Staramy si\\u0119 moderowa\\u0107 komentarze i odpowiedzie\\u0107 na jak najwi\\u0119cej z nich.<\\/p>\\r\\n<\\/li>\\r\\n<li>\\r\\n<p>Czy mog\\u0119 korzysta\\u0107 z tre\\u015bci zamieszczonych na Waszym blogu? Tre\\u015bci zamieszczone na naszym blogu s\\u0105 chronione prawem autorskim. W przypadku ch\\u0119ci skorzystania z tre\\u015bci w celach komercyjnych, nale\\u017cy skontaktowa\\u0107 si\\u0119 z nami w celu uzyskania zgody. Jednak\\u017ce, mo\\u017cesz korzysta\\u0107 z naszych tre\\u015bci w ramach u\\u017cytku osobistego i niekomercyjnego.<\\/p>\\r\\n<\\/li>\\r\\n<li>\\r\\n<p>Czy publikujecie tylko wiadomo\\u015bci z konkretnych dziedzin? Staramy si\\u0119 pokrywa\\u0107 r\\u00f3\\u017cnorodne tematy i dziedziny, aby zaspokoi\\u0107 r\\u00f3\\u017cnorodne zainteresowania naszych czytelnik\\u00f3w. Nasze artyku\\u0142y obejmuj\\u0105 polityk\\u0119, gospodark\\u0119, nauk\\u0119, technologi\\u0119, sport, rozrywk\\u0119 i wiele innych. D\\u0105\\u017cymy do dostarczenia informacji na tematy, kt\\u00f3re s\\u0105 wa\\u017cne i interesuj\\u0105ce dla naszych czytelnik\\u00f3w.<\\/p>\\r\\n<\\/li>\\r\\n<li>\\r\\n<p>Jak mog\\u0119 skontaktowa\\u0107 si\\u0119 z zespo\\u0142em redakcyjnym? Je\\u015bli masz jakiekolwiek pytania, uwagi lub chcia\\u0142by\\u015b skontaktowa\\u0107 si\\u0119 z naszym zespo\\u0142em redakcyjnym, mo\\u017cesz skorzysta\\u0107 z formularza kontaktowego dost\\u0119pnego na naszej stronie. Postaramy si\\u0119 odpowiedzie\\u0107 na Twoje pytania jak najszybciej.<\\/p>\\r\\n<\\/li>\\r\\n<\\/ol>\\r\\n<p>Dzi\\u0119kujemy za odwiedzenie naszej strony Cz\\u0119sto Zadawanych Pyta\\u0144. Mamy nadziej\\u0119, \\u017ce odpowiedzi na powy\\u017csze pytania pomog\\u0142y Ci lepiej zrozumie\\u0107 nasz blog i jego funkcjonowanie. Je\\u015bli masz jak<\\/p>\",\"fulltext\":\"\",\"state\":\"1\",\"catid\":10,\"created\":\"2023-06-12 16:57:51\",\"created_by\":588,\"created_by_alias\":\"\",\"modified\":\"2023-06-12 16:57:51\",\"modified_by\":588,\"checked_out\":null,\"checked_out_time\":null,\"publish_up\":\"2023-06-12 16:57:51\",\"publish_down\":null,\"images\":\"{\\\"image_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":\\\"\\\",\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":\\\"\\\",\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":\\\"\\\",\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":\"1\",\"ordering\":null,\"metakey\":\"\",\"metadesc\":\"\",\"access\":1,\"hits\":0,\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"note\":\"\"}', 0),
+(17, 'com_content.article.9', '', '2023-06-12 16:58:05', 588, 4540, 'aef893aafd539c35a452d7712ca37ed1a4de0d5f', '{\"id\":\"9\",\"asset_id\":108,\"title\":\"Warunki korzystania\",\"alias\":\"warunki-korzystania\",\"introtext\":\"<p>Witamy na stronie Warunk\\u00f3w Korzystania ze strony naszego blogu z wiadomo\\u015bciami. Poni\\u017cej przedstawiamy zasady, kt\\u00f3rych nale\\u017cy przestrzega\\u0107 podczas korzystania z naszej strony. Poprzez dost\\u0119p i przegl\\u0105danie naszego blogu, wyra\\u017casz zgod\\u0119 na poni\\u017csze warunki. Je\\u015bli nie zgadzasz si\\u0119 z kt\\u00f3rymkolwiek z poni\\u017cszych warunk\\u00f3w, prosimy o zaprzestanie korzystania z naszej strony.<\\/p>\\r\\n<ol>\\r\\n<li>\\r\\n<p>Tre\\u015bci i prawa autorskie: Wszystkie tre\\u015bci zamieszczone na naszej stronie s\\u0105 chronione prawem autorskim. Nie wolno kopiowa\\u0107, reprodukowa\\u0107, publikowa\\u0107, transmitowa\\u0107 ani modyfikowa\\u0107 \\u017cadnej cz\\u0119\\u015bci tre\\u015bci bez naszej zgody. Tre\\u015bci mog\\u0105 by\\u0107 wykorzystywane jedynie w celach osobistych i niekomercyjnych.<\\/p>\\r\\n<\\/li>\\r\\n<li>\\r\\n<p>Odpowiedzialno\\u015b\\u0107: Dok\\u0142adamy wszelkich stara\\u0144, aby zapewni\\u0107 rzetelno\\u015b\\u0107, dok\\u0142adno\\u015b\\u0107 i aktualno\\u015b\\u0107 informacji zamieszczonych na naszym blogu. Jednak nie ponosimy odpowiedzialno\\u015bci za ewentualne b\\u0142\\u0119dy, op\\u00f3\\u017anienia, niepe\\u0142no\\u015b\\u0107 lub szkody wynikaj\\u0105ce z korzystania z tych informacji. Korzystanie z tre\\u015bci na w\\u0142asne ryzyko.<\\/p>\\r\\n<\\/li>\\r\\n<li>\\r\\n<p>Zewn\\u0119trzne \\u0142\\u0105cza: Na naszym blogu mog\\u0105 by\\u0107 zamieszczone \\u0142\\u0105cza do innych stron internetowych. Nie ponosimy odpowiedzialno\\u015bci za tre\\u015bci lub praktyki prywatno\\u015bci tych stron. Korzystanie z tych \\u0142\\u0105czy jest dobrowolne i na w\\u0142asne ryzyko.<\\/p>\\r\\n<\\/li>\\r\\n<li>\\r\\n<p>Komunikacja: Zach\\u0119camy do udzielania komentarzy i opinii na naszym blogu. Jednak wszelkie komentarze i tre\\u015bci przes\\u0142ane przez u\\u017cytkownik\\u00f3w podlegaj\\u0105 moderacji. Zastrzegamy sobie prawo do usuni\\u0119cia, zmiany lub odrzucenia dowolnego komentarza bez podania przyczyny.<\\/p>\\r\\n<\\/li>\\r\\n<li>\\r\\n<p>Prywatno\\u015b\\u0107: Szanujemy Twoj\\u0105 prywatno\\u015b\\u0107. Informacje, kt\\u00f3re mo\\u017cemy gromadzi\\u0107 od Ciebie, s\\u0105 obj\\u0119te nasz\\u0105 Polityk\\u0105 Prywatno\\u015bci. Prosimy o zapoznanie si\\u0119 z t\\u0105 polityk\\u0105, aby dowiedzie\\u0107 si\\u0119, w jaki spos\\u00f3b gromadzimy, u\\u017cywamy i chronimy Twoje dane osobowe.<\\/p>\\r\\n<\\/li>\\r\\n<li>\\r\\n<p>Zmiany w warunkach korzystania: Zastrzegamy sobie prawo do zmiany niniejszych Warunk\\u00f3w Korzystania w dowolnym czasie. Zaktualizowane warunki b\\u0119d\\u0105 publikowane na tej stronie i b\\u0119d\\u0105 obowi\\u0105zywa\\u0107 od momentu opublikowania. Zalecamy regularne sprawdzanie tej strony w celu zapoznania si\\u0119 z ewentualnymi zmianami.<\\/p>\\r\\n<\\/li>\\r\\n<\\/ol>\\r\\n<p>Dzi\\u0119kujemy za przestrzeganie naszych Warunk\\u00f3w Korzystania. Zapraszamy do dalszego korzystania z naszego blogu z wiadomo\\u015bciami i cieszenia si\\u0119 najnowszymi<\\/p>\",\"fulltext\":\"\",\"state\":\"1\",\"catid\":10,\"created\":\"2023-06-12 16:49:24\",\"created_by\":\"588\",\"created_by_alias\":\"\",\"modified\":\"2023-06-12 16:58:05\",\"modified_by\":588,\"checked_out\":588,\"checked_out_time\":\"2023-06-12 16:58:01\",\"publish_up\":\"2023-06-12 16:49:24\",\"publish_down\":null,\"images\":\"{\\\"image_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":\\\"\\\",\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":\\\"\\\",\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":\\\"\\\",\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":2,\"ordering\":0,\"metakey\":\"\",\"metadesc\":\"\",\"access\":1,\"hits\":0,\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"note\":\"\"}', 0),
+(18, 'com_content.article.8', '', '2023-06-12 16:58:39', 588, 4404, 'b2b60b2c60077b865ddec717a13e088d4d389294', '{\"id\":\"8\",\"asset_id\":107,\"title\":\"Polityka prywatno\\u015bci\",\"alias\":\"polityka-prywatnosci\",\"introtext\":\"<p>Witamy na stronie Polityki Prywatno\\u015bci naszego blogu z wiadomo\\u015bciami. Zale\\u017cy nam na ochronie Twojej prywatno\\u015bci i chcieliby\\u015bmy przedstawi\\u0107 Ci, w jaki spos\\u00f3b gromadzimy, u\\u017cywamy i chronimy informacje, kt\\u00f3re mo\\u017cemy otrzyma\\u0107 od Ciebie podczas odwiedzania naszej strony.<\\/p>\\r\\n<p>Gromadzenie informacji Podczas odwiedzania naszego blogu, mo\\u017cemy gromadzi\\u0107 pewne informacje, takie jak adres IP, przegl\\u0105darka internetowa, typ urz\\u0105dzenia, j\\u0119zyk, strony, kt\\u00f3re odwiedzasz, oraz daty i godziny Twoich wizyt. Te informacje s\\u0105 gromadzone w celach statystycznych i analizy ruchu na stronie, aby\\u015bmy mogli lepiej zrozumie\\u0107 preferencje naszych czytelnik\\u00f3w i dostosowa\\u0107 tre\\u015bci do ich potrzeb.<\\/p>\\r\\n<p>U\\u017cywanie plik\\u00f3w cookie Nasza strona mo\\u017ce u\\u017cywa\\u0107 plik\\u00f3w cookie - ma\\u0142ych plik\\u00f3w tekstowych umieszczanych na Twoim urz\\u0105dzeniu, kt\\u00f3re pomagaj\\u0105 nam zapewni\\u0107 Ci lepsze do\\u015bwiadczenie podczas korzystania z naszego blogu. Pliki cookie umo\\u017cliwiaj\\u0105 nam zapami\\u0119tywanie Twoich preferencji, personalizacj\\u0119 tre\\u015bci oraz analiz\\u0119 sposobu, w jaki korzystasz z naszej strony. Mo\\u017cesz w ka\\u017cdej chwili skonfigurowa\\u0107 ustawienia swojej przegl\\u0105darki, aby odrzuca\\u0142a pliki cookie lub informowa\\u0142a Ci\\u0119 o ich wysy\\u0142aniu. Jednak\\u017ce, nale\\u017cy pami\\u0119ta\\u0107, \\u017ce niekt\\u00f3re funkcje naszego blogu mog\\u0105 nie dzia\\u0142a\\u0107 poprawnie bez plik\\u00f3w cookie.<\\/p>\\r\\n<p>\\u015awiadome ujawnianie informacji Jeste\\u015bmy \\u015bwiadomi znaczenia prywatno\\u015bci i dbamy o to, aby Twoje informacje osobiste nie by\\u0142y ujawniane nieuprawnionym osobom. Nie sprzedajemy, nie udost\\u0119pniamy ani nie wymieniamy Twoich danych osobowych z \\u017cadnymi stronami trzecimi bez Twojej zgody, chyba \\u017ce jest to wymagane przez prawo.<\\/p>\\r\\n<p>Zewn\\u0119trzne \\u0142\\u0105cza Na naszym blogu mo\\u017cemy zamieszcza\\u0107 \\u0142\\u0105cza do innych stron internetowych lub artyku\\u0142\\u00f3w, kt\\u00f3re uwa\\u017camy za warto\\u015bciowe dla naszych czytelnik\\u00f3w. Nale\\u017cy pami\\u0119ta\\u0107, \\u017ce nie ponosimy odpowiedzialno\\u015bci za tre\\u015bci lub praktyki prywatno\\u015bci tych stron. Zach\\u0119camy do zapoznania si\\u0119 z polityk\\u0105 prywatno\\u015bci ka\\u017cdej z tych stron przed udost\\u0119pnieniem jakichkolwiek informacji osobistych.<\\/p>\\r\\n<p>Ochrona danych Dok\\u0142adamy wszelkich stara\\u0144, aby chroni\\u0107 Twoje informacje przed nieuprawnionym dost\\u0119pem, utrat\\u0105, wykorzystaniem lub zmian\\u0105. Stosujemy odpowiednie \\u015brodki techniczne, fizyczne i organizacyjne, aby zapewni\\u0107 bezpiecze\\u0144stwo danych.<\\/p>\",\"fulltext\":\"\",\"state\":\"1\",\"catid\":10,\"created\":\"2023-06-12 16:41:39\",\"created_by\":\"588\",\"created_by_alias\":\"\",\"modified\":\"2023-06-12 16:58:39\",\"modified_by\":588,\"checked_out\":588,\"checked_out_time\":\"2023-06-12 16:58:36\",\"publish_up\":\"2023-06-12 16:41:39\",\"publish_down\":null,\"images\":\"{\\\"image_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":\\\"\\\",\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":\\\"\\\",\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":\\\"\\\",\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":2,\"ordering\":1,\"metakey\":\"\",\"metadesc\":\"\",\"access\":1,\"hits\":0,\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"note\":\"\"}', 0),
+(19, 'com_content.article.11', '', '2023-06-12 18:29:47', 588, 1592, 'b5d061a98fa138fb4ac9d84f73497f0307a3b0ff', '{\"id\":11,\"asset_id\":110,\"title\":\"Dla zalogowanych\",\"alias\":\"dla-zalogowanych\",\"introtext\":\"\",\"fulltext\":\"\",\"state\":\"1\",\"catid\":2,\"created\":\"2023-06-12 18:29:47\",\"created_by\":588,\"created_by_alias\":\"\",\"modified\":\"2023-06-12 18:29:47\",\"modified_by\":588,\"checked_out\":null,\"checked_out_time\":null,\"publish_up\":\"2023-06-12 18:29:47\",\"publish_down\":null,\"images\":\"{\\\"image_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":\\\"\\\",\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":\\\"\\\",\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":\\\"\\\",\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":\"1\",\"ordering\":null,\"metakey\":\"\",\"metadesc\":\"\",\"access\":1,\"hits\":0,\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"note\":\"\"}', 0);
+INSERT INTO `buf3w_history` (`version_id`, `item_id`, `version_note`, `save_date`, `editor_user_id`, `character_count`, `sha1_hash`, `version_data`, `keep_forever`) VALUES
+(20, 'com_content.article.12', '', '2023-06-12 18:46:19', 588, 2007, 'c0466f94e1c2a10a992d0e335a63f35d62436d75', '{\"id\":12,\"asset_id\":112,\"title\":\"Dane kontaktowe\",\"alias\":\"dane-kontaktowe\",\"introtext\":\"<p class=\\\"title\\\">Smartbees Sp. z o.o.<\\/p>\\r\\n<p>ul. K\\u0119pska 2, 45-129 Opole<br \\/><a href=\\\"mailto:kontakt@smartbees.pl\\\">kontakt@smartbees.pl<\\/a><br \\/><strong>Biuro<\\/strong>:\\u00a0<a href=\\\"tel:+48 727 518 073\\\">+48 727 518 073<\\/a><br \\/><strong>Sprzeda\\u017c<\\/strong>:\\u00a0<a href=\\\"tel:+48 727 498 073\\\">+48 727 498 073<\\/a><\\/p>\\r\\n<p>KRS: 0000739101<br \\/>NIP: 7543185898<br \\/>REGON: 380709267<\\/p>\",\"fulltext\":\"\",\"state\":\"1\",\"catid\":2,\"created\":\"2023-06-12 18:46:19\",\"created_by\":588,\"created_by_alias\":\"\",\"modified\":\"2023-06-12 18:46:19\",\"modified_by\":588,\"checked_out\":null,\"checked_out_time\":null,\"publish_up\":\"2023-06-12 18:46:19\",\"publish_down\":null,\"images\":\"{\\\"image_intro\\\":\\\"\\\",\\\"image_intro_alt\\\":\\\"\\\",\\\"float_intro\\\":\\\"\\\",\\\"image_intro_caption\\\":\\\"\\\",\\\"image_fulltext\\\":\\\"\\\",\\\"image_fulltext_alt\\\":\\\"\\\",\\\"float_fulltext\\\":\\\"\\\",\\\"image_fulltext_caption\\\":\\\"\\\"}\",\"urls\":\"{\\\"urla\\\":\\\"\\\",\\\"urlatext\\\":\\\"\\\",\\\"targeta\\\":\\\"\\\",\\\"urlb\\\":\\\"\\\",\\\"urlbtext\\\":\\\"\\\",\\\"targetb\\\":\\\"\\\",\\\"urlc\\\":\\\"\\\",\\\"urlctext\\\":\\\"\\\",\\\"targetc\\\":\\\"\\\"}\",\"attribs\":\"{\\\"article_layout\\\":\\\"\\\",\\\"show_title\\\":\\\"\\\",\\\"link_titles\\\":\\\"\\\",\\\"show_tags\\\":\\\"\\\",\\\"show_intro\\\":\\\"\\\",\\\"info_block_position\\\":\\\"\\\",\\\"info_block_show_title\\\":\\\"\\\",\\\"show_category\\\":\\\"\\\",\\\"link_category\\\":\\\"\\\",\\\"show_parent_category\\\":\\\"\\\",\\\"link_parent_category\\\":\\\"\\\",\\\"show_author\\\":\\\"\\\",\\\"link_author\\\":\\\"\\\",\\\"show_create_date\\\":\\\"\\\",\\\"show_modify_date\\\":\\\"\\\",\\\"show_publish_date\\\":\\\"\\\",\\\"show_item_navigation\\\":\\\"\\\",\\\"show_hits\\\":\\\"\\\",\\\"show_noauth\\\":\\\"\\\",\\\"urls_position\\\":\\\"\\\",\\\"alternative_readmore\\\":\\\"\\\",\\\"article_page_title\\\":\\\"\\\",\\\"show_publishing_options\\\":\\\"\\\",\\\"show_article_options\\\":\\\"\\\",\\\"show_urls_images_backend\\\":\\\"\\\",\\\"show_urls_images_frontend\\\":\\\"\\\"}\",\"version\":\"1\",\"ordering\":null,\"metakey\":\"\",\"metadesc\":\"\",\"access\":1,\"hits\":0,\"metadata\":\"{\\\"robots\\\":\\\"\\\",\\\"author\\\":\\\"\\\",\\\"rights\\\":\\\"\\\"}\",\"featured\":\"0\",\"language\":\"*\",\"note\":\"\"}', 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_languages`
+-- Table structure for table `buf3w_jnews_followup`
+--
+
+CREATE TABLE `buf3w_jnews_followup` (
+  `followup_id` smallint(10) UNSIGNED NOT NULL,
+  `list_id` smallint(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_jnews_listmailings`
+--
+
+CREATE TABLE `buf3w_jnews_listmailings` (
+  `list_id` int(10) UNSIGNED NOT NULL,
+  `mailing_id` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_jnews_lists`
+--
+
+CREATE TABLE `buf3w_jnews_lists` (
+  `id` int(10) NOT NULL,
+  `list_name` varchar(101) NOT NULL DEFAULT '',
+  `list_desc` text NOT NULL,
+  `list_type` tinyint(2) NOT NULL DEFAULT 1,
+  `sendername` varchar(64) NOT NULL DEFAULT '',
+  `senderemail` varchar(64) NOT NULL DEFAULT '',
+  `bounceadres` varchar(64) NOT NULL DEFAULT '',
+  `color` varchar(30) DEFAULT NULL,
+  `layout` text NOT NULL,
+  `template` int(9) NOT NULL DEFAULT 0,
+  `subscribemessage` text NOT NULL,
+  `unsubscribemessage` text NOT NULL,
+  `unsubscribesend` tinyint(1) NOT NULL DEFAULT 1,
+  `unsubscribenotifyadmin` tinyint(1) NOT NULL DEFAULT 1,
+  `notifyadminmsg` text NOT NULL,
+  `subnotifysend` tinyint(1) NOT NULL DEFAULT 1,
+  `subnotifymsg` text NOT NULL,
+  `auto_add` tinyint(1) NOT NULL DEFAULT 0,
+  `user_choose` tinyint(1) NOT NULL DEFAULT 0,
+  `cat_id` int(10) NOT NULL DEFAULT 0,
+  `delay_min` int(2) NOT NULL DEFAULT 0,
+  `delay_max` int(2) NOT NULL DEFAULT 7,
+  `follow_up` int(10) NOT NULL DEFAULT 0,
+  `html` tinyint(1) NOT NULL DEFAULT 1,
+  `hidden` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `createdate` int(11) NOT NULL DEFAULT 0,
+  `acc_level` varchar(200) NOT NULL DEFAULT '24,25,7,8',
+  `acc_id` varchar(200) NOT NULL DEFAULT 'all',
+  `notification` tinyint(1) NOT NULL DEFAULT 0,
+  `owner` int(11) NOT NULL DEFAULT 0,
+  `footer` tinyint(1) NOT NULL DEFAULT 1,
+  `notify_id` int(10) NOT NULL DEFAULT 0,
+  `next_date` int(11) NOT NULL DEFAULT 0,
+  `start_date` date NOT NULL,
+  `params` text DEFAULT NULL,
+  `siteend` tinyint(3) UNSIGNED NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_jnews_listssubscribers`
+--
+
+CREATE TABLE `buf3w_jnews_listssubscribers` (
+  `list_id` smallint(11) UNSIGNED NOT NULL,
+  `subscriber_id` int(11) UNSIGNED NOT NULL,
+  `subdate` int(11) UNSIGNED DEFAULT NULL,
+  `unsubdate` int(11) UNSIGNED DEFAULT 0,
+  `unsubscribe` tinyint(1) DEFAULT 0,
+  `params` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_jnews_mailings`
+--
+
+CREATE TABLE `buf3w_jnews_mailings` (
+  `id` int(11) NOT NULL,
+  `list_id` int(10) NOT NULL DEFAULT 0,
+  `mailing_type` tinyint(2) NOT NULL DEFAULT 1,
+  `template_id` smallint(11) NOT NULL DEFAULT 0,
+  `issue_nb` int(10) NOT NULL DEFAULT 0,
+  `subject` varchar(120) NOT NULL DEFAULT '',
+  `fromname` varchar(64) NOT NULL DEFAULT '',
+  `fromemail` varchar(64) NOT NULL DEFAULT '',
+  `frombounce` varchar(64) NOT NULL DEFAULT '',
+  `htmlcontent` longtext NOT NULL,
+  `textonly` longtext NOT NULL,
+  `attachments` text NOT NULL,
+  `images` text NOT NULL,
+  `send_date` int(11) NOT NULL DEFAULT 0,
+  `delay` int(10) NOT NULL DEFAULT 0,
+  `visible` tinyint(1) NOT NULL DEFAULT 1,
+  `html` tinyint(1) NOT NULL DEFAULT 1,
+  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `createdate` int(11) NOT NULL DEFAULT 0,
+  `acc_level` int(2) NOT NULL DEFAULT 0,
+  `author_id` int(11) NOT NULL DEFAULT 0,
+  `follow_up` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `cat_id` varchar(250) NOT NULL DEFAULT '0:0',
+  `delay_min` int(2) NOT NULL DEFAULT 0,
+  `delay_max` int(2) NOT NULL DEFAULT 7,
+  `notify_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
+  `next_date` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `start_date` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `smart_date` tinyint(3) UNSIGNED NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_jnews_queue`
+--
+
+CREATE TABLE `buf3w_jnews_queue` (
+  `qid` int(11) NOT NULL,
+  `type` tinyint(2) NOT NULL DEFAULT 0,
+  `issue_nb` int(10) NOT NULL DEFAULT 0,
+  `subscriber_id` int(11) NOT NULL DEFAULT 0,
+  `mailing_id` int(11) NOT NULL DEFAULT 0,
+  `priority` tinyint(3) UNSIGNED DEFAULT 3,
+  `attempt` tinyint(3) UNSIGNED NOT NULL DEFAULT 0,
+  `suspend` tinyint(1) NOT NULL DEFAULT 0,
+  `send_date` int(11) UNSIGNED DEFAULT NULL,
+  `delay` int(10) NOT NULL DEFAULT 0,
+  `acc_level` int(2) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `params` text DEFAULT NULL,
+  `block` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_jnews_stats_details`
+--
+
+CREATE TABLE `buf3w_jnews_stats_details` (
+  `id` int(11) NOT NULL,
+  `mailing_id` int(11) NOT NULL DEFAULT 0,
+  `subscriber_id` int(11) NOT NULL DEFAULT 0,
+  `sentdate` int(11) UNSIGNED DEFAULT NULL,
+  `html` tinyint(1) NOT NULL DEFAULT 0,
+  `read` tinyint(1) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_jnews_stats_global`
+--
+
+CREATE TABLE `buf3w_jnews_stats_global` (
+  `mailing_id` int(11) NOT NULL DEFAULT 0,
+  `sentdate` int(11) UNSIGNED DEFAULT NULL,
+  `html_sent` int(11) NOT NULL DEFAULT 0,
+  `text_sent` int(11) NOT NULL DEFAULT 0,
+  `html_read` int(11) NOT NULL DEFAULT 0,
+  `failed` int(11) NOT NULL DEFAULT 0,
+  `sent` int(11) NOT NULL DEFAULT 0,
+  `pending` int(11) NOT NULL DEFAULT 0,
+  `bounces` int(11) NOT NULL DEFAULT 0,
+  `unsub` smallint(6) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_jnews_subscribers`
+--
+
+CREATE TABLE `buf3w_jnews_subscribers` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL DEFAULT 0,
+  `name` varchar(64) NOT NULL DEFAULT '',
+  `email` varchar(100) NOT NULL DEFAULT '',
+  `receive_html` tinyint(1) NOT NULL DEFAULT 1,
+  `confirmed` tinyint(1) NOT NULL DEFAULT 0,
+  `blacklist` tinyint(1) NOT NULL DEFAULT 0,
+  `timezone` time NOT NULL DEFAULT '00:00:00',
+  `language_iso` varchar(10) NOT NULL DEFAULT 'eng',
+  `ip` varchar(100) DEFAULT NULL,
+  `subscribe_date` int(11) NOT NULL DEFAULT 0,
+  `params` text DEFAULT NULL,
+  `column1` varchar(255) NOT NULL,
+  `column2` varchar(255) NOT NULL,
+  `column3` varchar(255) NOT NULL,
+  `column4` varchar(255) NOT NULL,
+  `column5` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `buf3w_jnews_subscribers`
+--
+
+INSERT INTO `buf3w_jnews_subscribers` (`id`, `user_id`, `name`, `email`, `receive_html`, `confirmed`, `blacklist`, `timezone`, `language_iso`, `ip`, `subscribe_date`, `params`, `column1`, `column2`, `column3`, `column4`, `column5`) VALUES
+(1, 588, 'Admin', 'example@example.example', 1, 1, 0, '00:00:00', 'eng', NULL, 1686023527, NULL, '', '', '', '', ''),
+(2, 589, 'Gość', 'example@example.com', 1, 1, 0, '00:00:00', 'eng', NULL, 1686586876, NULL, '', '', '', '', ''),
+(3, 590, 'Autor', 'example1@example.com', 1, 1, 0, '00:00:00', 'eng', NULL, 1686586960, NULL, '', '', '', '', ''),
+(4, 591, 'Edytor', 'example2@example.com', 1, 1, 0, '00:00:00', 'eng', NULL, 1686587166, NULL, '', '', '', '', ''),
+(5, 592, 'Publicysta', 'example3@example.com', 1, 1, 0, '00:00:00', 'eng', NULL, 1686587287, NULL, '', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_jnews_templates`
+--
+
+CREATE TABLE `buf3w_jnews_templates` (
+  `template_id` smallint(11) UNSIGNED NOT NULL,
+  `name` varchar(250) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `body` longtext DEFAULT NULL,
+  `altbody` longtext DEFAULT NULL,
+  `created` int(10) UNSIGNED DEFAULT NULL,
+  `published` tinyint(4) NOT NULL DEFAULT 1,
+  `premium` tinyint(4) NOT NULL DEFAULT 0,
+  `ordering` smallint(10) UNSIGNED NOT NULL DEFAULT 99,
+  `namekey` varchar(50) NOT NULL,
+  `styles` text DEFAULT NULL,
+  `thumbnail` text NOT NULL,
+  `availability` tinyint(1) NOT NULL DEFAULT 1,
+  `csstyle` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_jnews_xonfig`
+--
+
+CREATE TABLE `buf3w_jnews_xonfig` (
+  `akey` varchar(32) NOT NULL DEFAULT '',
+  `text` varchar(254) NOT NULL DEFAULT '',
+  `value` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `buf3w_jnews_xonfig`
+--
+
+INSERT INTO `buf3w_jnews_xonfig` (`akey`, `text`, `value`) VALUES
+('activelist', '1', 0),
+('addEmailRedLink', '0', 0),
+('admin_debug', '0', 0),
+('allow_fe_autoresponder', '0', 0),
+('allow_sn', '0', 0),
+('allow_unregistered', '1', 0),
+('ar_prior', '1', 0),
+('archive_link', 'standard', 0),
+('arv_cat', '', 0),
+('arv_sec', '', 0),
+('captcha_code', 'EAbMcN2KEyd', 0),
+('cb_checkLists', '1', 0),
+('cb_defaultHTML', '1', 0),
+('cb_integration', '0', 0),
+('cb_intro', '', 0),
+('cb_listIds', '0', 0),
+('cb_plugin', '1', 0),
+('cb_pluginInstalled', '0', 0),
+('cb_showHTML', '1', 0),
+('cb_showname', '1', 0),
+('classes0', '', 0),
+('classes1', 'newsletter', 0),
+('classes2', 'jNews_Autoresponder', 0),
+('classes7', 'jNews_Autonews', 0),
+('clean_stats', '90', 0),
+('column1_name', 'Column 1', 0),
+('column2_name', 'Column 2', 0),
+('column3_name', 'Column 3', 0),
+('column4_name', 'Column 4', 0),
+('column5_name', 'Column 5', 0),
+('component', 'jNews', 0),
+('confirm_html', '1', 0),
+('create_newsubsrows', '5', 0),
+('cron_max_emails', '60', 0),
+('cron_max_freq', '10', 0),
+('cron_pass', 'Kgs3ny21iHx', 0),
+('cron_setup', '0', 0),
+('date_type', '1', 0),
+('date_update', '1686599502', 0),
+('disabletooltip', '0', 0),
+('display_trace', '1', 0),
+('dkim_activated', '0', 0),
+('dkimpassphrase', '', 0),
+('dkimprivate_key_path', '', 0),
+('effects', 'normal', 0),
+('emails_between_pauses', '65', 0),
+('embed_images', '0', 0),
+('enable_jsub', '0', 0),
+('enable_statistics', '1', 0),
+('firstmailing', '0', 0),
+('forced_html', '0', 0),
+('frequency', '0', 0),
+('fullcheck', '0', 0),
+('homesite', 'https://joobi.org', 0),
+('integration', '0', 0),
+('itemidAca', '999', 0),
+('j_cron', '2', 0),
+('last_cron', '', 0),
+('last_sub_update', '', 0),
+('lastdate', '0', 0),
+('lasttime_cron_triggerred', '0', 0),
+('level', '1', 0),
+('license', '', 0),
+('list_creatorfe', '24,25,7,8', 0),
+('listHTMLeditor', '1', 0),
+('listlogo0', 'subscribers.png', 0),
+('listlogo1', 'newsletter.png', 0),
+('listname0', '', 0),
+('listname1', '_JNEWS_NEWSLETTER', 0),
+('listnames0', 'All mailings', 0),
+('listnames1', '_JNEWS_MENU_NEWSLETTERS', 0),
+('listshow0', '1', 0),
+('listshow1', '1', 0),
+('listype0', '1', 0),
+('listype1', '1', 0),
+('mail_encoding', '0', 0),
+('mail_format', '0', 0),
+('maintenance', '', 0),
+('maintenance_clear', '24', 0),
+('maintenance_date', '', 0),
+('minisendmail', '0', 0),
+('mod_pub', '0', 0),
+('nb_days', '7', 0),
+('nblist', '9', 0),
+('news1', '0', 0),
+('news2', '0', 0),
+('news3', '0', 0),
+('next_autonews', '', 0),
+('next_cron', '1686513102', 0),
+('nextdate', '0', 0),
+('pause_time', '20', 0),
+('priord_list', '0', 0),
+('priord_subs', '0', 0),
+('queue_status', '1', 0),
+('queuedate', '', 0),
+('redirectconfirm', '', 0),
+('report_error', '1', 0),
+('report_site', 'https://joobi.org', 0),
+('require_confirmation', '0', 0),
+('save_log', '0', 0),
+('save_log_file', '/administrator/components/com_jnews/com_jnews.log', 0),
+('save_log_simple', '0', 0),
+('sched_prior', '5', 0),
+('script_timeout', '0', 0),
+('send_auto_log', '0', 0),
+('send_data', '1', 0),
+('send_email', '1', 0),
+('send_error', '1', 0),
+('send_log', '1', 0),
+('send_log_address', '@joobi.org', 0),
+('send_log_closed', '1', 0),
+('send_log_email', '', 0),
+('send_log_name', 'jNews Mailing Report', 0),
+('send_log_simple', '0', 0),
+('send_unsubcribe', '1', 0),
+('show_archive', '1', 0),
+('show_author', '0', 0),
+('show_column1', '0', 0),
+('show_column2', '0', 0),
+('show_column3', '0', 0),
+('show_column4', '0', 0),
+('show_column5', '0', 0),
+('show_footer', '1', 0),
+('show_guide', '1', 0),
+('show_jcalpro', '0', 0),
+('show_jlinks', '0', 0),
+('show_lists', '1', 0),
+('show_login', '1', 0),
+('show_logout', '1', 0),
+('show_signature', '1', 0),
+('show_sub_email', '0', 0),
+('show_subscriptionlink', '1', 0),
+('show_tips', '1', 0),
+('show_unsubscribe', '0', 0),
+('show_unsubscribe_all', '1', 0),
+('show_unsubscribelink', '1', 0),
+('showtag', '0', 0),
+('sm_prior', '5', 0),
+('smart_queue', '0', 0),
+('smtp_port', '25', 0),
+('sntag_norequired', '1', 0),
+('statistics_per_subscriber', '1', 0),
+('sub_info_fields', '0', 0),
+('subs_redirect_url', '', 0),
+('subscribe_notification', '', 0),
+('subscription_notify', '0', 0),
+('time_zone', '0', 0),
+('token', '', 0),
+('type', 'Core', 0),
+('unsubscribe_notification', '', 0),
+('update_avail', '0', 0),
+('update_message', '', 0),
+('update_notification', '1', 0),
+('update_url', 'https://joobi.org/update/', 0),
+('upload_url', '/media/com_jnews/upload', 0),
+('url_pass', 'I23tLler', 0),
+('use_backendview', '0', 0),
+('use_masterlists', '1', 0),
+('use_sef', '0', 0),
+('use_tags', '1', 0),
+('version', '10.4.1', 0),
+('wait_for_user', '0', 0),
+('word_wrap', '0', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_languages`
 --
 
 CREATE TABLE `buf3w_languages` (
   `lang_id` int(10) UNSIGNED NOT NULL,
   `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `lang_code` char(7) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
-  `title` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title_native` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sef` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(512) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `metakey` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `metadesc` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sitename` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `title` varchar(50) NOT NULL,
+  `title_native` varchar(50) NOT NULL,
+  `sef` varchar(50) NOT NULL,
+  `image` varchar(50) NOT NULL,
+  `description` varchar(512) NOT NULL,
+  `metakey` text DEFAULT NULL,
+  `metadesc` text NOT NULL,
+  `sitename` varchar(1024) NOT NULL DEFAULT '',
   `published` int(11) NOT NULL DEFAULT 0,
   `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `ordering` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_languages`
+-- Dumping data for table `buf3w_languages`
 --
 
 INSERT INTO `buf3w_languages` (`lang_id`, `asset_id`, `lang_code`, `title`, `title_native`, `sef`, `image`, `description`, `metakey`, `metadesc`, `sitename`, `published`, `access`, `ordering`) VALUES
@@ -4253,22 +6980,22 @@ INSERT INTO `buf3w_languages` (`lang_id`, `asset_id`, `lang_code`, `title`, `tit
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_mail_templates`
+-- Table structure for table `buf3w_mail_templates`
 --
 
 CREATE TABLE `buf3w_mail_templates` (
-  `template_id` varchar(127) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `extension` varchar(127) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `subject` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `body` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `htmlbody` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `attachments` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `params` text COLLATE utf8mb4_unicode_ci NOT NULL
+  `template_id` varchar(127) NOT NULL DEFAULT '',
+  `extension` varchar(127) NOT NULL DEFAULT '',
+  `language` char(7) NOT NULL DEFAULT '',
+  `subject` varchar(255) NOT NULL DEFAULT '',
+  `body` text NOT NULL,
+  `htmlbody` mediumtext NOT NULL,
+  `attachments` text NOT NULL,
+  `params` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_mail_templates`
+-- Dumping data for table `buf3w_mail_templates`
 --
 
 INSERT INTO `buf3w_mail_templates` (`template_id`, `extension`, `language`, `subject`, `body`, `htmlbody`, `attachments`, `params`) VALUES
@@ -4306,18 +7033,18 @@ INSERT INTO `buf3w_mail_templates` (`template_id`, `extension`, `language`, `sub
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_menu`
+-- Table structure for table `buf3w_menu`
 --
 
 CREATE TABLE `buf3w_menu` (
   `id` int(11) NOT NULL,
-  `menutype` varchar(24) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The type of menu this item belongs to. FK to #__menu_types.menutype',
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The display title of the menu item.',
+  `menutype` varchar(24) NOT NULL COMMENT 'The type of menu this item belongs to. FK to #__menu_types.menutype',
+  `title` varchar(255) NOT NULL COMMENT 'The display title of the menu item.',
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL COMMENT 'The SEF alias of the menu item.',
-  `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `path` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The computed path of the menu item based on the alias field.',
-  `link` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The actually link the menu item refers to.',
-  `type` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The type of link: Component, URL, Alias, Separator',
+  `note` varchar(255) NOT NULL DEFAULT '',
+  `path` varchar(1024) NOT NULL COMMENT 'The computed path of the menu item based on the alias field.',
+  `link` varchar(1024) NOT NULL COMMENT 'The actually link the menu item refers to.',
+  `type` varchar(16) NOT NULL COMMENT 'The type of link: Component, URL, Alias, Separator',
   `published` tinyint(4) NOT NULL DEFAULT 0 COMMENT 'The published state of the menu link.',
   `parent_id` int(10) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'The parent menu item in the menu tree.',
   `level` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'The relative level in the tree.',
@@ -4326,24 +7053,24 @@ CREATE TABLE `buf3w_menu` (
   `checked_out_time` datetime DEFAULT NULL COMMENT 'The time the menu item was checked out.',
   `browserNav` tinyint(4) NOT NULL DEFAULT 0 COMMENT 'The click behaviour of the link.',
   `access` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'The access level required to view the menu item.',
-  `img` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The image of the menu item.',
+  `img` varchar(255) NOT NULL COMMENT 'The image of the menu item.',
   `template_style_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `params` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'JSON encoded data for the menu item.',
+  `params` text NOT NULL COMMENT 'JSON encoded data for the menu item.',
   `lft` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set lft.',
   `rgt` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set rgt.',
   `home` tinyint(3) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Indicates if this menu item is the home or default page.',
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `language` char(7) NOT NULL DEFAULT '',
   `client_id` tinyint(4) NOT NULL DEFAULT 0,
   `publish_up` datetime DEFAULT NULL,
   `publish_down` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_menu`
+-- Dumping data for table `buf3w_menu`
 --
 
 INSERT INTO `buf3w_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `link`, `type`, `published`, `parent_id`, `level`, `component_id`, `checked_out`, `checked_out_time`, `browserNav`, `access`, `img`, `template_style_id`, `params`, `lft`, `rgt`, `home`, `language`, `client_id`, `publish_up`, `publish_down`) VALUES
-(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, NULL, NULL, 0, 0, '', 0, '', 0, 43, 0, '*', 0, NULL, NULL),
+(1, '', 'Menu_Item_Root', 'root', '', '', '', '', 1, 0, 0, 0, NULL, NULL, 0, 0, '', 0, '', 0, 123, 0, '*', 0, NULL, NULL),
 (2, 'main', 'com_banners', 'Banners', '', 'Banners', 'index.php?option=com_banners', 'component', 1, 1, 1, 3, NULL, NULL, 0, 0, 'class:bookmark', 0, '', 1, 10, 0, '*', 1, NULL, NULL),
 (3, 'main', 'com_banners', 'Banners', '', 'Banners/Banners', 'index.php?option=com_banners&view=banners', 'component', 1, 2, 2, 3, NULL, NULL, 0, 0, 'class:banners', 0, '', 2, 3, 0, '*', 1, NULL, NULL),
 (4, 'main', 'com_banners_categories', 'Categories', '', 'Banners/Categories', 'index.php?option=com_categories&view=categories&extension=com_banners', 'component', 1, 2, 2, 5, NULL, NULL, 0, 0, 'class:banners-cat', 0, '', 4, 5, 0, '*', 1, NULL, NULL),
@@ -4358,31 +7085,71 @@ INSERT INTO `buf3w_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 (13, 'main', 'com_finder', 'Smart Search', '', 'Smart Search', 'index.php?option=com_finder', 'component', 1, 1, 1, 23, NULL, NULL, 0, 0, 'class:search-plus', 0, '', 29, 38, 0, '*', 1, NULL, NULL),
 (14, 'main', 'com_tags', 'Tags', '', 'Tags', 'index.php?option=com_tags&view=tags', 'component', 1, 1, 1, 25, NULL, NULL, 0, 1, 'class:tags', 0, '', 39, 40, 0, '', 1, NULL, NULL),
 (15, 'main', 'com_associations', 'Multilingual Associations', '', 'Multilingual Associations', 'index.php?option=com_associations&view=associations', 'component', 1, 1, 1, 30, NULL, NULL, 0, 0, 'class:language', 0, '', 21, 22, 0, '*', 1, NULL, NULL),
-(16, 'main', 'mod_menu_fields', 'Contact Custom Fields', '', 'contact/Custom Fields', 'index.php?option=com_fields&context=com_contact.contact', 'component', 1, 7, 2, 29, NULL, NULL, 0, 0, 'class:messages-add', 0, '', 16, 17, 0, '*', 1, NULL, NULL),
-(17, 'main', 'mod_menu_fields_group', 'Contact Custom Fields Group', '', 'contact/Custom Fields Group', 'index.php?option=com_fields&view=groups&context=com_contact.contact', 'component', 1, 7, 2, 29, NULL, NULL, 0, 0, 'class:messages-add', 0, '', 18, 19, 0, '*', 1, NULL, NULL),
-(18, 'main', 'com_finder_index', 'Smart-Search-Index', '', 'Smart Search/Index', 'index.php?option=com_finder&view=index', 'component', 1, 13, 2, 23, NULL, NULL, 0, 0, 'class:finder', 0, '', 30, 31, 0, '*', 1, NULL, NULL),
-(19, 'main', 'com_finder_maps', 'Smart-Search-Maps', '', 'Smart Search/Maps', 'index.php?option=com_finder&view=maps', 'component', 1, 13, 2, 23, NULL, NULL, 0, 0, 'class:finder-maps', 0, '', 32, 33, 0, '*', 1, NULL, NULL),
-(20, 'main', 'com_finder_filters', 'Smart-Search-Filters', '', 'Smart Search/Filters', 'index.php?option=com_finder&view=filters', 'component', 1, 13, 2, 23, NULL, NULL, 0, 0, 'class:finder-filters', 0, '', 34, 35, 0, '*', 1, NULL, NULL),
-(21, 'main', 'com_finder_searches', 'Smart-Search-Searches', '', 'Smart Search/Searches', 'index.php?option=com_finder&view=searches', 'component', 1, 13, 2, 23, NULL, NULL, 0, 0, 'class:finder-searches', 0, '', 36, 37, 0, '*', 1, NULL, NULL),
-(101, 'mainmenu', 'Home', 'home', '', 'home', 'index.php?option=com_content&view=featured', 'component', 1, 1, 1, 19, NULL, NULL, 0, 1, '', 0, '{\"featured_categories\":[\"\"],\"layout_type\":\"blog\",\"blog_class_leading\":\"\",\"blog_class\":\"\",\"num_leading_articles\":\"1\",\"num_intro_articles\":\"3\",\"num_links\":\"0\",\"link_intro_image\":\"\",\"orderby_pri\":\"\",\"orderby_sec\":\"front\",\"order_date\":\"\",\"show_pagination\":\"2\",\"show_pagination_results\":\"1\",\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_readmore\":\"\",\"show_readmore_title\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"show_feed_link\":\"1\",\"feed_summary\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"1\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"robots\":\"\"}', 41, 42, 1, '*', 0, NULL, NULL);
+(16, 'main', 'mod_menu_fields', 'Contact Custom Fields', '', 'Contacts/Contact Custom Fields', 'index.php?option=com_fields&context=com_contact.contact', 'component', 1, 7, 2, 29, NULL, NULL, 0, 0, 'class:messages-add', 0, '', 16, 17, 0, '*', 1, NULL, NULL),
+(17, 'main', 'mod_menu_fields_group', 'Contact Custom Fields Group', '', 'Contacts/Contact Custom Fields Group', 'index.php?option=com_fields&view=groups&context=com_contact.contact', 'component', 1, 7, 2, 29, NULL, NULL, 0, 0, 'class:messages-add', 0, '', 18, 19, 0, '*', 1, NULL, NULL),
+(18, 'main', 'com_finder_index', 'Smart-Search-Index', '', 'Smart Search/Smart-Search-Index', 'index.php?option=com_finder&view=index', 'component', 1, 13, 2, 23, NULL, NULL, 0, 0, 'class:finder', 0, '', 30, 31, 0, '*', 1, NULL, NULL),
+(19, 'main', 'com_finder_maps', 'Smart-Search-Maps', '', 'Smart Search/Smart-Search-Maps', 'index.php?option=com_finder&view=maps', 'component', 1, 13, 2, 23, NULL, NULL, 0, 0, 'class:finder-maps', 0, '', 32, 33, 0, '*', 1, NULL, NULL),
+(20, 'main', 'com_finder_filters', 'Smart-Search-Filters', '', 'Smart Search/Smart-Search-Filters', 'index.php?option=com_finder&view=filters', 'component', 1, 13, 2, 23, NULL, NULL, 0, 0, 'class:finder-filters', 0, '', 34, 35, 0, '*', 1, NULL, NULL),
+(21, 'main', 'com_finder_searches', 'Smart-Search-Searches', '', 'Smart Search/Smart-Search-Searches', 'index.php?option=com_finder&view=searches', 'component', 1, 13, 2, 23, NULL, NULL, 0, 0, 'class:finder-searches', 0, '', 36, 37, 0, '*', 1, NULL, NULL),
+(101, 'mainmenu', 'Home', 'home', '', 'home', 'index.php?option=com_content&view=featured', 'component', 1, 1, 1, 19, 588, '2023-06-12 16:18:42', 0, 1, '', 0, '{\"featured_categories\":[\"\"],\"layout_type\":\"blog\",\"blog_class_leading\":\"\",\"blog_class\":\"\",\"num_leading_articles\":\"1\",\"num_intro_articles\":\"3\",\"num_links\":\"0\",\"link_intro_image\":\"\",\"orderby_pri\":\"\",\"orderby_sec\":\"front\",\"order_date\":\"\",\"show_pagination\":\"2\",\"show_pagination_results\":\"1\",\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_associations\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_vote\":\"\",\"show_readmore\":\"\",\"show_readmore_title\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"show_feed_link\":\"1\",\"feed_summary\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"1\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"robots\":\"\"}', 41, 56, 1, '*', 0, NULL, NULL),
+(102, 'mainmenu', 'O nas', 'o-nas', '', 'home/o-nas', 'index.php?option=com_content&view=article&id=7', 'component', 1, 101, 2, 19, NULL, NULL, 0, 1, ' ', 0, '{\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_icon_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"robots\":\"\"}', 42, 43, 0, '*', 0, NULL, NULL),
+(103, 'mainmenu', 'Polityka prywatności', 'polityka-prywatnosci', '', 'home/polityka-prywatnosci', 'index.php?option=com_content&view=article&id=8', 'component', 1, 101, 2, 19, NULL, NULL, 0, 1, ' ', 0, '{\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_icon_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"robots\":\"\"}', 44, 45, 0, '*', 0, NULL, NULL),
+(104, 'mainmenu', 'Warunki korzystania', 'warunki-korzystania', '', 'home/warunki-korzystania', 'index.php?option=com_content&view=article&id=9', 'component', 1, 101, 2, 19, NULL, NULL, 0, 1, ' ', 0, '{\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_icon_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"robots\":\"\"}', 46, 47, 0, '*', 0, NULL, NULL),
+(105, 'mainmenu', 'Często zadawane pytania', 'czesto-zadawane-pytania', '', 'home/czesto-zadawane-pytania', 'index.php?option=com_content&view=article&id=10', 'component', 1, 101, 2, 19, NULL, NULL, 0, 1, ' ', 0, '{\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_icon_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"robots\":\"\"}', 48, 49, 0, '*', 0, NULL, NULL),
+(106, 'mainmenu', 'Strona dostępna tylko dla zalogowanych', 'strona-dostepna-tylko-dla-zalogowanych', '', 'home/strona-dostepna-tylko-dla-zalogowanych', 'index.php?option=com_content&view=article&id=11', 'component', 1, 101, 2, 19, NULL, NULL, 0, 2, ' ', 0, '{\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_icon_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"robots\":\"\"}', 50, 51, 0, '*', 0, NULL, NULL),
+(107, 'mainmenu', 'Dane kontaktowe', 'dane-kontaktowe', '', 'home/dane-kontaktowe', 'index.php?option=com_content&view=article&id=12', 'component', 1, 101, 2, 19, NULL, NULL, 0, 1, ' ', 0, '{\"show_title\":\"\",\"link_titles\":\"\",\"show_intro\":\"\",\"info_block_position\":\"\",\"info_block_show_title\":\"\",\"show_category\":\"\",\"link_category\":\"\",\"show_parent_category\":\"\",\"link_parent_category\":\"\",\"show_author\":\"\",\"link_author\":\"\",\"show_create_date\":\"\",\"show_modify_date\":\"\",\"show_publish_date\":\"\",\"show_item_navigation\":\"\",\"show_hits\":\"\",\"show_tags\":\"\",\"show_noauth\":\"\",\"urls_position\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_icon_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"robots\":\"\"}', 52, 53, 0, '*', 0, NULL, NULL),
+(108, 'main', 'COM_COMMENT', 'com-comment', '', 'com-comment', 'index.php?option=com_comment', 'component', 1, 1, 1, 232, NULL, NULL, 0, 1, '../media/com_comment/backend/images/ccomment-logo.png', 0, '{}', 57, 70, 0, '', 1, NULL, NULL),
+(109, 'main', 'COM_COMMENT_DASHBOARD', 'com-comment-dashboard', '', 'com-comment/com-comment-dashboard', 'index.php?option=com_comment&view=dashboard', 'component', 1, 108, 2, 232, NULL, NULL, 0, 1, 'class:component', 0, '{}', 58, 59, 0, '', 1, NULL, NULL),
+(110, 'main', 'COM_COMMENT_MANAGE_COMMENTS', 'com-comment-manage-comments', '', 'com-comment/com-comment-manage-comments', 'index.php?option=com_comment&view=comments', 'component', 1, 108, 2, 232, NULL, NULL, 0, 1, 'class:component', 0, '{}', 60, 61, 0, '', 1, NULL, NULL),
+(111, 'main', 'COM_COMMENT_EMAIL_QUEUE', 'com-comment-email-queue', '', 'com-comment/com-comment-email-queue', 'index.php?option=com_comment&view=emailqueues', 'component', 1, 108, 2, 232, NULL, NULL, 0, 1, 'class:component', 0, '{}', 62, 63, 0, '', 1, NULL, NULL),
+(112, 'main', 'COM_COMMENT_SETTINGS', 'com-comment-settings', '', 'com-comment/com-comment-settings', 'index.php?option=com_comment&view=settings', 'component', 1, 108, 2, 232, NULL, NULL, 0, 1, 'class:component', 0, '{}', 64, 65, 0, '', 1, NULL, NULL),
+(113, 'main', 'COM_COMMENT_IMPORT', 'com-comment-import', '', 'com-comment/com-comment-import', 'index.php?option=com_comment&view=import', 'component', 1, 108, 2, 232, NULL, NULL, 0, 1, 'class:component', 0, '{}', 66, 67, 0, '', 1, NULL, NULL),
+(114, 'main', 'COM_COMMENT_CUSTOM_FIELDS', 'com-comment-custom-fields', '', 'com-comment/com-comment-custom-fields', 'index.php?option=com_comment&view=customfields', 'component', 1, 108, 2, 232, NULL, NULL, 0, 1, 'class:component', 0, '{}', 68, 69, 0, '', 1, NULL, NULL),
+(115, 'main', 'COM_PHOCADOWNLOAD', 'com-phocadownload', '', 'com-phocadownload', 'index.php?option=com_phocadownload', 'component', 1, 1, 1, 237, NULL, NULL, 0, 1, 'media/com_phocadownload/images/administrator/icon-16-pdl-menu.png', 0, '{}', 71, 96, 0, '', 1, NULL, NULL),
+(116, 'main', 'COM_PHOCADOWNLOAD_CONTROLPANEL', 'com-phocadownload-controlpanel', '', 'com-phocadownload/com-phocadownload-controlpanel', 'index.php?option=com_phocadownload', 'component', 1, 115, 2, 237, NULL, NULL, 0, 1, 'media/com_phocadownload/images/administrator/icon-16-pdl-control-panel.png', 0, '{}', 72, 73, 0, '', 1, NULL, NULL),
+(117, 'main', 'COM_PHOCADOWNLOAD_FILES', 'com-phocadownload-files', '', 'com-phocadownload/com-phocadownload-files', 'index.php?option=com_phocadownload&view=phocadownloadfiles', 'component', 1, 115, 2, 237, NULL, NULL, 0, 1, 'media/com_phocadownload/images/administrator/icon-16-pdl-menu-files.png', 0, '{}', 74, 75, 0, '', 1, NULL, NULL),
+(118, 'main', 'COM_PHOCADOWNLOAD_CATEGORIES', 'com-phocadownload-categories', '', 'com-phocadownload/com-phocadownload-categories', 'index.php?option=com_phocadownload&view=phocadownloadcats', 'component', 1, 115, 2, 237, NULL, NULL, 0, 1, 'media/com_phocadownload/images/administrator/icon-16-pdl-menu-category.png', 0, '{}', 76, 77, 0, '', 1, NULL, NULL),
+(119, 'main', 'COM_PHOCADOWNLOAD_LICENSES', 'com-phocadownload-licenses', '', 'com-phocadownload/com-phocadownload-licenses', 'index.php?option=com_phocadownload&view=phocadownloadlics', 'component', 1, 115, 2, 237, NULL, NULL, 0, 1, 'media/com_phocadownload/images/administrator/icon-16-pdl-menu-lic.png', 0, '{}', 78, 79, 0, '', 1, NULL, NULL),
+(120, 'main', 'COM_PHOCADOWNLOAD_STATISTICS', 'com-phocadownload-statistics', '', 'com-phocadownload/com-phocadownload-statistics', 'index.php?option=com_phocadownload&view=phocadownloadstat', 'component', 1, 115, 2, 237, NULL, NULL, 0, 1, 'media/com_phocadownload/images/administrator/icon-16-pdl-menu-stat.png', 0, '{}', 80, 81, 0, '', 1, NULL, NULL),
+(121, 'main', 'COM_PHOCADOWNLOAD_DOWNLOADS', 'com-phocadownload-downloads', '', 'com-phocadownload/com-phocadownload-downloads', 'index.php?option=com_phocadownload&view=phocadownloaddownloads', 'component', 1, 115, 2, 237, NULL, NULL, 0, 1, 'media/com_phocadownload/images/administrator/icon-16-pdl-menu-downloads.png', 0, '{}', 82, 83, 0, '', 1, NULL, NULL),
+(122, 'main', 'COM_PHOCADOWNLOAD_UPLOADS', 'com-phocadownload-uploads', '', 'com-phocadownload/com-phocadownload-uploads', 'index.php?option=com_phocadownload&view=phocadownloaduploads', 'component', 1, 115, 2, 237, NULL, NULL, 0, 1, 'media/com_phocadownload/images/administrator/icon-16-pdl-menu-uploads.png', 0, '{}', 84, 85, 0, '', 1, NULL, NULL),
+(123, 'main', 'COM_PHOCADOWNLOAD_FILE_RATING', 'com-phocadownload-file-rating', '', 'com-phocadownload/com-phocadownload-file-rating', 'index.php?option=com_phocadownload&view=phocadownloadrafile', 'component', 1, 115, 2, 237, NULL, NULL, 0, 1, 'media/com_phocadownload/images/administrator/icon-16-pdl-menu-vote-file.png', 0, '{}', 86, 87, 0, '', 1, NULL, NULL),
+(124, 'main', 'COM_PHOCADOWNLOAD_TAGS', 'com-phocadownload-tags', '', 'com-phocadownload/com-phocadownload-tags', 'index.php?option=com_phocadownload&view=phocadownloadtags', 'component', 1, 115, 2, 237, NULL, NULL, 0, 1, 'media/com_phocadownload/images/administrator/icon-16-pdl-menu-tags.png', 0, '{}', 88, 89, 0, '', 1, NULL, NULL),
+(125, 'main', 'COM_PHOCADOWNLOAD_STYLES', 'com-phocadownload-styles', '', 'com-phocadownload/com-phocadownload-styles', 'index.php?option=com_phocadownload&view=phocadownloadstyles', 'component', 1, 115, 2, 237, NULL, NULL, 0, 1, 'media/com_phocadownload/images/administrator/icon-16-pdl-menu-style.png', 0, '{}', 90, 91, 0, '', 1, NULL, NULL),
+(126, 'main', 'COM_PHOCADOWNLOAD_LOGGING', 'com-phocadownload-logging', '', 'com-phocadownload/com-phocadownload-logging', 'index.php?option=com_phocadownload&view=phocadownloadlogs', 'component', 1, 115, 2, 237, NULL, NULL, 0, 1, 'media/com_phocadownload/images/administrator/icon-16-pdl-menu-logs.png', 0, '{}', 92, 93, 0, '', 1, NULL, NULL),
+(127, 'main', 'COM_PHOCADOWNLOAD_INFO', 'com-phocadownload-info', '', 'com-phocadownload/com-phocadownload-info', 'index.php?option=com_phocadownload&view=phocadownloadinfo', 'component', 1, 115, 2, 237, NULL, NULL, 0, 1, 'media/com_phocadownload/images/administrator/icon-16-pdl-menu-info.png', 0, '{}', 94, 95, 0, '', 1, NULL, NULL),
+(128, 'mainmenu', 'Pobierz pliki', 'pobierz-pliki', '', 'home/pobierz-pliki', 'index.php?option=com_phocadownload&view=category&id=1', 'component', 1, 101, 2, 237, NULL, NULL, 0, 1, ' ', 0, '{\"show_pagination\":\"1\",\"show_pagination_limit\":\"1\",\"show_ordering_files\":\"1\",\"file_ordering\":\"\",\"menu-anchor_title\":\"\",\"menu-anchor_css\":\"\",\"menu_icon_css\":\"\",\"menu_image\":\"\",\"menu_image_css\":\"\",\"menu_text\":1,\"menu_show\":1,\"page_title\":\"\",\"show_page_heading\":\"\",\"page_heading\":\"\",\"pageclass_sfx\":\"\",\"menu-meta_description\":\"\",\"robots\":\"\"}', 54, 55, 0, '*', 0, NULL, NULL),
+(152, 'main', 'jNews', 'jnews', '', 'jnews', 'index.php?option=com_jnews', 'component', 1, 1, 1, 244, NULL, NULL, 0, 1, '../administrator/components/com_jnews/images/16/jnewsletter_icon.png', 0, '{}', 97, 114, 0, '', 1, NULL, NULL),
+(153, 'main', 'Lists', 'lists', '', 'jnews/lists', 'index.php?option=com_jnews&act=list', 'component', 1, 152, 2, 244, NULL, NULL, 0, 1, '../administrator/components/com_jnews/images/16/lists.png', 0, '{}', 98, 99, 0, '', 1, NULL, NULL),
+(154, 'main', 'Subscribers', 'subscribers', '', 'jnews/subscribers', 'index.php?option=com_jnews&act=subscribers', 'component', 1, 152, 2, 244, NULL, NULL, 0, 1, '../administrator/components/com_jnews/images/16/subscribers.png', 0, '{}', 100, 101, 0, '', 1, NULL, NULL),
+(155, 'main', 'Newsletters', 'newsletters', '', 'jnews/newsletters', 'index.php?option=com_jnews&act=mailing&listype=1', 'component', 1, 152, 2, 244, NULL, NULL, 0, 1, '../administrator/components/com_jnews/images/16/newsletter.png', 0, '{}', 102, 103, 0, '', 1, NULL, NULL),
+(156, 'main', 'Statistics', 'statistics', '', 'jnews/statistics', 'index.php?option=com_jnews&act=statistics', 'component', 1, 152, 2, 244, NULL, NULL, 0, 1, '../administrator/components/com_jnews/images/16/statistics.png', 0, '{}', 104, 105, 0, '', 1, NULL, NULL),
+(157, 'main', 'Queue', 'queue', '', 'jnews/queue', 'index.php?option=com_jnews&act=queue', 'component', 1, 152, 2, 244, NULL, NULL, 0, 1, '../administrator/components/com_jnews/images/16/queue.png', 0, '{}', 106, 107, 0, '', 1, NULL, NULL),
+(158, 'main', 'Templates', 'templates', '', 'jnews/templates', 'index.php?option=com_jnews&act=templates', 'component', 1, 152, 2, 244, NULL, NULL, 0, 1, '../administrator/components/com_jnews/images/16/templates.png', 0, '{}', 108, 109, 0, '', 1, NULL, NULL),
+(159, 'main', 'Configuration', 'configuration', '', 'jnews/configuration', 'index.php?option=com_jnews&act=configuration', 'component', 1, 152, 2, 244, NULL, NULL, 0, 1, '../administrator/components/com_jnews/images/16/configuration.png', 0, '{}', 110, 111, 0, '', 1, NULL, NULL),
+(160, 'main', 'About', 'about', '', 'jnews/about', 'index.php?option=com_jnews&act=about', 'component', 1, 152, 2, 244, NULL, NULL, 0, 1, '../administrator/components/com_jnews/images/16/about.png', 0, '{}', 112, 113, 0, '', 1, NULL, NULL),
+(165, 'main', 'COM_TFMAIL_MENU', 'com-tfmail-menu', '', 'com-tfmail-menu', 'index.php?option=com_tfmail', 'component', 1, 1, 1, 245, NULL, NULL, 0, 1, 'class:component', 0, '{}', 115, 122, 0, '', 1, NULL, NULL),
+(166, 'main', 'COM_TFMAIL_SUBMENU_DASHBOARD', 'com-tfmail-submenu-dashboard', '', 'com-tfmail-menu/com-tfmail-submenu-dashboard', 'index.php?option=com_tfmail&view=dashboard', 'component', 1, 165, 2, 245, NULL, NULL, 0, 1, 'class:component', 0, '{}', 116, 117, 0, '', 1, NULL, NULL),
+(167, 'main', 'COM_TFMAIL_SUBMENU_USERS', 'com-tfmail-submenu-users', '', 'com-tfmail-menu/com-tfmail-submenu-users', 'index.php?option=com_tfmail&view=users', 'component', 1, 165, 2, 245, NULL, NULL, 0, 1, 'class:component', 0, '{}', 118, 119, 0, '', 1, NULL, NULL),
+(168, 'main', 'COM_TFMAIL_SUBMENU_MAILS', 'com-tfmail-submenu-mails', '', 'com-tfmail-menu/com-tfmail-submenu-mails', 'index.php?option=com_tfmail&view=mails', 'component', 1, 165, 2, 245, NULL, NULL, 0, 1, 'class:component', 0, '{}', 120, 121, 0, '', 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_menu_types`
+-- Table structure for table `buf3w_menu_types`
 --
 
 CREATE TABLE `buf3w_menu_types` (
   `id` int(10) UNSIGNED NOT NULL,
   `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `menutype` varchar(24) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` varchar(48) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `menutype` varchar(24) NOT NULL,
+  `title` varchar(48) NOT NULL,
+  `description` varchar(255) NOT NULL DEFAULT '',
   `client_id` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_menu_types`
+-- Dumping data for table `buf3w_menu_types`
 --
 
 INSERT INTO `buf3w_menu_types` (`id`, `asset_id`, `menutype`, `title`, `description`, `client_id`) VALUES
@@ -4391,7 +7158,7 @@ INSERT INTO `buf3w_menu_types` (`id`, `asset_id`, `menutype`, `title`, `descript
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_messages`
+-- Table structure for table `buf3w_messages`
 --
 
 CREATE TABLE `buf3w_messages` (
@@ -4402,51 +7169,51 @@ CREATE TABLE `buf3w_messages` (
   `date_time` datetime NOT NULL,
   `state` tinyint(4) NOT NULL DEFAULT 0,
   `priority` tinyint(3) UNSIGNED NOT NULL DEFAULT 0,
-  `subject` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `message` text COLLATE utf8mb4_unicode_ci NOT NULL
+  `subject` varchar(255) NOT NULL DEFAULT '',
+  `message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_messages_cfg`
+-- Table structure for table `buf3w_messages_cfg`
 --
 
 CREATE TABLE `buf3w_messages_cfg` (
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `cfg_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `cfg_value` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
+  `cfg_name` varchar(100) NOT NULL DEFAULT '',
+  `cfg_value` varchar(255) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_modules`
+-- Table structure for table `buf3w_modules`
 --
 
 CREATE TABLE `buf3w_modules` (
   `id` int(11) NOT NULL,
   `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
-  `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `content` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title` varchar(100) NOT NULL DEFAULT '',
+  `note` varchar(255) NOT NULL DEFAULT '',
+  `content` text DEFAULT NULL,
   `ordering` int(11) NOT NULL DEFAULT 0,
-  `position` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `position` varchar(50) NOT NULL DEFAULT '',
   `checked_out` int(10) UNSIGNED DEFAULT NULL,
   `checked_out_time` datetime DEFAULT NULL,
   `publish_up` datetime DEFAULT NULL,
   `publish_down` datetime DEFAULT NULL,
   `published` tinyint(4) NOT NULL DEFAULT 0,
-  `module` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `module` varchar(50) DEFAULT NULL,
   `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `showtitle` tinyint(3) UNSIGNED NOT NULL DEFAULT 1,
-  `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `params` text NOT NULL,
   `client_id` tinyint(4) NOT NULL DEFAULT 0,
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL
+  `language` char(7) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_modules`
+-- Dumping data for table `buf3w_modules`
 --
 
 INSERT INTO `buf3w_modules` (`id`, `asset_id`, `title`, `note`, `content`, `ordering`, `position`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `published`, `module`, `access`, `showtitle`, `params`, `client_id`, `language`) VALUES
@@ -4485,12 +7252,13 @@ INSERT INTO `buf3w_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orde
 (106, 83, 'Help Dashboard', '', '', 1, 'cpanel-help', NULL, NULL, NULL, NULL, 1, 'mod_submenu', 1, 0, '{\"menutype\":\"*\",\"preset\":\"help\",\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"style\":\"System-none\",\"module_tag\":\"div\",\"bootstrap_size\":\"12\",\"header_tag\":\"h2\",\"header_class\":\"\"}', 1, '*'),
 (107, 84, 'Privacy Requests', '', '', 1, 'cpanel-privacy', NULL, NULL, NULL, NULL, 1, 'mod_privacy_dashboard', 1, 1, '{\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"static\",\"style\":\"0\",\"module_tag\":\"div\",\"bootstrap_size\":\"12\",\"header_tag\":\"h2\",\"header_class\":\"\"}', 1, '*'),
 (108, 85, 'Privacy Status', '', '', 1, 'cpanel-privacy', NULL, NULL, NULL, NULL, 1, 'mod_privacy_status', 1, 1, '{\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"cache\":1,\"cache_time\":900,\"cachemode\":\"static\",\"style\":\"0\",\"module_tag\":\"div\",\"bootstrap_size\":\"12\",\"header_tag\":\"h2\",\"header_class\":\"\"}', 1, '*'),
-(109, 96, 'Guided Tours', '', '', 1, 'status', NULL, NULL, NULL, NULL, 1, 'mod_guidedtours', 1, 1, '', 1, '*');
+(109, 96, 'Guided Tours', '', '', 1, 'status', NULL, NULL, NULL, NULL, 1, 'mod_guidedtours', 1, 1, '', 1, '*'),
+(110, 111, 'Wyszukiwarka', '', NULL, 1, 'search', NULL, NULL, NULL, NULL, 1, 'mod_finder', 1, 1, '{\"searchfilter\":\"\",\"show_autosuggest\":1,\"show_advanced\":0,\"show_label\":1,\"alt_label\":\"\",\"show_button\":0,\"opensearch\":1,\"opensearch_name\":\"\",\"set_itemid\":0,\"layout\":\"_:default\",\"moduleclass_sfx\":\"\",\"module_tag\":\"div\",\"bootstrap_size\":\"0\",\"header_tag\":\"h3\",\"header_class\":\"\",\"style\":\"0\"}', 0, '*');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_modules_menu`
+-- Table structure for table `buf3w_modules_menu`
 --
 
 CREATE TABLE `buf3w_modules_menu` (
@@ -4499,7 +7267,7 @@ CREATE TABLE `buf3w_modules_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_modules_menu`
+-- Dumping data for table `buf3w_modules_menu`
 --
 
 INSERT INTO `buf3w_modules_menu` (`moduleid`, `menuid`) VALUES
@@ -4541,20 +7309,21 @@ INSERT INTO `buf3w_modules_menu` (`moduleid`, `menuid`) VALUES
 (106, 0),
 (107, 0),
 (108, 0),
-(109, 0);
+(109, 0),
+(110, 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_newsfeeds`
+-- Table structure for table `buf3w_newsfeeds`
 --
 
 CREATE TABLE `buf3w_newsfeeds` (
   `catid` int(11) NOT NULL DEFAULT 0,
   `id` int(10) UNSIGNED NOT NULL,
-  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `name` varchar(100) NOT NULL DEFAULT '',
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
-  `link` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `link` varchar(2048) NOT NULL DEFAULT '',
   `published` tinyint(4) NOT NULL DEFAULT 0,
   `numarticles` int(10) UNSIGNED NOT NULL DEFAULT 1,
   `cache_time` int(10) UNSIGNED NOT NULL DEFAULT 3600,
@@ -4563,62 +7332,351 @@ CREATE TABLE `buf3w_newsfeeds` (
   `ordering` int(11) NOT NULL DEFAULT 0,
   `rtl` tinyint(4) NOT NULL DEFAULT 0,
   `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `language` char(7) NOT NULL DEFAULT '',
+  `params` text NOT NULL,
   `created` datetime NOT NULL,
   `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `created_by_alias` varchar(255) NOT NULL DEFAULT '',
   `modified` datetime NOT NULL,
   `modified_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `metakey` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `metadesc` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `metadata` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `metakey` text DEFAULT NULL,
+  `metadesc` text NOT NULL,
+  `metadata` text NOT NULL,
   `publish_up` datetime DEFAULT NULL,
   `publish_down` datetime DEFAULT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text NOT NULL,
   `version` int(10) UNSIGNED NOT NULL DEFAULT 1,
   `hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `images` text COLLATE utf8mb4_unicode_ci NOT NULL
+  `images` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_overrider`
+-- Table structure for table `buf3w_overrider`
 --
 
 CREATE TABLE `buf3w_overrider` (
   `id` int(11) NOT NULL COMMENT 'Primary Key',
-  `constant` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `string` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+  `constant` varchar(255) NOT NULL,
+  `string` text NOT NULL,
+  `file` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_postinstall_messages`
+-- Table structure for table `buf3w_phocadownload`
+--
+
+CREATE TABLE `buf3w_phocadownload` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `catid` int(11) NOT NULL DEFAULT 0,
+  `sectionid` int(11) NOT NULL DEFAULT 0,
+  `sid` int(11) NOT NULL DEFAULT 0,
+  `owner_id` int(11) NOT NULL DEFAULT 0,
+  `title` varchar(250) NOT NULL DEFAULT '',
+  `alias` varchar(255) NOT NULL DEFAULT '',
+  `project_name` varchar(255) NOT NULL DEFAULT '',
+  `filename` varchar(250) NOT NULL DEFAULT '',
+  `filename_play` varchar(250) NOT NULL DEFAULT '',
+  `filename_preview` varchar(250) NOT NULL DEFAULT '',
+  `filesize` int(11) NOT NULL DEFAULT 0,
+  `author` varchar(255) NOT NULL DEFAULT '',
+  `author_email` varchar(255) NOT NULL DEFAULT '',
+  `author_url` varchar(255) NOT NULL DEFAULT '',
+  `license` varchar(255) NOT NULL DEFAULT '',
+  `license_url` varchar(255) NOT NULL DEFAULT '',
+  `image_filename` varchar(255) NOT NULL DEFAULT '',
+  `image_filename_spec1` varchar(255) NOT NULL DEFAULT '',
+  `image_filename_spec2` varchar(255) NOT NULL DEFAULT '',
+  `image_download` varchar(255) NOT NULL DEFAULT '',
+  `video_filename` varchar(255) NOT NULL DEFAULT '',
+  `link_external` varchar(255) NOT NULL DEFAULT '',
+  `mirror1link` varchar(255) NOT NULL DEFAULT '',
+  `mirror1title` varchar(255) NOT NULL DEFAULT '',
+  `mirror1target` varchar(10) NOT NULL DEFAULT '',
+  `mirror2link` varchar(255) NOT NULL DEFAULT '',
+  `mirror2title` varchar(255) NOT NULL DEFAULT '',
+  `mirror2target` varchar(10) NOT NULL DEFAULT '',
+  `description` text DEFAULT NULL,
+  `features` text DEFAULT NULL,
+  `changelog` text DEFAULT NULL,
+  `notes` text DEFAULT NULL,
+  `userid` int(11) NOT NULL DEFAULT 0,
+  `version` varchar(255) NOT NULL DEFAULT '',
+  `directlink` tinyint(1) NOT NULL DEFAULT 0,
+  `date` datetime NOT NULL,
+  `publish_up` datetime NOT NULL,
+  `publish_down` datetime NOT NULL,
+  `hits` int(11) NOT NULL DEFAULT 0,
+  `textonly` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `approved` tinyint(1) NOT NULL DEFAULT 0,
+  `checked_out` int(11) NOT NULL DEFAULT 0,
+  `checked_out_time` datetime DEFAULT NULL,
+  `ordering` int(11) NOT NULL DEFAULT 0,
+  `access` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `confirm_license` int(11) NOT NULL DEFAULT 0,
+  `unaccessible_file` int(11) NOT NULL DEFAULT 0,
+  `token` char(64) DEFAULT NULL,
+  `tokenhits` int(11) NOT NULL DEFAULT 0,
+  `tags_string` varchar(255) NOT NULL DEFAULT '',
+  `params` text DEFAULT NULL,
+  `metakey` text DEFAULT NULL,
+  `metadesc` text DEFAULT NULL,
+  `metadata` text DEFAULT NULL,
+  `language` char(7) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `buf3w_phocadownload`
+--
+
+INSERT INTO `buf3w_phocadownload` (`id`, `catid`, `sectionid`, `sid`, `owner_id`, `title`, `alias`, `project_name`, `filename`, `filename_play`, `filename_preview`, `filesize`, `author`, `author_email`, `author_url`, `license`, `license_url`, `image_filename`, `image_filename_spec1`, `image_filename_spec2`, `image_download`, `video_filename`, `link_external`, `mirror1link`, `mirror1title`, `mirror1target`, `mirror2link`, `mirror2title`, `mirror2target`, `description`, `features`, `changelog`, `notes`, `userid`, `version`, `directlink`, `date`, `publish_up`, `publish_down`, `hits`, `textonly`, `published`, `approved`, `checked_out`, `checked_out_time`, `ordering`, `access`, `confirm_license`, `unaccessible_file`, `token`, `tokenhits`, `tags_string`, `params`, `metakey`, `metadesc`, `metadata`, `language`) VALUES
+(1, 1, 0, 0, 0, 'test', 'test', '', 'test.txt', '', '', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '_self', '', '', '_self', '', '', '', '', 0, '', 0, '2023-06-12 19:35:42', '2023-06-12 19:35:42', '0000-00-00 00:00:00', 1, 0, 1, 1, 0, NULL, 1, 1, 0, 0, '', 0, '', NULL, '', '', NULL, '*');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_phocadownload_categories`
+--
+
+CREATE TABLE `buf3w_phocadownload_categories` (
+  `id` int(11) NOT NULL,
+  `parent_id` int(11) NOT NULL DEFAULT 0,
+  `section` int(11) NOT NULL DEFAULT 0,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `alias` varchar(255) NOT NULL DEFAULT '',
+  `project_name` varchar(255) NOT NULL DEFAULT '',
+  `image` varchar(255) NOT NULL DEFAULT '',
+  `image_position` varchar(30) NOT NULL DEFAULT '',
+  `description` text DEFAULT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `checked_out` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `checked_out_time` datetime DEFAULT NULL,
+  `editor` varchar(50) DEFAULT NULL,
+  `ordering` int(11) NOT NULL DEFAULT 0,
+  `access` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `uploaduserid` text DEFAULT NULL,
+  `accessuserid` text DEFAULT NULL,
+  `deleteuserid` text DEFAULT NULL,
+  `date` datetime NOT NULL,
+  `count` int(11) NOT NULL DEFAULT 0,
+  `hits` int(11) NOT NULL DEFAULT 0,
+  `params` text DEFAULT NULL,
+  `metakey` text DEFAULT NULL,
+  `metadesc` text DEFAULT NULL,
+  `metadata` text DEFAULT NULL,
+  `language` char(7) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `buf3w_phocadownload_categories`
+--
+
+INSERT INTO `buf3w_phocadownload_categories` (`id`, `parent_id`, `section`, `title`, `name`, `alias`, `project_name`, `image`, `image_position`, `description`, `published`, `checked_out`, `checked_out_time`, `editor`, `ordering`, `access`, `uploaduserid`, `accessuserid`, `deleteuserid`, `date`, `count`, `hits`, `params`, `metakey`, `metadesc`, `metadata`, `language`) VALUES
+(1, 0, 0, 'pliki', '', 'pliki', '', '', '', '', 1, 0, NULL, NULL, 1, 1, '0', '0', '0', '2023-06-12 19:34:39', 0, 0, NULL, '', '', NULL, '*');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_phocadownload_file_votes`
+--
+
+CREATE TABLE `buf3w_phocadownload_file_votes` (
+  `id` int(11) NOT NULL,
+  `fileid` int(11) NOT NULL DEFAULT 0,
+  `userid` int(11) NOT NULL DEFAULT 0,
+  `date` datetime NOT NULL,
+  `rating` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `checked_out` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `checked_out_time` datetime DEFAULT NULL,
+  `ordering` int(11) NOT NULL DEFAULT 0,
+  `params` text DEFAULT NULL,
+  `language` char(7) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_phocadownload_file_votes_statistics`
+--
+
+CREATE TABLE `buf3w_phocadownload_file_votes_statistics` (
+  `id` int(11) NOT NULL,
+  `fileid` int(11) NOT NULL DEFAULT 0,
+  `count` int(11) NOT NULL DEFAULT 0,
+  `average` float(8,6) NOT NULL DEFAULT 0.000000,
+  `language` char(7) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_phocadownload_layout`
+--
+
+CREATE TABLE `buf3w_phocadownload_layout` (
+  `id` int(11) NOT NULL,
+  `categories` text DEFAULT NULL,
+  `category` text DEFAULT NULL,
+  `file` text DEFAULT NULL,
+  `checked_out` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `checked_out_time` datetime DEFAULT NULL,
+  `params` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_phocadownload_licenses`
+--
+
+CREATE TABLE `buf3w_phocadownload_licenses` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `alias` varchar(255) NOT NULL DEFAULT '',
+  `description` text DEFAULT NULL,
+  `checked_out` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `checked_out_time` datetime DEFAULT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `ordering` int(11) NOT NULL DEFAULT 0,
+  `language` char(7) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_phocadownload_logging`
+--
+
+CREATE TABLE `buf3w_phocadownload_logging` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `fileid` int(11) NOT NULL DEFAULT 0,
+  `catid` int(11) NOT NULL DEFAULT 0,
+  `userid` int(11) NOT NULL DEFAULT 0,
+  `ip` varchar(50) NOT NULL DEFAULT '',
+  `page` varchar(255) NOT NULL,
+  `date` datetime NOT NULL,
+  `type` tinyint(1) NOT NULL DEFAULT 0,
+  `params` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_phocadownload_styles`
+--
+
+CREATE TABLE `buf3w_phocadownload_styles` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `alias` varchar(255) NOT NULL DEFAULT '',
+  `filename` varchar(255) NOT NULL DEFAULT '',
+  `menulink` text DEFAULT NULL,
+  `type` tinyint(1) NOT NULL DEFAULT 0,
+  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `checked_out` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `checked_out_time` datetime DEFAULT NULL,
+  `ordering` int(11) NOT NULL DEFAULT 0,
+  `params` text DEFAULT NULL,
+  `language` char(7) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `buf3w_phocadownload_styles`
+--
+
+INSERT INTO `buf3w_phocadownload_styles` (`id`, `title`, `alias`, `filename`, `menulink`, `type`, `published`, `checked_out`, `checked_out_time`, `ordering`, `params`, `language`) VALUES
+(1, 'Phocadownload', 'phocadownload', 'phocadownload.css', NULL, 1, 1, 0, '0000-00-00 00:00:00', 1, NULL, '*'),
+(2, 'Rating', 'rating', 'rating.css', NULL, 1, 1, 0, '0000-00-00 00:00:00', 2, NULL, '*'),
+(5, 'Default', 'default', 'default.css', NULL, 2, 1, 0, '0000-00-00 00:00:00', 1, NULL, '*');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_phocadownload_tags`
+--
+
+CREATE TABLE `buf3w_phocadownload_tags` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `alias` varchar(255) NOT NULL DEFAULT '',
+  `link_ext` varchar(255) NOT NULL DEFAULT '',
+  `link_cat` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `description` text DEFAULT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `checked_out` int(11) UNSIGNED NOT NULL DEFAULT 0,
+  `checked_out_time` datetime DEFAULT NULL,
+  `ordering` int(11) NOT NULL DEFAULT 0,
+  `params` text DEFAULT NULL,
+  `language` char(7) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_phocadownload_tags_ref`
+--
+
+CREATE TABLE `buf3w_phocadownload_tags_ref` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `fileid` int(11) NOT NULL DEFAULT 0,
+  `tagid` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_phocadownload_user_stat`
+--
+
+CREATE TABLE `buf3w_phocadownload_user_stat` (
+  `id` int(11) NOT NULL,
+  `fileid` int(11) NOT NULL DEFAULT 0,
+  `userid` int(11) NOT NULL DEFAULT 0,
+  `count` int(11) NOT NULL DEFAULT 0,
+  `date` datetime NOT NULL,
+  `published` tinyint(1) NOT NULL DEFAULT 0,
+  `ordering` int(11) NOT NULL DEFAULT 0,
+  `language` char(7) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `buf3w_phocadownload_user_stat`
+--
+
+INSERT INTO `buf3w_phocadownload_user_stat` (`id`, `fileid`, `userid`, `count`, `date`, `published`, `ordering`, `language`) VALUES
+(1, 1, 588, 1, '2023-06-12 19:37:51', 0, 0, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_postinstall_messages`
 --
 
 CREATE TABLE `buf3w_postinstall_messages` (
   `postinstall_message_id` bigint(20) UNSIGNED NOT NULL,
   `extension_id` bigint(20) NOT NULL DEFAULT 700 COMMENT 'FK to #__extensions',
-  `title_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'Lang key for the title',
-  `description_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'Lang key for description',
-  `action_key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `language_extension` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'com_postinstall' COMMENT 'Extension holding lang keys',
+  `title_key` varchar(255) NOT NULL DEFAULT '' COMMENT 'Lang key for the title',
+  `description_key` varchar(255) NOT NULL DEFAULT '' COMMENT 'Lang key for description',
+  `action_key` varchar(255) NOT NULL DEFAULT '',
+  `language_extension` varchar(255) NOT NULL DEFAULT 'com_postinstall' COMMENT 'Extension holding lang keys',
   `language_client_id` tinyint(4) NOT NULL DEFAULT 1,
-  `type` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'link' COMMENT 'Message type - message, link, action',
-  `action_file` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT 'RAD URI to the PHP file containing action method',
-  `action` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT '' COMMENT 'Action method name or URL',
-  `condition_file` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'RAD URI to file holding display condition method',
-  `condition_method` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Display condition method, must return boolean',
-  `version_introduced` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '3.2.0' COMMENT 'Version when this message was introduced',
+  `type` varchar(10) NOT NULL DEFAULT 'link' COMMENT 'Message type - message, link, action',
+  `action_file` varchar(255) DEFAULT '' COMMENT 'RAD URI to the PHP file containing action method',
+  `action` varchar(255) DEFAULT '' COMMENT 'Action method name or URL',
+  `condition_file` varchar(255) DEFAULT NULL COMMENT 'RAD URI to file holding display condition method',
+  `condition_method` varchar(255) DEFAULT NULL COMMENT 'Display condition method, must return boolean',
+  `version_introduced` varchar(50) NOT NULL DEFAULT '3.2.0' COMMENT 'Version when this message was introduced',
   `enabled` tinyint(4) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_postinstall_messages`
+-- Dumping data for table `buf3w_postinstall_messages`
 --
 
 INSERT INTO `buf3w_postinstall_messages` (`postinstall_message_id`, `extension_id`, `title_key`, `description_key`, `action_key`, `language_extension`, `language_client_id`, `type`, `action_file`, `action`, `condition_file`, `condition_method`, `version_introduced`, `enabled`) VALUES
@@ -4631,7 +7689,7 @@ INSERT INTO `buf3w_postinstall_messages` (`postinstall_message_id`, `extension_i
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_privacy_consents`
+-- Table structure for table `buf3w_privacy_consents`
 --
 
 CREATE TABLE `buf3w_privacy_consents` (
@@ -4639,40 +7697,40 @@ CREATE TABLE `buf3w_privacy_consents` (
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `state` int(11) NOT NULL DEFAULT 1,
   `created` datetime NOT NULL,
-  `subject` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `body` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subject` varchar(255) NOT NULL DEFAULT '',
+  `body` text NOT NULL,
   `remind` tinyint(4) NOT NULL DEFAULT 0,
-  `token` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
+  `token` varchar(100) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_privacy_requests`
+-- Table structure for table `buf3w_privacy_requests`
 --
 
 CREATE TABLE `buf3w_privacy_requests` (
   `id` int(10) UNSIGNED NOT NULL,
-  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `email` varchar(100) NOT NULL DEFAULT '',
   `requested_at` datetime NOT NULL,
   `status` tinyint(4) NOT NULL DEFAULT 0,
-  `request_type` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `confirm_token` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `request_type` varchar(25) NOT NULL DEFAULT '',
+  `confirm_token` varchar(100) NOT NULL DEFAULT '',
   `confirm_token_created_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_redirect_links`
+-- Table structure for table `buf3w_redirect_links`
 --
 
 CREATE TABLE `buf3w_redirect_links` (
   `id` int(10) UNSIGNED NOT NULL,
-  `old_url` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `new_url` varchar(2048) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `referer` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `comment` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `old_url` varchar(2048) NOT NULL,
+  `new_url` varchar(2048) DEFAULT NULL,
+  `referer` varchar(2048) NOT NULL,
+  `comment` varchar(255) NOT NULL DEFAULT '',
   `hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `published` tinyint(4) NOT NULL,
   `created_date` datetime NOT NULL,
@@ -4683,16 +7741,16 @@ CREATE TABLE `buf3w_redirect_links` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_scheduler_tasks`
+-- Table structure for table `buf3w_scheduler_tasks`
 --
 
 CREATE TABLE `buf3w_scheduler_tasks` (
   `id` int(10) UNSIGNED NOT NULL,
   `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `type` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'unique identifier for job defined by plugin',
-  `execution_rules` text COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Execution Rules, Unprocessed',
-  `cron_rules` text COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'Processed execution rules, crontab-like JSON form',
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `type` varchar(128) NOT NULL COMMENT 'unique identifier for job defined by plugin',
+  `execution_rules` text DEFAULT NULL COMMENT 'Execution Rules, Unprocessed',
+  `cron_rules` text DEFAULT NULL COMMENT 'Processed execution rules, crontab-like JSON form',
   `state` tinyint(4) NOT NULL DEFAULT 0,
   `last_exit_code` int(11) NOT NULL DEFAULT 0 COMMENT 'Exit code when job was last run',
   `last_execution` datetime DEFAULT NULL COMMENT 'Timestamp of last run',
@@ -4703,8 +7761,8 @@ CREATE TABLE `buf3w_scheduler_tasks` (
   `priority` smallint(6) NOT NULL DEFAULT 0,
   `ordering` int(11) NOT NULL DEFAULT 0 COMMENT 'Configurable list ordering',
   `cli_exclusive` smallint(6) NOT NULL DEFAULT 0 COMMENT 'If 1, the task is only accessible via CLI',
-  `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `note` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `params` text NOT NULL,
+  `note` text DEFAULT NULL,
   `created` datetime NOT NULL,
   `created_by` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `checked_out` int(10) UNSIGNED DEFAULT NULL,
@@ -4714,25 +7772,27 @@ CREATE TABLE `buf3w_scheduler_tasks` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_schemas`
+-- Table structure for table `buf3w_schemas`
 --
 
 CREATE TABLE `buf3w_schemas` (
   `extension_id` int(11) NOT NULL,
-  `version_id` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL
+  `version_id` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_schemas`
+-- Dumping data for table `buf3w_schemas`
 --
 
 INSERT INTO `buf3w_schemas` (`extension_id`, `version_id`) VALUES
-(227, '4.3.2-2023-05-20');
+(227, '4.3.2-2023-05-20'),
+(237, '3.1.7'),
+(245, '2.9.2');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_session`
+-- Table structure for table `buf3w_session`
 --
 
 CREATE TABLE `buf3w_session` (
@@ -4740,27 +7800,23 @@ CREATE TABLE `buf3w_session` (
   `client_id` tinyint(3) UNSIGNED DEFAULT NULL,
   `guest` tinyint(3) UNSIGNED DEFAULT 1,
   `time` int(11) NOT NULL DEFAULT 0,
-  `data` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `data` mediumtext DEFAULT NULL,
   `userid` int(11) DEFAULT 0,
-  `username` varchar(150) COLLATE utf8mb4_unicode_ci DEFAULT ''
+  `username` varchar(150) DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_session`
+-- Dumping data for table `buf3w_session`
 --
 
 INSERT INTO `buf3w_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-(0x306b35726f6632683638376e3765366a3135637569617366396c, 0, 0, 1686044010, 'joomla|s:780:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjQ6e3M6Nzoic2Vzc2lvbiI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo3OiJjb3VudGVyIjtpOjg7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNjg2MDM4OTY1O3M6NDoibGFzdCI7aToxNjg2MDQzMTcwO3M6Mzoibm93IjtpOjE2ODYwNDQwMTA7fXM6NToidG9rZW4iO3M6MzI6IjZkZjE5NGY1OGVjYjIxMDY3NGY2ZjkyZDMzODcwYzhlIjt9czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6MTI6IgAqAHNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTo1ODg7fXM6OToiY29tX3VzZXJzIjtPOjg6InN0ZENsYXNzIjoxOntzOjExOiJtZmFfY2hlY2tlZCI7aToxO319czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjEyOiIAKgBzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";', 588, 'Admin'),
-(0x3633306f6e74736237376d6f3061336d386f76736a75396a7169, 1, 0, 1686044607, 'joomla|s:1036:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjU6e3M6Nzoic2Vzc2lvbiI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo3OiJjb3VudGVyIjtpOjY2O3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTY4NjAzODc5NztzOjQ6Imxhc3QiO2k6MTY4NjA0Mzc2NztzOjM6Im5vdyI7aToxNjg2MDQ0NjA3O31zOjU6InRva2VuIjtzOjMyOiJlNzk3OGFkMGM3MDUwZTRmNjZhNDAyN2U0YTRkNzI2MiI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjoxOntzOjExOiJjb21fY29udGVudCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJlZGl0IjtPOjg6InN0ZENsYXNzIjoxOntzOjc6ImFydGljbGUiO086ODoic3RkQ2xhc3MiOjI6e3M6NDoiZGF0YSI7TjtzOjI6ImlkIjthOjE6e2k6MDtpOjE7fX19fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6MTI6IgAqAHNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTo1ODg7fXM6OToiY29tX3VzZXJzIjtPOjg6InN0ZENsYXNzIjoxOntzOjExOiJtZmFfY2hlY2tlZCI7aToxO31zOjExOiJhcHBsaWNhdGlvbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJxdWV1ZSI7YTowOnt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6MTI6IgAqAHNlcGFyYXRvciI7czoxOiIuIjt9\";', 588, 'Admin'),
-(0x6a696b6d39726b356171386539386e6939666b766c6c7231356a, 1, 0, 1686034637, 'joomla|s:2200:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjU6e3M6Nzoic2Vzc2lvbiI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo3OiJjb3VudGVyIjtpOjYyO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTY4NjAzMTAyNDtzOjQ6Imxhc3QiO2k6MTY4NjAzNDYzMjtzOjM6Im5vdyI7aToxNjg2MDM0NjM3O31zOjU6InRva2VuIjtzOjMyOiI0N2U5ZTM0YTc4YmZiYzlkNjk5NDVhY2RhMWU3MzAyZiI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjo0OntzOjExOiJjb21fY29udGVudCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJlZGl0IjtPOjg6InN0ZENsYXNzIjoxOntzOjc6ImFydGljbGUiO086ODoic3RkQ2xhc3MiOjI6e3M6NDoiZGF0YSI7TjtzOjI6ImlkIjthOjE6e2k6MDtpOjE7fX19fXM6MTA6ImNvbV9maWVsZHMiO086ODoic3RkQ2xhc3MiOjI6e3M6NjoiZmllbGRzIjtPOjg6InN0ZENsYXNzIjoyOntzOjc6ImNvbnRleHQiO3M6MTk6ImNvbV9jb250ZW50LmFydGljbGUiO3M6NDoibGlzdCI7YTo0OntzOjk6ImRpcmVjdGlvbiI7czozOiJhc2MiO3M6NToibGltaXQiO2k6MjA7czo4OiJvcmRlcmluZyI7czoxMDoiYS5vcmRlcmluZyI7czo1OiJzdGFydCI7ZDowO319czo2OiJncm91cHMiO086ODoic3RkQ2xhc3MiOjE6e3M6NzoiY29udGV4dCI7czoxOToiY29tX2NvbnRlbnQuYXJ0aWNsZSI7fX1zOjk6ImNvbV9tZW51cyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJpdGVtcyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJtb2RhbCI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo4OiJtZW51dHlwZSI7czowOiIiO3M6NDoibGlzdCI7YTo0OntzOjk6ImRpcmVjdGlvbiI7czozOiJhc2MiO3M6NToibGltaXQiO2k6MjA7czo4OiJvcmRlcmluZyI7czo1OiJhLmxmdCI7czo1OiJzdGFydCI7ZDowO319fX1zOjE0OiJjb21fY2F0ZWdvcmllcyI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoxMDoiY2F0ZWdvcmllcyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo3OiJjb250ZW50IjtPOjg6InN0ZENsYXNzIjoyOntzOjY6ImZpbHRlciI7Tzo4OiJzdGRDbGFzcyI6MTp7czo5OiJleHRlbnNpb24iO3M6MTE6ImNvbV9jb250ZW50Ijt9czo0OiJsaXN0IjthOjQ6e3M6OToiZGlyZWN0aW9uIjtzOjM6ImFzYyI7czo1OiJsaW1pdCI7aToyMDtzOjg6Im9yZGVyaW5nIjtzOjU6ImEubGZ0IjtzOjU6InN0YXJ0IjtkOjA7fX19czo0OiJlZGl0IjtPOjg6InN0ZENsYXNzIjoxOntzOjg6ImNhdGVnb3J5IjtPOjg6InN0ZENsYXNzIjoxOntzOjQ6ImRhdGEiO047fX19fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czoxMjoiACoAc2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjU4ODt9czo5OiJjb21fdXNlcnMiO086ODoic3RkQ2xhc3MiOjE6e3M6MTE6Im1mYV9jaGVja2VkIjtpOjE7fXM6MTE6ImFwcGxpY2F0aW9uIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InF1ZXVlIjthOjA6e319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czoxMjoiACoAc2VwYXJhdG9yIjtzOjE6Ii4iO30=\";', 588, 'Admin'),
-(0x6c666b707461667073346b6f34656e6d676a65336c626d6c6534, 1, 0, 1686124212, 'joomla|s:1340:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjU6e3M6Nzoic2Vzc2lvbiI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo3OiJjb3VudGVyIjtpOjYzO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTY4NjEyMjE1NDtzOjQ6Imxhc3QiO2k6MTY4NjEyNDIxMDtzOjM6Im5vdyI7aToxNjg2MTI0MjExO31zOjU6InRva2VuIjtzOjMyOiIyZmNiMDFkMjY3NzliYzg5YWExYTVhYWYzMTMxMmJiMSI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjozOntzOjExOiJjb21fY29udGVudCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJlZGl0IjtPOjg6InN0ZENsYXNzIjoxOntzOjc6ImFydGljbGUiO086ODoic3RkQ2xhc3MiOjI6e3M6NDoiZGF0YSI7TjtzOjI6ImlkIjthOjA6e319fX1zOjE0OiJjb21fY2F0ZWdvcmllcyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJlZGl0IjtPOjg6InN0ZENsYXNzIjoxOntzOjg6ImNhdGVnb3J5IjtPOjg6InN0ZENsYXNzIjoyOntzOjI6ImlkIjthOjE6e2k6MDtpOjI7fXM6NDoiZGF0YSI7Tjt9fX1zOjEzOiJjb21faW5zdGFsbGVyIjtPOjg6InN0ZENsYXNzIjoyOntzOjc6Im1lc3NhZ2UiO3M6MDoiIjtzOjE3OiJleHRlbnNpb25fbWVzc2FnZSI7czowOiIiO319czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjEyOiIAKgBzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO2k6NTg4O31zOjk6ImNvbV91c2VycyI7Tzo4OiJzdGRDbGFzcyI6MTp7czoxMToibWZhX2NoZWNrZWQiO2k6MTt9czoxMToiYXBwbGljYXRpb24iO086ODoic3RkQ2xhc3MiOjE6e3M6NToicXVldWUiO2E6MDp7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjEyOiIAKgBzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";', 588, 'Admin'),
-(0x6f383061686771343933693639663664626734656c7173316933, 0, 0, 1686030994, 'joomla|s:1104:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjU6e3M6Nzoic2Vzc2lvbiI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNjg2MDMwOTc2O3M6NDoibGFzdCI7aToxNjg2MDMwOTkzO3M6Mzoibm93IjtpOjE2ODYwMzA5OTQ7fXM6NzoiY291bnRlciI7aTo2O3M6NToidG9rZW4iO3M6MzI6ImUzYjFiZTFlYWVmOGRkNmY1NWE4ZTA4ZTM0NjI4ZjY0Ijt9czoxMToiYXBwbGljYXRpb24iO086ODoic3RkQ2xhc3MiOjE6e3M6NToicXVldWUiO2E6MDp7fX1zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo1OiJ1c2VycyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJsb2dpbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJmb3JtIjtPOjg6InN0ZENsYXNzIjoyOntzOjY6InJldHVybiI7czozMzoiaHR0cDovL2xvY2FsaG9zdC9Qcm9qZWt0Sm9vbWxhS0svIjtzOjQ6ImRhdGEiO2E6MDp7fX19fXM6MTM6InJlbWVtYmVyTG9naW4iO2I6MTt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjEyOiIAKgBzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO2k6NTg4O31zOjk6ImNvbV91c2VycyI7Tzo4OiJzdGRDbGFzcyI6MTp7czoxMToibWZhX2NoZWNrZWQiO2k6MTt9fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czoxMjoiACoAc2VwYXJhdG9yIjtzOjE6Ii4iO30=\";', 588, 'Admin'),
-(0x7137746c75666368673972717269396935356c736236646f6438, 0, 0, 1686123796, 'joomla|s:780:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjQ6e3M6Nzoic2Vzc2lvbiI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo3OiJjb3VudGVyIjtpOjM7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNjg2MTIyMTA4O3M6NDoibGFzdCI7aToxNjg2MTIyOTU2O3M6Mzoibm93IjtpOjE2ODYxMjM3OTY7fXM6NToidG9rZW4iO3M6MzI6ImUyYTk0NDUzZTlkMjJiZjZiMjVmYTM4NzY2ZDQxOTNhIjt9czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6MTI6IgAqAHNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTo1ODg7fXM6OToiY29tX3VzZXJzIjtPOjg6InN0ZENsYXNzIjoxOntzOjExOiJtZmFfY2hlY2tlZCI7aToxO319czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjEyOiIAKgBzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";', 588, 'Admin');
+(0x6733303767376b356c3439396f766c386a743565627131617376, 1, 0, 1686601645, 'joomla|s:3788:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjY6e3M6Nzoic2Vzc2lvbiI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNjg2NTk4MTQzO3M6NDoibGFzdCI7aToxNjg2NjAxNjMyO3M6Mzoibm93IjtpOjE2ODY2MDE2NDU7fXM6NToidG9rZW4iO3M6MzI6IjJhNGFiY2JjMzFhNzdlODZkODU2N2MyODlhMjg3NTVmIjtzOjc6ImNvdW50ZXIiO2k6MjE3O31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6NTp7czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6NDp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjtzOjEyOiJyZWRpcmVjdF91cmwiO3M6MDoiIjtzOjY6Im1hbmFnZSI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo2OiJmaWx0ZXIiO2E6Nzp7czo2OiJzZWFyY2giO3M6MzoiYWN5IjtzOjY6InN0YXR1cyI7czowOiIiO3M6OToiY2xpZW50X2lkIjtzOjA6IiI7czo0OiJ0eXBlIjtzOjA6IiI7czo2OiJmb2xkZXIiO3M6MDoiIjtzOjEwOiJwYWNrYWdlX2lkIjtzOjA6IiI7czo0OiJjb3JlIjtzOjA6IiI7fXM6NDoibGlzdCI7YToyOntzOjEyOiJmdWxsb3JkZXJpbmciO3M6ODoibmFtZSBBU0MiO3M6NToibGltaXQiO3M6MjoiMjAiO31zOjEwOiJsaW1pdHN0YXJ0IjtpOjA7fX1zOjE3OiJjb21fcGhvY2Fkb3dubG9hZCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJlZGl0IjtPOjg6InN0ZENsYXNzIjoyOntzOjE3OiJwaG9jYWRvd25sb2FkZmlsZSI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJkYXRhIjtOO31zOjE2OiJwaG9jYWRvd25sb2FkY2F0IjtPOjg6InN0ZENsYXNzIjoxOntzOjQ6ImRhdGEiO047fX19czo5OiJjb21fbWVudXMiO086ODoic3RkQ2xhc3MiOjI6e3M6NToiaXRlbXMiO086ODoic3RkQ2xhc3MiOjQ6e3M6ODoibWVudXR5cGUiO3M6ODoibWFpbm1lbnUiO3M6OToiY2xpZW50X2lkIjtpOjA7czoxMDoibGltaXRzdGFydCI7aTowO3M6NDoibGlzdCI7YTo0OntzOjk6ImRpcmVjdGlvbiI7czozOiJhc2MiO3M6NToibGltaXQiO2k6MjA7czo4OiJvcmRlcmluZyI7czo1OiJhLmxmdCI7czo1OiJzdGFydCI7ZDowO319czo0OiJlZGl0IjtPOjg6InN0ZENsYXNzIjoxOntzOjQ6Iml0ZW0iO086ODoic3RkQ2xhc3MiOjM6e3M6NDoiZGF0YSI7TjtzOjQ6InR5cGUiO047czo0OiJsaW5rIjtOO319fXM6MTA6ImNvbV90Zm1haWwiO086ODoic3RkQ2xhc3MiOjc6e3M6NToibWFpbHMiO086ODoic3RkQ2xhc3MiOjM6e3M6ODoib3JkZXJjb2wiO047czo5OiJvcmRlcmRpcm4iO047czo0OiJsaXN0IjthOjQ6e3M6OToiZGlyZWN0aW9uIjtOO3M6NToibGltaXQiO2k6MjA7czo4OiJvcmRlcmluZyI7TjtzOjU6InN0YXJ0IjtkOjA7fX1zOjQ6ImVkaXQiO086ODoic3RkQ2xhc3MiOjI6e3M6NDoibWFpbCI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoyOiJpZCI7YTowOnt9czo0OiJkYXRhIjtOO31zOjQ6InVzZXIiO086ODoic3RkQ2xhc3MiOjE6e3M6NDoiZGF0YSI7Tjt9fXM6NToidXNlcnMiO086ODoic3RkQ2xhc3MiOjM6e3M6ODoib3JkZXJjb2wiO047czo5OiJvcmRlcmRpcm4iO047czo0OiJsaXN0IjthOjQ6e3M6OToiZGlyZWN0aW9uIjtOO3M6NToibGltaXQiO2k6MjA7czo4OiJvcmRlcmluZyI7TjtzOjU6InN0YXJ0IjtkOjA7fX1zOjExOiJzdWJzY3JpYmVycyI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo4OiJvcmRlcmNvbCI7TjtzOjk6Im9yZGVyZGlybiI7TjtzOjQ6Imxpc3QiO2E6NDp7czo5OiJkaXJlY3Rpb24iO047czo1OiJsaW1pdCI7aToyMDtzOjg6Im9yZGVyaW5nIjtOO3M6NToic3RhcnQiO2Q6MDt9fXM6OToiY2FtcGFpZ25zIjtPOjg6InN0ZENsYXNzIjozOntzOjg6Im9yZGVyY29sIjtOO3M6OToib3JkZXJkaXJuIjtOO3M6NDoibGlzdCI7YTo0OntzOjk6ImRpcmVjdGlvbiI7TjtzOjU6ImxpbWl0IjtpOjIwO3M6ODoib3JkZXJpbmciO047czo1OiJzdGFydCI7ZDowO319czo1OiJxdWV1ZSI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo4OiJvcmRlcmNvbCI7TjtzOjk6Im9yZGVyZGlybiI7TjtzOjQ6Imxpc3QiO2E6NDp7czo5OiJkaXJlY3Rpb24iO047czo1OiJsaW1pdCI7aToyMDtzOjg6Im9yZGVyaW5nIjtOO3M6NToic3RhcnQiO2Q6MDt9fXM6MTA6InN0YXRpc3RpY3MiO086ODoic3RkQ2xhc3MiOjM6e3M6ODoib3JkZXJjb2wiO047czo5OiJvcmRlcmRpcm4iO047czo0OiJsaXN0IjthOjQ6e3M6OToiZGlyZWN0aW9uIjtOO3M6NToibGltaXQiO2k6MjA7czo4OiJvcmRlcmluZyI7TjtzOjU6InN0YXJ0IjtkOjA7fX19czo5OiJjb21fdXNlcnMiO086ODoic3RkQ2xhc3MiOjE6e3M6NDoiZWRpdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo0OiJ1c2VyIjtPOjg6InN0ZENsYXNzIjoyOntzOjI6ImlkIjthOjE6e2k6MDtpOjU4ODt9czo0OiJkYXRhIjtOO319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6MTI6IgAqAHNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTo1ODg7fXM6OToiY29tX3VzZXJzIjtPOjg6InN0ZENsYXNzIjoxOntzOjExOiJtZmFfY2hlY2tlZCI7aToxO31zOjg6Im92ZXJyaWRlIjtPOjg6InN0ZENsYXNzIjowOnt9czoxMToiYXBwbGljYXRpb24iO086ODoic3RkQ2xhc3MiOjE6e3M6NToicXVldWUiO2E6MDp7fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjEyOiIAKgBzZXBhcmF0b3IiO3M6MToiLiI7fQ==\";acym_success|s:0:\"\";', 588, 'Admin'),
+(0x6d6c6b637431727366713866723575756f706a36626668306f68, 0, 0, 1686601190, 'joomla|s:1148:\"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjU6e3M6Nzoic2Vzc2lvbiI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJ0aW1lciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo1OiJzdGFydCI7aToxNjg2NTg5MzcyO3M6NDoibGFzdCI7aToxNjg2NjAwMzUwO3M6Mzoibm93IjtpOjE2ODY2MDExOTA7fXM6NzoiY291bnRlciI7aTo1NDtzOjU6InRva2VuIjtzOjMyOiIzMWNkNjY0YzBjMmRlZDYxNmQwZDAwYmIwNmYyNTU5YiI7fXM6MTE6ImFwcGxpY2F0aW9uIjtPOjg6InN0ZENsYXNzIjoxOntzOjU6InF1ZXVlIjthOjA6e319czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjI6e3M6NToidXNlcnMiO086ODoic3RkQ2xhc3MiOjE6e3M6NToibG9naW4iO086ODoic3RkQ2xhc3MiOjE6e3M6NDoiZm9ybSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo2OiJyZXR1cm4iO3M6NjY6Imh0dHA6Ly8xMjcuMC4wLjEvam9vbWxhL2luZGV4LnBocC9jb21wb25lbnQvdXNlcnMvbG9naW4/SXRlbWlkPTEwMSI7czo0OiJkYXRhIjthOjA6e319fX1zOjEzOiJyZW1lbWJlckxvZ2luIjtiOjE7fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czoxMjoiACoAc2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtpOjU4ODt9czo5OiJjb21fdXNlcnMiO086ODoic3RkQ2xhc3MiOjE6e3M6MTE6Im1mYV9jaGVja2VkIjtpOjE7fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6MTI6IgAqAHNlcGFyYXRvciI7czoxOiIuIjt9\";', 588, 'Admin');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_tags`
+-- Table structure for table `buf3w_tags`
 --
 
 CREATE TABLE `buf3w_tags` (
@@ -4769,35 +7825,35 @@ CREATE TABLE `buf3w_tags` (
   `lft` int(11) NOT NULL DEFAULT 0,
   `rgt` int(11) NOT NULL DEFAULT 0,
   `level` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `path` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `path` varchar(400) NOT NULL DEFAULT '',
+  `title` varchar(255) NOT NULL,
   `alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
-  `note` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `description` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `note` varchar(255) NOT NULL DEFAULT '',
+  `description` mediumtext NOT NULL,
   `published` tinyint(4) NOT NULL DEFAULT 0,
   `checked_out` int(10) UNSIGNED DEFAULT NULL,
   `checked_out_time` datetime DEFAULT NULL,
   `access` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `metadesc` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The meta description for the page.',
-  `metakey` varchar(1024) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'The keywords for the page.',
-  `metadata` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'JSON encoded metadata properties.',
+  `params` text NOT NULL,
+  `metadesc` varchar(1024) NOT NULL COMMENT 'The meta description for the page.',
+  `metakey` varchar(1024) NOT NULL DEFAULT '' COMMENT 'The keywords for the page.',
+  `metadata` varchar(2048) NOT NULL COMMENT 'JSON encoded metadata properties.',
   `created_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `created_time` datetime NOT NULL,
-  `created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `created_by_alias` varchar(255) NOT NULL DEFAULT '',
   `modified_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `modified_time` datetime NOT NULL,
-  `images` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `urls` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `images` text NOT NULL,
+  `urls` text NOT NULL,
   `hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `language` char(7) NOT NULL,
   `version` int(10) UNSIGNED NOT NULL DEFAULT 1,
   `publish_up` datetime DEFAULT NULL,
   `publish_down` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_tags`
+-- Dumping data for table `buf3w_tags`
 --
 
 INSERT INTO `buf3w_tags` (`id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `title`, `alias`, `note`, `description`, `published`, `checked_out`, `checked_out_time`, `access`, `params`, `metadesc`, `metakey`, `metadata`, `created_user_id`, `created_time`, `created_by_alias`, `modified_user_id`, `modified_time`, `images`, `urls`, `hits`, `language`, `version`, `publish_up`, `publish_down`) VALUES
@@ -4806,16 +7862,16 @@ INSERT INTO `buf3w_tags` (`id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `tit
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_template_overrides`
+-- Table structure for table `buf3w_template_overrides`
 --
 
 CREATE TABLE `buf3w_template_overrides` (
   `id` int(10) UNSIGNED NOT NULL,
-  `template` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `hash_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `template` varchar(50) NOT NULL DEFAULT '',
+  `hash_id` varchar(255) NOT NULL DEFAULT '',
   `extension_id` int(11) DEFAULT 0,
   `state` tinyint(4) NOT NULL DEFAULT 0,
-  `action` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `action` varchar(50) NOT NULL DEFAULT '',
   `client_id` tinyint(3) UNSIGNED NOT NULL DEFAULT 0,
   `created_date` datetime NOT NULL,
   `modified_date` datetime DEFAULT NULL
@@ -4824,22 +7880,22 @@ CREATE TABLE `buf3w_template_overrides` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_template_styles`
+-- Table structure for table `buf3w_template_styles`
 --
 
 CREATE TABLE `buf3w_template_styles` (
   `id` int(10) UNSIGNED NOT NULL,
-  `template` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `template` varchar(50) NOT NULL DEFAULT '',
   `client_id` tinyint(3) UNSIGNED NOT NULL DEFAULT 0,
-  `home` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '0',
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `home` char(7) NOT NULL DEFAULT '0',
+  `title` varchar(255) NOT NULL DEFAULT '',
   `inheritable` tinyint(4) NOT NULL DEFAULT 0,
-  `parent` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT '',
-  `params` text COLLATE utf8mb4_unicode_ci NOT NULL
+  `parent` varchar(50) DEFAULT '',
+  `params` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_template_styles`
+-- Dumping data for table `buf3w_template_styles`
 --
 
 INSERT INTO `buf3w_template_styles` (`id`, `template`, `client_id`, `home`, `title`, `inheritable`, `parent`, `params`) VALUES
@@ -4849,7 +7905,154 @@ INSERT INTO `buf3w_template_styles` (`id`, `template`, `client_id`, `home`, `tit
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_ucm_base`
+-- Table structure for table `buf3w_tfm_bounces`
+--
+
+CREATE TABLE `buf3w_tfm_bounces` (
+  `id` int(11) NOT NULL,
+  `published` tinyint(3) DEFAULT NULL,
+  `subject` varchar(400) DEFAULT NULL,
+  `bounce_email` varchar(400) DEFAULT NULL,
+  `size` varchar(100) DEFAULT NULL,
+  `fromaddress` varchar(1024) DEFAULT NULL,
+  `fromname` varchar(1024) DEFAULT NULL,
+  `emailDate` varchar(100) DEFAULT NULL,
+  `message` text DEFAULT NULL,
+  `message_plain` text DEFAULT NULL,
+  `created` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_tfm_campaign`
+--
+
+CREATE TABLE `buf3w_tfm_campaign` (
+  `id` int(11) NOT NULL,
+  `title` varchar(400) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `published` tinyint(3) DEFAULT NULL,
+  `priority` tinyint(3) DEFAULT NULL,
+  `mails` text DEFAULT NULL,
+  `filter` text DEFAULT NULL,
+  `note` varchar(255) DEFAULT NULL,
+  `onregister` tinyint(3) DEFAULT NULL,
+  `onmodify` tinyint(3) DEFAULT NULL,
+  `created_by` int(10) UNSIGNED DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_tfm_campsub`
+--
+
+CREATE TABLE `buf3w_tfm_campsub` (
+  `camp_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `remarks` varchar(1024) DEFAULT NULL,
+  `created` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_tfm_links`
+--
+
+CREATE TABLE `buf3w_tfm_links` (
+  `id` int(11) NOT NULL,
+  `title` varchar(400) DEFAULT NULL,
+  `link_text` varchar(400) DEFAULT NULL,
+  `link_url` varchar(400) DEFAULT NULL,
+  `campaign_id` int(11) DEFAULT NULL,
+  `mail_id` int(11) DEFAULT NULL,
+  `email_delay` tinyint(3) DEFAULT NULL,
+  `message` varchar(1024) DEFAULT NULL,
+  `published` tinyint(3) DEFAULT NULL,
+  `note` varchar(255) DEFAULT NULL,
+  `created_by` int(10) UNSIGNED DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_tfm_mail`
+--
+
+CREATE TABLE `buf3w_tfm_mail` (
+  `id` int(11) NOT NULL,
+  `title` varchar(400) DEFAULT NULL,
+  `description` longtext DEFAULT NULL,
+  `text_body` longtext DEFAULT NULL,
+  `send_date` datetime DEFAULT NULL,
+  `schedule` tinyint(3) DEFAULT NULL,
+  `published` tinyint(3) DEFAULT NULL,
+  `mail_type` varchar(100) DEFAULT NULL,
+  `frequency` smallint(3) DEFAULT NULL,
+  `check_for_new` tinyint(3) DEFAULT NULL,
+  `note` varchar(255) DEFAULT NULL,
+  `attach` varchar(400) DEFAULT NULL,
+  `priority` tinyint(3) DEFAULT NULL,
+  `filter` text DEFAULT NULL,
+  `sent` int(11) NOT NULL DEFAULT 0,
+  `params` text DEFAULT NULL,
+  `created_by` int(10) UNSIGNED DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `buf3w_tfm_mail`
+--
+
+INSERT INTO `buf3w_tfm_mail` (`id`, `title`, `description`, `text_body`, `send_date`, `schedule`, `published`, `mail_type`, `frequency`, `check_for_new`, `note`, `attach`, `priority`, `filter`, `sent`, `params`, `created_by`, `created`, `modified`) VALUES
+(1, 'test', '<p>test</p>', '', '2023-06-12 22:03:24', 1, -2, 'newsletter', 0, 0, '', '', 4, '{\"filter\":\"\",\"filterusers\":\"\"}', 0, '{\"trigger_email\":\"0\",\"email_delay\":\"0\",\"trigger_campaign\":\"0\",\"save_user_cf\":\"0\",\"user_cfs\":\"\"}', 588, '2023-06-12 19:56:53', '2023-06-12 20:02:43'),
+(2, 'test', '<p>test</p>', '', '2023-06-12 20:16:57', 0, 1, 'newsletter', 0, 0, '', '', 4, '{\"filter\":\"\",\"filterusers\":\"\"}', 0, '{\"trigger_email\":\"0\",\"email_delay\":\"0\",\"trigger_campaign\":\"0\",\"save_user_cf\":\"0\",\"user_cfs\":\"\"}', 588, '2023-06-12 20:17:05', '2023-06-12 20:17:05');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_tfm_queue`
+--
+
+CREATE TABLE `buf3w_tfm_queue` (
+  `mail_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `send_date` datetime DEFAULT NULL,
+  `priority` tinyint(3) NOT NULL DEFAULT 3,
+  `replaces` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_tfm_statistics`
+--
+
+CREATE TABLE `buf3w_tfm_statistics` (
+  `id` int(11) NOT NULL,
+  `published` tinyint(3) DEFAULT NULL,
+  `type` varchar(100) DEFAULT NULL,
+  `mail_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `link_id` int(11) DEFAULT NULL,
+  `send_date` datetime DEFAULT NULL,
+  `open_date` datetime DEFAULT NULL,
+  `click_date` datetime DEFAULT NULL,
+  `opens` int(11) DEFAULT NULL,
+  `clicks` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buf3w_ucm_base`
 --
 
 CREATE TABLE `buf3w_ucm_base` (
@@ -4862,39 +8065,39 @@ CREATE TABLE `buf3w_ucm_base` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_ucm_content`
+-- Table structure for table `buf3w_ucm_content`
 --
 
 CREATE TABLE `buf3w_ucm_content` (
   `core_content_id` int(10) UNSIGNED NOT NULL,
-  `core_type_alias` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'FK to the content types table',
-  `core_title` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `core_type_alias` varchar(400) NOT NULL DEFAULT '' COMMENT 'FK to the content types table',
+  `core_title` varchar(400) NOT NULL DEFAULT '',
   `core_alias` varchar(400) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '',
-  `core_body` mediumtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `core_body` mediumtext DEFAULT NULL,
   `core_state` tinyint(4) NOT NULL DEFAULT 0,
   `core_checked_out_time` datetime DEFAULT NULL,
   `core_checked_out_user_id` int(10) UNSIGNED DEFAULT NULL,
   `core_access` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `core_params` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `core_params` text DEFAULT NULL,
   `core_featured` tinyint(3) UNSIGNED NOT NULL DEFAULT 0,
-  `core_metadata` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'JSON encoded metadata properties.',
+  `core_metadata` varchar(2048) NOT NULL DEFAULT '' COMMENT 'JSON encoded metadata properties.',
   `core_created_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `core_created_by_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `core_created_by_alias` varchar(255) NOT NULL DEFAULT '',
   `core_created_time` datetime NOT NULL,
   `core_modified_user_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Most recent user that modified',
   `core_modified_time` datetime NOT NULL,
-  `core_language` char(7) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `core_language` char(7) NOT NULL DEFAULT '',
   `core_publish_up` datetime DEFAULT NULL,
   `core_publish_down` datetime DEFAULT NULL,
   `core_content_item_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'ID from the individual type table',
   `asset_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'FK to the #__assets table.',
-  `core_images` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `core_urls` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `core_images` text DEFAULT NULL,
+  `core_urls` text DEFAULT NULL,
   `core_hits` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `core_version` int(10) UNSIGNED NOT NULL DEFAULT 1,
   `core_ordering` int(11) NOT NULL DEFAULT 0,
-  `core_metakey` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `core_metadesc` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `core_metakey` text DEFAULT NULL,
+  `core_metadesc` text DEFAULT NULL,
   `core_catid` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `core_type_id` int(10) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Contains core content data in name spaced fields';
@@ -4902,116 +8105,120 @@ CREATE TABLE `buf3w_ucm_content` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_updates`
+-- Table structure for table `buf3w_updates`
 --
 
 CREATE TABLE `buf3w_updates` (
   `update_id` int(11) NOT NULL,
   `update_site_id` int(11) DEFAULT 0,
   `extension_id` int(11) DEFAULT 0,
-  `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '',
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `element` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '',
-  `type` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT '',
-  `folder` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT '',
+  `name` varchar(100) DEFAULT '',
+  `description` text NOT NULL,
+  `element` varchar(100) DEFAULT '',
+  `type` varchar(20) DEFAULT '',
+  `folder` varchar(20) DEFAULT '',
   `client_id` tinyint(4) DEFAULT 0,
-  `version` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT '',
-  `data` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `detailsurl` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `infourl` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `changelogurl` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `extra_query` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT ''
+  `version` varchar(32) DEFAULT '',
+  `data` text NOT NULL,
+  `detailsurl` text NOT NULL,
+  `infourl` text NOT NULL,
+  `changelogurl` text DEFAULT NULL,
+  `extra_query` varchar(1000) DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Available Updates';
 
 --
--- Zrzut danych tabeli `buf3w_updates`
+-- Dumping data for table `buf3w_updates`
 --
 
 INSERT INTO `buf3w_updates` (`update_id`, `update_site_id`, `extension_id`, `name`, `description`, `element`, `type`, `folder`, `client_id`, `version`, `data`, `detailsurl`, `infourl`, `changelogurl`, `extra_query`) VALUES
-(105, 2, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/af-ZA_details.xml', '', '', ''),
-(106, 2, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '4.0.2.1', '', 'https://update.joomla.org/language/details4/ar-AA_details.xml', '', '', ''),
-(107, 2, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '4.2.8.2', '', 'https://update.joomla.org/language/details4/bg-BG_details.xml', '', '', ''),
-(108, 2, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '4.0.4.2', '', 'https://update.joomla.org/language/details4/ca-ES_details.xml', '', '', ''),
-(109, 2, 0, 'Chinese, Simplified', '', 'pkg_zh-CN', 'package', '', 0, '4.3.0.2', '', 'https://update.joomla.org/language/details4/zh-CN_details.xml', '', '', ''),
-(110, 2, 0, 'Chinese, Traditional', '', 'pkg_zh-TW', 'package', '', 0, '4.2.3.1', '', 'https://update.joomla.org/language/details4/zh-TW_details.xml', '', '', ''),
-(111, 2, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/hr-HR_details.xml', '', '', ''),
-(112, 2, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/cs-CZ_details.xml', '', '', ''),
-(113, 2, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/da-DK_details.xml', '', '', ''),
-(114, 2, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/nl-NL_details.xml', '', '', ''),
-(115, 2, 0, 'English, Australia', '', 'pkg_en-AU', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/en-AU_details.xml', '', '', ''),
-(116, 2, 0, 'English, Canada', '', 'pkg_en-CA', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/en-CA_details.xml', '', '', ''),
-(117, 2, 0, 'English, New Zealand', '', 'pkg_en-NZ', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/en-NZ_details.xml', '', '', ''),
-(118, 2, 0, 'English, USA', '', 'pkg_en-US', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/en-US_details.xml', '', '', ''),
-(119, 2, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '4.3.0.1', '', 'https://update.joomla.org/language/details4/et-EE_details.xml', '', '', ''),
-(120, 2, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '4.1.1.2', '', 'https://update.joomla.org/language/details4/fi-FI_details.xml', '', '', ''),
-(121, 2, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/nl-BE_details.xml', '', '', ''),
-(122, 2, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/fr-FR_details.xml', '', '', ''),
-(123, 2, 0, 'Georgian', '', 'pkg_ka-GE', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/ka-GE_details.xml', '', '', ''),
-(124, 2, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/de-DE_details.xml', '', '', ''),
-(125, 2, 0, 'German, Austria', '', 'pkg_de-AT', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/de-AT_details.xml', '', '', ''),
-(126, 2, 0, 'German, Liechtenstein', '', 'pkg_de-LI', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/de-LI_details.xml', '', '', ''),
-(127, 2, 0, 'German, Luxembourg', '', 'pkg_de-LU', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/de-LU_details.xml', '', '', ''),
-(128, 2, 0, 'German, Switzerland', '', 'pkg_de-CH', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/de-CH_details.xml', '', '', ''),
-(129, 2, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/el-GR_details.xml', '', '', ''),
-(130, 2, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/hu-HU_details.xml', '', '', ''),
-(131, 2, 0, 'Irish', '', 'pkg_ga-IE', 'package', '', 0, '4.2.8.1', '', 'https://update.joomla.org/language/details4/ga-IE_details.xml', '', '', ''),
-(132, 2, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/it-IT_details.xml', '', '', ''),
-(133, 2, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/ja-JP_details.xml', '', '', ''),
-(134, 2, 0, 'Kazakh', '', 'pkg_kk-KZ', 'package', '', 0, '4.1.2.1', '', 'https://update.joomla.org/language/details4/kk-KZ_details.xml', '', '', ''),
-(135, 2, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/lv-LV_details.xml', '', '', ''),
-(136, 2, 0, 'Lithuanian', '', 'pkg_lt-LT', 'package', '', 0, '4.2.9.1', '', 'https://update.joomla.org/language/details4/lt-LT_details.xml', '', '', ''),
-(137, 2, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '4.2.4.1', '', 'https://update.joomla.org/language/details4/mk-MK_details.xml', '', '', ''),
-(138, 2, 0, 'Norwegian Bokmål', '', 'pkg_nb-NO', 'package', '', 0, '4.0.1.1', '', 'https://update.joomla.org/language/details4/nb-NO_details.xml', '', '', ''),
-(139, 2, 0, 'Persian Farsi', '', 'pkg_fa-IR', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/fa-IR_details.xml', '', '', ''),
-(140, 2, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '4.2.8.2', '', 'https://update.joomla.org/language/details4/pl-PL_details.xml', '', '', ''),
-(141, 2, 0, 'Portuguese, Brazil', '', 'pkg_pt-BR', 'package', '', 0, '4.0.3.1', '', 'https://update.joomla.org/language/details4/pt-BR_details.xml', '', '', ''),
-(142, 2, 0, 'Portuguese, Portugal', '', 'pkg_pt-PT', 'package', '', 0, '4.0.0-rc4.2', '', 'https://update.joomla.org/language/details4/pt-PT_details.xml', '', '', ''),
-(143, 2, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/ro-RO_details.xml', '', '', ''),
-(144, 2, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/ru-RU_details.xml', '', '', ''),
-(145, 2, 0, 'Serbian, Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/sr-RS_details.xml', '', '', ''),
-(146, 2, 0, 'Serbian, Latin', '', 'pkg_sr-YU', 'package', '', 0, '4.3.2.2', '', 'https://update.joomla.org/language/details4/sr-YU_details.xml', '', '', ''),
-(147, 2, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '4.3.0.1', '', 'https://update.joomla.org/language/details4/sk-SK_details.xml', '', '', ''),
-(148, 2, 0, 'Slovenian', '', 'pkg_sl-SI', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/sl-SI_details.xml', '', '', ''),
-(149, 2, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '4.2.3.1', '', 'https://update.joomla.org/language/details4/es-ES_details.xml', '', '', ''),
-(150, 2, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '4.3.2.2', '', 'https://update.joomla.org/language/details4/sv-SE_details.xml', '', '', ''),
-(151, 2, 0, 'Tamil, India', '', 'pkg_ta-IN', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/ta-IN_details.xml', '', '', ''),
-(152, 2, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/th-TH_details.xml', '', '', ''),
-(153, 2, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/tr-TR_details.xml', '', '', ''),
-(154, 2, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/uk-UA_details.xml', '', '', ''),
-(155, 2, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '4.2.2.1', '', 'https://update.joomla.org/language/details4/vi-VN_details.xml', '', '', ''),
-(156, 2, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/cy-GB_details.xml', '', '', '');
+(313, 2, 0, 'Afrikaans', '', 'pkg_af-ZA', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/af-ZA_details.xml', '', '', ''),
+(314, 2, 0, 'Arabic Unitag', '', 'pkg_ar-AA', 'package', '', 0, '4.0.2.1', '', 'https://update.joomla.org/language/details4/ar-AA_details.xml', '', '', ''),
+(315, 2, 0, 'Bulgarian', '', 'pkg_bg-BG', 'package', '', 0, '4.2.8.2', '', 'https://update.joomla.org/language/details4/bg-BG_details.xml', '', '', ''),
+(316, 2, 0, 'Catalan', '', 'pkg_ca-ES', 'package', '', 0, '4.0.4.2', '', 'https://update.joomla.org/language/details4/ca-ES_details.xml', '', '', ''),
+(317, 2, 0, 'Chinese, Simplified', '', 'pkg_zh-CN', 'package', '', 0, '4.3.0.2', '', 'https://update.joomla.org/language/details4/zh-CN_details.xml', '', '', ''),
+(318, 2, 0, 'Chinese, Traditional', '', 'pkg_zh-TW', 'package', '', 0, '4.2.3.1', '', 'https://update.joomla.org/language/details4/zh-TW_details.xml', '', '', ''),
+(319, 2, 0, 'Croatian', '', 'pkg_hr-HR', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/hr-HR_details.xml', '', '', ''),
+(320, 2, 0, 'Czech', '', 'pkg_cs-CZ', 'package', '', 0, '4.3.1.2', '', 'https://update.joomla.org/language/details4/cs-CZ_details.xml', '', '', ''),
+(321, 2, 0, 'Danish', '', 'pkg_da-DK', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/da-DK_details.xml', '', '', ''),
+(322, 2, 0, 'Dutch', '', 'pkg_nl-NL', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/nl-NL_details.xml', '', '', ''),
+(323, 2, 0, 'English, Australia', '', 'pkg_en-AU', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/en-AU_details.xml', '', '', ''),
+(324, 2, 0, 'English, Canada', '', 'pkg_en-CA', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/en-CA_details.xml', '', '', ''),
+(325, 2, 0, 'English, New Zealand', '', 'pkg_en-NZ', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/en-NZ_details.xml', '', '', ''),
+(326, 2, 0, 'English, USA', '', 'pkg_en-US', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/en-US_details.xml', '', '', ''),
+(327, 2, 0, 'Estonian', '', 'pkg_et-EE', 'package', '', 0, '4.3.0.1', '', 'https://update.joomla.org/language/details4/et-EE_details.xml', '', '', ''),
+(328, 2, 0, 'Finnish', '', 'pkg_fi-FI', 'package', '', 0, '4.1.1.2', '', 'https://update.joomla.org/language/details4/fi-FI_details.xml', '', '', ''),
+(329, 2, 0, 'Flemish', '', 'pkg_nl-BE', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/nl-BE_details.xml', '', '', ''),
+(330, 2, 0, 'French', '', 'pkg_fr-FR', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/fr-FR_details.xml', '', '', ''),
+(331, 2, 0, 'Georgian', '', 'pkg_ka-GE', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/ka-GE_details.xml', '', '', ''),
+(332, 2, 0, 'German', '', 'pkg_de-DE', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/de-DE_details.xml', '', '', ''),
+(333, 2, 0, 'German, Austria', '', 'pkg_de-AT', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/de-AT_details.xml', '', '', ''),
+(334, 2, 0, 'German, Liechtenstein', '', 'pkg_de-LI', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/de-LI_details.xml', '', '', ''),
+(335, 2, 0, 'German, Luxembourg', '', 'pkg_de-LU', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/de-LU_details.xml', '', '', ''),
+(336, 2, 0, 'German, Switzerland', '', 'pkg_de-CH', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/de-CH_details.xml', '', '', ''),
+(337, 2, 0, 'Greek', '', 'pkg_el-GR', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/el-GR_details.xml', '', '', ''),
+(338, 2, 0, 'Hungarian', '', 'pkg_hu-HU', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/hu-HU_details.xml', '', '', ''),
+(339, 2, 0, 'Irish', '', 'pkg_ga-IE', 'package', '', 0, '4.2.8.1', '', 'https://update.joomla.org/language/details4/ga-IE_details.xml', '', '', ''),
+(340, 2, 0, 'Italian', '', 'pkg_it-IT', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/it-IT_details.xml', '', '', ''),
+(341, 2, 0, 'Japanese', '', 'pkg_ja-JP', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/ja-JP_details.xml', '', '', ''),
+(342, 2, 0, 'Kazakh', '', 'pkg_kk-KZ', 'package', '', 0, '4.1.2.1', '', 'https://update.joomla.org/language/details4/kk-KZ_details.xml', '', '', ''),
+(343, 2, 0, 'Latvian', '', 'pkg_lv-LV', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/lv-LV_details.xml', '', '', ''),
+(344, 2, 0, 'Lithuanian', '', 'pkg_lt-LT', 'package', '', 0, '4.2.9.1', '', 'https://update.joomla.org/language/details4/lt-LT_details.xml', '', '', ''),
+(345, 2, 0, 'Macedonian', '', 'pkg_mk-MK', 'package', '', 0, '4.2.4.1', '', 'https://update.joomla.org/language/details4/mk-MK_details.xml', '', '', ''),
+(346, 2, 0, 'Norwegian Bokmål', '', 'pkg_nb-NO', 'package', '', 0, '4.0.1.1', '', 'https://update.joomla.org/language/details4/nb-NO_details.xml', '', '', ''),
+(347, 2, 0, 'Persian Farsi', '', 'pkg_fa-IR', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/fa-IR_details.xml', '', '', ''),
+(348, 2, 0, 'Polish', '', 'pkg_pl-PL', 'package', '', 0, '4.2.8.2', '', 'https://update.joomla.org/language/details4/pl-PL_details.xml', '', '', ''),
+(349, 2, 0, 'Portuguese, Brazil', '', 'pkg_pt-BR', 'package', '', 0, '4.0.3.1', '', 'https://update.joomla.org/language/details4/pt-BR_details.xml', '', '', ''),
+(350, 2, 0, 'Portuguese, Portugal', '', 'pkg_pt-PT', 'package', '', 0, '4.0.0-rc4.2', '', 'https://update.joomla.org/language/details4/pt-PT_details.xml', '', '', ''),
+(351, 2, 0, 'Romanian', '', 'pkg_ro-RO', 'package', '', 0, '4.3.1.1', '', 'https://update.joomla.org/language/details4/ro-RO_details.xml', '', '', ''),
+(352, 2, 0, 'Russian', '', 'pkg_ru-RU', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/ru-RU_details.xml', '', '', ''),
+(353, 2, 0, 'Serbian, Cyrillic', '', 'pkg_sr-RS', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/sr-RS_details.xml', '', '', ''),
+(354, 2, 0, 'Serbian, Latin', '', 'pkg_sr-YU', 'package', '', 0, '4.3.2.2', '', 'https://update.joomla.org/language/details4/sr-YU_details.xml', '', '', ''),
+(355, 2, 0, 'Slovak', '', 'pkg_sk-SK', 'package', '', 0, '4.3.0.1', '', 'https://update.joomla.org/language/details4/sk-SK_details.xml', '', '', ''),
+(356, 2, 0, 'Slovenian', '', 'pkg_sl-SI', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/sl-SI_details.xml', '', '', ''),
+(357, 2, 0, 'Spanish', '', 'pkg_es-ES', 'package', '', 0, '4.2.3.1', '', 'https://update.joomla.org/language/details4/es-ES_details.xml', '', '', ''),
+(358, 2, 0, 'Swedish', '', 'pkg_sv-SE', 'package', '', 0, '4.3.2.2', '', 'https://update.joomla.org/language/details4/sv-SE_details.xml', '', '', ''),
+(359, 2, 0, 'Tamil, India', '', 'pkg_ta-IN', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/ta-IN_details.xml', '', '', ''),
+(360, 2, 0, 'Thai', '', 'pkg_th-TH', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/th-TH_details.xml', '', '', ''),
+(361, 2, 0, 'Turkish', '', 'pkg_tr-TR', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/tr-TR_details.xml', '', '', ''),
+(362, 2, 0, 'Ukrainian', '', 'pkg_uk-UA', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/uk-UA_details.xml', '', '', ''),
+(363, 2, 0, 'Vietnamese', '', 'pkg_vi-VN', 'package', '', 0, '4.2.2.1', '', 'https://update.joomla.org/language/details4/vi-VN_details.xml', '', '', ''),
+(364, 2, 0, 'Welsh', '', 'pkg_cy-GB', 'package', '', 0, '4.3.2.1', '', 'https://update.joomla.org/language/details4/cy-GB_details.xml', '', '', '');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_update_sites`
+-- Table structure for table `buf3w_update_sites`
 --
 
 CREATE TABLE `buf3w_update_sites` (
   `update_site_id` int(11) NOT NULL,
-  `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '',
-  `type` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT '',
-  `location` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) DEFAULT '',
+  `type` varchar(20) DEFAULT '',
+  `location` text NOT NULL,
   `enabled` int(11) DEFAULT 0,
   `last_check_timestamp` bigint(20) DEFAULT 0,
-  `extra_query` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT '',
+  `extra_query` varchar(1000) DEFAULT '',
   `checked_out` int(10) UNSIGNED DEFAULT NULL,
   `checked_out_time` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Update Sites';
 
 --
--- Zrzut danych tabeli `buf3w_update_sites`
+-- Dumping data for table `buf3w_update_sites`
 --
 
 INSERT INTO `buf3w_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`, `checked_out`, `checked_out_time`) VALUES
-(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1686122113, '', NULL, NULL),
-(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_4.xml', 1, 1686122228, '', NULL, NULL),
-(3, 'Joomla! Update Component', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1686122229, '', NULL, NULL);
+(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1686599988, '', NULL, NULL),
+(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_4.xml', 1, 1686599991, '', NULL, NULL),
+(3, 'Joomla! Update Component', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1686599991, '', NULL, NULL),
+(4, 'CComment Core', 'extension', 'https://compojoom.com/index.php?option=com_ars&view=update&task=stream&format=xml&id=16&dummy=extension.xml', 1, 1686599991, '', NULL, NULL),
+(5, 'COM_PHOCADOWNLOAD', 'extension', 'https://raw.githubusercontent.com/PhocaCz/PhocaDownload/master/manifest.xml', 1, 1686599991, '', NULL, NULL),
+(12, 'TF Mail', 'extension', 'https://updates.techfry.com/components/tfmail_free.xml', 1, 1686599992, '', NULL, NULL),
+(13, 'Tech Fry Library', 'extension', 'https://updates.techfry.com/libraries/techfry.xml', 1, 1686599992, '', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_update_sites_extensions`
+-- Table structure for table `buf3w_update_sites_extensions`
 --
 
 CREATE TABLE `buf3w_update_sites_extensions` (
@@ -5020,18 +8227,22 @@ CREATE TABLE `buf3w_update_sites_extensions` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Links extensions to update sites';
 
 --
--- Zrzut danych tabeli `buf3w_update_sites_extensions`
+-- Dumping data for table `buf3w_update_sites_extensions`
 --
 
 INSERT INTO `buf3w_update_sites_extensions` (`update_site_id`, `extension_id`) VALUES
 (1, 227),
 (2, 228),
-(3, 24);
+(3, 24),
+(4, 232),
+(5, 237),
+(12, 245),
+(13, 246);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_usergroups`
+-- Table structure for table `buf3w_usergroups`
 --
 
 CREATE TABLE `buf3w_usergroups` (
@@ -5039,11 +8250,11 @@ CREATE TABLE `buf3w_usergroups` (
   `parent_id` int(10) UNSIGNED NOT NULL DEFAULT 0 COMMENT 'Adjacency List Reference Id',
   `lft` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set lft.',
   `rgt` int(11) NOT NULL DEFAULT 0 COMMENT 'Nested set rgt.',
-  `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ''
+  `title` varchar(100) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_usergroups`
+-- Dumping data for table `buf3w_usergroups`
 --
 
 INSERT INTO `buf3w_usergroups` (`id`, `parent_id`, `lft`, `rgt`, `title`) VALUES
@@ -5060,71 +8271,76 @@ INSERT INTO `buf3w_usergroups` (`id`, `parent_id`, `lft`, `rgt`, `title`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_users`
+-- Table structure for table `buf3w_users`
 --
 
 CREATE TABLE `buf3w_users` (
   `id` int(11) NOT NULL,
-  `name` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `username` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `password` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `name` varchar(400) NOT NULL DEFAULT '',
+  `username` varchar(150) NOT NULL DEFAULT '',
+  `email` varchar(100) NOT NULL DEFAULT '',
+  `password` varchar(100) NOT NULL DEFAULT '',
   `block` tinyint(4) NOT NULL DEFAULT 0,
   `sendEmail` tinyint(4) DEFAULT 0,
   `registerDate` datetime NOT NULL,
   `lastvisitDate` datetime DEFAULT NULL,
-  `activation` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `params` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `activation` varchar(100) NOT NULL DEFAULT '',
+  `params` text NOT NULL,
   `lastResetTime` datetime DEFAULT NULL COMMENT 'Date of last password reset',
   `resetCount` int(11) NOT NULL DEFAULT 0 COMMENT 'Count of password resets since lastResetTime',
-  `otpKey` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'Two factor authentication encrypted keys',
-  `otep` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'Backup Codes',
+  `otpKey` varchar(1000) NOT NULL DEFAULT '' COMMENT 'Two factor authentication encrypted keys',
+  `otep` varchar(1000) NOT NULL DEFAULT '' COMMENT 'Backup Codes',
   `requireReset` tinyint(4) NOT NULL DEFAULT 0 COMMENT 'Require user to reset password on next login',
-  `authProvider` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'Name of used authentication plugin'
+  `authProvider` varchar(100) NOT NULL DEFAULT '' COMMENT 'Name of used authentication plugin'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_users`
+-- Dumping data for table `buf3w_users`
 --
 
 INSERT INTO `buf3w_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`, `authProvider`) VALUES
-(588, 'Kacper', 'Admin', 'example@example.example', '$2y$10$xCUHT8xmIsGBq1Mp7lEqDeWQdDURi3oL52SQIVKpXSfgoV4rYs34O', 0, 1, '2023-06-06 05:52:07', '2023-06-07 07:17:05', '0', '', NULL, 0, '', '', 0, '');
+(588, 'Admin', 'Admin', 'kapiwlkp33@gmail.com', '$2y$10$xCUHT8xmIsGBq1Mp7lEqDeWQdDURi3oL52SQIVKpXSfgoV4rYs34O', 0, 1, '2023-06-06 05:52:07', '2023-06-12 19:29:11', '0', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\",\"a11y_mono\":\"0\",\"a11y_contrast\":\"0\",\"a11y_highlight\":\"0\",\"a11y_font\":\"0\"}', NULL, 0, '', '', 0, ''),
+(589, 'Gość', 'Gosc', 'example@example.com', '$2y$10$Kx9w0Ga.QqEUs8pM8SgrpeXUXf2bprxBtsydPlR.mRkNpJFNkaome', 0, 0, '2023-06-12 18:21:16', NULL, '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\",\"a11y_mono\":\"0\",\"a11y_contrast\":\"0\",\"a11y_highlight\":\"0\",\"a11y_font\":\"0\"}', NULL, 0, '', '', 0, ''),
+(590, 'Autor', 'Autor', 'example1@example.com', '$2y$10$4zum8jaJwKZQNJolsobW2.hbb5OfiouWMhzPrOt2eKpP9MaIL9Dla', 0, 0, '2023-06-12 18:22:40', NULL, '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\",\"a11y_mono\":\"0\",\"a11y_contrast\":\"0\",\"a11y_highlight\":\"0\",\"a11y_font\":\"0\"}', NULL, 0, '', '', 0, ''),
+(591, 'Edytor', 'Edytor', 'example2@example.com', '$2y$10$B2Yx9O.eCh5FQ33XVxvMHe5jWsj/6vD5jrxaDMSPR9xw0fpGP0YL2', 0, 0, '2023-06-12 18:26:06', NULL, '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\",\"a11y_mono\":\"0\",\"a11y_contrast\":\"0\",\"a11y_highlight\":\"0\",\"a11y_font\":\"0\"}', NULL, 0, '', '', 0, ''),
+(592, 'Publicysta', 'Publicysta', 'example3@example.com', '$2y$10$hQOK66zh7D45Wh884.3K5uy3dlNssrtq1TumXJMaaDjgkuZbCGcDy', 0, 0, '2023-06-12 18:28:07', NULL, '', '{\"admin_style\":\"\",\"admin_language\":\"\",\"language\":\"\",\"editor\":\"\",\"timezone\":\"\",\"a11y_mono\":\"0\",\"a11y_contrast\":\"0\",\"a11y_highlight\":\"0\",\"a11y_font\":\"0\"}', NULL, 0, '', '', 0, '');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_user_keys`
+-- Table structure for table `buf3w_user_keys`
 --
 
 CREATE TABLE `buf3w_user_keys` (
   `id` int(10) UNSIGNED NOT NULL,
-  `user_id` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `series` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `time` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `uastring` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
+  `user_id` varchar(150) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `series` varchar(191) NOT NULL,
+  `time` varchar(200) NOT NULL,
+  `uastring` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_user_keys`
+-- Dumping data for table `buf3w_user_keys`
 --
 
 INSERT INTO `buf3w_user_keys` (`id`, `user_id`, `token`, `series`, `time`, `uastring`) VALUES
-(1, 'Admin', '$2y$10$r1MdiGxyfl4jlhatu4TCV.8.e6K4edJ6MOQgKYdy/MqRQdchdTSaO', 'uZlv7S2fu53tZgBIBzY0', '1691214989', 'joomla_remember_me_f49f022310e1bbca744a66c8de53c8d3');
+(1, 'Admin', '$2y$10$r1MdiGxyfl4jlhatu4TCV.8.e6K4edJ6MOQgKYdy/MqRQdchdTSaO', 'uZlv7S2fu53tZgBIBzY0', '1691214989', 'joomla_remember_me_f49f022310e1bbca744a66c8de53c8d3'),
+(3, 'Admin', '$2y$10$y89iJr5b5y/l6cXlAo78K.zXK293uV53D7K3FsRkhGV1MxjugUS0a', 'ts9rYIzEIKRfxYNmMUZq', '1691778705', 'joomla_remember_me_14e2df687ea8366975aed9bba7fc0005');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_user_mfa`
+-- Table structure for table `buf3w_user_mfa`
 --
 
 CREATE TABLE `buf3w_user_mfa` (
   `id` int(11) NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `method` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) NOT NULL DEFAULT '',
+  `method` varchar(100) NOT NULL,
   `default` tinyint(4) NOT NULL DEFAULT 0,
-  `options` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `options` mediumtext NOT NULL,
   `created_on` datetime NOT NULL,
   `last_used` datetime DEFAULT NULL,
   `tries` int(11) NOT NULL DEFAULT 0,
@@ -5134,15 +8350,15 @@ CREATE TABLE `buf3w_user_mfa` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_user_notes`
+-- Table structure for table `buf3w_user_notes`
 --
 
 CREATE TABLE `buf3w_user_notes` (
   `id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL DEFAULT 0,
   `catid` int(10) UNSIGNED NOT NULL DEFAULT 0,
-  `subject` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
-  `body` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `subject` varchar(100) NOT NULL DEFAULT '',
+  `body` text NOT NULL,
   `state` tinyint(4) NOT NULL DEFAULT 0,
   `checked_out` int(10) UNSIGNED DEFAULT NULL,
   `checked_out_time` datetime DEFAULT NULL,
@@ -5158,20 +8374,28 @@ CREATE TABLE `buf3w_user_notes` (
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_user_profiles`
+-- Table structure for table `buf3w_user_profiles`
 --
 
 CREATE TABLE `buf3w_user_profiles` (
   `user_id` int(11) NOT NULL,
-  `profile_key` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `profile_value` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `profile_key` varchar(100) NOT NULL,
+  `profile_value` text NOT NULL,
   `ordering` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Simple user profile storage table';
+
+--
+-- Dumping data for table `buf3w_user_profiles`
+--
+
+INSERT INTO `buf3w_user_profiles` (`user_id`, `profile_key`, `profile_value`, `ordering`) VALUES
+(588, 'joomlatoken.enabled', '1', 2),
+(588, 'joomlatoken.token', 'iXdkpFqvYMIg76/9vrVw6nZ3Jns81GH0VdMfB2/ViMA=', 1);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_user_usergroup_map`
+-- Table structure for table `buf3w_user_usergroup_map`
 --
 
 CREATE TABLE `buf3w_user_usergroup_map` (
@@ -5180,27 +8404,31 @@ CREATE TABLE `buf3w_user_usergroup_map` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_user_usergroup_map`
+-- Dumping data for table `buf3w_user_usergroup_map`
 --
 
 INSERT INTO `buf3w_user_usergroup_map` (`user_id`, `group_id`) VALUES
-(588, 8);
+(588, 8),
+(589, 9),
+(590, 3),
+(591, 4),
+(592, 5);
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_viewlevels`
+-- Table structure for table `buf3w_viewlevels`
 --
 
 CREATE TABLE `buf3w_viewlevels` (
   `id` int(10) UNSIGNED NOT NULL COMMENT 'Primary Key',
-  `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `title` varchar(100) NOT NULL DEFAULT '',
   `ordering` int(11) NOT NULL DEFAULT 0,
-  `rules` varchar(5120) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'JSON encoded access control.'
+  `rules` varchar(5120) NOT NULL COMMENT 'JSON encoded access control.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_viewlevels`
+-- Dumping data for table `buf3w_viewlevels`
 --
 
 INSERT INTO `buf3w_viewlevels` (`id`, `title`, `ordering`, `rules`) VALUES
@@ -5213,29 +8441,29 @@ INSERT INTO `buf3w_viewlevels` (`id`, `title`, `ordering`, `rules`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_webauthn_credentials`
+-- Table structure for table `buf3w_webauthn_credentials`
 --
 
 CREATE TABLE `buf3w_webauthn_credentials` (
-  `id` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Credential ID',
-  `user_id` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'User handle',
-  `label` varchar(190) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Human readable label',
-  `credential` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Credential source data, JSON format'
+  `id` varchar(1000) NOT NULL COMMENT 'Credential ID',
+  `user_id` varchar(128) NOT NULL COMMENT 'User handle',
+  `label` varchar(190) NOT NULL COMMENT 'Human readable label',
+  `credential` mediumtext NOT NULL COMMENT 'Credential source data, JSON format'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_workflows`
+-- Table structure for table `buf3w_workflows`
 --
 
 CREATE TABLE `buf3w_workflows` (
   `id` int(11) NOT NULL,
   `asset_id` int(11) DEFAULT 0,
   `published` tinyint(4) NOT NULL DEFAULT 0,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `extension` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `extension` varchar(50) NOT NULL,
   `default` tinyint(4) NOT NULL DEFAULT 0,
   `ordering` int(11) NOT NULL DEFAULT 0,
   `created` datetime NOT NULL,
@@ -5247,7 +8475,7 @@ CREATE TABLE `buf3w_workflows` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_workflows`
+-- Dumping data for table `buf3w_workflows`
 --
 
 INSERT INTO `buf3w_workflows` (`id`, `asset_id`, `published`, `title`, `description`, `extension`, `default`, `ordering`, `created`, `created_by`, `modified`, `modified_by`, `checked_out_time`, `checked_out`) VALUES
@@ -5256,17 +8484,17 @@ INSERT INTO `buf3w_workflows` (`id`, `asset_id`, `published`, `title`, `descript
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_workflow_associations`
+-- Table structure for table `buf3w_workflow_associations`
 --
 
 CREATE TABLE `buf3w_workflow_associations` (
   `item_id` int(11) NOT NULL DEFAULT 0 COMMENT 'Extension table id value',
   `stage_id` int(11) NOT NULL COMMENT 'Foreign Key to #__workflow_stages.id',
-  `extension` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL
+  `extension` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_workflow_associations`
+-- Dumping data for table `buf3w_workflow_associations`
 --
 
 INSERT INTO `buf3w_workflow_associations` (`item_id`, `stage_id`, `extension`) VALUES
@@ -5275,12 +8503,18 @@ INSERT INTO `buf3w_workflow_associations` (`item_id`, `stage_id`, `extension`) V
 (3, 1, 'com_content.article'),
 (4, 1, 'com_content.article'),
 (5, 1, 'com_content.article'),
-(6, 1, 'com_content.article');
+(6, 1, 'com_content.article'),
+(7, 1, 'com_content.article'),
+(8, 1, 'com_content.article'),
+(9, 1, 'com_content.article'),
+(10, 1, 'com_content.article'),
+(11, 1, 'com_content.article'),
+(12, 1, 'com_content.article');
 
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_workflow_stages`
+-- Table structure for table `buf3w_workflow_stages`
 --
 
 CREATE TABLE `buf3w_workflow_stages` (
@@ -5289,15 +8523,15 @@ CREATE TABLE `buf3w_workflow_stages` (
   `ordering` int(11) NOT NULL DEFAULT 0,
   `workflow_id` int(11) NOT NULL,
   `published` tinyint(4) NOT NULL DEFAULT 0,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` text NOT NULL,
   `default` tinyint(4) NOT NULL DEFAULT 0,
   `checked_out_time` datetime DEFAULT NULL,
   `checked_out` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_workflow_stages`
+-- Dumping data for table `buf3w_workflow_stages`
 --
 
 INSERT INTO `buf3w_workflow_stages` (`id`, `asset_id`, `ordering`, `workflow_id`, `published`, `title`, `description`, `default`, `checked_out_time`, `checked_out`) VALUES
@@ -5306,7 +8540,7 @@ INSERT INTO `buf3w_workflow_stages` (`id`, `asset_id`, `ordering`, `workflow_id`
 -- --------------------------------------------------------
 
 --
--- Struktura tabeli dla tabeli `buf3w_workflow_transitions`
+-- Table structure for table `buf3w_workflow_transitions`
 --
 
 CREATE TABLE `buf3w_workflow_transitions` (
@@ -5315,17 +8549,17 @@ CREATE TABLE `buf3w_workflow_transitions` (
   `ordering` int(11) NOT NULL DEFAULT 0,
   `workflow_id` int(11) NOT NULL,
   `published` tinyint(4) NOT NULL DEFAULT 0,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` text NOT NULL,
   `from_stage_id` int(11) NOT NULL,
   `to_stage_id` int(11) NOT NULL,
-  `options` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `options` text NOT NULL,
   `checked_out_time` datetime DEFAULT NULL,
   `checked_out` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Zrzut danych tabeli `buf3w_workflow_transitions`
+-- Dumping data for table `buf3w_workflow_transitions`
 --
 
 INSERT INTO `buf3w_workflow_transitions` (`id`, `asset_id`, `ordering`, `workflow_id`, `published`, `title`, `description`, `from_stage_id`, `to_stage_id`, `options`, `checked_out_time`, `checked_out`) VALUES
@@ -5338,11 +8572,11 @@ INSERT INTO `buf3w_workflow_transitions` (`id`, `asset_id`, `ordering`, `workflo
 (7, 64, 7, 1, 1, 'PUBLISH_AND_FEATURE', '', -1, 1, '{\"publishing\":\"1\",\"featuring\":\"1\"}', NULL, NULL);
 
 --
--- Indeksy dla zrzutów tabel
+-- Indexes for dumped tables
 --
 
 --
--- Indeksy dla tabeli `buf3w_action_logs`
+-- Indexes for table `buf3w_action_logs`
 --
 ALTER TABLE `buf3w_action_logs`
   ADD PRIMARY KEY (`id`),
@@ -5352,26 +8586,225 @@ ALTER TABLE `buf3w_action_logs`
   ADD KEY `idx_extension_item_id` (`extension`,`item_id`);
 
 --
--- Indeksy dla tabeli `buf3w_action_logs_extensions`
+-- Indexes for table `buf3w_action_logs_extensions`
 --
 ALTER TABLE `buf3w_action_logs_extensions`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeksy dla tabeli `buf3w_action_logs_users`
+-- Indexes for table `buf3w_action_logs_users`
 --
 ALTER TABLE `buf3w_action_logs_users`
   ADD PRIMARY KEY (`user_id`),
   ADD KEY `idx_notify` (`notify`);
 
 --
--- Indeksy dla tabeli `buf3w_action_log_config`
+-- Indexes for table `buf3w_action_log_config`
 --
 ALTER TABLE `buf3w_action_log_config`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeksy dla tabeli `buf3w_assets`
+-- Indexes for table `buf3w_acym_action`
+--
+ALTER TABLE `buf3w_acym_action`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `buf3w_fk_acym_action1` (`condition_id`);
+
+--
+-- Indexes for table `buf3w_acym_automation`
+--
+ALTER TABLE `buf3w_acym_automation`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_acym_campaign`
+--
+ALTER TABLE `buf3w_acym_campaign`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `buf3w_index_acym_campaign_has_mail1` (`mail_id`);
+
+--
+-- Indexes for table `buf3w_acym_condition`
+--
+ALTER TABLE `buf3w_acym_condition`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `buf3w_fk_acym_condition1` (`step_id`);
+
+--
+-- Indexes for table `buf3w_acym_configuration`
+--
+ALTER TABLE `buf3w_acym_configuration`
+  ADD PRIMARY KEY (`name`);
+
+--
+-- Indexes for table `buf3w_acym_custom_zone`
+--
+ALTER TABLE `buf3w_acym_custom_zone`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_acym_field`
+--
+ALTER TABLE `buf3w_acym_field`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_acym_followup`
+--
+ALTER TABLE `buf3w_acym_followup`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `buf3w_index_acym_followup_has_list` (`list_id`);
+
+--
+-- Indexes for table `buf3w_acym_followup_has_mail`
+--
+ALTER TABLE `buf3w_acym_followup_has_mail`
+  ADD PRIMARY KEY (`mail_id`,`followup_id`),
+  ADD KEY `buf3w_index_acym_mail_has_followup1` (`followup_id`),
+  ADD KEY `buf3w_index_acym_mail_has_followup2` (`mail_id`);
+
+--
+-- Indexes for table `buf3w_acym_form`
+--
+ALTER TABLE `buf3w_acym_form`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_acym_history`
+--
+ALTER TABLE `buf3w_acym_history`
+  ADD PRIMARY KEY (`user_id`,`date`);
+
+--
+-- Indexes for table `buf3w_acym_list`
+--
+ALTER TABLE `buf3w_acym_list`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `buf3w_index_acym_list_has_mail1` (`welcome_id`),
+  ADD KEY `buf3w_index_acym_list_has_mail2` (`unsubscribe_id`);
+
+--
+-- Indexes for table `buf3w_acym_mail`
+--
+ALTER TABLE `buf3w_acym_mail`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `buf3w_index_acym_mail1` (`parent_id`);
+
+--
+-- Indexes for table `buf3w_acym_mailbox_action`
+--
+ALTER TABLE `buf3w_acym_mailbox_action`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `buf3w_index_acym_mailbox_action1` (`name`);
+
+--
+-- Indexes for table `buf3w_acym_mail_has_list`
+--
+ALTER TABLE `buf3w_acym_mail_has_list`
+  ADD PRIMARY KEY (`mail_id`,`list_id`),
+  ADD KEY `buf3w_index_acym_mail_has_list1` (`list_id`),
+  ADD KEY `buf3w_index_acym_mail_has_list2` (`mail_id`);
+
+--
+-- Indexes for table `buf3w_acym_mail_override`
+--
+ALTER TABLE `buf3w_acym_mail_override`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `buf3w_fk_acym_mail_override1` (`mail_id`);
+
+--
+-- Indexes for table `buf3w_acym_mail_stat`
+--
+ALTER TABLE `buf3w_acym_mail_stat`
+  ADD PRIMARY KEY (`mail_id`);
+
+--
+-- Indexes for table `buf3w_acym_plugin`
+--
+ALTER TABLE `buf3w_acym_plugin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_acym_queue`
+--
+ALTER TABLE `buf3w_acym_queue`
+  ADD PRIMARY KEY (`mail_id`,`user_id`),
+  ADD KEY `buf3w_index_acym_queue1` (`mail_id`),
+  ADD KEY `buf3w_index_acym_queue2` (`user_id`);
+
+--
+-- Indexes for table `buf3w_acym_rule`
+--
+ALTER TABLE `buf3w_acym_rule`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_acym_segment`
+--
+ALTER TABLE `buf3w_acym_segment`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_acym_step`
+--
+ALTER TABLE `buf3w_acym_step`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `buf3w_fk_acym__step1` (`automation_id`);
+
+--
+-- Indexes for table `buf3w_acym_tag`
+--
+ALTER TABLE `buf3w_acym_tag`
+  ADD PRIMARY KEY (`name`,`type`,`id_element`);
+
+--
+-- Indexes for table `buf3w_acym_url`
+--
+ALTER TABLE `buf3w_acym_url`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_acym_url_click`
+--
+ALTER TABLE `buf3w_acym_url_click`
+  ADD PRIMARY KEY (`mail_id`,`url_id`,`user_id`),
+  ADD KEY `buf3w_index_acym_url_has_url1` (`url_id`);
+
+--
+-- Indexes for table `buf3w_acym_user`
+--
+ALTER TABLE `buf3w_acym_user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email_UNIQUE` (`email`);
+
+--
+-- Indexes for table `buf3w_acym_user_has_field`
+--
+ALTER TABLE `buf3w_acym_user_has_field`
+  ADD PRIMARY KEY (`user_id`,`field_id`),
+  ADD KEY `buf3w_index_acym_user_has_field1` (`field_id`),
+  ADD KEY `buf3w_index_acym_user_has_field2` (`user_id`);
+
+--
+-- Indexes for table `buf3w_acym_user_has_list`
+--
+ALTER TABLE `buf3w_acym_user_has_list`
+  ADD PRIMARY KEY (`user_id`,`list_id`),
+  ADD KEY `buf3w_index_acym_user_has_list1` (`list_id`),
+  ADD KEY `buf3w_index_acym_user_has_list2` (`user_id`),
+  ADD KEY `buf3w_index_acym_user_has_list3` (`subscription_date`),
+  ADD KEY `buf3w_index_acym_user_has_list4` (`unsubscribe_date`);
+
+--
+-- Indexes for table `buf3w_acym_user_stat`
+--
+ALTER TABLE `buf3w_acym_user_stat`
+  ADD PRIMARY KEY (`user_id`,`mail_id`),
+  ADD KEY `buf3w_fk_acym_user_stat1` (`mail_id`);
+
+--
+-- Indexes for table `buf3w_assets`
 --
 ALTER TABLE `buf3w_assets`
   ADD PRIMARY KEY (`id`),
@@ -5380,14 +8813,14 @@ ALTER TABLE `buf3w_assets`
   ADD KEY `idx_parent_id` (`parent_id`);
 
 --
--- Indeksy dla tabeli `buf3w_associations`
+-- Indexes for table `buf3w_associations`
 --
 ALTER TABLE `buf3w_associations`
   ADD PRIMARY KEY (`context`,`id`),
   ADD KEY `idx_key` (`key`);
 
 --
--- Indeksy dla tabeli `buf3w_banners`
+-- Indexes for table `buf3w_banners`
 --
 ALTER TABLE `buf3w_banners`
   ADD PRIMARY KEY (`id`),
@@ -5398,7 +8831,7 @@ ALTER TABLE `buf3w_banners`
   ADD KEY `idx_language` (`language`);
 
 --
--- Indeksy dla tabeli `buf3w_banner_clients`
+-- Indexes for table `buf3w_banner_clients`
 --
 ALTER TABLE `buf3w_banner_clients`
   ADD PRIMARY KEY (`id`),
@@ -5406,7 +8839,7 @@ ALTER TABLE `buf3w_banner_clients`
   ADD KEY `idx_metakey_prefix` (`metakey_prefix`(100));
 
 --
--- Indeksy dla tabeli `buf3w_banner_tracks`
+-- Indexes for table `buf3w_banner_tracks`
 --
 ALTER TABLE `buf3w_banner_tracks`
   ADD PRIMARY KEY (`track_date`,`track_type`,`banner_id`),
@@ -5415,7 +8848,7 @@ ALTER TABLE `buf3w_banner_tracks`
   ADD KEY `idx_banner_id` (`banner_id`);
 
 --
--- Indeksy dla tabeli `buf3w_categories`
+-- Indexes for table `buf3w_categories`
 --
 ALTER TABLE `buf3w_categories`
   ADD PRIMARY KEY (`id`),
@@ -5428,7 +8861,52 @@ ALTER TABLE `buf3w_categories`
   ADD KEY `idx_language` (`language`);
 
 --
--- Indeksy dla tabeli `buf3w_contact_details`
+-- Indexes for table `buf3w_comment`
+--
+ALTER TABLE `buf3w_comment`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `com_contentid` (`component`,`contentid`);
+
+--
+-- Indexes for table `buf3w_comment_captcha`
+--
+ALTER TABLE `buf3w_comment_captcha`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `buf3w_comment_queue`
+--
+ALTER TABLE `buf3w_comment_queue`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `status` (`status`);
+
+--
+-- Indexes for table `buf3w_comment_setting`
+--
+ALTER TABLE `buf3w_comment_setting`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_compojoom_customfields`
+--
+ALTER TABLE `buf3w_compojoom_customfields`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_compojoom_customfields_cats`
+--
+ALTER TABLE `buf3w_compojoom_customfields_cats`
+  ADD PRIMARY KEY (`compojoom_customfields_id`,`catid`);
+
+--
+-- Indexes for table `buf3w_compojoom_multimedia`
+--
+ALTER TABLE `buf3w_compojoom_multimedia`
+  ADD PRIMARY KEY (`compojoom_multimedia_id`),
+  ADD KEY `item_id` (`item_id`);
+
+--
+-- Indexes for table `buf3w_contact_details`
 --
 ALTER TABLE `buf3w_contact_details`
   ADD PRIMARY KEY (`id`),
@@ -5441,7 +8919,7 @@ ALTER TABLE `buf3w_contact_details`
   ADD KEY `idx_language` (`language`);
 
 --
--- Indeksy dla tabeli `buf3w_content`
+-- Indexes for table `buf3w_content`
 --
 ALTER TABLE `buf3w_content`
   ADD PRIMARY KEY (`id`),
@@ -5455,7 +8933,7 @@ ALTER TABLE `buf3w_content`
   ADD KEY `idx_alias` (`alias`(191));
 
 --
--- Indeksy dla tabeli `buf3w_contentitem_tag_map`
+-- Indexes for table `buf3w_contentitem_tag_map`
 --
 ALTER TABLE `buf3w_contentitem_tag_map`
   ADD UNIQUE KEY `uc_ItemnameTagid` (`type_id`,`content_item_id`,`tag_id`),
@@ -5464,26 +8942,26 @@ ALTER TABLE `buf3w_contentitem_tag_map`
   ADD KEY `idx_core_content_id` (`core_content_id`);
 
 --
--- Indeksy dla tabeli `buf3w_content_frontpage`
+-- Indexes for table `buf3w_content_frontpage`
 --
 ALTER TABLE `buf3w_content_frontpage`
   ADD PRIMARY KEY (`content_id`);
 
 --
--- Indeksy dla tabeli `buf3w_content_rating`
+-- Indexes for table `buf3w_content_rating`
 --
 ALTER TABLE `buf3w_content_rating`
   ADD PRIMARY KEY (`content_id`);
 
 --
--- Indeksy dla tabeli `buf3w_content_types`
+-- Indexes for table `buf3w_content_types`
 --
 ALTER TABLE `buf3w_content_types`
   ADD PRIMARY KEY (`type_id`),
   ADD KEY `idx_alias` (`type_alias`(100));
 
 --
--- Indeksy dla tabeli `buf3w_extensions`
+-- Indexes for table `buf3w_extensions`
 --
 ALTER TABLE `buf3w_extensions`
   ADD PRIMARY KEY (`extension_id`),
@@ -5492,7 +8970,7 @@ ALTER TABLE `buf3w_extensions`
   ADD KEY `extension` (`type`,`element`,`folder`,`client_id`);
 
 --
--- Indeksy dla tabeli `buf3w_fields`
+-- Indexes for table `buf3w_fields`
 --
 ALTER TABLE `buf3w_fields`
   ADD PRIMARY KEY (`id`),
@@ -5504,13 +8982,13 @@ ALTER TABLE `buf3w_fields`
   ADD KEY `idx_language` (`language`);
 
 --
--- Indeksy dla tabeli `buf3w_fields_categories`
+-- Indexes for table `buf3w_fields_categories`
 --
 ALTER TABLE `buf3w_fields_categories`
   ADD PRIMARY KEY (`field_id`,`category_id`);
 
 --
--- Indeksy dla tabeli `buf3w_fields_groups`
+-- Indexes for table `buf3w_fields_groups`
 --
 ALTER TABLE `buf3w_fields_groups`
   ADD PRIMARY KEY (`id`),
@@ -5522,20 +9000,20 @@ ALTER TABLE `buf3w_fields_groups`
   ADD KEY `idx_language` (`language`);
 
 --
--- Indeksy dla tabeli `buf3w_fields_values`
+-- Indexes for table `buf3w_fields_values`
 --
 ALTER TABLE `buf3w_fields_values`
   ADD KEY `idx_field_id` (`field_id`),
   ADD KEY `idx_item_id` (`item_id`(191));
 
 --
--- Indeksy dla tabeli `buf3w_finder_filters`
+-- Indexes for table `buf3w_finder_filters`
 --
 ALTER TABLE `buf3w_finder_filters`
   ADD PRIMARY KEY (`filter_id`);
 
 --
--- Indeksy dla tabeli `buf3w_finder_links`
+-- Indexes for table `buf3w_finder_links`
 --
 ALTER TABLE `buf3w_finder_links`
   ADD PRIMARY KEY (`link_id`),
@@ -5548,7 +9026,7 @@ ALTER TABLE `buf3w_finder_links`
   ADD KEY `idx_published_sale` (`published`,`state`,`access`,`publish_start_date`,`publish_end_date`,`sale_price`);
 
 --
--- Indeksy dla tabeli `buf3w_finder_links_terms`
+-- Indexes for table `buf3w_finder_links_terms`
 --
 ALTER TABLE `buf3w_finder_links_terms`
   ADD PRIMARY KEY (`link_id`,`term_id`),
@@ -5556,14 +9034,14 @@ ALTER TABLE `buf3w_finder_links_terms`
   ADD KEY `idx_link_term_weight` (`link_id`,`term_id`,`weight`);
 
 --
--- Indeksy dla tabeli `buf3w_finder_logging`
+-- Indexes for table `buf3w_finder_logging`
 --
 ALTER TABLE `buf3w_finder_logging`
   ADD PRIMARY KEY (`md5sum`),
   ADD KEY `searchterm` (`searchterm`(191));
 
 --
--- Indeksy dla tabeli `buf3w_finder_taxonomy`
+-- Indexes for table `buf3w_finder_taxonomy`
 --
 ALTER TABLE `buf3w_finder_taxonomy`
   ADD PRIMARY KEY (`id`),
@@ -5577,7 +9055,7 @@ ALTER TABLE `buf3w_finder_taxonomy`
   ADD KEY `idx_parent_published` (`parent_id`,`state`,`access`);
 
 --
--- Indeksy dla tabeli `buf3w_finder_taxonomy_map`
+-- Indexes for table `buf3w_finder_taxonomy_map`
 --
 ALTER TABLE `buf3w_finder_taxonomy_map`
   ADD PRIMARY KEY (`link_id`,`node_id`),
@@ -5585,7 +9063,7 @@ ALTER TABLE `buf3w_finder_taxonomy_map`
   ADD KEY `node_id` (`node_id`);
 
 --
--- Indeksy dla tabeli `buf3w_finder_terms`
+-- Indexes for table `buf3w_finder_terms`
 --
 ALTER TABLE `buf3w_finder_terms`
   ADD PRIMARY KEY (`term_id`),
@@ -5597,14 +9075,14 @@ ALTER TABLE `buf3w_finder_terms`
   ADD KEY `idx_language` (`language`);
 
 --
--- Indeksy dla tabeli `buf3w_finder_terms_common`
+-- Indexes for table `buf3w_finder_terms_common`
 --
 ALTER TABLE `buf3w_finder_terms_common`
   ADD UNIQUE KEY `idx_term_language` (`term`,`language`),
   ADD KEY `idx_lang` (`language`);
 
 --
--- Indeksy dla tabeli `buf3w_finder_tokens`
+-- Indexes for table `buf3w_finder_tokens`
 --
 ALTER TABLE `buf3w_finder_tokens`
   ADD KEY `idx_word` (`term`),
@@ -5613,21 +9091,21 @@ ALTER TABLE `buf3w_finder_tokens`
   ADD KEY `idx_language` (`language`);
 
 --
--- Indeksy dla tabeli `buf3w_finder_tokens_aggregate`
+-- Indexes for table `buf3w_finder_tokens_aggregate`
 --
 ALTER TABLE `buf3w_finder_tokens_aggregate`
   ADD KEY `token` (`term`),
   ADD KEY `keyword_id` (`term_id`);
 
 --
--- Indeksy dla tabeli `buf3w_finder_types`
+-- Indexes for table `buf3w_finder_types`
 --
 ALTER TABLE `buf3w_finder_types`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `title` (`title`);
 
 --
--- Indeksy dla tabeli `buf3w_guidedtours`
+-- Indexes for table `buf3w_guidedtours`
 --
 ALTER TABLE `buf3w_guidedtours`
   ADD PRIMARY KEY (`id`),
@@ -5636,7 +9114,7 @@ ALTER TABLE `buf3w_guidedtours`
   ADD KEY `idx_language` (`language`);
 
 --
--- Indeksy dla tabeli `buf3w_guidedtour_steps`
+-- Indexes for table `buf3w_guidedtour_steps`
 --
 ALTER TABLE `buf3w_guidedtour_steps`
   ADD PRIMARY KEY (`id`),
@@ -5645,7 +9123,7 @@ ALTER TABLE `buf3w_guidedtour_steps`
   ADD KEY `idx_language` (`language`);
 
 --
--- Indeksy dla tabeli `buf3w_history`
+-- Indexes for table `buf3w_history`
 --
 ALTER TABLE `buf3w_history`
   ADD PRIMARY KEY (`version_id`),
@@ -5653,7 +9131,81 @@ ALTER TABLE `buf3w_history`
   ADD KEY `idx_save_date` (`save_date`);
 
 --
--- Indeksy dla tabeli `buf3w_languages`
+-- Indexes for table `buf3w_jnews_followup`
+--
+ALTER TABLE `buf3w_jnews_followup`
+  ADD PRIMARY KEY (`followup_id`,`list_id`);
+
+--
+-- Indexes for table `buf3w_jnews_listmailings`
+--
+ALTER TABLE `buf3w_jnews_listmailings`
+  ADD PRIMARY KEY (`list_id`,`mailing_id`);
+
+--
+-- Indexes for table `buf3w_jnews_lists`
+--
+ALTER TABLE `buf3w_jnews_lists`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `list_name` (`list_name`);
+
+--
+-- Indexes for table `buf3w_jnews_listssubscribers`
+--
+ALTER TABLE `buf3w_jnews_listssubscribers`
+  ADD PRIMARY KEY (`list_id`,`subscriber_id`);
+
+--
+-- Indexes for table `buf3w_jnews_mailings`
+--
+ALTER TABLE `buf3w_jnews_mailings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_jnews_queue`
+--
+ALTER TABLE `buf3w_jnews_queue`
+  ADD PRIMARY KEY (`qid`),
+  ADD UNIQUE KEY `sub_mail` (`mailing_id`,`subscriber_id`,`type`),
+  ADD KEY `senddate` (`send_date`);
+
+--
+-- Indexes for table `buf3w_jnews_stats_details`
+--
+ALTER TABLE `buf3w_jnews_stats_details`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `sub_mail` (`mailing_id`,`subscriber_id`);
+
+--
+-- Indexes for table `buf3w_jnews_stats_global`
+--
+ALTER TABLE `buf3w_jnews_stats_global`
+  ADD PRIMARY KEY (`mailing_id`);
+
+--
+-- Indexes for table `buf3w_jnews_subscribers`
+--
+ALTER TABLE `buf3w_jnews_subscribers`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD KEY `date` (`subscribe_date`),
+  ADD KEY `joomlauserid` (`user_id`);
+
+--
+-- Indexes for table `buf3w_jnews_templates`
+--
+ALTER TABLE `buf3w_jnews_templates`
+  ADD PRIMARY KEY (`template_id`),
+  ADD UNIQUE KEY `namekey` (`namekey`);
+
+--
+-- Indexes for table `buf3w_jnews_xonfig`
+--
+ALTER TABLE `buf3w_jnews_xonfig`
+  ADD PRIMARY KEY (`akey`);
+
+--
+-- Indexes for table `buf3w_languages`
 --
 ALTER TABLE `buf3w_languages`
   ADD PRIMARY KEY (`lang_id`),
@@ -5663,13 +9215,13 @@ ALTER TABLE `buf3w_languages`
   ADD KEY `idx_ordering` (`ordering`);
 
 --
--- Indeksy dla tabeli `buf3w_mail_templates`
+-- Indexes for table `buf3w_mail_templates`
 --
 ALTER TABLE `buf3w_mail_templates`
   ADD PRIMARY KEY (`template_id`,`language`);
 
 --
--- Indeksy dla tabeli `buf3w_menu`
+-- Indexes for table `buf3w_menu`
 --
 ALTER TABLE `buf3w_menu`
   ADD PRIMARY KEY (`id`),
@@ -5682,27 +9234,27 @@ ALTER TABLE `buf3w_menu`
   ADD KEY `idx_language` (`language`);
 
 --
--- Indeksy dla tabeli `buf3w_menu_types`
+-- Indexes for table `buf3w_menu_types`
 --
 ALTER TABLE `buf3w_menu_types`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `idx_menutype` (`menutype`);
 
 --
--- Indeksy dla tabeli `buf3w_messages`
+-- Indexes for table `buf3w_messages`
 --
 ALTER TABLE `buf3w_messages`
   ADD PRIMARY KEY (`message_id`),
   ADD KEY `useridto_state` (`user_id_to`,`state`);
 
 --
--- Indeksy dla tabeli `buf3w_messages_cfg`
+-- Indexes for table `buf3w_messages_cfg`
 --
 ALTER TABLE `buf3w_messages_cfg`
   ADD UNIQUE KEY `idx_user_var_name` (`user_id`,`cfg_name`);
 
 --
--- Indeksy dla tabeli `buf3w_modules`
+-- Indexes for table `buf3w_modules`
 --
 ALTER TABLE `buf3w_modules`
   ADD PRIMARY KEY (`id`),
@@ -5711,13 +9263,13 @@ ALTER TABLE `buf3w_modules`
   ADD KEY `idx_language` (`language`);
 
 --
--- Indeksy dla tabeli `buf3w_modules_menu`
+-- Indexes for table `buf3w_modules_menu`
 --
 ALTER TABLE `buf3w_modules_menu`
   ADD PRIMARY KEY (`moduleid`,`menuid`);
 
 --
--- Indeksy dla tabeli `buf3w_newsfeeds`
+-- Indexes for table `buf3w_newsfeeds`
 --
 ALTER TABLE `buf3w_newsfeeds`
   ADD PRIMARY KEY (`id`),
@@ -5729,32 +9281,104 @@ ALTER TABLE `buf3w_newsfeeds`
   ADD KEY `idx_language` (`language`);
 
 --
--- Indeksy dla tabeli `buf3w_overrider`
+-- Indexes for table `buf3w_overrider`
 --
 ALTER TABLE `buf3w_overrider`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeksy dla tabeli `buf3w_postinstall_messages`
+-- Indexes for table `buf3w_phocadownload`
+--
+ALTER TABLE `buf3w_phocadownload`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `catid` (`catid`,`published`);
+
+--
+-- Indexes for table `buf3w_phocadownload_categories`
+--
+ALTER TABLE `buf3w_phocadownload_categories`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `cat_idx` (`section`,`published`,`access`),
+  ADD KEY `idx_access` (`access`),
+  ADD KEY `idx_checkout` (`checked_out`);
+
+--
+-- Indexes for table `buf3w_phocadownload_file_votes`
+--
+ALTER TABLE `buf3w_phocadownload_file_votes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_phocadownload_file_votes_statistics`
+--
+ALTER TABLE `buf3w_phocadownload_file_votes_statistics`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_phocadownload_layout`
+--
+ALTER TABLE `buf3w_phocadownload_layout`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_phocadownload_licenses`
+--
+ALTER TABLE `buf3w_phocadownload_licenses`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_phocadownload_logging`
+--
+ALTER TABLE `buf3w_phocadownload_logging`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_phocadownload_styles`
+--
+ALTER TABLE `buf3w_phocadownload_styles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_phocadownload_tags`
+--
+ALTER TABLE `buf3w_phocadownload_tags`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_phocadownload_tags_ref`
+--
+ALTER TABLE `buf3w_phocadownload_tags_ref`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`),
+  ADD UNIQUE KEY `i_fileid` (`fileid`,`tagid`);
+
+--
+-- Indexes for table `buf3w_phocadownload_user_stat`
+--
+ALTER TABLE `buf3w_phocadownload_user_stat`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_postinstall_messages`
 --
 ALTER TABLE `buf3w_postinstall_messages`
   ADD PRIMARY KEY (`postinstall_message_id`);
 
 --
--- Indeksy dla tabeli `buf3w_privacy_consents`
+-- Indexes for table `buf3w_privacy_consents`
 --
 ALTER TABLE `buf3w_privacy_consents`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idx_user_id` (`user_id`);
 
 --
--- Indeksy dla tabeli `buf3w_privacy_requests`
+-- Indexes for table `buf3w_privacy_requests`
 --
 ALTER TABLE `buf3w_privacy_requests`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeksy dla tabeli `buf3w_redirect_links`
+-- Indexes for table `buf3w_redirect_links`
 --
 ALTER TABLE `buf3w_redirect_links`
   ADD PRIMARY KEY (`id`),
@@ -5762,7 +9386,7 @@ ALTER TABLE `buf3w_redirect_links`
   ADD KEY `idx_link_modified` (`modified_date`);
 
 --
--- Indeksy dla tabeli `buf3w_scheduler_tasks`
+-- Indexes for table `buf3w_scheduler_tasks`
 --
 ALTER TABLE `buf3w_scheduler_tasks`
   ADD PRIMARY KEY (`id`),
@@ -5776,13 +9400,13 @@ ALTER TABLE `buf3w_scheduler_tasks`
   ADD KEY `idx_checked_out` (`checked_out`);
 
 --
--- Indeksy dla tabeli `buf3w_schemas`
+-- Indexes for table `buf3w_schemas`
 --
 ALTER TABLE `buf3w_schemas`
   ADD PRIMARY KEY (`extension_id`,`version_id`);
 
 --
--- Indeksy dla tabeli `buf3w_session`
+-- Indexes for table `buf3w_session`
 --
 ALTER TABLE `buf3w_session`
   ADD PRIMARY KEY (`session_id`),
@@ -5791,7 +9415,7 @@ ALTER TABLE `buf3w_session`
   ADD KEY `client_id_guest` (`client_id`,`guest`);
 
 --
--- Indeksy dla tabeli `buf3w_tags`
+-- Indexes for table `buf3w_tags`
 --
 ALTER TABLE `buf3w_tags`
   ADD PRIMARY KEY (`id`),
@@ -5804,7 +9428,7 @@ ALTER TABLE `buf3w_tags`
   ADD KEY `idx_language` (`language`);
 
 --
--- Indeksy dla tabeli `buf3w_template_overrides`
+-- Indexes for table `buf3w_template_overrides`
 --
 ALTER TABLE `buf3w_template_overrides`
   ADD PRIMARY KEY (`id`),
@@ -5812,7 +9436,7 @@ ALTER TABLE `buf3w_template_overrides`
   ADD KEY `idx_extension_id` (`extension_id`);
 
 --
--- Indeksy dla tabeli `buf3w_template_styles`
+-- Indexes for table `buf3w_template_styles`
 --
 ALTER TABLE `buf3w_template_styles`
   ADD PRIMARY KEY (`id`),
@@ -5821,7 +9445,37 @@ ALTER TABLE `buf3w_template_styles`
   ADD KEY `idx_client_id_home` (`client_id`,`home`);
 
 --
--- Indeksy dla tabeli `buf3w_ucm_base`
+-- Indexes for table `buf3w_tfm_bounces`
+--
+ALTER TABLE `buf3w_tfm_bounces`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_tfm_campaign`
+--
+ALTER TABLE `buf3w_tfm_campaign`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_tfm_links`
+--
+ALTER TABLE `buf3w_tfm_links`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_tfm_mail`
+--
+ALTER TABLE `buf3w_tfm_mail`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_tfm_statistics`
+--
+ALTER TABLE `buf3w_tfm_statistics`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buf3w_ucm_base`
 --
 ALTER TABLE `buf3w_ucm_base`
   ADD PRIMARY KEY (`ucm_id`),
@@ -5830,7 +9484,7 @@ ALTER TABLE `buf3w_ucm_base`
   ADD KEY `idx_ucm_language_id` (`ucm_language_id`);
 
 --
--- Indeksy dla tabeli `buf3w_ucm_content`
+-- Indexes for table `buf3w_ucm_content`
 --
 ALTER TABLE `buf3w_ucm_content`
   ADD PRIMARY KEY (`core_content_id`),
@@ -5848,25 +9502,25 @@ ALTER TABLE `buf3w_ucm_content`
   ADD KEY `idx_core_type_id` (`core_type_id`);
 
 --
--- Indeksy dla tabeli `buf3w_updates`
+-- Indexes for table `buf3w_updates`
 --
 ALTER TABLE `buf3w_updates`
   ADD PRIMARY KEY (`update_id`);
 
 --
--- Indeksy dla tabeli `buf3w_update_sites`
+-- Indexes for table `buf3w_update_sites`
 --
 ALTER TABLE `buf3w_update_sites`
   ADD PRIMARY KEY (`update_site_id`);
 
 --
--- Indeksy dla tabeli `buf3w_update_sites_extensions`
+-- Indexes for table `buf3w_update_sites_extensions`
 --
 ALTER TABLE `buf3w_update_sites_extensions`
   ADD PRIMARY KEY (`update_site_id`,`extension_id`);
 
 --
--- Indeksy dla tabeli `buf3w_usergroups`
+-- Indexes for table `buf3w_usergroups`
 --
 ALTER TABLE `buf3w_usergroups`
   ADD PRIMARY KEY (`id`),
@@ -5876,7 +9530,7 @@ ALTER TABLE `buf3w_usergroups`
   ADD KEY `idx_usergroup_nested_set_lookup` (`lft`,`rgt`) USING BTREE;
 
 --
--- Indeksy dla tabeli `buf3w_users`
+-- Indexes for table `buf3w_users`
 --
 ALTER TABLE `buf3w_users`
   ADD PRIMARY KEY (`id`),
@@ -5886,7 +9540,7 @@ ALTER TABLE `buf3w_users`
   ADD KEY `email` (`email`);
 
 --
--- Indeksy dla tabeli `buf3w_user_keys`
+-- Indexes for table `buf3w_user_keys`
 --
 ALTER TABLE `buf3w_user_keys`
   ADD PRIMARY KEY (`id`),
@@ -5894,14 +9548,14 @@ ALTER TABLE `buf3w_user_keys`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indeksy dla tabeli `buf3w_user_mfa`
+-- Indexes for table `buf3w_user_mfa`
 --
 ALTER TABLE `buf3w_user_mfa`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idx_user_id` (`user_id`);
 
 --
--- Indeksy dla tabeli `buf3w_user_notes`
+-- Indexes for table `buf3w_user_notes`
 --
 ALTER TABLE `buf3w_user_notes`
   ADD PRIMARY KEY (`id`),
@@ -5909,33 +9563,33 @@ ALTER TABLE `buf3w_user_notes`
   ADD KEY `idx_category_id` (`catid`);
 
 --
--- Indeksy dla tabeli `buf3w_user_profiles`
+-- Indexes for table `buf3w_user_profiles`
 --
 ALTER TABLE `buf3w_user_profiles`
   ADD UNIQUE KEY `idx_user_id_profile_key` (`user_id`,`profile_key`);
 
 --
--- Indeksy dla tabeli `buf3w_user_usergroup_map`
+-- Indexes for table `buf3w_user_usergroup_map`
 --
 ALTER TABLE `buf3w_user_usergroup_map`
   ADD PRIMARY KEY (`user_id`,`group_id`);
 
 --
--- Indeksy dla tabeli `buf3w_viewlevels`
+-- Indexes for table `buf3w_viewlevels`
 --
 ALTER TABLE `buf3w_viewlevels`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `idx_assetgroup_title_lookup` (`title`);
 
 --
--- Indeksy dla tabeli `buf3w_webauthn_credentials`
+-- Indexes for table `buf3w_webauthn_credentials`
 --
 ALTER TABLE `buf3w_webauthn_credentials`
   ADD PRIMARY KEY (`id`(100)),
   ADD KEY `user_id` (`user_id`(100));
 
 --
--- Indeksy dla tabeli `buf3w_workflows`
+-- Indexes for table `buf3w_workflows`
 --
 ALTER TABLE `buf3w_workflows`
   ADD PRIMARY KEY (`id`),
@@ -5950,7 +9604,7 @@ ALTER TABLE `buf3w_workflows`
   ADD KEY `idx_checked_out` (`checked_out`);
 
 --
--- Indeksy dla tabeli `buf3w_workflow_associations`
+-- Indexes for table `buf3w_workflow_associations`
 --
 ALTER TABLE `buf3w_workflow_associations`
   ADD PRIMARY KEY (`item_id`,`extension`),
@@ -5960,7 +9614,7 @@ ALTER TABLE `buf3w_workflow_associations`
   ADD KEY `idx_extension` (`extension`);
 
 --
--- Indeksy dla tabeli `buf3w_workflow_stages`
+-- Indexes for table `buf3w_workflow_stages`
 --
 ALTER TABLE `buf3w_workflow_stages`
   ADD PRIMARY KEY (`id`),
@@ -5971,7 +9625,7 @@ ALTER TABLE `buf3w_workflow_stages`
   ADD KEY `idx_default` (`default`);
 
 --
--- Indeksy dla tabeli `buf3w_workflow_transitions`
+-- Indexes for table `buf3w_workflow_transitions`
 --
 ALTER TABLE `buf3w_workflow_transitions`
   ADD PRIMARY KEY (`id`),
@@ -5983,296 +9637,679 @@ ALTER TABLE `buf3w_workflow_transitions`
   ADD KEY `idx_workflow_id` (`workflow_id`);
 
 --
--- AUTO_INCREMENT dla zrzuconych tabel
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_action_logs`
+-- AUTO_INCREMENT for table `buf3w_action_logs`
 --
 ALTER TABLE `buf3w_action_logs`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_action_logs_extensions`
+-- AUTO_INCREMENT for table `buf3w_action_logs_extensions`
 --
 ALTER TABLE `buf3w_action_logs_extensions`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_action_log_config`
+-- AUTO_INCREMENT for table `buf3w_action_log_config`
 --
 ALTER TABLE `buf3w_action_log_config`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_assets`
+-- AUTO_INCREMENT for table `buf3w_acym_action`
 --
-ALTER TABLE `buf3w_assets`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=105;
+ALTER TABLE `buf3w_acym_action`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_banners`
+-- AUTO_INCREMENT for table `buf3w_acym_automation`
+--
+ALTER TABLE `buf3w_acym_automation`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_campaign`
+--
+ALTER TABLE `buf3w_acym_campaign`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_condition`
+--
+ALTER TABLE `buf3w_acym_condition`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_custom_zone`
+--
+ALTER TABLE `buf3w_acym_custom_zone`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_field`
+--
+ALTER TABLE `buf3w_acym_field`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_followup`
+--
+ALTER TABLE `buf3w_acym_followup`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_form`
+--
+ALTER TABLE `buf3w_acym_form`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_list`
+--
+ALTER TABLE `buf3w_acym_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_mail`
+--
+ALTER TABLE `buf3w_acym_mail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_mailbox_action`
+--
+ALTER TABLE `buf3w_acym_mailbox_action`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_mail_override`
+--
+ALTER TABLE `buf3w_acym_mail_override`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_plugin`
+--
+ALTER TABLE `buf3w_acym_plugin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_rule`
+--
+ALTER TABLE `buf3w_acym_rule`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_segment`
+--
+ALTER TABLE `buf3w_acym_segment`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_step`
+--
+ALTER TABLE `buf3w_acym_step`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_url`
+--
+ALTER TABLE `buf3w_acym_url`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_acym_user`
+--
+ALTER TABLE `buf3w_acym_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `buf3w_assets`
+--
+ALTER TABLE `buf3w_assets`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=119;
+
+--
+-- AUTO_INCREMENT for table `buf3w_banners`
 --
 ALTER TABLE `buf3w_banners`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_banner_clients`
+-- AUTO_INCREMENT for table `buf3w_banner_clients`
 --
 ALTER TABLE `buf3w_banner_clients`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_categories`
+-- AUTO_INCREMENT for table `buf3w_categories`
 --
 ALTER TABLE `buf3w_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_contact_details`
+-- AUTO_INCREMENT for table `buf3w_comment`
 --
-ALTER TABLE `buf3w_contact_details`
+ALTER TABLE `buf3w_comment`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_comment_captcha`
+--
+ALTER TABLE `buf3w_comment_captcha`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_comment_queue`
+--
+ALTER TABLE `buf3w_comment_queue`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_content`
+-- AUTO_INCREMENT for table `buf3w_comment_setting`
 --
-ALTER TABLE `buf3w_content`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+ALTER TABLE `buf3w_comment_setting`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_content_types`
+-- AUTO_INCREMENT for table `buf3w_compojoom_customfields`
+--
+ALTER TABLE `buf3w_compojoom_customfields`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_compojoom_multimedia`
+--
+ALTER TABLE `buf3w_compojoom_multimedia`
+  MODIFY `compojoom_multimedia_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_contact_details`
+--
+ALTER TABLE `buf3w_contact_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `buf3w_content`
+--
+ALTER TABLE `buf3w_content`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT for table `buf3w_content_types`
 --
 ALTER TABLE `buf3w_content_types`
   MODIFY `type_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10000;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_extensions`
+-- AUTO_INCREMENT for table `buf3w_extensions`
 --
 ALTER TABLE `buf3w_extensions`
-  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=232;
+  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_fields`
+-- AUTO_INCREMENT for table `buf3w_fields`
 --
 ALTER TABLE `buf3w_fields`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_fields_groups`
+-- AUTO_INCREMENT for table `buf3w_fields_groups`
 --
 ALTER TABLE `buf3w_fields_groups`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_finder_filters`
+-- AUTO_INCREMENT for table `buf3w_finder_filters`
 --
 ALTER TABLE `buf3w_finder_filters`
   MODIFY `filter_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_finder_links`
+-- AUTO_INCREMENT for table `buf3w_finder_links`
 --
 ALTER TABLE `buf3w_finder_links`
-  MODIFY `link_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `link_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_finder_taxonomy`
+-- AUTO_INCREMENT for table `buf3w_finder_taxonomy`
 --
 ALTER TABLE `buf3w_finder_taxonomy`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_finder_terms`
+-- AUTO_INCREMENT for table `buf3w_finder_terms`
 --
 ALTER TABLE `buf3w_finder_terms`
-  MODIFY `term_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1741;
+  MODIFY `term_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2299;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_finder_types`
+-- AUTO_INCREMENT for table `buf3w_finder_types`
 --
 ALTER TABLE `buf3w_finder_types`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_guidedtours`
+-- AUTO_INCREMENT for table `buf3w_guidedtours`
 --
 ALTER TABLE `buf3w_guidedtours`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_guidedtour_steps`
+-- AUTO_INCREMENT for table `buf3w_guidedtour_steps`
 --
 ALTER TABLE `buf3w_guidedtour_steps`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_history`
+-- AUTO_INCREMENT for table `buf3w_history`
 --
 ALTER TABLE `buf3w_history`
-  MODIFY `version_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `version_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_languages`
+-- AUTO_INCREMENT for table `buf3w_jnews_lists`
+--
+ALTER TABLE `buf3w_jnews_lists`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_jnews_mailings`
+--
+ALTER TABLE `buf3w_jnews_mailings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_jnews_queue`
+--
+ALTER TABLE `buf3w_jnews_queue`
+  MODIFY `qid` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_jnews_stats_details`
+--
+ALTER TABLE `buf3w_jnews_stats_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_jnews_subscribers`
+--
+ALTER TABLE `buf3w_jnews_subscribers`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `buf3w_jnews_templates`
+--
+ALTER TABLE `buf3w_jnews_templates`
+  MODIFY `template_id` smallint(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_languages`
 --
 ALTER TABLE `buf3w_languages`
   MODIFY `lang_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_menu`
+-- AUTO_INCREMENT for table `buf3w_menu`
 --
 ALTER TABLE `buf3w_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=169;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_menu_types`
+-- AUTO_INCREMENT for table `buf3w_menu_types`
 --
 ALTER TABLE `buf3w_menu_types`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_messages`
+-- AUTO_INCREMENT for table `buf3w_messages`
 --
 ALTER TABLE `buf3w_messages`
   MODIFY `message_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_modules`
+-- AUTO_INCREMENT for table `buf3w_modules`
 --
 ALTER TABLE `buf3w_modules`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_newsfeeds`
+-- AUTO_INCREMENT for table `buf3w_newsfeeds`
 --
 ALTER TABLE `buf3w_newsfeeds`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_overrider`
+-- AUTO_INCREMENT for table `buf3w_overrider`
 --
 ALTER TABLE `buf3w_overrider`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key';
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_postinstall_messages`
+-- AUTO_INCREMENT for table `buf3w_phocadownload`
+--
+ALTER TABLE `buf3w_phocadownload`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `buf3w_phocadownload_categories`
+--
+ALTER TABLE `buf3w_phocadownload_categories`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `buf3w_phocadownload_file_votes`
+--
+ALTER TABLE `buf3w_phocadownload_file_votes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_phocadownload_file_votes_statistics`
+--
+ALTER TABLE `buf3w_phocadownload_file_votes_statistics`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_phocadownload_layout`
+--
+ALTER TABLE `buf3w_phocadownload_layout`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_phocadownload_licenses`
+--
+ALTER TABLE `buf3w_phocadownload_licenses`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_phocadownload_logging`
+--
+ALTER TABLE `buf3w_phocadownload_logging`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_phocadownload_styles`
+--
+ALTER TABLE `buf3w_phocadownload_styles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `buf3w_phocadownload_tags`
+--
+ALTER TABLE `buf3w_phocadownload_tags`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_phocadownload_tags_ref`
+--
+ALTER TABLE `buf3w_phocadownload_tags_ref`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_phocadownload_user_stat`
+--
+ALTER TABLE `buf3w_phocadownload_user_stat`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `buf3w_postinstall_messages`
 --
 ALTER TABLE `buf3w_postinstall_messages`
   MODIFY `postinstall_message_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_privacy_consents`
+-- AUTO_INCREMENT for table `buf3w_privacy_consents`
 --
 ALTER TABLE `buf3w_privacy_consents`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_privacy_requests`
+-- AUTO_INCREMENT for table `buf3w_privacy_requests`
 --
 ALTER TABLE `buf3w_privacy_requests`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_redirect_links`
+-- AUTO_INCREMENT for table `buf3w_redirect_links`
 --
 ALTER TABLE `buf3w_redirect_links`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_scheduler_tasks`
+-- AUTO_INCREMENT for table `buf3w_scheduler_tasks`
 --
 ALTER TABLE `buf3w_scheduler_tasks`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_tags`
+-- AUTO_INCREMENT for table `buf3w_tags`
 --
 ALTER TABLE `buf3w_tags`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_template_overrides`
+-- AUTO_INCREMENT for table `buf3w_template_overrides`
 --
 ALTER TABLE `buf3w_template_overrides`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_template_styles`
+-- AUTO_INCREMENT for table `buf3w_template_styles`
 --
 ALTER TABLE `buf3w_template_styles`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_ucm_content`
+-- AUTO_INCREMENT for table `buf3w_tfm_bounces`
+--
+ALTER TABLE `buf3w_tfm_bounces`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_tfm_campaign`
+--
+ALTER TABLE `buf3w_tfm_campaign`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_tfm_links`
+--
+ALTER TABLE `buf3w_tfm_links`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_tfm_mail`
+--
+ALTER TABLE `buf3w_tfm_mail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `buf3w_tfm_statistics`
+--
+ALTER TABLE `buf3w_tfm_statistics`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `buf3w_ucm_content`
 --
 ALTER TABLE `buf3w_ucm_content`
   MODIFY `core_content_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_updates`
+-- AUTO_INCREMENT for table `buf3w_updates`
 --
 ALTER TABLE `buf3w_updates`
-  MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
+  MODIFY `update_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=365;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_update_sites`
+-- AUTO_INCREMENT for table `buf3w_update_sites`
 --
 ALTER TABLE `buf3w_update_sites`
-  MODIFY `update_site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `update_site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_usergroups`
+-- AUTO_INCREMENT for table `buf3w_usergroups`
 --
 ALTER TABLE `buf3w_usergroups`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_users`
+-- AUTO_INCREMENT for table `buf3w_users`
 --
 ALTER TABLE `buf3w_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=589;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=593;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_user_keys`
+-- AUTO_INCREMENT for table `buf3w_user_keys`
 --
 ALTER TABLE `buf3w_user_keys`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_user_mfa`
+-- AUTO_INCREMENT for table `buf3w_user_mfa`
 --
 ALTER TABLE `buf3w_user_mfa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_user_notes`
+-- AUTO_INCREMENT for table `buf3w_user_notes`
 --
 ALTER TABLE `buf3w_user_notes`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_viewlevels`
+-- AUTO_INCREMENT for table `buf3w_viewlevels`
 --
 ALTER TABLE `buf3w_viewlevels`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Primary Key', AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_workflows`
+-- AUTO_INCREMENT for table `buf3w_workflows`
 --
 ALTER TABLE `buf3w_workflows`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_workflow_stages`
+-- AUTO_INCREMENT for table `buf3w_workflow_stages`
 --
 ALTER TABLE `buf3w_workflow_stages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT dla tabeli `buf3w_workflow_transitions`
+-- AUTO_INCREMENT for table `buf3w_workflow_transitions`
 --
 ALTER TABLE `buf3w_workflow_transitions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `buf3w_acym_action`
+--
+ALTER TABLE `buf3w_acym_action`
+  ADD CONSTRAINT `buf3w_fk_acym_action1` FOREIGN KEY (`condition_id`) REFERENCES `buf3w_acym_condition` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `buf3w_acym_campaign`
+--
+ALTER TABLE `buf3w_acym_campaign`
+  ADD CONSTRAINT `buf3w_fk_acym_campaign_has_mail1` FOREIGN KEY (`mail_id`) REFERENCES `buf3w_acym_mail` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `buf3w_acym_condition`
+--
+ALTER TABLE `buf3w_acym_condition`
+  ADD CONSTRAINT `buf3w_fk_acym_condition1` FOREIGN KEY (`step_id`) REFERENCES `buf3w_acym_step` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `buf3w_acym_followup`
+--
+ALTER TABLE `buf3w_acym_followup`
+  ADD CONSTRAINT `buf3w_fk_acym_followup_has_list` FOREIGN KEY (`list_id`) REFERENCES `buf3w_acym_list` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `buf3w_acym_followup_has_mail`
+--
+ALTER TABLE `buf3w_acym_followup_has_mail`
+  ADD CONSTRAINT `buf3w_fk_acym_mail_has_followup1` FOREIGN KEY (`mail_id`) REFERENCES `buf3w_acym_mail` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `buf3w_fk_acym_mail_has_followup2` FOREIGN KEY (`followup_id`) REFERENCES `buf3w_acym_followup` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `buf3w_acym_list`
+--
+ALTER TABLE `buf3w_acym_list`
+  ADD CONSTRAINT `buf3w_fk_acym_list_has_mail1` FOREIGN KEY (`welcome_id`) REFERENCES `buf3w_acym_mail` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `buf3w_fk_acym_list_has_mail2` FOREIGN KEY (`unsubscribe_id`) REFERENCES `buf3w_acym_mail` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `buf3w_acym_mail`
+--
+ALTER TABLE `buf3w_acym_mail`
+  ADD CONSTRAINT `buf3w_fk_acym_mail1` FOREIGN KEY (`parent_id`) REFERENCES `buf3w_acym_mail` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `buf3w_acym_mail_has_list`
+--
+ALTER TABLE `buf3w_acym_mail_has_list`
+  ADD CONSTRAINT `buf3w_fk_acym_mail_has_list1` FOREIGN KEY (`mail_id`) REFERENCES `buf3w_acym_mail` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `buf3w_fk_acym_mail_has_list2` FOREIGN KEY (`list_id`) REFERENCES `buf3w_acym_list` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `buf3w_acym_mail_override`
+--
+ALTER TABLE `buf3w_acym_mail_override`
+  ADD CONSTRAINT `buf3w_fk_acym_mail_override1` FOREIGN KEY (`mail_id`) REFERENCES `buf3w_acym_mail` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `buf3w_acym_mail_stat`
+--
+ALTER TABLE `buf3w_acym_mail_stat`
+  ADD CONSTRAINT `buf3w_fk_acym_mail_stat1` FOREIGN KEY (`mail_id`) REFERENCES `buf3w_acym_mail` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `buf3w_acym_queue`
+--
+ALTER TABLE `buf3w_acym_queue`
+  ADD CONSTRAINT `buf3w_fk_acym_queue1` FOREIGN KEY (`mail_id`) REFERENCES `buf3w_acym_mail` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `buf3w_fk_acym_queue2` FOREIGN KEY (`user_id`) REFERENCES `buf3w_acym_user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `buf3w_acym_step`
+--
+ALTER TABLE `buf3w_acym_step`
+  ADD CONSTRAINT `buf3w_fk_acym__step1` FOREIGN KEY (`automation_id`) REFERENCES `buf3w_acym_automation` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `buf3w_acym_url_click`
+--
+ALTER TABLE `buf3w_acym_url_click`
+  ADD CONSTRAINT `buf3w_fk_acym_url_click_has_mail` FOREIGN KEY (`mail_id`) REFERENCES `buf3w_acym_mail` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `buf3w_fk_acym_url_has_url` FOREIGN KEY (`url_id`) REFERENCES `buf3w_acym_url` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `buf3w_acym_user_has_field`
+--
+ALTER TABLE `buf3w_acym_user_has_field`
+  ADD CONSTRAINT `buf3w_fk_acym_user_has_field1` FOREIGN KEY (`user_id`) REFERENCES `buf3w_acym_user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `buf3w_fk_acym_user_has_field2` FOREIGN KEY (`field_id`) REFERENCES `buf3w_acym_field` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `buf3w_acym_user_has_list`
+--
+ALTER TABLE `buf3w_acym_user_has_list`
+  ADD CONSTRAINT `buf3w_fk_acym_user_has_list1` FOREIGN KEY (`user_id`) REFERENCES `buf3w_acym_user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `buf3w_fk_acym_user_has_list2` FOREIGN KEY (`list_id`) REFERENCES `buf3w_acym_list` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints for table `buf3w_acym_user_stat`
+--
+ALTER TABLE `buf3w_acym_user_stat`
+  ADD CONSTRAINT `buf3w_fk_acym_user_stat1` FOREIGN KEY (`mail_id`) REFERENCES `buf3w_acym_mail` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

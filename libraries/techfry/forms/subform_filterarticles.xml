@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field 
+        name="where_field"
+        label="COM_TF_FILTER_FIELD"
+        type="sql" 
+        query="SELECT id, name FROM #__fields WHERE state=1 AND context='com_content.article'"
+        key_field="id"
+        value_field="name">
+            <option value="">- Select Custom Field -</option>
+    </field>
+        
+    <field 
+        name="where_operator"
+        label="COM_TF_FILTER_OPERATOR"
+        type="text" />
+            
+    <field 
+        name="where_value"
+        label="COM_TF_FILTER_VALUE"
+        type="text"
+        description="For date, enter days to subtract from current date" />
+        
+    <field
+        name="isDate"
+        label="Date Field"
+        type="radio"
+        layout="joomla.form.field.radio.switcher"
+        description="Select Yes if Filter Field is Date type"
+        default="0">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+    </field>
+</form>

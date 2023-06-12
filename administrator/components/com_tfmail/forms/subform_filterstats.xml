@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field 
+        name="stat_type"
+        label="COM_TF_TYPE"
+        type="list">
+            <option value="">COM_TF_SELECT</option>
+            <option value="mail_id">Newsletter</option>
+            <option value="type">Type</option>
+            <option value="send_date">Send Date</option>
+            <option value="open_date">Open Date</option>
+            <option value="click_date">Click Date</option>
+            <option value="opens">Opens</option>
+            <option value="clicks">Clicks</option>
+            <option value="link_id">Link</option>
+    </field>
+        
+    <field 
+        name="where_operator"
+        label="COM_TF_FILTER_OPERATOR"
+        type="text" />
+            
+    <field 
+        name="where_value"
+        label="COM_TF_FILTER_VALUE"
+        type="text"
+        description="For date field, enter days to subtract from current date" />
+</form>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field name="show_title" type="radio" label="JGLOBAL_TITLE" default="1" layout="joomla.form.field.radio.switcher">
+		<option value="0">JHIDE</option>
+		<option value="1">JSHOW</option>
+	</field>
+    
+    <field name="img_intro_full" type="list" label="Show Intro/Full Image" default="none">
+		<option value="intro">Intro Image</option> 
+		<option value="full">Full Image</option>
+		<option value="none">JNO</option>
+	</field>
+	
+	<field name="show_date" type="radio" label="JDATE" default="0" layout="joomla.form.field.radio.switcher">
+		<option value="0">JHIDE</option>
+		<option value="1">JSHOW</option>
+	</field>
+	
+	<field name="show_date_field" type="list" label="Date Field" default="none" showon="show_date:1">
+		<option value="publish_up">Published</option>
+		<option value="modified">Modified</option>
+		<option value="created">Created</option>
+	</field>
+	
+	<field name="date_format" type="text" label="Date Format" default="F d, Y" showon="show_date:1"/>
+	
+	<field name="show_category" type="radio" layout="joomla.form.field.radio.switcher" label="JCATEGORY" default="0" filter="integer">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+	</field>
+	
+	<field name="show_tags" type="radio" layout="joomla.form.field.radio.switcher" label="JTAG" default="0" filter="integer">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+	</field>
+
+	<field name="show_introtext" type="radio" label="Show Intro Text" default="1" filter="integer" layout="joomla.form.field.radio.switcher">
+		<option value="0">JHIDE</option>
+		<option value="1">JSHOW</option>
+	</field>
+	
+	<field name="introtext_limit" type="number" label="Text Limit" description="Number of characters or enter 0 to ignore" default="0" min="0" filter="integer" showon="show_introtext:1"/>
+
+	<field name="show_readmore" type="radio" label="JGLOBAL_SHOW_READMORE_LABEL" layout="joomla.form.field.radio.switcher" default="0" filter="integer">
+		<option value="0">JHIDE</option>
+		<option value="1">JSHOW</option>
+	</field>
+	
+	<field name="button_text" type="text" label="Button Text" showon="show_readmore:1" />
+            	    
+    <field name="button_class" type="text" label="Button Class" showon="show_readmore:1" />
+
+</form>

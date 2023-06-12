@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+        name="title"
+        type="text"
+        label="JGLOBAL_TITLE" />
+        
+    <field
+        name="price"
+        type="text"
+        label="Price" />
+        
+    <field
+        name="currency"
+        type="text"
+        label="Currency" />
+        
+    <field
+        name="duration"
+        type="text"
+        label="Duration" />
+        
+    <field
+        name="features" 
+        type="textarea" 
+        label="Features" />
+        
+    <field
+        name="url"
+        type="url"
+        label="Url" />
+        
+</form>

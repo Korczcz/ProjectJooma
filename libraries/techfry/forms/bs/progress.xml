@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+    <field
+	    name="class"
+	    type="text"
+	    label="Class" />
+	    
+    <field
+	    name="bg"
+	    type="list"
+	    label="Background">
+            <option value="">JSELECT</option>
+            <option value="bg-primary">Primary</option>
+            <option value="bg-secondary">Secondary</option>
+            <option value="bg-success">Success</option>
+            <option value="bg-danger">Danger</option>
+            <option value="bg-warning">Warning</option>
+            <option value="bg-info">Info</option>
+            <option value="bg-light">Light</option>
+            <option value="bg-dark">Dark</option>
+            <option value="bg-white">White</option>
+            <option value="bg-transparent">Transparent</option>
+    </field>
+    
+    <field
+	    name="text"
+	    type="list"
+	    label="Text">
+            <option value="">JSELECT</option>
+            <option value="text-primary">Primary</option>
+            <option value="text-secondary">Secondary</option>
+            <option value="text-success">Success</option>
+            <option value="text-danger">Danger</option>
+            <option value="text-warning">Warning</option>
+            <option value="text-info">Info</option>
+            <option value="text-lignt">Light</option>
+            <option value="text-dark">Dark</option>
+            <option value="text-white">white</option>
+            <option value="text-muted">Muted</option>
+    </field>
+
+</form>

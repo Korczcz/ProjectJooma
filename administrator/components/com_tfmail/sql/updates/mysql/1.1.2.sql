@@ -1,0 +1,1 @@
+ALTER TABLE `#__tfm_config` ADD `styles` MEDIUMTEXT AFTER `tags`;

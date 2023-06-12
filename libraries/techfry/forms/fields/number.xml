@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <field 
+        name="min"
+        type="number"
+        label="Minimum Value" />
+        
+    <field 
+        name="max"
+        type="number"
+        label="Maximum Value" />
+        
+    <field 
+        name="step"
+        type="number"
+        label="Step" />
+  
+</form>

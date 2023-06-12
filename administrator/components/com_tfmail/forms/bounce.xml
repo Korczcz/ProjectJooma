@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <config>
+		<inlinehelp button="show"/>
+	</config>
+	<fieldset name="general">
+	    
+		<field
+			name="subject"
+			type="text"
+			class="input-xxlarge input-large-text"
+			label="COM_TFMAIL_SUBJECT" />
+		    
+	    <field
+		    name="message_plain"
+		    type="textarea"
+		    rows="20"
+		    label="COM_TFMAIL_MESSAGE" />
+		    
+	</fieldset>
+	
+	<fieldset name="options">
+		    
+		<field
+			name="bounce_email"
+			type="text"
+			label="COM_TFMAIL_BOUNCE_EMAIL" />
+			
+		<field
+			name="fromname"
+			type="text"
+			readonly="true"
+			label="COM_TFMAIL_FROM_NAME" />
+		
+		<field
+			name="fromaddress"
+			type="text"
+			readonly="true"
+			label="COM_TFMAIL_FROM" />
+			
+	    <field
+			name="size"
+			type="text"
+			readonly="true"
+			label="COM_TFMAIL_SIZE" />
+		
+		<field
+			name="emailDate"
+			type="text"
+			readonly="true"
+			label="JDATE" />
+			
+	</fieldset>
+	
+	<fieldset name="message" label="COM_TFMAIL_HTML_MESSAGE">
+	    
+	    <field
+		    name="message"
+		    type="editor"
+		    label="COM_TFMAIL_MESSAGE"
+		    filter="raw" />
+	    
+	</fieldset>
+	
+	<fieldset name="details" label="JDETAILS">
+
+			
+	</fieldset>
+	
+</form>

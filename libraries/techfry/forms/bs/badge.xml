@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+    <field
+	    name="badge_class"
+	    type="text"
+	    label="Class"
+	    default="" />
+    
+    <field
+	    name="type"
+	    type="list"
+	    label="Type"
+        default="primary">
+            <option value="primary">Primary</option>
+            <option value="secondary">Secondary</option>
+            <option value="success">Success</option>
+            <option value="danger">Danger</option>
+            <option value="warning">Warning</option>
+            <option value="info">Info</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="white">White</option>
+            <option value="transparent">Transparent</option>
+    </field>
+    
+    <field
+        name="border_radius"
+        type="list"
+        label="Border Radius">
+            <option value="">JNONE</option>
+            <option value="rounded">Rounded</option>
+            <option value="rounded-pill">Pill</option>
+            <option value="rounded-circle">Circle</option>
+    </field>
+
+</form>

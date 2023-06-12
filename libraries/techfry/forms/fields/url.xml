@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <field 
+        name="relative"
+        label="Relative"
+        type="radio"
+        default="false"
+        layout="joomla.form.field.radio.switcher">
+            <option value="false">JNO</option>
+            <option value="true">JYES</option>
+    </field>
+    
+    <field 
+        name="maxlength"
+        type="number"
+        label="Maximum Length"
+        min="1" />
+  
+</form>

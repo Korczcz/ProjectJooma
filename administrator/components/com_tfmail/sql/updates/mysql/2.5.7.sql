@@ -1,0 +1,1 @@
+ALTER TABLE `#__tfm_links` ADD COLUMN `note` VARCHAR(255) AFTER `published`;

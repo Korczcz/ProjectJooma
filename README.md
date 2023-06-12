@@ -5,9 +5,9 @@ strony internetowej w systemie CMS Joomla:
 
 - projekt ma być estetyczny z wykorzystaniem dostępnych możliwości edycyjnych (można umieścić własne arkusze stylów *.css),
 
-- na stronach mają znajdować się odnośniki do innych stron (preferowane jest umieszczenie menu poziomego lub pionowego),
+- na stronach mają znajdować się odnośniki do innych stron (preferowane jest umieszczenie menu poziomego lub pionowego), x
 
-- strona sklepu o zadanej tematyce wraz z min 2 kategoriami tematycznymi przedstawionymi w postaci bloga,  
+- strona sklepu o zadanej tematyce wraz z min 2 kategoriami tematycznymi przedstawionymi w postaci bloga, x
 
 - dla każdej z kategorii należy umieścić po kilka wpisów (min 5 - na stronach starać się zastosować jak najwięcej elementów np. tabele, listy, zdjęcia, galerie itp)
 

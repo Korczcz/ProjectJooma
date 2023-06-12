@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+	    name="height"
+	    type="number"
+	    label="Height (px)"
+	    min="0"
+	    default="200" />
+    
+    <field
+	    name="zoom"
+	    type="number"
+	    label="Zoom Level"
+	    min="1"
+	    default="13" />
+
+</form>

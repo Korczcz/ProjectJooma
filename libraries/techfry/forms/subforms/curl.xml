@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field
+		name="key"
+		type="text"
+		label="Key" />
+		
+	<field
+		name="val"
+		type="text"
+		label="Value" />
+</form>

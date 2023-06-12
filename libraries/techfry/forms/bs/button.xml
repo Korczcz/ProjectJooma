@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+	    name="button_class"
+	    type="text"
+	    label="Class" />
+	    
+    <field
+	    name="type"
+	    type="list"
+	    label="Type">
+            <option value="">JNONE</option>
+            <option value="btn-primary">Primary</option>
+            <option value="btn-secondary">Secondary</option>
+            <option value="btn-success">Success</option>
+            <option value="btn-danger">Danger</option>
+            <option value="btn-warning">Warning</option>
+            <option value="btn-info">Info</option>
+            <option value="btn-light">Light</option>
+            <option value="btn-dark">Dark</option>
+            <option value="btn-white">White</option>
+    </field>
+    
+    <field
+	    name="outline"
+	    type="radio"
+	    label="Outline"
+	    layout="joomla.form.field.radio.switcher"
+	    default="0">
+	        <option value="0">JNO</option>
+	        <option value="1">JYES</option>
+	</field>
+    
+    <field
+        name="border_radius"
+        type="list"
+        label="Border Radius">
+            <option value="">JNONE</option>
+            <option value="rounded-0">Square</option>
+            <option value="rounded">Rounded</option>
+            <option value="rounded-pill">Pill</option>
+            <option value="rounded-circle">Circle</option>
+    </field>
+    
+    <field
+        name="shadow"
+        type="list"
+        label="Shadow">
+            <option value="">JNONE</option>
+            <option value="shadow-sm">Small</option>
+            <option value="shadow">Medium</option>
+            <option value="shadow-lg">Large</option>
+    </field>
+    
+    <field
+        name="hover"
+        type="list"
+        label="Hover Effect">
+            <option value="">JNONE</option>
+            <option value="hover-shadow">Shadow</option>
+            <option value="translate-top">Translate Top</option>
+    </field>
+    
+    <field
+        name="transition"
+        type="list"
+        label="Hover Duration">
+            <option value="">JNONE</option>
+            <option value="transition-1">150 ms</option>
+            <option value="transition-2">300 ms</option>
+            <option value="transition-3">500 ms</option>
+            <option value="transition-4">750 ms</option>
+            <option value="transition-5">1000 ms</option>
+    </field>
+	
+</form>

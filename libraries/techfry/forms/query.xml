@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset name="general">
+	    
+        <field
+            name="tool"
+            type="groupedlist"
+            label="COM_TF_QUERY_TOOL"
+            required="true">
+                <option value="">JSELECT</option>
+                <group label="Table Operations">
+                    <option value="update">Update</option>
+                    <option value="find">Find</option>
+                    <option value="find_duplicates">Find Duplicates</option>
+                    <option value="replace">Find and Replace</option>
+                    <option value="delete">Delete</option>
+                    <option value="truncate">Truncate</option>
+                    <option value="string">String</option>
+                    <option value="date">Date</option>
+                    <option value="numeric">Numeric</option>
+                </group>
+                <group label="Table Info">
+                    <option value="table_columns">Display Table Columns</option>
+                    <option value="table_create">Dsiplay Table Create</option>
+                </group>
+                <group label="Database Info">
+                    <option value="table_list">Display Table List</option>
+                </group>
+        </field>
+        
+        <field
+            name="text" 
+            type="text"
+            label="COM_TF_TEXT" 
+            showon="tool:find,replace" />
+            
+        <field 
+            name="value"
+            type="text"
+            label="COM_TF_VALUE" 
+            showon="tool:update,replace" />
+            
+        <field
+            name="str_function"
+            type="list"
+            label="String Function"
+            showon="tool:string"
+            layout="joomla.form.field.list-fancy-select">
+                <option value="">JSELECT</option>
+                <option value="htmlspecialchars_decode">HTML Special Chars Decode</option>
+                <option value="htmlspecialchars">HTML Special Chars</option>
+                <option value="preg_replace">Preg Replace</option>
+                <option value="str_replace">Replace</option>
+                <option value="str_repeat">Repeat</option>
+                <option value="str_shuffle">Shuffle</option>
+                <option value="str_word_count">Word Count</option>
+                <option value="strip_tags">Strip Tags</option>
+                <option value="strlen">Length</option>
+                <option value="strrev">Reverse</option>
+                <option value="substr">Substring</option>
+                <option value="trim">Trim</option>
+                <option value="ltrim">Left Trim</option>
+                <option value="rtrim">Right Trim</option>
+                <option value="strtolower">Lower Case</option>
+                <option value="strtoupper">Upper Case</option>
+                <option value="ucfirst">Sentence Case</option>
+                <option value="ucwords">Capitalize Case</option>
+                <option value="wordwrap">Word Wrap</option>
+        </field>
+        
+        <field
+            name="date_function"
+            type="list"
+            label="Date Function"
+            showon="tool:date"
+            layout="joomla.form.field.list-fancy-select">
+                <option value="">JSELECT</option>
+                <option value="date_create">Create</option>
+                <option value="modify">Modify</option>
+                <option value="format">Format</option>
+                <option value="toISO8601">To ISO 8601</option>
+                <option value="toRFC822">To RFC 822</option>
+                <option value="toUnix">To Unix</option>
+                <option value="toSql">To Sql</option>
+        </field>
+        
+        <field
+            name="num_function"
+            type="list"
+            label="Numeric Function"
+            showon="tool:numeric"
+            layout="joomla.form.field.list-fancy-select">
+                <option value="">JSELECT</option>
+                <option value="abs">abs</option>
+                <option value="base_convert">base_convert</option>
+                <option value="bindec">bindec</option>
+                <option value="ceil">ceil</option>
+                <option value="decbin">decbin</option>
+                <option value="dechex">dechex</option>
+                <option value="decoct">decoct</option>
+                <option value="deg2rad">deg2rad</option>
+                <option value="exp">exp</option>
+                <option value="floor">floor</option>
+                <option value="hexdec">hexdec</option>
+                <option value="log">log</option>
+                <option value="log10">log10</option>
+                <option value="octdec">octdec</option>
+                <option value="rad2deg">rad2deg</option>
+                <option value="round">round</option>
+                <option value="sqrt">sqrt</option>
+        </field>
+        
+        <field
+            name="p1"
+            type="text"
+            label="Parameter 1"
+            showon="tool:string,date,numeric" />
+            
+        <field
+            name="p2"
+            type="text"
+            label="Parameter 2"
+            showon="tool:string,date,numeric" />
+            
+        <field
+            name="p3"
+            type="text"
+            label="Parameter 3"
+            showon="tool:string,date,numeric" />
+			
+	</fieldset>
+	
+	<fieldset name="filters" label="COM_TF_FILTER">
+        
+        <field
+            name="order_col"
+            type="text"
+            label="COM_TF_ORDER_COLUMN"
+            default="id"
+            showon="tool:find,string,date,numeric" />
+            
+        <field
+            name="order_dirn"
+            type="list"
+            label="COM_TF_ORDER_DIRECTION"
+            default="ASC"
+            showon="tool:find,string,date,numeric">
+                <option value="ASC">ASC</option>
+                <option value="DESC">DESC</option>
+        </field>
+        
+        <field
+            name="limit"
+            type="number"
+            label="COM_TF_LIMIT"
+            min="1"
+            default="20"
+            showon="tool:find,string,date,numeric" />
+            
+        <field
+            name="note01"
+            type="note"
+            label="COM_TF_WHERE_CONDITIONS"
+            showon="tool:update,replace,delete,string,date,numeric" />
+        
+        <field
+		    name="filter"
+		    type="subform" 
+		    label="COM_TF_WHERE_CONDITIONS"
+		    formsource="libraries/techfry/forms/subform_where.xml"
+		    multiple="true" 
+		    layout="joomla.form.field.subform.repeatable"
+		    hiddenLabel="true"
+		    filter="raw" 
+		    showon="tool:update,replace,delete,string,date,numeric" />
+            
+    </fieldset>
+    
+</form>

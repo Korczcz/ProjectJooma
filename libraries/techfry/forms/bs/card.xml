@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+	    name="card_hover"
+	    type="list"
+        label="Card Hover"
+	    default="">
+            <option value="">JNONE</option>
+            <option value="hover-shadow">Shadow</option>
+            <option value="translate-top">Translate Top</option>
+            <option value="hover-border-primary">Border Primary</option>
+    </field>
+    
+    <field
+	    name="image_hover"
+	    type="list"
+        label="Image Hover"
+	    default="">
+            <option value="">JNONE</option>
+            <option value="hover-grayscale">Grayscale</option>
+            <option value="hover-grayscale-invert">Grayscale Invert</option>
+            <option value="hover-brightness">Brightness</option>
+            <option value="hover-brightness-invert">Brightness Invert</option>
+            <option value="hover-dull">Dull</option>
+            <option value="hover-sepia">Sepia</option>
+            <option value="hover-sepia-invert">Sepia Invert</option>
+            <option value="scale">Scale</option>
+    </field>
+    
+    <field
+        name="transition"
+        type="list"
+        label="Hover Duration">
+            <option value="">JNONE</option>
+            <option value="transition-1">150 ms</option>
+            <option value="transition-2">300 ms</option>
+            <option value="transition-3">500 ms</option>
+            <option value="transition-4">750 ms</option>
+            <option value="transition-5">1000 ms</option>
+    </field>
+    
+    <field
+        name="button_text"
+        type="text"
+        label="Button Text" />
+        
+    <field
+        name="button_class"
+        type="text"
+        label="Button Class" />
+
+</form>

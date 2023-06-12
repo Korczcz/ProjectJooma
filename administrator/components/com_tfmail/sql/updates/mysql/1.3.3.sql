@@ -1,0 +1,1 @@
+ALTER TABLE `#__tfm_bounces` ADD `message_plain` TEXT AFTER `message`;

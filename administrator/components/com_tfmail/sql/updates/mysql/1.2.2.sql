@@ -1,0 +1,1 @@
+ALTER TABLE `#__tfm_bounces` ADD `fromname` VARCHAR(1024) AFTER `fromaddress`;

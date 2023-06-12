@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+  
+  	<field 
+        name="sql_select"
+        type="text"
+        label="Select" />
+        
+    <field 
+        name="sql_from"
+        type="text"
+        label="From" />
+  
+  	<field 
+        name="sql_where"
+        type="text"
+        label="Where" />
+  
+  	<field 
+        name="sql_group"
+        type="text"
+        label="Group By" />
+  
+  	<field 
+        name="sql_order"
+        type="text"
+        label="Order By" />
+  
+  	<field 
+        name="key_field"
+        type="text"
+        label="Key Field" />
+  
+  	<field 
+        name="value_field"
+        type="text"
+        label="Value Field" />
+  
+  	<field 
+        name="header"
+        type="text"
+        label="Header" />
+    
+    <field 
+        name="multiple"
+        label="Multiple"
+        type="radio"
+        default="false"
+        layout="joomla.form.field.radio.switcher">
+            <option value="false">JNO</option>
+            <option value="true">JYES</option>
+    </field>
+    
+    <field
+		name="form_layout"
+		type="list"
+		label="Form Layout">
+			<option value="joomla.form.field.list">JDEFAULT</option>
+			<option value="joomla.form.field.list-fancy-select">Fancy Select</option>
+	</field>
+	
+</form>

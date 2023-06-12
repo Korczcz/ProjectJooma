@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+        name="field_id"
+        type="sql"
+        label="Field"
+        query="SELECT id, title FROM #__tfpb_forms WHERE published=1"
+        key_field="id"
+        value_field="title">
+            <option value="">JSELECT</option>
+    </field>
+        
+</form>

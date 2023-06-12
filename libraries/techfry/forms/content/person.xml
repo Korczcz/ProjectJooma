@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field
+        name="name"
+        type="text"
+        label="Name" />
+        
+    <field
+        name="designation"
+        type="text"
+        label="Designation" />
+        
+    <field
+        name="image"
+        type="media"
+        label="Image" />
+        
+    <field
+        name="links"
+        type="subform"
+        label="Links"
+        formsource="/libraries/techfry/forms/content/list.xml"
+        multiple="true"
+        layout="joomla.form.field.subform.repeatable-table" />
+        
+</form>

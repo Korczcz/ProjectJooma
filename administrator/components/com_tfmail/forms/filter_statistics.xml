@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+            
+        <field
+            name="title"
+            type="sql"
+            query="SELECT DISTINCT a.mail_id, b.title FROM #__tfm_statistics AS a LEFT JOIN #__tfm_mail AS b ON a.mail_id=b.id"
+            key_field="mail_id"
+            value_field="title"
+            header="- Select Title -"
+            layout="joomla.form.field.list-fancy-select"
+            onchange="this.form.submit();">
+        </field>
+        
+        <field
+            name="mailid"
+            type="sql"
+            query="SELECT DISTINCT mail_id FROM #__tfm_statistics"
+            key_field="mail_id"
+            value_field="mail_id"
+            header="- Select Mail ID -"
+            layout="joomla.form.field.list-fancy-select"
+            onchange="this.form.submit();">
+        </field>
+        
+        <field
+            name="type"
+            type="list"
+            onchange="this.form.submit();">
+                <option value="">- Select Type -</option>
+                <option value="send">send</option>
+                <option value="open">open</option>
+                <option value="click">click</option>
+        </field>
+            
+    </fields>
+    
+    <fields name="list">
+
+
+    </fields>
+</form>

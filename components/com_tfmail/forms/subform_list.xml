@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field 
+        name="field_text"
+        label="Text"
+        type="text" />
+        
+    <field 
+        name="field_value"
+        label="Value"
+        type="text" />
+</form>

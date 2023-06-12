@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <field 
+        name="multiple"
+        label="Multiple Attachments"
+        type="radio"
+        default="false"
+        layout="joomla.form.field.radio.switcher">
+            <option value="false">JNO</option>
+            <option value="true">JYES</option>
+    </field>
+  
+  	<field
+		name="allow_extensions"
+        type="text"
+        label="Allow Extensions"
+        default="jpg,png,pdf" />
+  
+	<field
+		name="max_file_size"
+        type="number"
+        label="Maximum File Size (kB)"
+        min="100"
+        step="100"
+        default="500" />
+  
+  	<field
+		name="save_folder"
+        type="text"
+        label="Save Folder" />
+  
+  	<field
+		name="accept"
+        type="text"
+        label="Accept" />
+    
+</form>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    
+    <field 
+        name="first"
+        type="number"
+        label="First" />
+        
+    <field 
+        name="last"
+        type="number"
+        label="Last" />
+        
+    <field 
+        name="step"
+        type="number"
+        label="Step" />
+  
+</form>

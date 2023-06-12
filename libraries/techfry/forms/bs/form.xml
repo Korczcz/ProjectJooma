@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+	    name="redirect_url"
+	    type="url"
+        label="Redirect URL" />
+        
+    <field
+	    name="redirect_message"
+	    type="text"
+        label="Redirect Message" />
+        
+    <field
+        name="recipient_email"
+        type="email"
+        label="Recipient Email" />
+        
+    <field
+        name="email_subject"
+        type="text"
+        label="Email Subject" />
+        
+    <field
+        name="button_text"
+        type="text"
+        label="Button Text"
+        default="Submit" />
+        
+    <field
+        name="button_class"
+        type="text"
+        label="Button Class"
+        default="btn btn-primary" />
+        
+</form>

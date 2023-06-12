@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    
+    <field
+        name="layout"
+        type="list"
+        label="Layout"
+        default="1">
+            <option value="1">Layout 1</option>
+            <option value="2">Layout 2</option>
+    </field>
+    
+    <field
+        name="name_class"
+        type="text"
+        label="Name Class" />
+        
+    <field
+        name="designation_class"
+        type="text"
+        label="Designation Class" />
+    
+    <field
+        name="image_class"
+        type="text"
+        label="Image Class" />
+        
+    <field
+        name="icon_class"
+        type="text"
+        label="Icon Class" />
+
+</form>

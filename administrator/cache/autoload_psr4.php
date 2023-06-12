@@ -182,4 +182,7 @@ return [
 	'Joomla\\Plugin\\User\\Profile\\' => [JPATH_PLUGINS . '\user/profile/src'],
 	'Joomla\\Plugin\\User\\Terms\\' => [JPATH_PLUGINS . '\user/terms/src'],
 	'Joomla\\Plugin\\User\\Token\\' => [JPATH_PLUGINS . '\user/token/src'],
+	'TechFry\\Component\\TfMail\\Administrator\\' => [JPATH_ADMINISTRATOR . '/components/com_tfmail/src'],
+	'TechFry\\Component\\TfMail\\Site\\' => [JPATH_SITE . '/components/com_tfmail/src'],
+	'TechFry\\Library\\' => [JPATH_LIBRARIES . '/techfry/src'],
 ];

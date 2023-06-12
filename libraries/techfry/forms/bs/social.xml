@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <field
+        name="icon"
+        type="text"
+        label="Icon"
+        default="facebook" 
+        description="Refer: https://fontawesome.com/search?s=brands" />
+    
+    <field
+        name="url"
+        type="url"
+        label="Link or Url" />
+
+</form>

@@ -1,0 +1,1 @@
+ALTER TABLE `#__tfm_mail` ADD COLUMN `params` TEXT AFTER `sent`;

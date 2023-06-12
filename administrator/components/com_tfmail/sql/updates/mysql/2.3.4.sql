@@ -1,0 +1,1 @@
+ALTER TABLE `#__tfm_mail` DROP `last_date`;
